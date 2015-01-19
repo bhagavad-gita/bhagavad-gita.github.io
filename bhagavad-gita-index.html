@@ -11,42 +11,6 @@
 <body>
 
 
-<div id="fb-root"></div>
-<script>
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
-  window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '283410355087690',
-            status     : true, 
-            cookie     : true,
-            xfbml      : true,
-            oauth      : true,
-          });
-
-          FB.api('/me', function(user) {
-            if (user) {
-              var image = document.getElementById('image');
-              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
-              var name = document.getElementById('name');
-              name.innerHTML = user.name
-            }
-          });
-        };
-
-        (function(d){
-           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-           js = d.createElement('script'); js.id = id; js.async = true;
-           js.src = "//connect.facebook.net/en_US/all.js";
-           d.getElementsByTagName('head')[0].appendChild(js);
-         }(document));
-</script>
 <div id="container">
 
 	<div id="header">
@@ -59,7 +23,7 @@
 
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-news.html">News</a></li>
-<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-media.html">Media</a></li>
+<li><a href="http://bhagavad-gita.github.io/classes/">Classes</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-volunteer.html">Volunteer</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-donate.html">Donate</a></li>
@@ -139,9 +103,9 @@ Timings</b>
 
 <br>
 <br>
-<!-- img src="/bhagavad-gita/images/bhagavad-gita-index-lores.jpg" alt="Hare Krsna!" width=672 --!>
-<object style="height: 450px; width: 672px"><param name="movie" value="http://www.youtube.com/v/mr7LqmY_12k?version=3&feature=player_detailpage"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><embed src="http://www.youtube.com/v/mr7LqmY_12k?version=3&feature=player_detailpage&autoplay=1&rel=0&loop=1" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></object>
 
+
+<iframe width="640" height="360" src="http://www.youtube.com/embed/KlKxOA4eRFU" frameborder="0" allowfullscreen></iframe>
 <br>
 <br>
 
@@ -156,37 +120,6 @@ Quote of Srila Prabhupada
 <!-- saffron #f4c42c ---!>		
 <!-- deep saffron background #ff9933 ---!>
 <!-- rajah #fbab60 --->
-<script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-	new TWTR.Widget({
-		version: 2,
-		type: 'profile',
-		rpp: 4,
-		interval: 6000,
-		width: 640,
-		height: 200,
-		theme: {
-			shell: {
-				background: '#59646a',			      
-				color: '#ffffff'
-			},
-			tweets: {
-				background: '#fbab60',
-				color: '#ffffff',
-				links: '#f4f221'
-			}
-		},
-		features: {
-			scrollbar: true,
-			loop: false,
-			live: false,
-			hashtags: true,
-			timestamp: true,
-			avatars: false,
-			behavior: 'all'
-		}
-	}).render().setUser('sribhagavad-gitamandir').start();
-</script>	
 <div id="rightFooter">
 </div> <!-- div id right content footer-->
 		
@@ -198,7 +131,7 @@ Quote of Srila Prabhupada
 </div>
 
 <div id="footer">
- Copyright &copy; For All Time. Lord Krsna. All Universal Rights Reserved to Him. Period. bhagavad-gita at radiensoft dot com
+ Copyright &copy; Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
