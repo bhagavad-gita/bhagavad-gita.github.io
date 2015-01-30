@@ -24,6 +24,10 @@ for line in fileinput.input():
 		if id == "":
 			beginhtml = True
 		if id != "":
+			print("</p>", file=of)
+			print("</p>", file=of0)
+			print("", file=of)
+			print("", file=of0)
 			print(footer, file=of)
 			first = False
 			of.close()
@@ -55,8 +59,11 @@ for line in fileinput.input():
 		print("<h2>"+id+"</h2>", file=of0)
 		print("", file=of)
 		print("", file=of0)
-		print(id, file=of)
-		print(id, file=of0)
+		print("<p>", file=of)
+		print("<p>", file=of0)
+
+		print("<a href=\"http://bhagavad-gita.today/"+id+"\"><b>"+id+"</b></a>", file=of)
+		print("<a href=\"http://bhagavad-gita.today/"+id+"\"><b>"+id+"</b></a>", file=of0)
 		print("", file=of)
 		print("", file=of0)
 		continue
