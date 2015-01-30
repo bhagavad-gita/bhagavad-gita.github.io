@@ -55,8 +55,8 @@ for line in fileinput.input():
 			beginhtml = False
 		print("<br>", file=of)
 		print("<br>", file=of0)
-		print("<h2>"+id+"</h2>", file=of)
-		print("<h2>"+id+"</h2>", file=of0)
+		print("<h2><a href=\"http://bhagavad-gita.today/"+chapter+"\">"+chapter+"</a>."+verse+"</h2>", file=of)
+		print("<h2><a href=\"http://bhagavad-gita.today/"+chapter+"\">"+chapter+"</a>."+verse+"</h2>", file=of0)
 		print("", file=of)
 		print("", file=of0)
 		print("<p>", file=of)
