@@ -35,6 +35,7 @@ for line in fileinput.input():
 		# print(ids[1])
 		line = ids[1]
 		id = line
+		print("DEBUG: id to split is", id)
 		(chapter, verse) = id.split('.')
 		print("chapter", chapter)
 		print("verse", verse)
