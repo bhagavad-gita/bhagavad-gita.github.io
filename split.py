@@ -49,8 +49,8 @@ for line in fileinput.input():
 		if beginhtml:
 			print(header2, file=of0)
 			beginhtml = False
-		print("", file=of)
-		print("", file=of0)
+		print("<br>", file=of)
+		print("<br>", file=of0)
 		print("<h2>"+id+"</h2>", file=of)
 		print("<h2>"+id+"</h2>", file=of0)
 		print("", file=of)
