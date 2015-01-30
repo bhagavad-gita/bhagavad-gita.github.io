@@ -31,7 +31,7 @@ for line in fileinput.input():
 		id = line
 		ofilename = id + ".html"
 		of = open(ofilename, "w")
-		print(ofilename, file=of)
+		print(ofilename)
 		print(header, file=of)
 		print("<title>Bhagavad-gita "+id+"</title>", file=of)
 		print(header2, file=of)
