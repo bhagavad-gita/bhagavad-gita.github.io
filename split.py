@@ -20,6 +20,8 @@ for line in fileinput.input():
 	line = line.strip()	
 	if line == "":
 		continue
+	if "TRANSLATION" in line:
+		continue
 	if "TEXT" in line:
 		if id == "":
 			beginhtml = True
