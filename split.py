@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/bin/env.exe python
 
 import fileinput
 
