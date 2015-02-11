@@ -2,6 +2,7 @@
 
 import fileinput
 
+debug = False
 header = ""
 for line in open("sloka-begin-html"):
 	header += line
@@ -37,15 +38,18 @@ for line in fileinput.input():
 		# print(ids[1])
 		line = ids[1]
 		id = line
-		print("DEBUG: id to split is", id)
+		if debug:
+			print("DEBUG: id to split is", id)
 		(chapter, verse) = id.split('.')
-		print("chapter", chapter)
-		print("verse", verse)
+		if debug:
+			print("chapter", chapter)
+			print("verse", verse)
 		ofilename = id + ".html"
 		ofilename0 = chapter + ".html"
 		of = open(ofilename, "w")
-		print(ofilename)
-		print(ofilename0)
+		if debug:
+			print(ofilename)
+			print(ofilename0)
 		print(header, file=of)
 		if beginhtml:
 			of0 = open(ofilename0, "w")
@@ -71,6 +75,7 @@ for line in fileinput.input():
 		print("", file=of0)
 		continue
 	if id != "":
+		print(chapter+"."+verse, line)
 		print(line, file=of)
 		print(line, file=of0)
 
