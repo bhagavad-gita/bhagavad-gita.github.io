@@ -25,7 +25,7 @@ rawfilename = "SB-Canto-" + tcanto + "-Raw.txt"
 rawpathname = "raw/" + rawfilename
 raw = open(rawpathname, "r")
 print("Canto", canto)
-chapter = "1"
+chapter = "0"
 for line in raw:
 	line = line.strip()	
 	if debug2:
@@ -34,14 +34,35 @@ for line in raw:
 		if debug:
 			print("SKIP")
 		continue
-	if "SKIP TRANSLATION" in line:
+
+	if "SYNONYMS" in line:
 		if debug:
 			print("SKIP")
+		print("<br>", file=of)
+		print("<h2>Synonyms</h2>", file=of)
 		continue
+
+	if "PURPORT" in line:
+		if debug:
+			print("SKIP")
+		print("<br>", file=of)
+		print("<h2>Purport</h2>", file=of)
+		continue
+
+	if "TRANSLATION" in line:
+		if debug:
+			print("SKIP")
+		print("<br>", file=of)
+		print("<h2>Translation</h2>", file=of)
+		continue
+
 	if line == "TEXT":
 		if debug:
 			print("SKIP")
+		print("<br>", file=of)
+		print("<h2>Text</h2>", file=of)
 		continue
+
 	if line == "TEXT 1":
 		if debug:
 			print("NEW CHAPTER BEGINS")
@@ -51,9 +72,9 @@ for line in raw:
 			beginhtml = True
 		if id != "":
 			print("</p>", file=of)
-			# print("</p>", file=of0)
+			print("</p>", file=of0)
 			print("", file=of)
-			# print("", file=of0)
+			print("", file=of0)
 			print(footer, file=of)
 			first = False
 			of.close()
@@ -70,42 +91,43 @@ for line in raw:
 			print("chapter", chapter)
 			print("verse", verse)
 		summary = str(canto) + "." + chapter + "." + verse
+		summary0 = str(canto) 
 		ofilename = summary + ".html"
 		opathname = str(canto) + "/" + ofilename
-		# ofilename0 = chapter + ".html"
+		ofilename0 = summary0 + ".html"
 		of = open(opathname, "w")
 		if debug:
 			print(opathname)
 			# print(opathname)
 		print(header, file=of)
-		# if beginhtml:
-			# of0 = open(ofilename0, "w")
-			# print(header, file=of0)
-			# print("<title>Bhagavad-gita "+chapter+"</title>", file=of0)
+		if beginhtml:
+			of0 = open(ofilename0, "w")
+			print(header, file=of0)
+			print("<title>Bhagavad-gita "+chapter+"</title>", file=of0)
 		print("<title>Srimadh-bhagavatam "+summary+"</title>", file=of)
 		print(header2, file=of)
 		if beginhtml:
-			# print(header2, file=of0)
+			print(header2, file=of0)
 			beginhtml = False
 		print("<br>", file=of)
-		# print("<br>", file=of0)
-		# print("<h2><a href=\"http://bhagavad-gita.today/"+chapter+"\">"+chapter+"</a>."+verse+"</h2>", file=of)
-		# print("<h2><a href=\"http://bhagavad-gita.today/"+chapter+"\">"+chapter+"</a>."+verse+"</h2>", file=of0)
+		print("<br>", file=of0)
+		print("<h2><a href=\"http://bhagavad-gita.today/sb/"+str(chapter)+"\">"+chapter+"</a>."+verse+"</h2>", file=of)
+		print("<h2><a href=\"http://bhagavad-gita.today/sb/"+str(chapter)+"\">"+chapter+"</a>."+verse+"</h2>", file=of0)
 		print("", file=of)
-		# print("", file=of0)
+		print("", file=of0)
 		print("<p>", file=of)
-		# print("<p>", file=of0)
+		print("<p>", file=of0)
 
 		print("<a href=\"http://bhagavad-gita.today/"+id+"\"><b>"+id+"</b></a>", file=of)
-		# print("<a href=\"http://bhagavad-gita.today/"+id+"\"><b>"+id+"</b></a>", file=of0)
+		print("<a href=\"http://bhagavad-gita.today/"+id+"\"><b>"+id+"</b></a>", file=of0)
 		print("", file=of)
-		# print("", file=of0)
+		print("", file=of0)
 		continue
 	if id != "":
 		if debug2:
 			print(str(canto)+"."+chapter+"."+verse, line)
 		print(line, file=of)
-		# print(line, file=of0)
+		print(line, file=of0)
 
 fileinput.close()
 
