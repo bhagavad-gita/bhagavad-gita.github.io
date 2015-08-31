@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.8.20.html">8.8.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 nunam tapo yasya na manyu-nirjayo
 jnanam kvacit tac ca na sanga-varjitam
 kascin mahams tasya na kama-nirjayah
 sa isvarah kim parato vyapasrayah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 nunam--certainly; tapah--austerity; yasya--of someone; na--not; manyu--anger; nirjayah--conquered;
 jnanam--knowledge; kvacit--in some saintly person; tat--that; ca--also; na--not; sanga-varjitam--without
 the contamination of association; kascit--someone; mahan--a very great exalted person; tasya--his; na--
 not; kama--material desires; nirjayah--conquered; sah--such a person; isvarah--controller; kim--how can
 he be; paratah--of others; vyapasrayah--under the control.
-<p></p>
+<br>
 <h2>Translation</h2>
 The goddess of fortune, examining the assembly, thought in this way: Someone who has undergone
 great austerity has not yet conquered anger. Someone possesses knowledge, but he has not conquered
 material desires. Someone is a very great personality, but he cannot conquer lusty desires. Even a great
 personality depends on something else. How, then, can he be the supreme controller?
-<p></p>
+<br>
 <h2>Purport</h2>
 Here is an attempt to find the supreme controller, or isvara. Everyone may be accepted as an isvara, or
 controller, but still such controllers are controlled by others. For example, one may have undergone
@@ -81,7 +120,7 @@ Krsna. Krsna is never controlled by anyone, for He is the controller of everyone
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

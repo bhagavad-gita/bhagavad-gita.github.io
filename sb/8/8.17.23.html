@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,57 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.23.html">8.17.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sapta-dvipadhipatayo
-nrpa vainya-gayadayah
-arthaih kamair gata nantam
-trsnaya iti nah srutam
-<p></p>
+so 'dityam viryam adhatta
+tapasa cira-sambhrtam
+samahita-mana rajan
+daruny agnim yathanilah
+<br>
 <h2>Synonyms</h2>
-sapta-dvipa-adhipatayah--those who are proprietors of the seven islands; nrpah--such kings; vainyagaya-
-adayah--Maharaja Prthu, Maharaja Gaya and others; arthaih--for fulfillment of ambition; kamaih--for
-satisfying one's desires; gatah na--could not reach; antam--the end; trsnayah--of their ambitions; iti--thus;
-nah--by Us; srutam--has been heard.
-<p></p>
+sah--Kasyapa; adityam--unto Aditi; viryam--semen; adhatta--placed; tapasa--by austerity; cirasambhrtam--
+restrained for long, long years; samahita-manah--being fully in trance upon the Supreme
+Personality of Godhead; rajan--O King; daruni--as in firewood; agnim--fire; yatha--as; anilah--wind.
+<br>
 <h2>Translation</h2>
-We have heard that although powerful kings like Maharaja Prthu and Maharaja Gaya achieved
-proprietorship over the seven dvipas, they could not achieve satisfaction or find the end of their
-ambitions.
+O King, as the wind promotes friction between two pieces of wood and thus gives rise to fire, Kasyapa
+Muni, whose transcendental position was fully absorbed in the Supreme Personality of Godhead,
+transferred his potency into the womb of Aditi.
+<br>
+<h2>Purport</h2>
+A forest fire begins when two pieces of wood rub against one another, being agitated by the wind.
+Actually, however, fire belongs neither to the wood nor to the wind; it is always different from both.
+Similarly, here it is to be understood that the union of Kasyapa Muni and Aditi was not like the sexual
+intercourse of ordinary human beings. The Supreme Personality of Godhead has nothing to do with the
+human secretions of sexual intercourse. He is always completely aloof from such material combinations.
+The Lord says in Bhagavad-gita (9.29), samo 'ham sarva-bhutesu: "I am equal toward all living entities."
+Nonetheless, to protect the devotees and kill the demons, who were a disturbing element, the Lord
+entered the womb of Aditi. Therefore this is a transcendental pastime of the Lord. This should not be
+misunderstood. One should not think that the Lord became the son of Aditi the way an ordinary child is
+born because of sexual intercourse between man and woman.
+Here it may also be appropriate to explain, in these days of controversy, the origin of life. The life force
+of the living entity--the soul--is different from the ovum and semen of the human being. Although the
+conditioned soul has nothing to do with the reproductive cells of man and woman, he is placed into the
+proper situation because of his work (karmana daiva-netrena). Life is not, however, a product of two
+secretions, but is independent of all material elements. As fully described in Bhagavad-gita, the living
+entity is not subject to any material reactions. He can neither be burnt by fire, cut by sharp weapons,
+moistened by water, nor dried by the air. He is completely different from the physical elements, but by a
+superior arrangement he is put into these material elements. He is always aloof from material contact
+(asango hy ayam purusah) but because he is placed in a material condition, he suffers the reactions of the
+material modes of nature.
+purusah prakrti-stho hi
+bhunkte prakrtijan gunan
+karanam guna-sango 'sya
+sad-asad-yoni-janmasu
+"The living entity in material nature thus follows the ways of life, enjoying the three modes of nature.
+This is due to his association with that material nature. Thus he meets with good and evil amongst various
+species." (Bg. 13.22) Although the living entity is aloof from the material elements, he is put into material
+conditions, and thus he must suffer the reactions of material activities.
 </p>
 
 </div>
@@ -71,7 +139,7 @@ ambitions.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.9.14-15.html">8.9.14-15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.14-15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14-15"><b>14-15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 athoposya krta-snana
 hutva ca havisanalam
@@ -57,7 +96,7 @@ yathopajosam vasamsi
 paridhayahatani te
 kusesu pravisan sarve
 prag-agresv abhibhusitah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 atha--thereafter; uposya--observing a fast; krta-snanah--performing bathing; hutva--offering oblations;
 ca--also; havisa--with clarified butter; analam--into the fire; dattva--giving in charity; go-viprabhutebhyah--
@@ -66,7 +105,7 @@ ritualistic ceremonies; dvijaih--as dictated by the brahmanas; yatha-upajosam--a
 vasamsi--garments; paridhaya--putting on; ahatani--first-class and new; te--all of them; kusesu--on seats
 made of kusa grass; pravisan--sitting on them; sarve--all of them; prak-agresu--facing east; abhibhusitah--
 properly decorated with ornaments.
-<p></p>
+<br>
 <h2>Translation</h2>
 The demigods and demons then observed a fast. After bathing, they offered clarified butter and
 oblations into the fire and gave charity to the cows and to the brahmanas and members of the other orders
@@ -74,7 +113,7 @@ of society, namely the ksatriyas, vaisyas and sudras, who were all rewarded as t
 the demigods and demons performed ritualistic ceremonies under the directions of the brahmanas. Then
 they dressed themselves with new garments according to their own choice, decorated their bodies with
 ornaments, and sat facing east on seats made of kusa grass.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Vedas enjoin that for every ritualistic ceremony one must first become clean by bathing either in
 the water of the Ganges or Yamuna or in the sea. Then one may perform the ritualistic ceremony and offer
@@ -88,7 +127,7 @@ with a needle.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.11.html">8.11.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa tvam samihitam adah sthiti-janma-nasam
-bhutehitam ca jagato bhava-bandha-moksau
-vayur yatha visati kham ca caracarakhyam
-sarvam tad-atmakatayavagamo 'varuntse
-<p></p>
+evam nirakrto devo
+vairina tathya-vadina
+namrsyat tad-adhiksepam
+totrahata iva dvipah
+<br>
 <h2>Synonyms</h2>
-sah--Your Lordship; tvam--the Supreme Personality of Godhead; samihitam--which has been created (by
-You); adah--of this material cosmic manifestation; sthiti-janma-nasam--creation, maintenance and
-annihilation; bhuta--of the living entities; ihitam ca--and the different activities or endeavors; jagatah--of
-the whole world; bhava-bandha-moksau--in being implicated and being liberated from material
-complications; vayuh--the air; yatha--as; visati--enters; kham--in the vast sky; ca--and; cara-acaraakhyam--
-and everything, moving and nonmoving; sarvam--everything; tat--that; atmakataya--because of
-Your presence; avagamah--everything is known to You; avaruntse--You are all-pervading and therefore
-know everything.
-<p></p>
+evam--thus; nirakrtah--being defeated; devah--King Indra; vairina--by his enemy; tathya-vadina--who
+was competent to speak the truth; na--not; amrsyat--lamented; tat--of him (Bali); adhiksepam--the
+chastisement; totra--by the scepter or rod; ahatah--being beaten; iva--just like; dvipah--an elephant.
+<br>
 <h2>Translation</h2>
-My Lord, You are the supreme knowledge personified. You know everything about this creation and its
-beginning, maintenance and annihilation, and You know all the endeavors made by the living entities, by
-which they are either implicated in this material world or liberated from it. As the air enters the vast sky
-and also enters the bodies of all moving and nonmoving entities, You are present everywhere, and
-therefore You are the knower of all.
-<p></p>
-<h2>Purport</h2>
-As stated in the Brahma-samhita:
-eko 'py asau racayitum jagad-anda-kotim
-yac-chaktir asti jagad-anda-caya yad-antah
-andantara-stha-paramanu-cayantara-stham
-govindam adi-purusam tam aham bhajami
-"I worship the Personality of Godhead, Govinda, who by one of His plenary portions enters the
-existence of every universe and every atomic particle and thus manifests His infinite energy unlimitedly
-throughout the material creation." (Brahma-samhita 5.35)
-ananda-cinmaya-rasa-pratibhavitabhis
-tabhir ya eva nija-rupataya kalabhih
-goloka eva nivasaty akhilatma-bhuto
-govindam adi-purusam tam aham bhajami
-"I worship Govinda, the primeval Lord, who resides in His own realm, Goloka, with Radha, who
-resembles His own spiritual figure and who embodies the ecstatic potency [hladini]. Their companions
-are Her confidantes, who embody extensions of Her bodily form and who are imbued and permeated with
-ever-blissful spiritual rasa." (Brahma-samhita 5.37)
-Although Govinda is always present in His abode (goloka eva nivasati), He is simultaneously present
-everywhere. Nothing is unknown to Him, and nothing can be hidden from Him. The example given here
-compares the Lord to the air, which is within the vast sky and within every body but still is different from
-everything.
+Since Maharaja Bali's rebukes were truthful, King Indra did not at all become sorry, just as an elephant
+beaten by its driver's rod does not become agitated.
 </p>
 
 </div>
@@ -99,7 +108,7 @@ everything.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

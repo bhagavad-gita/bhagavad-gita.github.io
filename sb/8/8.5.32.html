@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.5.32.html">8.5.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 padau mahiyam sva-krtaiva yasya
 catur-vidho yatra hi bhuta-sargah
 sa vai maha-purusa atma-tantrah
 prasidatam brahma maha-vibhutih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 padau--His lotus feet; mahi--the earth; iyam--this; sva-krta--created by Himself; eva--indeed; yasya--of
 whom; catuh-vidhah--of four kinds of living entities; yatra--wherein; hi--indeed; bhuta-sargah--material
 creation; sah--He; vai--indeed; maha-purusah--the Supreme Person; atma-tantrah--self-sufficient;
 prasidatam--may He be merciful to us; brahma--the greatest; maha-vibhutih--with unlimited potency.
-<p></p>
+<br>
 <h2>Translation</h2>
 On this earth there are four kinds of living entities, who are all created by Him. The material creation
 rests on His lotus feet. He is the great Supreme Person, full of opulence and power. May He be pleased
 with us.
-<p></p>
+<br>
 <h2>Purport</h2>
 The word mahi refers to the five material elements--earth, water, air, fire and sky--which rest upon the
 lotus feet of the Supreme Personality of Godhead. Mahat-padam punya-yaso murareh. The mahat-tattva,
@@ -86,7 +125,7 @@ vairaja-murti, is another feature of the Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

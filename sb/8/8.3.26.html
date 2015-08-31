@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.3.26.html">8.3.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 so 'ham visva-srjam visvam
 avisvam visva-vedasam
 visvatmanam ajam brahma
 pranato 'smi param padam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--that; aham--I (the person desiring release from material life); visva-srjam--unto He who has created
 this cosmic manifestation; visvam--who is Himself the whole cosmic presentation; avisvam--although He
@@ -61,14 +100,14 @@ is transcendental to the cosmic manifestation; visva-vedasam--who is the knower 
 universal manifestation; visva-atmanam--the soul of the universe; ajam--who is never born, eternally
 existing; brahma--the Supreme; pranatah asmi--I offer my respectful obeisances; param--who is
 transcendental; padam--the shelter.
-<p></p>
+<br>
 <h2>Translation</h2>
 Now, fully desiring release from material life, I offer my respectful obeisances unto that Supreme Person
 who is the creator of the universe, who is Himself the form of the universe and who is nonetheless
 transcendental to this cosmic manifestation. He is the supreme knower of everything in this world, the
 Supersoul of the universe. He is the unborn, supremely situated Lord. I offer my respectful obeisances
 unto Him.
-<p></p>
+<br>
 <h2>Purport</h2>
 Sometimes when bhakti-yoga, Krsna consciousness, is preached to the common man, people argue,
 "Where is Krsna? Where is God? Can you show Him to us?" In this verse the answer is given that if we
@@ -83,7 +122,7 @@ one can offer respectful obeisances unto the Supreme Lord. This is the beginning
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

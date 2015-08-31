@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.19.22.html">8.19.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-balena sacivair buddhya
-durgair mantrausadhadibhih
-samadibhir upayais ca
-kalam natyeti vai janah
-<p></p>
+tribhih kramair asantusto
+dvipenapi na puryate
+nava-varsa-sametena
+sapta-dvipa-varecchaya
+<br>
 <h2>Synonyms</h2>
-balena--by material power; sacivaih--by the counsel of ministers; buddhya--by intelligence; durgaih--by
-fortresses; mantra-ausadha-adibhih--by mystic chanting or the influence of drugs and herbs; samaadibhih--
-by diplomacy and other such means; upayaih ca--by similar other attempts; kalam--the time
-factor, representing the Supreme Lord; na--never; atyeti--can overcome; vai--indeed; janah--any person.
-<p></p>
+tribhih--three; kramaih--by steps; asantustah--one who is dissatisfied; dvipena--by a complete island;
+api--although; na puryate--cannot be satisfied; nava-varsa-sametena--even by possessing nine varsas;
+sapta-dvipa-vara-icchaya--by the desire to take possession of seven islands.
+<br>
 <h2>Translation</h2>
-No one can surpass the time representation of the Supreme Personality of Godhead by material power,
-by the counsel of ministers, by intelligence, by diplomacy, by fortresses, by mystic mantras, by drugs, by
-herbs or by any other means.
+If I were not satisfied with three paces of land, then surely I would not be satisfied even with possessing
+one of the seven islands, consisting of nine varsas. Even if I possessed one island, I would hope to get
+others.
 </p>
 
 </div>
@@ -71,7 +109,7 @@ herbs or by any other means.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.12.9.html">8.12.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-trtiyam vadavam eke
-tasam samjna-sutas trayah
-yamo yami sraddhadevas
-chayayas ca sutan chrnu
-<p></p>
+tvam brahma kecid avayanty uta dharmam eke
+eke param sad-asatoh purusam paresam
+anye 'vayanti nava-sakti-yutam param tvam
+kecin maha-purusam avyayam atma-tantram
+<br>
 <h2>Synonyms</h2>
-trtiyam--the third wife; vadavam--Vadava; eke--some people; tasam--of all three wives; samjna-sutah
-trayah--three issues of Samjna; yamah--one son named Yama; yami--Yami, a daughter; sraddhadevah--
-Sraddhadeva, another son; chayayah--of Chaya; ca--and; sutan--the sons; srnu--just hear about.
-<p></p>
+tvam--You; brahma--the supreme truth, the Absolute Truth, Brahman; kecit--some people, namely the
+group of Mayavadis known as the Vedantists; avayanti--consider; uta--certainly; dharmam--religion; eke--
+some others; eke--some others; param--transcendental; sat-asatoh--to both cause and effect; purusam--the
+Supreme person; paresam--the supreme controller; anye--others; avayanti--describe; nava-sakti-yutam--
+endowed with nine potencies; param--transcendental; tvam--unto You; kecit--some; maha-purusam--the
+Supreme Personality of Godhead; avyayam--without loss of energy; atma-tantram--supremely
+independent.
+<br>
 <h2>Translation</h2>
-It is said that the sun-god had a third wife, named Vadava. Of the three wives, the wife named Samjna
-had three children--Yama, Yami and Sraddhadeva. Now let me describe the children of Chaya.
+Those who are known as the impersonalist Vedantists regard You as the impersonal Brahman. Others,
+known as the Mimamsaka philosophers, regard You as religion. The Sankhya philosophers regard You as
+the transcendental person who is beyond prakrti and purusa and who is the controller of even the
+demigods. The followers of the codes of devotional service known as the Pancaratras regard You as being
+endowed with nine different potencies. And the Patanjala philosophers, the followers of Patanjali Muni,
+regard You as the supreme independent Personality of Godhead, who has no equal or superior.
 </p>
 
 </div>
@@ -69,7 +116,7 @@ had three children--Yama, Yami and Sraddhadeva. Now let me describe the children
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

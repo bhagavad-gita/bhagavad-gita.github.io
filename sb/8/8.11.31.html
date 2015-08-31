@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.31.html">8.11.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasyasau padavim rudro
-visnor adbhuta-karmanah
-pratyapadyata kamena
-vairineva vinirjitah
-<p></p>
+tadapatad gagana-tale maha-javam
+vicicchide harir isubhih sahasradha
+tam ahanan nrpa kulisena kandhare
+rusanvitas tridasa-patih siro haran
+<br>
 <h2>Synonyms</h2>
-tasya--of He who is the Supreme Lord; asau--Lord Siva; padavim--the place; rudrah--Lord Siva; visnoh--
-of Lord Visnu; adbhuta-karmanah--of He who acts very wonderfully; pratyapadyata--began to follow;
-kamena--by lusty desire; vairina iva--as if by an enemy; vinirjitah--being harassed.
-<p></p>
+tada--at that time; apatat--falling like a meteor; gagana-tale--beneath the sky or on the ground; mahajavam--
+extremely powerful; vicicchide--cut to pieces; harih--Indra; isubhih--by his arrows; sahasradha--
+into thousands of pieces; tam--that Namuci; ahanat--struck; nrpa--O King; kulisena--with his thunderbolt;
+kandhare--on the shoulder; rusa-anvitah--being very angry; tridasa-patih--Indra, the King of the
+demigods; sirah--the head; haran--to separate.
+<br>
 <h2>Translation</h2>
-As if harassed by an enemy in the form of lusty desires, Lord Siva followed the path of Lord Visnu, who
-acts very wonderfully and who had taken the form of Mohini.
-<p></p>
-<h2>Purport</h2>
-Lord Siva cannot be victimized by maya. Therefore it is to be understood that Lord Siva was being thus
-harassed by Lord Visnu's internal potency. Lord Visnu can perform many wonderful activities through His
-various potencies.
-parasya saktir vividhaiva sruyate
-svabhaviki jnana-bala-kriya ca
-(Svetasvatara Upanisad 6.8)
-The Supreme Lord has various potencies, by which He can act very efficiently. To do anything expertly,
-He doesn't even need to contemplate. Since Lord Siva was being harassed by the woman, it is to be
-understood that this was being done not by a woman but by Lord Visnu Himself.
+O King, when Indra, King of heaven, saw this very powerful spear falling toward the ground like a
+blazing meteor, he immediately cut it to pieces with his arrows. Then, being very angry, he struck
+Namuci's shoulder with his thunderbolt to cut off Namuci's head.
 </p>
 
 </div>
@@ -80,7 +111,7 @@ understood that this was being done not by a woman but by Lord Visnu Himself.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

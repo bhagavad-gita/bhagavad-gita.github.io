@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,24 +81,25 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.5.29.html">8.5.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ya eka-varnam tamasah param tad
 alokam avyaktam ananta-param
 asam cakaropasuparnam enam
 upasate yoga-rathena dhirah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yah--the Supreme Personality of Godhead who; eka-varnam--absolute, situated in pure goodness;
 tamasah--to the darkness of the material world; param--transcendental; tat--that; alokam--who cannot be
 seen; avyaktam--not manifested; ananta-param--unlimited, beyond the measurement of material time and
 space; asam cakara--situated; upa-suparnam--on the back of Garuda; enam--Him; upasate--worship; yogarathena--
 by the vehicle of mystic yoga; dhirah--persons who are sober, undisturbed by material agitation.
-<p></p>
+<br>
 <h2>Translation</h2>
 The Supreme Personality of Godhead is situated in pure goodness [suddha-sattva], and therefore He is
 eka-varna--the omkara [pranava]. Because the Lord is beyond the cosmic manifestation, which is
@@ -68,7 +107,7 @@ considered to be darkness, He is not visible to material eyes. Nonetheless, He i
 time or space, but is present everywhere. Seated on His carrier, Garuda, He is worshiped by means of
 mystical yogic power by those who have achieved freedom from agitation. Let us all offer our respectful
 obeisances unto Him.
-<p></p>
+<br>
 <h2>Purport</h2>
 Sattvam visuddham vasudeva-sabditam (Bhag. 4.3.23). In this material world, the three modes of
 material nature--goodness, passion and ignorance--prevail. Among these three, goodness is the platform
@@ -93,7 +132,7 @@ unto that Supreme Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

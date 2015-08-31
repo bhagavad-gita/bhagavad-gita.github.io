@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.13.12.html">8.13.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ramyam upavanodyanaih
-srimadbhir nandanadibhih
-kujad-vihanga-mithunair
-gayan-matta-madhuvrataih
-pravala-phala-pusporubhara-
-sakhamara-drumaih
-<p></p>
+tatra devah sutapaso
+viraja amrtaprabhah
+tesam virocana-suto
+balir indro bhavisyati
+<br>
 <h2>Synonyms</h2>
-ramyam--very pleasing; upavana--with orchards; udyanaih--and gardens; srimadbhih--very beautiful to
-see; nandana-adibhih--such as Nandana; kujat--chirping; vihanga--birds; mithunaih--with pairs; gayat--
-singing; matta--mad; madhu-vrataih--with bees; pravala--of leaves; phala-puspa--fruits and flowers; uru--
-very great; bhara--bearing the weight; sakha--whose branches; amara-drumaih--with eternal trees.
-<p></p>
+tatra--in that period of Manu; devah--the demigods; sutapasah--the Sutapas; virajah--the Virajas;
+amrtaprabhah--the Amrtaprabhas; tesam--of them; virocana-sutah--the son of Virocana; balih--Maharaja
+Bali; indrah--the king of heaven; bhavisyati--will become.
+<br>
 <h2>Translation</h2>
-King Indra's city was full of pleasing orchards and gardens, such as the Nandana garden. Because of the
-weight of the flowers, leaves and fruit, the branches of the eternally existing trees were bending down.
-The gardens were visited by pairs of chirping birds and singing bees. The entire atmosphere was celestial.
+In the period of the eighth Manu, among the demigods will be the Sutapas, the Virajas and the
+Amrtaprabhas. The king of the demigods, Indra, will be Bali Maharaja, the son of Virocana.
 </p>
 
 </div>
@@ -73,7 +108,7 @@ The gardens were visited by pairs of chirping birds and singing bees. The entire
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

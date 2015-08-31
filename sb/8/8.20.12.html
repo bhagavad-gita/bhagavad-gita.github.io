@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.12.html">8.20.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-tasyettham bhasamanasya
-prahrado bhagavat-priyah
-ajagama kuru-srestha
-raka-patir ivotthitah
-<p></p>
+yadyapy asav adharmena
+mam badhniyad anagasam
+tathapy enam na himsisye
+bhitam brahma-tanum ripum
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; tasya--Bali Maharaja; ittham--in this way; bhasamanasya--
-while describing his fortunate position; prahradah--Maharaja Prahlada, his grandfather; bhagavat-priyah--
-the most favored devotee of the Supreme Personality of Godhead; ajagama--appeared there; kuru-srestha--
-O best of the Kurus, Maharaja Pariksit; raka-patih--the moon; iva--like; utthitah--having risen.
-<p></p>
+yadyapi--although; asau--Lord Visnu; adharmena--crookedly, without reference to the straight way;
+mam--me; badhniyat--kills; anagasam--although I am not sinful; tathapi--still; enam--against Him; na--
+not; himsisye--I shall take any retaliation; bhitam--because He is afraid; brahma-tanum--having assumed
+the form of a brahmana-brahmacari; ripum--even though He is my enemy.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: O best of the Kurus, while Bali Maharaja was describing his fortunate position
-in this way, the most dear devotee of the Lord, Prahlada Maharaja, appeared there, like the moon rising in
-the nighttime.
+Although He is Visnu Himself, out of fear He has covered Himself in the form of a brahmana to come to
+me begging. Under the circumstances, because He has assumed the form of a brahmana, even if He
+irreligiously arrests me or even kills me, I shall not retaliate, although He is my enemy.
+<br>
+<h2>Purport</h2>
+If Lord Visnu as He is had come to Bali Maharaja and asked him to do something, Bali Maharaja
+certainly would not have refused His request. But to enjoy a little humor between Himself and His
+devotee, the Lord covered Himself as a brahmana-brahmacari and thus came to Bali Maharaja to beg for
+only three feet of land.
 </p>
 
 </div>
@@ -72,7 +116,7 @@ the nighttime.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

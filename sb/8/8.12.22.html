@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.12.22.html">8.12.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-havisman sukrtah satyo
-jayo murtis tada dvijah
-suvasana-viruddhadya
-devah sambhuh suresvarah
-<p></p>
+tam viksya deva iti kanduka-lilayesadvridasphuta-
+smita-visrsta-kataksa-mustah
+stri-preksana-pratisamiksana-vihvalatma
+natmanam antika umam sva-ganams ca veda
+<br>
 <h2>Synonyms</h2>
-havisman--Havisman; sukrtah--Sukrta; satyah--Satya; jayah--Jaya; murtih--Murti; tada--at that time;
-dvijah--the seven sages; suvasana--the Suvasanas; viruddha--the Viruddhas; adyah--and so on; devah--the
-demigods; sambhuh--Sambhu; sura-isvarah--Indra, king of the demigods.
-<p></p>
+tam--Her; viksya--after observing; devah--Lord Sambhu; iti--in this way; kanduka-lilaya--by playing with
+the ball; isat--slight; vrida--by bashfulness; asphuta--not very distinct; smita--with smiling; visrsta--sent;
+kataksa-mustah--defeated by the glances; stri-preksana--by glancing at that beautiful woman;
+pratisamiksana--and by constantly being watched by Her; vihvala-atma--whose mind was agitated; na--
+not; atmanam--himself; antike--(situated) nearby; umam--his wife, mother Uma; sva-ganan ca--and his
+associates; veda--Lord Siva could understand.
+<br>
 <h2>Translation</h2>
-Havisman, Sukrta, Satya, Jaya, Murti and others will be the seven sages, the Suvasanas and Viruddhas
-will be among the demigods, and Sambhu will be their king, Indra.
+While Lord Siva observed the beautiful woman playing with the ball, She sometimes glanced at him and
+slightly smiled in bashfulness. As he looked at the beautiful woman and She watched him, he forgot both
+himself and Uma, his most beautiful wife, as well as his associates nearby.
+<br>
+<h2>Purport</h2>
+The material bondage of this world is that a beautiful woman can captivate a handsome man and that a
+handsome man can captivate a beautiful woman. Such are the affairs that began when Lord Siva observed
+the beautiful girl playing with the ball. In such activities, the influence of Cupid is very prominent. As
+both parties move their eyebrows and glance at one another, their lusty desires increase more and more.
+Such reciprocations of lusty desire took place between Lord Siva and the beautiful woman, even though
+Uma and Lord Siva's associates were by Lord Siva's side. Such is the attraction between man and woman
+in the material world. Lord Siva was supposed to be above all this attraction, but he was victimized by the
+captivating power of Lord Visnu. Rsabhadeva thus explains the nature of lusty attraction:
+pumsah striya mithuni-bhavam etam
+tayor mitho hrdaya-granthim ahuh
+ato grha-ksetra-sutapta-vittair
+janasya moho 'yam aham mameti
+"The attraction between male and female is the basic principle of material existence. On the basis of this
+misconception, which ties together the hearts of the male and female, one becomes attracted to his body,
+home, property, children, relatives and wealth. In this way one increases life's illusions and thinks in
+terms of 'I and mine.' " (Bhag. 5.5.8) When a man and woman exchange feelings of lust, both of them are
+victimized, and thus they are bound to this material world in various ways.
 </p>
 
 </div>
@@ -69,7 +131,7 @@ will be among the demigods, and Sambhu will be their king, Indra.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

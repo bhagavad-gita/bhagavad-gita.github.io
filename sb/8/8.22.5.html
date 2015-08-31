@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.22.5.html">8.22.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-go-vipra-sura-sadhunam
-chandasam api cesvarah
-raksam icchams tanur dhatte
-dharmasyarthasya caiva hi
-<p></p>
+tvam nunam asuranam nah
+paroksah paramo guruh
+yo no 'neka-madandhanam
+vibhramsam caksur adisat
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; go--of the cows; vipra--of the brahmanas; sura--of the
-demigods; sadhunam--and of the devotees; chandasam api--even of the Vedic literature; ca--and; isvarah--
-the supreme controller; raksam--the protection; icchan--desiring; tanuh dhatte--accepts the forms of
-incarnations; dharmasya--of the principles of religion; arthasya--of the principles of the purpose of life;
-ca--and; eva--indeed; hi--certainly.
-<p></p>
+tvam--Your Lordship; nunam--indeed; asuranam--of the demons; nah--as we are; paroksah--indirect;
+paramah--the supreme; guruh--spiritual master; yah--Your Lordship; nah--of us; aneka--many; madaandhanam--
+blinded by material opulences; vibhramsam--destroying our false prestige; caksuh--the eye of
+knowledge; adisat--gave.
+<br>
 <h2>Translation</h2>
-Sri Sukadeva Gosvami said: O King, for the sake of protecting the cows, brahmanas, demigods, devotees,
-the Vedic literature, religious principles, and principles to fulfill the purpose of life, the Supreme
-Personality of Godhead accepts the forms of incarnations.
-<p></p>
+Since Your Lordship is indirectly the greatest well-wisher of us demons, You act for our best welfare by
+posing as if our enemy. Because demons like us always aspire for a position of false prestige, by chastising
+us You give us the eyes by which to see the right path.
+<br>
 <h2>Purport</h2>
-The Supreme Personality of Godhead generally appears in various types of incarnations to give
-protection to the cows and brahmanas. The Lord is described as go-brahmana-hitaya ca; in other words,
-He is always eager to benefit the cows and brahmanas. When Lord Krsna appeared, He purposefully
-became a cowherd boy and showed personally how to give protection to the cows and calves. Similarly,
-He showed respect to Sudama Vipra, a real brahmana. From the Lord's personal activities, human society
-should learn how to give protection specifically to the brahmanas and cows. Then the protection of
-religious principles, fulfillment of the aim of life and protection of Vedic knowledge can be achieved.
-Without protection of cows, brahminical culture cannot be maintained; and without brahminical culture,
-the aim of life cannot be fulfilled. The Lord, therefore, is described as go-brahmana-hitaya because His
-incarnation is only for the protection of the cows and brahmanas. Unfortunately, because in Kali-yuga
-there is no protection of the cows and brahminical culture, everything is in a precarious position. If
-human society wants to be exalted, the leaders of society must follow the instructions of Bhagavad-gita
-and give protection to the cows, the brahmanas and brahminical culture.
+Bali Maharaja considered the Supreme Personality of Godhead a better friend to the demons than to the
+demigods. In the material world, the more one gets material possessions, the more he becomes blind to
+spiritual life. The demigods are devotees of the Lord for the sake of material possessions, but although the
+demons apparently do not have the Supreme Personality of Godhead on their side, He always acts as their
+well-wisher by depriving them of their positions of false prestige. By false prestige one is misguided, so the
+Supreme Lord takes away their position of false prestige as a special favor.
 </p>
 
 </div>
@@ -88,7 +118,7 @@ and give protection to the cows, the brahmanas and brahminical culture.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

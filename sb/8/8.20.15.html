@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.15.html">8.20.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa tatra hasinam udiksya sat-patim
-harim sunandady-anugair upasitam
-upetya bhumau sirasa maha-mana
-nanama murdhna pulakasru-viklavah
-<p></p>
+drdham pandita-many ajnah
+stabdho 'sy asmad-upeksaya
+mac-chasanatigo yas tvam
+acirad bhrasyase sriyah
+<br>
 <h2>Synonyms</h2>
-sah--Prahlada Maharaja; tatra--there; ha asinam--seated; udiksya--after seeing; sat-patim--the Supreme
-Personality of Godhead, master of the liberated souls; harim--Lord Hari; sunanda-adi-anugaih--by His
-followers, like Sunanda; upasitam--being worshiped; upetya--reaching nearby; bhumau--on the ground;
-sirasa--with his head (bowed down); maha-manah--the great devotee; nanama--offered obeisances;
-murdhna--with his head; pulaka-asru-viklavah--agitated by tears of jubilation.
-<p></p>
+drdham--so firmly convinced or fixed in your decision; pandita-mani--considering yourself very learned;
+ajnah--at the same time foolish; stabdhah--impudent; asi--you have become; asmat--of us; upeksaya--by
+disregarding; mat-sasana-atigah--surpassing the jurisdiction of my administration; yah--such a person (as
+you); tvam--yourself; acirat--very soon; bhrasyase--will fall down; sriyah--from all opulence.
+<br>
 <h2>Translation</h2>
-When the great personality Prahlada Maharaja saw that the Supreme Lord was sitting there, surrounded
-and worshiped by His intimate associates like Sunanda, he was overwhelmed with tears of jubilation.
-Approaching the Lord and falling to the ground, he offered obeisances to the Lord with his head.
+Although you have no knowledge, you have become a so-called learned person, and therefore you dare
+be so impudent as to disobey my order. Because of disobeying me, you shall very soon be bereft of all your
+opulence.
+<br>
+<h2>Purport</h2>
+Srila Visvanatha Cakravarti Thakura says that Bali Maharaja was not pandita-mani, or one who falsely
+assumes himself learned; rather, he was pandita-manya-jnah, one who is so learned that all other learned
+persons worship him. Aid because he was so learned, he could disobey the order of his so-called spiritual
+master. He had no fear of any condition of material existence. Anyone cared for by Lord Visnu does not
+need to care about anyone else. Thus Bali Maharaja could never be bereft of all opulences. The opulences
+offered by the Supreme Personality of Godhead are not to be compared to the opulences obtained by
+karma-kanda. In other words, if a devotee becomes very opulent, it is to be understood that his opulence
+is a gift of the Supreme Personality of Godhead. Such opulence will never be vanquished, whereas the
+opulence achieved by one's fruitive activity may be vanquished at any moment.
 </p>
 
 </div>
@@ -72,7 +121,7 @@ Approaching the Lord and falling to the ground, he offered obeisances to the Lor
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.15.12.html">8.15.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-bhagavan uvaca
-deva-matar bhavatya me
-vijnatam cira-kanksitam
-yat sapatnair hrta-srinam
-cyavitanam sva-dhamatah
-<p></p>
+ramyam upavanodyanaih
+srimadbhir nandanadibhih
+kujad-vihanga-mithunair
+gayan-matta-madhuvrataih
+pravala-phala-pusporubhara-
+sakhamara-drumaih
+<br>
 <h2>Synonyms</h2>
-sri-bhagavan uvaca--the Supreme Personality of Godhead said; deva-matah--O mother of the demigods;
-bhavatyah--of you; me--by Me; vijnatam--understood; cira-kanksitam--what You have desired for a long
-time; yat--because; sapatnaih--by the rivals; hrta-srinam--of your sons, who are bereft of all opulences;
-cyavitanam--vanquished; sva-dhamatah--from their own residential quarters.
-<p></p>
+ramyam--very pleasing; upavana--with orchards; udyanaih--and gardens; srimadbhih--very beautiful to
+see; nandana-adibhih--such as Nandana; kujat--chirping; vihanga--birds; mithunaih--with pairs; gayat--
+singing; matta--mad; madhu-vrataih--with bees; pravala--of leaves; phala-puspa--fruits and flowers; uru--
+very great; bhara--bearing the weight; sakha--whose branches; amara-drumaih--with eternal trees.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead said: O mother of the demigods, I have already understood your
-long-cherished desires for the welfare of your sons, who have been deprived of all opulences and driven
-from their residence by their enemies.
-<p></p>
-<h2>Purport</h2>
-The Supreme Personality of Godhead, being situated in everyone's heart, and especially in the hearts of
-His devotees, is always ready to help devotees in adversity. Since He knows everything, He knows how
-things are to be adjusted, and He does the needful to relieve the suffering of His devotee.
+King Indra's city was full of pleasing orchards and gardens, such as the Nandana garden. Because of the
+weight of the flowers, leaves and fruit, the branches of the eternally existing trees were bending down.
+The gardens were visited by pairs of chirping birds and singing bees. The entire atmosphere was celestial.
 </p>
 
 </div>
@@ -77,7 +112,7 @@ things are to be adjusted, and He does the needful to relieve the suffering of H
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

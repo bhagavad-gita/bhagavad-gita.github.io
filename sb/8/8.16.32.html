@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.32.html">8.16.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yad yad vato vanchasi tat praticcha me
-tvam arthinam vipra-sutanutarkaye
-gam kancanam gunavad dhama mrstam
-tathanna-peyam uta va vipra-kanyam
-graman samrddhams turagan gajan va
-rathams tatharhattama sampraticcha
-<p></p>
+namah sivaya rudraya
+namah sakti-dharaya ca
+sarva-vidyadhipataye
+bhutanam pataye namah
+<br>
 <h2>Synonyms</h2>
-yat yat--whatever; vato--O brahmacari; vanchasi--You desire; tat--that; praticcha--You may take; me--
-from me; tvam--You; arthinam--desiring something; vipra-suta--O son of a brahmana; anutarkaye--I
-consider; gam--a cow; kancanam--gold; gunavat dhama--a furnished residence; mrstam--palatable; tatha--
-as well as; anna--food grains; peyam--drink; uta--indeed; va--either; vipra-kanyam--the daughter of a
-brahmana; graman--villages; samrddhan--prosperous; turagan--horses; gajan--elephants; va--either;
-rathan--chariots; tatha--as well as; arhat-tama--O best of those who are worshipable; sampraticcha--You
-may take.
-<p></p>
+namah--I offer my respectful obeisances unto You; sivaya--the incarnation named Lord Siva; rudraya--
+the expansion named Rudra; namah--obeisances; sakti-dharaya--the reservoir of all potencies; ca--and;
+sarva-vidya-adhipataye--the reservoir of all knowledge; bhutanam--of the living entities; pataye--the
+supreme master; namah--I offer my respectful obeisances unto You.
+<br>
 <h2>Translation</h2>
-O son of a brahmana, it appears that You have come here to ask me for something. Therefore, whatever
-You want You may take from me. O best of those who are worshipable. You may take from me a cow,
-gold, a furnished house, palatable food and drink, the daughter of a brahmana for Your wife, prosperous
-villages, horses, elephants, chariots or whatever You desire.
-Thus end the Bhaktivedanta purports of the Eighth Canto, Eighteenth Chapter, of the Srimad-
-Bhagavatam, entitled "Lord Vamanadeva, the Dwarf Incarnation."
-Chapter Nineteen
-Lord Vamanadeva Begs Charity from Bali Maharaja
-This Nineteenth Chapter describes how Lord Vamanadeva asked for three paces of land in charity, how
-Bali Maharaja agreed to His proposal, and how Sukracarya forbade Bali Maharaja to fulfill Lord
-Vamanadeva's request.
-When Bali Maharaja, thinking Vamanadeva to be the son of a brahmana, told Him to ask for anything
-He liked, Lord Vamanadeva praised Hiranyakasipu and Hiranyaksa for their heroic activities, and after
-thus praising the family in which Bali Maharaja had been born, He begged the King for three paces of
-land. Bali Maharaja agreed to give this land in charity, since this was very insignificant, but Sukracarya,
-who could understand that Vamanadeva was Visnu, the friend of the demigods, forbade Bali Maharaja to
-give this land. Sukracarya advised Bali Maharaja to withdraw his promise. He explained that in subduing
-others, in joking, in responding to danger, in acting for the welfare of others, and so on, one could refuse
-to fulfill one's promise, and there would be no fault. By this philosophy, Sukracarya tried to dissuade Bali
-Maharaja from giving land to Lord Vamanadeva.
+I offer my respectful obeisances unto You, Lord Siva, or Rudra, who are the reservoir of all potencies,
+the reservoir of all knowledge, and the master of everyone.
+<br>
+<h2>Purport</h2>
+It is the system for one to offer obeisances unto the expansion or incarnation of the Lord. Lord Siva is
+the incarnation of ignorance, one of the material modes of nature.
 </p>
 
 </div>
@@ -93,7 +113,7 @@ Maharaja from giving land to Lord Vamanadeva.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

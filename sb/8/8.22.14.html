@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.22.14.html">8.22.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam aha satikarunam
-maha-karunikam nrpam
-yadobhyo jnati-ghatibhyo
-dinam mam dina-vatsala
-katham visrjase rajan
-bhitam asmin sarij-jale
-<p></p>
+tasmai balir varuna-pasa-yantritah
+samarhanam nopajahara purvavat
+nanama murdhnasru-vilola-locanah
+sa-vrida-nicina-mukho babhuva ha
+<br>
 <h2>Synonyms</h2>
-tam--unto him (Satyavrata); aha--said; sa--that small fish; ati-karunam--extremely compassionate; mahakarunikam--
-extremely merciful; nrpam--unto King Satyavrata; yadobhyah--to the aquatics; jnatighatibhyah--
-who are always eager to kill the smaller fish; dinam--very poor; mam--me; dina-vatsala--O
-protector of the poor; katham--why; visrjase--you are throwing; rajan--O King; bhitam--very much afraid;
-asmin--within this; sarit-jale--in the water of the river.
-<p></p>
+tasmai--unto Prahlada Maharaja; balih--Bali Maharaja; varuna-pasa-yantritah--being bound by the ropes
+of Varuna; samarhanam--befitting respect; na--not; upajahara--offered; purva-vat--like before; nanama--he
+offered obeisances; murdhna--with the head; asru-vilola-locanah--eyes inundated with tears; sa-vrida--
+with shyness; nicina--downward; mukhah--face; babhuva ha--he so became.
+<br>
 <h2>Translation</h2>
-With an appealing voice, the poor small fish said to King Satyavrata, who was very merciful: My dear
-King, protector of the poor, why are you throwing Me in the water of the river, where there are other
-aquatics who can kill Me? I am very much afraid of them.
-<p></p>
+Being bound by the ropes of Varuna, Bali Maharaja could not offer befitting respect to Prahlada
+Maharaja as he had before. Rather, he simply offered respectful obeisances with his head, his eyes being
+inundated with tears and his face lowered in shame.
+<br>
 <h2>Purport</h2>
-In the Matsya Purana it is said:
-ananta-saktir bhagavan
-matsya-rupi janardanah
-kridartham yacayam asa
-svayam satyavratam nrpam
-"The Supreme Personality of Godhead possesses unlimited potency. Nonetheless, in His pastime in the
-form of a fish He begged protection from King Satyavrata."
+Since Bali Maharaja had been arrested by Lord Vamanadeva, he was certainly to be considered an
+offender. Bali Maharaja seriously felt that he was an offender to the Supreme Personality of Godhead.
+Certainly Prahlada Maharaja would not like this. Therefore Bali Maharaja was ashamed and hung his
+head.
 </p>
 
 </div>
@@ -83,7 +116,7 @@ form of a fish He begged protection from King Satyavrata."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

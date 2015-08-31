@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.11.html">8.17.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa tan-niketam parimrsya sunyam
-apasyamanah kupito nanada
-ksmam dyam disah kham vivaran samudran
-visnum vicinvan na dadarsa virah
-<p></p>
+sri-suka uvaca
+adityaivam stuto rajan
+bhagavan puskareksanah
+ksetra-jnah sarva-bhutanam
+iti hovaca bharata
+<br>
 <h2>Synonyms</h2>
-sah--that Hiranyakasipu; tat-niketam--the residence of Lord Visnu; parimrsya--searching; sunyam--
-vacant; apasyamanah--not seeing Lord Visnu; kupitah--being very angry; nanada--cried very loudly;
-ksmam--on the surface of the earth; dyam--in outer space; disah--in all directions; kham--in the sky;
-vivaran--in all the caves; samudran--all the oceans; visnum--Lord Visnu; vicinvan--searching for; na--not;
-dadarsa--did see; virah--although he was very powerful.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; aditya--by Aditi; evam--thus; stutah--being worshiped;
+rajan--O King (Maharaja Pariksit); bhagavan--the Supreme Personality of Godhead; puskara-iksanah--
+whose eyes are like lotus flowers; ksetra-jnah--the Supersoul; sarva-bhutanam--of all living entities; iti--
+thus; ha--indeed; uvaca--replied; bharata--O best of the Bharata dynasty.
+<br>
 <h2>Translation</h2>
-Upon seeing that the residence of Lord Visnu was vacant, Hiranyakasipu began searching for Lord Visnu
-everywhere. Angry at not seeing Him, Hiranyakasipu screamed loudly and searched the entire universe,
-including the surface of the earth, the higher planetary systems, all directions and all the caves and
-oceans. But Hiranyakasipu, the greatest hero, did not see Visnu anywhere.
+Sukadeva Gosvami said: O King Pariksit, best of the Bharata dynasty, when the lotus-eyed Lord, the
+Supersoul of all living entities, was thus worshiped by Aditi, He replied as follows.
 </p>
 
 </div>
@@ -73,7 +110,7 @@ oceans. But Hiranyakasipu, the greatest hero, did not see Visnu anywhere.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

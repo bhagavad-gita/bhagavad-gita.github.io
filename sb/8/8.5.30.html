@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.5.30.html">8.5.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 na yasya kascatititarti mayam
 yaya jano muhyati veda nartham
 tam nirjitatmatma-gunam paresam
 namama bhutesu samam carantam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; yasya--of whom (the Supreme Personality of Godhead); kasca--anyone; atititarti--is able to
 overcome; mayam--the illusory energy; yaya--by whom (by the illusory energy); janah--people in general;
@@ -62,13 +101,13 @@ Supreme Personality of Godhead); nirjita--completely controlling; atma--the livi
 and His external energy; para-isam--the Lord, who is transcendentally situated; namama--we offer our
 respectful obeisances; bhutesu--unto all living beings; samam--equally situated, or equipoised; carantam--
 controlling or ruling them.
-<p></p>
+<br>
 <h2>Translation</h2>
 No one can overcome the Supreme Personality of Godhead's illusory energy [maya], which is so strong
 that it bewilders everyone, making one lose the sense to understand the aim of life. That same maya,
 however, is subdued by the Supreme Personality of Godhead, who rules everyone and who is equally
 disposed toward all living entities. Let us offer our obeisances unto Him.
-<p></p>
+<br>
 <h2>Purport</h2>
 The prowess of the Supreme Personality of Godhead, Visnu, certainly controls all living entities, so
 much so that the living entities have forgotten the aim of life. Na te viduh svartha-gatim hi visnum: the
@@ -91,7 +130,7 @@ Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.5.html">8.16.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sronayam sravana-dvadasyam
-muhurte 'bhijiti prabhuh
-sarve naksatra-taradyas
-cakrus taj-janma daksinam
-<p></p>
+api vakusalam kincid
+grhesu grha-medhini
+dharmasyarthasya kamasya
+yatra yogo hy ayoginam
+<br>
 <h2>Synonyms</h2>
-sronayam--when the moon was situated in the Sravana lunar mansion; sravana-dvadasyam--on the
-twelfth lunar day of the bright fortnight in the month of Bhadra, the day famous as the Sravana-dvadasi;
-muhurte--in the auspicious moment; abhijiti--in the first portion of the Sravana lunar mansion known as
-the Abhijit-naksatra and in the Abhijit-muhurta (occurring at midday); prabhuh--the Lord; sarve--all;
-naksatra--stars; tara--planets; adyah--beginning with the sun and followed by the other planets; cakruh--
-made; tat-janma--the birthday of the Lord; daksinam--very munificent.
-<p></p>
+api--I am wondering; va--either; akusalam--inauspiciousness; kincit--some; grhesu--at home; grhamedhini--
+O my wife, who are attached to household life; dharmasya--of the principles of religion;
+arthasya--of the economic condition; kamasya--of satisfaction of desires; yatra--at home; yogah--the result
+of meditation; hi--indeed; ayoginam--even of those who are not transcendentalists.
+<br>
 <h2>Translation</h2>
-On the day of Sravana-dvadasi [the twelfth day of the bright fortnight in the month of Bhadra], when
-the moon came into the lunar mansion Sravana, at the auspicious moment of Abhijit, the Lord appeared
-in this universe. Considering the Lord's appearance very auspicious, all the stars and planets, from the sun
-to Saturn, were munificently charitable.
-<p></p>
+O my wife, who are very much attached to household life, if the principles of religion, economic
+development and satisfaction of the senses are properly followed in household life, one's activities are as
+good as those of a transcendentalist. I wonder whether there have been any discrepancies in following
+these principles.
+<br>
 <h2>Purport</h2>
-Srila Visvanatha Cakravarti Thakura, an expert astrologer, explains the word naksatra-taradyah. The
-word naksatra means "the stars," the word tara in this context refers to the planets, and adyah means "the
-first one specifically mentioned." Among the planets, the first is Surya, the sun, not the moon. Therefore,
-according to the Vedic version, the modern astronomer's proposition that the moon is nearest to the earth
-should not be accepted. The chronological order in which people all over the world refer to the days of
-the week--Sunday, Monday, Tuesday, Wednesday, Thursday, Friday and Saturday--corresponds to the
-Vedic order of the planets and thus circumstantiates the Vedic version. Apart from this, when the Lord
-appeared the planets and stars became situated very auspiciously, according to astrological calculations, to
-celebrate the birth of the Lord.
+In this verse, Aditi has been addressed by her husband, Kasyapa Muni, as grha-medhini, which means
+"one who is satisfied in household life for sense gratification." Generally, those who are in household life
+pursue sense gratification in the field of activities performed for material results. Such grhamedhis have
+only one aim in life--sense gratification. Therefore it is said, yan maithunadi-grhamedhi-sukham hi
+tuccham: the householder's life is based on sense gratification, and therefore the happiness derived from it
+is very meager. Nonetheless, the Vedic process is so comprehensive that even in householder life one can
+adjust his activities according to the regulative principles of dharma, artha, kama and moksa. One's aim
+should be to achieve liberation, but because one cannot at once give up sense gratification, in the sastras
+there are injunctions prescribing how to follow the principles of religion, economic development and
+sense gratification. As explained in Srimad-Bhagavatam (1.2.9), dharmasya hy apavargyasya nartho
+'rthayopakalpate: "All occupational engagements are certainly meant for ultimate liberation. They should
+never be performed for material gain." Those who are in household life should not think that religion is
+meant to improve the process of the householder's sense gratification. Household life is also meant for
+advancement in spiritual understanding, by which one can ultimately gain liberation from the material
+clutches. One should remain in household life with the aim of understanding the ultimate goal of life
+(tattva jijnasa). Then household life is as good as the life of a yogi. Kasyapa Muni therefore inquired from
+his wife whether the principles of religion, economic development and sense gratification were being
+properly followed in terms of the sastric injunctions. As soon as one deviates from the injunctions of the
+sastra, the purpose of household life is immediately lost in confusion.
 </p>
 
 </div>
@@ -85,7 +132,7 @@ celebrate the birth of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

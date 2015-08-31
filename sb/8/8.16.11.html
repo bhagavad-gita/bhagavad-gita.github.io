@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.11.html">8.16.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-drstvaditis tam nija-garbha-sambhavam
-param pumamsam mudam apa vismita
-grhita-deham nija-yoga-mayaya
-prajapatis caha jayeti vismitah
-<p></p>
+sri-aditir uvaca
+bhadram dvija-gavam brahman
+dharmasyasya janasya ca
+tri-vargasya param ksetram
+grhamedhin grha ime
+<br>
 <h2>Synonyms</h2>
-drstva--seeing; aditih--mother Aditi; tam--Him (the Supreme Personality of Godhead); nija-garbhasambhavam--
-born of her own womb; param--the Supreme; pumamsam--the Personality of Godhead;
-mudam--great happiness; apa--conceived; vismita--being very much astonished; grhita--accepted; deham--
-body, or transcendental form; nija-yoga-mayaya--by His own spiritual potency; prajapatih--Kasyapa Muni;
-ca--also; aha--said; jaya--all glories; iti--thus; vismitah--being astonished.
-<p></p>
+sri-aditih uvaca--Srimati Aditi said; bhadram--all auspiciousness; dvija-gavam--of the brahmanas and the
+cows; brahman--O brahmana; dharmasya asya--of the religious principles mentioned in sastra; janasya--of
+the people in general; ca--and; tri-vargasya--of the three processes of elevation (dharma, artha and kama);
+param--the supreme; ksetram--field; grhamedhin--O my husband, who are attached to household life;
+grhah--your home; ime--all these things.
+<br>
 <h2>Translation</h2>
-When Aditi saw the Supreme Personality of Godhead, who had appeared from her own womb, having
-accepted a transcendental body by His own spiritual potency, she was struck with wonder and was very
-happy. Upon seeing the child, Prajapati Kasyapa exclaimed, "Jaya! Jaya!" in great happiness and wonder.
+Aditi said: O my respected brahmana husband, all is well with the brahmanas, the cows, religion and the
+welfare of other people. O master of the house, the three principles of dharma, artha and kama flourish in
+household life, which is consequently full of good fortune.
+<br>
+<h2>Purport</h2>
+In household life one can develop the three principles of religion, economic development and sense
+gratification according to the regulations given in the sastras, but to attain liberation one must give up
+household life and place himself in the transcendental renounced order. Kasyapa Muni was not in the
+renounced order of life. Therefore he is addressed here once as brahman and another time as grhamedhin.
+Aditi, his wife, assured him that as far as household life was concerned, everything was going nicely, and
+the brahmanas and cows were being honored and protected. In other words, there were no disturbances;
+household life was duly progressing.
 </p>
 
 </div>
@@ -72,7 +121,7 @@ happy. Upon seeing the child, Prajapati Kasyapa exclaimed, "Jaya! Jaya!" in grea
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

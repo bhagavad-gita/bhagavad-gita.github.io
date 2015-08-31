@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.18.13.html">8.18.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-esa va uttamasloko
-na jihasati yad yasah
-hatva mainam hared yuddhe
-sayita nihato maya
-<p></p>
+tam vatum vamanam drstva
+modamana maharsayah
+karmani karayam asuh
+puraskrtya prajapatim
+<br>
 <h2>Synonyms</h2>
-esah--this (brahmacari); va--either; uttama-slokah--is Lord Visnu, who is worshiped by Vedic prayers;
-na--not; jihasati--desires to give up; yat--because; yasah--perpetual fame; hatva--after killing; ma--me;
-enam--all this land; haret--will take away; yuddhe--in the fight; sayita--will lie down; nihatah--being
-killed; maya--by me.
-<p></p>
+tam--Him; vatum--the brahmacari; vamanam--dwarf; drstva--seeing; modamanah--in a happy mood;
+maha-rsayah--the great saintly persons; karmani--ritualistic ceremonies; karayam asuh--performed;
+puraskrtya--keeping in front; prajapatim--Kasyapa Muni, the Prajapati.
+<br>
 <h2>Translation</h2>
-If this brahmana really is Lord Visnu, who is worshiped by Vedic hymns, He would never give up His
-widespread reputation; either He would lie down having been killed by me, or He would kill me in a fight.
-<p></p>
+When the great sages saw the Lord as the brahmacari-dwarf Vamana, they were certainly very pleased.
+Thus they placed before them Kasyapa Muni, the Prajapati, and performed all the ritualistic ceremonies,
+such as the birthday ceremony.
+<br>
 <h2>Purport</h2>
-Bali Maharaja's statement that Visnu would lie down having been killed is not the direct meaning, for
-Visnu cannot be killed by anyone. Lord Visnu can kill everyone, but He cannot be killed. Thus the real
-meaning of the words "lie down" is that Lord Visnu would reside within the core of Bali Maharaja's heart.
-Lord Visnu is defeated by a devotee through devotional service; otherwise, no one can defeat Lord Visnu.
+According to Vedic civilization, when a child is born in the family of a brahmana, the birthday
+ceremony, known as jata-karma, is first performed, and then other ceremonies are also gradually
+performed. But when this vamana-rupa appeared in the form of a vatu, or brahmacari, His sacred thread
+ceremony was also performed immediately.
 </p>
 
 </div>
@@ -76,7 +115,7 @@ Lord Visnu is defeated by a devotee through devotional service; otherwise, no on
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

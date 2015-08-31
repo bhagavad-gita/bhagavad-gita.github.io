@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.13.24.html">8.13.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maghavams tam abhipretya
-baleh paramam udyamam
-sarva-deva-ganopeto
-gurum etad uvaca ha
-<p></p>
+manur vai dharma-savarnir
+ekadasama atmavan
+anagatas tat-sutas ca
+satyadharmadayo dasa
+<br>
 <h2>Synonyms</h2>
-maghavan--Indra; tam--the situation; abhipretya--understanding; baleh--of Bali Maharaja; paramam
-udyamam--great enthusiasm; sarva-deva-gana--by all the demigods; upetah--accompanied; gurum--unto
-the spiritual master; etat--the following words; uvaca--said; ha--indeed.
-<p></p>
+manuh--the Manu; vai--indeed; dharma-savarnih--Dharmasavarni; ekadasamah--eleventh; atmavan--the
+controller of the senses; anagatah--will come in the future; tat--his; sutah--sons; ca--and; satyadharmaadayah--
+Satyadharma and others; dasa--ten.
+<br>
 <h2>Translation</h2>
-Seeing Bali Maharaja's indefatigable endeavor and understanding his motive, King Indra, along with the
-other demigods, approached his spiritual master, Brhaspati, and spoke as follows.
+In the eleventh manvantara, the Manu will be Dharma-savarni, who will be extremely learned in
+spiritual knowledge. From him there will come ten sons, headed by Satyadharma.
 </p>
 
 </div>
@@ -69,7 +108,7 @@ other demigods, approached his spiritual master, Brhaspati, and spoke as follows
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

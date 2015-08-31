@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.17.html">8.17.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nanyat te kamaye rajan
-vadanyaj jagad-isvarat
-nainah prapnoti vai vidvan
-yavad-artha-pratigrahah
-<p></p>
+athapy upayo mama devi cintyah
+santositasya vrata-caryaya te
+mamarcanam narhati gantum anyatha
+sraddhanurupam phala-hetukatvat
+<br>
 <h2>Synonyms</h2>
-na--not; anyat--anything else; te--from you; kamaye--I beg; rajan--O King; vadanyat--who are so
-munificent; jagat-isvarat--who are the king of the entire universe; na--not; enah--distress; prapnoti--gets;
-vai--indeed; vidvan--one who is learned; yavat-artha--as much as one needs; pratigrahah--taking charity
-from others.
-<p></p>
+atha--therefore; api--in spite of this situation; upayah--some means; mama--by Me; devi--O goddess;
+cintyah--must be considered; santositasya--very pleased; vrata-caryaya--observing the vow; te--by you;
+mama arcanam--worshiping Me; na--never; arhati--deserves; gantum anyatha--to become otherwise;
+sraddha-anurupam--according to one's faith and devotion; phala--of the result; hetukatvat--from being the
+cause.
+<br>
 <h2>Translation</h2>
-O King, controller of the entire universe, although you are very munificent and are able to give Me as
-much land as I want, I do not want anything from you that is unnecessary. If a learned brahmana takes
-charity from others only according to his needs, he does not become entangled in sinful activities.
-<p></p>
-<h2>Purport</h2>
-A brahmana or sannyasi is qualified to ask charity from others, but if he takes more than necessary he is
-punishable. No one can use more of the Supreme Lord's property than necessary. Lord Vamanadeva
-indirectly indicated to Bali Maharaja that he was occupying more land than he needed. In the material
-world, all distresses are due to extravagance. One acquires money extravagantly and also spends it
-extravagantly. Such activities are sinful. All property belongs to the Supreme Personality of Godhead, and
-all living beings, who are sons of the Supreme Lord, have the right to use the Supreme Father's property,
-but one cannot take more than necessary. This principle should especially be followed by brahmanas and
-sannyasis who live at the cost of others. Thus Vamanadeva was an ideal beggar, for He asked only three
-paces of land. Of course, there is a difference between His footsteps and those of an ordinary human
-being. The Supreme Personality of Godhead, by His inconceivable prowess, can occupy the entire
-universe, including the upper, lower and middle planetary systems, by the unlimited measurement of His
-footsteps.
+Yet because I have been satisfied by the activities of your vow, O goddess Aditi, I must find some means
+to favor you, for worship of Me never goes in vain but certainly gives the desired result according to what
+one deserves.
 </p>
 
 </div>
@@ -85,7 +111,7 @@ footsteps.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

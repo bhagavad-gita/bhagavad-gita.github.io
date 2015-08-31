@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.12.35.html">8.12.35</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.35</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/35"><b>35</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-satrayanasya tanayo
-brhadbhanus tada harih
-vitanayam maharaja
-kriya-tantun vitayita
-<p></p>
+skanne retasi so 'pasyad
+atmanam deva-mayaya
+jadikrtam nrpa-srestha
+sannyavartata kasmalat
+<br>
 <h2>Synonyms</h2>
-satrayanasya--of Satrayana; tanayah--the son; brhadbhanuh--Brhadbhanu; tada--at that time; harih--the
-Supreme Personality of Godhead; vitanayam--in the womb of Vitana; maha-raja--O King; kriya-tantun--all
-spiritual activities; vitayita--will perform.
-<p></p>
+skanne--when fully discharged; retasi--the semen; sah--Lord Siva; apasyat--saw; atmanam--his own self;
+deva-mayaya--by the maya of the Supreme Personality of Godhead; jadikrtam--had become victimized as a
+fool; nrpa-srestha--O best of kings (Maharaja Pariksit); sannyavartata--restrained himself further;
+kasmalat--from illusion.
+<br>
 <h2>Translation</h2>
-O King Pariksit, in the fourteenth manvantara the Supreme Personality of Godhead will appear from the
-womb of Vitana, and His father's name will be Satrayana. This incarnation will be celebrated as
-Brhadbhanu, and He will administer spiritual activities.
+O Maharaja Pariksit, best of kings, when Lord Siva had fully discharged semen, he could see how he
+himself had been victimized by the illusion created by the Supreme Personality of Godhead. Thus he
+restrained himself from any further maya.
+<br>
+<h2>Purport</h2>
+Once one is agitated by lusty desires upon seeing a woman, those desires increase more and more, but
+when semen is discharged in the act of sex, the lusty desires diminish. The same principle acted upon
+Lord Siva. He was allured by the beautiful woman Mohini-murti, but when his semen had been fully
+discharged, he came to his senses and realized how he had been victimized as soon as he saw the woman
+in the forest. If one is trained to protect his semen by observing celibacy, naturally he is not attracted by
+the beauty of a woman. If one can remain a brahmacari, he saves himself so much trouble in material
+existence. Material existence means enjoying the pleasure of sexual intercourse (yan maithunadigrhamedhi-
+sukham). If one is educated about sex life and is trained to protect his semen, he is saved from
+the danger of material existence.
 </p>
 
 </div>
@@ -70,7 +121,7 @@ Brhadbhanu, and He will administer spiritual activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

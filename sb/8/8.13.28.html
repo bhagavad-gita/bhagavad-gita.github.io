@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.13.28.html">8.13.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-gurur uvaca
-janami maghavan chatror
-unnater asya karanam
-sisyayopabhrtam tejo
-bhrgubhir brahma-vadibhih
-<p></p>
+rtadhama ca tatrendro
+devas ca haritadayah
+rsayas ca tapomurtis
+tapasvy agnidhrakadayah
+<br>
 <h2>Synonyms</h2>
-sri-guruh uvaca--Brhaspati said; janami--I know; maghavan--O Indra; satroh--of the enemy; unnateh--of
-the elevation; asya--of him; karanam--the cause; sisyaya--unto the disciple; upabhrtam--endowed; tejah--
-power; bhrgubhih--by the descendants of Bhrgu; brahma-vadibhih--all-powerful brahmanas.
-<p></p>
+rtadhama--Rtadhama; ca--also; tatra--in that period; indrah--the king of heaven; devah--the demigods;
+ca--and; harita-adayah--headed by the Haritas; rsayah ca--and the seven sages; tapomurtih--Tapomurti;
+tapasvi--Tapasvi; agnidhraka--Agnidhraka; adayah--and so on.
+<br>
 <h2>Translation</h2>
-Brhaspati, the spiritual master of the demigods, said: O Indra, I know the cause for your enemy's
-becoming so powerful. The brahmana descendants of Bhrgu Muni, being pleased by Bali Maharaja, their
-disciple, endowed him with such extraordinary power.
-<p></p>
-<h2>Purport</h2>
-Brhaspati, the spiritual master of the demigods, informed Indra, "Ordinarily, Bali and his forces could
-not achieve such strength, but it appears that the brahmana descendants of Bhrgu Muni, being pleased
-with Bali Maharaja, endowed them with this spiritual power." In other words, Brhaspati informed Indra
-that Bali Maharaja's prowess was not his own but that of his exalted guru, Sukracarya. We sing in our
-daily prayers, yasya prasadad bhagavat-prasado yasyaprasadan na gatih kuto 'pi. By the pleasure of the
-spiritual master, one can get extraordinary power, especially in spiritual advancement. The blessings of
-the spiritual master are more powerful than one's personal endeavor for such advancement. Narottama
-dasa Thakura therefore says:
-guru-mukha-padma-vakya, cittete kariya aikya,
-ara na kariha mane asa
-Especially for spiritual advancement, one should carry out the bona fide order of the spiritual master. By
-the parampara system, one can thus be endowed with the original spiritual power coming from the
-Supreme personality of Godhead (evam parampara-praptam imam rajarsayo viduh).
+In this manvantara, the name of Indra will be Rtadhama, and the demigods will be headed by the
+Haritas. Among the sages will be Tapomurti, Tapasvi and Agnidhraka.
 </p>
 
 </div>
@@ -86,7 +108,7 @@ Supreme personality of Godhead (evam parampara-praptam imam rajarsayo viduh).
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

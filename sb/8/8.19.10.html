@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.19.10.html">8.19.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na vayam brahma-bandhur
-visnur mayavinam varah
-dvija-rupa-praticchanno
-deva-karyam cikirsati
-<p></p>
+evam sa niscitya ripoh sariram
+adhavato nirvivise 'surendra
+svasanilantarhita-suksma-dehas
+tat-prana-randhrena vivigna-cetah
+<br>
 <h2>Synonyms</h2>
-na--not; va--either; ayam--this; brahma-bandhuh--Vamanadeva, in the form of a brahmana; visnuh--He
-is Lord Visnu Himself; mayavinam--of all cheaters; varah--the greatest; dvija-rupa--by assuming the form
-of a brahmana; praticchannah--is disguised for the purpose of cheating; deva-karyam--the interest of the
-demigods; cikirsati--He is trying for.
-<p></p>
+evam--in this way; sah--He (Lord Visnu); niscitya--deciding; ripoh--of the enemy; sariram--the body;
+adhavatah--who was running after Him with great force; nirvivise--entered; asura-indra--O King of the
+demons (Maharaja Bali); svasa-anila--through the breathing; antarhita--invisible; suksma-dehah--in his
+finer body; tat-prana-randhrena--through the hole of the nostril; vivigna-cetah--being very anxious.
+<br>
 <h2>Translation</h2>
-"This Vamana is certainly not a brahmana but the best of cheaters, Lord Visnu. Assuming the form of a
-brahmana, He has covered His own form, and thus He is working for the interests of the demigods.
+Lord Vamanadeva continued: O King of the demons, after Lord Visnu made this decision, He entered
+the body of His enemy Hiranyakasipu, who was running after Him with great force. In a subtle body
+inconceivable to Hiranyakasipu, Lord Visnu, who was in great anxiety, entered Hiranyakasipu's nostril
+along with his breath.
+<br>
+<h2>Purport</h2>
+The Supreme Personality of Godhead is already in the core of everyone's heart. Isvarah sarva-bhutanam
+hrd-dese 'rjuna tisthati (Bg. 18.61). Logically, therefore, it was not at all difficult for Lord Visnu to enter
+Hiranyakasipu's body. The word vivigna-cetah, "very anxious," is significant. It is not that Lord Visnu was
+afraid of Hiranyakasipu; rather, because of compassion, Lord Visnu was in anxiety about how to act for
+his welfare.
 </p>
 
 </div>
@@ -70,7 +118,7 @@ brahmana, He has covered His own form, and thus He is working for the interests 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

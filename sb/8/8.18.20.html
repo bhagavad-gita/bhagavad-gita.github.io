@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.18.20.html">8.18.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nedur muhur dundubhayah sahasraso
-gandharva-kimpurusa-kinnara jaguh
-manasvinanena krtam suduskaram
-vidvan adad yad ripave jagat-trayam
-<p></p>
+srutvasvamedhair yajamanam urjitam
+balim bhrgunam upakalpitais tatah
+jagama tatrakhila-sara-sambhrto
+bharena gam sannamayan pade pade
+<br>
 <h2>Synonyms</h2>
-neduh--began to beat; muhuh--again and again; dundubhayah--trumpets and kettledrums; sahasrasah--
-by thousands and thousands; gandharva--the residents of Gandharvaloka; kimpurusa--the residents of
-Kimpurusaloka; kinnarah--and the residents of Kinnaraloka; jaguh--began to sing and declare;
-manasvina--by the most exalted personality; anena--by Bali Maharaja; krtam--was done; su-duskaram--an
-extremely difficult task; vidvan--because of his being the most learned person; adat--gave Him a gift; yat--
-that; ripave--unto the enemy, Lord Visnu, who was siding with Bali Maharaja's enemies, the demigods;
-jagat-trayam--the three worlds.
-<p></p>
+srutva--after hearing; asvamedhaih--by asvamedha sacrifices; yajamanam--the performer; urjitam--very
+glorious; balim--Bali Maharaja; bhrgunam--under the guidance of the brahmanas born in the Bhrgu
+dynasty; upakalpitaih--performed; tatah--from that place; jagama--went; tatra--there; akhila-sarasambhrtah--
+the Supreme Personality of Godhead, the essence of all creation; bharena--with the weight;
+gam--the earth; sannamayan--depressing; pade pade--at every step.
+<br>
 <h2>Translation</h2>
-The Gandharvas, the Kimpurusas and the Kinnaras sounded thousands and thousands of kettledrums
-and trumpets again and again, and they sang in great jubilation, declaring, "How exalted a person is Bali
-Maharaja, and what a difficult task he has performed! Even though he knew that Lord Visnu was on the
-side of his enemies, he nonetheless gave the Lord the entire three worlds in charity."
+When the Lord heard that Bali Maharaja was performing asvamedha sacrifices under the patronage of
+brahmanas belonging to the Bhrgu dynasty, the Supreme Lord, who is full in every respect, proceeded
+there to show His mercy to Bali Maharaja. By His weight, He pushed down the earth with every step.
+<br>
+<h2>Purport</h2>
+The Supreme Personality of Godhead is akhila-sara-sambhrta. In other words, He is the proprietor of
+everything essential in this material world. Thus although the Lord was going to Bali Maharaja to beg
+something, He is always complete and has nothing to beg from anyone. Indeed, He is so powerful that in
+His full opulence He pressed down the surface of the earth at every step.
 </p>
 
 </div>
@@ -75,7 +117,7 @@ side of his enemies, he nonetheless gave the Lord the entire three worlds in cha
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

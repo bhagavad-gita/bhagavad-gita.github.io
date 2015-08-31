@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.19.13.html">8.19.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasmad asya vadho dharmo
-bhartuh susrusanam ca nah
-ity ayudhani jagrhur
-baler anucarasurah
-<p></p>
+vairanubandha etavan
+amrtyor iha dehinam
+ajnana-prabhavo manyur
+aham-manopabrmhitah
+<br>
 <h2>Synonyms</h2>
-tasmat--therefore; asya--of this brahmacari Vamana; vadhah--the killing; dharmah--is our duty;
-bhartuh--of our master; susrusanam ca--and it is the way of serving; nah--our; iti--thus; ayudhani--all
-kinds of weapons; jagrhuh--they took up; baleh--of Bali Maharaja; anucara--followers; asurah--all the
-demons.
-<p></p>
+vaira-anubandhah--enmity; etavan--so great; amrtyoh--up to the point of death; iha--in this; dehinam--
+of persons too involved in the bodily concept of life; ajnana-prabhavah--because of the great influence of
+ignorance; manyuh--anger; aham-mana--by egotism; upabrmhitah--expanded.
+<br>
 <h2>Translation</h2>
-"Therefore it is our duty to kill this Vamanadeva, Lord Visnu. It is our religious principle and the way to
-serve our master." After making this decision, the demoniac followers of Maharaja Bali took up their
-various weapons with a view to killing Vamanadeva.
+Hiranyakasipu's anger against Lord Visnu persisted until his death. Other people in the bodily concept
+of life maintain anger only because of false ego and the great influence of ignorance.
+<br>
+<h2>Purport</h2>
+Generally speaking, even though the conditioned soul is angry, his anger is not perpetual but
+temporary. It is due to the influence of ignorance. Hiranyakasipu, however, maintained his enmity and his
+anger against Lord Visnu until the point of death. He never forgot his vengeful attitude toward Visnu for
+having killed his brother, Hiranyaksa. Others in the bodily concept of life are angry at their enemies but
+not at Lord Visnu. Hiranyakasipu, however, was everlastingly angry. He was angry not only because of
+false prestige but also because of continuous enmity toward Visnu.
 </p>
 
 </div>
@@ -71,7 +116,7 @@ various weapons with a view to killing Vamanadeva.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

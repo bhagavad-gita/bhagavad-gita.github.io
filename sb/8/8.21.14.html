@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.21.14.html">8.21.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-brahman santanu sisyasya
-karma-cchidram vitanvatah
-yat tat karmasu vaisamyam
-brahma-drstam samam bhavet
-<p></p>
+te sarve vamanam hantum
+sula-pattisa-panayah
+anicchanto bale rajan
+pradravan jata-manyavah
+<br>
 <h2>Synonyms</h2>
-brahman--O brahmana; santanu--please describe; sisyasya--of your disciple; karma-chidram--the
-discrepancies in the fruitive activities; vitanvatah--of he who was performing sacrifices; yat tat--that
-which; karmasu--in the fruitive activities; vaisamyam--discrepancy; brahma-drstam--when it is judged by
-the brahmanas; samam--equipoised; bhavet--it so becomes.
-<p></p>
+te--the demons; sarve--all of them; vamanam--Lord Vamanadeva; hantum--to kill; sula--tridents;
+pattisa--lances; panayah--all taking in hand; anicchantah--against the will; baleh--of Bali Maharaja; rajan--
+O King; pradravan--they pushed forward; jata-manyavah--aggravated by usual anger.
+<br>
 <h2>Translation</h2>
-O best of the brahmanas, Sukracarya, please describe the fault or discrepancy in your disciple Bali
-Maharaja, who engaged in performing sacrifices. This fault will be nullified when judged in the presence
-of qualified brahmanas.
-<p></p>
-<h2>Purport</h2>
-When Bali Maharaja and Prahlada Maharaja had departed for the planet Sutala, Lord Visnu asked
-Sukracarya what the fault was in Bali Maharaja for which Sukracarya had cursed him. It might be argued
-that since Bali Maharaja had now left the scene, how could his faults be judged? In reply to this, Lord
-Visnu informed Sukracarya that there was no need for Bali Maharaja's presence, for his faults and
-discrepancies could be nullified if judged before the brahmanas. As will be seen in the next verse, Bali
-Maharaja had no faults; Sukracarya had unnecessarily cursed him. Nonetheless, this was better for Bali
-Maharaja. Being cursed by Sukracarya, Bali Maharaja was deprived of all his possessions, with the result
-that the Supreme Personality of Godhead favored him for his strong faith in devotional service. Of course,
-a devotee is not required to engage in fruitive activities. As stated in the sastra, sarvarhanam acyutejya
-(Bhag. 4.31.14). By worshiping Acyuta, the Supreme Personality of Godhead, one satisfies everyone.
-Because Bali Maharaja had satisfied the Supreme Personality of Godhead, there were no discrepancies in
-his performance of sacrifices.
+O King, the demons, aggravated by their usual anger, took their lances and tridents in hand, and against
+the will of Bali Maharaja they pushed forward to kill Lord Vamanadeva.
 </p>
 
 </div>
@@ -85,7 +108,7 @@ his performance of sacrifices.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

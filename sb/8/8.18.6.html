@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.18.6.html">8.18.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yad yad dhasyati loke 'smin
-samparetam dhanadikam
-tasya tyage nimittam kim
-vipras tusyen na tena cet
-<p></p>
+dvadasyam savitatisthan
+madhyandina-gato nrpa
+vijaya-nama sa prokta
+yasyam janma vidur hareh
+<br>
 <h2>Synonyms</h2>
-yat yat--whatsoever; hasyati--will leave; loke--in the world; asmin--in this; samparetam--one who is
-already dead; dhana-adikam--his wealth and riches; tasya--of such wealth; tyage--in renunciation;
-nimittam--the purpose; kim--what is; viprah--the brahmana who is confidentially Lord Visnu; tusyet--
-must be pleased; na--is not; tena--by such (riches); cet--if there is a possibility.
-<p></p>
+dvadasyam--on the twelfth day of the moon; savita--the sun; atisthat--was staying; madhyam-dinagatah--
+on the meridian; nrpa--O King; vijaya-nama--by the name Vijaya; sa--that day; prokta--is called;
+yasyam--on which; janma--the appearance; viduh--they know; hareh--of Lord Hari.
+<br>
 <h2>Translation</h2>
-My lord, you can also see that all the material opulences of this world are certainly separated from their
-possessor at death. Therefore, if the brahmana Vamanadeva is not satisfied by whatever gifts one has
-given, why not please Him with the riches one is destined to lose at death?
-<p></p>
-<h2>Purport</h2>
-The word vipra means brahmana, and at the same time "confidential." Bali Maharaja had confidentially
-decided to give the gift to Lord Vamanadeva without discussion, but because such a decision would hurt
-the hearts of the asuras and his spiritual master, Sukracarya, he spoke equivocally. Bali Maharaja, as a
-pure devotee, had already decided to give all the land to Lord Visnu.
+O King, when the Lord appeared--on dvadasi, the twelfth day of the moon--the sun was at the meridian,
+as every learned scholar knows. This dvadasi is called Vijaya.
 </p>
 
 </div>
@@ -77,7 +108,7 @@ pure devotee, had already decided to give all the land to Lord Visnu.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

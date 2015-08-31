@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.21.1.html">8.21.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-suka uvaca
-ity uktavantam purusam puratanam
-mahanubhavo 'khila-sadhu-sammatah
-baddhanjalir baspa-kalakuleksano
-bhakty-utkalo gadgadaya girabravit
-<p></p>
+satyam samiksyabja-bhavo nakhendubhir
+hata-svadhama-dyutir avrto 'bhyagat
+marici-misra rsayo brhad-vratah
+sanandanadya nara-deva yoginah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; uktavantam--upon the order of the Supreme
-Personality of Godhead; purusam--unto the Supreme Personality of Godhead; puratanam--the oldest of
-everyone; maha-anubhavah--Bali Maharaja, who was a great and exalted soul; akhila-sadhu-sammatah--as
-approved by all saintly persons; baddha-anjalih--with folded hands; baspa-kala-akula-iksanah--whose eyes
-were filled with tears; bhakti-utkalah--full of ecstatic devotion; gadgadaya--which were faltering in
-devotional ecstasy; gira--by such words; abravit--said.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; satyam--the planet Satyaloka; samiksya--by observing;
+abja-bhavah--Lord Brahma, who appeared on the lotus flower; nakha-indubhih--by the effulgence of the
+nails; hata--having been reduced; sva-dhama-dyutih--the illumination of his own residence; avrtah--being
+covered; abhyagat--came; marici-misrah--with sages like Marici; rsayah--great saintly persons; brhatvratah--
+all of them absolutely brahmacari; sanandana-adyah--like Sanaka, Sanatana, Sanandana and Sanatkumara;
+nara-deva--O King; yoginah--greatly powerful mystics.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: When the supreme, ancient, eternal Personality of Godhead had thus spoken to
-Bali Maharaja, who is universally accepted as a pure devotee of the Lord and therefore a great soul, Bali
-Maharaja, his eyes filled with tears, his hands folded and his voice faltering in devotional ecstasy,
-responded as follows.
+Sukadeva Gosvami continued: When Lord Brahma, who was born of a lotus flower, saw that the
+effulgence of his residence, Brahmaloka, had been reduced by the glaring effulgence from the toenails of
+Lord Vamanadeva, he approached the Supreme Personality of Godhead. Lord Brahma was accompanied
+by all the great sages, headed by Marici, and by yogis like Sanandana, but in the presence of that glaring
+effulgence, O King, even Lord Brahma and his associates seemed insignificant.
 </p>
 
 </div>
@@ -75,7 +115,7 @@ responded as follows.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,54 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.14.4.html">8.14.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-apy abhadram na vipranam
-bhadre loke 'dhunagatam
-na dharmasya na lokasya
-mrtyos chandanuvartinah
-<p></p>
+catur-yugante kalena
+grastan chruti-ganan yatha
+tapasa rsayo 'pasyan
+yato dharmah sanatanah
+<br>
 <h2>Synonyms</h2>
-api--whether; abhadram--ill fortune; na--not; vipranam--of the brahmanas; bhadre--O most gentle Aditi;
-loke--in this world; adhuna--at the present moment; agatam--has come; na--not; dharmasya--of religious
-principles; na--not; lokasya--of the people in general; mrtyoh--death; chanda-anuvartinah--who are
-followers of the whims of death.
-<p></p>
+catuh-yuga-ante--at the end of every four yugas (Satya, Dvapara, Treta and Kali); kalena--in due course
+of time; grastan--lost; sruti-ganan--the Vedic instruction; yatha--as; tapasa--by austerity; rsayah--great
+saintly persons; apasyan--by seeing misuse; yatah--wherefrom; dharmah--occupational duties; sanatanah--
+eternal.
+<br>
 <h2>Translation</h2>
-O most gentle one, I wonder whether anything inauspicious has now taken place in regard to religious
-principles, the brahmanas or the people in general, who are subject to the whims of death.
-<p></p>
+At the end of every four yugas, the great saintly persons, upon seeing that the eternal occupational
+duties of mankind have been misused, reestablish the principles of religion.
+<br>
 <h2>Purport</h2>
-There are prescribed duties for all the inhabitants of this material world, especially for the brahmanas
-but also for the people in general, who are subject to the whims of death. Kasyapa Muni wondered
-whether the regulative principles, which are meant for the well-being of everyone, had been disobeyed. He
-accordingly continued his inquiries for seven verses.
+In this verse, the words dharmah and sanatanah are very important. Sanatana means "eternal," and
+dharma means "occupational duties." From Satya-yuga to Kali-yuga, the principles of religion and
+occupational duty gradually deteriorate. In Satya-yuga, the religious principles are observed in full,
+without deviation. In Treta-yuga, however, these principles are somewhat neglected, and only three
+fourths of the religious duties continue. In Dvapara-yuga only half of the religious principles continue,
+and in Kali-yuga only one fourth of the religious principles, which gradually disappear. At the end of Kaliyuga,
+the principles of religion, or the occupational duties of humanity, are almost lost. Indeed, in this
+Kali-yuga we have passed through only five thousand years, yet the decline of sanatana-dharma is very
+prominent. The duty of saintly persons, therefore, is to take up seriously the cause of sanatana-dharma
+and try to reestablish it for the benefit of the entire human society. The Krsna consciousness movement
+has been started according to this principle. As stated in Srimad-Bhagavatam (12.3.51):
+kaler dosa-nidhe rajan
+asti hy eko mahan gunah
+kirtanad eva krsnasya
+mukta-sangah param vrajet
+The entire Kali-yuga is full of faults. It is like an unlimited ocean of faults. But the Krsna consciousness
+movement is very authorized. Therefore, following in the footsteps of Sri Caitanya Mahaprabhu, who five
+hundred years ago inaugurated the movement of sankirtana, krsna-kirtana, we are trying to introduce this
+movement, according to superior orders, all over the world. Now, if the inaugurators of this movement
+strictly follow the regulative principles and spread this movement for the benefit of all human society,
+they will certainly usher in a new way of life by reestablishing sanatana-dharma, the eternal occupational
+duties of humanity. The eternal occupational duty of the human being is to serve Krsna. Jivera 'svarupa'
+haya--krsnera 'nitya-dasa.' This is the purport of sanatana-dharma. Sanatana means nitya, or "eternal," and
+krsna-dasa means "servant of Krsna." The eternal occupational duty of the human being is to serve Krsna.
+This is the sum and substance of the Krsna consciousness movement.
 </p>
 
 </div>
@@ -76,7 +136,7 @@ accordingly continued his inquiries for seven verses.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.14.html">8.17.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pita prahrada-putras te
-tad-vidvan dvija-vatsalah
-svam ayur dvija-lingebhyo
-devebhyo 'dat sa yacitah
-<p></p>
+indra-jyesthaih sva-tanayair
+hatanam yudhi vidvisam
+striyo rudantir asadya
+drastum icchasi duhkhitah
+<br>
 <h2>Synonyms</h2>
-pita--father; prahrada-putrah--the son of Maharaja Prahlada; te--your; tat-vidvan--although it was
-known to him; dvija-vatsalah--still, because of his affinity for brahmanas; svam--his own; ayuh--duration
-of life; dvija-lingebhyah--who were dressed like brahmanas; devebhyah--unto the demigods; adat--
-delivered; sah--he; yacitah--being so requested.
-<p></p>
+indra-jyesthaih--persons of whom King Indra is the eldest; sva-tanayaih--by your own sons; hatanam--
+who are killed; yudhi--in the fight; vidvisam--of the enemies; striyah--the wives; rudantih--lamenting;
+asadya--coming near the dead bodies of their husbands; drastum icchasi--you want to see; duhkhitah--
+very much aggrieved.
+<br>
 <h2>Translation</h2>
-Your father, Virocana, the son of Maharaja Prahlada, was very affectionate toward brahmanas. Although
-he knew very well that it was the demigods who had come to him in the dress of brahmanas, at their
-request he delivered to them the duration of his life.
-<p></p>
-<h2>Purport</h2>
-Maharaja Virocana, Bali's father, was so pleased with the brahmana community that even though he
-knew that those approaching him for charity were the demigods in the dress of brahmanas, he
-nonetheless agreed to give it.
+You want to see the wives of the demons lamenting for the death of their husbands when those demons,
+the enemies of your sons, are killed in battle by the demigods, of whom Indra is the chief.
 </p>
 
 </div>
@@ -76,7 +109,7 @@ nonetheless agreed to give it.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

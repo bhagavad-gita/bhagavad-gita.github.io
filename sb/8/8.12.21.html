@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.12.21.html">8.12.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dasamo brahma-savarnir
-upasloka-suto manuh
-tat-suta bhurisenadya
-havismat pramukha dvijah
-<p></p>
+slathad dukulam kabarim ca vicyutam
+sannahyatim vama-karena valguna
+vinighnatim anya-karena kandukam
+vimohayantim jagad-atma-mayaya
+<br>
 <h2>Synonyms</h2>
-dasamah--the tenth Manu; brahma-savarnih--Brahma-savarni; upasloka-sutah--born of Upasloka;
-manuh--will be Manu; tat-sutah--his sons; bhurisena-adyah--Bhurisena and others; havismat--Havisman;
-pramukhah--headed by; dvijah--the seven sages.
-<p></p>
+slathat--slipping or slackening; dukulam--the sari; kabarim ca--and the hair on the head; vicyutam--
+being slackened and scattered; sannahyatim--trying to bind; vama-karena--with the left hand; valguna--
+very beautifully attractive; vinighnatim--striking; anya-karena--with the right hand; kandukam--the ball;
+vimohayantim--in this way captivating everyone; jagat--the whole world; atma-mayaya--by the spiritual
+potency, the internal energy.
+<br>
 <h2>Translation</h2>
-The son of Upasloka known as Brahma-savarni will be the tenth Manu. Bhurisena will be among his
-sons, and the brahmanas headed by Havisman will be the seven sages.
+As She played with the ball, the sari covering Her body became loose, and Her hair scattered. She tried
+to bind Her hair with Her beautiful left hand, and at the same time She played with the ball by striking it
+with Her right hand. This was so attractive that the Supreme Lord, by His internal potency, in this way
+captivated everyone.
+<br>
+<h2>Purport</h2>
+In Bhagavad-gita (7.14) it is said, daivi hy esa guna-mayi mama maya duratyaya: the external potency of
+the Supreme Personality of Godhead is extremely strong. Indeed, everyone is fully captivated by her
+activities. Lord Sambhu (Siva) was not to be captivated by the external potency, but because Lord Visnu
+wanted to captivate Him also, He exhibited His internal potency to act the way that His external potency
+acts to captivate ordinary living entities. Lord Visnu can captivate anyone, even such a strong personality
+as Lord Sambhu.
 </p>
 
 </div>
@@ -69,7 +120,7 @@ sons, and the brahmanas headed by Havisman will be the seven sages.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.14.html">8.11.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-evam abhyarthito visnur
-bhagavan sula-panina
-prahasya bhava-gambhiram
-girisam pratyabhasata
-<p></p>
+sa simha-vaha asadya
+gadam udyamya ramhasa
+jatrav atadayac chakram
+gajam ca sumaha-balah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; evam--in this way; abhyarthitah--being requested; visnuh
-bhagavan--Lord Visnu, the Supreme Personality of Godhead; sula-panina--by Lord Siva, who carries a
-trident in his hand; prahasya--laughing; bhava-gambhiram--with serious gravity; girisam--unto Lord Siva;
-pratyabhasata--replied.
-<p></p>
+sah--Jambhasura; simha-vahah--being carried by a lion; asadya--coming before King Indra; gadam--his
+club; udyamya--taking up; ramhasa--with great force; jatrau--on the base of the neck; atadayat--hit;
+sakram--Indra; gajam ca--as well as his elephant; su-maha-balah--the greatly powerful Jambhasura.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: When Lord Visnu was thus requested by Lord Siva, who carries a trident in his
-hand, He smiled with gravity and replied to Lord Siva as follows.
-<p></p>
-<h2>Purport</h2>
-The Supreme Personality of Godhead, Visnu, is known as Yogesvara. Yatra yogesvarah krsnah. Mystic
-yogis want to acquire some power by practicing the yoga system, but Krsna, the Supreme Personality of
-Godhead, is known as the Supreme Lord of all mystic power. Lord Siva wanted to see the Mohini-murti,
-which was captivating the entire world, and Lord Visnu was gravely thinking of how to captivate Lord
-Siva also. Therefore the word bhava-gambhiram is used here. The illusory, material energy is represented
-by Durgadevi, who is the wife of Girisa, or Lord Siva. Durgadevi could not captivate Lord Siva's mind, but
-now that Lord Siva wanted to see Lord Visnu's feminine form, Lord Visnu, by His mystic power, would
-assume a form that would captivate even Lord Siva. Therefore Lord Visnu was grave and at the same time
-was smiling.
+The greatly powerful Jambhasura, carried by a lion, approached Indra and forcefully struck him on the
+shoulder with his club. He also struck Indra's elephant.
 </p>
 
 </div>
@@ -82,7 +108,7 @@ was smiling.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

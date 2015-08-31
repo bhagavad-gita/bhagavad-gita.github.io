@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.15.21.html">8.15.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-etavad uktva bhagavams
-tatraivantaradhiyata
-aditir durlabham labdhva
-harer janmatmani prabhoh
-upadhavat patim bhaktya
-paraya krta-krtyavat
-<p></p>
+mrdanga-sankhanaka-dundubhi-svanaih
+satala-vina-murajesta-venubhih
+nrtyaih savadyair upadeva-gitakair
+manoramam sva-prabhaya jita-prabham
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; etavat--in this way; uktva--saying (to her); bhagavan--the
-Supreme Personality of Godhead; tatra eva--in that very spot; antah-adhiyata--disappeared; aditih--Aditi;
-durlabham--a very rare achievement; labdhva--getting; hareh--of the Supreme Personality of Godhead;
-janma--birth; atmani--in herself; prabhoh--of the Lord; upadhavat--immediately went; patim--unto her
-husband; bhaktya--with devotion; paraya--great; krta-krtya-vat--thinking herself very successful.
-<p></p>
+mrdanga--of drums; sankha--conchshells; anaka-dundubhi--and kettledrums; svanaih--by the sounds;
+sa-tala--in perfect tune; vina--a stringed instrument; muraja--a kind of drum; ista-venubhih--accompanied
+by the very nice sound of the flute; nrtyaih--with dancing; sa-vadyaih--with concert instruments; upadevagitakaih--
+with singing by the secondary demigods like the Gandharvas; manoramam--beautiful and
+pleasing; sva-prabhaya--by its own brilliance; jita-prabham--the personification of beauty was conquered.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: After speaking in this way, the Supreme Personality of Godhead disappeared
-from that very spot. Aditi, having received the extremely valuable benediction that the Lord would appear
-as her son, considered herself very successful, and with great devotion she approached her husband.
+The city was filled with the sounds of mrdangas, conchshells, kettledrums, flutes and well-tuned
+stringed instruments all playing in concert. There was constant dancing and the Gandharvas sang. The
+combined beauty of Indrapuri defeated beauty personified.
 </p>
 
 </div>
@@ -75,7 +111,7 @@ as her son, considered herself very successful, and with great devotion she appr
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.43.html">8.11.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ayi vyapasyas tvam ajasya mayam
-parasya pumsah para-devatayah
-aham kalanam rsabho 'pi muhye
-yayavaso 'nye kim utasvatantrah
-<p></p>
+brahmana presito devan
+devarsir narado nrpa
+varayam asa vibudhan
+drstva danava-sanksayam
+<br>
 <h2>Synonyms</h2>
-ayi--oh; vyapasyah--have seen; tvam--you; ajasya--of the unborn; mayam--the illusory energy; parasya
-pumsah--of the Supreme Person; para-devatayah--the Absolute Truth; aham--myself; kalanam--of plenary
-portions; rsabhah--the chief; api--although; muhye--became bewildered; yaya--by her; avasah--
-imperceptibly; anye--others; kim uta--what to speak of; asvatantrah--fully dependent on maya.
-<p></p>
+brahmana--by Lord Brahma; presitah--sent; devan--unto the demigods; deva-rsih--the great sage of the
+heavenly planets; naradah--Narada Muni; nrpa--O King; varayam asa--forbade; vibudhan--all the
+demigods; drstva--after seeing; danava-sanksayam--the total annihilation of the demons.
+<br>
 <h2>Translation</h2>
-Lord Siva said: O Goddess, you have now seen the illusory energy of the Supreme Personality of
-Godhead, who is the unborn master of everyone. Although I am one of the principal expansions of His
-Lordship, even I was illusioned by His energy. What then is to be said of others, who are fully dependent
-on maya?
+O King, when Lord Brahma saw the imminent total annihilation of the demons, he sent a message with
+Narada, who went before the demigods to make them stop fighting.
 </p>
 
 </div>
@@ -72,7 +108,7 @@ on maya?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

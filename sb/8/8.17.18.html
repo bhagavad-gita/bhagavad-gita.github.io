@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.18.html">8.17.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-balir uvaca
-aho brahmana-dayada
-vacas te vrddha-sammatah
-tvam balo balisa-matih
-svartham praty abudho yatha
-<p></p>
+tvayarcitas caham apatya-guptaye
+payo-vratenanugunam samiditah
+svamsena putratvam upetya te sutan
+goptasmi marica-tapasy adhisthitah
+<br>
 <h2>Synonyms</h2>
-sri-balih uvaca--Bali Maharaja said; aho--alas; brahmana-dayada--O son of a brahmana; vacah--the
-words; te--of You; vrddha-sammatah--are certainly acceptable to learned and elderly persons; tvam--You;
-balah--a boy; balisa-matih--without sufficient knowledge; sva-artham--self-interest; prati--toward;
-abudhah--not knowing sufficiently; yatha--as it should have been.
-<p></p>
+tvaya--by you; arcitah--being worshiped; ca--also; aham--I; apatya-guptaye--giving protection to your
+sons; payah-vratena--by the payo-vrata vow; anugunam--as far as possible; samiditah--properly
+worshiped; sva-amsena--by My plenary portion; putratvam--becoming your son; upetya--taking this
+opportunity; te sutan--to your other sons; gopta asmi--I shall give protection; marica--of Kasyapa Muni;
+tapasi--in the austerity; adhisthitah--situated.
+<br>
 <h2>Translation</h2>
-Bali Maharaja said: O son of a brahmana, Your instructions are as good as those of learned and elderly
-persons. Nonetheless, You are a boy, and Your intelligence is insufficient. Thus You are not very prudent
-in regard to Your self-interest.
-<p></p>
-<h2>Purport</h2>
-The Supreme Personality of Godhead, being full in Himself, actually has nothing to want for His selfinterest.
-Lord Vamanadeva, therefore, had not gone to Bali Maharaja for His own self-interest. As stated in
-Bhagavad-gita (5.29), bhoktaram yajna-tapasam sarva-loka-mahesvaram. The Lord is the proprietor of all
-planets, in both the material and spiritual worlds. Why should He be in want of land? Bali Maharaja
-rightly said that Lord Vamanadeva was not at all prudent in regard to His own personal interests. Lord
-Vamanadeva had approached Bali not for His personal welfare but for the welfare of His devotees.
-Devotees sacrifice all personal interests to satisfy the Supreme Personality of Godhead, and similarly the
-Supreme Lord, although having no personal interests, can do anything for the interests of His devotees.
-One who is full in himself has no personal interests.
+You have prayed to Me and properly worshiped Me by performing the great payo-vrata ceremony for the
+sake of protecting your sons. Because of Kasyapa Muni's austerities, I shall agree to become your son and
+thus protect your other sons.
 </p>
 
 </div>
@@ -83,7 +111,7 @@ One who is full in himself has no personal interests.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

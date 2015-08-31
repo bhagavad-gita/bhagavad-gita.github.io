@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.13.25.html">8.13.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhagavann udyamo bhuyan
-baler nah purva-vairinah
-avisahyam imam manye
-kenasit tejasorjitah
-<p></p>
+vihangamah kamagama
+nirvanarucayah surah
+indras ca vaidhrtas tesam
+rsayas carunadayah
+<br>
 <h2>Synonyms</h2>
-bhagavan--O my lord; udyamah--enthusiasm; bhuyan--great; baleh--of Bali Maharaja; nah--our; purvavairinah--
-past enemy; avisahyam--unbearable; imam--this; manye--I think; kena--by whom; asit--got;
-tejasa--prowess; urjitah--achieved.
-<p></p>
+vihangamah--the Vihangamas; kamagamah--the Kamagamas; nirvanarucayah--the Nirvanarucis; surah--
+the demigods; indrah--the king of heaven, Indra; ca--also; vaidhrtah--Vaidhrta; tesam--of them; rsayah--
+the seven sages; ca--also; aruna-adayah--headed by Aruna.
+<br>
 <h2>Translation</h2>
-My lord, our old enemy Bali Maharaja now has new enthusiasm, and he has obtained such astonishing
-power that we think that perhaps we cannot resist his prowess.
+The Vihangamas, Kamagamas, Nirvanarucis and others will be the demigods. The king of the demigods,
+Indra, will be Vaidhrta, and the seven sages will be headed by Aruna.
 </p>
 
 </div>
@@ -69,7 +108,7 @@ power that we think that perhaps we cannot resist his prowess.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

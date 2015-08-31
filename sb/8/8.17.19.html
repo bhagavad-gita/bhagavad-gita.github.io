@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.19.html">8.17.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-mam vacobhih samaradhya
-lokanam ekam isvaram
-pada-trayam vrnite yo
-'buddhiman dvipa-dasusam
-<p></p>
+upadhava patim bhadre
+prajapatim akalmasam
+mam ca bhavayati patyav
+evam rupam avasthitam
+<br>
 <h2>Synonyms</h2>
-mam--me; vacobhih--by sweet words; samaradhya--after sufficiently pleasing; lokanam--of all the
-planets in this universe; ekam--the one and only; isvaram--master, controller; pada-trayam--three feet;
-vrnite--is asking for; yah--He who; abuddhiman--not very intelligent; dvipa-dasusam--because I can give
-You an entire island.
-<p></p>
+upadhava--just go worship; patim--your husband; bhadre--O gentle woman; prajapatim--who is a
+Prajapati; akalmasam--very much purified because of his austerity; mam--Me; ca--as well as; bhavayati--
+thinking of; patyau--within your husband; evam--thus; rupam--form; avasthitam--situated there.
+<br>
 <h2>Translation</h2>
-I am able to give You an entire island because I am the proprietor of the three divisions of the universe.
-You have come to take something from me and have pleased me by Your sweet words, but You are asking
-only three paces of land. Therefore You are not very intelligent.
-<p></p>
-<h2>Purport</h2>
-According to Vedic understanding, the entire universe is regarded as an ocean of space. In that ocean
-there are innumerable planets, and each planet is called a dvipa, or island. When approached by Lord
-Vamanadeva, Bali Maharaja was actually in possession of all the dvipas, or islands in space. Bali Maharaja
-was very pleased to see the features of Vamanadeva and was ready to give Him as much land as He could
-ask, but because Lord Vamanadeva asked only three paces of land, Bali Maharaja considered Him not very
-intelligent.
+Always thinking of Me as being situated within the body of your husband, Kasyapa, go worship your
+husband, who has been purified by his austerity.
 </p>
 
 </div>
@@ -79,7 +108,7 @@ intelligent.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

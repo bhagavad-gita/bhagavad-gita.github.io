@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.5.44.html">8.5.44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/44"><b>44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 namo 'stu tasma upasanta-saktaye
 svarajya-labha-pratipuritatmane
 gunesu maya-racitesu vrttibhir
 na sajjamanaya nabhasvad-utaye
-<p></p>
+<br>
 <h2>Synonyms</h2>
 namah--our respectful obeisances; astu--let there be; tasmai--unto Him; upasanta-saktaye--who does not
 endeavor to achieve anything else, who is free from restlessness; svarajya--completely independent;
@@ -62,13 +101,13 @@ gunesu--of the material world, which is moving because of the three modes of nat
 things created by the external energy; vrttibhih--by such activities of the senses; na sajjamanaya--one who
 does not become attached, or one who is above material pains and pleasures; nabhasvat--the air; utaye--
 unto the Lord, who has created this material world as His pastime.
-<p></p>
+<br>
 <h2>Translation</h2>
 Let us offer our respectful obeisances unto the Supreme Personality of Godhead, who is completely
 silent, free from endeavor, and completely satisfied by His own achievements. He is not attached to the
 activities of the material world through His senses. Indeed, in performing His pastimes in this material
 world, He is just like the unattached air.
-<p></p>
+<br>
 <h2>Purport</h2>
 We can simply understand that behind the activities of material nature is the Supreme Lord, by whose
 indications everything takes place, although we cannot see Him. Even without seeing Him, we should
@@ -85,7 +124,7 @@ unto Him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.9.html">8.17.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yato yato 'ham tatrasau
-mrtyuh prana-bhrtam iva
-ato 'ham asya hrdayam
-praveksyami parag-drsah
-<p></p>
+visvaya visva-bhavana-sthiti-samyamaya
+svairam grhita-puru-sakti-gunaya bhumne
+sva-sthaya sasvad-upabrmhita-purna-bodhavyapaditatma-
+tamase haraye namas te
+<br>
 <h2>Synonyms</h2>
-yatah yatah--wheresoever; aham--I; tatra--there indeed; asau--this Hiranyakasipu; mrtyuh--death; pranabhrtam--
-of all living entities; iva--just like; atah--therefore; aham--I; asya--of him; hrdayam--within the
-core of the heart; praveksyami--shall enter; parak-drsah--of a person who has only external vision.
-<p></p>
+visvaya--unto the Supreme Personality of Godhead, who is actually the entire universe; visva--of the
+universe; bhavana--creation; sthiti--maintenance; samyamaya--and annihilation; svairam--fully
+independent; grhita--taking in hand; puru--completely; sakti-gunaya--controlling the three modes of
+material nature; bhumne--the supreme great; sva-sthaya--who is always situated in His original form;
+sasvat--eternally; upabrmhita--achieved; purna--complete; bodha--knowledge; vyapadita--completely
+vanquished; atma-tamase--the illusory energy of Your Lordship; haraye--unto the Supreme Lord; namah
+te--I offer my respectful obeisances unto You.
+<br>
 <h2>Translation</h2>
-Wheresoever I go, Hiranyakasipu will follow Me, as death follows all living entities. Therefore it is better
-for Me to enter the core of his heart, for then, because of his power to see only externally, he will not see
-Me.
+My Lord, You are the all-pervading universal form, the fully independent creator, maintainer and
+destroyer of this universe. Although You engage Your energy in matter, You are always situated in Your
+original form and never fall from that position, for Your knowledge is infallible and always suitable to any
+situation. You are never bewildered by illusion. O my Lord, let me offer my respectful obeisances unto
+You.
+<br>
+<h2>Purport</h2>
+In the Caitanya-caritamrta (Adi 2.117) it is said:
+siddhanta baliya citte na kara alasa
+iha ha-ite krsne lage sudrdha manasa
+Anyone trying to become fully Krsna conscious must know the Lord's glories as far as they are possible
+to understand. Here Aditi hints at these glories. The universe is nothing but the external potency of the
+Lord. This is confirmed in Bhagavad-gita (9.4): maya tatam idam sarvam. Whatever we see in this
+universe is but an expansion of the potency of the Supreme Personality of Godhead, just as the sunshine
+and heat all over the universe are expansions of the sun. When one surrenders unto the Supreme
+Personality of Godhead, he surpasses the influence of the illusory energy, for the Supreme Lord, being
+fully wise and being situated in the heart of everyone, especially in the heart of the devotee, gives one
+intelligence by which one is sure never to fall into illusion.
 </p>
 
 </div>
@@ -70,7 +128,7 @@ Me.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

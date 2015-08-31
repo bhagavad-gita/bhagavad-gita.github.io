@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.4.html">8.20.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pumsam slaghyatamam manye
-dandam arhattamarpitam
-yam na mata pita bhrata
-suhrdas cadisanti hi
-<p></p>
+na hy asatyat paro 'dharma
+iti hovaca bhur iyam
+sarvam sodhum alam manye
+rte 'lika-param naram
+<br>
 <h2>Synonyms</h2>
-pumsam--of men; slaghya-tamam--the most exalted; manye--I consider; dandam--punishment;
-arhattama-arpitam--given by You, the supreme worshipable Lord; yam--which; na--neither; mata--mother;
-pita--father; bhrata--brother; suhrdah--friends; ca--also; adisanti--offer; hi--indeed.
-<p></p>
+na--not; hi--indeed; asatyat--than compulsion to untruthfulness; parah--more; adharmah--irreligion; iti--
+thus; ha uvaca--indeed had spoken; bhuh--mother earth; iyam--this; sarvam--everything; sodhum--to
+bear; alam--I am able; manye--although I think; rte--except; alika-param--the most heinous liar; naram--a
+human being.
+<br>
 <h2>Translation</h2>
-Although a father, mother, brother or friend may sometimes punish one as a well-wisher, they never
-punish their subordinate like this. But because You are the most worshipable Lord, I regard the
-punishment You have given me as most exalted.
-<p></p>
+There is nothing more sinful than untruthfulness. Because of this, mother earth once said, "I can bear
+any heavy thing except a person who is a liar."
+<br>
 <h2>Purport</h2>
-Punishment meted out by the Supreme Personality of Godhead is accepted by the devotee as the greatest
-mercy.
-tat te 'nukampam susamiksamano
-bhunjana evatma-krtam vipakam
-hrd-vag-vapurbhir vidadhan namas te
-jiveta yo mukti-pade sa daya-bhak
-"One who seeks Your compassion and thus tolerates all kinds of adverse conditions due to the karma of
-his past deeds, who engages always in Your devotional service with his mind, words and body, and who
-always offers obeisances to You is certainly a bona fide candidate for liberation." (Bhag. 10.14.8) A
-devotee knows that so-called punishment by the Supreme Personality of Godhead is only His favor to
-correct His devotee and bring him to the right path. Therefore the punishment awarded by the Supreme
-Personality of Godhead cannot be compared to even the greatest benefit awarded by one's material father,
-mother, brother or friend.
+On the surface of the earth there are many great mountains and oceans that are very heavy, and mother
+earth has no difficulty carrying them. But she feels very much overburdened when she carries even one
+person who is a liar. It is said that in Kali-yuga lying is a common affair: mayaiva vyavaharike (Bhag.
+12.2.3). Even in the most common dealings, people are accustomed to speaking so many lies. No one is
+free from the sinful reactions of speaking lies. Under the circumstances, one can just imagine how this has
+overburdened the earth, and indeed the entire universe.
 </p>
 
 </div>
@@ -85,7 +117,7 @@ mother, brother or friend.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.14.9.html">8.14.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yat-pujaya kama-dughan
-yati lokan grhanvitah
-brahmano 'gnis ca vai visnoh
-sarva-devatmano mukham
-<p></p>
+sargam prajesa-rupena
+dasyun hanyat svarad-vapuh
+kala-rupena sarvesam
+abhavaya prthag gunah
+<br>
 <h2>Synonyms</h2>
-yat-pujaya--by worshiping the fire and brahmanas; kama-dughan--which fulfill one's desires; yati--one
-goes; lokan--to the destination of the higher planetary system; grha-anvitah--a person attached to
-household life; brahmanah--the brahmanas; agnih ca--and the fire; vai--indeed; visnoh--of Lord Visnu;
-sarva-deva-atmanah--the soul of all the demigods; mukham--the mouth.
-<p></p>
+sargam--creation of progeny; praja-isa-rupena--in the form of the Prajapati Marici and others; dasyun--
+thieves and rogues; hanyat--kills; sva-rat-vapuh--in the form of the king; kala-rupena--in the form of time;
+sarvesam--of everything; abhavaya--for the annihilation; prthak--different; gunah--possessing qualities.
+<br>
 <h2>Translation</h2>
-By worshiping the fire and the brahmanas, a householder can achieve the desired goal of residing in the
-higher planets, for the sacrificial fire and the brahmanas are to be considered the mouth of Lord Visnu,
-who is the Supersoul of all the demigods.
-<p></p>
-<h2>Purport</h2>
-According to the Vedic system, a fire sacrifice is held in order to offer oblations of ghee, grains, fruits,
-flowers and so on, so that Lord Visnu may eat and be satisfied. The Lord says in Bhagavad-gita (9.26):
-patram puspam phalam toyam
-yo me bhaktya prayacchati
-tad aham bhakty-upahrtam
-asnami prayatatmanah
-"If one offers Me with love and devotion a leaf, a flower, fruit or water, I will accept it." Therefore, all
-these items may be offered in the sacrificial fire, and Lord Visnu will be satisfied. Similarly, brahmanabhojana,
-feeding of the brahmanas, is also recommended, for when the brahmanas eat sumptuous
-remnants of food after yajna, this is another way that Lord Visnu Himself eats. Therefore the Vedic
-principles recommend that in every festival or ceremony one offer oblations to the fire and give
-sumptuous food for the brahmanas to eat. By such activities, a householder may be elevated to the
-heavenly planets and similar places in the higher planetary systems.
+In the form of Prajapati Marici, the Supreme Personality of Godhead creates progeny; becoming the
+king, He kills the thieves and rogues; and in the form of time, He annihilates everything. All the different
+qualities of material existence should be understood to be qualities of the Supreme Personality of
+Godhead.
 </p>
 
 </div>
@@ -86,7 +110,7 @@ heavenly planets and similar places in the higher planetary systems.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.5.48.html">8.5.48</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.48</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/48"><b>48</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 navamah karma-kalpo 'pi
 viphalayesvararpitah
 kalpate purusasyaiva
 sa hy atma dayito hitah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; avamah--very little, or insignificant; karma--activities; kalpah--rightly executed; api--even;
 viphalaya--go in vain; isvara-arpitah--because of being dedicated to the Supreme Personality of Godhead;
 kalpate--it is so accepted; purusasya--of all persons; eva--indeed; sah--the Supreme Personality of
 Godhead; hi--certainly; atma--the Supersoul, the supreme father; dayitah--extremely dear; hitah--
 beneficial.
-<p></p>
+<br>
 <h2>Translation</h2>
 Activities dedicated to the Supreme Personality of Godhead, even if performed in small measure, never
 go in vain. The Supreme Personality of Godhead, being the supreme father, is naturally very dear and
 always ready to act for the good of the living entities.
-<p></p>
+<br>
 <h2>Purport</h2>
 In Bhagavad-gita (2.40), the Lord says svalpam apy asya dharmasya trayate mahato bhayat: this dharma,
 devotional service, is so important that even if performed to a very small, almost negligible extent, it can
@@ -101,7 +140,7 @@ achieve what he wants by rendering service to the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.14.6.html">8.14.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-api vatithayo 'bhyetya
-kutumbasaktaya tvaya
-grhad apujita yatah
-pratyutthanena va kvacit
-<p></p>
+palayanti praja-pala
+yavad antam vibhagasah
+yajna-bhaga-bhujo deva
+ye ca tatranvitas ca taih
+<br>
 <h2>Synonyms</h2>
-api--whether; va--either; atithayah--guests who come without an invitation; abhyetya--coming to the
-home; kutumba-asaktaya--who were too attached to the family members; tvaya--by you; grhat--from the
-house; apujitah--without being properly welcomed; yatah--went away; pratyutthanena--by standing up;
-va--either; kvacit--sometimes.
-<p></p>
+palayanti--execute the order; praja-palah--the rulers of the world, namely the sons and grandsons of
+Manu; yavat antam--unto the end of Manu's reign; vibhagasah--in divisions; yajna-bhaga-bhujah--the
+enjoyers of the result of yajnas; devah--the demigods; ye--others; ca--also; tatra anvitah--engaged in that
+business; ca--also; taih--by them.
+<br>
 <h2>Translation</h2>
-I wonder whether because of being too attached to the members of your family, you failed to properly
-receive uninvited guests, who therefore were not welcomed and went away.
-<p></p>
+To enjoy the results of sacrifices [yajnas], the rulers of the world, namely the sons and grandsons of
+Manu, discharge the orders of the Supreme Personality of Godhead until the end of Manu's reign. The
+demigods also share the results of these sacrifices.
+<br>
 <h2>Purport</h2>
-It is the duty of a householder to receive guests, even if a guest be an enemy. When a guest comes to
-one's home, one should properly receive him by standing up and offering him a seat. It is enjoined, grhe
-satrum api praptam visvastam akutobhayam: if even an enemy comes to one's home, one should receive
-him in such a way that the guest will forget that his host is an enemy. According to one's position, one
-should properly receive anyone who comes to one's home. At least a seat and a glass of water should be
-offered, so that the guest will not be displeased. Kasyapa Muni inquired from Aditi whether disrespect had
-been shown to such guests, or atithis. The word atithi refers to one who comes without an invitation.
+As stated in Bhagavad-gita (4.2):
+evam parampara-praptam
+imam rajarsayo viduh
+"This supreme science was thus received through the chain of disciplic succession, and the saintly kings
+understood it in that way." This parampara system extends from Manu to Iksvaku and from Iksvaku to
+his sons and grandsons. The rulers of the world in the line of hierarchy execute the order of the Supreme
+personality of Godhead in the parampara system. Anyone interested in peaceful life must participate in
+this parampara system and perform yajnas. As Gaudiya Vaisnavas in the parampara system of Sri Caitanya
+Mahaprabhu, we must perform sankirtana-yajna all over the world (yajnaih sankirtana-prayair yajanti hi
+sumedhasah). Sri Caitanya Mahaprabhu is the incarnation of the Supreme Personality of Godhead in this
+age of Kali, and He will be easily satisfied if the sankirtana movement is spread vigorously all over the
+world. This will also make people happy without a doubt.
 </p>
 
 </div>
@@ -79,7 +124,7 @@ been shown to such guests, or atithis. The word atithi refers to one who comes w
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

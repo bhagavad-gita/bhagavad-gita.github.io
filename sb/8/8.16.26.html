@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.26.html">8.16.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yajamanah pramudito
-darsaniyam manoramam
-rupanurupavayavam
-tasma asanam aharat
-<p></p>
+sinivalyam mrdalipya
+snayat kroda-vidirnaya
+yadi labhyeta vai srotasy
+etam mantram udirayet
+<br>
 <h2>Synonyms</h2>
-yajamanah--Bali Maharaja, who had engaged all the priests in performing the sacrifice; pramuditah--
-being very jubilant; darsaniyam--pleasing to see; manoramam--so beautiful; rupa--with beauty; anurupa--
-equal to His bodily beauty; avayavam--all the different parts of the body; tasmai--unto Him; asanam--a
-sitting place; aharat--offered.
-<p></p>
+sinivalyam--on the dark-moon day; mrda--with dirt; alipya--smearing the body; snayat--one should
+bathe; kroda-vidirnaya--dug up by the tusk of a boar; yadi--if; labhyeta--it is available; vai--indeed;
+srotasi--in a flowing river; etam mantram--this mantra; udirayet--one should chant.
+<br>
 <h2>Translation</h2>
-Bali Maharaja, jubilant at seeing Lord Vamanadeva, whose beautiful limbs contributed equally to the
-beauty of His entire body, offered Him a seat with great satisfaction.
+If dirt dug up by a boar is available, on the day of the dark moon one should smear this dirt on his body
+and then bathe in a flowing river. While bathing, one should chant the following mantra.
 </p>
 
 </div>
@@ -70,7 +108,7 @@ beauty of His entire body, offered Him a seat with great satisfaction.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

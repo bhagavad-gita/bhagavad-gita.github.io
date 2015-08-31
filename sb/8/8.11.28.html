@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.28.html">8.11.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-so 'nuvrajyativegena
-grhitvanicchatim striyam
-kesa-bandha upaniya
-bahubhyam parisasvaje
-<p></p>
+sa tenaivasta-dharena
+sirasi bala-pakayoh
+jnatinam pasyatam rajan
+jahara janayan bhayam
+<br>
 <h2>Synonyms</h2>
-sah--Lord Siva; anuvrajya--following Her; ati-vegena--with great speed; grhitva--catching; anicchatim--
-although She was not willing to be caught; striyam--the woman; kesa-bandhe--on the cluster of hair;
-upaniya--dragging Her near; bahubhyam--with his arms; parisasvaje--embraced Her.
-<p></p>
+sah--he (Indra); tena--by that; eva--indeed; asta-dharena--by the thunderbolt; sirasi--the two heads; balapakayoh--
+of the two demons known as Bala and Paka; jnatinam pasyatam--while their relatives and
+soldiers were watching; rajan--O King; jahara--(Indra) cut off; janayan--creating; bhayam--fear (among
+them).
+<br>
 <h2>Translation</h2>
-After following Her with great speed, Lord Siva caught Her by the braid of Her hair and dragged Her
-near him. Although She was unwilling, he embraced Her with his arms.
+O King Pariksit, King Indra used his thunderbolt to cut off the heads of both Bala and Paka in the
+presence of all their relatives and followers. In this way he created a very fearful atmosphere on the
+battlefield.
 </p>
 
 </div>
@@ -69,7 +110,7 @@ near him. Although She was unwilling, he embraced Her with his arms.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

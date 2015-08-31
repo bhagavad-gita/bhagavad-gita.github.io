@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.33.html">8.11.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatra yatrapatan mahyam
-retas tasya mahatmanah
-tani rupyasya hemnas ca
-ksetrany asan mahi-pate
-<p></p>
+tasmad indro 'bibhec chatror
+vajrah pratihato yatah
+kim idam daiva-yogena
+bhutam loka-vimohanam
+<br>
 <h2>Synonyms</h2>
-yatra--wherever; yatra--and wherever; apatat--fell; mahyam--on the surface of the world; retah--the
-semen; tasya--of him; maha-atmanah--of the great personality (Lord Siva); tani--all those places;
-rupyasya--of silver; hemnah--of gold; ca--and; ksetrani--mines; asan--became; mahi-pate--O King.
-<p></p>
+tasmat--therefore; indrah--the King of heaven; abibhet--became very fearful; satroh--from the enemy
+(Namuci); vajrah--the thunderbolt; pratihatah--was unable to hit and returned; yatah--because; kim
+idam--what is this; daiva-yogena--by some superior force; bhutam--it has happened; loka-vimohanam--so
+wonderful to the people in general.
+<br>
 <h2>Translation</h2>
-O King, wheresoever on the surface of the globe fell the semen of the great personality of Lord Siva,
-mines of gold and silver later appeared.
-<p></p>
+When Indra saw the thunderbolt return from the enemy, he was very much afraid. He began to wonder
+whether this had happened because of some miraculous superior power.
+<br>
 <h2>Purport</h2>
-Srila Visvanatha Cakravarti Thakura comments that those who seek gold and silver can worship Lord
-Siva for material opulences. Lord Siva lives under a bael tree and does not even construct a house in
-which to dwell, but although he is apparently poverty-stricken, his devotees are sometimes opulently
-endowed with large quantities of silver and gold. Pariksit Maharaja later asks about this, and Sukadeva
-Gosvami replies.
+Indra's thunderbolt is invincible, and therefore when Indra saw that it had returned without doing any
+injury to Namuci, he was certainly very much afraid.
 </p>
 
 </div>
@@ -76,7 +113,7 @@ Gosvami replies.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

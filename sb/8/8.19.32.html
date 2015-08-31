@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.19.32.html">8.19.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pratisrutam adatus te
-niraye vasa isyate
-visa tvam nirayam tasmad
-guruna canumoditah
-<p></p>
+esa te sthanam aisvaryam
+sriyam tejo yasah srutam
+dasyaty acchidya sakraya
+maya-manavako harih
+<br>
 <h2>Synonyms</h2>
-pratisrutam--what had been promised; adatuh--who could not give; te--of you; niraye--in hell; vasah--
-residence; isyate--prescribed; visa--now enter; tvam--yourself; nirayam--the hellish planet; tasmat--
-therefore; guruna--by your spiritual master; ca--also; anumoditah--approved.
-<p></p>
+esah--this person falsely appearing as a brahmacari; te--of you; sthanam--the land in possession;
+aisvaryam--the riches; sriyam--the material beauty; tejah--the material power; yasah--the reputation;
+srutam--the education; dasyati--will give; acchidya--taking from you; sakraya--unto your enemy, Lord
+Indra; maya--falsely appearing; manavakah--a brahmacari son of a living being; harih--He is actually the
+Supreme Personality of Godhead, Hari.
+<br>
 <h2>Translation</h2>
-Because you have been unable to give charity according to your promise, the rule is that you should go
-down to live in the hellish planets. Therefore, in accordance with the order of Sukracarya, your spiritual
-master, now go down and live there.
-<p></p>
+This person falsely appearing as a brahmacari is actually the Supreme Personality of Godhead, Hari, who
+has come in this form to take away all your land, wealth, beauty, power, fame and education. After taking
+everything from you, He will deliver it to Indra, your enemy.
+<br>
 <h2>Purport</h2>
-It is said:
-narayana-parah sarve
-na kutascana bibhyati
-svargapavarga-narakesv
-api tulyartha-darsinah
-"Devotees solely engaged in the devotional service of the Supreme Personality of Godhead, Narayana,
-never fear any condition of life. For them the heavenly planets, liberation and the hellish planets are all
-the same, for such devotees are interested only in the service of the Lord." (Bhag. 6.12.28) A devotee
-engaged in the service of Narayana is always in equilibrium. A devotee actually lives transcendentally.
-Although he may appear to have gone to hell or heaven, he does not live in either place; rather, he always
-lives in Vaikuntha (sa gunan samatityaitan brahma-bhuyaya kalpate). Vamanadeva asked Bali Maharaja to
-go to the hellish planets, apparently just to show the entire universe how tolerant he was, and Bali
-Maharaja did not hesitate to carry out the order. A devotee does not live alone. Of course, everyone lives
-with the Supreme Personality of Godhead, but because the devotee is engaged in His service, he actually
-does not live in any material condition. Bhaktivinoda Thakura says, kita janma hao yatha tuya dasa. Thus
-he prays to take birth as an insignificant insect in the association of devotees. Because devotees are
-engaged in the service of the Lord, anyone who lives with them also lives in Vaikuntha.
+Srila Visvanatha Cakravarti Thakura explains in this regard that the very word harih means "one who
+takes away." If one connects himself with Hari, the Supreme Personality of Godhead, the Lord takes away
+all his miseries, and in the beginning the Lord also superficially appears to take away all his material
+possessions, reputation, education and beauty. As stated in Srimad-Bhagavatam (10.88.8), yasyaham
+anugrhnami harisye tad-dhanam sanaih. The Lord said to Maharaja Yudhisthira, "The first installment of
+My mercy toward a devotee is that I take away all his possessions, especially his material opulence, his
+money." This is the special favor of the Lord toward a sincere devotee. If a sincere devotee wants Krsna
+above everything but at the same time is attached to material possessions, which hinder his advancement
+in Krsna consciousness, by tactics the Lord takes away all his possessions. Here Sukracarya says that this
+dwarf brahmacari would take away everything. Thus he indicates that the Lord will take away all one's
+material possessions and also one's mind. If one delivers his mind to the lotus feet of Krsna (sa vai manah
+krsna-padaravindayoh), one can naturally sacrifice everything to satisfy Him. Although Bali Maharaja was
+a devotee, he was attached to material possessions, and therefore the Lord, being very kind to him,
+showed him special favor by appearing as Lord Vamana to take away all his material possessions, and his
+mind as well.
 </p>
 
 </div>
@@ -89,7 +128,7 @@ engaged in the service of the Lord, anyone who lives with them also lives in Vai
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

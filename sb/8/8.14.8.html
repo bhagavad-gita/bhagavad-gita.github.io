@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.14.8.html">8.14.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-apy agnayas tu velayam
-na huta havisa sati
-tvayodvigna-dhiya bhadre
-prosite mayi karhicit
-<p></p>
+jnanam canuyugam brute
+harih siddha-svarupa-dhrk
+rsi-rupa-dharah karma
+yogam yogesa-rupa-dhrk
+<br>
 <h2>Synonyms</h2>
-api--whether; agnayah--fires; tu--indeed; velayam--in the fire sacrifice; na--not; hutah--offered; havisa--
-by ghee; sati--O chaste woman; tvaya--by you; udvigna-dhiya--because of some anxiety; bhadre--O
-auspicious woman; prosite--was away from home; mayi--when I; karhicit--sometimes.
-<p></p>
+jnanam--transcendental knowledge; ca--and; anuyugam--according to the age; brute--explains; harih--
+the Supreme Personality of Godhead; siddha-svarupa-dhrk--assuming the form of liberated persons like
+Sanaka and Sanatana; rsi-rupa-dharah--assuming the form of great saintly persons like Yajnavalkya;
+karma--karma; yogam--the mystic yoga system; yoga-isa-rupa-dhrk--by assuming the form of a great yogi
+like Dattatreya.
+<br>
 <h2>Translation</h2>
-O chaste and auspicious woman, when I left home for other places, were you in so much anxiety that
-you did not offer oblations of ghee into the fire?
+In every yuga, the Supreme Personality of Godhead, Hari, assumes the form of Siddhas such as Sanaka
+to preach transcendental knowledge, He assumes the form of great saintly persons such as Yajnavalkya to
+teach the way of karma, and He assumes the form of great yogis such as Dattatreya to teach the system of
+mystic yoga.
+<br>
+<h2>Purport</h2>
+For the benefit of all human society, not only does the Lord assume the form of Manu as an incarnation
+to rule the universe properly, but He also assumes the forms of a teacher, yogi, jnani and so on, for the
+benefit of human society. The duty of human society, therefore, is to accept the path of action enunciated
+by the Supreme Lord. In the present age, the sum and substance of all Vedic knowledge is to be found in
+Bhagavad-gita, which is personally taught by the Supreme Personality of Godhead, and the same Supreme
+Godhead, assuming the form of Sri Caitanya Mahaprabhu, expands the teachings of Bhagavad-gita all over
+the world. In other words, the Supreme Personality of Godhead, Hari, is so kind and merciful to human
+society that He is always anxious to take the fallen souls back home, back to Godhead.
 </p>
 
 </div>
@@ -69,7 +122,7 @@ you did not offer oblations of ghee into the fire?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

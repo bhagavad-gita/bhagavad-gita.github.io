@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,58 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.34.html">8.20.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na tvam abhibhavisyanti
-lokesah kim utapare
-tvac-chasanatigan daityams
-cakram me sudayisyati
-<p></p>
+padam dvitiyam kramatas trivistapam
+na vai trtiyaya tadiyam anv api
+urukramasyanghrir upary upary atho
+mahar-janabhyam tapasah param gatah
+<br>
 <h2>Synonyms</h2>
-na--not; tvam--unto you; abhibhavisyanti--will be able to conquer; loka-isah--the predominating deities
-of the various planets; kim uta apare--what to speak of ordinary people; tvat-sasana-atigan--who
-transgress your rulings; daityan--such demons; cakram--disc; me--My; sudayisyati--will kill.
-<p></p>
+padam--step; dvitiyam--second; kramatah--advancing; tri-vistapam--all of the heavenly planets; na--not;
+vai--indeed; trtiyaya--for the third step; tadiyam--of the Lord; anu api--only a spot of land remained;
+urukramasya--of the Supreme Personality of Godhead, who performs uncommon activities; anghrih--steps
+occupying above and below; upari upari--higher and higher; atho--now; mahah-janabhyam--than
+Maharloka and Janaloka; tapasah--that Tapoloka; param--beyond that; gatah--approached.
+<br>
 <h2>Translation</h2>
-On the planet Sutala, not even the predominating deities of other planets, what to speak of ordinary
-people, will be able to conquer you. As far as the demons are concerned, if they transgress your rule, My
-disc will kill them.
+As the Lord took His second step, He covered the heavenly planets. And not even a spot remained for
+the third step, for the Lord's foot extended higher and higher, beyond Maharloka, Janaloka, Tapoloka and
+even Satyaloka.
+<br>
+<h2>Purport</h2>
+When the Lord's footstep exceeded the height of all the lokas, including Maharloka, Janaloka, Tapoloka
+and Satyaloka, His nails certainly pierced the covering of the universe. The universe is covered by the five
+material elements (bhumir apo 'nalo vayuh kham). As stated in the sastra, these elements are in layers,
+each ten times thicker than the previous one. Nonetheless, the nails of the Lord pierced through all these
+layers and made a hole penetrating into the spiritual world. From this hole, the water of the Ganges
+infiltrated into this material world, and therefore it is said, pada-nakha-nira janita jana-pavana
+(Dasavatara-stotra 5). Because the Lord kicked a hole in the covering of the universe, the water of the
+Ganges came into this material world to deliver all the fallen souls.
+Thus end the Bhaktivedanta purports of the Eighth Canto, Twentieth Chapter, of the Srimad-Bhagavatam,
+entitled "Bali Maharaja Surrenders the Universe."
+Chapter Twenty-one
+Bali Maharaja Arrested by the Lord
+This chapter describes how Lord Visnu, desiring to advertise the glories of Bali Maharaja, arrested him
+for not fulfilling his promise in regard to the Lord's third step.
+With the second step the Supreme Personality of Godhead reached the topmost planet of the universe,
+Brahmaloka, which He diminished in beauty by the effulgence of His toenails. Thus Lord Brahma,
+accompanied by great sages like Marici and the predominating deities of all the higher planets, offered
+humble prayers and worship to the Lord. They washed the Lord's feet and worshiped Him with all
+paraphernalia. Rksaraja, Jambavan, played his bugle to vibrate the glories of the Lord. When Bali Maharaja
+was deprived of all his possessions, the demons were very angry. Although Bali Maharaja warned them
+not to do so, they took up weapons against Lord Visnu. All of them were defeated, however, by Lord
+Visnu's eternal associates, and, in accordance with Bali Maharaja's order, they all entered the lower planets
+of the universe. Understanding Lord Visnu's purpose, Garuda, the carrier of Lord Visnu, immediately
+arrested Bali Maharaja with the ropes of Varuna. When Bali Maharaja was thus reduced to a helpless
+position, Lord Visnu asked him for the third step of land. Because Lord Visnu appreciated Bali Maharaja's
+determination and integrity, when Bali Maharaja was unable to fulfill his promise, Lord Visnu ascertained
+that the place for him would be the planet Sutala, which is better than the planets of heaven.
 </p>
 
 </div>
@@ -70,7 +140,7 @@ disc will kill them.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

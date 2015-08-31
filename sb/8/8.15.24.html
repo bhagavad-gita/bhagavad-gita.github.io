@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.15.24.html">8.15.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aditer dhisthitam garbham
-bhagavantam sanatanam
-hiranyagarbho vijnaya
-samide guhya-namabhih
-<p></p>
+maghavams tam abhipretya
+baleh paramam udyamam
+sarva-deva-ganopeto
+gurum etad uvaca ha
+<br>
 <h2>Synonyms</h2>
-aditeh--into the womb of Aditi; dhisthitam--being established; garbham--pregnancy; bhagavantam--unto
-the Supreme Personality of Godhead; sanatanam--who is eternal; hiranyagarbhah--Lord Brahma; vijnaya--
-knowing this; samide--offered prayers; guhya-namabhih--with transcendental names.
-<p></p>
+maghavan--Indra; tam--the situation; abhipretya--understanding; baleh--of Bali Maharaja; paramam
+udyamam--great enthusiasm; sarva-deva-gana--by all the demigods; upetah--accompanied; gurum--unto
+the spiritual master; etat--the following words; uvaca--said; ha--indeed.
+<br>
 <h2>Translation</h2>
-When Lord Brahma understood that the Supreme Personality of Godhead was now within the womb of
-Aditi, he began to offer prayers to the Lord by reciting transcendental names.
-<p></p>
-<h2>Purport</h2>
-The Supreme Personality of Godhead exists everywhere (andantara-stha-paramanu-cayantara-stham).
-Therefore when one chants His transcendental names--Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare.
-Hare Rama, Hare Rama, Rama Rama, Hare Hare--the Supreme Personality of Godhead is automatically
-pleased by such sankirtana. It is not that the Supreme Personality of Godhead is absent; He is present
-there. And when a devotee utters the transcendental name, it is not a material sound. Therefore, the
-Supreme Personality of Godhead is naturally pleased. A devotee knows that the Lord is present
-everywhere and that one can please Him simply by chanting His holy name.
+Seeing Bali Maharaja's indefatigable endeavor and understanding his motive, King Indra, along with the
+other demigods, approached his spiritual master, Brhaspati, and spoke as follows.
 </p>
 
 </div>
@@ -78,7 +108,7 @@ everywhere and that one can please Him simply by chanting His holy name.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

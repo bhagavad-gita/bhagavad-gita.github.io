@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.5.html">8.11.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ady-antav asya yan madhyam
-idam anyad aham bahih
-yato 'vyayasya naitani
-tat satyam brahma cid bhavan
-<p></p>
+aruruksanti mayabhir
+utsisrpsanti ye divam
+tan dasyun vidhunomy ajnan
+purvasmac ca padad adhah
+<br>
 <h2>Synonyms</h2>
-adi--the beginning; antau--and the end; asya--of this manifested cosmos or of anything material or
-visible; yat--that which; madhyam--between the beginning and the end, the sustenance; idam--this cosmic
-manifestation; anyat--anything other than You; aham--the wrong mental conception; bahih--outside of
-You; yatah--because of; avyayasya--the inexhaustible; na--not; etani--all these differences; tat--that;
-satyam--the Absolute Truth; brahma--the Supreme; cit--spiritual; bhavan--Your Lordship.
-<p></p>
+aruruksanti--persons who desire to come to the upper planetary systems; mayabhih--by so-called mystic
+power or material advancement of science; utsisrpsanti--or want to be liberated by such false attempts;
+ye--such persons who; divam--the higher planetary system known as Svargaloka; tan--such rogues and
+ruffians; dasyun--such thieves; vidhunomi--I force to go down; ajnan--rascals; purvasmat--previous; ca--
+also; padat--from the position; adhah--downward.
+<br>
 <h2>Translation</h2>
-The manifest, the unmanifest, false ego and the beginning, maintenance and annihilation of this cosmic
-manifestation all come from You, the Supreme Personality of Godhead. But because You are the Absolute
-Truth, the supreme absolute spirit soul, the Supreme Brahman, such changes as birth, death and
-sustenance do not exist in You.
-<p></p>
+Those fools and rascals who want to ascend to the upper planetary system by mystic power or
+mechanical means, or who endeavor to cross even the upper planets and achieve the spiritual world or
+liberation, I cause to be sent to the lowest region of the universe.
+<br>
 <h2>Purport</h2>
-According to the Vedic mantras, yato va imani bhutani jayante: everything is an emanation of the
-Supreme Personality of Godhead. As stated by the Lord Himself in Bhagavad-gita (7.4):
-bhumir apo 'nalo vayuh
-kham mano buddhir eva ca
-ahankara itiyam me
-bhinna prakrtir astadha
-"Earth, water, fire, air, ether, mind, intelligence and false ego--all together these eight comprise My
-separated material energies." In other words, the ingredients of the cosmic manifestation also consist of
-the energy of the Supreme Personality of Godhead. This does not mean, however, that because the
-ingredients come from Him, He is no longer complete. purnasya purnam adaya purnam evavasisyate:
-"Because He is the complete whole, even though so many complete units emanate from Him, He remains
-the complete balance." Thus the Lord is called avyaya, inexhaustible. Unless we accept the Absolute Truth
-as acintya-bhedabheda, simultaneously one and different, we cannot have a clear conception of the
-Absolute Truth. The Lord is the root of everything. Aham adir hi devanam: He is the original cause of all
-the devas, or demigods. Aham sarvasya prabhavah: everything emanates from Him. In all cases--
-nominative, objective, positive, negative and so on--whatever we may conceive of in this entire cosmic
-manifestation is in fact the Supreme Lord. For Him there are no such distinctions as "this is mine, and
-this belongs to someone else," because He is everything. He is therefore called avyaya--changeless and
-inexhaustible. Because the Supreme Lord is avyaya, He is the Absolute Truth, the fully spiritual Supreme
-Brahman.
+There are undoubtedly different planetary systems for different persons. As stated in Bhagavad-gita
+(14.18), urdhvam gacchanti sattva-sthah: persons in the mode of goodness can go to the upper planets.
+Those in the modes of darkness and passion, however, are not allowed to enter the higher planets. The
+word divam refers to the higher planetary system known as Svargaloka. Indra, King of the higher
+planetary system, has the power to push down any conditioned soul attempting to go from the lower to
+the higher planets without proper qualifications. The modern attempt to go to the moon is also an attempt
+by inferior men to go to Svargaloka by artificial, mechanical means. This attempt cannot be successful.
+From this statement of Indra it appears that anyone attempting to go to the higher planetary systems by
+mechanical means, which are here called maya, is condemned to go the hellish planets in the lower
+portion of the universe. To go to the higher planetary system, one needs sufficient good qualities. A sinful
+person situated in the mode of ignorance and addicted to drinking, meat-eating and illicit sex will never
+enter the higher planets by mechanical means.
 </p>
 
 </div>
@@ -95,7 +125,7 @@ Brahman.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

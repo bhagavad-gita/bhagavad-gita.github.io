@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.18.19.html">8.18.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tadasurendram divi devata-gana
-gandharva-vidyadhara-siddha-caranah
-tat karma sarve 'pi grnanta arjavam
-prasuna-varsair vavrsur mudanvitah
-<p></p>
+samiddham ahitam vahnim
+krtva parisamuhanam
+paristirya samabhyarcya
+samidbhir ajuhod dvijah
+<br>
 <h2>Synonyms</h2>
-tada--at that time; asura-indram--unto the King of the demons, Bali Maharaja; divi--in the higher
-planetary system; devata-ganah--the residents known as the demigods; gandharva--the Gandharvas;
-vidyadhara--the Vidyadharas; siddha--the residents of Siddhaloka; caranah--the residents of Caranaloka;
-tat--that; karma--action; sarve api--all of them; grnantah--declaring; arjavam--plain and simple; prasunavarsaih--
-with a shower of flowers; vavrsuh--released; muda-anvitah--being very pleased with him.
-<p></p>
+samiddham--blazing; ahitam--being situated; vahnim--the fire; krtva--after making; parisamuhanam--
+properly; paristirya--surpassing; samabhyarcya--after offering worship; samidbhih--with sacrificial
+offerings; ajuhot--completed the fire sacrifice; dvijah--the best of the brahmanas.
+<br>
 <h2>Translation</h2>
-At that time, the residents of the higher planetary system, namely the demigods, the Gandharvas, the
-Vidyadharas, the Siddhas and the Caranas, all being very pleased by Bali Maharaja's simple,
-nonduplicitous act, praised his qualities and showered upon him millions of flowers.
-<p></p>
-<h2>Purport</h2>
-Arjavam--simplicity or freedom from duplicity--is a qualification of a brahmana and a Vaisnava. A
-Vaisnava automatically acquires all the qualities of a brahmana.
-yasyasti bhaktir bhagavaty akincana
-sarvair gunais tatra samasate surah
-(Bhag. 5.18.12)
-A Vaisnava should possess the brahminical qualities such as satya, sama, dama, titiksa and arjava. There
-cannot be any duplicity in the character of a Vaisnava. When Bali Maharaja acted with unflinching faith
-and devotion unto the lotus feet of Lord Visnu, this was very much appreciated by all the residents of the
-higher planetary system.
+After Lord Sri Vamanadeva set a sacrificial fire, He offered worship and performed a fire sacrifice on the
+sacrificial field.
 </p>
 
 </div>
@@ -83,7 +108,7 @@ higher planetary system.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

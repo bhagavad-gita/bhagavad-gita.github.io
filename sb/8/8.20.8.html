@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.8.html">8.20.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pitamaho me bhavadiya-sammatah
-prahrada aviskrta-sadhu-vadah
-bhavad-vipaksena vicitra-vaisasam
-samprapitas tvam paramah sva-pitra
-<p></p>
+yair iyam bubhuje brahman
+daityendrair anivartibhih
+tesam kalo 'grasil lokan
+na yaso 'dhigatam bhuvi
+<br>
 <h2>Synonyms</h2>
-pitamahah--grandfather; me--my; bhavadiya-sammatah--approved by the devotees of Your Lordship;
-prahradah--Prahlada Maharaja; aviskrta-sadhu-vadah--famous, being celebrated everywhere as a devotee;
-bhavat-vipaksena--simply going against You; vicitra-vaisasam--inventing different kinds of harassments;
-samprapitah--suffered; tvam--You; paramah--the supreme shelter; sva-pitra--by his own father.
-<p></p>
+yaih--by whom; iyam--this world; bubhuje--was enjoyed; brahman--O best of the brahmanas; daityaindraih--
+by great heroes and kings born in demoniac families; anivartibhih--by those who were
+determined to fight, either to lay down their lives or to win victory; tesam--of such persons; kalah--the
+time factor; agrasit--took away; lokan--all possessions, all objects of enjoyment; na--not; yasah--the
+reputation; adhigatam--achieved; bhuvi--in this world.
+<br>
 <h2>Translation</h2>
-My grandfather Prahlada Maharaja is famous, being recognized by all Your devotees. Although harassed
-in many ways by his father, Hiranyakasipu, he still remained faithful, taking shelter at Your lotus feet.
-<p></p>
+O best of the brahmanas, certainly the great demoniac kings who were never reluctant to fight enjoyed
+this world, but in due course of time everything they had was taken away, except their reputation, by
+which they continue to exist. In other words, one should try to achieve a good reputation instead of
+anything else.
+<br>
 <h2>Purport</h2>
-A pure devotee like Prahlada Maharaja, although harassed circumstantially in many ways, never gives
-up the shelter of the Supreme Personality of Godhead to take shelter of anyone else. A pure devotee never
-complains against the mercy of the Supreme Personality of Godhead. A vivid example is Prahlada
-Maharaja. Examining the life of Prahlada Maharaja, we can see how severely he was harassed by his own
-father, Hiranyakasipu, yet he did not divert his attention from the Lord even to the smallest extent. Bali
-Maharaja, following in the footsteps of his grandfather Prahlada Maharaja, remained fixed in his devotion
-to the Lord, despite the Lord's having punished him.
+In this regard, Canakya Pandita (Canakya-sloka 34) also says, ayusah ksana eko 'pi na labhya svarnakotibhih.
+The duration of one's life is extremely short, but if in that short lifetime one can do something
+that enhances his good reputation, that may continue to exist for many millions of years. Bali Maharaja
+therefore decided not to follow his spiritual master's instruction that he deny his promise to Vamanadeva;
+instead, he decided to give the land according to the promise and be everlastingly celebrated as one of the
+twelve mahajanas (balir vaiyasakir vayam).
 </p>
 
 </div>
@@ -79,7 +120,7 @@ to the Lord, despite the Lord's having punished him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

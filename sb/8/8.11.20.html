@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.20.html">8.11.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-diksu bhramat-kanduka-capalair bhrsam
-prodvigna-tarayata-lola-locanam
-sva-karna-vibhrajita-kundalollasatkapola-
-nilalaka-manditananam
-<p></p>
+vacobhih parusair indram
+ardayanto 'sya marmasu
+sarair avakiran megha
+dharabhir iva parvatam
+<br>
 <h2>Synonyms</h2>
-diksu--in all directions; bhramat--moving; kanduka--of the ball; capalaih--restlessness; bhrsam--now
-and then; prodvigna--full of anxieties; tara--eyes; ayata--broad; lola--restless; locanam--with such eyes;
-sva-karna--on Her own two ears; vibhrajita--illuminating; kundala--earrings; ullasat--shining; kapola--
-cheeks; nila--bluish; alaka--with hair; mandita--was decorated; ananam--face.
-<p></p>
+vacobhih--with harsh words; parusaih--very rough and cruel; indram--King Indra; ardayantah--
+chastising, piercing; asya--of Indra; marmasu--in the heart, etc.; saraih--with arrows; avakiran--covered all
+around; meghah--clouds; dharabhih--with showers of rain; iva--just as; parvatam--a mountain.
+<br>
 <h2>Translation</h2>
-The woman's face was decorated by broad, beautiful, restless eyes, which moved as the ball bounced
-here and there from Her hand. The two brilliant earrings on Her ears decorated Her shining cheeks like
-bluish reflections, and the hair scattered on Her face made Her even more beautiful to see.
+Rebuking Indra with harsh, cruel words that were piercing to the heart, these demons showered him
+with arrows, just as torrents of rain wash a great mountain.
 </p>
 
 </div>
@@ -71,7 +108,7 @@ bluish reflections, and the hair scattered on Her face made Her even more beauti
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

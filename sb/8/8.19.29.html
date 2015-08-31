@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.19.29.html">8.19.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-padani trini dattani
-bhumer mahyam tvayasura
-dvabhyam kranta mahi sarva
-trtiyam upakalpaya
-<p></p>
+visnave ksmam pradasyantam
+usana asuresvaram
+janams cikirsitam visnoh
+sisyam praha vidam varah
+<br>
 <h2>Synonyms</h2>
-padani--footsteps; trini--three; dattani--have been given; bhumeh--of land; mahyam--unto Me; tvaya--by
-you; asura--O King of the demons; dvabhyam--by two steps; kranta--have been occupied; mahi--all the
-land; sarva--completely; trtiyam--for the third step; upakalpaya--now find the means.
-<p></p>
+visnave--unto Lord Visnu (Vamanadeva); ksmam--the land; pradasyantam--who was ready to deliver;
+usanah--Sukracarya; asura-isvaram--unto the King of the demons (Bali Maharaja); janan--knowing well;
+cikirsitam--what was the plan; visnoh--of Lord Visnu; sisyam--unto his disciple; praha--said; vidam
+varah--the best of the knowers of everything.
+<br>
 <h2>Translation</h2>
-O King of the demons, you have promised to give Me three steps of land, but I have occupied the entire
-universe with two steps. Now think about where I should put My third.
+Understanding Lord Visnu's purpose, Sukracarya, the best of the learned, immediately spoke as follows
+to his disciple, who was about to offer everything to Lord Vamanadeva.
 </p>
 
 </div>
@@ -69,7 +109,7 @@ universe with two steps. Now think about where I should put My third.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

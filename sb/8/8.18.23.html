@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.18.23.html">8.18.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rasam acastanghri-tale 'tha padayor
-mahim mahidhran purusasya janghayoh
-patattrino januni visva-murter
-urvor ganam marutam indrasenah
-<p></p>
+ittham sasisyesu bhrgusv anekadha
+vitarkyamano bhagavan sa vamanah
+chatram sadandam sajalam kamandalum
+vivesa bibhrad dhayamedha-vatam
+<br>
 <h2>Synonyms</h2>
-rasam--the lower planetary system; acasta--observed; anghri-tale--beneath the feet, or on the sole; atha--
-thereafter; padayoh--on the feet; mahim--the surface of the land; mahidhran--the mountains; purusasya--
-of the giant Personality of Godhead; janghayoh--on the calves; patattrinah--the flying living entities;
-januni--on the knees; visva-murteh--of the form of the gigantic Lord; urvoh--on the thighs; ganam
-marutam--varieties of air; indra-senah--Bali Maharaja, who had obtained the soldiers of King Indra and
-who was situated in the post of Indra.
-<p></p>
+ittham--in this way; sa-sisyesu--with their disciples; bhrgusu--among the Bhrgus; anekadha--in many
+ways; vitarkyamanah--being talked and argued about; bhagavan--the Supreme Personality of Godhead;
+sah--that; vamanah--Lord Vamana; chatram--umbrella; sadandam--with the rod; sa-jalam--filled with
+water; kamandalum--waterpot; vivesa--entered; bibhrat--taking in hand; hayamedha--of the asvamedha
+sacrifice; vatam--the arena.
+<br>
 <h2>Translation</h2>
-Thereafter, Bali Maharaja, who was occupying the seat of King Indra, could see the lower planetary
-systems, such as Rasatala, on the soles of the feet of the Lord's universal form. He saw on the Lord's feet
-the surface of the globe, on the surface of His calves all the mountains, on His knees the various birds, and
-on His thighs the varieties of air.
-<p></p>
-<h2>Purport</h2>
-The universal situation is described herein in regard to the complete constitution of the Lord's gigantic
-universal form. The study of this universal form begins from the sole. Above the soles are the feet, above
-the feet are the calves, above the calves are the knees, and above the knees are the thighs. Thus the parts
-of the universal body, one after another, are described herein. The knees are the place of birds, and above
-that are varieties of air. The birds can fly over the mountains, and above the birds are varieties of air.
+While the priests of the Bhrgu dynasty and their disciples talked and argued in various ways, the
+Supreme Personality of Godhead, Vamanadeva, holding in His hands the rod, the umbrella and a waterpot
+full of water, entered the arena of the asvamedha sacrifice.
 </p>
 
 </div>
@@ -81,7 +111,7 @@ that are varieties of air. The birds can fly over the mountains, and above the b
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

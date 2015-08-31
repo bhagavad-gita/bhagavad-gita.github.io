@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.22.15.html">8.22.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam atmano 'nugrahartham
-pritya matsya-vapur-dharam
-ajanan raksanarthaya
-sapharyah sa mano dadhe
-<p></p>
+sa tatra hasinam udiksya sat-patim
+harim sunandady-anugair upasitam
+upetya bhumau sirasa maha-mana
+nanama murdhna pulakasru-viklavah
+<br>
 <h2>Synonyms</h2>
-tam--unto the fish; atmanah--personal; anugraha-artham--to show favor; pritya--very much pleased;
-matsya-vapuh-dharam--the Supreme Personality of Godhead, who had assumed the form of a fish;
-ajanan--without knowledge of this; raksana-arthaya--just to give protection; sapharyah--of the fish; sah--
-the King; manah--mind; dadhe--decided.
-<p></p>
+sah--Prahlada Maharaja; tatra--there; ha asinam--seated; udiksya--after seeing; sat-patim--the Supreme
+Personality of Godhead, master of the liberated souls; harim--Lord Hari; sunanda-adi-anugaih--by His
+followers, like Sunanda; upasitam--being worshiped; upetya--reaching nearby; bhumau--on the ground;
+sirasa--with his head (bowed down); maha-manah--the great devotee; nanama--offered obeisances;
+murdhna--with his head; pulaka-asru-viklavah--agitated by tears of jubilation.
+<br>
 <h2>Translation</h2>
-To please himself, King Satyavrata, not knowing that the fish was the Supreme Personality of Godhead,
-decided with great pleasure to give the fish protection.
-<p></p>
-<h2>Purport</h2>
-Here is an example of giving service to the Supreme Personality of Godhead even without knowledge.
-Such service is called ajnata-sukrti. King Satyavrata wanted to show his own mercy, not knowing that the
-fish was Lord Visnu. By such unknowing devotional service, one is favored by the Supreme Personality of
-Godhead. Service rendered to the Supreme Lord, knowingly or unknowingly, never goes in vain.
+When the great personality Prahlada Maharaja saw that the Supreme Lord was sitting there, surrounded
+and worshiped by His intimate associates like Sunanda, he was overwhelmed with tears of jubilation.
+Approaching the Lord and falling to the ground, he offered obeisances to the Lord with his head.
 </p>
 
 </div>
@@ -76,7 +111,7 @@ Godhead. Service rendered to the Supreme Lord, knowingly or unknowingly, never g
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

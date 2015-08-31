@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.8.41-46.html">8.8.41-46</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.41-46</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/41-46"><b>41-46</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 etasminn antare visnuh
 sarvopaya-vid isvarah
@@ -73,7 +112,7 @@ savrida-smita-viksiptabhru-
 vilasavalokanaih
 daitya-yutha-pa-cetahsu
 kamam uddipayan muhuh
-<p></p>
+<br>
 <h2>Synonyms</h2>
 etasmin antare--after this incident; visnuh--Lord Visnu; sarva-upaya-vit--one who knows how to deal
 with different situations; isvarah--the supreme controller; yosit-rupam--the form of a beautiful woman;
@@ -92,7 +131,7 @@ belt on the waist; pravilasat--spreading over; valgu--very beautiful; calat-cara
 bells; sa-vrida-smita--smiling with shyness; viksipta--glancing; bhru-vilasa--activities of the eyebrows;
 avalokanaih--glancing over; daitya-yutha-pa--the leaders of the demons; cetahsu--in the core of the heart;
 kamam--lusty desire; uddipayat--awakening; muhuh--constantly.
-<p></p>
+<br>
 <h2>Translation</h2>
 The Supreme Personality of Godhead, Visnu, who can counteract any unfavorable situation, then
 assumed the form of an extremely beautiful woman. This incarnation as a woman, Mohini-murti, was
@@ -106,7 +145,7 @@ decorated with bangles, Her body was covered with a clean sari, and Her breasts 
 ocean of beauty. Her legs were decorated with ankle bells. Because of the movements of Her eyebrows as
 She smiled with shyness and glanced over the demons, all the demons were saturated with lusty desires,
 and every one of them desired to possess Her.
-<p></p>
+<br>
 <h2>Purport</h2>
 Because of the Supreme Lord's assuming the form of a beautiful woman to arouse the lusty desires of the
 demons, a description of Her complete beauty is given here.
@@ -139,7 +178,7 @@ pastimes and paraphernalia of the Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

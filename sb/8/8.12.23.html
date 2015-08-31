@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.12.23.html">8.12.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-visvakseno visucyam tu
-sambhoh sakhyam karisyati
-jatah svamsena bhagavan
-grhe visvasrjo vibhuh
-<p></p>
+tasyah karagrat sa tu kanduko yada
+gato viduram tam anuvrajat-striyah
+vasah sasutram laghu maruto 'harad
+bhavasya devasya kilanupasyatah
+<br>
 <h2>Synonyms</h2>
-visvaksenah--Visvaksena; visucyam--in the womb of Visuci; tu--then; sambhoh--of Sambhu; sakhyam--
-friendship; karisyati--will create; jatah--being born; sva-amsena--by a plenary portion; bhagavan--the
-Supreme Personality of Godhead; grhe--in the home; visvasrjah--of Visvasrasta; vibhuh--the supremely
-powerful Lord.
-<p></p>
+tasyah--of the beautiful woman; kara-agrat--from the hand; sah--that; tu--but; kandukah--the ball;
+yada--when; gatah--had gone; viduram--far off; tam--that ball; anuvrajat--began to follow; striyah--of that
+woman; vasah--the covering dress; sa-sutram--with the belt; laghu--because of being very fine; marutah--
+the breeze; aharat--blew away; bhavasya--while Lord Siva; devasya--the chief demigod; kila--indeed;
+anupasyatah--was always looking.
+<br>
 <h2>Translation</h2>
-In the home of Visvasrasta, a plenary portion of the Supreme Personality of Godhead will appear from
-the womb of Visuci as the incarnation known as Visvaksena. He will make friends with Sambhu.
+When the ball leaped from Her hand and fell at a distance, the woman began to follow it, but as Lord
+Siva observed these activities, a breeze suddenly blew away the fine dress and belt that covered her.
 </p>
 
 </div>
@@ -70,7 +110,7 @@ the womb of Visuci as the incarnation known as Visvaksena. He will make friends 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

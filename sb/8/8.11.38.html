@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.38.html">8.11.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-bhagavan uvaca
-distya tvam vibudha-srestha
-svam nistham atmana sthitah
-yan me stri-rupaya svairam
-mohito 'py anga mayaya
-<p></p>
+mayasmai yad varo datto
+mrtyur naivardra-suskayoh
+ato 'nyas cintaniyas te
+upayo maghavan ripoh
+<br>
 <h2>Synonyms</h2>
-sri-bhagavan uvaca--the Supreme Personality of Godhead said; distya--all auspiciousness; tvam--unto
-you; vibudha-srestha--O best of all the demigods; svam--in your own; nistham--fixed situation; atmana--of
-your own self; sthitah--you are situated; yat--as; me--Mine; stri-rupaya--appearance like a woman;
-svairam--sufficiently; mohitah--enchanted; api--in spite of; anga--O Lord Siva; mayaya--by My potency.
-<p></p>
+maya--by me; asmai--unto him; yat--because; varah--a benediction; dattah--has been granted; mrtyuh--
+death; na--not; eva--indeed; ardra--by either a moist; suskayoh--or by a dry medium; atah--therefore;
+anyah--something else, another; cintaniyah--has to be thought of; te--by you; upayah--means; maghavan--
+O Indra; ripoh--of your enemy.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead said: O best of the demigods, although you have been amply
-harassed because of My potency in assuming the form of a woman, you are established in your position.
-Therefore, may all good fortune be upon you.
-<p></p>
-<h2>Purport</h2>
-Since Lord Siva is the best of the demigods, he is the best of all devotees (vaisnavanam yatha sambhuh).
-His exemplary character was therefore praised by the Supreme Personality of Godhead, who gave His
-benediction by saying, "May all good fortune be upon you." When a devotee becomes a little proud, the
-Supreme Lord sometimes exhibits His supreme power to dissipate the devotee's misunderstanding. After
-being amply harassed by Lord Visnu's potency, Lord Siva resumed his normal, unagitated condition. This
-is the position of a devotee. A devotee should not be agitated under any circumstances, even in the worst
-reverses. As confirmed in Bhagavad-gita (6.22), yasmin sthito na duhkhena gurunapi vicalyate: because of
-his full faith in the Supreme Personality of Godhead, a devotee is never agitated, even in the greatest trials.
-This pridelessness is possible only for the first-class devotees, of whom Lord Sambhu is one.
+The voice also said, "O Indra, because I have given this demon the benediction that he will never be
+killed by any weapon that is dry or moist, you have to think of another way to kill him."
 </p>
 
 </div>
@@ -83,7 +109,7 @@ This pridelessness is possible only for the first-class devotees, of whom Lord S
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

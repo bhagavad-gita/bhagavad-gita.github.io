@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.2.14-19.html">8.2.14-19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.14-19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14-19"><b>14-19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 bilvaih kapitthair jambirair
 vrto bhallatakadibhih
@@ -73,7 +112,7 @@ mallika-satapatrais ca
 madhavi-jalakadibhih
 sobhitam tira-jais canyair
 nityartubhir alam drumaih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 bilvaih--bilva trees; kapitthaih--kapittha trees; jambiraih--jambira trees; vrtah--surrounded by;
 bhallataka-adibhih--bhallataka and other trees; tasmin--in that garden; sarah--a lake; su-vipulam--which
@@ -91,7 +130,7 @@ kubjakas; svarna-yuthibhih--svarna-yuthis; naga--nagas; punnaga--punnagas; jatib
 mallikas; satapatraih--satapatras; ca--also; madhavi--madhavis; jalakadibhih--jalakas; sobhitam--adorned;
 tirajaih--growing on the banks; ca--and; anyaih--others; nitya-rtubhih--in all seasons; alam--abundantly;
 drumaih--with trees (bearing flowers and fruits).
-<p></p>
+<br>
 <h2>Translation</h2>
 In that garden there was a very large lake filled with shining golden lotus flowers and the flowers known
 as kumuda, kahlara, utpala and satapatra, which added excellent beauty to the mountain. There were also
@@ -104,7 +143,7 @@ vanjulakas, kundas, kurubakas, asokas, sirisas, kutajas, ingudas, kubjakas, svar
 punnagas, jatis, mallikas, satapatras, jalakas and madhavi-latas. The banks were also abundantly adorned
 with varieties of trees that yielded flowers and fruits in all seasons. Thus the entire mountain stood
 gloriously decorated.
-<p></p>
+<br>
 <h2>Purport</h2>
 Judging from the exhaustive description of the lakes and rivers on Trikuta Mountain, on earth there is
 no comparison to their super-excellence. On other planets, however, there are many such wonders. For
@@ -122,7 +161,7 @@ satisfied.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

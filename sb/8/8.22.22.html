@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.22.22.html">8.22.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-naitan me svastaye rajann
-udakam salilaukasah
-nidhehi raksa-yogena
-hrade mam avidasini
-<p></p>
+krtsna te 'nena datta bhur
+lokah karmarjitas ca ye
+niveditam ca sarvasvam
+atmaviklavaya dhiya
+<br>
 <h2>Synonyms</h2>
-na--not; etat--this; me--unto Me; svastaye--comfortable; rajan--O King; udakam--water; salila-okasah--
-because I am a big aquatic; nidhehi--put; raksa-yogena--by some means; hrade--in a lake; mam--Me;
-avidasini--perpetual.
-<p></p>
+krtsnah--all; te--unto You; anena--by Bali Maharaja; dattah--have been given or returned; bhuh lokah--
+all land and all planets; karma-arjitah ca--whatever he achieved by his pious activities; ye--all of which;
+niveditam ca--have been offered to You; sarvasvam--everything he possessed; atma--even his body;
+aviklavaya--without hesitation; dhiya--by such intelligence.
+<br>
 <h2>Translation</h2>
-The fish then said: O King, I am a large aquatic, and this water is not at all suitable for Me. Now kindly
-find some way to save Me. It would be better to put Me in the water of a lake that will never reduce.
+Bali Maharaja had already offered everything to Your Lordship. Without hesitation, he has offered his
+land, the planets and whatever else he earned by his pious activities, including even his own body.
 </p>
 
 </div>
@@ -69,7 +109,7 @@ find some way to save Me. It would be better to put Me in the water of a lake th
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

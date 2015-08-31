@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.9.29.html">8.9.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yad yujyate 'su-vasu-karma-mano-vacobhir
 dehatmajadisu nrbhis tad asat prthaktvat
 tair eva sad bhavati yat kriyate 'prthaktvat
 sarvasya tad bhavati mula-nisecanam yat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yat--whatever; yujyate--is performed; asu--for the protection of one's life; vasu--protection of wealth;
 karma--activities; manah--by the acts of the mind; vacobhih--by the acts of words; deha-atma-ja-adisu--for
@@ -62,7 +101,7 @@ tat--that; asat--impermanent, transient; prthaktvat--because of separation from 
 Godhead; taih--by the same activities; eva--indeed; sat bhavati--becomes factual and permanent; yat--
 which; kriyate--is performed; aprthaktvat--because of nonseparation; sarvasya--for everyone; tat bhavati--
 becomes beneficial; mula-nisecanam--exactly like pouring water on the root of a tree; yat--which.
-<p></p>
+<br>
 <h2>Translation</h2>
 In human society there are various activities performed for the protection of one's wealth and life by
 one's words, one's mind and one's actions, but they are all performed for one's personal or extended sense
@@ -70,7 +109,7 @@ gratification with reference to the body. All these activities are baffled becau
 devotional service. But when the same activities are performed for the satisfaction of the Lord, the
 beneficial results are distributed to everyone, just as water poured on the root of a tree is distributed
 throughout the entire tree.
-<p></p>
+<br>
 <h2>Purport</h2>
 This is the distinction between materialistic activities and activities performed in Krsna consciousness.
 The entire world is active, and this includes the karmis, the jnanis, the yogis and the bhaktas. However,
@@ -121,7 +160,7 @@ demigods were thus freed from all dangers.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.7.html">8.16.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sankha-dundubhayo nedur
-mrdanga-panavanakah
-citra-vaditra-turyanam
-nirghosas tumulo 'bhavat
-<p></p>
+grhesu yesv atithayo
+narcitah salilair api
+yadi niryanti te nunam
+pheruraja-grhopamah
+<br>
 <h2>Synonyms</h2>
-sankha--conchshells; dundubhayah--kettledrums; neduh--vibrated; mrdanga--drums; panava-anakah--
-drums named panavas and anakas; citra--various; vaditra--of these vibrations of musical sound;
-turyanam--and of other instruments; nirghosah--the loud sound; tumulah--tumultuous; abhavat--became.
-<p></p>
+grhesu--at home; yesu--which; atithayah--uninvited guests; na--not; arcitah--welcomed; salilaih api--
+even by offering a glass of water; yadi--if; niryanti--they go away; te--such household life; nunam--indeed;
+pheru-raja--of jackals; grha--the homes; upamah--like.
+<br>
 <h2>Translation</h2>
-Conchshells, kettledrums, drums, panavas and anakas vibrated in concert. The sound of these and
-various other instruments was tumultuous.
+Homes from which guests go away without having been received even with an offering of a little water
+are like those holes in the field which are the homes of jackals.
+<br>
+<h2>Purport</h2>
+In a field there may be holes made by snakes and mice, but when there are very big holes, it may be
+supposed that jackals live there. Certainly no one goes to take shelter in such homes. Thus the homes of
+human beings where atithis, uninvited guests, are not properly received are like the homes of jackals.
 </p>
 
 </div>
@@ -69,7 +113,7 @@ various other instruments was tumultuous.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

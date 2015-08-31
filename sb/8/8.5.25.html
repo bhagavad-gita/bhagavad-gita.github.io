@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.5.25.html">8.5.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tatradrsta-svarupaya
 sruta-purvaya vai prabhuh
 stutim abruta daivibhir
 girbhis tv avahitendriyah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tatra--there (at the Lord's abode known as Svetadvipa); adrsta-svarupaya--unto the Supreme Personality
 of Godhead, who was not seen even by Lord Brahma; sruta-purvaya--but who was heard about from the
@@ -61,13 +100,13 @@ Vedas; vai--indeed; prabhuh--Lord Brahma; stutim--prayers derived from Vedic lit
 performed; daivibhih--by prayers mentioned in the Vedic literature or offered by persons strictly following
 Vedic principles; girbhih--by such sound vibrations or songs; tu--then; avahita-indriyah--fixed in mind,
 without deviation.
-<p></p>
+<br>
 <h2>Translation</h2>
 There [at Svetadvipa], Lord Brahma offered prayers to the Supreme Personality of Godhead, even
 though he had never seen the Supreme Lord. Simply because Lord Brahma had heard about the Supreme
 Personality of Godhead from Vedic literature, with a fixed mind he offered the Lord prayers as written or
 approved by Vedic literature.
-<p></p>
+<br>
 <h2>Purport</h2>
 It is said that when Brahma and the other demigods go to see the Supreme Personality of Godhead in
 Svetadvipa, they cannot directly see Him, but their prayers are heard by the Lord, and the needful action
@@ -101,7 +140,7 @@ Him from the authentic literature or the authentic statements of authorized pers
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

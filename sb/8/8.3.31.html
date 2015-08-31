@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.3.31.html">8.3.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tam tadvad artam upalabhya jagan-nivasah
 stotram nisamya divijaih saha samstuvadbhih
 chandomayena garudena samuhyamanas
 cakrayudho 'bhyagamad asu yato gajendrah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tam--unto him (Gajendra); tadvat--in that way; artam--who was very depressed (because of being
 attacked by the crocodile); upalabhya--understanding; jagat-nivasah--the Lord, who exists everywhere;
@@ -62,13 +101,13 @@ samstuvadbhih--who were offering their prayers also; chandomayena--with the spee
 garudena--by Garuda; samuhyamanah--being carried; cakra--carrying His disc; ayudhah--and other
 weapons, like the club; abhyagamat--arrived; asu--immediately; yatah--where; gajendrah--the King of the
 elephants, Gajendra, was situated.
-<p></p>
+<br>
 <h2>Translation</h2>
 After understanding the awkward condition of Gajendra, who had offered his prayers, the Supreme
 Personality of Godhead, Hari, who lives everywhere, appeared with the demigods, who were offering
 prayers to Him. Carrying His disc and other weapons, He appeared there on the back of His carrier,
 Garuda, with great speed, according to His desire. Thus He appeared before Gajendra.
-<p></p>
+<br>
 <h2>Purport</h2>
 Srila Visvanatha Cakravarti Thakura specifically hints that since Gajendra was in such a difficult
 position and was praying for the mercy of the Supreme Personality of Godhead, the demigods, who could
@@ -82,7 +121,7 @@ went there, they also went and offered prayers to the Lord so that their offense
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

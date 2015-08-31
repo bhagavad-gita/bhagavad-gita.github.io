@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.12.4.html">8.12.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aditya vasavo rudra
-visvedeva marud-ganah
-asvinav rbhavo rajann
-indras tesam purandarah
-<p></p>
+sri-mahadeva uvaca
+deva-deva jagad-vyapin
+jagad-isa jagan-maya
+sarvesam api bhavanam
+tvam atma hetur isvarah
+<br>
 <h2>Synonyms</h2>
-adityah--the Adityas; vasavah--the Vasus; rudrah--the Rudras; visvedevah--the Visvedevas; marutganah--
-and the Maruts; asvinau--the two Asvini brothers; rbhavah--the Rbhus; rajan--O King; indrah--the
-king of heaven; tesam--of them; purandarah--Purandara.
-<p></p>
+sri-mahadevah uvaca--Lord Siva (Mahadeva) said; deva-deva--O best demigod among the demigods;
+jagat-vyapin--O all-pervading Lord; jagat-isa--O master of the universe; jagat-maya--O my Lord, who are
+transformed by Your energy into this creation; sarvesam api--all kinds of; bhavanam--situations; tvam--
+You; atma--the moving force; hetuh--because of this; isvarah--the Supreme Lord, Paramesvara.
+<br>
 <h2>Translation</h2>
-In this manvantara, O King, the Adityas, the Vasus, the Rudras, the Visvedevas, the Maruts, the two
-Asvini-kumara brothers and the Rbhus are the demigods. Their head king [Indra] is Purandara.
+Lord Mahadeva said: O chief demigod among the demigods, O all-pervading Lord, master of the
+universe, by Your energy You are transformed into the creation. You are the root and efficient cause of
+everything. You are not material. Indeed, You are the Supersoul or supreme living force of everything.
+Therefore, You are Paramesvara, the supreme controller of all controllers.
+<br>
+<h2>Purport</h2>
+The Supreme Personality of Godhead, Visnu, resides within the material world as the sattva-gunaavatara.
+Lord Siva is the tamo-guna-avatara, and Lord Brahma is the rajo-guna-avatara, but although Lord
+Visnu is among them, He is not in the same category. Lord Visnu is deva-deva, the chief of all the
+demigods. Since Lord Siva is in this material world, the energy of the Supreme Lord, Visnu, includes Lord
+Siva. Lord Visnu is therefore called jagad-vyapi, "the all-pervading Lord." Lord Siva is sometimes called
+Mahesvara, and so people think that Lord Siva is everything. But here Lord Siva addresses Lord Visnu as
+Jagad-isa, "the master of the universe." Lord Siva is sometimes called Visvesvara, but here he addresses
+Lord Visnu as Jagan-maya, indicating that even Visvesvara is under Lord Visnu's control. Lord Visnu is
+the master of the spiritual world, yet He controls the material world also, as stated in Bhagavad-gita
+(mayadhyaksena prakrtih suyate sacaracaram). Lord Brahma and Lord Siva are also sometimes called
+isvara, but the supreme isvara is Lord Visnu, Lord Krsna. As stated in Brahma-samhita, isvarah paramah
+krsnah: the Supreme Lord is Krsna, Lord Visnu. Everything in existence works in proper order because of
+Lord Visnu. Andantara-stha-paramanu-cayantara-stham. Even paramanu, the small atoms, work because
+of Lord Visnu's presence within them.
 </p>
 
 </div>
@@ -69,7 +128,7 @@ Asvini-kumara brothers and the Rbhus are the demigods. Their head king [Indra] i
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

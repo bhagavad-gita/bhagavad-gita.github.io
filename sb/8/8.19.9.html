@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.19.9.html">8.19.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-mahim sarvam hrtam drstva
-tripada-vyaja-yacnaya
-ucuh sva-bhartur asura
-diksitasyatyamarsitah
-<p></p>
+yato yato 'ham tatrasau
+mrtyuh prana-bhrtam iva
+ato 'ham asya hrdayam
+praveksyami parag-drsah
+<br>
 <h2>Synonyms</h2>
-mahim--land; sarvam--all; hrtam--lost; drstva--after seeing; tri-pada-vyaja-yacnaya--by simply asking
-three steps of land; ucuh--said; sva-bhartuh--of their master; asurah--the demons; diksitasya--of Bali
-Maharaja, who was so determined in the sacrifice; ati--very much; amarsitah--for whom the function was
-unbearable.
-<p></p>
+yatah yatah--wheresoever; aham--I; tatra--there indeed; asau--this Hiranyakasipu; mrtyuh--death; pranabhrtam--
+of all living entities; iva--just like; atah--therefore; aham--I; asya--of him; hrdayam--within the
+core of the heart; praveksyami--shall enter; parak-drsah--of a person who has only external vision.
+<br>
 <h2>Translation</h2>
-When the demoniac followers of Maharaja Bali saw that their master, who had been determined in
-performing sacrifice, had lost all his possessions to Vamanadeva, who had taken them away on the plea of
-begging three paces of land, they were very angry and spoke as follows.
+Wheresoever I go, Hiranyakasipu will follow Me, as death follows all living entities. Therefore it is better
+for Me to enter the core of his heart, for then, because of his power to see only externally, he will not see
+Me.
 </p>
 
 </div>
@@ -71,7 +109,7 @@ begging three paces of land, they were very angry and spoke as follows.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

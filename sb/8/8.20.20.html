@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,74 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.20.html">8.20.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-vindhyavalir uvaca
-kridartham atmana idam tri-jagat krtam te
-svamyam tu tatra kudhiyo 'para isa kuryuh
-kartuh prabhos tava kim asyata avahanti
-tyakta-hriyas tvad-avaropita-kartr-vadah
-<p></p>
+nedur muhur dundubhayah sahasraso
+gandharva-kimpurusa-kinnara jaguh
+manasvinanena krtam suduskaram
+vidvan adad yad ripave jagat-trayam
+<br>
 <h2>Synonyms</h2>
-sri-vindhyavalih uvaca--Vindhyavali, the wife of Bali Maharaja, said; krida-artham--for the sake of
-pastimes; atmanah--of Yourself; idam--this; tri-jagat--the three worlds (this universe); krtam--was created;
-te--by You; svamyam--proprietorship; tu--but; tatra--thereon; kudhiyah--foolish rascals; apare--others;
-isa--O my Lord; kuryuh--have established; kartuh--for the supreme creator; prabhoh--for the supreme
-maintainer; tava--for Your good self; kim--what; asyatah--for the supreme annihilator; avahanti--they can
-offer; tyakta-hriyah--shameless, without intelligence; tvat--by You; avaropita--falsely imposed because of a
-poor fund of knowledge; kartr-vadah--the proprietorship of such foolish agnostics.
-<p></p>
+neduh--began to beat; muhuh--again and again; dundubhayah--trumpets and kettledrums; sahasrasah--
+by thousands and thousands; gandharva--the residents of Gandharvaloka; kimpurusa--the residents of
+Kimpurusaloka; kinnarah--and the residents of Kinnaraloka; jaguh--began to sing and declare;
+manasvina--by the most exalted personality; anena--by Bali Maharaja; krtam--was done; su-duskaram--an
+extremely difficult task; vidvan--because of his being the most learned person; adat--gave Him a gift; yat--
+that; ripave--unto the enemy, Lord Visnu, who was siding with Bali Maharaja's enemies, the demigods;
+jagat-trayam--the three worlds.
+<br>
 <h2>Translation</h2>
-Srimati Vindhyavali said: O my Lord, You have created the entire universe for the enjoyment of Your
-personal pastimes, but foolish, unintelligent men have claimed proprietorship for material enjoyment.
-Certainly they are shameless agnostics. Falsely claiming proprietorship, they think they can give charity
-and enjoy. In such a condition, what good can they do for You, who are the independent creator,
-maintainer and annihilator of this universe?
-<p></p>
-<h2>Purport</h2>
-Bali Maharaja's wife, who was most intelligent, supported the arrest of her husband and accused him of
-having no intelligence because he had claimed proprietorship of the property of the Lord. Such a claim is
-a sign of demoniac life. Although the demigods, who are officials appointed by the Lord for management,
-are attached to materialistic enjoyment, they never claim to be proprietors of the universe, for they know
-that the actual proprietor of everything is the Supreme Personality of Godhead. This is the qualification of
-the demigods. But the demons, instead of accepting the exclusive proprietorship of the Supreme
-Personality of Godhead, claim the property of the universe for themselves through demarcations of
-nationalism. "This part is mine, and that part is yours," they say. "This part I can give in charity, and this
-part I can keep for my enjoyment." These are all demoniac conceptions. This is described in Bhagavadgita
-(16.13): idam adya maya labdham imam prapsye manoratham. "Thus far I have acquired so much
-money and land. Now I have to add more and more. In this way I shall be the greatest proprietor of
-everything. Who can compete with me?" These are all demoniac conceptions.
-Bali Maharaja's wife accused Bali Maharaja by saying that although the Supreme Personality of Godhead
-had arrested him, showing him extraordinary mercy, and although Bali Maharaja was offering his body to
-the Supreme Lord for the Lord's third step, he was still in the darkness of ignorance. Actually the body did
-not belong to him, but because of his long-standing demoniac mentality he could not understand this. He
-thought that since he had been defamed for his inability to fulfill his promise of charity, and since the
-body belonged to him, he would free himself from defamation by offering his body. Actually, however, the
-body does not belong to anyone but the Supreme Personality of Godhead, by whom the body is given. As
-stated in Bhagavad-gita (18.61):
-isvarah sarva-bhutanam
-hrd-dese 'rjuna tisthati
-bhramayan sarva-bhutani
-yantrarudhani mayaya
-The Lord is situated in the core of everyone's heart, and, according to the material desires of the living
-entity, the Lord offers a particular type of machine--the body--through the agency of the material energy.
-The body actually does not belong to the living entity; it belongs to the Supreme Personality of Godhead.
-Under the circumstances, how could Bali Maharaja claim that the body belonged to him?
-Thus Vindhyavali, Bali Maharaja's intelligent wife, prayed that her husband be released, by the Lord's
-causeless mercy. Otherwise, Bali Maharaja was nothing but a shameless demon, specifically described as
-tyakta-hriyas tvad-avaropita-kartr-vadah, a foolish person claiming proprietorship over the property of the
-Supreme Person. In the present age, Kali-yuga, the number of such shameless men, who are agnostics
-disbelieving in the existence of God, has increased. Trying to defy the authority of the Supreme
-Personality of Godhead, so-called scientists, philosophers and politicians manufacture plans and schemes
-for the destruction of the world. They cannot do anything good for the world, and unfortunately, because
-of Kali-yuga, they have plunged the affairs of the world into mismanagement. Thus there is a great need
-for the Krsna consciousness movement for the benefit of innocent people who are being carried away by
-propaganda of such demons. If the present status quo is allowed to continue, people will certainly suffer
-more and more under the leadership of these demoniac agnostics.
+The Gandharvas, the Kimpurusas and the Kinnaras sounded thousands and thousands of kettledrums
+and trumpets again and again, and they sang in great jubilation, declaring, "How exalted a person is Bali
+Maharaja, and what a difficult task he has performed! Even though he knew that Lord Visnu was on the
+side of his enemies, he nonetheless gave the Lord the entire three worlds in charity."
 </p>
 
 </div>
@@ -118,7 +114,7 @@ more and more under the leadership of these demoniac agnostics.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

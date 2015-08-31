@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.12.33.html">8.12.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-manur va indra-savarnis
-caturdasama esyati
-uru-gambhira-budhadya
-indra-savarni-viryajah
-<p></p>
+yatra yatrapatan mahyam
+retas tasya mahatmanah
+tani rupyasya hemnas ca
+ksetrany asan mahi-pate
+<br>
 <h2>Synonyms</h2>
-manuh--the Manu; va--either; indra-savarnih--Indra-savarni; caturdasamah--fourteenth; esyati--will
-become; uru--Uru; gambhira--Gambhira; budha-adyah--and others, such as Budha; indra-savarni--of
-Indra-savarni; virya-jah--born of the semen.
-<p></p>
+yatra--wherever; yatra--and wherever; apatat--fell; mahyam--on the surface of the world; retah--the
+semen; tasya--of him; maha-atmanah--of the great personality (Lord Siva); tani--all those places;
+rupyasya--of silver; hemnah--of gold; ca--and; ksetrani--mines; asan--became; mahi-pate--O King.
+<br>
 <h2>Translation</h2>
-The name of the fourteenth Manu will be Indra-savarni. He will have sons like Uru, Gambhira and
-Budha.
+O King, wheresoever on the surface of the globe fell the semen of the great personality of Lord Siva,
+mines of gold and silver later appeared.
+<br>
+<h2>Purport</h2>
+Srila Visvanatha Cakravarti Thakura comments that those who seek gold and silver can worship Lord
+Siva for material opulences. Lord Siva lives under a bael tree and does not even construct a house in
+which to dwell, but although he is apparently poverty-stricken, his devotees are sometimes opulently
+endowed with large quantities of silver and gold. Pariksit Maharaja later asks about this, and Sukadeva
+Gosvami replies.
 </p>
 
 </div>
@@ -69,7 +115,7 @@ Budha.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

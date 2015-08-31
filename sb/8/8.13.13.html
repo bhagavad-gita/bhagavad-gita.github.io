@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.13.13.html">8.13.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-hamsa-sarasa-cakrahvakarandava-
-kulakulah
-nalinyo yatra kridanti
-pramadah sura-sevitah
-<p></p>
+dattvemam yacamanaya
+visnave yah pada-trayam
+raddham indra-padam hitva
+tatah siddhim avapsyati
+<br>
 <h2>Synonyms</h2>
-hamsa--of swans; sarasa--cranes; cakrahva--birds known as cakravakas; karandava--and water fowl;
-kula--by groups; akulah--congested; nalinyah--lotus flowers; yatra--where; kridanti--enjoyed sporting;
-pramadah--beautiful women; sura-sevitah--protected by the demigods.
-<p></p>
+dattva--giving in charity; imam--this entire universe; yacamanaya--who was begging from him; visnave--
+unto Lord Visnu; yah--Bali Maharaja; pada-trayam--three paces of land; raddham--achieved; indrapadam--
+the post of Indra; hitva--giving up; tatah--thereafter; siddhim--perfection; avapsyati--will achieve.
+<br>
 <h2>Translation</h2>
-Beautiful women protected by the demigods sported in the gardens, which had lotus ponds full of
-swans, cranes, cakravakas and ducks.
+Bali Maharaja gave a gift of three paces of land to Lord Visnu, and because of this charity he lost all the
+three worlds. Later, however, when Lord Visnu is pleased because of Bali's giving everything to Him, Bali
+Maharaja will achieve the perfection of life.
+<br>
+<h2>Purport</h2>
+In Bhagavad-gita (7.3) it is stated, manusyanam sahasresu kascid yatati siddhaye: out of many millions
+of people, one may attempt to achieve success in life. This success is explained here. Raddham indrapadam
+hitva tatah siddhim avapsyati. Siddhi consists of achieving the favor of Lord Visnu, not the yogasiddhis.
+The yoga-siddhis--anima, laghima, mahima, prapti, prakamya, isitva, vasitva and kamavasayita--
+are temporary. The ultimate siddhi is to achieve the favor of Lord Visnu.
 </p>
 
 </div>
@@ -69,7 +116,7 @@ swans, cranes, cakravakas and ducks.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

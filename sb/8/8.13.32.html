@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.13.32.html">8.13.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam sumantritarthas te
-gurunarthanudarsina
-hitva tri-vistapam jagmur
-girvanah kama-rupinah
-<p></p>
+devahotrasya tanaya
+upaharta divaspateh
+yogesvaro harer amso
+brhatyam sambhavisyati
+<br>
 <h2>Synonyms</h2>
-evam--thus; su-mantrita--being well advised; arthah--about duties; te--they (the demigods); guruna--by
-their spiritual master; artha-anudarsina--whose instructions were quite befitting; hitva--giving up; trivistapam--
-the heavenly kingdom; jagmuh--went; girvanah--the demigods; kama-rupinah--who could
-assume any form they liked.
-<p></p>
+devahotrasya--of Devahotra; tanayah--the son; upaharta--the benefactor; divaspateh--of Divaspati, the
+Indra at that time; yoga-isvarah--Yogesvara, the master of mystic powers; hareh amsah--a partial
+representation of the Supreme Personality of Godhead; brhatyam--in the womb of his mother, Brhati;
+sambhavisyati--will appear.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami continued: The demigods, being thus advised by Brhaspati for their benefit,
-immediately accepted his words. Assuming forms according to their desire, they left the heavenly
-kingdom and scattered, without being observed by the demons.
-<p></p>
-<h2>Purport</h2>
-The word kama-rupinah indicates that the demigods, the inhabitants of the heavenly planets, can
-assume any form they desire. Thus it was not at all difficult for them to remain incognito before the eyes
-of the demons.
+The son of Devahotra known as Yogesvara will appear as a partial incarnation of the Supreme
+Personality of Godhead. His mother's name will be Brhati. He will perform activities for the welfare of
+Divaspati.
 </p>
 
 </div>
@@ -76,7 +110,7 @@ of the demons.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

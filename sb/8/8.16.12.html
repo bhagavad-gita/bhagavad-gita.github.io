@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.12.html">8.16.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yat tad vapur bhati vibhusanayudhair
-avyakta-cid-vyaktam adharayad dharih
-babhuva tenaiva sa vamano vatuh
-sampasyator divya-gatir yatha natah
-<p></p>
+agnayo 'tithayo bhrtya
+bhiksavo ye ca lipsavah
+sarvam bhagavato brahmann
+anudhyanan na risyati
+<br>
 <h2>Synonyms</h2>
-yat--which; tat--that; vapuh--transcendental body; bhati--manifests; vibhusana--with regular ornaments;
-ayudhaih--and with weapons; avyakta--unmanifested; cit-vyaktam--spiritually manifested; adharayat--
-assumed; harih--the Lord; babhuva--immediately became; tena--with that; eva--certainly; sah--He (the
-Lord); vamanah--dwarf; vatuh--a brahmana brahmacari; sampasyatoh--while both His father and mother
-were seeing; divya-gatih--whose movements are wonderful; yatha--as; natah--a theatrical actor.
-<p></p>
+agnayah--worshiping the fires; atithayah--receiving the guests; bhrtyah--satisfying the servants;
+bhiksavah--pleasing the beggars; ye--all of them who; ca--and; lipsavah--as they desire (are taken care of);
+sarvam--all of them; bhagavatah--of you, my lord; brahman--O brahmana; anudhyanat--from always
+thinking; na risyati--nothing is missed (everything is properly done).
+<br>
 <h2>Translation</h2>
-The Lord appeared in His original form, with ornaments and weapons in His hands. Although this everexisting
-form is not visible in the material world, He nonetheless appeared in this form. Then, in the
-presence of His father and mother, He assumed the form of Vamana, a brahmana-dwarf, a brahmacari, just
-like a theatrical actor.
-<p></p>
-<h2>Purport</h2>
-The word natah is significant. An actor changes dress to play different parts, but is always the same
-man. Similarly, as described in the Brahma-samhita (5.33, 39), the Lord assumes many thousands and
-millions of forms (advaitam acyutam anadim ananta-rupam adyam purana-purusam). He is always present
-with innumerable incarnations (ramadi-murtisu kala-niyamena tisthan nanavataram akarod bhuvanesu
-kintu). Nonetheless, although He appears in various incarnations, they are not different from one another.
-He is the same person, with the same potency, the same eternity and the same spiritual existence, but He
-can simultaneously assume various forms. When Vamanadeva appeared from the womb of His mother, He
-appeared in the form of Narayana, with four hands equipped with the necessary symbolic weapons, and
-then immediately transformed Himself into a brahmacari (vatu). This means that His body is not material.
-One who thinks that the Supreme Lord assumes a material body is not intelligent. He has to learn more
-about the Lord's position. As confirmed in Bhagavad-gita (4.9), janma karma ca me divyam evam yo vetti
-tattvatah. One has to understand the transcendental appearance of the Lord in His original transcendental
-body (sac-cid-ananda-vigraha).
+O beloved husband, the fires, guests, servants and beggars are all being properly cared for by me.
+Because I always think of you, there is no possibility that any of the religious principles will be neglected.
 </p>
 
 </div>
@@ -88,7 +109,7 @@ body (sac-cid-ananda-vigraha).
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

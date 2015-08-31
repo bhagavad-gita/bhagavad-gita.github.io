@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.23.html">8.20.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yat-padayor asatha-dhih salilam pradaya
-durvankurair api vidhaya satim saparyam
-apy uttamam gatim asau bhajate tri-lokim
-dasvan aviklava-manah katham artim rcchet
-<p></p>
+rasam acastanghri-tale 'tha padayor
+mahim mahidhran purusasya janghayoh
+patattrino januni visva-murter
+urvor ganam marutam indrasenah
+<br>
 <h2>Synonyms</h2>
-yat-padayoh--at the lotus feet of Your Lordship; asatha-dhih--a great-minded person who is without
-duplicity; salilam--water; pradaya--offering; durva--with fully grown grass; ankuraih--and with buds of
-flowers; api--although; vidhaya--offering; satim--most exalted; saparyam--with worship; api--although;
-uttamam--the most highly elevated; gatim--destination; asau--such a worshiper; bhajate--deserves; trilokim--
-the three worlds; dasvan--giving to You; aviklava-manah--without mental duplicity; katham--how;
-artim--the distressed condition of being arrested; rcchet--he deserves.
-<p></p>
+rasam--the lower planetary system; acasta--observed; anghri-tale--beneath the feet, or on the sole; atha--
+thereafter; padayoh--on the feet; mahim--the surface of the land; mahidhran--the mountains; purusasya--
+of the giant Personality of Godhead; janghayoh--on the calves; patattrinah--the flying living entities;
+januni--on the knees; visva-murteh--of the form of the gigantic Lord; urvoh--on the thighs; ganam
+marutam--varieties of air; indra-senah--Bali Maharaja, who had obtained the soldiers of King Indra and
+who was situated in the post of Indra.
+<br>
 <h2>Translation</h2>
-By offering even water, newly grown grass, or flower buds at Your lotus feet, those who maintain no
-mental duplicity can achieve the most exalted position within the spiritual world. This Bali Maharaja,
-without duplicity, has now offered everything in the three worlds. How then can he deserve to suffer from
-arrest?
-<p></p>
+Thereafter, Bali Maharaja, who was occupying the seat of King Indra, could see the lower planetary
+systems, such as Rasatala, on the soles of the feet of the Lord's universal form. He saw on the Lord's feet
+the surface of the globe, on the surface of His calves all the mountains, on His knees the various birds, and
+on His thighs the varieties of air.
+<br>
 <h2>Purport</h2>
-In Bhagavad-gita (9.26) it is stated:
-patram puspam phalam toyam
-yo me bhaktya prayacchati
-tad aham bhakty-upahrtam
-asnami prayatatmanah
-The Supreme Personality of Godhead is so kind that if an unsophisticated person, with devotion and
-without duplicity, offers at the lotus feet of the Lord a little water, a flower, a fruit or a leaf, the Lord
-accepts it. Then the devotee is promoted to Vaikuntha, the spiritual world. Brahma drew the Lord's
-attention to this subject and requested that He release Bali Maharaja, who was suffering, being bound by
-the ropes of Varuna, and who had already given everything, including the three worlds and whatever he
-possessed.
+The universal situation is described herein in regard to the complete constitution of the Lord's gigantic
+universal form. The study of this universal form begins from the sole. Above the soles are the feet, above
+the feet are the calves, above the calves are the knees, and above the knees are the thighs. Thus the parts
+of the universal body, one after another, are described herein. The knees are the place of birds, and above
+that are varieties of air. The birds can fly over the mountains, and above the birds are varieties of air.
 </p>
 
 </div>
@@ -87,7 +120,7 @@ possessed.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

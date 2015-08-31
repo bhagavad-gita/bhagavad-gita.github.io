@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.22.24.html">8.22.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ksipyamanas tam ahedam
-iha mam makaradayah
-adanty atibala vira
-mam nehotsrastum arhasi
-<p></p>
+sri-bhagavan uvaca
+brahman yam anugrhnami
+tad-viso vidhunomy aham
+yan-madah purusah stabdho
+lokam mam cavamanyate
+<br>
 <h2>Synonyms</h2>
-ksipyamanah--being thrown in the ocean; tam--unto the King; aha--the fish said; idam--this; iha--in this
-place; mam--Me; makara-adayah--dangerous aquatics like sharks; adanti--will eat; ati-balah--because of
-being too powerful; vira--O heroic King; mam--Me; na--not; iha--in this water; utsrastum--to throw;
-arhasi--you deserve.
-<p></p>
+sri-bhagavan uvaca--the Supreme Personality of Godhead said; brahman--O Lord Brahma; yam--unto
+anyone to whom; anugrhnami--I show My mercy; tat--his; visah--material opulence or riches;
+vidhunomi--take away; aham--I; yat-madah--having false prestige due to this money; purusah--such a
+person; stabdhah--being dull-minded; lokam--the three worlds; mam ca--unto Me also; avamanyate--
+derides.
+<br>
 <h2>Translation</h2>
-While being thrown in the ocean, the fish said to King Satyavrata: O hero, in this water there are very
-powerful and dangerous sharks that will eat Me. Therefore you should not throw Me in this place.
+The Supreme Personality of Godhead said: My dear Lord Brahma, because of material opulence a foolish
+person becomes dull-witted and mad. Thus he has no respect for anyone within the three worlds and
+defies even My authority. To such a person I show special favor by first taking away all his possessions.
+<br>
+<h2>Purport</h2>
+A civilization that has become godless because of material advancement in opulence is extremely
+dangerous. Because of great opulence, a materialist becomes so proud that he has no regard for anyone
+and even refuses to accept the authority of the Supreme Personality of Godhead. The result of such a
+mentality is certainly very dangerous. To show special favor, the Lord sometimes makes an example of
+someone like Bali Maharaja, who was now bereft of all his possessions.
 </p>
 
 </div>
@@ -70,7 +119,7 @@ powerful and dangerous sharks that will eat Me. Therefore you should not throw M
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

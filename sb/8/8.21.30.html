@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.21.30.html">8.21.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ya idam deva-devasya
-harer adbhuta-karmanah
-avataranucaritam
-srnvan yati param gatim
-<p></p>
+yavat tapaty asau gobhir
+yavad induh sahodubhih
+yavad varsati parjanyas
+tavati bhur iyam tava
+<br>
 <h2>Synonyms</h2>
-yah--anyone who; idam--this; deva-devasya--of the Supreme Personality of Godhead, who is worshiped
-by the demigods; hareh--of Lord Krsna, Hari; adbhuta-karmanah--whose activities are all wonderful;
-avatara-anucaritam--activities performed in His different incarnations; srnvan--if one continues to hear;
-yati--he goes; param gatim--to the supreme perfection, back home, back to Godhead.
-<p></p>
+yavat--as far as; tapati--is shining; asau--the sun; gobhih--by the sunshine; yavat--as long or as far as;
+induh--the moon; saha-udubhih--with the luminaries or stars; yavat--as far as; varsati--are pouring rain;
+parjanyah--the clouds; tavati--to that much distance; bhuh--land; iyam--this; tava--in your possession.
+<br>
 <h2>Translation</h2>
-If one hears about the uncommon activities of the Supreme Personality of Godhead in His various
-incarnations, he is certainly elevated to the higher planetary system or even brought back home, back to
-Godhead.
+As far as the sun and moon shine with the stars and as far as the clouds pour rain, all the land
+throughout the universe is in your possession.
 </p>
 
 </div>
@@ -71,7 +108,7 @@ Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.19.20.html">8.19.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yah prabhuh sarva-bhutanam
-sukha-duhkhopapattaye
-tam nativartitum daityah
-paurusair isvarah puman
-<p></p>
+na puman mam upavrajya
+bhuyo yacitum arhati
+tasmad vrttikarim bhumim
+vato kamam praticcha me
+<br>
 <h2>Synonyms</h2>
-yah prabhuh--that Supreme Person, the master; sarva-bhutanam--of all living entities; sukha-duhkhaupapattaye--
-for administering happiness and distress; tam--Him; na--not; ativartitum--to overcome;
-daityah--O demons; paurusaih--by human endeavors; isvarah--the supreme controller; puman--a person.
-<p></p>
+na--not; puman--any person; mam--unto me; upavrajya--after approaching; bhuyah--again; yacitum--to
+beg; arhati--deserves; tasmat--therefore; vrtti-karim--suitable to maintain Yourself; bhumim--such land;
+vato--O small brahmacari; kamam--according to the necessities of life; praticcha--take; me--from me.
+<br>
 <h2>Translation</h2>
-O Daityas, by human efforts no one can supersede the Supreme Personality of Godhead, who can bring
-happiness and distress to all living entities.
+O small boy, one who approaches me to beg something should not have to ask anything more,
+anywhere. Therefore, if You wish, You may ask from me as much land as will suffice to maintain You
+according to Your needs.
 </p>
 
 </div>
@@ -69,7 +109,7 @@ happiness and distress to all living entities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

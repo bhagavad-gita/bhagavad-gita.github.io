@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.2.9-13.html">8.2.9-13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.9-13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9-13"><b>9-13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tasya dronyam bhagavato
 varunasya mahatmanah
@@ -69,7 +108,7 @@ picumardaih kovidaraih
 saralaih sura-darubhih
 drakseksu-rambha-jambubhir
 badary-aksabhayamalaih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tasya--of that mountain (Trikuta); dronyam--in a valley; bhagavatah--of the great personality;
 varunasya--the demigod Varuna; maha-atmanah--who is a great devotee of the Lord; udyanam--a garden;
@@ -85,7 +124,7 @@ trees; plaksaih--plaksa trees; vataih--banyan trees; kimsuka--red flowers with n
 sandalwood trees; picumardaih--picumarda flowers; kovidaraih--kovidara fruits; saralaih--sarala trees;
 sura-darubhih--sura-daru trees; draksa--grapes; iksuh--sugarcane; rambha--bananas; jambubhih--jambu
 fruits; badari--badari fruits; aksa--aksa fruits; abhaya--abhaya fruits; amalaih--amalaki, a sour fruit.
-<p></p>
+<br>
 <h2>Translation</h2>
 In a valley of Trikuta Mountain there was a garden called Rtumat. This garden belonged to the great
 devotee Varuna and was a sporting place for the damsels of the demigods. Flowers and fruits grew there
@@ -101,7 +140,7 @@ aksas, abhayas and amalakis.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

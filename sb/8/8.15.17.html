@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.15.17.html">8.15.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-athapy upayo mama devi cintyah
-santositasya vrata-caryaya te
-mamarcanam narhati gantum anyatha
-sraddhanurupam phala-hetukatvat
-<p></p>
+yatra nitya-vayo-rupah
+syama viraja-vasasah
+bhrajante rupavan-naryo
+hy arcirbhir iva vahnayah
+<br>
 <h2>Synonyms</h2>
-atha--therefore; api--in spite of this situation; upayah--some means; mama--by Me; devi--O goddess;
-cintyah--must be considered; santositasya--very pleased; vrata-caryaya--observing the vow; te--by you;
-mama arcanam--worshiping Me; na--never; arhati--deserves; gantum anyatha--to become otherwise;
-sraddha-anurupam--according to one's faith and devotion; phala--of the result; hetukatvat--from being the
-cause.
-<p></p>
+yatra--in that city; nitya-vayah-rupah--who were ever beautiful and young; syamah--possessing the
+quality of syama; viraja-vasasah--always dressed with clean garments; bhrajante--glitter; rupa-vat--well
+decorated; naryah--women; hi--certainly; arcirbhih--with many flames; iva--like; vahnayah--fires.
+<br>
 <h2>Translation</h2>
-Yet because I have been satisfied by the activities of your vow, O goddess Aditi, I must find some means
-to favor you, for worship of Me never goes in vain but certainly gives the desired result according to what
-one deserves.
+Everlastingly beautiful and youthful women, who were dressed with clean garments, glittered in the city
+like fires with flames. They all possessed the quality of syama.
+<br>
+<h2>Purport</h2>
+Srila Visvanatha Cakravarti Thakura gives a hint of the quality of the syama woman.
+sita-kale bhaved usna
+usma-kale susitalah
+stanau sukathinau yasam
+tah syamah parikirtitah
+A woman whose body is very warm during the winter and cool during the summer and who generally
+has very firm breasts is called syama.
 </p>
 
 </div>
@@ -72,7 +117,7 @@ one deserves.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

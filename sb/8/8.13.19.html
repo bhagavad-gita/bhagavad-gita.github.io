@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.13.19.html">8.13.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-hema-jalaksa-nirgacchaddhumenaguru-
-gandhina
-pandurena praticchannamarge
-yanti sura-priyah
-<p></p>
+para-maricigarbhadya
+deva indro 'dbhutah smrtah
+dyutimat-pramukhas tatra
+bhavisyanty rsayas tatah
+<br>
 <h2>Synonyms</h2>
-hema-jala-aksa--from dainty little windows made of networks of gold; nirgacchat--emanating;
-dhumena--by smoke; aguru-gandhina--fragrant due to burning incense known as aguru; pandurena--very
-white; praticchanna--covered; marge--on the street; yanti--pass; sura-priyah--beautiful public women
-known as Apsaras, celestial girls.
-<p></p>
+para--the Paras; maricigarbha--the Maricigarbhas; adyah--like that; devah--the demigods; indrah--the
+king of heaven; adbhutah--Adbhuta; smrtah--known; dyutimat--Dyutiman; pramukhah--headed by; tatra--
+in that ninth period of Manu; bhavisyanti--will become; rsayah--the seven rsis; tatah--then.
+<br>
 <h2>Translation</h2>
-Apsaras passed on the streets, which were covered with the white, fragrant smoke of aguru incense
-emanating from windows with golden filigree.
+In this ninth manvantara, the Paras and Maricigarbhas will be among the demigods. The king of heaven,
+Indra, will be named Adbhuta, and Dyutiman will be among the seven sages.
 </p>
 
 </div>
@@ -70,7 +108,7 @@ emanating from windows with golden filigree.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

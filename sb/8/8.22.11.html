@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,59 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.22.11.html">8.22.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yo 'sav asmin maha-kalpe
-tanayah sa vivasvatah
-sraddhadeva iti khyato
-manutve harinarpitah
-<p></p>
+athaham apy atma-ripos tavantikam
+daivena nitah prasabham tyajita-srih
+idam krtantantika-varti jivitam
+yayadhruvam stabdha-matir na budhyate
+<br>
 <h2>Synonyms</h2>
-yah--one who; asau--He (the Supreme Person); asmin--in this; maha-kalpe--great millennium; tanayah--
-son; sah--he; vivasvatah--of the sun-god; sraddhadevah--by the name Sraddhadeva; iti--thus; khyatah--
-celebrated; manutve--in the position of Manu; harina--by the Supreme Personality of Godhead; arpitah--
-was situated.
-<p></p>
+atha--therefore; aham--I; api--also; atma-ripoh--who are the traditional enemy of the family; tava--of
+Your good self; antikam--the shelter; daivena--by providence; nitah--brought in; prasabham--by force;
+tyajita--bereft of; srih--all opulence; idam--this philosophy of life; krta-anta-antika-varti--always given the
+facility for death; jivitam--the duration of life; yaya--by such material opulence; adhruvam--as temporary;
+stabdha-matih--such an unintelligent person; na budhyate--cannot understand.
+<br>
 <h2>Translation</h2>
-In this [the present] millennium King Satyavrata later became the son of Vivasvan, the king of the sun
-planet, and was known as Sraddhadeva. By the mercy of the Supreme Personality of Godhead, he was
-given the post of Manu.
+Only by providence have I been forcibly brought under Your lotus feet and deprived of all my opulence.
+Because of the illusion created by temporary opulence, people in general, who live under material
+conditions, facing accidental death at every moment, do not understand that this life is temporary. Only
+by providence have I been saved from that condition.
+<br>
+<h2>Purport</h2>
+Bali Maharaja appreciated the actions of the Supreme Personality of Godhead, although all the members
+of the demoniac families except Prahlada Maharaja and Bali Maharaja considered Visnu their eternal
+traditional enemy. As described by Bali Maharaja, Lord Visnu was actually not the enemy of the family but
+the best friend of the family. The principle of this friendship has already been stated. Yasyaham
+anugrhnami harisye tad-dhanam sanaih: the Lord bestows special favor upon His devotee by taking away
+all his material opulences. Bali Maharaja appreciated this behavior by the Lord. Therefore he said, daivena
+nitah prasabham tyajita-srih: "It is to bring me to the right platform of eternal life that You have put me
+into these circumstances."
+Actually, everyone should fear the so-called society, friendship and love for which he works so hard all
+day and night. As indicated by Bali Maharaja by the words janad bhitah, every devotee in Krsna
+consciousness should always be afraid of the common man engaged in pursuing material prosperity. Such
+a person is described as pramatta, a madman chasing the will-o'-the-wisp. Such men do not know that
+after a hard struggle for life one must change his body, with no certainty of what kind of body he will
+receive next. Those who are completely established in Krsna conscious philosophy and who therefore
+understand the aim of life will never take to the activities of the materialistic dog race. But if a sincere
+devotee somehow does fall down, the Lord corrects him and saves him from gliding down to the darkest
+region of hellish life.
+adanta-gobhir visatam tamisram
+punah punas carvita-carvananam
+(Bhag. 7.5.30)
+The materialistic way of life is nothing but the repeated chewing of that which has already been chewed.
+Although there is no profit in such a life, people are enamored of it because of uncontrolled senses.
+Nunam pramattah kurute vikarma. Because of uncontrolled senses, people fully engage in sinful activities
+by which they get a body full of suffering. Bali Maharaja appreciated how the Lord had saved him from
+such a bewildered life of ignorance. He therefore said that his intelligence had been stunned. Stabdhamatir
+na budhyate. He could not understand how the Supreme Personality of Godhead favors His
+devotees by forcibly stopping their materialistic activities.
 </p>
 
 </div>
@@ -71,7 +141,7 @@ given the post of Manu.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

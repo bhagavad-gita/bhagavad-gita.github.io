@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.15.14.html">8.15.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-indra-jyesthaih sva-tanayair
-hatanam yudhi vidvisam
-striyo rudantir asadya
-drastum icchasi duhkhitah
-<p></p>
+akasa-gangaya devya
+vrtam parikha-bhutaya
+prakarenagni-varnena
+sattalenonnatena ca
+<br>
 <h2>Synonyms</h2>
-indra-jyesthaih--persons of whom King Indra is the eldest; sva-tanayaih--by your own sons; hatanam--
-who are killed; yudhi--in the fight; vidvisam--of the enemies; striyah--the wives; rudantih--lamenting;
-asadya--coming near the dead bodies of their husbands; drastum icchasi--you want to see; duhkhitah--
-very much aggrieved.
-<p></p>
+akasa-gangaya--by Ganges water known as Akasa-ganga; devya--the always-worshipable goddess;
+vrtam--surrounded; parikha-bhutaya--as a trench; prakarena--by ramparts; agni-varnena--resembling fire;
+sa-attalena--with places for fighting; unnatena--very high; ca--and.
+<br>
 <h2>Translation</h2>
-You want to see the wives of the demons lamenting for the death of their husbands when those demons,
-the enemies of your sons, are killed in battle by the demigods, of whom Indra is the chief.
+The city was surrounded by trenches full of Ganges water, known as Akasa-ganga, and by a high wall,
+which was the color of fire. Upon this wall were parapets for fighting.
 </p>
 
 </div>
@@ -70,7 +108,7 @@ the enemies of your sons, are killed in battle by the demigods, of whom Indra is
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

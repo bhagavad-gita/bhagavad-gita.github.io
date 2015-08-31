@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.5.html">8.17.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yato jato hiranyaksas
-carann eka imam mahim
-prativiram dig-vijaye
-navindata gadayudhah
-<p></p>
+tam netra-gocaram viksya
+sahasotthaya sadaram
+nanama bhuvi kayena
+dandavat-priti-vihvala
+<br>
 <h2>Synonyms</h2>
-yatah--in which dynasty; jatah--was born; hiranyaksah--the king named Hiranyaksa; caran--wandering;
-ekah--alone; imam--this; mahim--surface of the globe; prativiram--a rival hero; dik-vijaye--for conquering
-all directions; na avindata--could not get; gada-ayudhah--bearing his own club.
-<p></p>
+tam--Him (the Supreme Personality of Godhead); netra-gocaram--visible by her eyes; viksya--after
+seeing; sahasa--all of a sudden; utthaya--getting up; sa-adaram--with great respect; nanama--offered
+respectful obeisances; bhuvi--on the ground; kayena--by the whole body; danda-vat--falling like a rod;
+priti-vihvala--almost puzzled because of transcendental bliss.
+<br>
 <h2>Translation</h2>
-It was in your dynasty that Hiranyaksa was born. Carrying only his own club, he wandered the globe
-alone, without assistance, to conquer all directions, and no hero he met could rival him.
+When the Supreme Personality of Godhead became visible to Aditi's eyes, Aditi was so overwhelmed by
+transcendental bliss that she at once stood up and then fell to the ground like a rod to offer the Lord her
+respectful obeisances.
 </p>
 
 </div>
@@ -69,7 +110,7 @@ alone, without assistance, to conquer all directions, and no hero he met could r
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

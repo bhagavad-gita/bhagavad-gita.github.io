@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.22.32.html">8.22.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-bhagavan uvaca
-saptame hy adyatanad urdhvam
-ahany etad arindama
-nimanksyaty apyayambhodhau
-trailokyam bhur-bhuvadikam
-<p></p>
+tavat sutalam adhyastam
+visvakarma-vinirmitam
+yad adhayo vyadhayas ca
+klamas tandra parabhavah
+nopasarga nivasatam
+sambhavanti mameksaya
+<br>
 <h2>Synonyms</h2>
-sri-bhagavan uvaca--the Supreme Personality of Godhead said; saptame--on the seventh; hi--indeed;
-adyatanat--from today; urdhvam--forward; ahani--on the day; etat--this creation; arimdama--O King who
-can subdue your enemies; nimanksyati--shall be inundated; apyaya-ambhodhau--in the ocean of
-destruction; trailokyam--the three lokas; bhuh-bhuva-adikam--namely Bhurloka, Bhuvarloka and
-Svarloka.
-<p></p>
+tavat--as long as you are not in the post of Lord Indra; sutalam--in the planet known as Sutala;
+adhyastam--go live there and occupy the place; visvakarma-vinirmitam--which is especially created by
+Visvakarma; yat--wherein; adhayah--miseries pertaining to the mind; vyadhayah--miseries pertaining to
+the body; ca--also; klamah--fatigue; tandra--dizziness or laziness; parabhavah--becoming defeated; na--
+not; upasargah--symptoms of other disturbances; nivasatam--of those who live there; sambhavanti--
+become possible; mama--of Me; iksaya--by the special vigilance.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead said: O King, who can subdue your enemies, on the seventh day
-from today the three worlds--Bhuh, Bhuvah and Svah--will all merge into the water of inundation.
+Until Bali Maharaja achieves the position of King of heaven, he shall live on the planet Sutala, which
+was made by Visvakarma according to My order. Because it is especially protected by Me, it is free from
+mental and bodily miseries, fatigue, dizziness, defeat and all other disturbances. Bali Maharaja, you may
+now go live there peacefully.
+<br>
+<h2>Purport</h2>
+Visvakarma is the engineer or architect for the palatial buildings in the heavenly planets. Therefore,
+since he was engaged to construct the residential quarters of Bali Maharaja, the buildings and palaces on
+the planet Sutala must at least equal those on the heavenly planets. A further advantage of this place
+designed for Bali Maharaja was that he would not be disturbed by any outward calamity. Moreover, he
+would not be disturbed by mental or bodily miseries. These are all extraordinary features of the planet
+Sutala, where Bali Maharaja would live.
+In the Vedic literatures we find descriptions of many different planets where there are many, many
+palaces, hundreds and thousands of times better than those of which we have experience on this planet
+earth. When we speak of palaces, this naturally includes the idea of great cities and towns. Unfortunately,
+when modern scientists try to explore other planets they see nothing but rocks and sand. Of course, they
+may go on their frivolous excursions, but the students of the Vedic literature will never believe them or
+give them any credit for exploring other planets.
 </p>
 
 </div>
@@ -72,7 +129,7 @@ from today the three worlds--Bhuh, Bhuvah and Svah--will all merge into the wate
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

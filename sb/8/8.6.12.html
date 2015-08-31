@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.6.12.html">8.6.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yathagnim edhasy amrtam ca gosu
 bhuvy annam ambudyamane ca vrttim
 yogair manusya adhiyanti hi tvam
 gunesu buddhya kavayo vadanti
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yatha--as; agnim--fire; edhasi--in wood; amrtam--milk, which is like nectar; ca--and; gosu--from cows;
 bhuvi--on the ground; annam--food grains; ambu--water; udyamane--in enterprise; ca--also; vrttim--
 livelihood; yogaih--by practice of bhakti-yoga; manusyah--human beings; adhiyanti--achieve; hi--indeed;
 tvam--You; gunesu--in the material modes of nature; buddhya--by intelligence; kavayah--great
 personalities; vadanti--say.
-<p></p>
+<br>
 <h2>Translation</h2>
 As one can derive fire from wood, milk from the milk bag of the cow, food grains and water from the
 land, and prosperity in one's livelihood from industrial enterprises, so, by the practice of bhakti-yoga,
 even within this material world, one can achieve Your favor or intelligently approach You. Those who are
 pious all affirm this.
-<p></p>
+<br>
 <h2>Purport</h2>
 Although the Supreme Personality of Godhead is nirguna, not to be found within this material world,
 the entire material world is pervaded by Him, as stated in Bhagavad-gita (maya tatam idam sarvam). The
@@ -135,7 +174,7 @@ Lord. There is no other way. There is no other way. There is no other way."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

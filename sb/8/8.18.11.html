@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,58 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.18.11.html">8.18.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yajanti yajnam kratubhir yam adrta
-bhavanta amnaya-vidhana-kovidah
-sa eva visnur varado 'stu va paro
-dasyamy amusmai ksitim ipsitam mune
-<p></p>
+drstvaditis tam nija-garbha-sambhavam
+param pumamsam mudam apa vismita
+grhita-deham nija-yoga-mayaya
+prajapatis caha jayeti vismitah
+<br>
 <h2>Synonyms</h2>
-yajanti--worship; yajnam--who is the enjoyer of sacrifice; kratubhih--by the different paraphernalia for
-sacrifice; yam--unto the Supreme Person; adrtah--very respectfully; bhavantah--all of you; amnayavidhana-
-kovidah--great saintly persons fully aware of the Vedic principles of performing sacrifice; sah--
-that; eva--indeed; visnuh--is Lord Visnu, the Supreme Personality of Godhead; varadah--either He is
-prepared to give benedictions; astu--He becomes; va--or; parah--comes as an enemy; dasyami--I shall give;
-amusmai--unto Him (unto Lord Visnu, Vamanadeva); ksitim--the tract of land; ipsitam--whatever He has
-desired; mune--O great sage.
-<p></p>
+drstva--seeing; aditih--mother Aditi; tam--Him (the Supreme Personality of Godhead); nija-garbhasambhavam--
+born of her own womb; param--the Supreme; pumamsam--the Personality of Godhead;
+mudam--great happiness; apa--conceived; vismita--being very much astonished; grhita--accepted; deham--
+body, or transcendental form; nija-yoga-mayaya--by His own spiritual potency; prajapatih--Kasyapa Muni;
+ca--also; aha--said; jaya--all glories; iti--thus; vismitah--being astonished.
+<br>
 <h2>Translation</h2>
-O great sage, great saintly persons like you, being completely aware of the Vedic principles for
-performing ritualistic ceremonies and yajnas, worship Lord Visnu in all circumstances. Therefore,
-whether that same Lord Visnu has come here to give me all benedictions or to punish me as an enemy, I
-must carry out His order and give Him the requested tract of land without hesitation.
-<p></p>
-<h2>Purport</h2>
-As stated by Lord Siva:
-aradhananam sarvesam
-visnor aradhanam param
-tasmat parataram devi
-tadiyanam samarcanam
-(Padma Purana)
-Although in the Vedas there are recommendations for worshiping many demigods, Lord Visnu is the
-Supreme Person, and worship of Visnu is the ultimate goal of life. The Vedic principles of the varnasrama
-institution are meant to organize society to prepare everyone to worship Lord Visnu.
-varnasramacaravata
-purusena parah puman
-visnur aradhyate pantha
-nanyat tat-tosa-karanam
-"The Supreme Personality of Godhead, Lord Visnu, is worshiped by the proper execution of prescribed
-duties in the system of varna and asrama. There is no other way to satisfy the Supreme Personality of
-Godhead." (Visnu Purana 3.8.9) One must ultimately worship Lord Visnu, and for that purpose the
-varnasrama system organizes society into brahmanas, ksatriyas, vaisyas, sudras, brahmacaris, grhasthas,
-vanaprasthas and sannyasis. Bali Maharaja, having been perfectly educated in devotional service by his
-grandfather Prahlada Maharaja, knew how things are to be done. He was never to be misguided by
-anyone, even by a person who happened to be his so-called spiritual master. This is the sign of full
-surrender. Bhaktivinoda Thakura said:
-marabi rakhabi----yo iccha tohara
-nitya-dasa-prati tuya adhikara
-When one surrenders to Lord Visnu, one must be prepared to abide by His orders in all circumstances,
-whether He kills one or gives one protection. Lord Visnu must be worshiped in all circumstances.
+When Aditi saw the Supreme Personality of Godhead, who had appeared from her own womb, having
+accepted a transcendental body by His own spiritual potency, she was struck with wonder and was very
+happy. Upon seeing the child, Prajapati Kasyapa exclaimed, "Jaya! Jaya!" in great happiness and wonder.
 </p>
 
 </div>
@@ -102,7 +111,7 @@ whether He kills one or gives one protection. Lord Visnu must be worshiped in al
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.6.13.html">8.6.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tam tvam vayam natha samujjihanam
 saroja-nabhaticirepsitartham
 drstva gata nirvrtam adya sarve
 gaja davarta iva gangam ambhah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tam--O Lord; tvam--Your Lordship; vayam--all of us; natha--O master; samujjihanam--now appearing
 before us with all glories; saroja-nabha--O Lord, whose navel resembles a lotus flower, or from whose
@@ -61,13 +100,13 @@ navel grows a lotus flower; ati-cira--for an extremely long time; ipsita--desiri
 goal of life; drstva--seeing; gatah--in our vision; nirvrtam--transcendental happiness; adya--today; sarve--
 all of us; gajah--elephants; dava-artah--being afflicted in a forest fire; iva--like; gangam ambhah--with
 water from the Ganges.
-<p></p>
+<br>
 <h2>Translation</h2>
 Elephants afflicted by a forest fire become very happy when they get water from the Ganges. Similarly,
 O my Lord, from whose navel grows a lotus flower, since You have now appeared before us, we have
 become transcendentally happy. By seeing Your Lordship, whom we have desired to see for a very long
 time, we have achieved our ultimate goal in life.
-<p></p>
+<br>
 <h2>Purport</h2>
 The devotees of the Lord are always very eager to see the Supreme Lord face to face, but they do not
 demand that the Lord come before them, for a pure devotee considers such a demand to be contrary to
@@ -89,7 +128,7 @@ the Lord may be pleased to appear before him so that he can see the Lord face to
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

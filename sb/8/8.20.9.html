@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,69 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.9.html">8.20.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kim atmananena jahati yo 'ntatah
-kim riktha-haraih svajanakhya-dasyubhih
-kim jayaya samsrti-hetu-bhutaya
-martyasya gehaih kim ihayuso vyayah
-<p></p>
+sulabha yudhi viprarse
+hy anivrttas tanu-tyajah
+na tatha tirtha ayate
+sraddhaya ye dhana-tyajah
+<br>
 <h2>Synonyms</h2>
-kim--what is the use; atmana anena--of this body; jahati--gives up; yah--which (body); antatah--at the
-end of life; kim--what is the use; riktha-haraih--the plunderers of wealth; svajana-akhya-dasyubhih--they
-who are actually plunderers but who pass by the name of relatives; kim--what is the use; jayaya--of a wife;
-samsrti-hetu-bhutaya--who is the source of increasing material conditions; martyasya--of a person sure to
-die; gehaih--of houses, family and community; kim--what is the use; iha--in which house; ayusah--of the
-duration of life; vyayah--simply wasting.
-<p></p>
+su-labhah--very easily obtained; yudhi--in the battlefield; vipra-rse--O best of the brahmanas; hi--indeed;
+anivrttah--not being afraid of fighting; tanu-tyajah--and thus lay down their lives; na--not; tatha--as; tirthe
+ayate--on the arrival of a saintly person who creates holy places; sraddhaya--with faith and devotion; ye--
+those who; dhana-tyajah--can give up their accumulated wealth.
+<br>
 <h2>Translation</h2>
-What is the use of the material body, which automatically leaves its owner at the end of life? And what
-is the use of all one's family members, who are actually plunderers taking away money that is useful for
-the service of the Lord in spiritual opulence? What is the use of a wife? She is only the source of
-increasing material conditions. And what is the use of family, home, country and community? Attachment
-for them merely wastes the valuable energy of one's lifetime.
-<p></p>
+O best of the brahmanas, many men have laid down their lives on the battlefield, being unafraid of
+fighting, but rarely has one gotten the chance to give his accumulated wealth faithfully to a saintly person
+who creates holy places.
+<br>
 <h2>Purport</h2>
-The Supreme Personality of Godhead, Krsna, advises, sama-dharman parityajya mam ekam saranam
-vraja: "Give up all other varieties of religion and just surrender unto Me." The common man does not
-appreciate such a statement by the Supreme Personality of Godhead because he thinks that during his
-lifetime his family, society, country, body and relatives are everything. Why should one give up any one of
-them and take shelter of the Supreme Personality of Godhead? But from the behavior of great
-personalities like Prahlada Maharaja and Bali Maharaja we understand that surrendering to the Lord is the
-right action for an intelligent person. Prahlada Maharaja took shelter of Visnu against the will of his
-father. Similarly, Bali Maharaja took shelter of Vamanadeva against the will of his spiritual master,
-Sukracarya, and all the leading demons. People may be surprised that devotees like Prahlada Maharaja
-and Bali Maharaja could seek shelter of the side of the enemy, giving up the natural affinity for family,
-hearth and home. In this connection, Bali Maharaja explains that the body, which is the center of all
-material activities, is also a foreign element. Even though we want to keep the body fit and helpful to our
-activities, the body cannot continue eternally. Although I am the soul, which is eternal, after using the
-body for some time I have to accept another body (tatha dehantara-praptih), according to the laws of
-nature, unless I render some service with the body for advancement in devotional service. One should not
-use the body for any other purpose. One must know that if he uses the body for any other purpose he is
-simply wasting time, for as soon as the time is ripe, the soul will automatically leave the body.
-We are very interested in society, friendship and love, but what are they? Those in the garb of friends
-and relatives merely plunder the hard-earned money of the bewildered soul. Everyone is affectionate
-toward his wife and is attached to her, but what is this wife? The wife is called stri, which means, "one
-who expands the material condition." If a person lives without a wife, his material conditions are less
-extensive. As soon as one marries and is connected with a wife, his material necessities increase.
-pumsah striya mithuni-bhavam etam
-tayor mitho hrdaya-granthim ahuh
-ato grha-ksetra-sutapta-vittair
-janasya moho 'yam aham mameti
-"The attraction between male and female is the basic principle of material existence. On the basis of this
-misconception, which ties together the hearts of the male and female, one becomes attracted to his body,
-home, property, children, relatives and wealth. In this way one increases life's illusions and thinks in
-terms of 'I and mine.' " (Bhag. 5.5.8) Human life is meant for self-realization, not for increasing unwanted
-things. Actually, a wife increases unwanted things. One's lifetime, one's home and everything one has, if
-not properly used in the service of the Lord, are all sources of material conditions of perpetual suffering
-under the threefold miseries (adhyatmika, adhibhautika and adhidaivika). Unfortunately, there is no
-institution in human society for education on this subject. People are kept in darkness about the goal of
-life, and thus there is a continuous struggle for existence. We speak of "survival of the fittest," but no one
-survives, for no one is free under material conditions.
+Many ksatriyas have laid down their lives on the battlefield for their nations, but hardly a person can be
+found who has given up all his property and his accumulated wealth in charity to a person worthy of the
+gift. As stated in Bhagavad-gita (17.20):
+datavyam iti yad danam
+diyate 'nupakarine
+dese kale ca patre ca
+tad danam sattvikam smrtam
+"That gift which is given out of duty, at the proper time and place, to a worthy person, and without
+expectation of return is considered to be charity in the mode of goodness." Thus charity given in the
+proper place is called sattvika. And above this charity in goodness is transcendental charity, in which
+everything is sacrificed for the sake of the Supreme Personality of Godhead. Vamanadeva, the Supreme
+Personality of Godhead, had come to Bali Maharaja for alms. How could one get such an opportunity to
+give charity? Therefore, Bali Maharaja decided without hesitation to give the Lord whatever He wanted.
+One may get various opportunities to lay down his life on the battlefield, but such an opportunity as this
+is hardly ever obtained.
 </p>
 
 </div>
@@ -113,7 +127,7 @@ survives, for no one is free under material conditions.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

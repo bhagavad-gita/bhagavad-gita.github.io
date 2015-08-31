@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.14.11.html">8.14.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-aditir uvaca
-bhadram dvija-gavam brahman
-dharmasyasya janasya ca
-tri-vargasya param ksetram
-grhamedhin grha ime
-<p></p>
+etat kalpa-vikalpasya
+pramanam parikirtitam
+yatra manvantarany ahus
+caturdasa puravidah
+<br>
 <h2>Synonyms</h2>
-sri-aditih uvaca--Srimati Aditi said; bhadram--all auspiciousness; dvija-gavam--of the brahmanas and the
-cows; brahman--O brahmana; dharmasya asya--of the religious principles mentioned in sastra; janasya--of
-the people in general; ca--and; tri-vargasya--of the three processes of elevation (dharma, artha and kama);
-param--the supreme; ksetram--field; grhamedhin--O my husband, who are attached to household life;
-grhah--your home; ime--all these things.
-<p></p>
+etat--all these; kalpa--in one day of Lord Brahma; vikalpasya--of the changes in a kalpa, such as the
+change of Manus; pramanam--evidences; parikirtitam--described (by me); yatra--wherein; manvantarani--
+periods of Manu; ahuh--said; caturdasa--fourteen; pura-vidah--learned scholars.
+<br>
 <h2>Translation</h2>
-Aditi said: O my respected brahmana husband, all is well with the brahmanas, the cows, religion and the
-welfare of other people. O master of the house, the three principles of dharma, artha and kama flourish in
-household life, which is consequently full of good fortune.
-<p></p>
-<h2>Purport</h2>
-In household life one can develop the three principles of religion, economic development and sense
-gratification according to the regulations given in the sastras, but to attain liberation one must give up
-household life and place himself in the transcendental renounced order. Kasyapa Muni was not in the
-renounced order of life. Therefore he is addressed here once as brahman and another time as grhamedhin.
-Aditi, his wife, assured him that as far as household life was concerned, everything was going nicely, and
-the brahmanas and cows were being honored and protected. In other words, there were no disturbances;
-household life was duly progressing.
+In one kalpa, or one day of Brahma, there take place the many changes called vikalpas. O King, all of
+these have been previously described to you by me. Learned scholars who know the past, present and
+future have ascertained that in one day of Brahma there are fourteen Manus.
+Thus end the Bhaktivedanta purports of the Eighth Canto, Fourteenth Chapter, of the Srimad-
+Bhagavatam, entitled "The System of Universal Management."
+Chapter Fifteen
+Bali Maharaja Conquers the Heavenly Planets
+This chapter describes how Bali, after performing the Visvajit-yajna, received the benediction of a
+chariot and various kinds of paraphernalia for war, with which he attacked the King of heaven. All the
+demigods, being afraid of him, left the heavenly planets and went away, following the instructions of their
+guru.
+Maharaja Pariksit wanted to understand how Lord Vamanadeva, on the plea of taking three paces of
+land from Bali Maharaja, took everything away from him and arrested him. Sukadeva Gosvami responded
+to this inquiry with the following explanation. In the fight between the demons and the demigods, as
+described in the Eleventh Chapter of this canto, Bali was defeated, and he died in the fight, but by the
+grace of Sukracarya he regained his life. Thus he engaged himself in the service of Sukracarya, his spiritual
+master. The descendants of Bhrgu, being pleased with him, engaged him in the Visvajit-yajna. When this
+yajna was performed, from the fire of yajna came a chariot, horses, a flag, a bow, armor and two quivers of
+arrows. Maharaja Prahlada, Bali Maharaja's grandfather, gave Bali an eternal garland of flowers, and
+Sukracarya gave him a conchshell. Bali Maharaja, after offering obeisances to Prahlada, the brahmanas and
+his spiritual master, Sukracarya, equipped himself to fight with Indra and went to Indrapuri with his
+soldiers. Blowing his conchshell, he attacked the outskirts of Indra's kingdom. When Indra saw Bali
+Maharaja's prowess, he went to his own spiritual master, Brhaspati, told him about Bali's strength, and
+inquired about his duty. Brhaspati informed the demigods that because Bali had been endowed with
+extraordinary power by the brahmanas, the demigods could not fight with him. Their only hope was to
+gain the favor of the Supreme Personality of Godhead. Indeed, there was no alternative. Under the
+circumstances, Brhaspati advised the demigods to leave the heavenly planets and keep themselves
+somewhere invisible. The demigods followed his orders, and Bali Maharaja, along with his associates,
+gained the entire kingdom of Indra. The descendants of Bhrgu Muni, being very affectionate to their
+disciple Bali Maharaja, engaged him in performing one hundred asvamedha-yajnas. In this way, Bali
+enjoyed the opulences of the heavenly planets.
 </p>
 
 </div>
@@ -82,7 +137,7 @@ household life was duly progressing.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

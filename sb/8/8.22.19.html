@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.22.19.html">8.22.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa enam tata adaya
-nyadhad audancanodake
-tatra ksipta muhurtena
-hasta-trayam avardhata
-<p></p>
+baddham viksya patim sadhvi
+tat-patni bhaya-vihvala
+pranjalih pranatopendram
+babhase 'van-mukhi nrpa
+<br>
 <h2>Synonyms</h2>
-sah--the King; enam--unto the fish; tatah--thereafter; adaya--taking out; nyadhat--placed; audancanaudake--
-in a well of water; tatra--therein; ksipta--being thrown; muhurtena--within a moment; hastatrayam--
-three cubits; avardhata--immediately developed.
-<p></p>
+baddham--arrested; viksya--seeing; patim--her husband; sadhvi--the chaste woman; tat-patni--Bali
+Maharaja's wife; bhaya-vihvala--being very disturbed by fear; pranjalih--with folded hands; pranata--
+having offered obeisances; upendram--unto Vamanadeva; babhase--addressed; avak-mukhi--with face
+downward; nrpa--O Maharaja Pariksit.
+<br>
 <h2>Translation</h2>
-Then, taking the fish out of the waterpot, the King threw Him in a large well. But within a moment the
-fish developed to the length of three cubits.
+But Bali Maharaja's chaste wife, afraid and aggrieved at seeing her husband arrested, immediately offered
+obeisances to Lord Vamanadeva [Upendra]. She folded her hands and spoke as follows.
+<br>
+<h2>Purport</h2>
+Although Lord Brahma was speaking, he had to stop for a while because Bali Maharaja's wife,
+Vindhyavali, who was very agitated and afraid, wanted to say something.
 </p>
 
 </div>
@@ -69,7 +113,7 @@ fish developed to the length of three cubits.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

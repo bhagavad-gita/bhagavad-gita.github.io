@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.3.15.html">8.3.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 namo namas te 'khila-karanaya
 niskaranayadbhuta-karanaya
 sarvagamamnaya-maharnavaya
 namo 'pavargaya parayanaya
-<p></p>
+<br>
 <h2>Synonyms</h2>
 namah--I offer my respectful obeisances; namah--again I offer my respectful obeisances; te--unto You;
 akhila-karanaya--unto the supreme cause of everything; niskaranaya--unto You who are causeless;
@@ -61,7 +100,7 @@ adbhuta-karanaya--the wonderful cause of everything; sarva--all; agama-amnaya--u
 parampara system of all Vedic knowledge; maha-arnavaya--the great ocean of knowledge, or the great
 ocean wherein all the rivers of knowledge merge; namah--I offer my obeisances; apavargaya--unto You
 who can give deliverance or liberation; para-ayanaya--the shelter of all transcendentalists.
-<p></p>
+<br>
 <h2>Translation</h2>
 My Lord, You are the cause of all causes, but You Yourself have no cause. Therefore You are the
 wonderful cause of everything. I offer my respectful obeisances unto You, who are the shelter of the Vedic
@@ -69,7 +108,7 @@ knowledge contained in the sastras like the Pancaratras and Vedanta-sutra, which
 representations, and who are the source of the parampara system. Because it is You who can give
 liberation, You are the only shelter for all transcendentalists. Let me offer my respectful obeisances unto
 You.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Supreme Personality of Godhead is described herein as the wonderful cause. He is wonderful in the
 sense that although there may be unlimited emanations from the Supreme Personality of Godhead
@@ -118,7 +157,7 @@ parityajya mam ekam saranam vraja). This is the ultimate goal.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

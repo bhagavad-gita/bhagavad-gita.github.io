@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.40.html">8.11.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-seyam guna-mayi maya
-na tvam abhibhavisyati
-maya sameta kalena
-kala-rupena bhagasah
-<p></p>
+na suskena na cardrena
+jahara namuceh sirah
+tam tustuvur muni-gana
+malyais cavakiran vibhum
+<br>
 <h2>Synonyms</h2>
-sa--that insurmountable; iyam--this; guna-mayi--consisting of the three modes of material nature;
-maya--illusory energy; na--not; tvam--you; abhibhavisyati--will be able to bewilder in the future; maya--
-with Me; sameta--joined; kalena--eternal time; kala-rupena--in the form of time; bhagasah--with her
-different parts.
-<p></p>
+na--neither; suskena--by dry means; na--nor; ca--also; ardrena--by a moist weapon; jahara--he separated;
+namuceh--of Namuci; sirah--the head; tam--him (Indra); tustuvuh--satisfied; muni-ganah--all the sages;
+malyaih--with flower garlands; ca--also; avakiran--covered; vibhum--that great personality.
+<br>
 <h2>Translation</h2>
-The material, external energy [maya], who cooperates with Me in creation and who is manifested in the
-three modes of nature, will not be able to bewilder you any longer.
-<p></p>
+Thus Indra, King of heaven, severed Namuci's head with a weapon of foam, which was neither dry nor
+moist. Then all the sages satisfied Indra, the exalted personality, by showering flowers and garlands upon
+him, almost covering him.
+<br>
 <h2>Purport</h2>
-When Lord Siva was present, his wife, Durga, was also there. Durga works in cooperation with the
-Supreme Personality of Godhead in creating the cosmic manifestation. The Lord says in Bhagavad-gita
-(9.10), mayadhyaksena prakrtih suyate sacaracaram: "The material energy [prakrti] works under My
-direction, O son of Kunti, and is producing all moving and unmoving beings." Prakrti is Durga.
-srsti-sthiti-pralaya-sadhana-saktir eka
-chayeva yasya bhuvanani bibharti durga
-The entire cosmos is created by Durga in cooperation with Lord Visnu in the form of kala, time. Sa
-iksata lokan nu srja. Sa imal lokan asrjata. This is the version of the Vedas (Aitareya Upanisad 1.1.1-2).
-Maya happens to be the wife of Lord Siva, and thus Lord Siva is in association with maya, but Lord Visnu
-here assures Lord Siva that this maya will no longer be able to captivate him.
+In this regard, the sruti-mantras say, apam phenena namuceh sira indro 'darayat: Indra killed Namuci
+with watery foam, which is neither moist nor dry.
 </p>
 
 </div>
@@ -82,7 +113,7 @@ here assures Lord Siva that this maya will no longer be able to captivate him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

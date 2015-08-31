@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.6.html">8.16.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dvadasyam savitatisthan
-madhyandina-gato nrpa
-vijaya-nama sa prokta
-yasyam janma vidur hareh
-<p></p>
+api vatithayo 'bhyetya
+kutumbasaktaya tvaya
+grhad apujita yatah
+pratyutthanena va kvacit
+<br>
 <h2>Synonyms</h2>
-dvadasyam--on the twelfth day of the moon; savita--the sun; atisthat--was staying; madhyam-dinagatah--
-on the meridian; nrpa--O King; vijaya-nama--by the name Vijaya; sa--that day; prokta--is called;
-yasyam--on which; janma--the appearance; viduh--they know; hareh--of Lord Hari.
-<p></p>
+api--whether; va--either; atithayah--guests who come without an invitation; abhyetya--coming to the
+home; kutumba-asaktaya--who were too attached to the family members; tvaya--by you; grhat--from the
+house; apujitah--without being properly welcomed; yatah--went away; pratyutthanena--by standing up;
+va--either; kvacit--sometimes.
+<br>
 <h2>Translation</h2>
-O King, when the Lord appeared--on dvadasi, the twelfth day of the moon--the sun was at the meridian,
-as every learned scholar knows. This dvadasi is called Vijaya.
+I wonder whether because of being too attached to the members of your family, you failed to properly
+receive uninvited guests, who therefore were not welcomed and went away.
+<br>
+<h2>Purport</h2>
+It is the duty of a householder to receive guests, even if a guest be an enemy. When a guest comes to
+one's home, one should properly receive him by standing up and offering him a seat. It is enjoined, grhe
+satrum api praptam visvastam akutobhayam: if even an enemy comes to one's home, one should receive
+him in such a way that the guest will forget that his host is an enemy. According to one's position, one
+should properly receive anyone who comes to one's home. At least a seat and a glass of water should be
+offered, so that the guest will not be displeased. Kasyapa Muni inquired from Aditi whether disrespect had
+been shown to such guests, or atithis. The word atithi refers to one who comes without an invitation.
 </p>
 
 </div>
@@ -69,7 +118,7 @@ as every learned scholar knows. This dvadasi is called Vijaya.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.12.html">8.17.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-apasyann iti hovaca
-mayanvistam idam jagat
-bhratr-ha me gato nunam
-yato navartate puman
-<p></p>
+sri-bhagavan uvaca
+deva-matar bhavatya me
+vijnatam cira-kanksitam
+yat sapatnair hrta-srinam
+cyavitanam sva-dhamatah
+<br>
 <h2>Synonyms</h2>
-apasyan--not seeing Him; iti--in this way; ha uvaca--uttered; maya--by me; anvistam--has been sought;
-idam--the whole; jagat--universe; bhratr-ha--Lord Visnu, who killed the brother; me--my; gatah--must
-have gone; nunam--indeed; yatah--from where; na--not; avartate--comes back; puman--a person.
-<p></p>
+sri-bhagavan uvaca--the Supreme Personality of Godhead said; deva-matah--O mother of the demigods;
+bhavatyah--of you; me--by Me; vijnatam--understood; cira-kanksitam--what You have desired for a long
+time; yat--because; sapatnaih--by the rivals; hrta-srinam--of your sons, who are bereft of all opulences;
+cyavitanam--vanquished; sva-dhamatah--from their own residential quarters.
+<br>
 <h2>Translation</h2>
-Unable to see Him, Hiranyakasipu said, "I have searched the entire universe, but I could not find Visnu,
-who has killed my brother. Therefore, He must certainly have gone to that place from which no one
-returns. [In other words, He must now be dead.]"
-<p></p>
+The Supreme Personality of Godhead said: O mother of the demigods, I have already understood your
+long-cherished desires for the welfare of your sons, who have been deprived of all opulences and driven
+from their residence by their enemies.
+<br>
 <h2>Purport</h2>
-Atheists generally follow the Bauddha philosophical conclusion that at death everything is finished.
-Hiranyakasipu, being an atheist, thought this way. Because Lord Visnu was not visible to him, he thought
-that the Lord was dead. Even today, many people follow the philosophy that God is dead. But God is
-never dead. Even the living entity, who is part of God, never dies. Na jayate mriyate va kadacit: "For the
-soul there is never birth or death." This is the statement of Bhagavad-gita (2.20). Even the ordinary living
-entity never takes birth or dies. What then is to be said of the Supreme Personality of Godhead, who is the
-chief of all living entities? He certainly never takes birth or dies. Ajo'pi sann avyayatma (Bg. 4.6). Both the
-Lord and the living entity exist as unborn and inexhaustible personalities. Thus Hiranyakasipu's
-conclusion that Visnu was dead was wrong.
-As indicated by the words yato navartate puman, there is certainly a spiritual kingdom, and if the living
-entity goes there, he never returns to this material world. This is also confirmed in Bhagavad-gita (4.9):
-tyaktva deham punar janma naiti mam eti so'rjuna. Materially speaking, every living entity dies; death is
-inevitable. But those who are karmis, jnanis and yogis return to this material world after death, whereas
-bhaktas do not. Of course, if a bhakta is not completely perfect he takes birth in the material world again,
-but in a very exalted position, either in a rich family or a family of the purest brahmanas (sucinam
-srimatam gehe), just to finish his development in spiritual consciousness. Those who have completed the
-course of Krsna consciousness and are free from material desire return to the abode of the Supreme
-Personality of Godhead (yad gatva na nivartante tad dhama paramam mama). Here the same fact is stated:
-yato navartate puman. Any person who goes back home, back to Godhead, does not return to this
-material world.
+The Supreme Personality of Godhead, being situated in everyone's heart, and especially in the hearts of
+His devotees, is always ready to help devotees in adversity. Since He knows everything, He knows how
+things are to be adjusted, and He does the needful to relieve the suffering of His devotee.
 </p>
 
 </div>
@@ -92,7 +116,7 @@ material world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

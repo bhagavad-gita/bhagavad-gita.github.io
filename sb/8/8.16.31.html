@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.31.html">8.16.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-adyagnayo me suhuta yatha-vidhi
-dvijatmaja tvac-caranavanejanaih
-hatamhaso varbhir iyam ca bhur aho
-tatha punita tanubhih padais tava
-<p></p>
+namo dvi-sirsne tri-pade
+catuh-srngaya tantave
+sapta-hastaya yajnaya
+trayi-vidyatmane namah
+<br>
 <h2>Synonyms</h2>
-adya--today; agnayah--the sacrificial fires; me--executed by me; su-hutah--properly offered oblations;
-yatha-vidhi--in terms of the sastric injunction; dvija-atmaja--O son of a brahmana; tvat-caranaavanejanaih--
-which washed Your lotus feet; hata-amhasah--who have become cleansed of all sinful
-reactions; varbhih--by the water; iyam--this; ca--also; bhuh--the surface of the globe; aho--oh; tatha--as
-well; punita--sanctified; tanubhih--small; padaih--by the touch of the lotus feet; tava--Your.
-<p></p>
+namah--I offer my respectful obeisances unto You; dvi-sirsne--who have two heads; tri-pade--who have
+three legs; catuh-srngaya--who have four horns; tantave--who expand; sapta-hastaya--who have seven
+hands; yajnaya--unto the yajna-purusa, the supreme enjoyer; trayi--the three modes of Vedic ritualistic
+ceremonies; vidya-atmane--the Personality of Godhead, the embodiment of all knowledge; namah--I offer
+my respectful obeisances unto You.
+<br>
 <h2>Translation</h2>
-O son of a brahmana, today the fire of sacrifice is ablaze according to the injunction of the sastra, and I
-have been freed from all the sinful reactions of my life by the water that has washed Your lotus feet. O my
-Lord, by the touch of Your small lotus feet the entire surface of the world has been sanctified.
+I offer my respectful obeisances unto You, the Supreme Personality of Godhead, who have two heads
+[prayaniya and udayaniya], three legs [savana-traya], four horns [the four Vedas] and seven hands [the
+seven chandas, such as Gayatri]. I offer my obeisances unto You, whose heart and soul are the three Vedic
+rituals [karma-kanda, jnana-kanda and upasana-kanda] and who expand these rituals in the form of
+sacrifice.
 </p>
 
 </div>
@@ -72,7 +113,7 @@ Lord, by the touch of Your small lotus feet the entire surface of the world has 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

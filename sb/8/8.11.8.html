@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,120 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.8.html">8.11.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ekas tvam eva sad asad dvayam advayam ca
-svarnam krtakrtam iveha na vastu-bhedah
-ajnanatas tvayi janair vihito vikalpo
-yasmad guna-vyatikaro nirupadhikasya
-<p></p>
+tad idam kala-rasanam
+jagat pasyanti surayah
+na hrsyanti na socanti
+tatra yuyam apanditah
+<br>
 <h2>Synonyms</h2>
-ekah--the only one; tvam--Your Lordship; eva--indeed; sat--which is existing, as the effect; asat--which
-is nonexistent, as the cause; dvayam--both of them; advayam--without duality; ca--and; svarnam--gold;
-krta--manufactured into different forms; akrtam--the original source of gold (the gold mine); iva--like;
-iha--in this world; na--not; vastu-bhedah--difference in the substance; ajnanatah--only because of
-ignorance; tvayi--unto You; janaih--by the general mass of people; vihitah--it should be done; vikalpah--
-differentiation; yasmat--because of; guna-vyatikarah--free from the differences created by the material
-modes of nature; nirupadhikasya--without any material designation.
-<p></p>
+tat--therefore; idam--this whole material world; kala-rasanam--is moving because of time eternal; jagat--
+moving forward (this whole universe); pasyanti--observe; surayah--those who are intelligent by admission
+of the truth; na--not; hrsyanti--become jubilant; na--nor; socanti--lament; tatra--in such; yuyam--all of you
+demigods; apanditah--not very learned (having forgotten that you are working under eternal time).
+<br>
 <h2>Translation</h2>
-My dear Lord, Your Lordship alone is the cause and the effect. Therefore, although You appear to be
-two, You are the absolute one. As there is no difference between the gold of a golden ornament and the
-gold in a mine, there is no difference between cause and effect; both of them are the same. Only because
-of ignorance do people concoct differences and dualities. You are free from material contamination, and
-since the entire cosmos is caused by You and cannot exist without You, it is an effect of Your
-transcendental qualities. Thus the conception that Brahman is true and the world false cannot be
-maintained.
-<p></p>
+Seeing the movements of time, those who are cognizant of the real truth neither rejoice nor lament for
+different circumstances. Therefore, because you are jubilant due to your victory, you should be
+considered not very learned.
+<br>
 <h2>Purport</h2>
-Srila Visvanatha Cakravarti Thakura says that the living entities are representations of the Supreme
-Personality of Godhead's marginal potency whereas the various bodies accepted by the living entities are
-products of the material energy. Thus the body is considered material, and the soul is considered spiritual.
-The origin of them both, however, is the same Supreme Personality of Godhead. As the Lord explains in
-Bhagavad-gita (7.4-5):
-bhumir apo 'nalo vayuh
-kham mano buddhir eva ca
-ahankara itiyam me
-bhinna prakrtir astadha
-apareyam itas tv anyam
-prakrtim viddhi me param
-jiva-bhutam maha-baho
-yayedam dharyate jagat
-"Earth, water, fire, air, ether, mind, intelligence and false ego--all together these eight comprise My
-separated material energies. But besides this inferior nature, O mighty-armed Arjuna, there is a superior
-energy of Mine, which consists of all living entities who are struggling with material nature and are
-sustaining the universe." Thus both matter and the living entities are manifestations of energy of the
-Supreme Lord. Since the energy and the energetic are not different and since the material and marginal
-energies are both energies of the supreme energetic, the Supreme Lord, ultimately the Supreme
-Personality of Godhead is everything. In this regard, the example may be given of gold that has not been
-molded and gold that has been molded into various ornaments. A gold earring and the gold in a mine are
-different only as cause and effect; otherwise they are the same. The Vedanta-sutra describes that Brahman
-is the cause of everything. Janmady asya yatah. Everything is born of the Supreme Brahman, from which
-everything emanates as different energies. None of these energies, therefore, should be considered false.
-The Mayavadis' differentiation between Brahman and maya is only due to ignorance.
-Srimad Viraraghava Acarya, in his Bhagavata-candra-candrika, describes the Vaisnava philosophy as
-follows. The cosmic manifestation is described as sat and asat, as cit and acit. Matter is acit, and the living
-force is cit, but their origin is the Supreme Personality of Godhead, in whom there is no difference
-between matter and spirit. According to this conception, the cosmic manifestation, consisting of both
-matter and spirit, is not different from the Supreme Personality of Godhead. Idam hi visvam bhagavan
-ivetarah: "This cosmic manifestation is also the Supreme Personality of Godhead, although it appears
-different from Him." In Bhagavad-gita (9.4) the Lord says:
-maya tatam idam sarvam
-jagad avyakta-murtina
-mat-sthani sarva-bhutani
-na caham tesv avasthitah
-"By Me, in My unmanifested form, this entire universe is pervaded. All beings are in Me, but I am not in
-them." Thus although someone may say that the Supreme Person is different from the cosmic
-manifestation, actually He is not. The Lord says, maya tatam idam sarvam: "In My impersonal feature I am
-spread throughout the world." Therefore, this world is not different from Him. The difference is a
-difference in names. For example, whether we speak of gold earrings, gold bangles or gold necklaces,
-ultimately they are all gold. In a similar way, all the different manifestations of matter and spirit are
-ultimately one in the Supreme Personality of Godhead. ekam evadvitiyam brahma. This is the Vedic
-version (Chandogya Upanisad 6.2.1). There is oneness because everything emanates from the Supreme
-Brahman. The example already given is that there is no difference between a golden earring and the gold
-mine as it is. The Vaisesika philosophers, however, because of their Mayavada conception, create
-differences. They say, brahma satyam jagan mithya: "The Absolute Truth is real, and the cosmic
-manifestation is false." But why should the jagat be considered mithya? The jagat is an emanation from
-Brahman. Therefore the jagat is also truth.
-Vaisnavas, therefore, do not consider the jagat to be mithya; rather, they regard everything as reality in
-connection with the Supreme Personality of Godhead.
-anasaktasya visayan
-yatharham upayunjatah
-nirbandhah krsna-sambandhe
-yuktam vairagyam ucyate
-prapancikataya buddhya
-hari-sambandhi-vastunah
-mumuksubhih parityago
-vairagyam phalgu kathyate
-"Things should be accepted for the Lord's service and not for one's personal sense gratification. If one
-accepts something without attachment and accepts it because it is related to Krsna, one's renunciation is
-called yuktam vairagyam. Whatever is favorable for the rendering of service to the Lord should be
-accepted and should not be rejected as a material thing." (Bhakti-rasamrta-sindhu 1.2.255-256) The jagat
-should not be rejected as mithya. It is truth, and the truth is realized when everything is engaged in the
-service of the Lord. A flower accepted for one's sense gratification is material, but when the same flower is
-offered to the Supreme personality of Godhead by a devotee, it is spiritual. Food taken and cooked for
-oneself is material, but food cooked for the Supreme Lord is spiritual prasada. This is a question of
-realization. Actually, everything is given by the Supreme Personality of Godhead, and therefore everything
-is spiritual, but those who are not advanced in proper knowledge make distinctions because of the
-interactions of the three modes of material nature. In this regard, Srila Jiva Gosvami says that although the
-sun is the only light, the sunshine, which is exhibited in seven colors, and darkness, which is the absence
-of sunshine, are not different from the sun, for without the existence of the sun such differentiations
-cannot exist. There may be varied nomenclature because of different conditions, but they are all the sun.
-The puranas therefore say:
-eka-desa-sthitasyagner
-jyotsna vistarini yatha
-parasya brahmanah saktis
-tathedam akhilam jagat
-"Just as the illumination of a fire, which is situated in one place, is spread all over, the energies of the
-Supreme Personality of Godhead, Parabrahman, are spread all over this universe." (Visnu Purana 1.22.53)
-Materially, we can directly perceive the sunshine spreading itself according to different names and
-activities, but ultimately the sun is one. Similarly, sarvam khalv idam brahma: everything is an expansion
-of the Supreme Brahman. Therefore, the Supreme Lord is everything, and He is one without
-differentiation. There is no existence separate from the Supreme Personality of Godhead.
+Bali Maharaja knew that Indra, King of heaven, was extremely powerful, certainly more powerful than
+he himself. Nonetheless, Bali Maharaja challenged Indra by saying that Indra was not a very learned
+person. In Bhagavad-gita (2.11) Krsna rebuked Arjuna by saying:
+asocyan anvasocas tvam
+prajna-vadams ca bhasase
+gatasun agatasums ca
+nanusocanti panditah
+"While speaking learned words, you are mourning for what is not worthy of grief. Those who are wise
+lament neither for the living nor the dead." Thus as Krsna challenged Arjuna by saying that he was not a
+pandita, or a learned person, Bali Maharaja also challenged King Indra and his associates. In this material
+world, everything happens under the influence of time. Consequently, for a learned person who sees how
+things are taking place, there is no question of being sorry or happy because of the waves of material
+nature. After all, since we are being carried away by these waves, what is the meaning of being jubilant or
+morose? One who is fully conversant with the laws of nature is never jubilant or morose because of
+nature's activities. In Bhagavad-gita (2.14), Krsna advises that one be tolerant: tams titiksasva bharata.
+Following this advice of Krsna's, one should not be morose or unhappy because of circumstantial
+changes. This is the symptom of a devotee. A devotee carries out his duty in Krsna consciousness and is
+never unhappy in awkward circumstances. He has full faith that in such circumstances, Krsna protects His
+devotee. Therefore a devotee never deviates from his prescribed duty of devotional service. The material
+qualities of jubilation and moroseness are present even in the demigods, who are very highly situated in
+the upper planetary system. Therefore, when one is undisturbed by the so-called favorable and
+unfavorable circumstances of this material world, he should be understood to be brahma-bhuta, or selfrealized.
+As stated in Bhagavad-gita (18.54), brahma-bhutah prasannatma na socati na kanksati: "One
+who is transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful." When
+one is undisturbed by material circumstances, he should be understood to be on the transcendental stage,
+above the reactions of the three modes of material nature.
 </p>
 
 </div>
@@ -164,7 +138,7 @@ differentiation. There is no existence separate from the Supreme Personality of 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

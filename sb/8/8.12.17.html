@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.12.17.html">8.12.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-devaguhyat sarasvatyam
-sarvabhauma iti prabhuh
-sthanam purandarad dhrtva
-balaye dasyatisvarah
-<p></p>
+sri-suka uvaca
+iti bruvano bhagavams
+tatraivantaradhiyata
+sarvatas carayams caksur
+bhava aste sahomaya
+<br>
 <h2>Synonyms</h2>
-devaguhyat--from His father, Devaguhya; sarasvatyam--in the womb of Sarasvati; sarvabhaumah--
-Sarvabhauma; iti--thus; prabhuh--the master; sthanam--place; purandarat--from Lord Indra; hrtva--taking
-away by force; balaye--unto Bali Maharaja; dasyati--will give; isvarah--the master.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; bruvanah--while speaking; bhagavan--Lord
+Visnu, the Supreme Personality of Godhead; tatra--there; eva--immediately; antaradhiyata--disappeared
+from the vision of Lord Siva and his associates; sarvatah--everywhere; carayan--moving; caksuh--the eyes;
+bhavah--Lord Siva; aste--remained; saha-umaya--with his wife, Uma.
+<br>
 <h2>Translation</h2>
-In the eighth manvantara, the greatly powerful Personality of Godhead Sarvabhauma will take birth. His
-father will be Devaguhya, and His mother will be Sarasvati. He will take the kingdom away from
-Purandara [Lord Indra] and give it to Bali Maharaja.
+Sukadeva Gosvami continued: After speaking in this way, the Supreme Personality of Godhead, Visnu,
+immediately disappeared, and Lord Siva remained there with Uma, looking for Him all around with
+moving eyes.
 </p>
 
 </div>
@@ -70,7 +111,7 @@ Purandara [Lord Indra] and give it to Bali Maharaja.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

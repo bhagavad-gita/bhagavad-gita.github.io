@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.21.html">8.20.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-brahmovaca
-bhuta-bhavana bhutesa
-deva-deva jaganmaya
-muncainam hrta-sarvasvam
-nayam arhati nigraham
-<p></p>
+tad vamanam rupam avardhatadbhutam
+harer anantasya guna-trayatmakam
+bhuh kham diso dyaur vivarah payodhayas
+tiryan-nr-deva rsayo yad-asata
+<br>
 <h2>Synonyms</h2>
-sri-brahma uvaca--Lord Brahma said; bhuta-bhavana--O Supreme Being, well-wisher of everyone, who
-can cause one to flourish; bhuta-isa--O master of everyone; deva-deva--O worshipable Deity of the
-demigods; jagat-maya--O all-pervading one; munca--please release; enam--this poor Bali Maharaja; hrtasarvasvam--
-now bereft of everything; na--not; ayam--such a poor man; arhati--deserves; nigraham--
-punishment.
-<p></p>
+tat--that; vamanam--incarnation of Lord Vamana; rupam--form; avardhata--began to increase more and
+more; adbhutam--certainly very wonderful; hareh--of the Supreme Personality of Godhead; anantasya--of
+the unlimited; guna-traya-atmakam--whose body is expanded by the material energy, consisting of three
+modes (goodness, passion and ignorance); bhuh--the land; kham--the sky; disah--all directions; dyauh--
+the planetary systems; vivarah--different holes of the universe; payodhayah--great seas and oceans;
+tiryak--lower animals, birds and beasts; nr--human beings; devah--demigods; rsayah--great saintly
+persons; yat--wherein; asata--lived.
+<br>
 <h2>Translation</h2>
-Lord Brahma said: O well-wisher and master of all living entities, O worshipable Deity of all the
-demigods, O all-pervading Personality of Godhead, now this man has been sufficiently punished, for You
-have taken everything. Now You can release him. He does not deserve to be punished more.
-<p></p>
+The unlimited Supreme Personality of Godhead, who had assumed the form of Vamana, then began
+increasing in size, acting in terms of the material energy, until everything in the universe was within His
+body, including the earth, the planetary systems, the sky, the directions, the various holes in the universe,
+the seas, the oceans, the birds, beasts, human beings, the demigods and the great saintly persons.
+<br>
 <h2>Purport</h2>
-When Lord Brahma saw that Prahlada Maharaja and Vindhyavali had already approached the Lord to
-ask mercy for Bali Maharaja, he joined them and recommended Bali Maharaja's release on the grounds of
-worldly calculations.
+Bali Maharaja wanted to give charity to Vamanadeva, but the Lord expanded His body in such a way
+that He showed Bali Maharaja that everything in the universe is already in His body. Actually, no one can
+give anything to the Supreme Personality of Godhead, for He is full in everything. Sometimes we see a
+devotee offering Ganges water to the Ganges. After taking his bath in the Ganges, a devotee takes a
+palmful of water and offers it back to the Ganges. Actually, when one takes a palmful of water from the
+Ganges, the Ganges does not lose anything, and similarly if a devotee offers a palmful of water to the
+Ganges, the Ganges does not increase in any way. But by such an offering, the devotee becomes celebrated
+as a devotee of mother Ganges. Similarly, when we offer anything with devotion and faith, what we offer
+does not belong to us, nor does it enrich the opulence of the Supreme Personality of Godhead. But if one
+offers whatever he has in his possession, he becomes a recognized devotee. In this regard, the example is
+given that when one's face is decorated with a garland and sandalwood pulp, the reflection of one's face in
+a mirror automatically becomes beautiful. The original source of everything is the Supreme Personality of
+Godhead, who is our original source also. Therefore when the Supreme Personality of Godhead is
+decorated, the devotees and all living entities are decorated automatically.
 </p>
 
 </div>
@@ -78,7 +130,7 @@ worldly calculations.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

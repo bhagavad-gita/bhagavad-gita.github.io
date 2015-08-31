@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.5.41.html">8.5.41</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.41</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/41"><b>41</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 vipro mukhad brahma ca yasya guhyam
 rajanya asid bhujayor balam ca
 urvor vid ojo 'nghrir aveda-sudrau
 prasidatam nah sa maha-vibhutih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 viprah--the brahmanas; mukhat--from His mouth; brahma--the Vedic literatures; ca--also; yasya--of
 whom; guhyam--from His confidential knowledge; rajanyah--the ksatriyas; asit--became possible;
@@ -61,7 +100,7 @@ bhujayoh--from His arms; balam ca--as well as bodily strength; urvoh--from the t
 and their expert productive knowledge; anghrih--from His feet; aveda--those who are beyond the
 jurisdiction of Vedic knowledge; sudrau--the worker class; prasidatam--may be pleased; nah--upon us;
 sah--He; maha-vibhutih--the supremely powerful Personality of Godhead.
-<p></p>
+<br>
 <h2>Translation</h2>
 The brahmanas and Vedic knowledge come from the mouth of the Supreme Personality of Godhead, the
 ksatriyas and bodily strength come from His arms, the vaisyas and their expert knowledge in productivity
@@ -74,7 +113,7 @@ feet. May that Supreme Personality of Godhead, who is full in prowess, be please
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

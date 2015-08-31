@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,61 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.7.html">8.11.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvam brahma purnam amrtam vigunam visokam
-ananda-matram avikaram ananyad anyat
-visvasya hetur udaya-sthiti-samyamanam
-atmesvaras ca tad-apeksatayanapeksah
-<p></p>
+sri-balir uvaca
+sangrame vartamananam
+kala-codita-karmanam
+kirtir jayo 'jayo mrtyuh
+sarvesam syur anukramat
+<br>
 <h2>Synonyms</h2>
-tvam--Your Lordship; brahma--the all-pervading Absolute Truth; purnam--fully complete; amrtam--
-never to be vanquished; vigunam--spiritually situated, free from the material modes of nature; visokam--
-without lamentation; ananda-matram--always in transcendental bliss; avikaram--changeless; ananyat--
-separated from everything; anyat--yet You are everything; visvasya--of the cosmic manifestation; hetuh--
-the cause; udaya--of the beginning; sthiti--maintenance; samyamanam--and of all the directors controlling
-the various departments of the cosmic manifestation; atma-isvarah--the Supersoul giving direction to
-everyone; ca--also; tat-apeksataya--everyone depends upon You; anapeksah--always fully independent.
-<p></p>
+sri-balih uvaca--Bali Maharaja said; sangrame--in the battlefield; vartamananam--of all persons present
+here; kala-codita--influenced by the course of time; karmanam--for persons engaged in fighting or any
+other activities; kirtih--reputation; jayah--victory; ajayah--defeat; mrtyuh--death; sarvesam--of all of them;
+syuh--must be done; anukramat--one after another.
+<br>
 <h2>Translation</h2>
-My Lord, You are the Supreme Brahman, complete in everything. Being completely spiritual, You are
-eternal, free from the material modes of nature, and full of transcendental bliss. Indeed, for You there is
-no question of lamentation. Since You are the supreme cause, the cause of all causes, nothing can exist
-without You. Yet we are different from You in a relationship of cause and effect, for in one sense the cause
-and effect are different. You are the original cause of creation, manifestation and annihilation, and You
-bestow benedictions upon all living entities. Everyone depends upon You for the results of his activities,
-but You are always independent.
-<p></p>
+Bali Maharaja replied: All those present on this battlefield are certainly under the influence of eternal
+time, and according to their prescribed activities, they are destined to receive fame, victory, defeat and
+death, one after another.
+<br>
 <h2>Purport</h2>
-The Supreme Personality of Godhead says in Bhagavad-gita (9.4):
-maya tatam idam sarvam
-jagad avyakta-murtina
-mat-sthani sarva-bhutani
-na caham tesv avasthitah
-"By Me, in My unmanifested form, this entire universe is pervaded. All beings are in Me, but I am not in
-them." This explains the philosophy of simultaneous oneness and difference, known as acintyabhedabheda.
-Everything is the Supreme Brahman, the Personality of Godhead, yet the Supreme Person is
-differently situated from everything. Indeed, because the Lord is differently situated from everything
-material, He is the Supreme Brahman, the supreme cause, the supreme controller. Isvarah paramah krsnah
-sac-cid-ananda-vigrahah. The Lord is the supreme cause, and His form has nothing to do with the
-material modes of nature. The devotee prays: "As Your devotee is completely free from all desires, Your
-Lordship is also completely free from desires. You are fully independent. Although all living entities
-engage in Your service, You do not depend on the service of anyone. Although this material world is
-created complete by You, everything depends on Your sanction. As stated in Bhagavad-gita, mattah smrtir
-jnanam apohanam ca: remembrance, knowledge and forgetfulness come from You. Nothing can be done
-independently, yet You act independently of the service rendered by Your servants. The living entities
-depend on Your mercy for liberation, but when You want to give them liberation, You do not depend on
-anyone else. Indeed, by Your causeless mercy, You can give liberation to anyone. Those who receive Your
-mercy are called krpa-siddha. To reach the platform of perfection takes many, many lives (bahunam
-janmanam ante jnanavan mam prapadyate). Nonetheless, even without undergoing severe austerities, one
-can attain perfection by Your mercy. Devotional service should be unmotivated and free from
-impediments (ahaituky apratihata yayatma suprasidati). This is the position of nirasisah, or freedom from
-expectations for results. A pure devotee continuously offers transcendental loving service to You, but You
-may nonetheless offer mercy to anyone, without depending on his service."
+If one is victorious on the battlefield, he becomes famous; and if one is not victorious but is defeated, he
+may die. Both victory and defeat are possible, whether on such a battlefield as this or on the battlefield of
+the struggle for existence. Everything takes place according to the laws of nature (prakrteh kriyamanani
+gunaih karmani sarvasah). Since everyone, without exception, is subject to the modes of material nature,
+whether one is victorious or defeated he is not independent, but is under the control of material nature.
+Bali Maharaja, therefore, was very sensible. He knew that the fighting was arranged by eternal time and
+that under time's influence one must accept the results of one's own activities. Therefore even though
+Indra threatened that he would now kill Bali Maharaja by releasing the thunderbolt, Bali Maharaja was not
+at all afraid. This is the spirit of a ksatriya: yuddhe capy apalayanam (Bg. 18.43). A ksatriya must be
+tolerant in all circumstances, especially on the battlefield. Thus Bali Maharaja asserted that he was not at
+all afraid of death, although he was threatened by such a great personality as the King of heaven.
 </p>
 
 </div>
@@ -105,7 +124,7 @@ may nonetheless offer mercy to anyone, without depending on his service."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

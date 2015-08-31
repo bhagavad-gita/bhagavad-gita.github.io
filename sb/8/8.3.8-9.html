@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.3.8-9.html">8.3.8-9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.8-9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8-9"><b>8-9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 na vidyate yasya ca janma karma va
 na nama-rupe guna-dosa eva va
@@ -57,7 +96,7 @@ tasmai namah paresaya
 brahmane 'nanta-saktaye
 arupayoru-rupaya
 nama ascarya-karmane
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; vidyate--there is; yasya--of whom (the Supreme Personality of Godhead); ca--also; janma--birth;
 karma--activities; va--or; na--nor; nama-rupe--any material name or material form; guna--qualities;
@@ -68,14 +107,14 @@ transcendental; isaya--who is the supreme controller; brahmane--who is the Supre
 (Parabrahman); ananta-saktaye--with unlimited potency; arupaya--possessing no material form; ururupaya--
 possessing various forms as incarnations; namah--I offer my obeisances; ascarya-karmane--whose
 activities are wonderful.
-<p></p>
+<br>
 <h2>Translation</h2>
 The Supreme Personality of Godhead has no material birth, activities, name, form, qualities or faults. To
 fulfill the purpose for which this material world is created and destroyed, He comes in the form of a
 human being like Lord Rama or Lord Krsna by His original internal potency. He has immense potency,
 and in various forms, all free from material contamination, He acts wonderfully. He is therefore the
 Supreme Brahman. I offer my respects to Him.
-<p></p>
+<br>
 <h2>Purport</h2>
 In the Visnu Purana it is said, gunams ca dosams ca mune vyatita samasta-kalyana-gunatmako hi. The
 Supreme Personality of Godhead has no material form, qualities or faults. He is spiritual and is the only
@@ -107,7 +146,7 @@ Material names and forms are contaminated, but spiritual name and spiritual form
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

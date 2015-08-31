@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.16.18.html">8.16.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa brahma-varcasenaivam
-sabham sambhavito vatuh
-brahmarsi-gana-sanjustam
-atyarocata marisah
-<p></p>
+sri-suka uvaca
+evam abhyarthito 'ditya
+kas tam aha smayann iva
+aho maya-balam visnoh
+sneha-baddham idam jagat
+<br>
 <h2>Synonyms</h2>
-sah--He (Vamanadeva); brahma-varcasena--by His Brahman effulgence; evam--in this way; sabham--the
-assembly; sambhavitah--having been welcomed by everyone; vatuh--the brahmacari; brahma-rsi-ganasanjustam--
-filled with great brahmana sages; ati-arocata--surpassing, appeared beautiful; marisah--the best
-of the brahmacaris.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; evam--in this way; abhyarthitah--being requested; aditya--
+by Aditi; kah--Kasyapa Muni; tam--unto her; aha--said; smayan--smiling; iva--just like; aho--alas; mayabalam--
+the influence of the illusory energy; visnoh--of Lord Visnu; sneha-baddham--influenced by this
+affection; idam--this; jagat--whole world.
+<br>
 <h2>Translation</h2>
-Having thus been welcomed by everyone, Lord Vamanadeva, the best of the brahmacaris, exhibited His
-Brahman effulgence. Thus He surpassed in beauty that entire assembly, which was filled with great saintly
-brahmanas.
+Sukadeva Gosvami continued: When Kasyapa Muni was thus requested by Aditi, he slightly smiled.
+"Alas," he said, "how powerful is the illusory energy of Lord Visnu, by which the entire world is bound by
+affection for children!"
+<br>
+<h2>Purport</h2>
+Kasyapa Muni was surely sympathetic to his wife's affliction, yet he was surprised at how the whole
+world is influenced by affection.
 </p>
 
 </div>
@@ -71,7 +115,7 @@ brahmanas.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

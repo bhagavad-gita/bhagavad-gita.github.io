@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.18.21.html">8.18.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad vamanam rupam avardhatadbhutam
-harer anantasya guna-trayatmakam
-bhuh kham diso dyaur vivarah payodhayas
-tiryan-nr-deva rsayo yad-asata
-<p></p>
+tam narmadayas tata uttare baler
+ya rtvijas te bhrgukaccha-samjnake
+pravartayanto bhrgavah kratuttamam
+vyacaksatarad uditam yatha ravim
+<br>
 <h2>Synonyms</h2>
-tat--that; vamanam--incarnation of Lord Vamana; rupam--form; avardhata--began to increase more and
-more; adbhutam--certainly very wonderful; hareh--of the Supreme Personality of Godhead; anantasya--of
-the unlimited; guna-traya-atmakam--whose body is expanded by the material energy, consisting of three
-modes (goodness, passion and ignorance); bhuh--the land; kham--the sky; disah--all directions; dyauh--
-the planetary systems; vivarah--different holes of the universe; payodhayah--great seas and oceans;
-tiryak--lower animals, birds and beasts; nr--human beings; devah--demigods; rsayah--great saintly
-persons; yat--wherein; asata--lived.
-<p></p>
+tam--Him (Vamanadeva); narmadayah--of the River Narmada; tate--on the bank; uttare--northern;
+baleh--of Maharaja Bali; ye--who; rtvijah--the priests engaged in ritualistic ceremonies; te--all of them;
+bhrgukaccha-samjnake--in the field named Bhrgukaccha; pravartayantah--performing; bhrgavah--all the
+descendants of Bhrgu; kratu-uttamam--the most important sacrifice, named asvamedha; vyacaksata--they
+observed; arat--nearby; uditam--risen; yatha--like; ravim--the sun.
+<br>
 <h2>Translation</h2>
-The unlimited Supreme Personality of Godhead, who had assumed the form of Vamana, then began
-increasing in size, acting in terms of the material energy, until everything in the universe was within His
-body, including the earth, the planetary systems, the sky, the directions, the various holes in the universe,
-the seas, the oceans, the birds, beasts, human beings, the demigods and the great saintly persons.
-<p></p>
-<h2>Purport</h2>
-Bali Maharaja wanted to give charity to Vamanadeva, but the Lord expanded His body in such a way
-that He showed Bali Maharaja that everything in the universe is already in His body. Actually, no one can
-give anything to the Supreme Personality of Godhead, for He is full in everything. Sometimes we see a
-devotee offering Ganges water to the Ganges. After taking his bath in the Ganges, a devotee takes a
-palmful of water and offers it back to the Ganges. Actually, when one takes a palmful of water from the
-Ganges, the Ganges does not lose anything, and similarly if a devotee offers a palmful of water to the
-Ganges, the Ganges does not increase in any way. But by such an offering, the devotee becomes celebrated
-as a devotee of mother Ganges. Similarly, when we offer anything with devotion and faith, what we offer
-does not belong to us, nor does it enrich the opulence of the Supreme Personality of Godhead. But if one
-offers whatever he has in his possession, he becomes a recognized devotee. In this regard, the example is
-given that when one's face is decorated with a garland and sandalwood pulp, the reflection of one's face in
-a mirror automatically becomes beautiful. The original source of everything is the Supreme Personality of
-Godhead, who is our original source also. Therefore when the Supreme Personality of Godhead is
-decorated, the devotees and all living entities are decorated automatically.
+While engaged in performing the sacrifice in the field known as Bhrgukaccha, on the northern bank of
+the Narmada River, the brahminical priests, the descendants of Bhrgu, saw Vamanadeva to be like the sun
+rising nearby.
 </p>
 
 </div>
@@ -91,7 +111,7 @@ decorated, the devotees and all living entities are decorated automatically.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

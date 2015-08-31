@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.10.38.html">8.10.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tesam padaghata-rathanga-curnitad
 ayodhanad ulbana utthitas tada
 renur disah kham dyumanim ca chadayan
 nyavartatasrk-srutibhih pariplutat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tesam--of all the people engaged on the battlefield; padaghata--because of beating on the ground by the
 legs of the demons and demigods; ratha-anga--and by the wheels of the chariots; curnitat--which was
@@ -61,13 +100,13 @@ made into pieces of dust; ayodhanat--from the battlefield; ulbanah--very forcefu
 that time; renuh--the dust particles; disah--all directions; kham--outer space; dyumanim--up to the sun;
 ca--also; chadayan--covering all of space up to that; nyavartata--dropped floating in the air; asrk--of blood;
 srutibhih--by particles; pariplutat--because of being widely sprinkled.
-<p></p>
+<br>
 <h2>Translation</h2>
 Because of the impact on the ground of the legs of the demons and demigods and the wheels of the
 chariots, particles of dust flew violently into the sky and made a dust cloud that covered all directions of
 outer space, as far as the sun. But when the particles of dust were followed by drops of blood being
 sprinkled all over space, the dust cloud could no longer float in the sky.
-<p></p>
+<br>
 <h2>Purport</h2>
 The cloud of dust covered the entire horizon, but when drops of blood sprayed up as far as the sun, the
 dust cloud could no longer float in the sky. A point to be observed here is that although the blood is
@@ -87,7 +126,7 @@ is therefore impossible.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

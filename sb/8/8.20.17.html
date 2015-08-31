@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.17.html">8.20.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yaya hi vidvan api muhyate yatas
-tat ko vicaste gatim atmano yatha
-tasmai namas te jagad-isvaraya vai
-narayanayakhila-loka-saksine
-<p></p>
+vindhyavalis tadagatya
+patni jalaka-malini
+aninye kalasam haimam
+avanejany-apam bhrtam
+<br>
 <h2>Synonyms</h2>
-yaya--by which material opulence; hi--indeed; vidvan api--even a person fortunately advanced in
-education; muhyate--becomes bewildered; yatah--self-controlled; tat--that; kah--who; vicaste--can search
-for; gatim--the progress; atmanah--of the self; yatha--properly; tasmai--unto Him; namah--I offer my
-respectful obeisances; te--unto You; jagat-isvaraya--unto the Lord of the universe; vai--indeed;
-narayanaya--unto His Lordship Narayana; akhila-loka-saksine--who are the witness of all creation.
-<p></p>
+vindhyavalih--Vindhyavali; tada--at that time; agatya--coming there; patni--the wife of Maharaja Bali;
+jalaka-malini--decorated with a necklace of pearls; aninye--caused to be brought; kalasam--a waterpot;
+haimam--made of gold; avanejani-apam--with water for the sake of washing the Lord's feet; bhrtam--filled.
+<br>
 <h2>Translation</h2>
-Material opulence is so bewildering that it makes even a learned, self-controlled man forget to search for
-the goal of self-realization. But the Supreme Personality of Godhead, Narayana, the Lord of the universe,
-can see everything by His will. Therefore I offer my respectful obeisances unto Him.
-<p></p>
-<h2>Purport</h2>
-The words ko vicaste gatim atmano yatha indicate that when one is puffed up by the false prestige of
-possessing material opulence, he certainly neglects the goal of self-realization. This is the position of the
-modern world. Because of so-called scientific improvements in material opulence, people have entirely
-given up the path of self-realization. Practically no one is interested in God, one's relationship with God
-or how one should act. Modern men have altogether forgotten such questions because they are mad for
-material possessions. If this kind of civilization continues, the time will soon come when the Supreme
-Personality of Godhead will take away all the material opulences. Then people will come to their senses.
+Bali Maharaja's wife, known as Vindhyavali, who was decorated with a necklace of pearls, immediately
+came and had a large golden waterpot brought there, full of water with which to worship the Lord by
+washing His feet.
 </p>
 
 </div>
@@ -81,7 +109,7 @@ Personality of Godhead will take away all the material opulences. Then people wi
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

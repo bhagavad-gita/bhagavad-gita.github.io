@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.19.28.html">8.19.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam baddham varunaih pasair
-bhagavan aha vamanah
-nasta-sriyam sthira-prajnam
-udara-yasasam nrpa
-<p></p>
+sri-suka uvaca
+ity uktah sa hasann aha
+vanchatah pratigrhyatam
+vamanaya mahim datum
+jagraha jala-bhajanam
+<br>
 <h2>Synonyms</h2>
-tam--unto him; baddham--who was so arrested; varunaih pasaih--by the ropes of Varuna; bhagavan--the
-Supreme Personality of Godhead; aha--said; vamanah--Vamanadeva; nasta-sriyam--unto Bali Maharaja,
-who had lost his bodily luster; sthira-prajnam--but was all the same determined in his decision; udarayasasam--
-the most magnanimous and celebrated; nrpa--O King.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti uktah--thus being addressed; sah--he (Bali Maharaja);
+hasan--smiling; aha--said; vanchatah--as You have desired; pratigrhyatam--now take from me; vamanaya--
+unto Lord Vamana; mahim--land; datum--to give; jagraha--took; jala-bhajanam--the waterpot.
+<br>
 <h2>Translation</h2>
-O King, the Supreme Personality of Godhead, Vamanadeva, then spoke to Bali Maharaja, the most
-liberal and celebrated personality whom He had arrested with the ropes of Varuna. Bali Maharaja had lost
-all bodily luster, but he was nonetheless fixed in his determination.
-<p></p>
-<h2>Purport</h2>
-When one is bereft of all his possessions, he is certainly reduced in bodily luster. But although Bali
-Maharaja had lost everything, he was fixed in his determination to satisfy Vamanadeva, the Supreme
-Personality of Godhead. In Bhagavad-gita, such a person is called sthita-prajna. A pure devotee is never
-deviated from the service of the Lord, despite all difficulties and impediments offered by the illusory
-energy. Generally men who have wealth and opulence are famous, but Bali Maharaja became famous for
-all time by being deprived of all his possessions. This is the special mercy of the Supreme Personality of
-Godhead toward His devotees. The Lord says, yasyaham anugrhnami harisye tad-dhanam sanaih. As the
-first installment of His special favor, the Lord takes away all the possessions of His devotee. A devotee,
-however, is never disturbed by such a loss. He continues his service, and the Lord amply rewards him,
-beyond the expectations of any common man.
+Sukadeva Gosvami continued: When the Supreme Personality of Godhead had thus spoken to Bali
+Maharaja, Bali smiled and told Him, "All right. Take whatever You like." To confirm his promise to give
+Vamanadeva the desired land, he then took up his waterpot.
 </p>
 
 </div>
@@ -83,7 +110,7 @@ beyond the expectations of any common man.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

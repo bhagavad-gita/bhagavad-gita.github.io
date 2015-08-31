@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.1.html">8.17.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-suka uvaca
-iti vairocaner vakyam
-dharma-yuktam sa sunrtam
-nisamya bhagavan pritah
-pratinandyedam abravit
-<p></p>
+ity ukta saditi rajan
+sva-bhartra kasyapena vai
+anv atisthad vratam idam
+dvadasaham atandrita
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; vairocaneh--of the son of Virocana; vakyam--the
-words; dharma-yuktam--in terms of religious principles; sah--He; su-nrtam--very pleasing; nisamya--
-hearing; bhagavan--the Supreme Personality of Godhead; pritah--completely pleased; pratinandya--
-congratulating him; idam--the following words; abravit--said.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; ukta--being advised; sa--that lady; aditih--Aditi;
+rajan--O King; sva-bhartra--by her husband; kasyapena--Kasyapa Muni; vai--indeed; anu--similarly;
+atisthat--executed; vratam idam--this payo-vrata ritualistic ceremony; dvadasa-aham--for twelve days;
+atandrita--without any laziness.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami continued: When the Supreme Personality of Godhead, Vamanadeva, heard Bali
-Maharaja speaking in this pleasing way, He was very satisfied, for Bali Maharaja had spoken in terms of
-religious principles. Thus the Lord began to praise him.
+Sukadeva Gosvami said: O King, after Aditi was thus advised by her husband, Kasyapa Muni, she strictly
+followed his instructions without laziness and in this way performed the payo-vrata ritualistic ceremony.
+<br>
+<h2>Purport</h2>
+For advancement in anything, especially in spiritual life, one must strictly follow the bona fide
+instructions of the teacher. Aditi did this. She strictly followed the instructions of her husband and guru.
+As confirmed in the Vedic injunctions, yasya deve para bhaktir yatha deve tatha gurau. One should have
+complete faith in the guru, who helps the disciple make progress in spiritual life. As soon as the disciple
+thinks independently, not caring for the instructions of the spiritual master, he is a failure (yasyaprasadan
+na gatih kuto 'pi). Aditi very strictly followed the instructions of her husband and spiritual master, and
+thus she was successful.
 </p>
 
 </div>
@@ -72,7 +119,7 @@ religious principles. Thus the Lord began to praise him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

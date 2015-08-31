@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.11.34.html">8.11.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sarit-sarahsu sailesu
-vanesupavanesu ca
-yatra kva casann rsayas
-tatra sannihito harah
-<p></p>
+yena me purvam adrinam
+paksa-cchedah prajatyaye
+krto nivisatam bharaih
+patattraih patatam bhuvi
+<br>
 <h2>Synonyms</h2>
-sarit--near the shores of the rivers; sarahsu--and near the lakes; sailesu--near the mountains; vanesu--in
-the forests; upavanesu--in the gardens or small forests; ca--also; yatra--wherever; kva--anywhere; ca--also;
-asan--were exiting; rsayah--great sages; tatra--there; sannihitah--was present; harah--Lord Siva.
-<p></p>
+yena--by the same thunderbolt; me--by me; purvam--formerly; adrinam--of the mountains; paksacchedah--
+the cutting of the wings; praja-atyaye--when there was killing of the people in general; krtah--
+was done; nivisatam--of those mountains which entered; bharaih--by the great weight; patattraih--by
+wings; patatam--falling; bhuvi--on the ground.
+<br>
 <h2>Translation</h2>
-Following Mohini, Lord Siva went everywhere--near the shores of the rivers and lakes, near the
-mountains, near the forests, near the gardens, and wherever there lived great sages.
-<p></p>
-<h2>Purport</h2>
-Srila Visvanatha Cakravarti Thakura remarks that Mohini-murti dragged Lord Siva to so many places,
-especially to where the great sages lived, to instruct the sages that their Lord Siva had become mad for a
-beautiful woman. Thus although they were all great sages and saintly persons, they should not think
-themselves free, but should remain extremely cautious about beautiful women. No one should think
-himself liberated in the presence of a beautiful woman. The sastras enjoin:
-matra svasra duhitra va
-naviviktasano bhavet
-balavan indriya-gramo
-vidvamsam api karsati
-"One should not stay in a solitary place with a woman, even if she be his mother, sister or daughter, for
-the senses are so uncontrollably powerful that in the presence of a woman one may become agitated, even
-if he is very learned and advanced." (Bhag. 9.19.17)
+Indra thought: Formerly, when many mountains flying in the sky with wings would fall to the ground
+and kill people, I cut their wings with this same thunderbolt.
 </p>
 
 </div>
@@ -83,7 +109,7 @@ if he is very learned and advanced." (Bhag. 9.19.17)
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

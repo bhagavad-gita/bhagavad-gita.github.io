@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.20.16.html">8.20.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-prahrada uvaca
-tvayaiva dattam padam aindram urjitam
-hrtam tad evadya tathaiva sobhanam
-manye mahan asya krto hy anugraho
-vibhramsito yac chriya atma-mohanat
-<p></p>
+evam saptah sva-guruna
+satyan na calito mahan
+vamanaya dadav enam
+arcitvodaka-purvakam
+<br>
 <h2>Synonyms</h2>
-sri-prahradah uvaca--Prahlada Maharaja said; tvaya--by Your Lordship; eva--indeed; dattam--which had
-been given; padam--this position; aindram--of the King of heaven; urjitam--very, very great; hrtam--has
-been taken away; tat--that; eva--indeed; adya--today; tatha--as; eva--indeed; sobhanam--beautiful; manye--
-I consider; mahan--very great; asya--of him (Bali Maharaja); krtah--has been done by You; hi--indeed;
-anugrahah--mercy; vibhramsitah--being bereft of; yat--because; sriyah--from that opulence; atmamohanat--
-which was covering the process of self-realization.
-<p></p>
+evam--in this way; saptah--being cursed; sva-guruna--by his own spiritual master; satyat--from
+truthfulness; na--not; calitah--who moved; mahan--the great personality; vamanaya--unto Lord
+Vamanadeva; dadau--gave in charity; enam--all the land; arcitva--after worshiping; udaka-purvakam--
+preceded by offering of water.
+<br>
 <h2>Translation</h2>
-Prahlada Maharaja said: My Lord, it is Your Lordship who gave this Bali the very great opulence of the
-post of heavenly king, and now, today, it is You who have taken it all away. I think You have acted with
-equal beauty in both ways. Because his exalted position as King of heaven was putting him in the darkness
-of ignorance, You have done him a very merciful favor by taking away all his opulence.
-<p></p>
-<h2>Purport</h2>
-As it is said, yasyaham anugrhnami harisye tad-dhanam sanaih (Bhag. 10.88.8). It is by the mercy of the
-Lord that one gets all material opulence, but if such material opulence causes one to become puffed up
-and forget the process of self-realization, the Lord certainly takes all the opulence away. The Lord bestows
-mercy upon His devotee by helping him find out his constitutional position. For that purpose, the Lord is
-always ready to help the devotee in every way. But material opulence is sometimes dangerous because it
-diverts one's attention to false prestige by giving one the impression that he is the owner and master of
-everything he surveys, although actually this is not the fact. To protect the devotee from such a
-misunderstanding, the Lord, showing special mercy, sometimes takes away his material possessions.
-Yasyaham anugrhnami harisye tad-dhanam sanaih.
+Sukadeva Gosvami continued: Even after being cursed in this way by his own spiritual master, Bali
+Maharaja, being a great personality, never deviated from his determination. Therefore, according to
+custom, he first offered water to Vamanadeva and then offered Him the gift of land he had promised.
 </p>
 
 </div>
@@ -86,7 +110,7 @@ Yasyaham anugrhnami harisye tad-dhanam sanaih.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

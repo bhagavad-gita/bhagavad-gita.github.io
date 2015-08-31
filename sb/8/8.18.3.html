@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.18.3.html">8.18.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa caham vitta-lobhena
-pratyacakse katham dvijam
-pratisrutya dadamiti
-prahradih kitavo yatha
-<p></p>
+madhu-vrata-vrata-vighustaya svaya
+virajitah sri-vanamalaya harih
+prajapater vesma-tamah svarocisa
+vinasayan kantha-nivista-kaustubhah
+<br>
 <h2>Synonyms</h2>
-sah--such a person as I am; ca--also; aham--I am; vitta-lobhena--for being allured by greed for money;
-pratyacakse--I shall cheat or say no when I have already said yes; katham--how; dvijam--especially to a
-brahmana; pratisrutya--after already having promised; dadami--that I shall give; iti--thus; prahradih--I
-who am famous as the grandson of Maharaja Prahlada; kitavah--an ordinary cheater; yatha--just like.
-<p></p>
+madhu-vrata--of bees always hankering for honey; vrata--with a bunch; vighustaya--resounding; svaya--
+uncommon; virajitah--situated; sri--beautiful; vana-malaya--with a flower garland; harih--the Supreme
+Lord; prajapateh--of Kasyapa Muni, the Prajapati; vesma-tamah--the darkness of the house; sva-rocisa--by
+His own effulgence; vinasayan--vanquishing; kantha--on the neck; nivista--worn; kaustubhah--the
+Kaustubha gem.
+<br>
 <h2>Translation</h2>
-I am the grandson of Maharaja Prahlada. How can I withdraw my promise because of greed for money
-when I have already said that I shall give this land? How can I behave like an ordinary cheater, especially
-toward a brahmana?
-<p></p>
-<h2>Purport</h2>
-Bali Maharaja had already been blessed by his grandfather Prahlada Maharaja. Therefore, he was a pure
-devotee, although born in a family of demons. There are two kinds of highly elevated devotees, called
-sadhana-siddha and krpa-siddha. Sadhana-siddha refers to one who has become a devotee by regular
-execution of the regulative principles mentioned in the sastras, as ordered and directed by the spiritual
-master. If one regularly executes such devotional service, he will certainly attain perfection in due course
-of time. But there are other devotees, who may not have undergone all the required details of devotional
-service but who, by the special mercy of guru and Krsna--the spiritual master and the Supreme
-Personality of Godhead--have immediately attained the perfection of pure devotional service. Examples of
-such devotees are the yajna-patnis, Maharaja Bali and Sukadeva Gosvami. The yajna-patnis were the wives
-of ordinary brahmanas engaged in fruitive activities. Although the brahmanas were very learned and
-advanced in Vedic knowledge, they could not achieve the mercy of Krsna-Balarama, whereas their wives
-achieved complete perfection in devotional service, despite their being women. Similarly, Vairocani, Bali
-Maharaja, received the mercy of Prahlada Maharaja, and by Prahlada Maharaja's mercy he also received
-the mercy of Lord Visnu, who appeared before him as a brahmacari beggar. Thus Bali Maharaja became a
-krpa-siddha because of the special mercy of both guru and Krsna. Caitanya Mahaprabhu confirms this
-favor: guru-krsna-prasade paya bhakti-lata-bija (Cc. Madhya 19.151). Bali Maharaja, by the grace of
-Prahlada Maharaja, got the seed of devotional service, and when that seed developed, he achieved the
-ultimate fruit of that service, namely love of Godhead (prema pum-artho mahan), immediately upon the
-appearance of Lord Vamanadeva. Bali Maharaja regularly maintained devotion for the Lord, and because
-he was purified, the Lord appeared before him. Because of unalloyed love for the Lord, he then
-immediately decided, "I shall give this little dwarf brahmana whatever He asks from me." This is a sign of
-love. Thus Bali Maharaja is understood to be one who received the highest perfection of devotional service
-by special mercy.
+An uncommonly beautiful garland of flowers decorated His bosom, and because the flowers were
+extremely fragrant, a large group of bees, making their natural humming sounds, invaded them for honey.
+When the Lord appeared, wearing the Kaustubha gem on His neck, His effulgence vanquished the
+darkness in the home of the Prajapati Kasyapa.
 </p>
 
 </div>
@@ -96,7 +112,7 @@ by special mercy.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.7.32.html">8.7.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 kamadhvara-tripura-kalagarady-anekabhuta-
 druhah ksapayatah stutaye na tat te
 yas tv anta-kala idam atma-krtam sva-netravahni-
 sphulinga-sikhaya bhasitam na veda
-<p></p>
+<br>
 <h2>Synonyms</h2>
 kama-adhvara--sacrifices for sense gratification (like Daksa-yajna, the sacrifices performed by Daksa);
 tripura--the demon named Tripurasura; kalagara--Kalagara; adi--and others; aneka--many; bhuta-druhah--
@@ -62,13 +101,13 @@ stutaye--your prayer; na--not; tat--that; te--speaking to you; yah tu--because; 
 annihilation; idam--in this material world; atma-krtam--done by yourself; sva-netra--by your eyes; vahnisphulinga-
 sikhaya--by the sparks of fire; bhasitam--burned to ashes; na veda--I do not know how it is
 happening.
-<p></p>
+<br>
 <h2>Translation</h2>
 When annihilation is performed by the flames and sparks emanating from your eyes, the entire creation
 is burned to ashes. Nonetheless, you do not know how this happens. What then is to be said of your
 destroying the Daksa-yajna, Tripurasura and the kalakuta poison? Such activities cannot be subject
 matters for prayers offered to you.
-<p></p>
+<br>
 <h2>Purport</h2>
 Since Lord Siva considers the great acts he performs to be very unimportant, what was to be said of
 counteracting the strong poison produced by the churning? The demigods indirectly prayed that Lord
@@ -80,7 +119,7 @@ Siva counteract the kalakuta poison, which was spreading throughout the universe
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

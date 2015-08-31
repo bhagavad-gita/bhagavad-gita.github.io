@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.5.34.html">8.5.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 somam mano yasya samamananti
 divaukasam yo balam andha ayuh
 iso naganam prajanah prajanam
 prasidatam nah sa maha-vibhutih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 somam--the moon; manah--the mind; yasya--of whom (of the Supreme Personality of Godhead);
 samamananti--they say; divaukasam--of the denizens of the upper planetary systems; yah--who; balam--
 the strength; andhah--the food grains; ayuh--the duration of life; isah--the Supreme Lord; naganam--of the
 trees; prajanah--the source of breeding; prajanam--of all living entities; prasidatam--may He be pleased;
 nah--upon us; sah--that Supreme Personality of Godhead; maha-vibhutih--the source of all opulences.
-<p></p>
+<br>
 <h2>Translation</h2>
 Soma, the moon, is the source of food grains, strength and longevity for all the demigods. He is also the
 master of all vegetation and the source of generation for all living entities. As stated by learned scholars,
 the moon is the mind of the Supreme Personality of Godhead. May that Supreme Personality of Godhead,
 the source of all opulences, be pleased with us.
-<p></p>
+<br>
 <h2>Purport</h2>
 Soma, the predominating deity of the moon, is the source of food grains and therefore the source of
 strength even for the celestial beings, the demigods. He is the vital force for all vegetation. Unfortunately,
@@ -80,7 +119,7 @@ the vital force for all vegetation, and therefore we cannot possibly accept that
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/8/8.17.27.html">8.17.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasmat trini padany eva
-vrne tvad varadarsabhat
-etavataiva siddho 'ham
-vittam yavat prayojanam
-<p></p>
+tvam adir anto bhuvanasya madhyam
+ananta-saktim purusam yam ahuh
+kalo bhavan aksipatisa visvam
+sroto yathantah patitam gabhiram
+<br>
 <h2>Synonyms</h2>
-tasmat--because of being satisfied by things easily obtained; trini--three; padani--steps; eva--indeed;
-vrne--I ask; tvat--from your good self; varada-rsabhat--who are a munificent benedictor; etavata eva--
-merely by such an endowment; siddhah aham--I shall feel full satisfaction; vittam--achievement; yavat--as
-far as; prayojanam--is needed.
-<p></p>
+tvam--Your Lordship; adih--the original cause; antah--the cause of dissolution; bhuvanasya--of the
+universe; madhyam--maintenance of the present manifestation; ananta-saktim--the reservoir of unlimited
+potencies; purusam--the Supreme Person; yam--whom; ahuh--they say; kalah--the principle of eternal
+time; bhavan--Your Lordship; aksipati--attracting; isa--the Supreme Lord; visvam--the whole universe;
+srotah--waves; yatha--as; antah patitam--fallen within the water; gabhiram--very deep.
+<br>
 <h2>Translation</h2>
-Therefore, O King, from you, the best of those who give charity, I ask only three paces of land. By such
-a gift I shall be very pleased, for the way of happiness is to be fully satisfied to receive that which is
-absolutely needed.
+O my Lord, You are the beginning, the manifestation and the ultimate dissolution of the three worlds,
+and You are celebrated in the Vedas as the reservoir of unlimited potencies, the Supreme Person. O my
+Lord, as waves attract branches and leaves that have fallen into deep water, You, the supreme eternal time
+factor, attract everything in this universe.
+<br>
+<h2>Purport</h2>
+The time factor is sometimes described as kala-strota, waves of time. Everything in this material world is
+within the time factor and is being carried away by waves of attraction, which represent the Supreme
+Personality of Godhead.
 </p>
 
 </div>
@@ -71,7 +117,7 @@ absolutely needed.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
