@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.3.html">4.12.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-manye maha-bhagavatam
-naradam deva-darsanam
-yena proktah kriya-yogah
-paricarya-vidhir hareh
-<p></p>
+na bhavan avadhid yaksan
+na yaksa bhrataram tava
+kala eva hi bhutanam
+prabhur apyaya-bhavayoh
+<br>
 <h2>Synonyms</h2>
-manye--I think; maha-bhagavatam--the greatest of all devotees; naradam--the sage Narada; deva--the
-Supreme Personality of Godhead; darsanam--who met; yena--by whom; proktah--spoken; kriya-yogah--
-devotional service; paricarya--for rendering service; vidhih--the procedure; hareh--to the Supreme
-Personality of Godhead.
-<p></p>
+na--not; bhavan--you; avadhit--killed; yaksan--the Yaksas; na--not; yaksah--the Yaksas; bhrataram--
+brother; tava--your; kalah--time; eva--certainly; hi--for; bhutanam--of living entities; prabhuh--the
+Supreme Lord; apyaya-bhavayoh--of annihilation and generation.
+<br>
 <h2>Translation</h2>
-Vidura continued: I know that the great sage Narada is the greatest of all devotees. He has compiled the
-pancaratrika procedure of devotional service and has directly met the Supreme Personality of Godhead.
-<p></p>
+Actually, you have not killed the Yaksas, nor have they killed your brother, for the ultimate cause of
+generation and annihilation is the eternal time feature of the Supreme Lord.
+<br>
 <h2>Purport</h2>
-There are two different ways of approaching the Supreme Lord. One is called bhagavata-marga, or the
-way of Srimad-Bhagavatam, and the other is called pancaratrika-vidhi. Pancaratrika-vidhi is the method of
-temple worship, and bhagavata-vidhi is the system of nine processes which begin with hearing and
-chanting. The Krsna conscious movement accepts both processes simultaneously and thus enables one to
-make steady progress on the path of realization of the Supreme Personality of Godhead. This pancaratrika
-procedure was first introduced by the great sage Narada, as referred to here by Vidura.
+When the master of the treasury addressed him as sinless, Dhruva Maharaja, considering himself
+responsible for killing so many Yaksas, might have thought himself otherwise. Kuvera, however, assured
+him that factually he had not killed any of the Yaksas; therefore, he was not at all sinful. He did his duty
+as a king, as it is ordered by the laws of nature. "Nor should you think that your brother was killed by the
+Yaksas," said Kuvera. "He died or was killed in due course of time by the laws of nature. Eternal time, one
+of the features of the Lord, is ultimately responsible for annihilation and generation. You are not
+responsible for such actions."
 </p>
 
 </div>
@@ -78,7 +117,7 @@ procedure was first introduced by the great sage Narada, as referred to here by 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,64 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.59.html">4.22.59</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.59</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/59"><b>59</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na yasya cittam bahir-artha-vibhramam
-tamo-guhayam ca visuddham avisat
-yad-bhakti-yoganugrhitam anjasa
-munir vicaste nanu tatra te gatim
-<p></p>
+dharma-rad iva siksayam
+ascarye himavan iva
+kuvera iva kosadhyo
+guptartho varuno yatha
+<br>
 <h2>Synonyms</h2>
-na--never; yasya--whose; cittam--heart; bahih--external; artha--interest; vibhramam--bewildered;
-tamah--darkness; guhayam--in the hole; ca--also; visuddham--purified; avisat--entered; yat--that; bhaktiyoga--
-devotional service; anugrhitam--being favored by; anjasa--happily; munih--the thoughtful; vicaste--
-sees; nanu--however; tatra--there; te--Your; gatim--activities.
-<p></p>
+dharma-rat iva--like King Yamaraja (the superintendent of death); siksayam--in education; ascarye--in
+opulence; himavan iva--like the Himalaya Mountains; kuverah--the treasurer of the heavenly planets; iva--
+like; kosa-adhyah--in the matter of possessing wealth; gupta-arthah--secrecy; varunah--the demigod
+named Varuna; yatha--like.
+<br>
 <h2>Translation</h2>
-The devotee whose heart has been completely cleansed by the process of devotional service and who is
-favored by Bhaktidevi does not become bewildered by the external energy, which is just like a dark well.
-Being completely cleansed of all material contamination in this way, a devotee is able to understand very
-happily Your name, fame, form, activities, etc.
-<p></p>
+Maharaja Prthu's intelligence and education were exactly like that of Yamaraja, the superintendent of
+death. His opulence was comparable to the Himalaya Mountains, where all valuable jewels and metals are
+stocked. He possessed great riches like Kuvera, the treasurer of the heavenly planets, and no one could
+reveal his secrets, for they were like the demigod Varuna's.
+<br>
 <h2>Purport</h2>
-As stated in Srimad-Bhagavatam (3.25.25):
-satam prasangan mama virya-samvido
-bhavanti hrt-karna-rasayanah kathah
-taj-josanad asv apavarga-vartmani
-sraddha ratir bhaktir anukramisyati
-Simply by the association of pure devotees one can understand the transcendental name, fame, quality
-and activities of the Supreme Personality of Godhead. Sri Caitanya Mahaprabhu has repeatedly said:
-'sadhu-sanga', 'sadhu-sanga'----sarva-sastre kaya
-lava-matra sadhu-sange sarva-siddhi haya
-(Cc. Madhya 22.54)
-Simply by associating with a pure devotee, one becomes wonderfully advanced in Krsna consciousness.
-Sadhu-sanga, or association with a devotee, means always engaging in Krsna consciousness by chanting
-the Hare Krsna mantra and by acting for Krsna. Specifically, chanting the Hare Krsna mantra purifies one,
-and this chanting is therefore recommended by Sri Caitanya Mahaprabhu. Ceto-darpana-marjanam: by
-chanting the names of Krsna, the mirror of the heart is cleansed, and the devotee loses interest in
-everything external. When one is influenced by the external energy of the Lord, his heart is impure. When
-one's heart is not pure, he cannot see how things are related to the Supreme Personality of Godhead. Idam
-hi visvam bhagavan ivetarah (Bhag. 1.5.20). He whose heart is purified can see that the whole cosmic
-manifestation is but the Supreme Personality of Godhead, but he whose heart is contaminated sees things
-differently. Therefore by sat-sanga, or association with devotees, one becomes perfectly pure in heart.
-One who is pure in heart is never attracted by the external energy, which urges the individual soul to try
-to dominate material nature. The pure heart of a devotee is never disturbed when he executes devotional
-service in the form of hearing, chanting, remembering, etc. In all, there are nine processes one can follow
-in the execution of devotional service. In any case, a pure-hearted devotee is never disturbed. The bhaktiyoga
-process must be carried out by avoiding the ten offenses one can commit while chanting the mahamantra
-and the sixty-four offenses one can commit while worshiping the Deity. When a devotee strictly
-follows the rules and regulations, Bhaktidevi becomes very much satisfied with him, and at that time he is
-never disturbed by anything external. A devotee is also called a muni. The word muni means
-"thoughtful." A devotee is as thoughtful as a nondevotee is speculative. The nondevotee's speculation is
-impure, but a devotee's thoughts are pure. Lord Kapila and Sukadeva Gosvami are also called muni, and
-Vyasadeva is addressed as Mahamuni. A devotee is addressed as muni, or thoughtful, when he purely
-understands the Supreme Personality of Godhead. The conclusion is that when one's heart is purified by
-the association of devotees and by the avoidance of the offenses committed when chanting and
-worshiping the Lord, the transcendental name, form and activities of the Lord are revealed by the Lord.
+Yamaraja, or Dharmaraja, as the superintendent of death, has to judge the criminal living entities who
+have committed sinful activities throughout their lives. Consequently Yamaraja is expected to be most
+expert in judicial matters. Prthu Maharaja was also highly learned and exceedingly exact in delivering his
+judgment upon the citizens. No one could excel him in opulence any more than estimate the stock of
+minerals and jewels in the Himalaya Mountains; therefore he is compared to Kuvera, the treasurer of the
+heavenly planets. Nor could anyone discover the secrets of his life any more than learn the secrets of
+Varuna, the demigod presiding over the water, the night, and the western sky. Varuna is omniscient, and
+since he punishes sins, he is prayed to for forgiveness. He is also the sender of disease and is often
+associated with Mitra and Indra.
 </p>
 
 </div>
@@ -108,7 +122,7 @@ worshiping the Lord, the transcendental name, form and activities of the Lord ar
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.21.html">4.24.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kadacid atamana sa
-brahma-lokan mahim gatam
-vavre brhad-vratam mam tu
-janati kama-mohita
-<p></p>
+nila-raktotpalambhojakahlarendivarakaram
+hamsa-sarasa-cakrahvakarandava-
+nikujitam
+<br>
 <h2>Synonyms</h2>
-kadacit--once upon a time; atamana--traveling; sa--she; brahma-lokat--from Brahmaloka, the highest
-planet; mahim--on the earth; gatam--having come; vavre--she proposed; brhat-vratam--avowed
-brahmacari; mam--unto me; tu--then; janati--knowing; kama-mohita--being illusioned by lust.
-<p></p>
+nila--blue; rakta--red; utpala--lotus; ambhah-ja--born from the water; kahlara--another kind of lotus;
+indivara--another kind of lotus; akaram--the mine; hamsa--swans; sarasa--cranes; cakrahva--the ducks of
+the name; karandava--birds of the name; nikujitam--vibrated by their sounds.
+<br>
 <h2>Translation</h2>
-When I once came to this earth from Brahmaloka, the highest planetary system, the daughter of Time,
-wandering over the universe, met me. Knowing me to be an avowed brahmacari, she became lusty and
-proposed that I accept her.
-<p></p>
+In that great lake there were different types of lotus flowers. Some of them were bluish, and some of
+them were red. Some of them grew at night, some in the day and some, like the indivara lotus flower, in
+the evening. Combined together, the lotus flowers filled the lake so full that the lake appeared to be a
+great mine of such flowers. Consequently, on the shores there were swans and cranes, cakravaka,
+karandava and other beautiful water birds standing about.
+<br>
 <h2>Purport</h2>
-The great sage Narada Muni was a naisthika-brahmacari--that is, he never had sex life. He was
-consequently an ever-green youth. Old age, jara, could not attack him. The invalidity of old age can
-overcome an ordinary man, but Narada Muni was different. Taking Narada Muni to be an ordinary man,
-the daughter of Time confronted him with her lusty desire. It requires great strength to resist a woman's
-attraction. It is difficult for old men, and what to speak of young. Those who live as brahmacaris must
-follow in the footsteps of the great sage Narada Muni, who never accepted the proposals of Jara. Those
-who are too much sexually addicted become victims of jara, and very soon their life-span is shortened.
-Without utilizing the human form of life for Krsna consciousness the victims of jara die very soon in this
-world.
+The word akaram ("mine") is significant in this verse, for the reservoir of water appeared like a mine
+from which different types of lotus flowers were produced. Some of the lotus flowers grew during the day,
+some at night and some in the evening, and accordingly they had different names and different colors. All
+these flowers were present on that lake, and because the lake was so calm and quiet and filled with lotus
+flowers, superior birds, like swans, cakravakas and karandavas, stood on the shores and vibrated their
+different songs, making the entire scene attractive and beautiful. As there are different types of human
+beings, according to the association of the three qualities of material nature, there are similarly different
+types of birds, bees, trees, etc. Everything is divided according to the three qualities of material nature.
+Birds like swans and cranes, who enjoy clear waters and lotus flowers, are different from crows, who enjoy
+filthy places. Similarly, there are persons who are controlled by the modes of ignorance and passion and
+those who are controlled by the mode of goodness. The creation is so varied that there are always varieties
+found in every society. Thus on the bank of this lake all the superior birds lived to enjoy that atmosphere
+created by that great reservoir filled with lotus flowers.
 </p>
 
 </div>
@@ -81,7 +125,7 @@ world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

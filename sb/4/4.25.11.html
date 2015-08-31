@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,91 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.11.html">4.25.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhaya-namno 'grajo bhrata
-prajvarah pratyupasthitah
-dadaha tam purim krtsnam
-bhratuh priya-cikirsaya
-<p></p>
+so 'nvesamanah saranam
+babhrama prthivim prabhuh
+nanurupam yadavindad
+abhut sa vimana iva
+<br>
 <h2>Synonyms</h2>
-bhaya-namnah--of Bhaya (Fear); agra-jah--elder; bhrata--brother; prajvarah--named Prajvara;
-pratyupasthitah--being present there; dadaha--set fire; tam--to that; purim--city; krtsnam--wholesale;
-bhratuh--his brother; priya-cikirsaya--in order to please.
-<p></p>
+sah--that King Puranjana; anvesamanah--searching after; saranam--shelter; babhrama--traveled over;
+prthivim--the whole planet earth; prabhuh--to become an independent master; na--never; anurupam--to
+his liking; yada--when; avindat--he could find; abhut--became; sah--he; vimanah--morose; iva--like.
+<br>
 <h2>Translation</h2>
-Under the circumstances, the elder brother of Yavana-raja, known as Prajvara, set fire to the city to
-please his younger brother, whose other name is fear itself.
-<p></p>
+King Puranjana began to search for a suitable place to live, and thus he traveled all over the world. Even
+after a great deal of traveling, he could not find a place just to his liking. Finally he became morose and
+disappointed.
+<br>
 <h2>Purport</h2>
-According to the Vedic system, a dead body is set on fire, but before death there is another fire, or fever,
-which is called prajvara, or visnu-jvara. Medical science verifies that when one's temperature is raised to
-last stage of life places the living entity in the midst of a blazing fire.
+The travelings of Puranjana are similar to the travelings of the modern hippies. Generally hippies are
+sons of great fathers and great families. It is not that they are always poor. But some way or another they
+abandon the shelter of their rich fathers and travel all over the world. As stated in this verse, the living
+entity wants to become a prabhu, or master. The word prabhu means "master," but actually the living
+entity is not a master; he is the eternal servant of God. When the living entity abandons the shelter of
+God, Krsna, and tries to become a prabhu independently, he travels all over the creation. There are
+8,400,000 species of life and millions and millions and trillions of planets within the creation. The living
+entity wanders throughout these various types of bodies and throughout different planets, and thus he is
+like King Puranjana, who traveled all over the world looking for a suitable place to live.
+Sri Narottama dasa Thakura has sung, karma-kanda, jnana-kanda, kevala visera bhanda: "The path of
+karma-kanda [fruitive activities] and the path of jnana-kanda [speculation] are just like strong pots of
+poison." Amrta baliya yeba khaya, nana yoni sada phire: "A person who mistakes this poison to be nectar
+and drinks it travels in different species of life." Kadarya bhaksana kare: "And, according to his body, he
+eats all types of abominable things." For instance, when the living entity is in the body of a hog, he eats
+stool. When the living entity is in the body of a crow, he eats all kinds of refuse, even pus and mucus, and
+enjoys it. Thus Narottama dasa Thakura points out that the living entity travels in different types of
+bodies and eats all kinds of abominable things. When he does not become ultimately happy, he becomes
+morose or takes to the ways of hippies.
+Thus in this verse it is said (na anurupam) that the King could never find a place suitable for his
+purposes. This is because in any form of life and on any planet in the material world, a living entity
+cannot be happy because everything in the material world is unsuitable for the spirit soul. As stated in this
+verse, the living entity independently wants to become a prabhu, but as soon as he gives up this idea and
+becomes a servant of God, Krsna, his happiness immediately begins. Therefore Srila Bhaktivinoda
+Thakura sings:
+miche mayara vase, yaccha bhese',
+khaccha habudubu, bhai
+"My dear living entity, why are you being carried away by the waves of maya?" As stated in the
+Bhagavad-gita (18.61):
+isvarah sarva-bhutanam
+hrd-dese 'rjuna tisthati
+bhramayan sarva-bhutani
+yantrarudhani mayaya
+"The Supreme Lord is situated in everyone's heart, O Arjuna, and is directing the wanderings of all
+living entities, who are seated as on a machine, made of the material energy."
+The living entity is carried in the machine of the body through so many species of life on so many
+planets. Therefore Bhaktivinoda Thakura asks the living entity why he is being carried away in these
+bodily machines to be placed in so many different circumstances. He advises that one surmount the waves
+of maya by surrendering unto Krsna.
+jiva krsna-dasa, ei visvasa,
+karle ta' ara duhkha nai
+As soon as we confront Krsna, Krsna advises:
+sarva-dharman parityajya
+mam ekam saranam vraja
+aham tvam sarva-papebhyo
+moksayisyami ma sucah
+"Abandon all varieties of religion and just surrender unto Me. I shall deliver you from all sinful reaction.
+Do not fear." (Bg. 18.66)
+Thus we are immediately relieved from traveling from one body to another and from one planet to
+another. Sri Caitanya Mahaprabhu says: brahmanda bhramite kona bhagyavan jiva (Cc. Madhya 19.151).
+If, while traveling, a living entity becomes fortunate enough to become blessed by the association of
+devotees and to come to Krsna consciousness, his real life actually begins. This Krsna consciousness
+movement is giving all wandering living entities a chance to take to the shelter of Krsna and thus become
+happy.
+In this verse the words vimana iva are very significant. In this material world even the great King of
+heaven is also full of anxiety. If even Lord Brahma is full of anxiety, what of these ordinary living entities
+who are working within this planet? Bhagavad-gita (8.16) confirms:
+abrahma-bhuvanal lokah
+punar avartino 'rjuna
+"From the highest planet in the material world down to the lowest, all are places of misery wherein
+repeated birth and death take place." In the material world a living entity is never satisfied. Even in the
+position of Brahma or in the position of Indra or Candra, one is full of anxiety simply because he has
+accepted this material world as a place of happiness.
 </p>
 
 </div>
@@ -74,7 +173,7 @@ last stage of life places the living entity in the midst of a blazing fire.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

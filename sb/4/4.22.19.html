@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.19.html">4.22.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-pracetasah pitur vakyam
-sirasadaya sadhavah
-disam praticim prayayus
-tapasy adrta-cetasah
-<p></p>
+sangamah khalu sadhunam
+ubhayesam ca sammatah
+yat-sambhasana-samprasnah
+sarvesam vitanoti sam
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great sage Maitreya continued to speak; pracetasah--all the sons of King
-Pracinabarhi; pituh--of the father; vakyam--words; sirasa--on the head; adaya--accepting; sadhavah--all
-pious; disam--direction; praticim--western; prayayuh--went away; tapasi--in austerities; adrta--accepting
-seriously; cetasah--in the heart.
-<p></p>
+sangamah--association; khalu--certainly; sadhunam--of devotees; ubhayesam--for both; ca--also;
+sammatah--conclusive; yat--which; sambhasana--discussion; samprasnah--question and answer;
+sarvesam--of all; vitanoti--expands; sam--real happiness.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued: My dear Vidura, because of their pious nature, all the sons of
-Pracinabarhi very seriously accepted the words of their father with heart and soul, and with these words
-on their heads, they went toward the west to execute their father's order.
-<p></p>
+When there is a congregation of devotees, their discussions, questions and answers become conclusive
+to both the speaker and the audience. Thus such a meeting is beneficial for everyone's real happiness.
+<br>
 <h2>Purport</h2>
-In this verse sadhavah (meaning "pious" or "well behaved") is very important, especially at the present
-moment. It is derived from the word sadhu. A perfect sadhu is one who is always engaged in the
-devotional service of the Supreme Personality of Godhead. Pracinabarhi's sons are described as sadhavah
-because of their complete obedience to their father. The father, king and spiritual master are supposed to
-be representatives of the Supreme Personality of Godhead, and as such they have to be respected as the
-Supreme Lord. It is the duty of the father, the spiritual master and the king to regulate their subordinates
-in such a way that they ultimately become fully unalloyed devotees of the Supreme Lord. That is the duty
-of the superiors, and it is the duty of the subordinates to obey their orders perfectly and in a disciplined
-way. The word sirasa ("on their heads") is also significant, for the Pracetas accepted the orders of their
-father and carried them on their heads, which means they accepted them in complete surrender.
+Hearing discussions among the devotees is the only means to receive the powerful message of the
+Supreme Personality of Godhead. For instance, Bhagavad-gita has been well known all over the world for
+a very long time, especially in the Western world, but because the subject matter was not discussed by
+devotees, there was no effect. Not a single person in the West became Krsna conscious before the Krsna
+consciousness movement was founded. But when the same Bhagavad-gita was presented as it is through
+the disciplic succession, the effect of spiritual realization was immediately manifested.
+Sanat-kumara, one of the Kumaras, informed Prthu Maharaja that his meeting with the Kumaras
+benefited not only Maharaja Prthu but the Kumaras as well. When Narada Muni questioned Lord Brahma
+about the Supreme Personality of Godhead, Lord Brahma thanked Narada Muni for giving him a chance
+to speak about the Supreme Lord. Therefore questions put by a saintly person to another saintly person
+about the Supreme Personality of Godhead or about the ultimate goal of life surcharge everything
+spiritually. Whoever takes advantage of such discussions is benefited both in this life and in the next.
+The word ubhayesam can be described in many ways. Generally there are two classes of men, the
+materialist and the transcendentalist. By hearing discussions between devotees, both the materialist and
+transcendentalist are benefited. The materialist is benefited by association with devotees because his life
+then becomes regulated so that his chance of becoming a devotee or making the present life successful for
+understanding the real position of the living entity is increased. When one takes advantage of this
+opportunity, he is assured of a human form of life in the next birth, or he may be liberated completely and
+go back home, back to Godhead. The conclusion is that if one participates in a discussion of devotees, he
+is both materially and spiritually benefited. The speaker and the audience are both benefited, and the
+karmis and jnanis are benefited. The discussion of spiritual matters amongst devotees is beneficial for
+everyone, without exception. Consequently the Kumaras admitted that not only was the King benefited by
+such a meeting, but the Kumaras were as well.
 </p>
 
 </div>
@@ -84,7 +133,7 @@ father and carried them on their heads, which means they accepted them in comple
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

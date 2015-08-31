@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.28.html">4.10.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yah panca-varso jananim tvam vihaya
-matuh sapatnya vacasa bhinna-marma
-vanam gatas tapasa pratyag-aksam
-aradhya lebhe murdhni padam tri-lokyah
-<p></p>
+evam-vidhany anekani
+trasanany amanasvinam
+sasrjus tigma-gataya
+asurya mayayasurah
+<br>
 <h2>Synonyms</h2>
-yah--one who; panca-varsah--five years old; jananim--mother; tvam--you; vihaya--leaving aside; matuh--
-of the mother; sa-patnyah--of the co-wife; vacasa--by the words; bhinna-marma--aggrieved at heart;
-vanam--to the forest; gatah--went; tapasa--by austerity; pratyak-aksam--the Supreme Lord; aradhya--
-worshiping; lebhe--achieved; murdhni--on the top; padam--the position; tri-lokyah--of the three worlds.
-<p></p>
+evam-vidhani--(phenomena) like this; anekani--many varieties of; trasanani--fearful; amanasvinam--to
+the less intelligent men; sasrjuh--they created; tigma-gatayah--of heinous nature; asurya--demoniac;
+mayaya--by illusion; asurah--the demons.
+<br>
 <h2>Translation</h2>
-My dear Dhruva, at the age of only five years you were very grievously afflicted by the words of your
-mother's co-wife, and you very boldly gave up the protection of your mother and went to the forest to
-engage in the yogic process for realization of the Supreme Personality of Godhead. As a result of this you
-have already achieved the topmost position in all the three worlds.
-<p></p>
-<h2>Purport</h2>
-Manu was very proud that Dhruva Maharaja was one of the descendants in his family because at the age
-of only five years Dhruva began meditating upon the Supreme Personality of Godhead and within six
-months he was able to see the Supreme Lord face to face. Factually, Dhruva Maharaja is the glory of the
-Manu dynasty, or the human family. The human family begins from Manu. The Sanskrit word for man is
-manusya, which means "descendant of Manu." Not only is Dhruva Maharaja the glory of the family of
-Svayambhuva Manu, but he is the glory of the entire human society. Because Dhruva Maharaja had
-already surrendered to the Supreme Godhead, he was especially requested not to do anything unbefitting
-a surrendered soul.
+The demon Yaksas are by nature very heinous, and by their demoniac power of illusion they can create
+many strange phenomena to frighten one who is less intelligent.
 </p>
 
 </div>
@@ -82,7 +108,7 @@ a surrendered soul.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

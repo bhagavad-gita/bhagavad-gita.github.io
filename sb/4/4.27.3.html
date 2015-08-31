@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,53 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.3.html">4.27.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-pracetaso 'ntar udadhau
-pitur adesa-karinah
-japa-yajnena tapasa
-puranjanam atosayan
-<p></p>
+tayopagudhah parirabdha-kandharo
+raho 'numantrair apakrsta-cetanah
+na kala-ramho bubudhe duratyayam
+diva niseti pramada-parigrahah
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--Maitreya said; pracetasah--the Pracetas; antah--within; udadhau--the sea; pituh--of
-their father; adesa-karinah--the order carriers; japa-yajnena--by chanting mantras; tapasa--under severe
-austerities; puram-janam--the Supreme Personality of Godhead; atosayan--satisfied.
-<p></p>
+taya--by the Queen; upagudhah--was embraced; parirabdha--embraced; kandharah--shoulders; rahah--in
+a solitary place; anumantraih--by joking words; apakrsta-cetanah--having degraded consciousness; na--
+not; kala-ramhah--the passing of time; bubudhe--was aware of; duratyayam--impossible to overcome;
+diva--day; nisa--night; iti--thus; pramada--by the woman; parigrahah--captivated.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya said: The sons of King Pracinabarhi, known as the Pracetas, underwent severe
-austerities within the seawater to carry out the order of their father. By chanting and repeating the
-mantras given by Lord Siva, they were able to satisfy Lord Visnu, the Supreme Personality of Godhead.
-<p></p>
+Queen Puranjani embraced the King, and the King also responded by embracing her shoulders. In this
+way, in a solitary place, they enjoyed joking words. Thus King Puranjana became very much captivated by
+his beautiful wife and deviated from his good sense. He forgot that the passing of days and nights meant
+that his span of life was being reduced without profit.
+<br>
 <h2>Purport</h2>
-One can offer prayers to the Supreme Personality of Godhead directly, but if one repeats the prayers
-offered by great devotees like Lord Siva and Lord Brahma, or if one follows in the footsteps of great
-personalities, one can please the Supreme Personality of Godhead very easily. For instance, we sometimes
-chant this mantra of Brahma-samhita (5.29):
-cintamani-prakara-sadmasu kalpa-vrksalaksavrtesu
-surabhir abhipalayantam
-laksmi-sahasra-sata-sambhrama-sevyamanam
-govindam adi-purusam tam aham bhajami
-"I worship Govinda, the primeval Lord, the first progenitor, who is tending the cows, yielding all
-desires, in abodes built with spiritual gems and surrounded by millions of purpose trees. He is always
-served with great reverence and affection by hundreds of thousands of laksmis, or gopis." Because this
-prayer was offered by Lord Brahma, we follow him by reciting this prayer. That is the easiest way to satisfy
-the Supreme Personality of Godhead. The pure devotee never attempts to reach the Supreme Lord
-directly. The most important way to worship the Lord is to go through the disciplic succession of
-devotees. The prayers offered by Lord Siva to the Supreme Personality of Godhead were thus repeated by
-the Pracetas, who were thus very successful in pleasing the Supreme Lord.
-Here the Supreme Personality of Godhead is described as puranjana. According to Madhvacarya, the
-living entity is called puranjana because he has become an inhabitant of this material world, and under
-the influence of the three modes of material nature, he is forced to live within it. The Supreme Personality
-of Godhead creates this material world (pura), and He also enters within it. Andantara-stha-paramanucayantara-
-stham. The Lord enters within the heart of the living entity and within the atom; therefore both
-the living entity and the Lord are called puranjana. One puranjana, the living entity, is subordinate to the
-supreme puranjana; therefore the duty of the subordinate puranjana is to satisfy the supreme puranjana.
-That is devotional service. Lord Rudra, or Lord Siva, is the original acarya of the Vaisnava sampradaya
-called the Rudra-sampradaya. Rudra-gitena indicates that under the disciplic succession of Lord Rudra,
-the Pracetas achieved spiritual success.
+The word pramada in this verse is very significant. A beautiful wife is certainly enlivening to her
+husband, but at the same time is the cause of degradation. The word pramada means "enlivening" as well
+as "maddening." Generally a householder does not take the passing of days and nights very seriously. A
+person in ignorance takes it as the usual course that days come, and after the days, the nights come. This
+is the law of material nature. But a man in ignorance does not know that when the sun rises early in the
+morning it begins to take away the balance of his life. Thus day after day the span of one's life is reduced,
+and forgetting the duty of human life, the foolish man simply remains in the company of his wife and
+enjoys her in a secluded place. Such a condition is called apakrsta-cetana, or degraded consciousness.
+Human consciousness should be used for elevation to Krsna consciousness. But when a person is too
+much attracted to his wife and family affairs, he does not take Krsna consciousness very seriously. He thus
+becomes degraded, not knowing that he cannot buy back even a second of his life in return for millions of
+dollars. The greatest loss in life is passing time without understanding Krsna. Every moment of our lives
+should be utilized properly, and the proper use of life is to increase devotional service to the Lord.
+Without devotional service to the Lord, the activities of life become simply a waste of time. Srama eva hi
+kevalam. Simply by becoming "dutiful" we do not make any profit in life. As confirmed in Srimad-
+Bhagavatam (1.2.8):
+dharmah svanusthitah pumsam
+visvaksena-kathasu yah
+notpadayed yadi ratim
+srama eva hi kevalam
+If, after performing one's occupational duty very perfectly, one does not make progress in Krsna
+consciousness, it should be understood that he has simply wasted his time in valueless labor.
 </p>
 
 </div>
@@ -99,7 +135,7 @@ the Pracetas achieved spiritual success.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

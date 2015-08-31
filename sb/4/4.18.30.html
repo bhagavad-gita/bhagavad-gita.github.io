@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.30.html">4.18.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na vadhyo bhavatam indro
-yad yajno bhagavat-tanuh
-yam jighamsatha yajnena
-yasyestas tanavah surah
-<p></p>
+athasmin bhagavan vainyah
+prajanam vrttidah pita
+nivasan kalpayam cakre
+tatra tatra yatharhatah
+<br>
 <h2>Synonyms</h2>
-na--not; vadhyah--ought to be killed; bhavatam--by all of you; indrah--the King of heaven; yat--because;
-yajnah--a name of Indra; bhagavat-tanuh--part of the body of the Supreme Personality of Godhead; yam--
-whom; jighamsatha--you wish to kill; yajnena--by performing sacrifice; yasya--of Indra; istah--being
-worshiped; tanavah--parts of the body; surah--the demigods.
-<p></p>
+atha--thus; asmin--on this planet earth; bhagavan--the Personality of Godhead; vainyah--son of Vena;
+prajanam--of the citizens; vrttidah--who supplies employment; pita--a father; nivasan--residences;
+kalpayam--suitable; cakre--make; tatra tatra--here and there; yatha--as; arhatah--desirable, suitable.
+<br>
 <h2>Translation</h2>
-Lord Brahma addressed them thus: My dear sacrificial performers, you cannot kill Indra, the King of
-heaven. It is not your duty. You should know that Indra is as good as the Supreme Personality of
-Godhead. Indeed, he is one of the most powerful assistants of the Personality of Godhead. You are trying
-to satisfy all the demigods by the performance of this yajna, but you should know that all these demigods
-are but parts and parcels of Indra, the King of heaven. How, then, can you kill him in this great sacrifice?
+To all the citizens of the state, King Prthu was as good as a father. Thus he was visibly engaged in giving
+them proper subsistence and proper employment for subsistence. After leveling the surface of the globe,
+he earmarked different places for residential quarters, inasmuch as they were desirable.
 </p>
 
 </div>
@@ -73,7 +109,7 @@ are but parts and parcels of Indra, the King of heaven. How, then, can you kill 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

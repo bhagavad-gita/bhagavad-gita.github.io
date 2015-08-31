@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,60 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.36.html">4.6.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yajamany uvaca
-svagatam te prasidesa tubhyam namah
-srinivasa sriya kantaya trahi nah
-tvam rte 'dhisa nangair makhah sobhate
-sirsa-hinah ka-bandho yatha purusah
-<p></p>
+lingam ca tapasabhistam
+bhasma-danda-jatajinam
+angena sandhyabhra-ruca
+candra-lekham ca bibhratam
+<br>
 <h2>Synonyms</h2>
-yajamani--the wife of Daksa; uvaca--prayed; su-agatam--auspicious appearance; te--Your; prasida--
-become pleased; isa--my dear Lord; tubhyam--unto You; namah--respectful obeisances; srinivasa--O abode
-of the goddess of fortune; sriya--with Laksmi; kantaya--Your wife; trahi--protect; nah--us; tvam--You; rte--
-without; adhisa--O supreme controller; na--not; angaih--with bodily limbs; makhah--the sacrificial arena;
-sobhate--is beautiful; sirsa-hinah--without the head; ka-bandhah--possessed of only a body; yatha--as;
-purusah--a person.
-<p></p>
+lingam--symptom; ca--and; tapasa-abhistam--desired by Saivite ascetics; bhasma--ashes; danda--staff;
+jata--matted hair; ajinam--antelope skin; angena--with his body; sandhya-abhra--reddish; ruca--colored;
+candra-lekham--the crest of a half-moon; ca--and; bibhratam--bearing.
+<br>
 <h2>Translation</h2>
-The wife of Daksa prayed as follows: My dear Lord, it is very fortunate that You have appeared in this
-arena of sacrifice. I offer my respectful obeisances unto You, and I request that You be pleased on this
-occasion. The sacrificial arena is not beautiful without You, just as a body is not beautiful without the
-head.
-<p></p>
+He was seated on a deerskin and was practicing all forms of austerity. Because his body was smeared
+with ashes, he looked like an evening cloud. On his hair was the sign of a half-moon, a symbolic
+representation.
+<br>
 <h2>Purport</h2>
-Another name of Lord Visnu is Yajnesvara. In Bhagavad-gita it is said that all activities should be
-performed as Visnu-yajna, for the pleasure of Lord Visnu. Unless we please Him, whatever we do is the
-cause of our bondage in the material world. This is confirmed herein by the wife of Daksa: "Without Your
-presence, the grandeur of this sacrificial ceremony is useless, just as a body without the head, however
-decorated it may be, is useless." The comparison is equally applicable to the social body. Material
-civilization is very proud of being advanced, but it is actually the useless trunk of a body without a head.
-Without Krsna consciousness, without an understanding of Visnu, the Supreme personality of Godhead,
-any advancement in a civilization, no matter how sophisticated, is of no value. There is a statement in the
-Hari-bhakti-sudhodaya (3.11):
-bhagavad-bhakti-hinasya
-jatih sastram japas tapah
-apranasyaiva dehasya
-mandanam loka-ranjanam
-The purport is that sometimes when a friend or relative dies, especially among lower class men, the
-dead body is decorated. Dressed and ornamented, the body is taken in procession. That sort of decoration
-of the dead body has no actual value because the life force is already gone. Similarly, any aristocracy, any
-social prestige or any advancement of material civilization without Krsna consciousness is as good as the
-decoration of a dead body. The name of the wife of Daksa was Prasuti, and she was the daughter of
-Svayambhuva Manu. Her sister, Devahuti, was married to Kardama Muni, and Kapiladeva, the Personality
-of Godhead, became her son. Prasuti, then, was the aunt of Lord Visnu. She was asking the favor of Lord
-Visnu in an affectionate mode; since she was His aunt, she sought some special favor. Also significant in
-this verse is that the Lord is praised with the goddess of fortune. Wherever Lord Visnu is worshiped,
-naturally there is the favor of the goddess of fortune. Lord Visnu is addressed as amrta, transcendental.
-The demigods, including Brahma and Lord Siva, were produced after the creation, but Lord Visnu existed
-before the creation. He is addressed, therefore, as amrta. Lord Visnu is worshiped with His internal energy
-by the Vaisnavas. Prasuti, the wife of Daksa, implored the Lord to turn the priests into Vaisnavas instead
-of simply fruitive workers performing sacrifices for some material benefits.
+Lord Siva's symptoms of austerity are not exactly those of a Vaisnava. Lord Siva is certainly the number
+one Vaisnava, but he exhibits a feature for a particular class of men who cannot follow the Vaisnava
+principles. The Saivites, the devotees of Lord Siva, generally dress like Lord Siva, and sometimes they
+indulge in smoking and taking intoxicants. Such practices are never accepted by the followers of Vaisnava
+rituals.
 </p>
 
 </div>
@@ -104,7 +116,7 @@ of simply fruitive workers performing sacrifices for some material benefits.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.10.html">4.21.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhagavad-dharminah sadhoh
-sraddhaya yatatah sada
-bhaktir bhagavati brahmany
-ananya-visayabhavat
-<p></p>
+ko nv asya kirtim na srnoty abhijno
+yad-vikramocchistam asesa-bhupah
+lokah sa-pala upajivanti kamam
+adyapi tan me vada karma suddham
+<br>
 <h2>Synonyms</h2>
-bhagavat-dharminah--one who executes devotional service; sadhoh--of the devotee; sraddhaya--with
-faith; yatatah--endeavoring; sada--always; bhaktih--devotion; bhagavati--unto the Personality of Godhead;
-brahmani--the origin of impersonal Brahman; ananya-visaya--firmly fixed without deviation; abhavat--
-became.
-<p></p>
+kah--who; nu--but; asya--King Prthu; kirtim--glorious activities; na srnoti--does not hear; abhijnah--
+intelligent; yat--his; vikrama--chivalry; ucchistam--remnants; asesa--innumerable; bhupah--kings; lokah--
+planets; sa-palah--with their demigods; upajivanti--execute livelihood; kamam--desired objects; adya api--
+up to that; tat--that; me--unto me; vada--please speak; karma--activities; suddham--auspicious.
+<br>
 <h2>Translation</h2>
-Maharaja Prthu thus engaged completely in devotional service, executing the rules and regulations
-strictly according to principles, twenty-four hours daily. Thus his love and devotion unto the Supreme
-Personality of Godhead, Krsna, developed and became unflinching and fixed.
-<p></p>
+Prthu Maharaja was so great in his activities and magnanimous in his method of ruling that all the kings
+and demigods on the various planets still follow in his footsteps. Who is there who will not try to hear
+about his glorious activities? I wish to hear more and more about Prthu Maharaja because his activities are
+so pious and auspicious.
+<br>
 <h2>Purport</h2>
-The word bhagavad-dharminah indicates that the religious process practiced by Maharaja Prthu was
-beyond all pretensions. As stated in the beginning of Srimad-Bhagavatam (1.1.2), dharmah projjhitakaitavo
-'tra: religious principles which are simply pretentious are actually nothing but cheating. Bhagavaddharminah
-is described by Viraraghava Acarya as nivrtta-dharmena, which indicates that it cannot be
-contaminated by material aspiration. As described by Srila Rupa Gosvami:
-anyabhilasita-sunyam
-jnana-karmady-anavrtam
-anukulyena krsnanusilanam
-bhaktir uttama
-When one who is not inspired by material desires and is not contaminated by the processes of fruitive
-activity and empiric speculation fully engages in the favorable service of the Lord, his service is called
-bhagavad-dharma, or pure devotional service. In this verse the word brahmani does not refer to the
-impersonal Brahman. Impersonal Brahman is a subordinate feature of the Supreme personality of
-Godhead, and since impersonal Brahman worshipers desire to merge into the Brahman effulgence, they
-cannot be considered followers of bhagavad-dharma. After being baffled in his material enjoyment, the
-impersonalist may desire to merge into the existence of the Lord, but a pure devotee of the Lord has no
-such desire. Therefore a pure devotee is really bhagavad-dharmi.
-It is clear from this verse that Maharaja Prthu was never a worshiper of the impersonal Brahman but was
-at all times a pure devotee of the Supreme Personality of Godhead. Bhagavati brahmani refers to one who
-is engaged in devotional service to the Personality of Godhead. A devotee's knowledge of the impersonal
-Brahman is automatically revealed, and he is not interested in merging into the impersonal Brahman.
-Maharaja Prthu's activities in devotional service enabled him to become fixed and steady in the discharge
-of devotional activities without having to take recourse to karma, jnana or yoga.
+Saint Vidura's purpose in hearing about Prthu Maharaja over and over again was to set an example for
+ordinary kings and executive heads, who should all be inclined to hear repeatedly about Prthu Maharaja's
+activities in order to also be able to rule over their kingdoms or states very faithfully for the peace and
+prosperity of the people in general. Unfortunately, at the present moment no one cares to hear about
+Prthu Maharaja or to follow in his footsteps; therefore no nation in the world is either happy or
+progressive in spiritual understanding, although that is the sole aim and objective of human life.
 </p>
 
 </div>
@@ -96,7 +119,7 @@ of devotional activities without having to take recourse to karma, jnana or yoga
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

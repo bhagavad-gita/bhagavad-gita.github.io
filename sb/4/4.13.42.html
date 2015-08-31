@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.42.html">4.13.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nangasya vamso rajarser
-esa samsthatum arhati
-amogha-virya hi nrpa
-vamse 'smin kesavasrayah
-<p></p>
+tam vicaksya khalam putram
+sasanair vividhair nrpah
+yada na sasitum kalpo
+bhrsam asit sudurmanah
+<br>
 <h2>Synonyms</h2>
-na--not; angasya--of King Anga; vamsah--family line; raja-rseh--of the saintly King; esah--this;
-samsthatum--to be stopped; arhati--ought; amogha--without sin, powerful; viryah--their semen; hi--
-because; nrpah--kings; vamse--in the family; asmin--this; kesava--of the Supreme Personality of Godhead;
-asrayah--under the shelter.
-<p></p>
+tam--him; vicaksya--observing; khalam--cruel; putram--son; sasanaih--by punishments; vividhaih--
+different kinds of; nrpah--the King; yada--when; na--not; sasitum--to bring under control; kalpah--was
+able; bhrsam--greatly; asit--became; su-durmanah--aggrieved.
+<br>
 <h2>Translation</h2>
-The sages decided that the descendants of the family of the saintly King Anga should not be stopped, for
-in this family the semen was very powerful and the children were prone to become devotees of the Lord.
-<p></p>
-<h2>Purport</h2>
-The purity of hereditary succession is called amogha-virya. The pious seminal succession in the twiceborn
-families of the brahmanas and ksatriyas especially, as well as in the families of vaisyas also, must be
-kept very pure by the observation of the purificatory processes beginning with garbhadhana-samskara,
-which is observed before conceiving a child. Unless this purificatory process is strictly observed,
-especially by the brahmanas, the family descendants become impure, and gradually sinful activities
-become visible in the family. Maharaja Anga was very pure because of the purification of semen in the
-family of Maharaja Dhruva. However, his semen became contaminated in association with his wife,
-Sunitha, who happened to be the daughter of death personified. Because of this polluted semen, King
-Vena was produced. This was a catastrophe in the family of Dhruva Maharaja. All the saintly persons and
-sages considered this point, and they decided to take action in this matter, as described in the following
-verses.
+After seeing the cruel and merciless behavior of his son, Vena, King Anga punished him in different
+ways to reform him, but was unable to bring him to the path of gentleness. He thus became greatly
+aggrieved.
 </p>
 
 </div>
@@ -83,7 +109,7 @@ verses.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.4.html">4.19.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-purusa yadi muhyanti
-tvadrsa deva-mayaya
-srama eva param jato
-dirghaya vrddha-sevaya
-<p></p>
+anvito brahma-sarvabhyam
+loka-palaih sahanugaih
+upagiyamano gandharvair
+munibhis capsaro-ganaih
+<br>
 <h2>Synonyms</h2>
-purusah--persons; yadi--if; muhyanti--become bewildered; tvadrsah--like you; deva--of the Supreme
-Lord; mayaya--by the energy; sramah--exertion; eva--certainly; param--only; jatah--produced; dirghaya--
-for a long time; vrddha-sevaya--by serving the superiors.
-<p></p>
+anvitah--being accompanied; brahma--by Lord Brahma; sarvabhyam--and by Lord Siva; loka-palaih--by
+the predominating chiefs of all different planets; saha anugaih--along with their followers;
+upagiyamanah--being praised; gandharvaih--by the residents of Gandharvaloka; munibhih--by great sages;
+ca--also; apsarah-ganaih--by the residents of Apsaroloka.
+<br>
 <h2>Translation</h2>
-If a personality like you, who are so much advanced because of executing the instructions of the
-previous acaryas, is carried away by the influence of My material energy, then all your advancement may
-be considered simply a waste of time.
-<p></p>
-<h2>Purport</h2>
-In this verse the word vrddha-sevaya is very significant. Vrddha means "old." Sevaya means "by
-service." Perfect knowledge is acquired from the acaryas, or liberated souls. No one can be perfect in
-knowledge without being trained by the parampara system. Prthu Maharaja was completely trained in that
-line; therefore he did not deserve to be considered an ordinary man. An ordinary man, who has only a
-conception of bodily existence, is always bewildered by the modes of material nature.
+When Lord Visnu appeared in the sacrificial arena, Lord Brahma, Lord Siva and all the chief
+predominating personalities of every planet, as well as their followers, came with Him. When He appeared
+on the scene, the residents of Gandharvaloka, the great sages, and the residents of Apsaroloka all praised
+Him.
 </p>
 
 </div>
@@ -77,7 +111,7 @@ conception of bodily existence, is always bewildered by the modes of material na
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

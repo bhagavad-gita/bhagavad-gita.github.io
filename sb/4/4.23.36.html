@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.36.html">4.23.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-distyagato 'si bhadram te
-gramyan kaman abhipsase
-udvahisyami tams te 'ham
-sva-bandhubhir arindama
-<p></p>
+vijayabhimukho raja
+srutvaitad abhiyati yan
+balim tasmai haranty agre
+rajanah prthave yatha
+<br>
 <h2>Synonyms</h2>
-distya--fortunately for me; agatah asi--you have come here; bhadram--all auspiciousness; te--unto you;
-gramyan--sensual; kaman--desired enjoyable objects; abhipsase--you want to enjoy; udvahisyami--I shall
-supply; tan--all of them; te--unto you; aham--I; sva-bandhubhih--with all my friends; arim-dama--O killer
-of the enemy.
-<p></p>
+vijaya-abhimukhah--one who is about to start for victory; raja--king; srutva--hearing; etat--this;
+abhiyati--starts; yan--on the chariot; balim--taxes; tasmai--unto him; haranti--present; agre--before;
+rajanah--other kings; prthave--unto King Prthu; yatha--as it was done.
+<br>
 <h2>Translation</h2>
-O killer of the enemy, you have somehow or other come here. This is certainly great fortune for me. I
-wish all auspicious things for you. You have a great desire to satisfy your senses, and all my friends and I
-shall try our best in all respects to fulfill your desires.
-<p></p>
+If a king, who is desirous of attaining victory and ruling power, chants the narration of Prthu Maharaja
+three times before going forth on his chariot, all subordinate kings will automatically render all kinds of
+taxes unto him--as they rendered them unto Maharaja Prthu--simply upon his order.
+<br>
 <h2>Purport</h2>
-The living entity comes down into this material world for sense gratification, and his intelligence,
-represented by the woman, gives him the proper direction by which he can satisfy his senses to their best
-capacity. In actuality, however, intelligence comes from the Supersoul, or the Supreme Personality of
-Godhead, and He gives full facility to the living entity who has come down to this material world. As
-stated in Bhagavad-gita (2.41):
-vyavasayatmika buddhir
-ekeha kuru-nandana
-bahu-sakha hy anantas ca
-buddhayo 'vyavasayinam
-"Those who are on the spiritual path are resolute in purpose, and their aim is one. O beloved child of
-the Kurus, the intelligence of those who are irresolute is many-branched."
-When a devotee is advancing toward spiritual realization, his only aim is the service of the Supreme
-Personality of Godhead. He does not care for any other material or spiritual activity. King Puranjana
-represents the ordinary living entity, and the woman represents the ordinary living entity's intelligence.
-Combined, the living entity enjoys his material senses, and the intelligence supplies all paraphernalia for
-his enjoyment. As soon as he enters the human form, the living entity is entrapped by a family tradition,
-nationality, customs, etc. These are all supplied by the maya of the Supreme Personality of Godhead. Thus
-the living entity, under the bodily conception of life, utilizes his intelligence to his best capacity in order
-to satisfy his senses.
+Since a ksatriya king naturally desires to rule the world, he wishes to make all other kings subordinate
+to him. This was also the position many years ago when Prthu Maharaja was ruling over the earth. At that
+time he was the only emperor on this planet. Even five thousand years ago, Maharaja Yudhisthira and
+Maharaja Pariksit were the sole emperors of this planet. Sometimes the subordinate kings rebelled, and it
+was necessary for the emperor to go and chastise them. This process of chanting the narrations of the life
+and character of Prthu Maharaja is recommended for conquering kings if they want to fulfill their desire
+to rule the world.
 </p>
 
 </div>
@@ -92,7 +118,7 @@ to satisfy his senses.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

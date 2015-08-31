@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.38.html">4.23.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kam nu tvad-anyam ramaye
-hy arati-jnam akovidam
-asamparayabhimukham
-asvastana-vidam pasum
-<p></p>
+vaicitraviryabhihitam
+mahan-mahatmya-sucakam
+asmin krtam atimartyam
+parthavim gatim apnuyat
+<br>
 <h2>Synonyms</h2>
-kam--unto whom; nu--then; tvat--than you; anyam--other; ramaye--I shall allow to enjoy; hi--certainly;
-arati-jnam--without knowledge of sex enjoyment; akovidam--therefore almost foolish; asamparaya--
-without knowledge of the next life; abhimukham--looking forward; asvastana-vidam--one who does not
-know what is happening next; pasum--like animals.
-<p></p>
+vaicitravirya--O son of Vicitravirya (Vidura); abhihitam--explained; mahat--great; mahatmya--greatness;
+sucakam--awakening; asmin--in this; krtam--performed; ati-martyam--uncommon; parthavim--in
+connection with Prthu Maharaja; gatim--advancement, destination; apnuyat--one should achieve.
+<br>
 <h2>Translation</h2>
-Mow can I expect to unite with others, who are neither conversant about sex nor capable of knowing
-how to enjoy life while living or after death? Such foolish persons are like animals because they do not
-know the process of sense enjoyment in this life and after death.
-<p></p>
+The great sage Maitreya continued: My dear Vidura, I have as far as possible spoken the narrations
+about Prthu Maharaja, which enrich one's devotional attitude. Whoever takes advantage of these benefits
+also goes back home, back to Godhead, like Maharaja Prthu.
+<br>
 <h2>Purport</h2>
-Since there are 8,400,000 species of life, there are also many different living conditions. In the lower
-grades of life (in plant and tree life) there is no system for sexual intercourse. In the upper grades (in the
-life of birds and bees) there is sex, but the insects and animals do not know how to actually enjoy sex life.
-In the human form of life, however, there is full knowledge of how to enjoy sex. Indeed, there are many
-so-called philosophers who give directions on how to enjoy sex life. There is even a science called kamasastra,
-which is the science of sex. In human life there are also such divisions as brahmacarya, grhastha,
-vanaprastha and sannyasa. There is no sex life except in the grhastha, or householder, asrama. The
-brahmacari is not allowed any sex, a vanaprastha voluntarily refrains from sex, and the sannyasi is
-completely renounced. The karmis do not practice brahmacarya, vanaprastha or sannyasa life, for they are
-very much interested in grhastha life. In other words, a human being is very much materially inclined.
-Indeed, all living entities are materially inclined. They prefer grhastha life because there is a concession
-for sex. The karmis think the other statuses of life are worse than animal life, for animals also have sex,
-whereas the brahmacari, vanaprastha and sannyasi completely give up sex. The karmis, therefore, abhor
-these orders of spiritual life.
+The word sravayet, mentioned in a previous verse, indicates that one should not only read for himself,
+but should also induce others to read and hear. That is called preaching. Caitanya Mahaprabhu
+recommended this practice: yare dekha, tare kaha 'krsna'-upadesa (Cc. Madhya 7.128). "Whomever you
+meet, simply talk with him about the instructions given by Krsna or tell him of narrations about Krsna."
+Prthu Maharaja's history of devotional service is as potent as narrations about the activities of the
+Supreme personality of Godhead. One should not make distinctions between the pastimes of the Lord and
+the activities of Prthu Maharaja, and whenever it is possible a devotee should attempt to induce others to
+hear about Prthu Maharaja. One should not only read of his pastimes for one's own benefit but should
+induce others to read and hear about them also. In this way everyone can be benefited.
 </p>
 
 </div>
@@ -87,7 +120,7 @@ these orders of spiritual life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,92 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.28.html">4.22.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yah param ramhasah saksat
-tri-gunaj jiva-samjnitat
-bhagavantam vasudevam
-prapannah sa priyo hi me
-<p></p>
+atmanam indriyartham ca
+param yad ubhayor api
+saty asaya upadhau vai
+puman pasyati nanyada
+<br>
 <h2>Synonyms</h2>
-yah--anyone; param--transcendental; ramhasah--of the controller; saksat--directly; tri-gunat--from the
-three modes of material nature; jiva-samjnitat--living entities called by the name jivas; bhagavantam--unto
-the Supreme Personality of Godhead; vasudevam--unto Krsna; prapannah--surrendered; sah--he; priyah--
-very dear; hi--undoubtedly; me--of me.
-<p></p>
+atmanam--the soul; indriya-artham--for sense gratification; ca--and; param--transcendental; yat--that;
+ubhayoh--both; api--certainly; sati--being situated; asaye--material desires; upadhau--designation; vai--
+certainly; puman--the person; pasyati--sees; na anyada--not otherwise.
+<br>
 <h2>Translation</h2>
-Lord Siva continued: Any person who is surrendered to the Supreme Personality of Godhead, Krsna, the
-controller of everything--material nature as well as the living entity--is actually very dear to me.
-<p></p>
+When the soul exists for sense gratification, he creates different desires, and for that reason he becomes
+subjected to designations. But when one is in the transcendental position, he is no longer interested in
+anything except fulfilling the desires of the Lord.
+<br>
 <h2>Purport</h2>
-Now Lord Siva explains the reason he has personally come before the princes. It is because all the
-princes are devotees of Lord Krsna. As stated in Bhagavad-gita (7.19):
-bahunam janmanam ante
-jnanavan mam prapadyate
-vasudevah sarvam iti
-sa mahatma sudurlabhah
-"After many births and deaths, he who is actually in knowledge surrenders unto Me, knowing Me to be
-the cause of all causes and all that is. Such a great soul is very rare."
-Lord Siva is rarely seen by common men, and similarly a person who is fully surrendered unto
-Vasudeva, Krsna, is also very rarely seen because a person who is fully surrendered unto the Supreme
-Lord is very rare (sa mahatma sudurlabhah). Consequently Lord Siva came especially to see the Pracetas
-because they were fully surrendered unto the Supreme Personality of Godhead, Vasudeva. Vasudeva is
-also mentioned in the beginning of Srimad-Bhagavatam in the mantra, om namo bhagavate vasudevaya.
-Since Vasudeva is the ultimate truth, Lord Siva openly proclaims that one who is a devotee of Lord
-Vasudeva, who is surrendered to Lord Krsna, is actually very dear to him. Lord Vasudeva, Krsna, is
-worshipable not only by ordinary living entities but by demigods like Lord Siva, Lord Brahma and others.
-Yam brahma-varunendra-rudra-marutah stuvanti divyaih stavaih (Bhag. 12.13.1). Krsna is worshiped by
-Lord Brahma, Lord Siva, Varuna, Indra, Candra and all other demigods. That is also the situation with a
-devotee. Indeed, one who takes to Krsna consciousness immediately becomes very dear to anyone who is
-simply finding out and beginning to understand what Krsna consciousness actually is. Similarly, all the
-demigods are also trying to find out who is actually surrendered to Lord Vasudeva. Because the Praceta
-princes were surrendered to Vasudeva, Lord Siva willingly came forth to see them.
-Lord Vasudeva, or Krsna, is described in Bhagavad-gita as Purusottama. Actually He is the enjoyer
-(purusa) and the Supreme (uttama) as well. He is the enjoyer of everything--the prakrti and the purusa.
-Being influenced by the three modes of material nature, the living entity tries to dominate material nature,
-but actually he is not the purusa (enjoyer) but prakrti, as described in Bhagavad-gita (7.5): apareyam itas
-tv anyam prakrtim viddhi me param. Thus the jiva, or living entity, is actually prakrti, or the marginal
-energy of the Supreme Lord. Being associated with material energy, he tries to lord it over the material
-nature. This is also confirmed in Bhagavad-gita (15.7):
-mamaivamso jiva-loke
-jiva-bhutah sanatanah
-manah-sasthanindriyani
-prakrti-sthani karsati
-"The living entities in this conditioned world are My eternal fragmental parts. Due to conditioned life,
-they are struggling very hard with the six senses, which include the mind."
-By endeavoring to dominate material nature, the living entity simply struggles hard for existence.
-Indeed, he struggles so hard to enjoy himself that he cannot even enjoy the material resources. Thus he is
-sometimes called prakrti, or jiva, for he is situated in the marginal potency. When the living entity is
-covered with the three modes of material nature, he is called jiva-samjnita. There are two kinds of living
-entities: one is called ksara, and the other is aksara. Ksara refers to those who have fallen down and
-become conditioned, and aksara refers to those who are not conditioned. The vast majority of living
-entities live in the spiritual world and are called aksara. They are in the position of Brahman, pure
-spiritual existence. They are different from those who have been conditioned by the three modes of
-material nature.
-Being above both the ksara and aksara, Lord Krsna, Vasudeva, is described in Bhagavad-gita (15.18) as
-Purusottama. The impersonalists may say that Vasudeva is the impersonal Brahman, but actually the
-impersonal Brahman is subordinate to Krsna, as also confirmed in Bhagavad-gita (14.27): brahmano hi
-pratisthaham. That Krsna is the source of the impersonal Brahman is also confirmed in Brahma-samhita
-(5.40): yasya prabha prabhavato jagadanda-koti. The impersonal Brahman is nothing but the effulgence or
-bodily rays of Krsna, and in those bodily rays there are innumerable universes floating. Thus in all
-respects Vasudeva, Krsna, is the Supreme Lord, and Lord Siva is very satisfied with those who are
-completely surrendered to Him. Complete surrender is desired by Krsna, as He indicates in the last
-chapter of Bhagavad-gita (18.66): sarva-dharman parityajya mam ekam saranam vraja. The word saksat,
-meaning "directly," is very significant. There are many so-called devotees, but actually they are only
-karmis and jnanis, for they are not directly devotees of Lord Krsna. The karmis sometimes offer the
-results of their activities to Lord Vasudeva, and this offering is called karmarpanam. These are considered
-to be fruitive activities, for the karmis consider Lord Visnu to be one of the demigods like Lord Siva and
-Lord Brahma. Because they consider Lord Visnu to be on the same level with the demigods, they contend
-that surrendering to the demigods is as good as surrendering unto Vasudeva. This contention is denied
-herein because if it were true, Lord Siva would have said that surrender unto him, Lord Vasudeva, Visnu
-or Brahma is the same. However, Lord Siva does not say this because he himself surrenders unto
-Vasudeva, and whoever else surrenders unto Vasudeva is very, very dear to him. This is expressed herein
-openly. The conclusion is that a devotee of Lord Siva is not dear to Lord Siva, but a devotee of Lord Krsna
-is very dear to Lord Siva.
+Being covered by material desires, a spirit soul is also considered to be covered by designations
+belonging to a particular type of body. Thus he considers himself an animal, man, demigod, bird, beast,
+etc. In so many ways he is influenced by false identification caused by false egotism, and being covered by
+illusory material desires, he distinguishes between matter and spirit. When one is devoid of such
+distinctions, there is no longer a difference between matter and spirit. At that time, the spirit is the only
+predominating factor. As long as one is covered by material desires, he thinks himself the master or the
+enjoyer. Thus he acts for sense gratification and becomes subjected to material pangs, happiness and
+distress. But when one is freed from such a concept of life, he is no longer subjected to designations, and
+he envisions everything as spiritual in connection with the Supreme Lord. This is explained by Srila Rupa
+Gosvami in his Bhakti-rasamrta-sindhu (1.2.255):
+anasaktasya visayan
+yatharham upayunjatah
+nirbandhah krsna-sambandhe
+yuktam vairagyam ucyate
+The liberated person has no attachment for anything material or for sense gratification. He understands
+that everything is connected with the Supreme Personality of Godhead and that everything should be
+engaged in the service of the Lord. Therefore he does not give up anything. There is no question of
+renouncing anything because the paramahamsa knows how to engage everything in the service of the
+Lord. Originally everything is spiritual; nothing is material. In the Caitanya-caritamrta (Madhya 8.274)
+also it is explained that a maha-bhagavata, a highly advanced devotee, has no material vision:
+sthavara-jangama dekhe, na dekhe tara murti
+sarvatra haya nija ista-deva-sphurti
+Although he sees trees, mountains, and other living entities moving here and there, he sees all as the
+creation of the Supreme Lord and, with reference to the context, sees only the creator and not the created.
+In other words, he no longer distinguishes between the created and the creator. He sees only the Supreme
+Personality of Godhead in everything. He sees Krsna in everything and everything in Krsna. This is
+oneness.
 </p>
 
 </div>
@@ -136,7 +138,7 @@ is very dear to Lord Siva.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

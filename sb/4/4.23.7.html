@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,76 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.7.html">4.23.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ya evam karma niyatam
-vidvan kurvita manavah
-karmana tena rajendra
-jnanena na sa lipyate
-<p></p>
+titiksur yata-vag danta
+urdhva-reta jitanilah
+ariradhayisuh krsnam
+acarat tapa uttamam
+<br>
 <h2>Synonyms</h2>
-yah--anyone who; evam--thus; karma--activities; niyatam--regulated; vidvan--learned; kurvita--should
-perform; manavah--a human being; karmana--by such activities; tena--by this; raja-indra--O King;
-jnanena--by advancement of knowledge; na--never; sah--he; lipyate--becomes involved.
-<p></p>
+titiksuh--tolerating; yata--controlling; vak--words; dantah--controlling the senses; urdhva-retah--
+without discharge of semen; jita-anilah--controlling the life air; ariradhayisuh--simply desiring; krsnam--
+Lord Krsna; acarat--practice; tapah--austerities; uttamam--the best.
+<br>
 <h2>Translation</h2>
-Narada Muni continued to speak to King Pracinabarhisat: My dear King, any person who works
-according to the directions of the Vedic scriptures does not become involved in fruitive activities.
-<p></p>
+Maharaja Prthu underwent all these severe austerities in order to control his words and his senses, to
+refrain from discharging his semen and to control the life air within his body. All this he did for the
+satisfaction of Krsna. He had no other purpose.
+<br>
 <h2>Purport</h2>
-Just as a government may issue trade licenses in order for its citizens to act in a certain way, the Vedas
-contain injunctions that restrain and regulate all of our fruitive activities. All living entities have come
-into this material world to enjoy themselves. Consequently, the Vedas are given to regulate sense
-enjoyment. One who enjoys his senses under the Vedic regulative principles does not become entangled
-in the actions and reactions of his activities. As stated in Bhagavad-gita (3.9), yajnarthat karmanah: one
-should act only for the performance of yajna, or to satisfy Lord Visnu. Anyatra loko 'yam karmabandhanah:
-otherwise any action will produce a reaction by which the living entity will be bound. A
-human being is especially meant to attain liberation from the bondage of birth, death, old age and disease.
-He is therefore directed by the Vedic regulative principles to work in such a way that he may fulfill his
-desires for sense gratification and at the same time gradually become freed from material bondage. Action
-according to such principles is called knowledge. Indeed, the word veda means "knowledge." The words
-jnanena na sa lipyate indicate that by following the Vedic principles, one does not become involved in the
-actions and reactions of his fruitive activities.
-Everyone is therefore advised to act in terms of the Vedic injunctions and not irresponsibly. When a
-person within a state acts according to the laws and licenses of the government, he does not become
-involved in criminal activities. Man-made laws, however, are always defective because they are made by
-men who are prone to committing mistakes, being illusioned, cheating and having imperfect senses. The
-Vedic instructions are different because they do not have these four defects. Vedic instructions are not
-subject to mistakes. The knowledge of the Vedas is knowledge received directly from God, and there is
-consequently no question of illusion, cheating, mistakes or imperfect senses. All Vedic knowledge is
-perfect because it is received directly from God by the parampara, disciplic succession. In Srimad-
-Bhagavatam (1.1.1) it is said: tene brahma hrda ya adi-kavaye. The original creature of this universe,
-known as the adi-kavi, or Lord Brahma, was instructed by Krsna through the heart. After receiving these
-Vedic instructions from Lord Krsna Himself, Brahma distributed the knowledge by the parampara system
-to Narada, and Narada in turn distributed the knowledge to Vyasa. In this way Vedic knowledge is
-perfect. If we act according to Vedic knowledge, there is no question of being involved in sinful activities.
+In Kali-yuga the following is recommended:
+harer nama harer nama
+harer namaiva kevalam
+kalau nasty eva nasty eva
+nasty eva gatir anyatha
+(Brhan-naradiya Purana)
+In order to be recognized by Krsna, the Supreme Personality of Godhead, one should chant the holy
+name of the Lord continuously, twenty-four hours a day. Unfortunate persons who cannot accept this
+formula prefer to execute some type of pseudomeditation, without accepting the other processes of
+austerity. The fact is, however, that one must accept either the severe method of austerity described above
+to become purified or take to the process of devotional service recommended for pleasing the Supreme
+Lord, Krsna. The person who is Krsna conscious is most intelligent because in Kali-yuga it is not at all
+possible to undergo such severe austerities. We need only follow great personalities like Lord Caitanya
+Mahaprabhu. In His Siksastaka, Lord Caitanya Mahaprabhu wrote, param vijayate sri-krsna-sankirtanam:
+all glories to the holy names of Lord Krsna, which from the very beginning purify the heart and
+immediately liberate one. Bhava-maha-davagni-nirvapanam. If the real purpose of all yoga is to please
+Lord Krsna, then this simple bhakti-yoga system recommended for this age is sufficient. It is necessary,
+however, to engage constantly in the service of the Lord. Although Prthu Maharaja executed his
+austerities long before the appearance of Lord Krsna on this planet, his purpose was still to please Krsna.
+There are many fools who claim that worship of Krsna began only about five thousand years ago, after
+the appearance of Lord Krsna in India, but this is not a fact. Prthu Maharaja worshiped Krsna millions of
+years ago, for Prthu happened to be a descendant of the family of Maharaja Dhruva, who reigned for
+thirty-six thousand years during the Satya-yuga age. Unless his total life-span was one hundred thousand
+years, how could Dhruva Maharaja reign over the world for thirty-six thousand years? The point is that
+Krsna worship existed at the beginning of creation and has continued to exist throughout Satya-yuga,
+Treta-yuga and Dvapara-yuga, and now it is continuing in Kali-yuga. As stated in Bhagavad-gita, Krsna
+appears not only in this millennium of Brahma's life, but in every millennium. Therefore worship of Krsna
+is conducted in all millenniums. It is not that Krsna worship began only when Krsna appeared on this
+planet five thousand years ago. This is a foolish conclusion that is not substantiated by Vedic literatures.
+Also of significance in this verse are the words ariradhayisuh krsnam acarat tapa uttamam. Maharaja
+Prthu underwent severe types of austerities for the express purpose of worshiping Krsna. Krsna is so kind,
+especially in this age, that He appears in the transcendental vibration of His holy name. As is said in the
+Narada-pancaratra, aradhito yadi haris tapasa tatah kim. If Krsna is worshiped, if He is the goal of
+advancement, there is no need for one to execute severe types of tapasya, because one has already reached
+his destination. If, after executing all types of tapasya, one cannot reach Krsna, all his tapasya has no
+value, for without Krsna all austerity is simply wasted labor. Srama eva hi kevalam (Bhag. 1.2.8). We
+should therefore not be discouraged just because we cannot go to the forest and practice severe
+austerities. Our life is so short that we must strictly adhere to the principles laid down by the Vaisnava
+acaryas and peacefully execute Krsna consciousness. There is no need to become despondent. Narottama
+dasa Thakura recommends: anande bala hari, bhaja vrndavana, sri-guru-vaisnava-pade majaiya mana. For
+a transcendental, blissful life, chant the Hare Krsna mantra, come worship the holy place of Vrndavana,
+and always engage in the service of the Lord, of the spiritual master and of the Vaisnavas. This Krsna
+consciousness movement is therefore very safe and easy. We have only to execute the order of the Lord
+and fully surrender unto Him. We have only to execute the order of the spiritual master, preach Krsna
+consciousness and follow in the path of the Vaisnavas. The spiritual master represents both Lord Krsna
+and the Vaisnavas; therefore by following the instructions of the spiritual master and by chanting Hare
+Krsna, everything will be all right.
 </p>
 
 </div>
@@ -97,7 +158,7 @@ perfect. If we act according to Vedic knowledge, there is no question of being i
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

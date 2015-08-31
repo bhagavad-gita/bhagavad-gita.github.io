@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.5.html">4.28.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pracetasa ucuh
-svagatam te surarse 'dya
-distya no darsanam gatah
-tava cankramanam brahmann
-abhayaya yatha raveh
-<p></p>
+tasyam prapidyamanayam
+abhimani puranjanah
+avaporu-vidhams tapan
+kutumbi mamatakulah
+<br>
 <h2>Synonyms</h2>
-pracetasah ucuh--the Pracetas said; su-agatam--welcome; te--unto you; sura-rse--O sage among the
-demigods; adya--today; distya--by good fortune; nah--of us; darsanam--audience; gatah--you have come;
-tava--your; cankramanam--movements; brahman--O great brahmana; abhayaya--for fearlessness; yatha--
-as; raveh--of the sun.
-<p></p>
+tasyam--when the city; prapidyamanayam--was put into different difficulties; abhimani--too much
+absorbed; puranjanah--King Puranjana; avapa--achieved; uru--many; vidhan--varieties; tapan--pains;
+kutumbi--family man; mamata-akulah--too much affected by attachment to family.
+<br>
 <h2>Translation</h2>
-All the Pracetas began to address the great sage Narada: O great sage, O brahmana, we hope you met
-with no disturbances while coming here. It is due to our great fortune that we are now able to see you. By
-the traveling of the sun, people are relieved from the fear of the darkness of night--a fear brought about by
-thieves and rogues. Similarly, your traveling is like the sun's, for you drive away all kinds of fear.
-<p></p>
+When the city was thus endangered by the soldiers and Kalakanya, King Puranjana, being overly
+absorbed in affection for his family, was placed in difficulty by the attack of Yavana-raja and Kalakanya.
+<br>
 <h2>Purport</h2>
-Because of the night's darkness, everyone is afraid of rogues and thieves, especially in great cities. People
-are often afraid to go out on the streets, and we understand that even in a great city like New York people
-do not like to go out at night. More or less, when it is night everyone is afraid, either in the city or in the
-village. However, as soon as the sun rises, everyone is relieved. Similarly, this material world is dark by
-nature. Everyone is afraid of danger at every moment, but when one sees a devotee like Narada, all fear is
-relieved. Just as the sun disperses darkness, the appearance of a great sage like Narada disperses
-ignorance. When one meets Narada or his representative, a spiritual master, one is freed from all anxiety
-brought about by ignorance.
+When we refer to the body, we include the external gross body with its various limbs, as well as the
+mind, intelligence and ego. In old age these all become weak when they are attacked by different diseases.
+The proprietor of the body, the living soul, becomes very sad at not being able to use the field of activities
+properly. In Bhagavad-gita it is clearly explained that the living entity is the proprietor of this body (ksetra
+jna) and that the body is the field of activities (ksetra). When a field is overgrown with thorns and weeds,
+it becomes very difficult for the owner to work it. That is the position of the spirit soul when the body
+itself becomes a burden due to disease. Extra burdens are placed on the body in the form of anxiety and
+general deterioration of the bodily functions.
 </p>
 
 </div>
@@ -83,7 +118,7 @@ brought about by ignorance.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

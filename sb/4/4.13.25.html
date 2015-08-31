@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.25.html">4.13.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ko yajna-puruso nama
-yatra vo bhaktir idrsi
-bhartr-sneha-viduranam
-yatha jare kuyositam
-<p></p>
+maitreya uvaca
+ango 'svamedham rajarsir
+ajahara maha-kratum
+najagmur devatas tasminn
+ahuta brahma-vadibhih
+<br>
 <h2>Synonyms</h2>
-kah--who (is); yajna-purusah--the enjoyer of all sacrifices; nama--by name; yatra--unto whom; vah--
-your; bhaktih--devotional service; idrsi--so great; bhartr--for the husband; sneha--affection; viduranam--
-bereft of; yatha--like; jare--unto the paramour; ku-yositam--of unchaste women.
-<p></p>
+maitreyah uvaca--Maitreya answered; angah--King Anga; asvamedham--asvamedha sacrifice; raja-rsih--
+the saintly king; ajahara--executed; maha-kratum--great sacrifice; na--not; ajagmuh--came; devatah--the
+demigods; tasmin--in that sacrifice; ahutah--being invited; brahma-vadibhih--by the brahmanas expert in
+executing sacrifices.
+<br>
 <h2>Translation</h2>
-You are so much devoted to the demigods, but who are they? Indeed, your affection for these demigods
-is exactly like the affection of an unchaste woman who neglects her married life and gives all attention to
-her paramour.
+Sri Maitreya replied: My dear Vidura, once the great King Anga arranged to perform the great sacrifice
+known as asvamedha. All the expert brahmanas present knew how to invite the demigods, but in spite of
+their efforts, no demigods participated or appeared in that sacrifice.
+<br>
+<h2>Purport</h2>
+A Vedic sacrifice is not an ordinary performance. The demigods used to participate in such sacrifices,
+and the animals sacrificed in such performances were reincarnated with new life. In this age of Kali there
+are no powerful brahmanas who can invite the demigods or give renewed life to animals. Formerly, the
+brahmanas well conversant in Vedic mantras could show the potency of the mantras, but in this age,
+because there are no such brahmanas, all such sacrifices are forbidden. The sacrifice in which horses were
+offered was called asvamedha. Sometimes cows were sacrificed (gavalambha), not for eating purposes, but
+to give them new life in order to show the potency of the mantra. In this age, therefore, the only practical
+yajna is sankirtana-yajna, or chanting of the Hare Krsna mantra twenty-four hours a day.
 </p>
 
 </div>
@@ -70,7 +121,7 @@ her paramour.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

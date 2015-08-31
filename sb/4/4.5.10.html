@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.10.html">4.5.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nana-manimayaih srngair
-nana-dhatu-vicitritaih
-nana-druma-lata-gulmair
-nana-mrga-ganavrtaih
-<p></p>
+yas tv anta-kale vyupta-jata-kalapah
+sva-sula-sucy-arpita-dig-gajendrah
+vitatya nrtyaty uditastra-dor-dhvajan
+uccatta-hasa-stanayitnu-bhinna-dik
+<br>
 <h2>Synonyms</h2>
-nana--different kinds; mani--jewels; mayaih--made of; srngaih--with the peaks; nana-dhatu-vicitritaih--
-decorated with various minerals; nana--various; druma--trees; lata--creepers; gulmaih--plants; nana--
-various; mrga-gana--by groups of deer; avrtaih--inhabited by.
-<p></p>
+yah--who (Lord Siva); tu--but; anta-kale--at the time of dissolution; vyupta--having scattered; jatakalapah--
+his bunch of hair; sva-sula--his own trident; suci--on the points; arpita--pierced; dik-gajendrah--
+the rulers of the different directions; vitatya--scattering; nrtyati--dances; udita--upraised; astra--weapons;
+doh--hands; dhvajan--flags; ucca--loud; atta-hasa--laughing; stanayitnu--by the thundering sound;
+bhinna--divided; dik--the directions.
+<br>
 <h2>Translation</h2>
-Kailasa is full of mountains filled with all kinds of valuable jewels and minerals and surrounded by all
-varieties of valuable trees and plants. The top of the hill is nicely decorated by various types of deer.
+At the time of dissolution, Lord Siva's hair is scattered, and he pierces the rulers of the different
+directions with his trident. He laughs and dances proudly, scattering their hands like flags, as thunder
+scatters the clouds all over the world.
+<br>
+<h2>Purport</h2>
+Prasuti, who appreciated the power and strength of her son-in-law, Lord Siva, is describing what he
+does at the time of dissolution. This description indicates that the strength of Lord Siva is so great that
+Daksa's power could not be set in comparison to it. At the time of dissolution, Lord Siva, with his trident
+in hand, dances over the rulers of the different planets, and his hair is scattered, just as the clouds are
+scattered over all directions in order to plunge the different planets into incessant torrents of rain. In the
+last phase of dissolution, all the planets become inundated with water, and that inundation is caused by
+the dancing of Lord Siva. This dance is called the pralaya dance, or dance of dissolution. Prasuti could
+understand that the dangers ahead resulted not only from Daksa's having neglected her daughter, but also
+because of his neglecting the prestige and honor of Lord Siva.
 </p>
 
 </div>
@@ -69,7 +122,7 @@ varieties of valuable trees and plants. The top of the hill is nicely decorated 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

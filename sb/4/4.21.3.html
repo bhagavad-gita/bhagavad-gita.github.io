@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.3.html">4.21.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad-darsanodgatan pranan
-pratyaditsur ivotthitah
-sa-sadasyanugo vainya
-indriyeso gunan iva
-<p></p>
+savrndaih kadali-stambhaih
+puga-potaih pariskrtam
+taru-pallava-malabhih
+sarvatah samalankrtam
+<br>
 <h2>Synonyms</h2>
-tat--him; darsana--seeing; udgatan--being greatly desired; pranan--life; pratyaditsuh--peacefully going;
-iva--like; utthitah--got up; sa--with; sadasya--associates or followers; anugah--officers; vainyah--King
-Prthu; indriya-isah--a living entity; gunan iva--as influenced by the modes of material nature.
-<p></p>
+sa-vrndaih--along with fruits and flowers; kadali-stambhaih--by the pillars of banana trees; pugapotaih--
+by collections of young animals and by processions of elephants; pariskrtam--very nicely cleansed;
+taru--young plants; pallava--new leaves of mango trees; malabhih--by garlands; sarvatah--everywhere;
+samalankrtam--nicely decorated.
+<br>
 <h2>Translation</h2>
-Seeing the four Kumaras, Prthu Maharaja was greatly anxious to receive them. Therefore the King, with
-all his officers, very hastily got up, as anxiously as a conditioned soul whose senses are immediately
-attracted by the modes of material nature.
-<p></p>
-<h2>Purport</h2>
-In Bhagavad-gita (3.27) it is said:
-prakrteh kriyamanani
-gunaih karmani sarvasah
-ahankara-vimudhatma
-kartaham iti manyate
-Every conditioned soul is influenced by a particular mixture of the modes of material nature. As such,
-the conditioned soul is attracted to certain types of activity which he is forced to perform because he is
-completely under the influence of material nature. Here Prthu Maharaja is compared to such a
-conditioned soul, not because he was a conditioned soul but because he was so anxious to receive the
-Kumaras that it was as if without them he would have lost his life. The conditioned soul is attracted by
-the objects of sense gratification. His eyes are attracted to see beautiful things, his ears are attracted to
-hear nice music, his nose is attracted to enjoy the aroma of a nice flower, and his tongue is attracted to
-taste nice food. Similarly, all his other senses--his hands, his legs, his belly, his genitals, his mind, etc.--are
-so susceptible to the attraction of the objects of enjoyment that he cannot restrain himself. Prthu
-Maharaja, in the same way, could not restrain himself from receiving the four Kumaras, who were bright
-by dint of their spiritual progress, and thus not only he himself but also his officers and associates all
-received the four Kumaras. It is said, "Birds of a feather flock together." In this world, everyone is
-attracted by a person of the same category. A drunkard is attracted to persons who are also drunkards.
-Similarly, a saintly person is attracted by other saintly persons. Prthu Maharaja was in the topmost
-position of spiritual advancement, and as such, he was attracted by the Kumaras, who were of the same
-category. It is said, therefore, that a man is known by his company.
+At the street crossings there were bunches of fruits and flowers, as well as pillars of banana trees and
+betel nut branches. All these combined decorations everywhere looked very attractive.
 </p>
 
 </div>
@@ -93,7 +109,7 @@ category. It is said, therefore, that a man is known by his company.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

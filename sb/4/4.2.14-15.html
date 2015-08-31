@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.2.14-15.html">4.2.14-15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.14-15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14-15"><b>14-15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 pretavasesu ghoresu
 pretair bhuta-ganair vrtah
@@ -59,7 +98,7 @@ sivapadeso hy asivo
 matto matta-jana-priyah
 patih pramatha-nathanam
 tamo-matratmakatmanam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 preta-avasesu--at the burning places of dead bodies; ghoresu--horrible; pretaih--by the Pretas; bhutaganaih--
 by the Bhutas; vrtah--accompanied by; atati--he wanders; unmatta-vat--like a madman; nagnah--
@@ -69,14 +108,14 @@ garland; nr-asthi-bhusanah--ornamented with dead men's bones; siva-apadesah--who
 auspicious, only in name; hi--for; asivah--inauspicious; mattah--crazy; matta-jana-priyah--very dear to the
 crazy beings; patih--the leader; pramatha-nathanam--of the lords of the Pramathas; tamah-matra-atmakaatmanam--
 of those grossly in the mode of ignorance.
-<p></p>
+<br>
 <h2>Translation</h2>
 He lives in filthy places like crematoriums, and his companions are the ghosts and demons. Naked like a
 madman, sometimes laughing and sometimes crying, he smears crematorium ashes all over his body. He
 does not bathe regularly, and he ornaments his body with a garland of skulls and bones. Therefore only in
 name is he Siva, or auspicious; actually, he is the most mad and inauspicious creature. Thus he is very
 dear to crazy beings in the gross mode of ignorance, and he is their leader.
-<p></p>
+<br>
 <h2>Purport</h2>
 Those who do not regularly bathe are supposed to be in association with ghosts and crazy creatures.
 Lord Siva appeared to be like that, but his name, Siva, is actually fitting, for he is very kind to persons
@@ -99,7 +138,7 @@ auspicious.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

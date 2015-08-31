@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.31.html">4.12.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sadasas-pataya ucuh
-nara-deveha bhavato
-nagham tavan manak sthitam
-asty ekam praktanam agham
-yad ihedrk tvam aprajah
-<p></p>
+tada dundubhayo nedur
+mrdanga-panavadayah
+gandharva-mukhyah prajaguh
+petuh kusuma-vrstayah
+<br>
 <h2>Synonyms</h2>
-sadasah-patayah ucuh--the head priests said; nara-deva--O King; iha--in this life; bhavatah--of you; na--
-not; agham--sinful activity; tavat manak--even very slight; sthitam--situated; asti--there is; ekam--one;
-praktanam--in the previous birth; agham--sinful activity; yat--by which; iha--in this life; idrk--like this;
-tvam--you; aprajah--without any son.
-<p></p>
+tada--at that time; dundubhayah--kettledrums; neduh--resounded; mrdanga--drums; panava--small
+drums; adayah--etc.; gandharva-mukhyah--the chief residents of Gandharvaloka; prajaguh--sang; petuh--
+showered; kusuma--flowers; vrstayah--like rains.
+<br>
 <h2>Translation</h2>
-The head priests said: O King, in this life we do not find any sinful activity, even within your mind, so
-you are not in the least offensive. But we can see that in your previous life you performed sinful activities
-due to which, in spite of your having all qualifications, you have no son.
-<p></p>
-<h2>Purport</h2>
-The purpose of marrying is to beget a son, because a son is necessary to deliver his father and
-forefathers from any hellish conditional life in which they may be. Canakya Pandita therefore says, putrahinam
-grham sunyam: without a son, married life is simply abominable. King Anga was a very pious king
-in this life, but because of his previous sinful activity he could not get a son. It is concluded, therefore,
-that if a person does not get a son it is due to his past sinful life.
+At that time drums and kettledrums resounded from the sky, the chief Gandharvas began to sing and
+other demigods showered flowers like torrents of rain upon Dhruva Maharaja.
 </p>
 
 </div>
@@ -79,7 +108,7 @@ that if a person does not get a son it is due to his past sinful life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

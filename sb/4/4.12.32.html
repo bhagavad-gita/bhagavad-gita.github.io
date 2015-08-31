@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,54 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.32.html">4.12.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatha sadhaya bhadram te
-atmanam suprajam nrpa
-istas te putra-kamasya
-putram dasyati yajna-bhuk
-<p></p>
+sa ca svarlokam aroksyan
+sunitim jananim dhruvah
+anvasmarad agam hitva
+dinam yasye tri-vistapam
+<br>
 <h2>Synonyms</h2>
-tatha--therefore; sadhaya--execute the sacrifice to get; bhadram--good fortune; te--to you; atmanam--
-your own; su-prajam--good son; nrpa--O King; istah--being worshiped; te--by you; putra-kamasya--
-desiring to have a son; putram--a son; dasyati--He will deliver; yajna-bhuk--the Lord, the enjoyer of the
-sacrifice.
-<p></p>
+sah--he; ca--also; svah-lokam--to the celestial planet; aroksyan--about to ascend; sunitim--Suniti;
+jananim--mother; dhruvah--Dhruva Maharaja; anvasmarat--immediately remembered; agam--difficult to
+attain; hitva--leaving behind; dinam--poor; yasye--I shall go; tri-vistapam--to the Vaikuntha planet.
+<br>
 <h2>Translation</h2>
-O King, we wish all good fortune for you. You have no son, but if you pray at once to the Supreme Lord
-and ask for a son, and if you execute the sacrifice for that purpose, the enjoyer of the sacrifice, the
-Supreme Personality of Godhead, will fulfill your desire.
+Dhruva was seated in the transcendental airplane, which was just about to start, when he remembered
+his poor mother, Suniti. He thought to himself, "How shall I go alone to the Vaikuntha planet and leave
+behind my poor mother?"
+<br>
+<h2>Purport</h2>
+Dhruva had a feeling of obligation to his mother, Suniti. It was Suniti who had given him the clue which
+had now enabled him to be personally carried to the Vaikuntha planet by the associates of Lord Visnu. He
+now remembered her and wanted to take her with him. Actually, Dhruva Maharaja's mother, Suniti, was
+his patha-pradarsaka-guru. Patha-pradarsaka-guru means "the guru, or the spiritual master, who shows
+the way." Such a guru is sometimes called siksa-guru. Although Narada Muni was his diksa-guru
+(initiating spiritual master), Suniti, his mother, was the first who gave him instruction on how to achieve
+the favor of the Supreme Personality of Godhead. It is the duty of the siksa-guru or diksa-guru to instruct
+the disciple in the right way, and it depends on the disciple to execute the process. According to sastric
+injunctions, there is no difference between siksa-guru and diksa-guru, and generally the siksa-guru later
+on becomes the diksa-guru. Suniti, however, being a woman, and specifically his mother, could not
+become Dhruva Maharaja's diksa-guru. Still, he was not less obliged to Suniti. There was no question of
+carrying Narada Muni to Vaikunthaloka, but Dhruva Maharaja thought of his mother.
+Whatever plan the Supreme Personality of Godhead contemplates immediately fructifies. Similarly, a
+devotee who is completely dependent on the Supreme Lord can also fulfill his wishes by the grace of the
+Lord. The Lord fulfills His wishes independently, but a devotee fulfills his wishes simply by being
+dependent on the Supreme Personality of Godhead. Therefore as soon as Dhruva Maharaja thought of his
+poor mother, he was assured by the associates of Visnu that Suniti was also going to Vaikunthaloka, in
+another plane. Dhruva Maharaja had thought that he was going alone to Vaikunthaloka, leaving behind
+his mother, which was not very auspicious because people would criticize him for going alone to
+Vaikunthaloka and not carrying with him Suniti, who had given him so much. But Dhruva also
+considered that he was not personally the Supreme. Therefore, if Krsna fulfilled his desires, only then
+would it be possible. Krsna could immediately understand his mind, and He told Dhruva that his mother
+was also going with him. This incident proves that a pure devotee like Dhruva Maharaja can fulfill all his
+desires; by the grace of the Lord, he becomes exactly like the Lord, and thus whenever he thinks of
+anything, his wish is immediately fulfilled.
 </p>
 
 </div>
@@ -71,7 +136,7 @@ Supreme Personality of Godhead, will fulfill your desire.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

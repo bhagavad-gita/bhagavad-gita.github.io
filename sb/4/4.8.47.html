@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.47.html">4.8.47</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.47</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/47"><b>47</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasya prasanno bhagavan
-gunair maitry-adibhir harih
-tasmai namanti bhutani
-nimnam apa iva svayam
-<p></p>
+srivatsankam ghana-syamam
+purusam vana-malinam
+sankha-cakra-gada-padmair
+abhivyakta-caturbhujam
+<br>
 <h2>Synonyms</h2>
-yasya--anyone with whom; prasannah--is pleased; bhagavan--the Personality of Godhead; gunaih--by
-qualities; maitri-adibhih--by friendship, etc.; harih--Lord Hari; tasmai--unto him; namanti--offer respect;
-bhutani--all living entities; nimnam--to low ground; apah--water; iva--just as; svayam--automatically.
-<p></p>
+srivatsa-ankam--the mark of Srivatsa on the chest of the Lord; ghana-syamam--deeply bluish; purusam--
+the Supreme Person; vana-malinam--with a garland of flowers; sankha--conchshell; cakra--wheel; gada--
+club; padmaih--lotus flower; abhivyakta--manifested; catuh-bhujam--four handed.
+<br>
 <h2>Translation</h2>
-Unto one who has transcendental qualities due to friendly behavior with the Supreme Personality of
-Godhead, all living entities offer honor, just as water automatically flows down by nature.
-<p></p>
+The Lord is further described as having the mark of Srivatsa, or the sitting place of the goddess of
+fortune, and His bodily hue is deep bluish. The Lord is a person, He wears a garland of flowers, and He is
+eternally manifest with four hands, which hold [beginning from the lower left hand] a conchshell, wheel,
+club and lotus flower.
+<br>
 <h2>Purport</h2>
-The question may be raised in this connection why Suruci, who was not at all favorably disposed
-towards Dhruva, blessed him, "Long may you live," which means that she also desired good fortune for
-him. The answer is given in this verse. Since Dhruva Maharaja was blessed by the Lord, due to his
-transcendental qualities everyone was bound to offer him all respects and benediction, just as water, by its
-nature, flows downward. A devotee of the Lord does not demand respect from anyone, but wherever he
-goes he is honored by everyone throughout the whole world with all respect. Srinivasa Acarya said that
-the six Gosvamis of Vrndavana are respected throughout the entire universe because a devotee, having
-pleased the Supreme Personality of Godhead, the source of all emanations, automatically pleases
-everyone, and thus everyone offers him respect.
+Here in this verse the word purusam is very significant. The Lord is never female. He is always male
+(purusa). Therefore the impersonalist who imagines the Lord's form as that of a woman is mistaken. The
+Lord appears in female form if necessary, but His perpetual form is purusa because He is originally male.
+The feminine feature of the Lord is displayed by goddesses of fortune--Laksmi, Radharani, Sita, etc. All
+these goddesses of fortune are servitors of the Lord; they are not the Supreme, as falsely imagined by the
+impersonalist. Lord Krsna in His Narayana feature is always four handed. On the Battlefield of
+Kuruksetra, when Arjuna wanted to see His universal form, He showed this feature of four-handed
+Narayana. Some devotees are of the opinion that Krsna is an incarnation of Narayana, but the Bhagavata
+school says that Narayana is a manifestation of Krsna.
 </p>
 
 </div>
@@ -80,7 +121,7 @@ everyone, and thus everyone offers him respect.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

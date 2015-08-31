@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,52 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.17.html">4.26.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatha yatha vikriyate
-gunakto vikaroti va
-tatha tathopadrastatma
-tad-vrttir anukaryate
-<p></p>
+rama ucuh
+nara-natha na janimas
+tvat-priya yad vyavasyati
+bhutale niravastare
+sayanam pasya satru-han
+<br>
 <h2>Synonyms</h2>
-yatha yatha--just as; vikriyate--is agitated; guna-aktah--associated with the modes of nature; vikaroti--as
-it does; va--or; tatha tatha--similarly; upadrasta--observer; atma--the soul; tat--of the intelligence; vrttih--
-occupations; anukaryate--imitates.
-<p></p>
+ramah ucuh--the women thus spoke; nara-natha--O King; na janimah--we do not know; tvat-priya--your
+beloved; yat vyavasyati--why she has taken to this sort of life; bhu-tale--on the ground; niravastare--
+without bedding; sayanam--lying down; pasya--look; satru-han--O killer of enemies.
+<br>
 <h2>Translation</h2>
-Formerly it was explained that the Queen is one's intelligence. While one is awake or asleep, that
-intelligence creates different situations. Being influenced by contaminated intelligence, the living entity
-envisions something and simply imitates the actions and reactions of his intelligence.
-<p></p>
+All the women addressed the King: O master of the citizens, we do not know why your dear wife has
+taken on this sort of existence. O killer of enemies, kindly look! She is lying on the ground without
+bedding. We cannot understand why she is acting this way.
+<br>
 <h2>Purport</h2>
-The queen of Puranjana is described herein as intelligence itself. Intelligence acts both in the dream
-state and in the waking state, but it is contaminated by the three modes of material nature. Since the
-intelligence is contaminated, the living entity is also contaminated. In the conditioned state, the living
-entity acts according to his contaminated intelligence. Although he simply remains an observer, he
-nonetheless acts, being forced by a contaminated intelligence, which in reality is a passive agent.
+When a person is devoid of devotional service, or visnu-bhakti, he takes to many sinful activities. King
+Puranjana left home, neglected his own wife and engaged himself in killing animals. This is the position
+of all materialistic men. They do not care for a married chaste wife. They take the wife only as an
+instrument for sense enjoyment, not as a means for devotional service. To have unrestricted sex life, the
+karmis work very hard. They have concluded that the best course is to have sex with any woman and
+simply pay the price for her, as though she were a mercantile commodity. Thus they engage their energy
+in working very hard for such material acquisitions. Such materialistic people have lost their good
+intelligence. They must search out their intelligence within the heart. A person who does not have a
+chaste wife accepted by religious principles always has a bewildered intelligence.
+The wife of King Puranjana was lying on the ground because she was neglected by her husband.
+Actually the woman must always be protected by her husband. We always speak of the goddess of fortune
+as being placed on the chest of Narayana. In other words, the wife must remain embraced by her husband.
+Thus she becomes beloved and well protected. Just as one saves his money and places it under his own
+personal protection, one should similarly protect his wife by his own personal supervision. Just as
+intelligence is always within the heart, so a beloved chaste wife should always have her place on the chest
+of a good husband. This is the proper relationship between husband and wife. A wife is therefore called
+ardhangani, or half of the body. One cannot remain with only one leg, one hand or only one side of the
+body. He must have two sides. Similarly, according to nature's way, husband and wife should live
+together. In the lower species of life, among birds and animals, it is seen that by nature's arrangement the
+husband and wife live together. It is similarly ideal in human life for the husband and wife to live
+together. The home should be a place for devotional service, and the wife should be chaste and accepted
+by a ritualistic ceremony. In this way one can become happy at home.
 </p>
 
 </div>
@@ -77,7 +134,7 @@ nonetheless acts, being forced by a contaminated intelligence, which in reality 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

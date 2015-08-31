@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.2.html">4.27.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kim barhaspatyeha paratra vatha
-kaivalya-natha-priya-parsva-vartinah
-asadya devam girisam yadrcchaya
-prapuh param nunam atha pracetasah
-<p></p>
+sa raja mahisim rajan
+susnatam rucirananam
+krta-svastyayanam trptam
+abhyanandad upagatam
+<br>
 <h2>Synonyms</h2>
-kim--what; barhaspatya--O disciple of Brhaspati; iha--here; paratra--in different planets; va--or; atha--as
-such; kaivalya-natha--to the bestower of liberation; priya--dear; parsva-vartinah--being associated with;
-asadya--after meeting; devam--the great demigod; giri-sam--the lord of the Kailasa Hill; yadrcchaya--by
-providence; prapuh--achieved; param--the Supreme; nunam--certainly; atha--therefore; pracetasah--the
-sons of Barhisat.
-<p></p>
+sah--he; raja--the King; mahisim--the Queen; rajan--O King; su-snatam--nicely bathed; rucira-ananam--
+attractive face; krta-svasti-ayanam--dressed with auspicious garments and ornaments; trptam--satisfied;
+abhyanandat--he welcomed; upagatam--approached.
+<br>
 <h2>Translation</h2>
-My dear Barhaspatya, what did the sons of King Barhisat, known as the Pracetas, obtain after meeting
-Lord Siva, who is very dear to the Supreme Personality of Godhead, the bestower of liberation? Certainly
-they were transferred to the spiritual world, but apart from that, what did they obtain within this material
-world, either in this life or in other lives?
-<p></p>
+The Queen took her bath and dressed herself nicely with all auspicious garments and ornaments. After
+taking food and becoming completely satisfied, she returned to the King. Upon seeing her beautifully
+decorated attractive face, the King welcomed her with all devotion.
+<br>
 <h2>Purport</h2>
-All types of material happiness are obtained in this life or in the next life, on this planet or on another.
-The living entity wanders within this material universe in so many species of life and so many planetary
-systems. The distress and happiness obtained during the span of life are called iha, and the distress and
-happiness obtained in the next life are called paratra.
-Actually, Lord Mahadeva (Siva) is one of the great demigods within this material world. Generally his
-blessings bestowed on ordinary people mean material happiness. The predominating deity of this material
-world, Durga, is under the control of Lord Mahadeva, Girisa. Thus Lord Mahadeva can offer anyone any
-kind of material happiness. Generally people prefer to become devotees of Lord Girisa to obtain material
-happiness, but the Pracetas met Lord Mahadeva by providential arrangement. Lord Mahadeva instructed
-them to worship the Supreme Personality of Godhead, and he personally offered a prayer. As stated in the
-previous verse (rudra-gitena), simply by chanting the prayers offered by Lord Siva to Visnu, the Pracetas
-were transferred to the spiritual world. Sometimes devotees desire to enjoy material happiness also;
-therefore, by the arrangement of the Supreme Personality of Godhead, the devotee is given a chance to
-enjoy the material world before his final entrance into the spiritual world. Sometimes a devotee is
-transferred to a heavenly planet--to Janaloka, Maharloka, Tapoloka, Siddhaloka and so on. However, a
-pure devotee never aspires for any kind of material happiness. The pure devotee is consequently
-transferred directly to Vaikunthaloka, which is described here as param. In this verse Vidura asks
-Maitreya, the disciple of Brhaspati, about the different achievements of the Pracetas.
+A woman is generally accustomed to dress herself nicely with fine garments and decorative ornaments.
+She may even sometimes wear flowers in her hair. Women especially dress themselves up in the evening
+because the husband comes home in the evening after working hard all day. It is the duty of the wife to
+dress herself up very nicely so that when her husband returns home he becomes attracted by her dress
+and cleanliness and thus becomes satisfied. In other words, the wife is the inspiration of all good
+intelligence. Upon seeing one's wife dressed nicely, one can think very soberly about family business.
+When a person is too anxious about family affairs, he cannot discharge his family duties nicely. A wife is
+therefore supposed to be an inspiration and should keep the husband's intelligence in good order so that
+they can combinedly prosecute the affairs of family life without impediment.
 </p>
 
 </div>
@@ -93,7 +120,7 @@ Maitreya, the disciple of Brhaspati, about the different achievements of the Pra
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

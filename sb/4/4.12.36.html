@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.36.html">4.12.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasmat purusa uttasthau
-hema-maly amalambarah
-hiranmayena patrena
-siddham adaya payasam
-<p></p>
+yad bhrajamanam sva-rucaiva sarvato
+lokas trayo hy anu vibhrajanta ete
+yan navrajan jantusu ye 'nanugraha
+vrajanti bhadrani caranti ye 'nisam
+<br>
 <h2>Synonyms</h2>
-tasmat--from that fire; purusah--a person; uttasthau--appeared; hema-mali--with a golden garland;
-amala-ambarah--in white garments; hiranmayena--golden; patrena--with a pot; siddham--cooked; adaya--
-carrying; payasam--rice boiled in milk.
-<p></p>
+yat--which planet; bhrajamanam--illuminating; sva-ruca--by self-effulgence; eva--only; sarvatah--
+everywhere; lokah--planetary systems; trayah--three; hi--certainly; anu--thereupon; vibhrajante--give off
+light; ete--these; yat--which planet; na--not; avrajan--have reached; jantusu--to living entities; ye--those
+who; ananugrahah--not merciful; vrajanti--reach; bhadrani--welfare activities; caranti--engage in; ye--
+those who; anisam--constantly.
+<br>
 <h2>Translation</h2>
-As soon as the oblation was offered in the fire, a person appeared from the fire altar wearing a golden
-garland and a white dress. He was carrying a golden pot filled with rice boiled in milk.
+The self-effulgent Vaikuntha planets, by whose illumination alone all the illuminating planets within
+this material world give off reflected light, cannot be reached by those who are not merciful to other living
+entities. Only persons who constantly engage in welfare activities for other living entities can reach the
+Vaikuntha planets.
+<br>
+<h2>Purport</h2>
+Here is a description of two aspects of the Vaikuntha planets. The first is that in the Vaikuntha sky there
+is no need of the sun and moon. This is confirmed by the Upanisads as well as Bhagavad-gita (na tad
+bhasayate suryo na sasanko na pavakah). In the spiritual world the Vaikunthalokas are themselves
+illuminated; there is therefore no need of sun, moon or electric light. It is in fact the illumination of the
+Vaikunthalokas which is reflected in the material sky. Only by this reflection are the suns in the material
+universes illuminated; after the illumination of the sun, all the stars and moons are illuminated. In other
+words, all the luminaries in the material sky borrow illumination from Vaikunthaloka. From this material
+world, however, people can be transferred to the Vaikunthaloka, if they incessantly engage in welfare
+activities for all other living entities. Such incessant welfare activities can really be performed only in
+Krsna consciousness. There is no philanthropic work within this material world but Krsna consciousness
+that can engage a person twenty-four hours a day.
+A Krsna conscious being is always engaged in planning how to take all of suffering humanity back
+home, back to Godhead. Even if one is not successful in reclaiming all the fallen souls back to Godhead,
+still, because he is Krsna conscious, his path to Vaikunthaloka is open. He personally becomes qualified to
+enter the Vaikunthalokas, and if anyone follows such a devotee, he also enters into Vaikunthaloka.
+Others, who engage in envious activities, are known as karmis. Karmis are envious of one another. Simply
+for sense gratification, they can kill thousands of innocent animals. Jnanis are not as sinful as karmis, but
+they do not try to reclaim others back to Godhead. They perform austerities for their own liberation.
+Yogis are also engaged in self-aggrandizement by trying to attain mystic powers. But devotees, Vaisnavas,
+who are servants of the Lord, come forward in the actual field of work in Krsna consciousness to reclaim
+fallen souls. Only Krsna conscious persons are eligible to enter into the spiritual world. That is clearly
+stated in this verse and is confirmed in Bhagavad-gita, wherein the Lord says that there is no one dearer to
+Him than those who preach the gospel of Bhagavad-gita to the world.
 </p>
 
 </div>
@@ -69,7 +137,7 @@ garland and a white dress. He was carrying a golden pot filled with rice boiled 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

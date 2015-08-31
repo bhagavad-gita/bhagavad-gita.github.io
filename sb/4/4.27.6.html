@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.6.html">4.27.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kasisnuna kanaka-varna-vibhusanena
-bhrajat-kapola-vadano vilasat-kiritah
-astayudhair anucarair munibhih surendrair
-asevito garuda-kinnara-gita-kirtih
-<p></p>
+tasyam ajanayat putran
+puranjanyam puranjanah
+satany ekadasa virad
+ayuso 'rdham athatyagat
+<br>
 <h2>Synonyms</h2>
-kasisnuna--shining; kanaka--gold; varna--colored; vibhusanena--with ornaments; bhrajat--shining;
-kapola--forehead; vadanah--His face; vilasat--dazzling; kiritah--His helmet; asta--eight; ayudhaih--with
-weapons; anucaraih--by followers; munibhih--by great sages; sura-indraih--by demigods; asevitah--served;
-garuda--by Garuda; kinnara--inhabitant of the Kinnara planet; gita--sung; kirtih--His glories.
-<p></p>
+tasyam--within her; ajanayat--he begot; putran--sons; puranjanyam--in Puranjani; puranjanah--King
+Puranjana; satani--hundreds; ekadasa--eleven; virat--O King; ayusah--of life; ardham--half; atha--in this
+way; atyagat--he passed.
+<br>
 <h2>Translation</h2>
-The Lord's face was very beautiful, and His head was decorated with a shining helmet and golden
-ornaments. The helmet was dazzling and was very beautifully situated on His head. The Lord had eight
-arms, which each held a particular weapon. The Lord was surrounded by demigods, great sages and other
-associates. These were all engaged in His service. Garuda, the carrier of the Lord, glorified the Lord with
-Vedic hymns by flapping his wings. Garuda appeared to be an inhabitant of the planet known as
-Kinnaraloka.
-<p></p>
+The great sage Narada then addressed King Pracinabarhisat: O one whose life-span is great [virat], in
+this way King Puranjana begot 1,100 sons within the womb of his wife, Puranjani. However, in this
+business he passed away half of his life-span.
+<br>
 <h2>Purport</h2>
-Generally the Visnu form is manifested with four hands holding four objects (a conchshell, disc, club
-and lotus flower). However, here Lord Visnu is described as possessing eight arms with eight kinds of
-weapons. According to Viraraghava Acarya, the conchshell and lotus flower are also accepted as weapons.
-Since the Lord is the supreme controller, whatever is in His hand can be considered a weapon. Four hands
-hold four kinds of weapons, and the extra four hands hold an arrow, bow, trident and snake. Sri
-Viraraghava Acarya describes the eight weapons as sankha, cakra, gada, padma, sarnga, sara, etc.
-A king is always accompanied by his ministers, secretaries and commanders, and Lord Visnu is also
-accompanied by His followers--the demigods, great sages, saintly persons and so on. He is never alone.
-Consequently there is no question of the Lord's being impersonal. He is always Himself, the Supreme
-Personality of Godhead, and His associates are also persons. From the description given in this verse,
-Garuda appears to belong to the Kinnara planet. The inhabitants of the Kinnara planet have the same
-features as Garuda. Their bodily features are like those of a human being, but they have wings. The word
-gita-kirtih indicates that the inhabitants of Kinnaraloka are very expert in singing the glories of the Lord.
-In Brahma-samhita it is said: jagad-anda-koti-kotisv asesa-vasudhadi-vibhuti-bhinnam. In each and every
-universe there are different types of planets, and each planet has distinctive features. On the strength of
-this verse, we can understand that in Kinnaraloka the inhabitants can fly with their wings. There is also a
-planet, known as Siddhaloka, where the inhabitants can fly even without wings. Thus each and every
-planet has some distinctive facility. That is the beauty of the varied creation of the Supreme Personality of
-Godhead.
+In this verse there are several significant words, the first of which are ekadasa satani. Puranjana had
+begotten 1,100 sons within the womb of his wife, and thus passed away half of his life. Actually every man
+follows a similar process. If one lives for one hundred years at the utmost, in his family life he simply
+begets children up to the age of fifty. Unfortunately at the present moment people do not live even a
+hundred years; nonetheless they beget children up to the age of sixty. Another point is that formerly
+people used to beget one hundred to two hundred sons and daughters. As will be evident from the next
+verse, King Puranjana not only begot 1,100 sons but also 110 daughters. At the present moment no one
+can produce such huge quantities of children. Instead, mankind is very busy checking the increase of
+population by contraceptive methods.
+We do not find in Vedic literatures that they ever used contraceptive methods, although they were
+begetting hundreds of children. Checking population by contraceptive method is another sinful activity,
+but in this age of Kali people have become so sinful that they do not care for the resultant reactions of
+their sinful lives. King Puranjana lay down with his wife, Puranjani, and begot a large number of children,
+and there is no mention in these verses that he used contraceptive methods. According to the Vedic
+scriptures the contraceptive method should be restraint in sex life. It is not that one should indulge in
+unrestricted sex life and avoid children by using some method to check pregnancy. If a man is in good
+consciousness, he consults with his religious wife, and as a result of this consultation, with intelligence,
+one advances in his ability to estimate the value of life. In other words, if one is fortunate enough to have
+a good, conscientious wife, he can decide by mutual consultation that human life is meant for advancing
+in Krsna consciousness and not for begetting a large number of children. Children are called parinama, or
+by-products, and when one consults his good intelligence he can see that his by-products should be the
+expansion of his Krsna consciousness.
 </p>
 
 </div>
@@ -95,7 +133,7 @@ Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.4.html">4.10.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tais tigma-dharaih pradhane sili-mukhair
-itas tatah punya-jana upadrutah
-tam abhyadhavan kupita udayudhah
-suparnam unnaddha-phana ivahayah
-<p></p>
+dhruvo bhratr-vadham srutva
+kopamarsa-sucarpitah
+jaitram syandanam asthaya
+gatah punya-janalayam
+<br>
 <h2>Synonyms</h2>
-taih--by those; tigma-dharaih--which had a sharp point; pradhane--on the battlefield; sili-mukhaih--
-arrows; itah tatah--here and there; punya-janah--the Yaksas; upadrutah--being greatly agitated; tam--
-towards Dhruva Maharaja; abhyadhavan--rushed; kupitah--being angry; udayudhah--with upraised
-weapons; suparnam--towards Garuda; unnaddha-phanah--with upraised hoods; iva--like; ahayah--
-serpents.
-<p></p>
+dhruvah--Dhruva Maharaja; bhratr-vadham--the killing of his brother; srutva--hearing this news; kopa--
+anger; amarsa--vengeance; suca--lamentation; arpitah--being filled with; jaitram--victorious; syandanam--
+chariot; asthaya--getting on; gatah--went; punya-jana-alayam--to the city of the Yaksas.
+<br>
 <h2>Translation</h2>
-Those sharp arrows dismayed the enemy soldiers, who became almost unconscious, but various Yaksas
-on the battlefield, in a rage against Dhruva Maharaja, somehow or other collected their weapons and
-attacked. Just as serpents agitated by Garuda rush towards Garuda with upraised hoods, all the Yaksa
-soldiers prepared to overcome Dhruva Maharaja with their upraised weapons.
+When Dhruva Maharaja heard of the killing of his brother Uttama by the Yaksas in the Himalaya
+Mountains, being overwhelmed with lamentation and anger, he got on his chariot and went out for
+victory over the city of the Yaksas, Alakapuri.
+<br>
+<h2>Purport</h2>
+Dhruva Maharaja's becoming angry, overwhelmed with grief, and envious of the enemies was not
+incompatible with his position as a great devotee. It is a misunderstanding that a devotee should not be
+angry, envious or overwhelmed by lamentation. Dhruva Maharaja was the king, and when his brother was
+unceremoniously killed, it was his duty to take revenge against the Yaksas from the Himalayas.
 </p>
 
 </div>
@@ -73,7 +115,7 @@ soldiers prepared to overcome Dhruva Maharaja with their upraised weapons.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

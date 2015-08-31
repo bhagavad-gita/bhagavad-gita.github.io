@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.11.html">4.20.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-ganga-yamunayor nadyor
-antara ksetram avasan
-arabdhan eva bubhuje
-bhogan punya-jihasaya
-<p></p>
+udasinam ivadhyaksam
+dravya-jnana-kriyatmanam
+kuta-stham imam atmanam
+yo vedapnoti sobhanam
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great saint Maitreya said; ganga--the River Ganges; yamunayoh--of the River
-Yamuna; nadyoh--of the two rivers; antara--between; ksetram--the land; avasan--living there; arabdhan--
-destined; eva--like; bubhuje--enjoyed; bhogan--fortunes; punya--pious activities; jihasaya--for the purpose
-of diminishing.
-<p></p>
+udasinam--indifferent; iva--simply; adhyaksam--the superintendent; dravya--of the physical elements;
+jnana--knowledge-acquiring senses; kriya--working senses; atmanam--and of the mind; kuta-stham--fixed;
+imam--this; atmanam--soul; yah--anyone who; veda--knows; apnoti--gets; sobhanam--all good fortune.
+<br>
 <h2>Translation</h2>
-The great saintly sage Maitreya told Vidura: My dear Vidura, King Prthu lived in the tract of land
-between the two great rivers Ganges and Yamuna. Because he was very opulent, it appeared that he was
-enjoying his destined fortune in order to diminish the results of his past pious activities.
-<p></p>
+Anyone who knows that this material body, made of the five gross elements, the sense organs, the
+working senses and the mind, is simply supervised by the fixed soul is eligible to be liberated from
+material bondage.
+<br>
 <h2>Purport</h2>
-The terms "pious" and "impious" are applicable only in reference to the activities of an ordinary living
-being. But Maharaja Prthu was a directly empowered incarnation of Lord Visnu; therefore he was not
-subject to the reactions of pious or impious activities. As we have already explained previously, when a
-living being is specifically empowered by the Supreme Lord to act for a particular purpose, he is called a
-saktyavesa-avatara. Prthu Maharaja was not only a saktyavesa-avatara but also a great devotee. A devotee
-is not subjected to the reactions resulting from past deeds. In the Brahma-samhita it is said, karmani
-nirdahati kintu ca bhakti-bhajam: for devotees the results of past pious and impious activities are nullified
-by the Supreme personality of Godhead. The words arabdhan eva mean "as if achieved by past deeds," but
-in the case of Prthu Maharaja there was no question of reaction to past deeds, and thus the word eva is
-used here to indicate comparison to ordinary persons. In Bhagavad-gita the Lord says, avajananti mam
-mudhah. This means that sometimes people misunderstand an incarnation of the Supreme Personality of
-Godhead to be an ordinary man. The Supreme Godhead, His incarnations or His devotees may pose
-themselves as ordinary men, but they are never to be considered as such. Nor should an ordinary man not
-supported by authorized statements of the sastras and acaryas be accepted as an incarnation or devotee. By
-the evidence of sastra, Sanatana Gosvami detected Lord Caitanya Mahaprabhu to be a direct incarnation of
-Krsna, the Supreme personality of Godhead, although Lord Caitanya never disclosed the fact. It is
-therefore generally recommended that the acarya, or guru, should not be accepted as an ordinary man.
+This verse describes how one can become liberated from material bondage. The first point is that one
+must know that the soul is different from his body. The soul is called dehi, or one who possesses the
+body, and the material body is called deha, or the embodiment of the soul. The body is changing at every
+moment, but the soul is fixed; therefore the soul is called kuta-stham. The change of body is enacted by
+the reactions of the three modes of nature. One who has understood the fixed position of the soul should
+not be disturbed by the incoming and outgoing interactions of the modes of material nature in the form of
+happiness and distress. In Bhagavad-gita also, Lord Krsna recommends that since happiness and distress
+come and go due to the interaction of the modes of nature on the body, one should not be disturbed by
+such external movements. Even though one is sometimes absorbed in such external movements, he has to
+learn to tolerate them. The living entity should be always indifferent to the action and reaction of the
+external body.
+Lord Krsna says in Bhagavad-gita that the body, made of the gross physical elements (earth, water, fire,
+air and sky) and the subtle elements (mind, intelligence and ego), is completely different from the soul
+proper. One should therefore not be disturbed by the action and reaction of these eight gross and subtle
+material elements. The practical process to attain this stage of indifference is to execute devotional service.
+Only one who constantly engages in devotional service twenty-four hours a day can be indifferent to the
+action and reaction of the external body. When a man is absorbed in a particular thought, he does not
+hear or see any external activities, even though they are enacted in his presence. Similarly, those who are
+fully absorbed in devotional service do not care what is going on with the external body. That status is
+called samadhi. One who is actually situated in samadhi is understood to be a first-class yogi.
 </p>
 
 </div>
@@ -91,7 +131,7 @@ therefore generally recommended that the acarya, or guru, should not be accepted
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

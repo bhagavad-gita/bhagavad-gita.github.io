@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.27.html">4.27.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rupam bhagavata tv etad
-asesa-klesa-sanksayam
-aviskrtam nah klistanam
-kim anyad anukampitam
-<p></p>
+kala-kanyodita-vaco
+nisamya yavanesvarah
+cikirsur deva-guhyam sa
+sasmitam tam abhasata
+<br>
 <h2>Synonyms</h2>
-rupam--form; bhagavata--by Your Lordship; tu--but; etat--this; asesa--unlimited; klesa--miseries;
-sanksayam--which dissipates; aviskrtam--revealed; nah--of us; klistanam--who are suffering from material
-conditions; kim anyat--what to speak of; anukampitam--those to whom You are always favorably
-disposed.
-<p></p>
+kala-kanya--by the daughter of Time; udita--expressed; vacah--words; nisamya--hearing; yavanaisvarah--
+the King of the Yavanas; cikirsuh--desiring to execute; deva--of providence; guhyam--confidential
+duty; sah--he; sa-smitam--smilingly; tam--her; abhasata--addressed.
+<br>
 <h2>Translation</h2>
-Dear Lord, we conditioned souls are always covered by ignorance in the bodily conception of life. We
-therefore always prefer the miserable conditions of material existence. To deliver us from these miserable
-conditions, You have advented Yourself in this transcendental form. This is evidence of Your unlimited
-causeless mercy upon those of us who are suffering in this way. What, then, to speak of the devotees to
-whom You are always so favorably disposed?
-<p></p>
+After hearing the statement of Kalakanya, daughter of Time, the King of the Yavanas began to smile and
+devise a means for executing his confidential duty on behalf of providence. He then addressed Kalakanya
+as follows.
+<br>
 <h2>Purport</h2>
-When the Lord appears in His original form, He acts to deliver the pious and annihilate the miscreants
-(Bg. 4.8). Although He annihilates the demons, He nonetheless benefits them. It is said that all the living
-entities who died on the Battlefield of Kuruksetra attained their original constitutional position (svarupa)
-because they had the chance to see Krsna face to face riding in the chariot of Arjuna. On the Battlefield of
-Kuruksetra, superficially two things were going on--the demons were being killed, and the devotee,
-Arjuna, was being protected. However, the results were the same for everyone. Thus it is said that the
-appearance of the Lord diminishes all kinds of miserable conditions caused by material existence.
-It is clearly stated in this verse that this form (asesa-klesa-sanksayam) is meant to diminish all the
-miserable conditions experienced in life not only by the devotees but by all others. Aviskrtam nah
-klistanam. The Pracetas identified themselves as common men. Kim anyad anukampitam. The devotees
-are always favorably accepted by the Lord. The Lord shows all mercy not only to conditioned souls but
-also to the devotees, who are already liberated due to their devotional service.
-The form of the Lord as worshiped in the temples is called arca-vigraha or arcavatara, the worshipable
-form, the Deity incarnation. This facility is offered to neophyte devotees so that they can see the real form
-of the Lord face to face and offer their respectful obeisances and sacrifices in the form of arca. Through
-such facilities the neophytes gradually invoke their original Krsna consciousness. Deity worship in the
-form of temple worship is the most valuable benediction given by the Lord to beginners. All neophytes
-must therefore engage in the worship of the Lord by keeping the arca-vigraha (arcavatara) at home or in
-the temple.
+In Caitanya-caritamrta (Adi 5.142) it is said:
+ekale isvara krsna, ara saba bhrtya
+yare yaiche nacaya, se taiche kare nrtya
+Actually the supreme controller is the Personality of Godhead, Krsna, and everyone is His servant.
+Yavana-raja, the King of the Yavanas, was also a servant of Krsna. Consequently, he wanted to execute the
+purpose of Krsna through the agency of Kalakanya. Although Kalakanya means invalidity or old age,
+Yavana-raja wanted to serve Krsna by introducing Kalakanya everywhere. Thus a sane person, by attaining
+old age, will become fearful of death. Foolish people engage in material activities as if they will live
+forever and enjoy material advancement, but actually there is no material advancement. Under illusion
+people think that material opulence will save them, but although there has been much advancement in
+material science, the problems of human society--birth, death, old age and disease--are still unsolved.
+Nonetheless foolish scientists are thinking that they have advanced materially. When Kalakanya, the
+invalidity of old age, attacks them, they become fearful of death, if they are sane. Those who are insane
+simply do not care for death, nor do they know what is going to happen after death. They are under the
+wrong impression that after death there is no life, and consequently they act very irresponsibly in this life
+and enjoy unrestricted sense gratification. For an intelligent person, the appearance of old age is an
+impetus to spiritual life. People naturally fear impending death. The King of the Yavanas tried to utilize
+Kalakanya for this purpose.
 </p>
 
 </div>
@@ -94,7 +129,7 @@ the temple.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

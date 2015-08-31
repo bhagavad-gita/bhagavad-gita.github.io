@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,52 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.6.html">4.7.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-athatah kirtaye vamsam
-punya-kirteh kurudvaha
-svayambhuvasyapi manor
-harer amsamsa-janmanah
-<p></p>
+maitreya uvaca
+tada sarvani bhutani
+srutva midhustamoditam
+paritustatmabhis tata
+sadhu sadhv ity athabruvan
+<br>
 <h2>Synonyms</h2>
-atha--now; atah--hereafter; kirtaye--I shall describe; vamsam--dynasty; punya-kirteh--celebrated for
-virtuous activities; kuru-udvaha--O best of the Kurus; svayambhuvasya--of Svayambhuva; api--even;
-manoh--of the Manu; hareh--of the Personality of Godhead; amsa--plenary expansion; amsa--part of;
-janmanah--born of.
-<p></p>
+maitreyah--the sage Maitreya; uvaca--said; tada--at that time; sarvani--all; bhutani--personalities;
+srutva--after hearing; midhuh-tama--the best of the benedictors (Lord Siva); uditam--spoken by;
+paritusta--being satisfied; atmabhih--by heart and soul; tata--my dear Vidura; sadhu sadhu--well done,
+well done; iti--thus; atha abruvan--as we have said.
+<br>
 <h2>Translation</h2>
-Maitreya continued: O best of the Kuru dynasty, I shall now describe before you the descendants of
-Svayambhuva Manu, who was born of a part of a plenary expansion of the Supreme Personality of
-Godhead.
-<p></p>
+The great sage Maitreya said: My dear Vidura, all the personalities present were very much satisfied in
+heart and soul upon hearing the words of Lord Siva, who is the best among the benedictors.
+<br>
 <h2>Purport</h2>
-Lord Brahma is a powerful expansion of the Supreme Personality of Godhead. Although Brahma is jivatattva,
-he is empowered by the Lord, and therefore he is considered a plenary expansion of the Supreme
-Godhead. Sometimes it happens that when there is no suitable living being to be empowered to act as
-Brahma, the Supreme Lord Himself appears as Brahma. Brahma is the plenary expansion of the Supreme
-Personality of Godhead, and Svayambhuva Manu was the direct son of Brahma. The great sage Maitreya is
-now going to explain about the descendants of this Manu, all of whom are widely celebrated for their
-pious activities. Before speaking of these pious descendants, Maitreya has already described the
-descendants of impious activities, representing anger, envy, unpalatable speech, quarrel, fear and death.
-Purposely, therefore, he is next relating the history of the life of Dhruva Maharaja, the most pious king
-within this universe.
+In this verse Lord Siva is described as midhustama, the best of the benedictors. He is also known as
+Asutosa, which indicates that he is very quickly satisfied and very quickly angered. It is said in Bhagavadgita
+that less intelligent persons go to the demigods for material benedictions. In this connection, people
+generally go to Lord Siva, and because he is always quickly satisfied and gives benedictions to his devotees
+without consideration, he is called midhustama, or the best of the benedictors. Materialistic persons are
+always anxious to get material profit, but they are not serious about spiritual profit.
+Sometimes, of course, it so happens that Lord Siva becomes the best benedictor in spiritual life. It is said
+that once a poor brahmana worshiped Lord Siva for a benediction, and Lord Siva advised the devotee to
+go to see Sanatana Gosvami. The devotee went to Sanatana Gosvami and informed him that Lord Siva had
+advised him to seek out the best benediction from him (Sanatana). Sanatana had a touchstone with him,
+which he kept with the garbage. On the request of the poor brahmana, Sanatana Gosvami gave him the
+touchstone, and the brahmana was very happy to have it. He now could get as much gold as he desired
+simply by touching the touchstone to iron. But after he left Sanatana, he thought, "If a touchstone is the
+best benediction, why has Sanatana Gosvami kept it with the garbage?" He therefore returned and asked
+Sanatana Gosvami, "Sir, if this is the best benediction, why did you keep it with the garbage?" Sanatana
+Gosvami then informed him, "Actually, this is not the best benediction. But are you prepared to take the
+best benediction from me?" The brahmana said, "Yes, sir. Lord Siva has sent me to you for the best
+benediction." Then Sanatana Gosvami asked him to throw the touchstone in the water nearby and then
+come back. The poor brahmana did so, and when he returned, Sanatana Gosvami initiated him with the
+Hare Krsna mantra. Thus by the benediction of Lord Siva the brahmana got the association of the best
+devotee of Lord Krsna and was thus initiated in the maha-mantra, Hare Krsna, Hare Krsna, Krsna Krsna,
+Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare.
 </p>
 
 </div>
@@ -83,7 +134,7 @@ within this universe.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.19.html">4.19.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhagavan atha visvatma
-prthunopahrtarhanah
-samujjihanaya bhaktya
-grhita-caranambujah
-<p></p>
+upasrjya tamas tivram
+jaharasvam punar harih
+casala-yupatas channo
+hiranya-rasanam vibhuh
+<br>
 <h2>Synonyms</h2>
-bhagavan--the Supreme Personality of Godhead; atha--thereupon; visva-atma--the Supersoul; prthuna--
-by King Prthu; upahrta--being offered; arhanah--all the paraphernalia for worship; samujjihanaya--
-gradually increased; bhaktya--whose devotional service; grhita--taken; carana-ambujah--His lotus feet.
-<p></p>
+upasrjya--creating; tamah--darkness; tivram--dense; jahara--took away; asvam--the horse; punah--again;
+harih--King Indra; casala-yupatah--from the wooden instrument where the animals were sacrificed;
+channah--being covered; hiranya-rasanam--tied with a gold chain; vibhuh--very powerful.
+<br>
 <h2>Translation</h2>
-King Prthu abundantly worshiped the lotus feet of the Supreme Personality of Godhead, who was so
-merciful to him. While worshiping the lotus feet of the Lord, Prthu Maharaja gradually increased his
-ecstasy in devotional service.
-<p></p>
-<h2>Purport</h2>
-When various ecstasies appear in the body of a devotee, it is to be understood that his devotional service
-has become perfect. There are many types of transcendental ecstasies in the forms of crying, laughing,
-perspiring, falling down, and crying like a madman. All these symptoms are sometimes visible on the
-body of a devotee. They are called asta-sattvika-vikara, which means "eight kinds of transcendental
-transformations." They are never to be imitated, but when a devotee actually becomes perfect, these
-symptoms are visible on his body. The Lord is bhakta-vatsala, which means that He is inclined toward His
-pure devotee (bhakta). Therefore the transcendental ecstatic transaction between the Supreme Lord and
-His devotee is never like the activities of this material world.
+My dear Vidura, Indra, being the King of heaven and very powerful, immediately brought a dense
+darkness upon the sacrificial arena. Covering the whole scene in this way, he again took away the horse,
+which was chained with golden shackles near the wooden instrument where animals were sacrificed.
 </p>
 
 </div>
@@ -80,7 +109,7 @@ His devotee is never like the activities of this material world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

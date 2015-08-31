@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.21.html">4.22.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nila-raktotpalambhojakahlarendivarakaram
-hamsa-sarasa-cakrahvakarandava-
-nikujitam
-<p></p>
+sastresv iyan eva suniscito nrnam
+ksemasya sadhryag-vimrsesu hetuh
+asanga atma-vyatirikta atmani
+drdha ratir brahmani nirgune ca ya
+<br>
 <h2>Synonyms</h2>
-nila--blue; rakta--red; utpala--lotus; ambhah-ja--born from the water; kahlara--another kind of lotus;
-indivara--another kind of lotus; akaram--the mine; hamsa--swans; sarasa--cranes; cakrahva--the ducks of
-the name; karandava--birds of the name; nikujitam--vibrated by their sounds.
-<p></p>
+sastresu--in the scriptures; iyan eva--this is only; su-niscitah--positively concluded; nrnam--of human
+society; ksemasya--of the ultimate welfare; sadhryak--perfectly; vimrsesu--by full consideration; hetuh--
+cause; asangah--detachment; atma-vyatirikte--the bodily concept of life; atmani--unto the Supreme Soul;
+drdha--strong; ratih--attachment; brahmani--transcendence; nirgune--in the Supreme, who is beyond the
+material modes; ca--and; ya--which.
+<br>
 <h2>Translation</h2>
-In that great lake there were different types of lotus flowers. Some of them were bluish, and some of
-them were red. Some of them grew at night, some in the day and some, like the indivara lotus flower, in
-the evening. Combined together, the lotus flowers filled the lake so full that the lake appeared to be a
-great mine of such flowers. Consequently, on the shores there were swans and cranes, cakravaka,
-karandava and other beautiful water birds standing about.
-<p></p>
+It has been conclusively decided in the scriptures, after due consideration, that the ultimate goal for the
+welfare of human society is detachment from the bodily concept of life and increased and steadfast
+attachment for the Supreme Lord, who is transcendental, beyond the modes of material nature.
+<br>
 <h2>Purport</h2>
-The word akaram ("mine") is significant in this verse, for the reservoir of water appeared like a mine
-from which different types of lotus flowers were produced. Some of the lotus flowers grew during the day,
-some at night and some in the evening, and accordingly they had different names and different colors. All
-these flowers were present on that lake, and because the lake was so calm and quiet and filled with lotus
-flowers, superior birds, like swans, cakravakas and karandavas, stood on the shores and vibrated their
-different songs, making the entire scene attractive and beautiful. As there are different types of human
-beings, according to the association of the three qualities of material nature, there are similarly different
-types of birds, bees, trees, etc. Everything is divided according to the three qualities of material nature.
-Birds like swans and cranes, who enjoy clear waters and lotus flowers, are different from crows, who enjoy
-filthy places. Similarly, there are persons who are controlled by the modes of ignorance and passion and
-those who are controlled by the mode of goodness. The creation is so varied that there are always varieties
-found in every society. Thus on the bank of this lake all the superior birds lived to enjoy that atmosphere
-created by that great reservoir filled with lotus flowers.
+Everyone in human society is engaged for the ultimate benefit of life, but persons who are in the bodily
+conception cannot achieve the ultimate goal, nor can they understand what it is. The ultimate goal of life
+is described in Bhagavad-gita (2.59). param drstva nivartate. When one finds out the supreme goal of life,
+he naturally becomes detached from the bodily concept. Here in this verse the indication is that one has to
+steadfastly increase attachment for the Transcendence (brahmani). As confirmed in the Vedanta-sutra
+(1.1.1), athato brahma jijnasa: without inquiry about the Supreme, or the Transcendence, one cannot give
+up attachment for this material world. By the evolutionary process in because in all those species of life,
+the bodily conception is very prominent. Athato brahma jijnasa means that in order to get out of the
+bodily conception, one has to increase attachment to or inquiry about Brahman. Then he can be situated
+in the transcendental devotional service--sravanam kirtanam visnoh. To increase attachment for Brahman
+means to engage in devotional service. Those who are attached to the impersonal form of Brahman cannot
+remain attached for very long. Impersonalists, after rejecting this world as mithya, or false (jagan mithya),
+come down again to this jagan mithya, although they take sannyasa to increase their attachment for
+Brahman. Similarly, many yogis who are attached to the localized aspect of Brahman as Paramatma--great
+sages like Visvamitra--also fall down as victims of women. Therefore increased attachment for the
+Supreme personality of Godhead is advised in all sastras. That is the only way of detachment from
+material existence and is explained in Bhagavad-gita (2.59) as param drstva nivartate. One can cease
+material activities when he actually has the taste for devotional service. Sri Caitanya Mahaprabhu also
+recommended love of Godhead as the ultimate goal of life (prema pum-artho mahan). Without increasing
+love of Godhead, one cannot achieve the perfectional stage of the transcendental position.
 </p>
 
 </div>
@@ -86,7 +133,7 @@ created by that great reservoir filled with lotus flowers.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.51.html">4.7.51</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.51</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/51"><b>51</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-smayamanam abhidhyayet
-sanuragavalokanam
-niyatenaika-bhutena
-manasa varadarsabham
-<p></p>
+atma-mayam samavisya
+so 'ham gunamayim dvija
+srjan raksan haran visvam
+dadhre samjnam kriyocitam
+<br>
 <h2>Synonyms</h2>
-smayamanam--the Lord's smiling; abhidhyayet--one should meditate upon Him; sa-anuragaavalokanam--
-one who is looking toward the devotees with great affection; niyatena--in this way, regularly;
-eka-bhutena--with great attention; manasa--with the mind; vara-da-rsabham--one should meditate upon
-the greatest bestower of benedictions.
-<p></p>
+atma-mayam--My energy; samavisya--having entered; sah--Myself; aham--I; guna-mayim--composed of
+the modes of material nature; dvi-ja--O twice-born Daksa; srjan--creating; raksan--maintaining; haran--
+annihilating; visvam--the cosmic manifestation; dadhre--I cause to be born; samjnam--a name; kriyaucitam--
+according to the activity.
+<br>
 <h2>Translation</h2>
-The Lord is always smiling, and the devotee should constantly see the Lord in this form, as He looks
-very mercifully toward the devotee. In this way the meditator should look toward the Supreme Personality
-of Godhead, the bestower of all benedictions.
-<p></p>
+The Lord continued: My dear Daksa Dvija, I am the original Personality of Godhead, but in order to
+create, maintain and annihilate this cosmic manifestation, I act through My material energy, and
+according to the different grades of activity, My representations are differently named.
+<br>
 <h2>Purport</h2>
-The word niyatena is very significant in this connection, for it indicates that one should execute the
-meditation practice as stated above. One should not manufacture a way of meditation on the Supreme
-Personality of Godhead, but should follow the authorized sastras and personalities. By this prescribed
-method one can practice concentration upon the Lord until one is so fixed that he remains in trance,
-thinking always of the form of the Lord. The word used here is eka-bhutena, which means "with great
-attention and concentration." If one concentrates on the descriptions of the bodily features of the Lord,
-one will never fall down.
+As explained in Bhagavad-gita (7.5), jiva-bhutam maha-baho: the whole world is energy released from
+the supreme source, the Personality of Godhead, who, it is further stated in Bhagavad-gita, acts in
+superior energies and inferior energies. The superior energy is the living entity, who is part and parcel of
+the Supreme Lord. As parts and parcels, the living entities are not different from the Supreme Lord; the
+energy emanated from Him is not different from Him. But in the actual activity of this material world, the
+living entity is under the different qualities of material energy and in different forms. There are 8,400,000
+life forms. The same living entity acts under the influence of the different qualities of material nature. The
+entities have different bodies, but originally, in the beginning of creation, Lord Visnu is alone. For the
+purpose of creation, Brahma is manifested, and for annihilation there is Lord Siva. As far as the spiritual
+entrance into the material world is concerned, all beings are part and parcel of the Supreme Lord, but
+under the covering of different material qualities they have different names. Lord Brahma and Lord Siva
+are qualitative incarnations of Visnu, as guna-avataras, and Visnu with them accepts control of the quality
+of goodness; therefore He is also a qualitative incarnation like Lord Siva and Lord Brahma. Actually the
+different names exist for different directions, otherwise the origin is one only.
 </p>
 
 </div>
@@ -80,7 +126,7 @@ one will never fall down.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

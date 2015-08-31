@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.1.html">4.25.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-narada uvaca
-sainika bhaya-namno ye
-barhisman dista-karinah
-prajvara-kala-kanyabhyam
-vicerur avanim imam
-<p></p>
+maitreya uvaca
+iti sandisya bhagavan
+barhisadair abhipujitah
+pasyatam raja-putranam
+tatraivantardadhe harah
+<br>
 <h2>Synonyms</h2>
-naradah uvaca--the great sage Narada continued to speak; sainikah--the soldiers; bhaya-namnah--of
-Bhaya (Fear); ye--all of them who; barhisman--O King Pracinabarhisat; dista-karinah--the order carriers of
-death; prajvara--with Prajvara; kala-kanyabhyam--and with Kalakanya; viceruh--traveled; avanim--on
-earth; imam--this.
-<p></p>
+maitreyah uvaca--the great sage Maitreya continued to speak; iti--thus; sandisya--giving instruction;
+bhagavan--the most powerful lord; barhisadaih--by the sons of King Barhisat; abhipujitah--being
+worshiped; pasyatam--while they were looking on; raja-putranam--the sons of the King; tatra--there; eva--
+certainly; antardadhe--became invisible; harah--Lord Siva.
+<br>
 <h2>Translation</h2>
-The great sage Narada continued: My dear King Pracinabarhisat, afterward, the King of the Yavanas,
-whose name is fear itself, as well as Prajvara, Kalakanya, and his soldiers, began to travel all over the
-world.
-<p></p>
+The great sage Maitreya continued speaking to Vidura: My dear Vidura, in this way Lord Siva instructed
+the sons of King Barhisat. The sons of the King also worshiped Lord Siva with great devotion and respect.
+Finally, Lord Siva became invisible to the princes.
+<br>
 <h2>Purport</h2>
-The period of life just prior to death is certainly very dangerous because usually at this time people are
-attacked by the weakness of old age as well as many kinds of disease. The diseases that attack the body are
-compared here to soldiers. These soldiers are not ordinary soldiers, for they are guided by the King of the
-Yavanas, who acts as their commander-in-chief. The word dista-karinah indicates that he is their
-commander. When a man is young, he does not care for old age, but enjoys sex to the best of his
-satisfaction, not knowing that at the end of life his sexual indulgence will bring on various diseases, which
-so much disturb the body that one will pray for immediate death. The more one enjoys sex during youth,
-the more he suffers in old age.
+This chapter contains a great lesson concerning the monarchical kingdom in the days of yore. When
+King Barhisat was considering retiring from the royal duties, he sent his sons to perform austerities in
+order to become perfect kings for the welfare of the citizens. At the same time, King Barhisat was being
+instructed by the great sage Narada about the material world and the living entity who wants to enjoy it. It
+is therefore very clear how the kings and princes were trained to take charge of a kingdom. Welfare
+activities for the benefit of the citizens were aimed at understanding the Supreme Personality of Godhead.
+The human form of life is especially meant for understanding God, our relationship with Him and our
+activities in His service. Because the kings took charge of the spiritual education of the citizens, both the
+king and the citizens were happy in Krsna consciousness. In this regard, we should remember that the
+monarchical hierarchy of Pracinabarhisat comes from Maharaja Dhruva, a great devotee of the Lord and
+the most celebrated disciple of Narada Muni. King Pracinabarhisat was then too much engaged in fruitive
+activities due to performing different types of yajnas. One can actually be promoted to higher planetary
+systems or to the heavenly kingdoms by performing various yajnas, but there is no question of liberation
+or going back home, back to Godhead. When the great sage Narada saw that a descendant of Maharaja
+Dhruva was being misled by fruitive activities, Narada took compassion upon him and personally came to
+instruct him about the ultimate benediction of life, bhakti-yoga. How Narada Muni indirectly introduced
+the bhakti-yoga system to King Pracinabarhisat is very interestingly described in this Twenty-fifth
+Chapter.
 </p>
 
 </div>
@@ -82,7 +131,7 @@ the more he suffers in old age.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

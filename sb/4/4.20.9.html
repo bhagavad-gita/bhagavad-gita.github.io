@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.9.html">4.20.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vidura uvaca
-so 'bhisiktah prthur viprair
-labdhasesa-surarhanah
-bibhrat sa vaisnavam tejo
-bahvor yabhyam dudoha gam
-<p></p>
+yah sva-dharmena mam nityam
+nirasih sraddhayanvitah
+bhajate sanakais tasya
+mano rajan prasidati
+<br>
 <h2>Synonyms</h2>
-vidurah uvaca--Vidura said; sah--he (King Prthu); abhisiktah--when enthroned; prthuh--King Prthu;
-vipraih--by the great sages and brahmanas; labdha--achieved; asesa--innumerable; sura-arhanah--
-presentations by the demigods; bibhrat--expanding; sah--he; vaisnavam--who has received through Lord
-Visnu; tejah--strength; bahvoh--arms; yabhyam--by which; dudoha--exploited; gam--the earth.
-<p></p>
+yah--anyone who; sva-dharmena--by his occupational duties; mam--Me; nityam--regularly; nirasih--
+without any motive; sraddhaya--with faith and devotion; anvitah--endowed; bhajate--worships; sanakaih--
+gradually; tasya--his; manah--mind; rajan--O King Prthu; prasidati--becomes fully satisfied.
+<br>
 <h2>Translation</h2>
-Vidura said: My dear brahmana Maitreya, it is very enlightening to understand that King Prthu was
-enthroned by the great sages and brahmanas. All the demigods presented him with innumerable gifts, and
-he also expanded his influence upon personally receiving strength from Lord Visnu. Thus he greatly
-developed the earth.
-<p></p>
+The Supreme Personality of Godhead, Lord Visnu, continued: My dear King Prthu, when one situated in
+his occupational duty engages in My loving service without motive for material gain, he gradually
+becomes very satisfied within.
+<br>
 <h2>Purport</h2>
-Because Prthu Maharaja was an empowered incarnation of Lord Visnu and was naturally a great
-Vaisnava devotee of the Lord, all the demigods were pleased with him and presented different gifts to help
-him in exercising his royal power, and the great sages and saintly persons also joined in his coronation.
-Thus blessed by them, he ruled over the earth and exploited its resources for the greatest satisfaction of
-the people in general. This has already been explained in the previous chapters regarding the activities of
-King Prthu. As will be apparent from the next verse, every executive head of state should follow in the
-footsteps of Maharaja Prthu in ruling over his kingdom. Regardless of whether the chief executive is a
-king or president, or whether the government is monarchical or democratic, this process is so perfect that
-if it is followed, everyone will become happy, and thus it will be very easy for all to execute devotional
-service to the Supreme personality of Godhead.
+This verse is also confirmed by the Visnu Purana. Occupational duties are known as varnasrama-dharma
+and apply to the four divisions of material and spiritual life--namely brahmana, ksatriya, vaisya and sudra,
+and brahmacarya, grhastha, vanaprastha and sannyasa. If one works according to the varnasrama-dharma
+system and does not desire fruitive results, he gets satisfaction gradually. Discharging one's occupational
+duty as a means of rendering devotional service unto the Supreme personality of Godhead is the ultimate
+goal of life. Bhagavad-gita confirms this as the process of karma-yoga. In other words, we should act only
+for the satisfaction and service of the Lord. Otherwise we will be entangled by the resultant actions.
+Everyone is situated in his occupational duty, but the purpose of material occupations should not be
+material gain. Rather, everyone should offer the results of his occupational activities. A brahmana
+especially should execute his occupational duties not for material gain but to please the Supreme
+personality of Godhead. The ksatriya, vaisya and sudra should work in a similar way. In this material
+world everyone is engaged in various professional and occupational duties, but the purpose of such
+activities should be to please the Supreme Personality of Godhead. Devotional service is very simple, and
+anyone can adopt it. Let one remain what he is; he need only install the Deity of the Supreme Lord in his
+house. The Deity may be Radha-Krsna or Laksmi-Narayana (there are many other forms of the Lord). In
+this way a brahmana, ksatriya, vaisya or sudra can worship the Deity with the results of his honest labor.
+Regardless of one's occupational duty, one should adopt the devotional means of hearing, chanting,
+remembering, worshiping, offering everything to the Lord and engaging in His service. In this way one
+can very easily engage himself in the service of the Lord. When the Lord is pleased with one's service,
+one's mission in life is fulfilled.
 </p>
 
 </div>
@@ -85,7 +131,7 @@ service to the Supreme personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

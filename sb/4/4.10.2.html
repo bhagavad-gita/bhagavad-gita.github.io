@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.2.html">4.10.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sandhiyamana etasmin
-maya guhyaka-nirmitah
-ksipram vinesur vidura
-klesa jnanodaye yatha
-<p></p>
+ilayam api bharyayam
+vayoh putryam maha-balah
+putram utkala-namanam
+yosid-ratnam ajijanat
+<br>
 <h2>Synonyms</h2>
-sandhiyamane--while joining to his bow; etasmin--this nararayanastra; mayah--the illusions; guhyakanirmitah--
-created by the Yaksas; ksipram--very soon; vinesuh--were destroyed; vidura--O Vidura; klesah--
-illusory pains and pleasures; jnana-udaye--upon the arising of knowledge; yatha--just as.
-<p></p>
+ilayam--unto his wife named Ila; api--also; bharyayam--unto his wife; vayoh--of the demigod Vayu
+(controller of air); putryam--unto the daughter; maha-balah--the greatly powerful Dhruva Maharaja;
+putram--son; utkala--Utkala; namanam--of the name; yosit--female; ratnam--jewel; ajijanat--he begot.
+<br>
 <h2>Translation</h2>
-As soon as Dhruva Maharaja joined the narayanastra arrow to his bow, the illusion created by the
-Yaksas was immediately vanquished, just as all material pains and pleasures are vanquished when one
-becomes fully cognizant of the self.
-<p></p>
-<h2>Purport</h2>
-Krsna is like the sun, and maya, or the illusory energy of Krsna, is like darkness. Darkness means
-absence of light; similarly, maya means absence of Krsna consciousness. Krsna consciousness and maya
-are always there, side by side. As soon as there is awakening of Krsna consciousness, all the illusory pains
-and pleasures of material existence are vanquished. Mayam etam taranti te: constant chanting of the
-maha-mantra will keep us always aloof from the illusory energy of maya.
+The greatly powerful Dhruva Maharaja had another wife, named Ila, who was the daughter of the
+demigod Vayu. By her he begot a son named Utkala and a very beautiful daughter.
 </p>
 
 </div>
@@ -77,7 +108,7 @@ maha-mantra will keep us always aloof from the illusory energy of maya.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

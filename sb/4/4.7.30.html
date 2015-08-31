@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.30.html">4.7.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atha matropadistena
-yogenavarurutsasi
-yat-prasadam sa vai pumsam
-duraradhyo mato mama
-<p></p>
+bhrgur uvaca
+yan mayaya gahanayapahrtatma-bodha
+brahmadayas tanu-bhrtas tamasi svapantah
+natman-sritam tava vidanty adhunapi tattvam
+so 'yam prasidatu bhavan pranatatma-bandhuh
+<br>
 <h2>Synonyms</h2>
-atha--therefore; matra--by your mother; upadistena--being instructed; yogena--by mystic meditation;
-avarurutsasi--want to elevate yourself; yat-prasadam--whose mercy; sah--that; vai--certainly; pumsam--of
-the living entities; duraradhyah--very difficult to perform; matah--opinion; mama--my.
-<p></p>
+bhrguh uvaca--Sri Bhrgu said; yat--who; mayaya--by illusory energy; gahanaya--insurmountable;
+apahrta--stolen; atma-bodhah--knowledge of the constitutional position; brahma-adayah--Lord Brahma,
+etc.; tanu-bhrtah--embodied living entities; tamasi--in the darkness of illusion; svapantah--lying down;
+na--not; atman--in the living entity; sritam--situated in; tava--Your; vidanti--understand; adhuna--now;
+api--certainly; tattvam--absolute position; sah--You; ayam--this; prasidatu--be kind; bhavan--Your
+Lordship; pranata-atma--surrendered soul; bandhuh--friend.
+<br>
 <h2>Translation</h2>
-Now you have decided to undertake the mystic process of meditation under the instruction of your
-mother, just to achieve the mercy of the Lord, but in my opinion such austerities are not possible for any
-ordinary man. It is very difficult to satisfy the Supreme Personality of Godhead.
-<p></p>
+Sri Bhrgu said: My dear Lord, all living entities, beginning from the highest, namely Lord Brahma, down
+to the ordinary ant, are under the influence of the insurmountable spell of illusory energy, and thus they
+are ignorant of their constitutional position. Everyone believes in the concept of the body, and all are thus
+submerged in the darkness of illusion. They are actually unable to understand how You live in every
+living entity as the Supersoul, nor can they understand Your absolute position. But You are the eternal
+friend and protector of all surrendered souls. Therefore, please be kind toward us and forgive all our
+offenses.
+<br>
 <h2>Purport</h2>
-The process of bhakti-yoga is simultaneously very difficult and very easy to perform. Sri Narada Muni,
-the supreme spiritual master, is testing Dhruva Maharaja to see how determined he is to prosecute
-devotional service. This is the process of accepting a disciple. The great sage Narada has come to Dhruva
-under the direction of the Supreme Personality of Godhead just to initiate him, yet he is testing Dhruva's
-determination to execute the process. It is a fact, however, that for a sincere person devotional service is
-very easy. But for one who is not determined and sincere, this process is very difficult.
+Bhrgu Muni was conscious of the scandalous behavior exhibited by each and every one of them,
+including Brahma and Lord Siva, in the sacrificial ceremony of Daksa. By mentioning Brahma, the chief of
+all living entities within this material world, he wanted to state that everyone, including also Brahma and
+Lord Siva, is under the concept of the body and under the spell of material energy--all but Visnu. That is
+the version of Bhrgu. As long as one is under the concept of the body as self, it is very difficult to
+understand the Supersoul or the Supreme Personality of Godhead. Conscious that he was not greater than
+Brahma-, Bhrgu included himself in the list of offenders. Ignorant personalities, or conditioned souls, have
+no choice but to accept their precarious condition under material nature. The only remedy is to surrender
+to Visnu and always pray to be excused. One should depend only on the causeless mercy of the Lord for
+deliverance and not even slightly on one's own strength. That is the perfect position of a Krsna conscious
+person. The Lord is everyone's friend, but He is especially friendly to the surrendered soul. The simple
+process, therefore, is that a conditioned soul should remain surrendered to the Lord, and the Lord will
+give him all protection to keep him out of the clutches of material contamination.
 </p>
 
 </div>
@@ -78,7 +132,7 @@ very easy. But for one who is not determined and sincere, this process is very d
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

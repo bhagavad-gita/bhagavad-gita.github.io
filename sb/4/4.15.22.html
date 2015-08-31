@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.22.html">4.15.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ayam mahim gam duduhe 'dhirajah
-prajapatir vrtti-karah prajanam
-yo lilayadrin sva-sarasa-kotya
-bhindan samam gam akarod yathendrah
-<p></p>
+prthur uvaca
+bhoh suta he magadha saumya vandil
+loke 'dhunaspasta-gunasya me syat
+kim asrayo me stava esa yojyatam
+ma mayy abhuvan vitatha giro vah
+<br>
 <h2>Synonyms</h2>
-ayam--this King; mahim--the earth; gam--in the form of a cow; duduhe--will milk; adhirajah--
-extraordinary king; praja-patih--progenitor of mankind; vrtti-karah--providing living facility; prajanam--of
-the citizens; yah--one who; lilaya--simply by pastimes; adrin--mountains and hills; sva-sarasa--of his bow;
-kotya--by the pointed end; bhindan--breaking; samam--level; gam--the earth; akarot--will make; yatha--as;
-indrah--the King of heaven, Indra.
-<p></p>
+prthuh uvaca--King Prthu said; bhoh suta--O suta; he magadha--O magadha; saumya--gentle; vandin--O
+devotee offering prayers; loke--in this world; adhuna--just now; aspasta--not distinct; gunasya--whose
+qualities; me--of me; syat--there may be; kim--why; asrayah--shelter; me--of me; stavah--praise; esah--this;
+yojyatam--may be applied; ma--never; mayi--unto me; abhuvan--were; vitathah--in vain; girah--words;
+vah--your.
+<br>
 <h2>Translation</h2>
-This King, this protector of the citizens, is an extraordinary king and is equal to the Prajapati demigods.
-For the living facility of all citizens, he will milk the earth, which is like a cow. Not only that, but he will
-level the surface of the earth with the pointed ends of his bow, breaking all the hills exactly as King Indra,
-the heavenly King, breaks mountains with his powerful thunderbolt.
+King Prthu said: O gentle suta, magadha and other devotee offering prayers, the qualities of which you
+have spoken are not distinct in me. Why then should you praise me for all these qualities when I do not
+shelter these features? I do not wish for these words meant for me to go in vain, but it is better that they
+be offered to someone else.
+<br>
+<h2>Purport</h2>
+The prayers and praises by the suta, magadha and vandi all explained the godly qualities of Maharaja
+Prthu, for he was a saktyavesa incarnation of the Supreme Personality of Godhead. Because the qualities
+were not yet manifest, however, King Prthu very humbly asked why the devotees should praise him with
+such exalted words. He did not want anyone to offer him prayers or glorify him unless he possessed the
+real qualities of which they spoke. The offering of prayers was certainly appropriate, for he was an
+incarnation of Godhead, but he warned that one should not be accepted as an incarnation of the
+Personality of Godhead without having the godly qualities. At the present moment there are many socalled
+incarnations of the Personality of Godhead, but these are merely fools and rascals whom people
+accept as incarnations of God although they have no godly qualities. King Prthu desired that his real
+characteristics in the future might justify such words of praise. Although there was no fault in the prayers
+offered, Prthu Maharaja indicated that such prayers should not be offered to an unfit person who pretends
+to be an incarnation of the Supreme Personality of Godhead.
 </p>
 
 </div>
@@ -73,7 +127,7 @@ the heavenly King, breaks mountains with his powerful thunderbolt.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

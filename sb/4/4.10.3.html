@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.3.html">4.10.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasyarsastram dhanusi prayunjatah
-suvarna-punkhah kalahamsa-vasasah
-vinihsrta avivisur dvisad-balam
-yatha vanam bhima-ravah sikhandinah
-<p></p>
+uttamas tv akrtodvaho
+mrgayayam baliyasa
+hatah punya-janenadrau
+tan-matasya gatim gata
+<br>
 <h2>Synonyms</h2>
-tasya--while Dhruva; arsa-astram--the weapon given by Narayana Rsi; dhanusi--on his bow;
-prayunjatah--fixed; suvarna-punkhah--(arrows) with golden shafts; kalahamsa-vasasah--with feathers like
-the wings of a swan; vinihsrtah--sprang out; avivisuh--entered; dvisat-balam--the soldiers of the enemy;
-yatha--just as; vanam--into a forest; bhima-ravah--making a tumultuous sound; sikhandinah--peacocks.
-<p></p>
+uttamah--Uttama; tu--but; akrta--without; udvahah--marriage; mrgayayam--on a hunting excursion;
+baliyasa--very powerful; hatah--was killed; punya-janena--by a Yaksa; adrau--on the Himalaya Mountains;
+tat--his; mata--mother (Suruci); asya--of her son; gatim--way; gata--followed.
+<br>
 <h2>Translation</h2>
-Even as Dhruva Maharaja fixed the weapon made by Narayana Rsi onto his bow, arrows with golden
-shafts and feathers like the wings of a swan flew out from it. They entered the enemy soldiers with a great
-hissing sound, just as peacocks enter a forest with tumultuous crowing.
+Dhruva Maharaja's younger brother Uttama, who was still unmarried, once went on a hunting excursion
+and was killed by a powerful Yaksa in the Himalaya Mountains. Along with him, his mother, Suruci, also
+followed the path of her son [she died].
 </p>
 
 </div>
@@ -71,7 +109,7 @@ hissing sound, just as peacocks enter a forest with tumultuous crowing.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

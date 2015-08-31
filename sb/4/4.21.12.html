@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,60 +81,71 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.12.html">4.21.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-chinnanya-dhir adhigatatma-gatir nirihas
-tat tatyaje 'cchinad idam vayunena yena
-tavan na yoga-gatibhir yatir apramatto
-yavad gadagraja-kathasu ratim na kuryat
-<p></p>
+sarvatraskhalitadesah
+sapta-dvipaika-danda-dhrk
+anyatra brahmana-kulad
+anyatracyuta-gotratah
+<br>
 <h2>Synonyms</h2>
-chinna--being separated; anya-dhih--all other concepts of life (the bodily concept of life); adhigata--
-being firmly convinced; atma-gatih--the ultimate goal of spiritual life; nirihah--desireless; tat--that;
-tatyaje--gave up; acchinat--he had cut; idam--this; vayunena--with the knowledge; yena--by which; tavat--
-so long; na--never; yoga-gatibhih--the practice of the mystic yoga system; yatih--the practicer;
-apramattah--without any illusion; yavat--so long; gadagraja--of Krsna; kathasu--words; ratim--attraction;
-na--never; kuryat--do it.
-<p></p>
+sarvatra--everywhere; askhalita--irrevocable; adesah--order; sapta-dvipa--seven islands; eka--one; dandadhrk--
+the ruler who holds the scepter; anyatra--except; brahmana-kulat--brahmanas and saintly persons;
+anyatra--except; acyuta-gotratah--descendants of the Supreme Personality of Godhead (Vaisnavas).
+<br>
 <h2>Translation</h2>
-When he became completely free from the conception of bodily life, Maharaja Prthu realized Lord Krsna
-sitting in everyone's heart as the Paramatma. Being thus able to get all instructions from Him, he gave up
-all other practices of yoga and jnana. He was not even interested in the perfection of the yoga and jnana
-systems, for he thoroughly realized that devotional service to Krsna is the ultimate goal of life and that
-unless the yogis and jnanis become attracted to krsna-katha [narrations about Krsna], their illusions
-concerning existence can never be dispelled.
-<p></p>
+Maharaja Prthu was an unrivaled king and possessed the scepter for ruling all the seven islands on the
+surface of the globe. No one could disobey his irrevocable orders but the saintly persons, the brahmanas
+and the descendants of the Supreme Personality of Godhead [the Vaisnavas].
+<br>
 <h2>Purport</h2>
-As long as one is too much absorbed in the bodily conception of life, he becomes interested in many
-different processes of self-realization, such as the mystic yoga system or the system utilizing the
-speculative empiric methods. However, when one understands that the ultimate goal of life is to approach
-Krsna, he realizes Krsna within everyone's heart and therefore helps everyone who is interested in Krsna
-consciousness. Actually the perfection of life depends on one's inclination to hear about Krsna. It is
-therefore mentioned in this verse: yavad gadagraja-kathasu ratim na kuryat. Unless one becomes
-interested in Krsna, in His pastimes and activities, there is no question of liberation by means of yoga
-practice or speculative knowledge.
-Having attained to the stage of devotion, Maharaja Prthu became uninterested in the practices of jnana
-and yoga and abandoned them. This is the stage of pure devotional life as described by Rupa Gosvami:
-anyabhilasita-sunyam
-jnana-karmady-anavrtam
-anukulyena krsnanusilanam
-bhaktir uttama
-Real jnana means understanding that the living entity is the eternal servant of the Lord. This knowledge
-is attained after many, many births, as confirmed in Bhagavad-gita (7.19): bahunam janmanam ante
-jnanavan mam prapadyate. In the paramahamsa stage of life, one fully realizes Krsna as everything:
-vasudevah sarvam iti sa mahatma sudurlabhah. When one understands fully that Krsna is everything and
-that Krsna consciousness is the highest perfection of life, he becomes a paramahamsa, or mahatma. Such a
-mahatma or paramahamsa is very rare to find. A paramahamsa, or pure devotee, is never attracted by
-hatha-yoga or speculative knowledge. He is simply interested in the unalloyed devotional service of the
-Lord. Sometimes one who was formerly addicted to these processes tries to perform devotional service
-and the jnana and yoga practices at the same time, but as soon as one comes to the unalloyed stage of
-devotional service, he is able to give up all other methods of self-realization. In other words, when one
-firmly realizes Krsna as the supreme goal, he is no longer attracted by mystic yoga practice or the
-speculative empirical methods of knowledge.
+Sapta-dvipa refers to the seven great islands or continents on the surface of the globe: (1) Asia, (2)
+Europe, (3) Africa, (4) North America, (5) South America, (6) Australia and (7) Oceania. In the modern
+age people are under the impression that during the Vedic period or the prehistoric ages America and
+many other parts of the world had not been discovered, but that is not a fact. Prthu Maharaja ruled over
+the world many thousands of years before the so-called prehistoric age, and it is clearly mentioned here
+that in those days not only were all the different parts of the world known, but they were ruled by one
+king, Maharaja Prthu. The country where Prthu Maharaja resided must have been India because it is
+stated in the eleventh verse of this chapter that he lived in the tract of land between the rivers Ganges and
+Yamuna. This tract of land, which is called Brahmavarta, consists of what is known in the modern age as
+portions of Punjab and northern India. It is clear that the kings of India once ruled all the world and that
+their culture was Vedic.
+The word askhalita indicates that orders by the king could not be disobeyed by anyone in the entire
+world. Such orders, however, were never issued to control saintly persons or the descendants of the
+Supreme Personality of Godhead, Visnu. The Supreme Lord is known as Acyuta, and Lord Krsna is
+addressed as such by Arjuna in Bhagavad-gita (senayor ubhayor madhye ratham sthapaya me 'cyuta).
+Acyuta refers to one who does not fall because He is never influenced by the modes of material nature.
+When a living entity falls down to the material world from his original position, he becomes cyuta, which
+means that he forgets his relationship with Acyuta. Actually every living entity is a part and parcel, or a
+son, of the Supreme Personality of Godhead. When influenced by the modes of material nature, a living
+entity forgets this relationship and thinks in terms of different species of life; but when he again comes to
+his original consciousness, he does not observe such bodily designations. This is indicated in Bhagavadgita
+(5.18) by the words panditah sama-darsinah.
+Material designations create differentiation in terms of caste, color, creed, nationality, etc. Different
+gotras, or family designations, are distinctions in terms of the material body, but when one comes to
+Krsna consciousness he immediately becomes one of the Acyuta-gotra, or descendants of the Supreme
+Personality of Godhead, and thus becomes transcendental to all considerations of caste, creed, color and
+nationality.
+Prthu Maharaja had no control over the brahmana-kula, which refers to the learned scholars in Vedic
+knowledge, nor over the Vaisnavas, who are above the considerations of Vedic knowledge. It is therefore
+said:
+arcye visnau sila-dhir gurusu nara-matir vaisnave jati-buddhir
+visnor va vaisnavanam kali-mala-mathane pada-tirthe 'mbu-buddhih
+sri-visnor namni mantre sakala-kalusa-he sabda-samanya-buddhir
+visnau sarvesvarese tad-itara-sama-dhir yasya va naraki sah
+"One who thinks the Deity in the temple to be made of wood or stone, who thinks of the spiritual
+master in the disciplic succession as an ordinary man, who thinks the Vaisnava in the Acyuta-gotra to
+belong to a certain caste or creed or who thinks of caranamrta or Ganges water as ordinary water is taken
+to be a resident of hell." (Padma Purana)
+From the facts presented in this verse, it appears that people in general should be controlled by a king
+until they come to the platform of Vaisnavas and brahmanas, who are not under the control of anyone.
+Brahmana refers to one who knows Brahman, or the impersonal feature of the Absolute Truth, and a
+Vaisnava is one who serves the Supreme Personality of Godhead.
 </p>
 
 </div>
@@ -104,7 +153,7 @@ speculative empirical methods of knowledge.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.11.13.html">4.11.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sat-trimsad-varsa-sahasram
-sasasa ksiti-mandalam
-bhogaih punya-ksayam kurvann
-abhogair asubha-ksayam
-<p></p>
+titiksaya karunaya
+maitrya cakhila-jantusu
+samatvena ca sarvatma
+bhagavan samprasidati
+<br>
 <h2>Synonyms</h2>
-sat-trimsat--thirty-six; varsa--years; sahasram--thousand; sasasa--ruled; ksiti-mandalam--the earth
-planet; bhogaih--by enjoyment; punya--of reactions of pious activities; ksayam--diminution; kurvan--
-doing; abhogaih--by austerities; asubha--of inauspicious reactions; ksayam--diminution.
-<p></p>
+titiksaya--by tolerance; karunaya--by mercy; maitrya--by friendship; ca--also; akhila--universal; jantusu--
+unto the living entities; samatvena--by equilibrium; ca--also; sarva-atma--the Supersoul; bhagavan--the
+Personality of Godhead; samprasidati--becomes very satisfied.
+<br>
 <h2>Translation</h2>
-Dhruva Maharaja ruled over this planet for thirty-six thousand years; he diminished the reactions of
-pious activities by enjoyment, and by practicing austerities he diminished inauspicious reactions.
-<p></p>
+The Lord is very satisfied with His devotee when the devotee greets other people with tolerance, mercy,
+friendship and equality.
+<br>
 <h2>Purport</h2>
-That Dhruva Maharaja ruled over the planet for thirty-six thousand years means that he was present in
-the Satya-yuga because in the Satya-yuga people used to live for one hundred thousand years. In the next
-yuga, Treta, people used to live for ten thousand years, and in the next yuga, Dvapara, for one thousand
-years. In the present age, the Kali-yuga, the maximum duration of life is one hundred years. With the
-change of the yugas, the duration of life and memory, the quality of kindness and all other good qualities
-diminish. There are two kinds of activities, namely pious and impious. By executing pious activities one
-can gain facilities for higher material enjoyment, but due to impious activities one has to undergo severe
-distress. A devotee, however, is not interested in enjoyment or affected by distress. When he is prosperous
-he knows, "I am diminishing the results of my pious activities," and when he is in distress he knows, "I
-am diminishing the reactions of my impious activities." A devotee is not concerned with enjoyment or
-distress; he simply desires to execute devotional service. It is said in the Srimad-Bhagavatam that
-devotional service should be apratihata, unchecked by the material conditions of happiness or distress.
-The devotee undergoes processes of austerity such as observing Ekadasi and similar other fasting days and
-refraining from illicit sex life, intoxication, gambling and meat-eating. Thus he becomes purified from the
-reactions of his past impious life, and because he engages in devotional service, which is the most pious
-activity, he enjoys life without separate endeavor.
+It is the duty of an advanced devotee in the second stage of devotional perfection to act in accordance
+with this verse. There are three stages of devotional life. In the lowest stage, a devotee is simply concerned
+with the Deity in the temple, and he worships the Lord with great devotion, according to rules and
+regulations. In the second stage the devotee is cognizant of his relationship with the Lord, his relationship
+with fellow devotees, his relationship with persons who are innocent and his relationship with persons
+who are envious. Sometimes devotees are ill-treated by envious persons. It is advised that an advanced
+devotee should be tolerant; he should show complete mercy to persons who are ignorant or innocent. A
+preacher-devotee is meant to show mercy to innocent persons, whom he can elevate to devotional service.
+Everyone, by constitutional position, is an eternal servant of God. Therefore, a devotee's business is to
+awaken everyone's Krsna consciousness. That is his mercy. As for a devotee's treatment of other devotees
+who are his equals, he should maintain friendship with them. His general view should be to see every
+living entity as part of the Supreme Lord. Different living entities appear in different forms of dress, but
+according to the instruction of the Bhagavad-gita, a learned person sees all living entities equally. Such
+treatment by the devotee is very much appreciated by the Supreme Lord. lt is said, therefore, that a saintly
+person is always tolerant and merciful, he is a friend to everyone, never an enemy to anyone, and he is
+peaceful. These are some of the good qualities of a devotee.
 </p>
 
 </div>
@@ -87,7 +126,7 @@ activity, he enjoys life without separate endeavor.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

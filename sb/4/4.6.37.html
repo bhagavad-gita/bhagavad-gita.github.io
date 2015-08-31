@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.37.html">4.6.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-lokapala ucuh
-drstah kim no drgbhir asad-grahais tvam
-pratyag-drasta drsyate yena visvam
-maya hy esa bhavadiya hi bhuman
-yas tvam sasthah pancabhir bhasi bhutaih
-<p></p>
+upavistam darbhamayyam
+brsyam brahma sanatanam
+naradaya pravocantam
+prcchate srnvatam satam
+<br>
 <h2>Synonyms</h2>
-loka-palah--the governors of the different planets; ucuh--said; drstah--seen; kim--whether; nah--by us;
-drgbhih--by the material senses; asat-grahaih--revealing the cosmic manifestation; tvam--You; pratyakdrasta--
-inner witness; drsyate--is seen; yena--by whom; visvam--the universe; maya--material world; hi--
-because; esa--this; bhavadiya--Your; hi--certainly; bhuman--O possessor of the universe; yah--because;
-tvam--You; sasthah--the sixth; pancabhih--with the five; bhasi--appear; bhutaih--with the elements.
-<p></p>
+upavistam--seated; darbha-mayyam--made of darbha, straw; brsyam--on a mattress; brahma--the
+Absolute Truth; sanatanam--the eternal; naradaya--unto Narada; pravocantam--speaking; prcchate--
+asking; srnvatam--listening; satam--of the great sages.
+<br>
 <h2>Translation</h2>
-The governors of various planets spoke as follows: Dear Lord, we believe only in our direct perception,
-but under the circumstances we do not know whether we have actually seen You with our material
-senses. By our material senses we can simply perceive the cosmic manifestation, but You are beyond the
-five elements. You are the sixth. We see You, therefore, as a creation of the material world.
-<p></p>
+He was seated on a straw mattress and speaking to all present, including the great sage Narada, to whom
+he specifically spoke about the Absolute Truth.
+<br>
 <h2>Purport</h2>
-The governors of the various planets are certainly materially opulent and very puffed up. Such persons
-are unable to understand the transcendental, eternal form of the Lord. In the Brahma-samhita it is stated
-that only persons who have anointed their eyes with love of Godhead can see the Personality of Godhead
-in every step of their activities. Also, in the prayers of Kunti (Bhag. 1.8.26) it is stated that only those who
-are akincana-gocaram, who are not materially puffed up, can see the Supreme Personality of Godhead;
-others are bewildered and cannot even think of the Absolute Truth.
+The lord was sitting on a mattress of straw because such a sitting place is accepted by persons who are
+practicing austerities to gain understanding of the Absolute Truth. In this verse it is specifically
+mentioned that he was speaking to the great sage Narada, a celebrated devotee. Narada was asking Lord
+Siva about devotional service, and Siva, being the topmost Vaisnava, was instructing him. ln other words,
+Lord Siva and Narada were discussing the knowledge of the Veda, but it is to be understood that the
+subject matter was devotional service. Another point in this connection is that Lord Siva is the supreme
+instructor and the great sage Narada is the supreme audience. Therefore, the supreme subject matter of
+Vedic knowledge is bhakti, or devotional service.
 </p>
 
 </div>
@@ -82,7 +118,7 @@ others are bewildered and cannot even think of the Absolute Truth.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

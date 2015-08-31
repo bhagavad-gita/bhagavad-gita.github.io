@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.4.15.html">4.4.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yat-pada-padmam mahatam mano-'libhir
 nisevitam brahma-rasasavarthibhih
 lokasya yad varsati casiso 'rthinas
 tasmai bhavan druhyati visva-bandhave
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yat-pada-padmam--the lotus feet of whom; mahatam--of the higher personalities; manah-alibhih--by the
 bees of the mind; nisevitam--being engaged at; brahma-rasa--of transcendental bliss (brahmananda);
 asava-arthibhih--seeking the nectar; lokasya--of the common man; yat--which; varsati--he fulfills; ca--and;
 asisah--desires; arthinah--seeking; tasmai--towards him (Lord Siva); bhavan--you; druhyati--are envious;
 visva-bandhave--unto the friend of all living entities within the three worlds.
-<p></p>
+<br>
 <h2>Translation</h2>
 You are envious of Lord Siva, who is the friend of all living entities within the three worlds. For the
 common man he fulfills all desires, and because of their engagement in thinking of his lotus feet, he also
 blesses higher personalities who are seeking after brahmananda [transcendental bliss].
-<p></p>
+<br>
 <h2>Purport</h2>
 Ordinarily there are two classes of men. One class, who are grossly materialistic, want material
 prosperity, and their desires are fulfilled if they worship Lord Siva. Lord Siva, being very quickly satisfied,
@@ -89,7 +128,7 @@ Siva.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

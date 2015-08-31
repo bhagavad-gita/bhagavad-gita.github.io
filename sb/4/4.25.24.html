@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,54 +81,65 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.24.html">4.25.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-purim vihayopagata
-uparuddho bhujangamah
-yada tam evanu puri
-visirna prakrtim gata
-<p></p>
+stanau vyanjita-kaisorau
+sama-vrttau nirantarau
+vastrantena niguhantim
+vridaya gaja-gaminim
+<br>
 <h2>Synonyms</h2>
-purim--the city; vihaya--having given up; upagatah--gone out; uparuddhah--arrested; bhujangamah--the
-serpent; yada--when; tam--him; eva--certainly; anu--after; puri--the city; visirna--scattered; prakrtim--
-matter; gata--turned into.
-<p></p>
+stanau--breasts; vyanjita--indicating; kaisorau--new youth; sama-vrttau--equally round; nirantarau--
+fixed close, side by side; vastra-antena--by the end of the sari; niguhantim--trying to cover; vridaya--out of
+shyness; gaja-gaminim--walking just like a great elephant.
+<br>
 <h2>Translation</h2>
-The serpent, who had already been arrested by the soldiers of Yavana-raja and was out of the city, began
-to follow his master along with the others. As soon as they all left the city, it was immediately dismantled
-and smashed to dust.
-<p></p>
+With the end of her sari the woman was trying to cover her breasts, which were equally round and well
+placed side by side. She again and again tried to cover them out of shyness while she walked exactly like a
+great elephant.
+<br>
 <h2>Purport</h2>
-When the living entity is arrested, all his followers--namely the life air, the senses and sense objects--
-immediately leave the lump of matter, the body. When the living entity and his companions leave, the
-body no longer works but turns into basic material elements--earth, water, fire, air and ether. When a city
-attacked by enemies is vacated by its inhabitants, the enemy immediately takes advantage of that city and
-bombards it to smash the whole thing to dust. When we say, "Dust thou art, and unto dust thou shall
-return," we refer to the body. When a city is attacked and bombarded by enemies, the citizens generally
-leave, and the city ceases to exist.
-It is a foolish person who engages in improving the condition of a city without caring for the citizens or
-inhabitants. Similarly, a living entity who is not properly enlightened in spiritual knowledge simply takes
-care of the external body, not knowing that the spirit soul is the principal factor within the body. When
-one is advanced in spiritual knowledge, the spirit soul is saved from eternal transmigration. The
-Bhagavatam considers those who are attached to their bodies to be like cows and asses (sa eva go-kharah).
-The cow is a very innocent animal, and the ass is a beast of burden. One who labors under the bodily
-conception simply works like an ass and does not know his self-interest. It is therefore said:
-yasyatma-buddhih kunape tri-dhatuke
-sva-dhih kalatradisu bhauma ijya-dhih
-yat-tirtha-buddhih salile na karhicij
-janesv abhijnesu sa eva go-kharah
-"A human being who identifies this body made of three elements with his self, who considers the byproducts
-of the body to be his kinsmen, who considers the land of birth worshipable, and who goes to a
-place of pilgrimage simply to take a bath rather than meet men of transcendental knowledge there, is to be
-considered like an ass or a cow." (Bhag. 10.84.13)
-Human civilization devoid of Krsna consciousness is simply a civilization of lower animals. Sometimes
-such a civilization may study the dead body and consider the brain or the heart. However, no part of the
-body is important unless the spirit soul is present. In a modern civilization of cows and asses, scientists
-try to search out some value in the brain or heart of a dead man.
+The two breasts represent attachment and envy. The symptoms of raga and dvesa (attachment and envy)
+are described in Bhagavad-gita (3.34):
+indriyasyendriyasyarthe
+raga-dvesau vyavasthitau
+tayor na vasam agacchet
+tau hy asya paripanthinau
+"Attraction and repulsion for sense objects are felt by embodied beings, but one should not fall under
+the control of senses and sense objects because they are stumbling blocks on the path of self-realization."
+These representatives of attachment and envy are very much unfavorable for advancement in spiritual
+life. One should not be attracted by the breasts of young women. The great saint Sankaracarya has
+described the breasts of women, especially young women, as nothing but a combination of muscles and
+blood, so one should not be attracted by the illusory energy of raised breasts with nipples. They are agents
+of maya meant to victimize the opposite sex. Because the breasts are equally attractive, they are described
+as sama-vrttau. The sex impulse remains in an old man's heart also, even up to the point of death. To be
+rid of such agitation, one must be very much advanced in spiritual consciousness, like Yamunacarya, who
+said:
+yad-avadhi mama cetah krsna-padaravinde
+nava-nava-rasa-dhamany udyatam rantum asit
+tad-avadhi bata nari-sangame smaryamane
+bhavati mukha-vikarah susthu nisthivanam ca
+"Since I have been engaged in the transcendental loving service of Krsna, realizing ever-new pleasure in
+Him, whenever I think of sex pleasure, I spit at the thought, and my lips curl with distaste." When one is
+spiritually advanced he can no longer be attracted by the lumps of flesh and blood which are the breasts of
+young women. The word nirantarau is significant because although the breasts are situated in different
+locations, the action is the same. We should not make any distinction between attachment and envy. As
+described in Bhagavad-gita (3.37), they are both products of rajo-guna (kama esa krodha esa rajo-gunasamudbhavah).
+The word niguhantim ("trying to cover") indicates that even if one is tainted by kama, lobha, krodha,
+etc., they can be transfigured by Krsna consciousness. In other words, one can utilize kama (lust) for
+serving Krsna. Being impelled by lust, an ordinary worker will work hard day and night; similarly a
+devotee can work hard day and night to satisfy Krsna. Just as karmis are working hard to satisfy kamakrodha,
+a devotee should work in the same way to satisfy Krsna. Similarly, krodha (anger) can also be
+used in the service of Krsna when it is applied to the nondevotee demons. Hanumanji applied his anger in
+this way. He was a great devotee of Lord Ramacandra, and he utilized his anger to set fire to the kingdom
+of Ravana, a nondevotee demon. Thus kama (lust) can be utilized to satisfy Krsna, and krodha (anger) can
+be utilized to punish the demons. When both are used for Krsna's service, they lose their material
+significance and become spiritually important.
 </p>
 
 </div>
@@ -98,7 +147,7 @@ try to search out some value in the brain or heart of a dead man.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

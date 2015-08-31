@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,86 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.51.html">4.22.51</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.51</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/51"><b>51</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-syama-srony-adhi-rocisnudukula-
-svarna-mekhalam
-sama-carv-anghri-janghorunimna-
-janu-sudarsanam
-<p></p>
+phalam brahmani sannyasya
+nirvisangah samahitah
+karmadhyaksam ca manvana
+atmanam prakrteh param
+<br>
 <h2>Synonyms</h2>
-syama--blackish; sroni--lower part of the waist; adhi--extra; rocisnu--pleasing; dukula--garments;
-svarna--golden; mekhalam--belt; sama--symmetrical; caru--beautiful; anghri--lotus feet; jangha--calves;
-uru--thighs; nimna--lower; janu--knees; su-darsanam--very beautiful.
-<p></p>
+phalam--result; brahmani--in the Absolute Truth; sannyasya--giving up; nirvisangah--without being
+contaminated; samahitah--completely dedicated; karma--activity; adhyaksam--superintendent; ca--and;
+manvanah--always thinking of; atmanam--the Supersoul; prakrteh--of material nature; param--
+transcendental.
+<br>
 <h2>Translation</h2>
-The lower part of the Lord's waist is dark and covered with yellow garments and a belt bedecked with
-golden embroidery work. His symmetrical lotus feet and the calves, thighs and joints of His legs are
-extraordinarily beautiful. Indeed, the Lord's entire body appears to be well built.
-<p></p>
+Maharaja Prthu completely dedicated himself to be an eternal servant of the Supreme Personality of
+Godhead, transcendental to material nature. Consequently all the fruits of his activities were dedicated to
+the Lord, and he always thought of himself as the servant of the Supreme Personality of Godhead, who is
+the proprietor of everything.
+<br>
 <h2>Purport</h2>
-Lord Siva is one of the twelve great authorities mentioned in Srimad-Bhagavatam (6.3.20). These
-authorities are Svayambhu, Narada, Sambhu, Kumara, Kapila, Manu, Prahlada, Janaka, Bhisma, Bali,
-Vaiyasaki, or Sukadeva Gosvami, and Yamaraja. The impersonalists, who generally worship Lord Siva,
-should learn of the transcendental sac-cid-ananda-vigraha of the Lord. Here Lord Siva kindly describes the
-details of the Lord's bodily features. Thus the impersonalists' argument that the Lord has no form cannot
-be accepted under any circumstance.
+The life and dedication of Maharaja Prthu in the transcendental loving service of the Supreme
+Personality of Godhead serve as a good example of karma-yoga. The term karma-yoga is often used in
+Bhagavad-gita-, and herein Maharaja Prthu is giving a practical example of what karma-yoga actually is.
+The first requirement for the proper execution of karma-yoga is given herein. phalam brahmani sannyasya
+(or vinyasya): one must give the fruits of his activities to the Supreme Brahman, Parabrahman, Krsna. By
+doing so, one actually situates himself in the renounced order of life, sannyasa. As stated in Bhagavad-gita
+(18.2), giving up the fruits of one's activities to the Supreme Personality of Godhead is called sannyasa.
+kamyanam karmanam nyasam
+sannyasam kavayo viduh
+sarva-karma-phala-tyagam
+prahus tyagam vicaksanah
+"To give up the results of all activities is called renunciation [tyaga] by the wise. And that state is called
+the renounced order of life [sannyasa] by great learned men." Although he was living as a householder,
+Prthu Maharaja was actually in the renounced order of life, sannyasa. This will be clearer in the following
+verses.
+The word nirvisangah ("uncontaminated") is very significant because Maharaja Prthu was not attached
+to the results of his activities. In this material world a person is always thinking of the proprietorship of
+everything he accumulates or works for. When the fruits of one's activities are rendered to the service of
+the Lord, one is actually practicing karma-yoga. Anyone can practice karma-yoga, but it is especially easy
+for the householder, who can install the Deity of the Lord in the home and worship Him according to the
+methods of bhakti-yoga. This method includes nine items: hearing, chanting, remembering, serving,
+worshiping the Deity, praying, carrying out orders, serving Krsna as friend and sacrificing everything for
+Him.
+sravanam kirtanam visnoh
+smaranam pada-sevanam
+arcanam vandanam dasyam
+sakhyam atma-nivedanam
+(Bhag. 7.5.23)
+These methods of karma-yoga and bhakti-yoga are being broadcast all over the world by the
+International Society for Krishna Consciousness. Anyone can learn these methods simply by following the
+examples of the members of the Society.
+In one's home or in a temple, the Deity is considered the proprietor of everything, and everyone is
+considered the Deity's eternal servant. The Lord is transcendental, for He is not part of this material
+creation. The words prakrteh param are used in this verse because everything within this material world is
+created by the external, material energy of the Lord, but the Lord Himself is not a creation of this material
+energy. The Lord is the supreme superintendent of all material creations, as confirmed in Bhagavad-gita
+(9.10):
+mayadhyaksena prakrtih
+suyate sa-caracaram
+hetunanena kaunteya
+jagad viparivartate
+"This material nature is working under My direction, O son of Kunti, producing all the moving and
+unmoving beings, and by its rule this manifestation is created and annihilated again and again."
+All material changes and material progress taking place by the wonderful interaction of matter are under
+the superintendence of the Supreme Personality of Godhead, Krsna. Events in the material world are not
+taking place blindly. If one always remains a servant of Krsna and engages everything in His service, one
+is accepted as jivan-mukta, a liberated soul, even during his lifetime within the material world. Generally
+liberation takes place after one gives up this body, but one who lives according to the example of Prthu
+Maharaja is liberated even in this lifetime. In Krsna consciousness the results of one's activities depend on
+the will of the Supreme Person. Indeed, in all cases the result is not dependent on one's own personal
+dexterity but is completely dependent on the will of the Supreme. This is the real significance of phalam
+brahmani sannyasya. A soul dedicated to the service of the Lord should never think of himself as the
+personal proprietor or the superintendent. A dedicated devotee should prosecute his work according to
+the rules and regulations described in devotional service. The results of his activities are completely
+dependent on the supreme will of the Lord.
 </p>
 
 </div>
@@ -78,7 +168,7 @@ be accepted under any circumstance.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

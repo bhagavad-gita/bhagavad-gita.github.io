@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.1.22.html">4.1.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 apsaro-muni-gandharvasiddha-
 vidyadharoragaih
 vitayamana-yasasas
 tad-asrama-padam yayuh
-<p></p>
+<br>
 <h2>Synonyms</h2>
 apsarah--heavenly society women; muni--great sages; gandharva--inhabitants of the Gandharva planet;
 siddha--of Siddhaloka; vidyadhara--other demigods; uragaih--the inhabitants of Nagaloka; vitayamana--
 being spread; yasasah--fame, reputation; tat--his; asrama-padam--hermitage; yayuh--went.
-<p></p>
+<br>
 <h2>Translation</h2>
 At that time, the three deities approached the hermitage of Atri Muni, accompanied by the denizens of
 the heavenly planets, such as the celestial beauties, the Gandharvas, the Siddhas, the Vidyadharas and the
 Nagas. Thus they entered the asrama of the great sage, who had become famous by his austerities.
-<p></p>
+<br>
 <h2>Purport</h2>
 It is advised in the Vedic literatures that one should take shelter of the Supreme Personality of Godhead,
 who is the Lord of the universe and the master of creation, maintenance and dissolution. He is known as
@@ -76,7 +115,7 @@ with Lord Visnu because they are directed by the Supersoul.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

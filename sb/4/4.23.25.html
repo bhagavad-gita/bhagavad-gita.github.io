@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.25.html">4.23.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vaktram na te vitilakam malinam viharsam
-samrambha-bhimam avimrstam apeta-ragam
-pasye stanav api sucopahatau sujatau
-bimbadharam vigata-kunkuma-panka-ragam
-<p></p>
+devya ucuh
+aho iyam vadhur dhanya
+ya caivam bhu-bhujam patim
+sarvatmana patim bheje
+yajnesam srir vadhur iva
+<br>
 <h2>Synonyms</h2>
-vaktram--face; na--never; te--your; vitilakam--without being decorated; malinam--unclean; viharsam--
-morose; samrambha--with anger; bhimam--dangerous; avimrstam--without luster; apeta-ragam--without
-affection; pasye--I have seen; stanau--your breasts; api--also; suca-upahatau--wet because of your tears; sujatau--
-so nice; bimba-adharam--red lips; vigata--without; kunkuma-panka--saffron; ragam--color.
-<p></p>
+devyah ucuh--the wives of the demigods said; aho--alas; iyam--this; vadhuh--the wife; dhanya--most
+glorious; ya--who; ca--also; evam--as; bhu--of the world; bhujam--of all the kings; patim--the king; sarvaatmana--
+with full understanding; patim--unto the husband; bheje--worshiped; yajna-isam--unto Lord
+Visnu; srih--the goddess of fortune; vadhuh--wife; iva--like.
+<br>
 <h2>Translation</h2>
-My dear wife, until this day I have never seen your face without tilaka decorations, nor have I seen you
-so morose and without luster or affection. Nor have I seen your two nice breasts wet with tears from your
-eyes. Nor have I ever before seen your lips, which are ordinarily as red as the bimba fruit, without their
-reddish hue.
-<p></p>
+The wives of the demigods said: All glories to Queen Arci! We can see that this queen of the great King
+Prthu, the emperor of all the kings of the world, has served her husband with mind, speech and body
+exactly as the goddess of fortune serves the Supreme Personality of Godhead, Yajnesa, or Visnu.
+<br>
 <h2>Purport</h2>
-Every woman looks very beautiful when decorated with tilaka and vermillion. A woman generally
-becomes very attractive when her lips are colored with reddish saffron or vermillion. But when one's
-consciousness and intelligence are without any brilliant thoughts about Krsna, they become morose and
-lusterless, so much so that one cannot derive any benefit despite sharp intelligence.
+In this verse the words yajnesam srir vadhur iva indicate that Queen Arci served her husband just as the
+goddess of fortune serves the Supreme Personality of Godhead Visnu. We can observe that even in the
+history of this world, when Lord Krsna, the supreme Visnu, was ruling over Dvaraka, Queen Rukmini,
+who was the chief of all Krsna's queens, used to serve Lord Krsna personally in spite of having many
+hundreds of maidservants to assist her. Similarly, the goddess of fortune in the Vaikuntha planets also
+serves Narayana personally, although there are many thousands of devotees prepared to serve the Lord.
+This practice is also followed by the wives of the demigods, and in days past the wives of men also
+followed this same principle. In Vedic civilization the husband and wife were not separated by such manmade
+laws as divorce. We should understand the necessity for maintaining family life in human society
+and should thus abolish this artificial law known as divorce. The husband and wife should live in Krsna
+consciousness and follow in the footsteps of Laksmi-Narayana or Krsna-Rukmini. In this way peace and
+harmony can be possible within this world.
 </p>
 
 </div>
@@ -78,7 +125,7 @@ lusterless, so much so that one cannot derive any benefit despite sharp intellig
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

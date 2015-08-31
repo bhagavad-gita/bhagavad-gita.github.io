@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.17.15.html">4.17.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-krtva vatsam sura-gana
-indram somam aduduhan
-hiranmayena patrena
-viryam ojo balam payah
-<p></p>
+tam anvadhavat tad vainyah
+kupito 'tyaruneksanah
+saram dhanusi sandhaya
+yatra yatra palayate
+<br>
 <h2>Synonyms</h2>
-krtva--making; vatsam--calf; sura-ganah--the demigods; indram--Indra, King of heaven; somam--nectar;
-aduduhan--they milked out; hiranmayena--golden; patrena--with a pot; viryam--mental power; ojah--
-strength of the senses; balam--strength of the body; payah--milk.
-<p></p>
+tam--the cow-shaped earth; anvadhavat--he chased; tat--then; vainyah--the son of King Vena; kupitah--
+being very much angry; ati-aruna--very red; iksanah--his eyes; saram--an arrow; dhanusi--on the bow;
+sandhaya--placing; yatra yatra--wherever; palayate--she flees.
+<br>
 <h2>Translation</h2>
-All the demigods made Indra, the King of heaven, into a calf, and from the earth they milked the
-beverage soma, which is nectar. Thus they became very powerful in mental speculation and bodily and
-sensual strength.
-<p></p>
-<h2>Purport</h2>
-In this verse the word soma means "nectar." Soma is a kind of beverage made in the heavenly planets
-from the moon to the kingdoms of the demigods in the various higher planetary systems. By drinking this
-soma beverage the demigods become more powerful mentally and increase their sensual power and bodily
-strength. The words hiranmayena patrena indicate that this soma beverage is not an ordinary intoxicating
-liquor. The demigods would not touch any kind of liquor. Nor is soma a kind of drug. It is a different
-kind of beverage, available in the heavenly planets. Soma is far different from the liquors made for
-demoniac people, as explained in the next verse.
+Seeing this, Maharaja Prthu became very angry, and his eyes became as red as the early-morning sun.
+Placing an arrow on his bow, he chased the cow-shaped earth wherever she would run.
 </p>
 
 </div>
@@ -79,7 +108,7 @@ demoniac people, as explained in the next verse.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

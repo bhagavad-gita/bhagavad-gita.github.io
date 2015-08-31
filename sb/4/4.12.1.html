@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.1.html">4.12.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-suta uvaca
-nisamya kausaravinopavarnitam
-dhruvasya vaikuntha-padadhirohanam
-prarudha-bhavo bhagavaty adhoksaje
-prastum punas tam vidurah pracakrame
-<p></p>
+maitreya uvaca
+dhruvam nivrttam pratibuddhya vaisasad
+apeta-manyum bhagavan dhanesvarah
+tatragatas carana-yaksa-kinnaraih
+samstuyamano nyavadat krtanjalim
+<br>
 <h2>Synonyms</h2>
-sutah uvaca--Suta Gosvami said; nisamya--after hearing; kausaravina--by the sage Maitreya;
-upavarnitam--described; dhruvasya--of Maharaja Dhruva; vaikuntha-pada--to the abode of Visnu;
-adhirohanam--ascent; prarudha--increased; bhavah--devotional emotion; bhagavati--unto the Supreme
-Personality of Godhead; adhoksaje--who is beyond the reach of direct perception; prastum--to inquire;
-punah--again; tam--unto Maitreya; vidurah--Vidura; pracakrame--attempted.
-<p></p>
+maitreyah uvaca--Maitreya said; dhruvam--Dhruva Maharaja; nivrttam--ceased; pratibuddhya--having
+learned; vaisasat--from killing; apeta--subsided; manyum--anger; bhagavan--Kuvera; dhana-isvarah--
+master of the treasury; tatra--there; agatah--appeared; carana--by the Caranas; yaksa--Yaksas; kinnaraih--
+and by the Kinnaras; samstuyamanah--being worshiped; nyavadat--spoke; krta-anjalim--to Dhruva with
+folded hands.
+<br>
 <h2>Translation</h2>
-Suta Gosvami, continuing to speak to all the rsis, headed by Saunaka, said: After hearing Maitreya Rsi
-describe Dhruva Maharaja's ascent to Lord Visnu's abode, Vidura became very much enlightened in
-devotional emotion, and he inquired from Maitreya as follows.
-<p></p>
-<h2>Purport</h2>
-As evidenced in the topics between Vidura and Maitreya, the activities of the Supreme Personality of
-Godhead and the devotees are so fascinating that neither the devotee who is describing them nor the
-devotee who is hearing is at all fatigued by the inquiries and answers. Transcendental subject matter is so
-nice that no one becomes tired of hearing or speaking. Others, who are not devotees, may think, "How
-can people devote so much time simply to talks of God?" But devotees are never satisfied or satiated in
-hearing and speaking about the Supreme Personality of Godhead or about His devotees. The more they
-hear and talk, the more they become enthusiastic to hear. The chanting of the Hare Krsna mantra is
-simply the repetition of three words, Hare, Krsna and Rama, but still devotees can go on chanting this
-Hare Krsna mantra twenty-four hours a day without feeling fatigued.
+The great sage Maitreya said: My dear Vidura, Dhruva Maharaja's anger subsided, and he completely
+ceased killing Yaksas. When Kuvera, the most blessed master of the treasury, learned this news, he
+appeared before Dhruva. While being worshiped by Yaksas, Kinnaras and Caranas, he spoke to Dhruva
+Maharaja, who stood before him with folded hands.
 </p>
 
 </div>
@@ -84,7 +113,7 @@ Hare Krsna mantra twenty-four hours a day without feeling fatigued.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

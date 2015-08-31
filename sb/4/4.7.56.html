@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.56.html">4.7.56</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.56</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/56"><b>56</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-labdhva dravyamayim arcam
-ksity-ambv-adisu varcayet
-abhrtatma munih santo
-yata-van mita-vanya-bhuk
-<p></p>
+rudram ca svena bhagena
+hy upadhavat samahitah
+karmanodavasanena
+somapan itaran api
+udavasya sahartvigbhih
+sasnav avabhrtham tatah
+<br>
 <h2>Synonyms</h2>
-labdhva--by getting; dravya-mayim--made of physical elements; arcam--worshipable Deity; ksiti--earth;
-ambu--water; adisu--beginning with; va--or; arcayet--worship; abhrta-atma--one who is fully selfcontrolled;
-munih--a great personality; santah--peacefully; yata-vak--controlling the force of talking;
-mita--frugal; vanya-bhuk--eating whatever is available in the forest.
-<p></p>
+rudram--Lord Siva; ca--and; svena--with his own; bhagena--share; hi--since; upadhavat--he worshiped;
+samahitah--with concentrated mind; karmana--by the performance; udavasanena--by the act of finishing;
+soma-pan--demigods; itaran--other; api--even; udavasya--after finishing; saha--along with; rtvigbhih--with
+the priests; sasnau--bathed; avabhrtham--the avabhrtha bath; tatah--then.
+<br>
 <h2>Translation</h2>
-It is possible to worship a form of the Lord made of physical elements such as earth, water, pulp, wood
-and metal. In the forest one can make a form with no more than earth and water and worship Him
-according to the above principles. A devotee who has full control over his self should be very sober and
-peaceful and must be satisfied simply with eating whatever fruits and vegetables are available in the forest.
-<p></p>
+With all respect, Daksa worshiped Lord Siva with his share of the remnants of the yajna. After finishing
+the ritualistic sacrificial activities, he satisfied all the other demigods and the other people assembled
+there. Then, after finishing all these duties with the priests, he took a bath and was fully satisfied.
+<br>
 <h2>Purport</h2>
-It is essential for a devotee to worship the form of the Lord and not only meditate upon the form of the
-Lord within his mind with the chanting of the mantra given by the spiritual master. The worship of the
-form must be present. The impersonalist takes unnecessary trouble to meditate upon or worship
-something impersonal, and the path is very precarious. We are not advised to follow the impersonalist
-way of meditating on or worshiping the Lord. Dhruva Maharaja was advised to worship a form made of
-earth and water because in the jungle, if it is not possible to have a form made of metal, wood or stone,
-the best process is to take earth mixed with water and make a form of the Lord and worship Him. The
-devotee should not be anxious about cooking food; whatever is available in the forest or in the city among
-the fruit and vegetable groups should be offered to the Deity, and the devotee should be satisfied eating
-that. He should not be anxious to have very palatable dishes. Of course, wherever it is possible, one
-should offer the Deities the best foodstuffs, prepared within the category of fruits and vegetables, cooked
-or uncooked. The important factor is that the devotee should be regulated (mita-bhuk); that is one of the
-good qualifications of a devotee. He should not hanker to satisfy the tongue with a particular kind of
-foodstuff. He should be satisfied to eat whatever prasada is available by the grace of the Lord.
+Lord Rudra, Siva, was properly worshiped with his share of the remnants of the yajna. Yajna is Visnu,
+and whatever prasada is offered to Visnu is offered to everyone, even to Lord Siva. Sridhara Svami also
+comments in this connection, svena bhagena: the remnants of the yajna are offered to all the demigods
+and others.
 </p>
 
 </div>
@@ -88,7 +118,7 @@ foodstuff. He should be satisfied to eat whatever prasada is available by the gr
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

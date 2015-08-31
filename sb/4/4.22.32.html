@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.32.html">4.22.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-ity anukrosa-hrdayo
-bhagavan aha tan chivah
-baddhanjalin raja-putran
-narayana-paro vacah
-<p></p>
+natah parataro loke
+pumsah svartha-vyatikramah
+yad-adhy anyasya preyastvam
+atmanah sva-vyatikramat
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great saint Maitreya continued to speak; iti--thus; anukrosa-hrdayah--very
-kindhearted; bhagavan--the lord; aha--said; tan--unto the Pracetas; sivah--Lord Siva; baddha-anjalin--who
-were standing with folded hands; raja-putran--the sons of the King; narayana-parah--Lord Siva, the great
-devotee of Narayana; vacah--words.
-<p></p>
+na--not; atah--after this; paratarah--greater; loke--in this world; pumsah--of the living entities; svaartha--
+interest; vyatikramah--obstruction; yat-adhi--beyond that; anyasya--of others; preyastvam--to be
+more interesting; atmanah--for the self; sva--own; vyatikramat--by obstruction.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued: Out of his causeless mercy, the exalted personality Lord Siva, a great
-devotee of Lord Narayana, continued to speak to the King's sons, who were standing with folded hands.
-<p></p>
+There is no stronger obstruction to one's self-interest than thinking other subject matters to be more
+pleasing than one's self-realization.
+<br>
 <h2>Purport</h2>
-Lord Siva voluntarily came to bless the sons of the King as well as do something beneficial for them. He
-personally chanted the mantra so that the mantra would be more powerful, and he advised that the
-mantra be chanted by the King's sons (raja-putras). When a mantra is chanted by a great devotee, the
-mantra becomes more powerful. Although the Hare Krsna maha-mantra is powerful in itself, a disciple
-upon initiation receives the mantra from his spiritual master, for when the mantra is chanted by the
-spiritual master, it becomes more powerful. Lord Siva advised the sons of the King to hear him attentively,
-for inattentive hearing is offensive.
+Human life is especially meant for self-realization. "Self" refers to the Superself and the individual self,
+the Supreme Personality of Godhead and the living entity. When, however, one becomes more interested
+in the body and bodily sense gratification, he creates for himself obstructions on the path of selfrealization.
+By the influence of maya, one becomes more interested in sense gratification, which is
+prohibited in this world for those interested in self-realization. Instead of becoming interested in sense
+gratification, one should divert his activities to satisfy the senses of the Supreme Soul. Anything
+performed contrary to this principle is certainly against one's self-interest.
 </p>
 
 </div>
@@ -80,7 +117,7 @@ for inattentive hearing is offensive.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

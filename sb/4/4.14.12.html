@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.14.12.html">4.14.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sarit-samudra girayo
-naga gavah khaga mrgah
-dyauh ksitih sarva-bhutani
-samajahrur upayanam
-<p></p>
+tad-vidvadbhir asad-vrtto
+veno 'smabhih krto nrpah
+santvito yadi no vacam
+na grahisyaty adharma-krt
+loka-dhikkara-sandagdham
+dahisyamah sva-tejasa
+<br>
 <h2>Synonyms</h2>
-sarit--the rivers; samudrah--the seas; girayah--the mountains; nagah--the serpents; gavah--the cows;
-khagah--the birds; mrgah--the animals; dyauh--the sky; ksitih--the earth; sarva-bhutani--all living entities;
-samajahruh--collected; upayanam--different kinds of presentations.
-<p></p>
+tat--his mischievous nature; vidvadbhih--aware of; asat-vrttah--impious; venah--Vena; asmabhih--by us;
+krtah--was made; nrpah--king; santvitah--(in spite of) being pacified; yadi--if; nah--our; vacam--words;
+na--not; grahisyati--he will accept; adharma-krt--the most mischievous; loka-dhik-kara--by public
+condemnation; sandagdham--burned; dahisyamah--we shall burn; sva-tejasa--by our prowess.
+<br>
 <h2>Translation</h2>
-All the rivers, seas, hills, mountains, serpents, cows, birds, animals, heavenly planets, the earthly planet
-and all other living entities collected various presentations, according to their ability, to offer the King.
+The saintly sages continued thinking: Of course we are completely aware of his mischievous nature. Yet
+nevertheless we enthroned Vena. If we cannot persuade King Vena to accept our advice, he will be
+condemned by the public, and we will join them. Thus by our prowess we shall burn him to ashes.
+<br>
+<h2>Purport</h2>
+Saintly persons are not interested in political matters, yet they are always thinking of the welfare of the
+people in general. Consequently they sometimes have to come down to the political field and take steps to
+correct the misguided government or royalty. However, in Kali-yuga, saintly persons are not as powerful
+as they previously were. They used to be able to burn any sinful man to ashes by virtue of their spiritual
+prowess. Now saintly persons have no such power due to the influence of the age of Kali. Indeed, the
+brahmanas do not even have the power to perform sacrifices in which animals are put into a fire to attain
+a new life. Under these circumstances, instead of actively taking part in politics, saintly persons should
+engage in chanting the maha-mantra, Hare Krsna. By the grace of Lord Caitanya, by simply chanting this
+Hare Krsna maha-mantra, the general populace can derive all benefits without political implications.
 </p>
 
 </div>
@@ -69,7 +123,7 @@ and all other living entities collected various presentations, according to thei
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

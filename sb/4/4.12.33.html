@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.33.html">4.12.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatha sva-bhagadheyani
-grahisyanti divaukasah
-yad yajna-purusah saksad
-apatyaya harir vrtah
-<p></p>
+iti vyavasitam tasya
+vyavasaya surottamau
+darsayam asatur devim
+puro yanena gacchatim
+<br>
 <h2>Synonyms</h2>
-tatha--thereupon; sva-bhaga-dheyani--their shares in the sacrifice; grahisyanti--will accept; divaokasah--
-all the demigods; yat--because; yajna-purusah--the enjoyer of all sacrifices; saksat--directly;
-apatyaya--for the purpose of a son; harih--the Supreme Personality of Godhead; vrtah--is invited.
-<p></p>
+iti--thus; vyavasitam--contemplation; tasya--of Dhruva; vyavasaya--understanding; sura-uttamau--the
+two chief associates; darsayam asatuh--showed (to him); devim--exalted Suniti; purah--before; yanena--by
+airplane; gacchatim--going forward.
+<br>
 <h2>Translation</h2>
-When Hari, the supreme enjoyer of all sacrifices, is invited to fulfill your desire for a son, all the
-demigods will come with Him and take their shares in the sacrifice.
-<p></p>
+The great associates of Vaikunthaloka, Nanda and Sunanda, could understand the mind of Dhruva
+Maharaja, and thus they showed him that his mother, Suniti, was going forward in another plane.
+<br>
 <h2>Purport</h2>
-Whenever a sacrifice is performed, it is meant for satisfying Lord Visnu, the enjoyer of the fruits of all
-sacrifices; and when Lord Visnu agrees to come to a sacrificial arena, all the demigods naturally follow
-their master, and their shares are offered in such sacrifices. The conclusion is that the sacrifices performed
-are meant for Lord Visnu, not for the demigods.
+This incident proves that the siksa- or diksa-guru who has a disciple who strongly executes devotional
+service like Dhruva Maharaja can be carried by the disciple even though the instructor is not as advanced.
+Although Suniti was an instructor to Dhruva Maharaja, she could not go to the forest because she was a
+woman, nor could she execute austerities and penances as Dhruva Maharaja did. Still, Dhruva Maharaja
+was able to take his mother with him. Similarly, Prahlada Maharaja also delivered his atheistic father,
+Hiranyakasipu. The conclusion is that a disciple or an offspring who is a very strong devotee can carry
+with him to Vaikunthaloka either his father, mother or siksa- or diksa-guru. Srila Bhaktisiddhanta
+Sarasvati Thakura used to say, "If I could perfectly deliver even one soul back home, back to Godhead, I
+would think my mission--propagating Krsna consciousness--to be successful." The Krsna consciousness
+movement is spreading now all over the world, and sometimes I think that even though I am crippled in
+many ways, if one of my disciples becomes as strong as Dhruva Maharaja, then he will be able to carry me
+with him to Vaikunthaloka.
 </p>
 
 </div>
@@ -75,7 +122,7 @@ are meant for Lord Visnu, not for the demigods.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

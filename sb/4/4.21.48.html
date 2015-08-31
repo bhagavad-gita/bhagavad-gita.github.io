@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.48.html">4.21.48</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.48</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/48"><b>48</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-ta atma-yoga-pataya
-adi-rajena pujitah
-silam tadiyam samsantah
-khe 'bhavan misatam nrnam
-<p></p>
+vira-varya pitah prthvyah
+samah sanjiva sasvatih
+yasyedrsy acyute bhaktih
+sarva-lokaika-bhartari
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great sage Maitreya continued to speak; te--they; atma-yoga-patayah--the masters
-of self-realization by devotional service; adi-rajena--by the original king (Prthu); pujitah--being
-worshiped; silam--character; tadiyam--of the King; samsantah--eulogizing; khe--in the sky; abhavan--
-appeared; misatam--while observing; nrnam--of the people.
-<p></p>
+vira-varya--the best of the warriors; pitah--the father; prthvyah--of the globe; samah--equal to in years;
+sanjiva--live; sasvatih--forever; yasya--whose; idrsi--like this; acyute--unto the Supreme; bhaktih--
+devotion; sarva--all; loka--planets; eka--one; bhartari--maintainer.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued: Being thus worshiped by Maharaja Prthu, the four Kumaras, who
-were masters of devotional service, became very pleased. Indeed, they appeared in the sky and praised the
-character of the King, and everyone observed them.
-<p></p>
+All the saintly brahmanas thus addressed Prthu Maharaja: O best of the warriors, O father of this globe,
+may you be blessed with a long life, for you have great devotion to the infallible Supreme Personality of
+Godhead, who is the master of all the universe.
+<br>
 <h2>Purport</h2>
-It is said that the demigods never touch the surface of the earth. They walk and travel in space only.
-Like the great sage Narada, the Kumaras do not require any machine to travel in space. There are also
-residents of Siddhaloka who can travel in space without machines. Since they can go from one planet to
-another, they are called siddhas; that is to say they have acquired all mystic and yogic powers. Such great
-saintly persons who have attained complete perfection in mystic yoga are not visible in this age on earth
-because humanity is not worthy of their presence. The Kumaras, however, praised the characteristics of
-Maharaja Prthu and his great devotional attitude and humility. The Kumaras were greatly satisfied by
-King Prthu's method of worship. It was by the grace of Maharaja Prthu that the common citizens in his
-domain could see the Kumaras flying in outer space.
+Prthu Maharaja was blessed by the saintly persons present at the meeting to have a long life because of
+his unflinching faith and his devotion to the Supreme Personality of Godhead. Although one's duration of
+life is limited in years, if by chance one becomes a devotee, he surpasses the duration prescribed for his
+life; indeed, sometimes yogis die according to their wish, not according to the laws of material nature.
+Another feature of a devotee is that he lives forever because of his infallible devotion to the Lord. It is said,
+kirtir yasya sa jivati: "One who leaves a good reputation behind him lives forever." Specifically, one who is
+reputed as a devotee of the Lord undoubtedly lives forever. When Lord Caitanya Mahaprabhu was talking
+with Ramananda Raya, Caitanya Mahaprabhu inquired, "What is the greatest reputation?" Ramananda
+Raya replied that a person who is reputed as a great devotee has the greatest reputation, for a devotee not
+only lives forever in the Vaikuntha planets, but by his reputation he also lives forever within this material
+world.
 </p>
 
 </div>
@@ -83,7 +122,7 @@ domain could see the Kumaras flying in outer space.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

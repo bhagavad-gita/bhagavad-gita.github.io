@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,69 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.10.html">4.24.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tesu tad-riktha-haresu
-grha-kosanujivisu
-nirudhena mamatvena
-visayesv anvabadhyata
-<p></p>
+yasyedam deva-yajanam
+anuyajnam vitanvatah
+pracinagraih kusair asid
+astrtam vasudha-talam
+<br>
 <h2>Synonyms</h2>
-tesu--to them; tat-riktha-haresu--the plunderers of his money; grha--home; kosa--treasury; anujivisu--to
-the followers; nirudhena--deep-rooted; mamatvena--by attachment; visayesu--to sense objects;
-anvabadhyata--became bound.
-<p></p>
+yasya--whose; idam--this; deva-yajanam--satisfying the demigods by sacrifices; anuyajnam--continually
+sacrificing; vitanvatah--executing; pracina-agraih--keeping the kusa grass facing toward the eastern side;
+kusaih--the kusa grass; asit--remained; astrtam--scattered; vasudha-talam--all over the surface of the
+globe.
+<br>
 <h2>Translation</h2>
-These sons and grandsons were virtually plunderers of King Puranjana's riches, including his home,
-treasury, servants, secretaries and all other paraphernalia. Puranjana's attachment for these things was
-very deep-rooted.
-<p></p>
+Maharaja Barhisat executed many sacrifices all over the world. He scattered kusa grasses and kept the
+tops of the grasses pointed eastward.
+<br>
 <h2>Purport</h2>
-In this verse the word riktha-haresu, meaning "plunderers of wealth," is very significant. One's sons,
-grandsons and other descendants are ultimately plunderers of one's accumulated wealth. There are many
-celebrated businessmen and industrialists who produce great wealth and are highly praised by the public,
-but all their money is ultimately plundered by their sons and grandsons. In India we have actually seen
-one industrialist who, like King Puranjana, was very much sexually inclined and had a half dozen wives.
-Each of these wives had a separate establishment that necessitated the expenditure of several thousands of
-rupees. When I was engaged in talking with him, I saw that he was very busy trying to secure money so
-that all his sons and daughters would get at least five hundred thousand rupees each. Thus such
-industrialists, businessmen or karmis are called mudhas in the sastras. They work very hard, accumulate
-money, and are satisfied to see that this money is plundered by their sons and grandsons. Such people do
-not want to return their wealth to its actual owner. As stated in Bhagavad-gita (5.29), bhoktaram yajnatapasam
-sarva-loka-mahesvaram: the real proprietor of all wealth is the Supreme Personality of Godhead.
-He is the actual enjoyer. So-called earners of money are those who simply know tricks by which they can
-take away God's money under the guise of business and industry. After accumulating this money, they
-enjoy seeing it plundered by their sons and grandsons. This is the materialistic way of life. In materialistic
-life one is encaged within the body and deluded by false egoism. Thus one thinks, "I am this body," "I am
-a human being," "I am an American," "I am an Indian." This bodily conception is due to false ego. Being
-deluded by false ego, one identifies himself with a certain family, nation or community. In this way one's
-attachment for the material world grows deeper and deeper. Thus it becomes very difficult for the living
-entity to extricate himself from his entanglement. Such people are graphically described in the Sixteenth
-Chapter of Bhagavad-gita (16.13-15) in this way:
-idam adya maya labdham
-imam prapsye manoratham
-idam astidam api me
-bhavisyati punar dhanam
-asau maya hatah satrur
-hanisye caparan api
-isvaro 'ham aham bhogi
-siddho 'ham balavan sukhi
-adhyo 'bhijanavan asmi
-ko 'nyo 'sti sadrso maya
-yaksye dasyami modisya
-ity ajnana-vimohitah
-"The demoniac person thinks: So much wealth do I have today, and I will gain more according to my
-schemes. So much is mine now, and it will increase in the future, more and more. He is my enemy, and I
-have killed him; and my other enemy will also be killed. I am the lord of everything, I am the enjoyer, I
-am perfect, powerful and happy. I am the richest man, surrounded by aristocratic relatives. There is none
-so powerful and happy as I am. I shall perform sacrifices, I shall give some charity, and thus I shall
-rejoice.' In this way, such persons are deluded by ignorance."
-In this way people engage in various laborious activities, and their attachment for body, home, family,
-nation and community becomes more and more deep-rooted.
+As stated in the previous verse (kriya-kandesu nisnatah), Maharaja Barhisat dived very deeply into the
+fruitive activities of sacrifice. This means that as soon as he finished one yajna in one place, he began
+performing another yajna in the immediate vicinity. At the present moment there is a similar need to
+perform sankirtana-yajna all over the world. The Krsna consciousness movement has started performing
+sankirtana-yajna in different places, and it has been experienced that wherever sankirtana-yajna is
+performed, many thousands of people gather and take part in it. Imperceptible auspiciousness achieved in
+this connection should be continued all over the world. The members of the Krsna consciousness
+movement should perform sankirtana-yajnas one after another, so much that all the people of the world
+will either jokingly or seriously chant Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare
+Rama, Rama Rama, Hare Hare, and thus they will derive the benefit of cleansing the heart. The holy name
+of the Lord (harer nama) is so powerful that whether it is chanted jokingly or seriously the effect of
+vibrating this transcendental sound will be equally distributed. It is not possible at the present moment to
+perform repeated yajnas as Maharaja Barhisat performed, but it is within our means to perform
+sankirtana-yajna, which does not cost anything. One can sit down anywhere and chant Hare Krsna, Hare
+Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare. If the surface of the globe
+is overflooded with the chanting of the Hare Krsna mantra, the people of the world will be very, very
+happy.
 </p>
 
 </div>
@@ -113,7 +128,7 @@ nation and community becomes more and more deep-rooted.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

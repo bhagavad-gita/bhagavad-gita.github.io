@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.10.html">4.7.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatha cikirsamanam tam
-sapatnyas tanayam dhruvam
-surucih srnvato rajnah
-sersyam ahatigarvita
-<p></p>
+tada vrsadhvaja-dvesakalilatma
+prajapatih
+sivavalokad abhavac
+charad-dhrada ivamalah
+<br>
 <h2>Synonyms</h2>
-tatha--thus; cikirsamanam--the child Dhruva, who was trying to get up; tam--unto him; sa-patnyah--of
-her co-wife (Suniti); tanayam--son; dhruvam--Dhruva; surucih--Queen Suruci; srnvatah--while hearing;
-rajnah--of the King; sa-irsyam--with envy; aha--said; atigarvita--being too proud.
-<p></p>
+tada--at that time; vrsa-dhvaja--Lord Siva, who rides on a bull; dvesa--envy; kalila-atma--polluted heart;
+prajapatih--King Daksa; siva--Lord Siva; avalokat--by seeing him; abhavat--became; sarat--in the autumn;
+hradah--lake; iva--like; amalah--cleansed.
+<br>
 <h2>Translation</h2>
-While the child, Dhruva Maharaja, was trying to get on the lap of his father, Suruci, his stepmother,
-became very envious of the child, and with great pride she began to speak so as to be heard by the King
-himself.
-<p></p>
+At that time, when Daksa saw Lord Siva, who rides upon a bull, his heart, which was polluted by envy
+of Lord Siva, was immediately cleansed, just as the water in a lake is cleansed by autumn rains.
+<br>
 <h2>Purport</h2>
-The King, of course, was equally affectionate toward both his sons, Uttama and Dhruva, so he had a
-natural inclination to take Dhruva, as well as Uttama, on his lap. But because of his favoritism towards his
-queen Suruci, he could not welcome Dhruva Maharaja, despite his feelings. King Uttanapada's feeling was
-understood by Suruci, and therefore with great pride she began to speak about the King's affection for her.
-This is the nature of woman. If a woman understands that her husband regards her as a favorite and is
-especially affectionate to her, she takes undue advantage. These symptoms are visible even in such an
-elevated society as the family of Svayambhuva Manu. Therefore it is concluded that the feminine nature of
-woman is present everywhere.
+Here is an example of why Lord Siva is called auspicious. lf anyone sees Lord Siva with devotion and
+reverence, his heart is immediately cleansed. King Daksa was polluted by envy of Lord Siva, and yet by
+seeing him with a little love and devotion, his heart immediately became cleansed. In the rainy season, the
+reservoirs of water become dirty and muddy, but as soon as the autumn rain comes, all the water
+immediately becomes clear and transparent. Similarly, although Daksa's heart was impure because of his
+having slandered Lord Siva, for which he was severely punished, Daksa now came to consciousness, and
+just by seeing Lord Siva with veneration and respect, he became immediately purified.
 </p>
 
 </div>
@@ -80,7 +117,7 @@ woman is present everywhere.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

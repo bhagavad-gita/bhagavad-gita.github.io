@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.49.html">4.6.49</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.49</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/49"><b>49</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhagavan svena bhagena
-sarvatma sarva-bhaga-bhuk
-daksam babhasa abhasya
-priyamana ivanagha
-<p></p>
+bhavams tu pumsah paramasya mayaya
+durantayasprsta-matih samasta-drk
+taya hatatmasv anukarma-cetahsv
+anugraham kartum iharhasi prabho
+<br>
 <h2>Synonyms</h2>
-bhagavan--Lord Visnu; svena--with His own; bhagena--with the share; sarva-atma--the Supersoul of all
-living entities; sarva-bhaga-bhuk--the enjoyer of the results of all sacrifices; daksam--Daksa; babhase--said;
-abhasya--addressing; priyamanah--being satisfied; iva--as; anagha--O sinless Vidura.
-<p></p>
+bhavan--Your Lordship; tu--but; pumsah--of the person; paramasya--the supreme; mayaya--by the
+material energy; durantaya--of great potency; asprsta--unaffected; matih--intelligence; samasta-drk--seer
+or knower of everything; taya--by the same illusory energy; hata-atmasu--bewildered at heart; anukarmacetahsu--
+whose hearts are attracted by fruitive activities; anugraham--mercy; kartum--to do; iha--in this
+case; arhasi--desire; prabho--O lord.
+<br>
 <h2>Translation</h2>
-Maitreya continued: My dear sinless Vidura, Lord Visnu is actually the enjoyer of the results of all
-sacrifices. Yet because of His being the Supersoul of all living entities, He was satisfied simply with His
-share of the sacrificial offerings. He therefore addressed Daksa in a pleasing attitude.
-<p></p>
+My dear lord, you are never bewildered by the formidable influence of the illusory energy of the
+Supreme Personality of Godhead. Therefore you are omniscient and should be merciful and
+compassionate toward those who are bewildered by the same illusory energy and are very much attached
+to fruitive activities.
+<br>
 <h2>Purport</h2>
-In Bhagavad-gita (5.29) it is said, bhoktaram yajna-tapasam: Lord Visnu, or Krsna, is the supreme
-enjoyer of all the results of sacrifices, austerities and penances; in whatever one may engage, the ultimate
-goal is Visnu. If a person does not know that, he is misled. As the Supreme Personality of Godhead, Visnu
-has nothing to demand from anyone. He is self-satisfied, self-sufficient, but He accepts the offerings of
-yajna because of His friendly attitude toward all living entities. When His share of the sacrificial results
-was offered to Him, He appeared very pleased. It is said in Bhagavad-gita (9.26), patram puspam phalam
-toyam yo me bhaktya prayacchati: if any devotee offers Him even a small leaf, or a flower or water, if it is
-offered with love and affection, the Lord accepts it and is pleased. Although He is self-sufficient and does
-not need anything from anyone, He accepts such offerings because, as Supersoul, He has such a friendly
-attitude toward all living entities. Another point here is that He does not encroach upon another's share.
-ln the yajna there is a share for the demigods, Lord Siva, and Lord Brahma, and a share for Lord Visnu. He
-is satisfied with His own share and does not encroach upon others'. Indirectly, He indicated that He was
-not satisfied with Daksa's trying to deny Lord Siva his share. Maitreya addressed Vidura as sinless because
-Vidura was a pure Vaisnava and never committed any offense to any demigod. Although Vaisnavas accept
-Lord Visnu as the Supreme, they are not prone to offend demigods. They give the demigods proper
-respect. Vaisnavas accept Lord Siva as the best Vaisnava. For a Vaisnava there is no possibility of
-offending any demigods, and the demigods are also pleased with the Vaisnava because they are faultless
-devotees of Lord Visnu.
+A Vaisnava is never bewildered by the influence of the external energy because he is engaged in the
+transcendental loving service of the Lord. The Lord states in Bhagavad-gita (7.14):
+daivi hy esa guna-mayi
+mama maya duratyaya
+mam eva ye prapadyante
+mayam etam taranti te
+"My divine energy consisting of the three modes of material nature is difficult to overcome. But those
+who have surrendered unto Me can easily cross beyond it." A Vaisnava should take care of those who are
+bewildered by this maya instead of becoming angry with them, because without a Vaisnava's mercy they
+have no way to get out of the clutches of maya. Those who have been condemned by maya are rescued by
+the mercy of devotees.
+vancha-kalpatarubhyas ca
+krpa-sindhubhya eva ca
+patitanam pavanebhyo
+vaisnavebhyo namo namah
+"I offer my respectful obeisances unto all the Vaisnava devotees of the Lord. They are just like desire
+trees who can fulfill the desires of everyone, and they are full of compassion for the fallen conditioned
+souls." Those who are under the influence of the illusory energy are attracted to fruitive activities, but a
+Vaisnava preacher attracts their hearts to the Supreme Personality of Godhead, Sri Krsna.
 </p>
 
 </div>
@@ -90,7 +133,7 @@ devotees of Lord Visnu.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

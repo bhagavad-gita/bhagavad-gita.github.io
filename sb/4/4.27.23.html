@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.23.html">4.27.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-suddhaya santaya namah sva-nisthaya
-manasy apartham vilasad-dvayaya
-namo jagat-sthana-layodayesu
-grhita-maya-guna-vigrahaya
-<p></p>
+tato vihata-sankalpa
+kanyaka yavanesvaram
+mayopadistam asadya
+vavre namna bhayam patim
+<br>
 <h2>Synonyms</h2>
-suddhaya--unto the unadulterated; santaya--unto the most peaceful; namah--we offer our obeisances;
-sva-nisthaya--by being situated in one's position; manasi--in the mind; apartham--without any meaning;
-vilasat--appearing; dvayaya--in whom the dual world; namah--obeisances; jagat--of the cosmic
-manifestation; sthana--maintenance; laya--annihilation; udayesu--and for creation; grhita--accepted;
-maya--material; guna--of the modes of nature; vigrahaya--the forms.
-<p></p>
+tatah--thereafter; vihata-sankalpa--being disappointed in her determination; kanyaka--the daughter of
+Time; yavana-isvaram--unto the king of the untouchables; maya upadistam--indicated by me; asadya--
+having approached; vavre--accepted; namna--of the name; bhayam--Fear; patim--as her husband.
+<br>
 <h2>Translation</h2>
-Dear Lord, we beg to offer our obeisances unto You. When the mind is fixed upon You, the world of
-duality, although a place for material enjoyment, appears meaningless. Your transcendental form is full of
-transcendental bliss. We therefore offer our respects unto You. Your appearances as Lord Brahma, Lord
-Visnu and Lord Siva are meant for the purpose of creating, maintaining and annihilating this cosmic
-manifestation.
-<p></p>
+After she was thus disappointed by me, with my permission she approached the King of the Yavanas,
+whose name was Bhaya, or Fear, and she accepted him as her husband.
+<br>
 <h2>Purport</h2>
-A pure devotee, whose mind is always engaged in the service of the Lord, can certainly appreciate the
-impermanence of this material world. Although such a devotee may be engaged in executing material
-activities, this stage is called anasakti. As explained by Srila Rupa Gosvami, anasaktasya visayan
-yatharham upayunjatah. A devotee is always unattached to material activities because in the liberated
-stage his mind is always fixed on the lotus feet of the Lord.
-This material world is called dvaita, the world of duality. A devotee knows very well that everything
-within this material world is but a manifestation of the Supreme Lord's energy. To maintain the three
-modes of material nature, the Supreme Lord takes on different forms as Lord Brahma, Lord Visnu and
-Lord Siva. Unaffected by the modes of material nature, the Lord takes on different forms to create,
-maintain and annihilate this cosmic manifestation. The conclusion is that although the pure devotee
-appears to engage in material activities in the service of the Lord, he knows very well that material
-enjoyment for sense gratification has no use whatsoever.
+Being the most perfect Vaisnava, Sri Narada Muni is always willing to do good to others, even to one
+who curses him. Although Kalakanya, the daughter of Time, was refused by Narada Muni, she was given a
+shelter. Of course no one could give her shelter, but a Vaisnava gives shelter somewhere to such an
+unfortunate girl. When jara, or old age, attacks, everyone dwindles and deteriorates. In one stroke Narada
+Muni gave shelter to Kalakanya and counterattacked the ordinary karmis. If one accepts the instructions
+of Narada Muni, the ocean of fear (bhaya) can be very quickly removed by the grace of that great
+Vaisnava.
 </p>
 
 </div>
@@ -88,7 +117,7 @@ enjoyment for sense gratification has no use whatsoever.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.56.html">4.25.56</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.56</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/56"><b>56</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pancaramam nava-dvaram
-eka-palam tri-kosthakam
-sat-kulam panca-vipanam
-panca-prakrti stri-dhavam
-<p></p>
+evam karmasu samsaktah
+kamatma vancito 'budhah
+mahisi yad yad iheta
+tat tad evanvavartata
+<br>
 <h2>Synonyms</h2>
-panca-aramam--five gardens; nava-dvaram--nine gates; eka--one; palam--protector; tri--three;
-kosthakam--apartments; sat--six; kulam--families; panca--five; vipanam--stores; panca--five; prakrti--
-material elements; stri--woman; dhavam--master.
-<p></p>
+evam--thus; karmasu--in fruitive activities; samsaktah--being too much attached; kama-atma--lusty;
+vancitah--cheated; abudhah--less intelligent; mahisi--the Queen; yat yat--whatsoever; iheta--she would
+desire; tat tat--all of that; eva--certainly; anvavartata--he followed.
+<br>
 <h2>Translation</h2>
-In that city [the material body] there are five gardens, nine gates, one protector, three apartments, six
-families, five stores, five material elements, and one woman who is lord of the house.
+Being thus entangled in different types of mental concoction and engaged in fruitive activities, King
+Puranjana came completely under the control of material intelligence and was thus cheated. Indeed, he
+used to fulfill all the desires of his wife, the Queen.
+<br>
+<h2>Purport</h2>
+When a living entity is in such bewilderment that he is under the control of his wife, or material
+intelligence, he has to satisfy the intelligence of his so-called wife and act exactly according to her
+dictates. Various sastras advise that for material convenience one should keep his wife always satisfied by
+giving her ornaments and by following her instructions. In this way there will be no trouble in family life.
+Therefore for one's own social benefit, one is advised to keep his wife satisfied. In this way, when one
+becomes the servant of his wife, he must act according to the desires of his wife. Thus one becomes more
+and more entangled. In Bengal it is said that if one becomes an obedient servant of his wife, he loses all
+reputation. However, the difficulty is that unless one becomes a most obedient servant of his wife, family
+life becomes disturbed. In the Western countries this disturbance gives rise to the divorce law, and in
+Eastern countries like India there is separation. Now this disturbance is confirmed by the new
+introduction of the divorce law in India. Within the heart, the mind is acting, thinking, feeling and
+willing, and falling under the control of one's wife is the same as falling under the control of material
+intelligence. Thus one begets children by his wife and becomes entangled in so many activities under the
+control of mental concoctions.
 </p>
 
 </div>
@@ -69,7 +125,7 @@ families, five stores, five material elements, and one woman who is lord of the 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

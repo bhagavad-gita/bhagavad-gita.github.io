@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.31.html">4.22.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-idam viviktam japtavyam
-pavitram mangalam param
-nihsreyasa-karam capi
-sruyatam tad vadami vah
-<p></p>
+bhrasyaty anusmrtis cittam
+jnana-bhramsah smrti-ksaye
+tad-rodham kavayah prahur
+atmapahnavam atmanah
+<br>
 <h2>Synonyms</h2>
-idam--this; viviktam--very, particular; japtavyam--always to be chanted; pavitram--very pure;
-mangalam--auspicious; param--transcendental; nihsreyasa-karam--very beneficial; ca--also; api--certainly;
-sruyatam--please hear; tat--that; vadami--I am speaking; vah--unto you.
-<p></p>
+bhrasyati--becomes destroyed; anusmrtih--constantly thinking; cittam--consciousness; jnanabhramsah--
+bereft of real knowledge; smrti-ksaye--by destruction of remembrance; tat-rodham--choking
+that process; kavayah--great learned scholars; prahuh--have opined; atma--of the soul; apahnavam--
+destruction; atmanah--of the soul.
+<br>
 <h2>Translation</h2>
-Now I shall chant one mantra which is not only transcendental, pure and auspicious, but is the best
-prayer for anyone who is aspiring to attain the ultimate goal of life. When I chant this mantra, please hear
-it carefully and attentively.
-<p></p>
+When one deviates from his original consciousness, he loses the capacity to remember his previous
+position or recognize his present one. When remembrance is lost, all knowledge acquired is based on a
+false foundation. When this occurs, learned scholars consider that the soul is lost.
+<br>
 <h2>Purport</h2>
-The word viviktam is very significant. No one should think of the prayers recited by Lord Siva as being
-sectarian; rather, they are very confidential, so much so that anyone desiring the ultimate prosperity or
-auspicious goal of life must take the instructions of Lord Siva and pray to and glorify the Supreme
-Personality of Godhead as Lord Siva himself did.
+The living entity, or the soul, is ever existing and eternal. It cannot be lost, but learned scholars say that
+it is lost when actual knowledge is not working. That is the difference between animals and human
+beings. According to less intelligent philosophers, animals have no soul. But factually animals have souls.
+Due to the animals' gross ignorance, however, it appears that they have lost their souls. Without the soul,
+a body cannot move. That is the difference between a living body and a dead body. When the soul is out
+of the body, the body is called dead. The soul is said to be lost when there is no proper knowledge
+exhibited. Our original consciousness is Krsna consciousness because we are part and parcel of Krsna.
+When this consciousness is misguided and one is put into the material atmosphere, which pollutes the
+original consciousness, one thinks that he is a product of the material elements. Thus one loses his real
+remembrance of his position as part and parcel of the Supreme personality of Godhead, just as a man who
+sleeps forgets himself. In this way, when the activities of proper consciousness are checked, all the
+activities of the lost soul are performed on a false basis. At the present moment, human civilization is
+acting on a false platform of bodily identification; therefore it can be said that the people of the present
+age have lost their souls, and in this respect they are no better than animals.
 </p>
 
 </div>
@@ -76,7 +126,7 @@ Personality of Godhead as Lord Siva himself did.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

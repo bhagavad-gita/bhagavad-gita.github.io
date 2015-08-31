@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.4.html">4.12.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sva-dharma-silaih purusair
-bhagavan yajna-purusah
-ijyamano bhaktimata
-naradeneritah kila
-<p></p>
+aham tvam ity apartha dhir
+ajnanat purusasya hi
+svapnivabhaty atad-dhyanad
+yaya bandha-viparyayau
+<br>
 <h2>Synonyms</h2>
-sva-dharma-silaih--executing sacrificial duties; purusaih--by the men; bhagavan--the Supreme
-Personality of Godhead; yajna-purusah--the enjoyer of all sacrifices; ijyamanah--being worshiped;
-bhaktimata--by the devotee; naradena--by Narada; iritah--described; kila--indeed.
-<p></p>
+aham--I; tvam--you; iti--thus; apartha--misconceived; dhih--intelligence; ajnanat--from ignorance;
+purusasya--of a person; hi--certainly; svapni--a dream; iva--like; abhati--appears; a-tat-dhyanat--from the
+bodily concept of life; yaya--by which; bandha--bondage; viparyayau--and misery.
+<br>
 <h2>Translation</h2>
-While all the Pracetas were executing religious rituals and sacrificial ceremonies and thus worshiping
-the Supreme Personality of Godhead for His satisfaction, the great sage Narada described the
-transcendental qualities of Dhruva Maharaja.
-<p></p>
+Misidentification of oneself and others as "I" and "you" on the basis of the bodily concept of life is a
+product of ignorance. This bodily concept is the cause of repeated birth and death, and it makes us go on
+continuously in material existence.
+<br>
 <h2>Purport</h2>
-Narada Muni is always glorifying the pastimes of the Lord. In this verse we see that not only does he
-glorify the Lord, but he also likes to glorify the devotees of the Lord. The great sage Narada's mission is to
-broadcast the devotional service of the Lord. For this purpose he has compiled the Narada-pancaratra, a
-directory of devotional service, so that devotees can always take information about how to execute
-devotional service and thus engage twenty-four hours a day in performing sacrifices for the pleasure of the
-Supreme Personality of Godhead. As stated in the Bhagavad-gita, the Lord has created four orders of social
-life, namely brahmana, ksatriya, vaisya and sudra. In the Narada-pancaratra it is very clearly described
-how each of the social orders can please the Supreme Lord. In the Bhagavad-gita (18.45) it is stated, sve
-sve karmany abhiratah samsiddhim labhate narah: by executing one's prescribed duties one can please the
-Supreme Lord. In the Srimad-Bhagavatam (1.2.13) also it is stated, svanusthitasya dharmasya samsiddhir
-hari-tosanam: the perfection of duty is to see that by discharging one's specific duties one satisfies the
-Supreme Personality of Godhead. When the Pracetas were performing sacrifices according to this
-direction, Narada Muni was satisfied to see these activities, and he also wanted to glorify Dhruva Maharaja
-in that sacrificial arena.
+The conception of "I" and "you," aham tvam, as separate from each other, is due to our forgetfulness of
+our eternal relationship with the Supreme Personality of Godhead. The Supreme Person, Krsna, is the
+central point, and all of us are His parts and parcels, just as hands and legs are parts and parcels of the
+whole body. When we actually come to this understanding of being eternally related to the Supreme Lord,
+this distinction, which is based on the bodily concept of life, cannot exist. The same example can be cited
+herewith: the hand is the hand, and the leg is the leg, but when both of them engage in the service of the
+whole body, there is no such distinction as "hands" and "legs," for all of them belong to the whole body,
+and all the parts working together constitute the whole body. Similarly, when the living entities are in
+Krsna consciousness, there is no such distinction as "I" and "you" because everyone is engaged in the
+service of the Lord. Since the Lord is absolute, the services are also absolute; even though the hand is
+working one way and the leg is working in another way, since the purpose is the Supreme Personality of
+Godhead, they are all one. This is not to be confused with the statement by the Mayavadi philosopher that
+"everything is one." Real knowledge is that hand is hand, leg is leg, body is body, and yet all together they
+are one. As soon as the living entity thinks that he is independent, his conditional, material existence
+begins. The conception of independent existence is therefore like a dream. One has to be in Krsna
+consciousness, his original position. Then he can be freed from material bondage.
 </p>
 
 </div>
@@ -86,7 +127,7 @@ in that sacrificial arena.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

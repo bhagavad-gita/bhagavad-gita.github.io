@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.27.html">4.8.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-so 'pi sankalpajam visnoh
-pada-sevopasaditam
-prapya sankalpa-nirvanam
-natiprito 'bhyagat puram
-<p></p>
+narada uvaca
+nadhunapy avamanam te
+sammanam vapi putraka
+laksayamah kumarasya
+saktasya kridanadisu
+<br>
 <h2>Synonyms</h2>
-sah--he (Dhruva Maharaja); api--although; sankalpa-jam--the desired result; visnoh--of Lord Visnu;
-pada-seva--by serving the lotus feet; upasaditam--obtained; prapya--having achieved; sankalpa--of his
-determination; nirvanam--the satisfaction; na--not; atipritah--very much pleased; abhyagat--he returned;
-puram--to his home.
-<p></p>
+naradah uvaca--the great sage Narada said; na--not; adhuna--just now; api--although; avamanam--insult;
+te--unto you; sammanam--offering respects; va--or; api--certainly; putraka--my dear boy; laksayamah--I
+can see; kumarasya--of boys like you; saktasya--being attached; kridana-adisu--to sports and frivolities.
+<br>
 <h2>Translation</h2>
-Despite having achieved the desired result of his determination by worshiping the lotus feet of the Lord,
-Dhruva Maharaja was not very pleased. Thus he returned to his home.
-<p></p>
+The great sage Narada told Dhruva: My dear boy, you are only a little boy whose attachment is to sports
+and other frivolities. Why are you so affected by words insulting your honor?
+<br>
 <h2>Purport</h2>
-By worshiping the lotus feet of the Lord in devotional service as instructed by Narada Muni, Dhruva
-Maharaja achieved the desired result. His desire was to get a very exalted position, excelling that of his
-father, grandfather and great-grandfather, and although it was a somewhat childish determination because
-Dhruva Maharaja was nothing but a small child, Lord Visnu, the Supreme Personality of Godhead, is so
-kind and merciful that He fulfilled Dhruva's desire. Dhruva Maharaja wanted a residence more exalted
-than any ever occupied by anyone else in his family. Therefore he was offered the planet in which the
-Lord personally resides, and his determination was completely satisfied. Still, when Dhruva Maharaja
-returned home he was not very much pleased, for although in pure devotional service there is no demand
-from the Lord, because of his childish nature he had demanded something. Thus although the Lord also
-fulfilled his desire, he was not very pleased. Rather, he was ashamed that he had demanded something
-from the Lord, for he should not have done this.
+Ordinarily if a child is rebuked as a rascal or fool, he smiles and does not take such insulting words very
+seriously. Similarly, if words of honor are offered, he does not appreciate them. But in the case of Dhruva
+Maharaja, the ksatriya spirit was so strong that he could not tolerate a slight insult from his stepmother
+which injured his ksatriya prestige.
 </p>
 
 </div>
@@ -83,7 +115,7 @@ from the Lord, for he should not have done this.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

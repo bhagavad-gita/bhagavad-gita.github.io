@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,103 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.34.html">4.20.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-asav ihaneka-guno 'guno 'dhvarah
-prthag-vidha-dravya-guna-kriyoktibhih
-sampadyate 'rthasaya-linga-namabhir
-visuddha-vijnana-ghanah svarupatah
-<p></p>
+maitreya uvaca
+iti vainyasya rajarseh
+pratinandyarthavad vacah
+pujito 'nugrhitvainam
+gantum cakre 'cyuto matim
+<br>
 <h2>Synonyms</h2>
-asau--the Supreme Personality of Godhead; iha--in this material world; aneka--various; gunah--qualities;
-agunah--transcendental; adhvarah--yajna; prthak-vidha--varieties; dravya--physical elements; guna--
-ingredients; kriya--performances; uktibhih--by chanting different mantras; sampadyate--is worshiped;
-artha--interest; asaya--purpose; linga--form; namabhih--name; visuddha--without contamination;
-vijnana--science; ghanah--concentrated; sva-rupatah--in His own form.
-<p></p>
+maitreyah uvaca--the great sage Maitreya continued to speak; iti--thus; vainyasya--of the son of King
+Vena (Prthu Maharaja); raja-rseh--of the saintly King; pratinandya--appreciating; artha-vat vacah--the
+prayers, which were full of meaning; pujitah--being worshiped; anugrhitva--sufficiently benedicting;
+enam--King Prthu; gantum--to go from that place; cakre--made up; acyutah--the infallible Lord; matim--
+His mind.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead is transcendental and not contaminated by this material world.
-But although He is concentrated spirit soul without material variety, for the benefit of the conditioned
-soul He nevertheless accepts different types of sacrifice performed with various material elements, rituals
-and mantras and offered to the demigods under different names according to the interests and purposes of
-the performers.
-<p></p>
+The great saint Maitreya told Vidura: The Supreme Personality of Godhead amply appreciated the
+meaningful prayers of Maharaja Prthu. Thus, after being properly worshiped by the King, the Lord blessed
+him and decided to depart.
+<br>
 <h2>Purport</h2>
-For material prosperity there are recommendations in the Vedas for various types of yajna (sacrifice). In
-Bhagavad-gita (3.10) it is confirmed that Lord Brahma created all living entities, including human beings
-and demigods, and advised them to perform yajna according to their material desires (saha-yajnah prajah
-srstva). These performances are called yajnas because their ultimate goal is to satisfy the Supreme
-Personality of Godhead, Visnu. The purpose of performing yajnas is to get material benefit, but because
-the aim is to simultaneously satisfy the Supreme Lord, such yajnas have been recommended in the Vedas.
-Such performances are, of course, known as karma-kanda, or material activities, and all material activities
-are certainly contaminated by the three modes of material nature. Generally the karma-kanda ritualistic
-ceremonies are performed in the mode of passion, yet the conditioned souls, both human beings and
-demigods, are obliged to perform these yajnas because without them one cannot be happy at all.
-Srila Visvanatha Cakravarti Thakura comments that these karma-kanda ritualistic ceremonies, although
-contaminated, contain touches of devotional service because whenever there is a performance of any
-yajna, Lord Visnu is given a central position. This is very important because even a little endeavor to
-please Lord Visnu is bhakti and is of great value. A tinge of bhakti purifies the material nature of the
-performances, which by devotional service gradually come to the transcendental position. Therefore
-although such yajnas are superficially material activities, the results are transcendental. Such yajnas as
-Surya-yajna, Indra-yajna and Candra-yajna are performed in the names of the demigods, but these
-demigods are bodily parts of the Supreme Personality of Godhead. The demigods cannot accept sacrificial
-offerings for themselves, but they can accept them for the Supreme Personality of Godhead, just as a
-departmental tax collector of a government cannot collect taxes for his personal account but can realize
-them for the government. Any yajna performed with this complete knowledge and understanding is
-described in Bhagavad-gita as brahmarpanam, or a sacrifice offered to the Supreme Personality of
-Godhead. Since no one but the Supreme Lord can enjoy the results of sacrifice, the Lord says that He is
-the actual enjoyer of all sacrifices (bhoktaram yajna-tapasam sarva-loka-mahesvaram). Sacrifices should
-be performed with this view in mind. As stated in Bhagavad-gita (4.24):
-brahmarpanam brahma havir
-brahmagnau brahmana hutam
-brahmaiva tena gantavyam
-brahma-karma-samadhina
-"A person who is fully absorbed in Krsna consciousness is sure to attain the spiritual kingdom because
-of his full contribution to spiritual activities, in which the consummation is absolute and that which is
-offered is of the same spiritual nature." The performer of sacrifices must always keep in view that the
-sacrifices mentioned in the Vedas are meant to satisfy the Supreme Personality of Godhead. Visnur
-aradhyate panthah (Visnu Purana 3.8.9). Anything material or spiritual done for the satisfaction of the
-Supreme Lord is understood to be an actual yajna, and by performing such yajnas one gets liberation from
-material bondage. The direct method of getting liberation from material bondage is devotional service,
-comprising the nine following methods:
-sravanam kirtanam visnoh
-smaranam pada-sevanam
-arcanam vandanam dasyam
-sakhyam atma-nivedanam
-(Bhag. 7.5.23)
-This ninefold process is described in this verse as visuddha-vijnana-ghanah, or satisfying the Supreme
-Personality of Godhead directly by transcendental knowledge concentrated on the form of the Supreme
-Lord, Visnu. This is the best method for satisfying the Supreme Lord. One who cannot take to this direct
-process, however, should take the indirect process of performing yajnas for the satisfaction of Visnu, or
-Yajna. Visnu is therefore called yajna-pati. Sriyah patim yajna-patim jagat-patim (Bhag. 2.9.15).
-The Supreme Personality of Godhead's deep scientific knowledge is concentrated to the supreme point.
-For example, medical science knows some things superficially, but doctors do not know exactly how
-things happen in the body. Lord Krsna, however, knows everything in detail. Therefore His knowledge is
-vijnana-ghana because it does not have any of the defects of material science. The Supreme personality of
-Godhead is visuddha-vijnana-ghana, concentrated transcendental knowledge; therefore, even though He
-accepts karma-kandiya materialistic yajnas, He always remains in a transcendental position. Therefore, the
-mention of aneka-guna refers to the Supreme personality of Godhead's many transcendental qualities, for
-He is not affected by the material qualities. The different kinds of material paraphernalia or physical
-elements are also gradually transformed into spiritual understanding because ultimately there is no
-difference between material and spiritual qualities, for everything emanates from the Supreme Spirit. This
-is realized by a gradual process of realization and purification. One vivid example of this is Dhruva
-Maharaja, who took to meditation in the forest to achieve material benefit but ultimately became
-spiritually advanced and did not want any benediction for material profit. He was simply satisfied with the
-association of the Supreme Lord. Asaya means "determination." Generally a conditioned soul has the
-determination for material profit, but when these desires for material profit are satisfied through
-performance of yajna, one gradually achieves the spiritual platform. Then his life becomes perfect.
-Srimad-Bhagavatam (2.3.10) therefore recommends:
-akamah sarva-kamo va
-moksa-kama udara-dhih
-tivrena bhakti-yogena
-yajeta purusam param
-Everyone--whether akama (a devotee), sarva-kama (a karmi) or moksa-kama (a jnani or yogi)--is
-encouraged to worship the Supreme Personality of Godhead by the direct method of devotional service. In
-this way one can get both material and spiritual profit simultaneously.
+Most important in this verse are the words pratinandyarthavad vacah, which indicate that the Lord
+appreciated the very meaningful prayers of the King. When a devotee prays to the Lord, it is not to ask for
+material benefits but to ask the Lord for His favor; he prays that he may be engaged in the service of the
+Lord's lotus feet birth after birth. Lord Caitanya therefore uses the words mama janmani janmani, which
+mean "birth after birth," because a devotee is not even interested in stopping the repetition of birth. The
+Lord and the devotee appear in this material world birth after birth, but such births are transcendental. In
+the Fourth Chapter of Bhagavad-gita the Lord informed Arjuna that both He and Arjuna had undergone
+many, many births previously, but the Lord remembered everything about them whereas Arjuna had
+forgotten. The Lord and His confidential devotees appear many times to fulfill the Lord's mission, but
+since such births are transcendental, they are not accompanied by the miserable conditions of material
+birth, and they are therefore called divya, transcendental.
+One must understand the transcendental birth of the Lord and the devotee. The purpose of the Lord's
+taking birth is to establish devotional service, which is the perfect system of religion, and the purpose of
+the birth of a devotee is to broadcast the same system of religion, or the bhakti cult, all over the world.
+Prthu Maharaja was an incarnation of the power of the Lord to spread the bhakti cult, and the Lord
+blessed him to remain fixed in his position. Thus when the King refused to accept any material
+benediction, the Lord appreciated that refusal very much. Another significant word in this verse is acyuta,
+which means "infallible." Although the Lord appears in this material world, He is never to be considered
+one of the conditioned souls, who are all fallible. When the Lord appears, He remains in His spiritual
+position, uncontaminated by the modes of material nature, and therefore in Bhagavad-gita the Lord
+expresses the quality of His appearance as atma-mayaya, "performed by internal potency." The Lord,
+being infallible, is not forced by material nature to take birth in this material world. He appears in order to
+reestablish the perfect order of religious principles and to vanquish the demoniac influence in human
+society.
 </p>
 
 </div>
@@ -147,7 +138,7 @@ this way one can get both material and spiritual profit simultaneously.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

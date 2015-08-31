@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.3.html">4.15.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-athapy udara-sravasah prthor hareh
-kalavatarasya kathamrtadrtah
-yathopadesam munibhih pracoditah
-slaghyani karmani vayam vitanmahi
-<p></p>
+rsaya ucuh
+esa visnor bhagavatah
+kala bhuvana-palini
+iyam ca laksmyah sambhutih
+purusasyanapayini
+<br>
 <h2>Synonyms</h2>
-atha api--nevertheless; udara--liberal; sravasah--whose fame; prthoh--of King Prthu; hareh--of Lord
-Visnu; kala--part of a plenary expansion; avatarasya--incarnation; katha--words; amrta--nectarean;
-adrtah--attentive to; yatha--according to; upadesam--instruction; munibhih--by the great sages;
-pracoditah--being encouraged; slaghyani--laudable; karmani--activities; vayam--we; vitanmahi--shall try to
-spread.
-<p></p>
+rsayah ucuh--the sages said; esah--this male; visnoh--of Lord Visnu; bhagavatah--of the Supreme
+Personality of Godhead; kala--expansion; bhuvana-palini--who maintains the world; iyam--this female;
+ca--also; laksmyah--of the goddess of fortune; sambhutih--expansion; purusasya--of the Lord; anapayini--
+inseparable.
+<br>
 <h2>Translation</h2>
-Although we are unable to glorify you adequately, we nonetheless have a transcendental taste for
-glorifying your activities. We shall try to glorify you according to the instructions received from
-authoritative sages and scholars. Whatever we speak, however, is always inadequate and very
-insignificant. Dear King, because you are a direct incarnation of the Supreme Personality of Godhead, all
-your activities are liberal and ever laudable.
-<p></p>
+The great sages said: The male is a plenary expansion of the power of Lord Visnu, who maintains the
+entire universe, and the female is a plenary expansion of the goddess of fortune, who is never separated
+from the Lord.
+<br>
 <h2>Purport</h2>
-However expert one may be, he can never describe the glories of the Lord adequately. Nonetheless,
-those engaged in glorifying the activities of the Lord should try to do so as far as possible. Such an attempt
-will please the Supreme Personality of Godhead. Lord Caitanya has advised all His followers to go
-everywhere and preach the message of Lord Krsna. Since this message is essentially Bhagavad-gita, the
-preacher's duty is to study Bhagavad-gita as it is understood by disciplic succession and explained by great
-sages and learned devotees. One should speak to the general populace in accordance with one's
-predecessors--sadhu, guru and sastras. This simple process is the easiest method by which one can glorify
-the Lord. Devotional service, however, is the real method, for by devotional service one can satisfy the
-Supreme Personality of Godhead with just a few words. Without devotional service, volumes of books
-cannot satisfy the Lord. Even though preachers of the Krsna consciousness movement may be unable to
-describe the glories of the Lord, they can nonetheless go everywhere and request people to chant Hare
-Krsna.
+The significance of the goddess of fortune's never being separated from the Lord is clearly mentioned
+herein. People in the material world are very fond of the goddess of fortune, and they want her favor in
+the form of riches. They should know, however, that the goddess of fortune is inseparable from Lord
+Visnu. Materialists should understand that the goddess of fortune should be worshiped along with Lord
+Visnu and should not be regarded separately. Materialists seeking the favor of the goddess of fortune must
+worship Lord Visnu and Laksmi together to maintain material opulence. If a materialist follows the policy
+of Ravana, who wanted to separate Sita from Lord Ramacandra, the process of separation will vanquish
+him. Those who are very rich and have taken favor of the goddess of fortune in this world must engage
+their money in the service of the Lord. In this way they can continue in their opulent position without
+disturbance.
 </p>
 
 </div>
@@ -88,7 +123,7 @@ Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

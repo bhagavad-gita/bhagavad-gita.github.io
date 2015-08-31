@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,70 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.10.html">4.27.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ye tu mam rudra-gitena
-sayam pratah samahitah
-stuvanty aham kama-varan
-dasye prajnam ca sobhanam
-<p></p>
+tesu tad-riktha-haresu
+grha-kosanujivisu
+nirudhena mamatvena
+visayesv anvabadhyata
+<br>
 <h2>Synonyms</h2>
-ye--those persons who; tu--but; mam--unto Me; rudra-gitena--by the song sung by Lord Siva; sayam--in
-the evening; pratah--in the morning; samahitah--being attentive; stuvanti--offer prayers; aham--I; kamavaran--
-all benedictions to fulfill desires; dasye--shall award; prajnam--intelligence; ca--also; sobhanam--
-transcendental.
-<p></p>
+tesu--to them; tat-riktha-haresu--the plunderers of his money; grha--home; kosa--treasury; anujivisu--to
+the followers; nirudhena--deep-rooted; mamatvena--by attachment; visayesu--to sense objects;
+anvabadhyata--became bound.
+<br>
 <h2>Translation</h2>
-Those who will offer Me the prayers composed by Lord Siva, both in the morning and in the evening,
-will be given benedictions by Me. In this way they can both fulfill their desires and attain good
-intelligence.
-<p></p>
+These sons and grandsons were virtually plunderers of King Puranjana's riches, including his home,
+treasury, servants, secretaries and all other paraphernalia. Puranjana's attachment for these things was
+very deep-rooted.
+<br>
 <h2>Purport</h2>
-Good intelligence means going back home, back to Godhead. This is confirmed in Bhagavad-gita
-(10.10):
-tesam satata-yuktanam
-bhajatam priti-purvakam
-dadami buddhi-yogam tam
-yena mam upayanti te
-"To those who are constantly devoted and worship Me with love, I give the understanding by which
-they can come to Me."
-One who offers prayers to the Lord to fulfill his different desires must know that the highest
-perfectional fulfillment of desire is to go back home, back to Godhead. In this verse it is indicated that
-those who remember the activities of the Pracetas, the sons of King Pracinabarhisat, will be delivered and
-blessed. So what to speak of the sons of King Pracinabarhisat, who are directly connected with the
-Supreme Personality of Godhead? This is the way of the parampara system. If we follow the acaryas, we
-attain the same benefit as our predecessors. If one follows the decisions of Arjuna, he should be
-considered to be directly hearing Bhagavad-gita from the Supreme Personality of Godhead. There is no
-difference between hearing Bhagavad-gita directly from the Supreme Lord and following a personality like
-Arjuna, who formerly heard Bhagavad-gita directly from the Lord. Sometimes foolish people argue that
-since Krsna is not present at the moment, one cannot take direct instructions from Him. Such foolish
-people do not know that there is no difference between directly hearing Bhagavad-gita and reading it, as
-long as one accepts Bhagavad-gita as it is, spoken by the Lord. However, if one wants to understand
-Bhagavad-gita by his imperfect interpretations, one cannot possibly understand the mysteries of
-Bhagavad-gita, even though one may be a great scholar according to mundane estimation.
+In this verse the word riktha-haresu, meaning "plunderers of wealth," is very significant. One's sons,
+grandsons and other descendants are ultimately plunderers of one's accumulated wealth. There are many
+celebrated businessmen and industrialists who produce great wealth and are highly praised by the public,
+but all their money is ultimately plundered by their sons and grandsons. In India we have actually seen
+one industrialist who, like King Puranjana, was very much sexually inclined and had a half dozen wives.
+Each of these wives had a separate establishment that necessitated the expenditure of several thousands of
+rupees. When I was engaged in talking with him, I saw that he was very busy trying to secure money so
+that all his sons and daughters would get at least five hundred thousand rupees each. Thus such
+industrialists, businessmen or karmis are called mudhas in the sastras. They work very hard, accumulate
+money, and are satisfied to see that this money is plundered by their sons and grandsons. Such people do
+not want to return their wealth to its actual owner. As stated in Bhagavad-gita (5.29), bhoktaram yajnatapasam
+sarva-loka-mahesvaram: the real proprietor of all wealth is the Supreme Personality of Godhead.
+He is the actual enjoyer. So-called earners of money are those who simply know tricks by which they can
+take away God's money under the guise of business and industry. After accumulating this money, they
+enjoy seeing it plundered by their sons and grandsons. This is the materialistic way of life. In materialistic
+life one is encaged within the body and deluded by false egoism. Thus one thinks, "I am this body," "I am
+a human being," "I am an American," "I am an Indian." This bodily conception is due to false ego. Being
+deluded by false ego, one identifies himself with a certain family, nation or community. In this way one's
+attachment for the material world grows deeper and deeper. Thus it becomes very difficult for the living
+entity to extricate himself from his entanglement. Such people are graphically described in the Sixteenth
+Chapter of Bhagavad-gita (16.13-15) in this way:
+idam adya maya labdham
+imam prapsye manoratham
+idam astidam api me
+bhavisyati punar dhanam
+asau maya hatah satrur
+hanisye caparan api
+isvaro 'ham aham bhogi
+siddho 'ham balavan sukhi
+adhyo 'bhijanavan asmi
+ko 'nyo 'sti sadrso maya
+yaksye dasyami modisya
+ity ajnana-vimohitah
+"The demoniac person thinks: So much wealth do I have today, and I will gain more according to my
+schemes. So much is mine now, and it will increase in the future, more and more. He is my enemy, and I
+have killed him; and my other enemy will also be killed. I am the lord of everything, I am the enjoyer, I
+am perfect, powerful and happy. I am the richest man, surrounded by aristocratic relatives. There is none
+so powerful and happy as I am. I shall perform sacrifices, I shall give some charity, and thus I shall
+rejoice.' In this way, such persons are deluded by ignorance."
+In this way people engage in various laborious activities, and their attachment for body, home, family,
+nation and community becomes more and more deep-rooted.
 </p>
 
 </div>
@@ -95,7 +152,7 @@ Bhagavad-gita, even though one may be a great scholar according to mundane estim
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

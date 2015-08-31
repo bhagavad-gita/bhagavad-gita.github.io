@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.16.html">4.7.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sotsrjya dhairyam vilalapa sokadavagnina
-dava-lateva bala
-vakyam sapatnyah smarati sarojasriya
-drsa baspa-kalam uvaha
-<p></p>
+maitreya uvaca
+ksamapyaivam sa midhvamsam
+brahmana canumantritah
+karma santanayam asa
+sopadhyayartvig-adibhih
+<br>
 <h2>Synonyms</h2>
-sa--she; utsrjya--giving up; dhairyam--patience; vilalapa--lamented; soka-dava-agnina--by the fire of
-grief; dava-lata iva--like burnt leaves; bala--the woman; vakyam--words; sa-patnyah--spoken by her cowife;
-smarati--remember; saroja-sriya--a face as beautiful as a lotus; drsa--by looking; baspa-kalam--
-weeping; uvaha--said.
-<p></p>
+maitreyah--the sage Maitreya; uvaca--said; ksama--forgiveness; apya--receiving; evam--thus; sah--King
+Daksa; midhvamsam--unto Lord Siva; brahmana--along with Lord Brahma; ca--also; anumantritah--being
+permitted; karma--the sacrifice; santanayam asa--began again; sa--along with; upadhyaya--learned sages;
+rtvik--the priests; adibhih--and others.
+<br>
 <h2>Translation</h2>
-This incident was unbearable to Suniti's patience. She began to burn as if in a forest fire, and in her grief
-she became just like a burnt leaf and so lamented. As she remembered the words of her co-wife, her
-bright, lotuslike face filled with tears, and thus she spoke.
-<p></p>
-<h2>Purport</h2>
-When a man is aggrieved, he feels exactly like a burnt leaf in a forest fire. Suniti's position was like that.
-Although her face was as beautiful as a lotus flower, it dried up because of the burning fire caused by the
-harsh words of her co-wife.
+The great sage Maitreya said: Thus being pardoned by Lord Siva, King Daksa, with the permission of
+Lord Brahma, again began the performance of the yajna, along with the great learned sages, the priests and
+others.
 </p>
 
 </div>
@@ -76,7 +111,7 @@ harsh words of her co-wife.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

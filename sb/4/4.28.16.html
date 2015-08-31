@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,63 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.16.html">4.28.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-etat padam taj jagad-atmanah param
-sakrd vibhatam savitur yatha prabha
-yathasavo jagrati supta-saktayo
-dravya-kriya-jnana-bhida-bhramatyayah
-<p></p>
+duhitrh putra-pautrams ca
+jami-jamatr-parsadan
+svatvavasistam yat kincid
+grha-kosa-paricchadam
+<br>
 <h2>Synonyms</h2>
-etat--this cosmic manifestation; padam--place of habitation; tat--that; jagat-atmanah--of the Supreme
-Personality of Godhead; param--transcendental; sakrt--sometimes; vibhatam--manifested; savituh--of the
-sun; yatha--as; prabha--sunshine; yatha--as; asavah--the senses; jagrati--become manifest; supta--inactive;
-saktayah--energies; dravya--physical elements; kriya--activities; jnana--knowledge; bhida-bhrama--
-differences from misunderstanding; atyayah--passing away.
-<p></p>
+duhitrh--daughters; putra--sons; pautran--grandsons; ca--and; jami--daughters-in-law; jamatr--sons-inlaw;
+parsadan--associates; svatva--property; avasistam--remaining; yat kincit--whatever; grha--home;
+kosa--accumulation of wealth; paricchadam--household paraphernalia.
+<br>
 <h2>Translation</h2>
-Just as the sunshine is nondifferent from the sun, the cosmic manifestation is also nondifferent from the
-Supreme Personality of Godhead. The Supreme Personality is therefore all-pervasive within this material
-creation. When the senses are active, they appear to be part and parcel of the body, but when the body is
-asleep, their activities are unmanifest. Similarly, the whole cosmic creation appears different and yet
-nondifferent from the Supreme Person.
-<p></p>
+King Puranjana then began to think of his daughters, sons, grandsons, daughters-in-law, sons-in-law,
+servants and other associates as well as his house, his household paraphernalia and his little accumulation
+of wealth.
+<br>
 <h2>Purport</h2>
-This confirms the philosophy of acintya-bhedabheda-tattva ("simultaneously one and different")
-propounded by Lord Sri Caitanya Mahaprabhu. The Supreme Personality of Godhead is simultaneously
-different and nondifferent from this cosmic manifestation. In a previous verse it has been explained that
-the Supreme personality of Godhead, like the root of a tree, is the original cause of everything. It was also
-explained how the Supreme Personality of Godhead is all-pervasive. He is present within everything in
-this material manifestation. Since the energy of the Supreme Lord is nondifferent from Him, this material
-cosmic manifestation is also nondifferent from Him, although it appears different. The sunshine is not
-different from the sun itself, but it is simultaneously also different. One may be in the sunshine, but he is
-not on the sun itself. Those who live in this material world are living on the bodily rays of the Supreme
-Personality of Godhead, but they cannot see Him personally in the material condition.
-In this verse the word padam indicates the place where the Supreme personality of Godhead resides. As
-confirmed in Isopanisad, isavasyam idam sarvam. The proprietor of a house may live in one room of the
-house, but the entire house belongs to him. A king may live in one room in Buckingham Palace, but the
-entire palace is considered his property. It is not necessary for the king to live in every room of that palace
-for it to be his. He may be physically absent from the rooms, but still the entire palace is understood to be
-his royal domicile.
-The sunshine is light, the sun globe itself is light, and the sun-god is also light. However, the sunshine is
-not identical with the sun-god, Vivasvan. This is the meaning of simultaneously one and different
-(acintya-bhedabheda-tattva). All the planets rest on the sunshine, and because of the heat of the sun, they
-all revolve in their orbits. On each and every planet, the trees and plants grow and change colors due to
-the sunshine. Being the rays of the sun, the sunshine is nondifferent from the sun. Similarly, all the
-planets, resting on the sunshine, are nondifferent from the sun. The entire material world is completely
-dependent on the sun, being produced by the sun, and the cause, the sun, is inherent in the effects.
-Similarly, Krsna is the cause of all causes, and the effects are permeated by the original cause. The entire
-cosmic manifestation should be understood as the expanded energy of the Supreme Lord.
-When one sleeps, the senses are inactive, but this does not mean that the senses are absent. When one is
-awakened, the senses become active again. Similarly, this cosmic creation is sometimes manifest and
-sometimes unmanifest, as stated in Bhagavad-gita (bhutva bhutva praliyate). When the cosmic
-manifestation is dissolved, it is in a kind of sleeping condition, an inactive state. Whether the cosmic
-manifestation is active or inactive, the energy of the Supreme Lord is always existing. Thus the words
-"appearance" and "disappearance" apply only to the cosmic manifestation.
+It is not infrequent for a person overly attached to the material body to request a physician to prolong
+his life at least for some time. If the so-called scientific physician is able to prolong one's life for a few
+minutes through the use of oxygen or other medicines, he thinks that he is very successful in his
+attempts, although ultimately the patient will die. This is called the struggle for existence. At the time of
+death both patient and physician still think of prolonging life, although all the constituents of the body
+are practically dead and gone.
 </p>
 
 </div>
@@ -107,7 +117,7 @@ manifestation is active or inactive, the energy of the Supreme Lord is always ex
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

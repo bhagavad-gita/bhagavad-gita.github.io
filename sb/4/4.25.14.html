@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.14.html">4.25.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na seke so 'vitum tatra
-puru-krcchroru-vepathuh
-gantum aicchat tato vrksakotarad
-iva sanalat
-<p></p>
+prakaropavanattalaparikhair
+aksa-toranaih
+svarna-raupyayasaih srngaih
+sankulam sarvato grhaih
+<br>
 <h2>Synonyms</h2>
-na--not; seke--was able; sah--he; avitum--to protect; tatra--there; puru--very much; krcchra--difficulty;
-uru--great; vepathuh--suffering; gantum--to go out; aicchat--desired; tatah--from there; vrksa--of a tree;
-kotarat--from the hollow; iva--like; sa-analat--on fire.
-<p></p>
+prakara--walls; upavana--parks; attala--towers; parikhaih--with trenches; aksa--windows; toranaih--with
+gates; svarna--gold; raupya--silver; ayasaih--made of iron; srngaih--with domes; sankulam--congested;
+sarvatah--everywhere; grhaih--with houses.
+<br>
 <h2>Translation</h2>
-As a serpent living within the cavity of a tree wishes to leave when there is a forest fire, so the city's
-police superintendent, the snake, wished to leave the city due to the fire's severe heat.
-<p></p>
+That city was surrounded by walls and parks, and within it were towers, canals, windows and outlets.
+The houses there were decorated with domes made of gold, silver and iron.
+<br>
 <h2>Purport</h2>
-It becomes very difficult for snakes to leave a forest when there is a fire. Other animals may flee due to
-their long legs, but serpents, only being able to crawl, are generally burnt in the fire. At the last stage, the
-limbs of the body are not as much affected as the life air.
+The body is protected by walls of skin. The hairs on the body are compared to parks, and the highest
+parts of the body, like the nose and head, are compared to towers. The wrinkles and depressions on
+different parts of the body are compared to trenches or canals, the eyes are compared to windows, and the
+eyelids are compared to protective gates. The three types of metal--gold, silver and iron--represent the
+three modes of material nature. Gold represents goodness; silver, passion; and iron, ignorance. The body
+is also sometimes considered to be a bag containing three elements (tri-dhatu): mucus, bile and air
+(kapha, pitta and vayu). Yasyatma-buddhih kunape tri-dhatuke. According to Bhagavatam (10.84.13), one
+who considers this bag of mucus, bile and air to be the self is considered no better than a cow or an ass.
 </p>
 
 </div>
@@ -74,7 +118,7 @@ limbs of the body are not as much affected as the life air.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

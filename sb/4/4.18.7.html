@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.7.html">4.18.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatra dharma-dugha bhumih
-sarva-kama-dugha sati
-dogdhi smabhipsitan arthan
-yajamanasya bharata
-<p></p>
+apalitanadrta ca
+bhavadbhir loka-palakaih
+cori-bhute 'tha loke 'ham
+yajnarthe 'grasam osadhih
+<br>
 <h2>Synonyms</h2>
-yatra--where; dharma-dugha--producing sufficient milk for religiosity; bhumih--the land; sarva-kama--
-all desires; dugha--yielding as milk; sati--the cow; dogdhi sma--fulfilled; abhipsitan--desirable; arthan--
-objects; yajamanasya--of the sacrificer; bharata--my dear Vidura.
-<p></p>
+apalita--without being taken care of; anadrta--being neglected; ca--also; bhavadbhih--like your good self;
+loka-palakaih--by the governors or kings; cori-bhute--being beset by thieves; atha--therefore; loke--this
+world; aham--I; yajna-arthe--for the purpose of performing sacrifices; agrasam--have hidden; osadhih--all
+the herbs and grains.
+<br>
 <h2>Translation</h2>
-My dear Vidura, in that great sacrifice the entire land came to be like the milk-producing kama-dhenu,
-and thus, by the performance of yajna, all daily necessities for life were supplied.
-<p></p>
+My dear King, not only are grains and herbs being used by nondevotees, but, as far as I am concerned, I
+am not being properly maintained. Indeed, I am being neglected by kings who are not punishing these
+rascals who have turned into thieves by using grains for sense gratification. Consequently I have hidden
+all these seeds, which were meant for the performance of sacrifice.
+<br>
 <h2>Purport</h2>
-In this verse the word dharma-dugha is significant, for it indicates kama-dhenu. Kama-dhenu is also
-known as surabhi. Surabhi cows inhabit the spiritual world, and, as stated in Brahma-samhita, Lord Krsna
-is engaged in tending these cows: surabhir abhipalayantam. One can milk a surabhi cow as often as one
-likes, and the cow will deliver as much milk as one requires. Milk, of course, is necessary for the
-production of so many milk products, especially clarified butter, which is required for the performance of
-great sacrifices. Unless we are prepared to perform the prescribed sacrifices, our supply of the necessities
-of life will be checked. Bhagavad-gita confirms that Lord Brahma created human society along with yajna,
-the performance of sacrifice. Yajna means Lord Visnu, the Supreme Personality of Godhead, and sacrifice
-means working for the satisfaction of the Supreme personality of Godhead. In this age, however, it is very
-difficult to find qualified brahmanas who can perform sacrifices as prescribed in the Vedas. Therefore it is
-recommended in Srimad-Bhagavatam (yajnaih sankirtana-prayaih) that by performing sankirtana-yajna
-and by satisfying the yajna-purusa, Lord Caitanya, one can derive all the results derived by great sacrifices
-in the past. King Prthu and others derived all the necessities of life from the earthly planet by performing
-great sacrifices. Now this sankirtana movement has already been started by the International Society for
-Krishna Consciousness. people should take advantage of this great sacrifice and join in the Society's
-activities; then there will be no scarcity. If sankirtana-yajna is performed, there will be no difficulty, not
-even in industrial enterprises. Therefore this system should be introduced in all spheres of life--social,
-political, industrial, commercial, etc. Then everything will run very peacefully and smoothly.
+That which happened during the time of Prthu Maharaja and his father, King Vena, is also happening at
+this present moment. A huge arrangement exists for the production of large-scale industrial and
+agricultural products, but all these products are meant for sense gratification. Therefore despite such
+productive capacities there is scarcity because the world's population is full of thieves. The word coribhute
+indicates that the population has turned to thievery. According to Vedic understanding, men are
+transformed into thieves when they plan economic development for sense gratification. It is also
+explained in Bhagavad-gita that if one eats food grains without offering them to the Supreme Personality
+of Godhead, Yajna, he is a thief and liable to be punished. According to spiritual communism, all
+properties on the surface of the globe belong to the Supreme Personality of Godhead. The population has
+a right to use goods only after offering them to the Supreme Personality of Godhead. This is the process of
+accepting prasada. Unless one eats prasada, he is certainly a thief. It is the duty of governors and kings to
+punish such thieves and maintain the world nicely. If this is not done, grains will no longer be produced,
+and people will simply starve. Indeed, not only will people be obliged to eat less, but they will kill one
+another and eat each other's flesh. They are already killing animals for flesh, so when there will no longer
+be grains, vegetables and fruits, they will kill their own sons and fathers and eat their flesh for sustenance.
 </p>
 
 </div>
@@ -89,7 +128,7 @@ political, industrial, commercial, etc. Then everything will run very peacefully
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.7.html">4.13.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-venasyaveksya munayo
-durvrttasya vicestitam
-vimrsya loka-vyasanam
-krpayocuh sma satrinah
-<p></p>
+sa janmanopasantatma
+nihsangah sama-darsanah
+dadarsa loke vitatam
+atmanam lokam atmani
+<br>
 <h2>Synonyms</h2>
-venasya--of King Vena; aveksya--after observing; munayah--all the great sages; durvrttasya--of the great
-rogue; vicestitam--activities; vimrsya--considering; loka-vyasanam--danger to the people in general;
-krpaya--out of compassion; ucuh--talked; sma--in the past; satrinah--the performers of sacrifices.
-<p></p>
+sah--his son Utkala; janmana--from the very beginning of his birth; upasanta--very well satisfied; atma--
+soul; nihsangah--without attachment; sama-darsanah--equipoised; dadarsa--saw; loke--in the world;
+vitatam--spread; atmanam--the Supersoul; lokam--all the world; atmani--in the Supersoul.
+<br>
 <h2>Translation</h2>
-Therefore all the great sages assembled together and, after observing cruel Vena's atrocities, concluded
-that a great danger and catastrophe was approaching the people of the world. Thus out of compassion
-they began to talk amongst themselves, for they themselves were the performers of the sacrifices.
-<p></p>
+From his very birth, Utkala was fully satisfied and unattached to the world. He was equipoised, for he
+could see everything resting in the Supersoul and the Supersoul present in everyone's heart.
+<br>
 <h2>Purport</h2>
-Before King Vena was enthroned, all the great sages were very much anxious to see to the welfare of
-society. When they saw that King Vena was most irresponsible, cruel and atrocious, they again began to
-think of the welfare of the people. It should be understood that sages, saintly persons and devotees are not
-unconcerned with the people's welfare. Ordinary karmis are busy acquiring money for sense gratification,
-and ordinary jnanis are socially aloof when they speculate on liberation, but actual devotees and saintly
-persons are always anxious to see how the people can be made happy both materially and spiritually.
-Therefore the great sages began to consult one another on how to get out of the dangerous atmosphere
-created by King Vena.
+The symptoms and characteristics of Utkala, the son of Maharaja Dhruva, are those of a mahabhagavata.
+As stated in the Bhagavad-gita (6.30), yo mam pasyati sarvatra sarvam ca mayi pasyati: a highly
+advanced devotee sees the Supreme Personality of Godhead everywhere, and he also sees everything
+resting in the Supreme. It is also confirmed in the Bhagavad-gita (9.4), maya tatam idam sarvam jagad
+avyakta-murtina: Lord Krsna is spread all over the universe in His impersonal feature. Everything is
+resting on Him, but that does not mean that everything is He Himself. A highly advanced maha-bhagavata
+devotee sees in this spirit: he sees the same Supersoul, Paramatma, existing within everyone's heart,
+regardless of discrimination based on the different material forms of the living entities. He sees everyone
+as part and parcel of the Supreme Personality of Godhead. The maha-bhagavata, who experiences the
+Supreme Godhead's presence everywhere, is never missing from the sight of the Supreme Lord, nor is the
+Supreme Lord ever lost from his sight. This is possible only when one is advanced in love of Godhead.
 </p>
 
 </div>
@@ -80,7 +121,7 @@ created by King Vena.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

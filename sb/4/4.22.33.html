@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,77 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.33.html">4.22.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-rudra uvaca
-jitam ta atma-vid-varyasvastaye
-svastir astu me
-bhavataradhasa raddham
-sarvasma atmane namah
-<p></p>
+arthendriyarthabhidhyanam
+sarvarthapahnavo nrnam
+bhramsito jnana-vijnanad
+yenavisati mukhyatam
+<br>
 <h2>Synonyms</h2>
-sri-rudrah uvaca--Lord Siva began to speak; jitam--all glories; te--unto You; atma-vit--self-realized;
-varya--the best; svastaye--unto the auspicious; svastih--auspiciousness; astu--let there be; me--of me;
-bhavata--by You; aradhasa--by the all-perfect; raddham--worshipable; sarvasmai--the Supreme Soul;
-atmane--unto the Supreme Soul; namah--obeisances.
-<p></p>
+artha--riches; indriya-artha--for the satisfaction of the senses; abhidhyanam--constantly thinking of;
+sarva-artha--four kinds of achievements; apahnavah--destructive; nrnam--of human society; bhramsitah--
+being devoid of; jnana--knowledge; vijnanat--devotional service; yena--by all this; avisati--enters;
+mukhyatam--immovable life.
+<br>
 <h2>Translation</h2>
-Lord Siva addressed the Supreme Personality of Godhead with the following prayer: O Supreme
-Personality of Godhead, all glories unto You. You are the most exalted of all self-realized souls. Since You
-are always auspicious for the self-realized, I wish that You be auspicious for me. You are worshipable by
-virtue of the all-perfect instructions You give. You are the Supersoul; therefore I offer my obeisances unto
-You as the supreme living being.
-<p></p>
+For human society, constantly thinking of how to earn money and apply it for sense gratification brings
+about the destruction of everyone's interests. When one becomes devoid of knowledge and devotional
+service, he enters into species of life like those of trees and stones.
+<br>
 <h2>Purport</h2>
-As soon as a devotee is inspired by the Lord to offer the Lord a prayer, the devotee immediately glorifies
-the Lord in the beginning by saying, "All glories unto You, my Lord." The Lord is glorified because He is
-considered to be the chief of all self-realized souls. As said in the Vedas (Katha Upanisad 2.2.13), nityo
-nityanam cetanas cetananam: the Supreme Being, the Personality of Godhead, is the chief living being
-amongst all living beings. There are different kinds of individual living beings--some of them are in this
-material world, and some are in the spiritual world. Those who are in the spiritual world are known to be
-completely self-realized because on the spiritual platform the living entity is not forgetful of his service to
-the Lord. Therefore in the spiritual world all those who are in the devotional service of the Lord are
-eternally fixed, for they understand the position of the Supreme Being, as well as their individual
-constitution. Thus amongst self-realized souls, the Lord is known as the perfectly self-realized soul. Nityo
-nityanam cetanas cetananam. When the individual soul is fixed in his knowledge of the Lord as the
-Supreme Being, he actually becomes established in an all-auspicious position. Lord Siva prays herein that
-his auspicious position continue eternally by virtue of the Lord's mercy upon him.
-The Supreme Lord is all-perfect, and the Lord instructs that one who worships Him also becomes
-perfect. As stated in Bhagavad-gita (15.15): mattah smrtir jnanam apohanam ca. The Lord is situated as
-the Supersoul in everyone's heart, but He is so kind to His devotees that He gives them instructions by
-which they may continue to progress. When they receive instructions from the all-perfect, there is no
-chance of their being misled. This is also confirmed in Bhagavad-gita (10.10): dadami buddhi-yogam tam
-yena mam upayanti te. The Lord is always ready to give instructions to the pure devotee so that the
-devotee can advance further and further in devotional service. Since the Lord gives instructions as
-sarvatma, the Supersoul, Lord Siva offers Him respect with the words sarvatma atmane namah. The
-individual soul is called atma, and the Lord is also called atma as well as Paramatma. Being situated in
-everyone's heart, the Lord is known as the supreme atma. Therefore all obeisances are offered unto Him.
-In this regard, one may refer to the prayers of Kunti in the First Canto of Srimad-Bhagavatam (1.8.20):
-tatha paramahamsanam
-muninam amalatmanam
-bhakti-yoga-vidhanartham
-katham pasyema hi striyah
-The Lord is always ready to give instructions to the paramahamsas, or the topmost devotees of the Lord,
-who are completely liberated from all contaminations of the material world. The Lord always gives
-instructions to such exalted devotees to inform them how they can remain fixed in devotional service.
-Similarly, it is stated in the atmarama verse (Bhag. 1.7.10):
-atmaramas ca munayo
-nirgrantha apy urukrame
-kurvanty ahaitukim bhaktim
-ittham-bhuta-guno harih
-The word atmarama refers to those who are not interested in the material world but are simply engaged
-in spiritual realization. Such self-realized persons are generally considered in two categories--impersonal
-and personal. However, impersonalists also become devotees when they are attracted by the personal
-transcendental qualities of the Lord. The conclusion is that Lord Siva wanted to remain a fixed devotee of
-the Supreme Personality of Godhead, Vasudeva. As explained in the following verses, Lord Siva never
-desires to merge into the existence of the Supreme Lord like the impersonalists. Rather, he thinks that it
-would be good fortune for him to continue to be fixed in the understanding of the Lord as the Supreme
-Being. By this understanding, one realizes that all living entities--including Lord Siva, Lord Brahma and
-other demigods--are servants of the Supreme Lord.
+Jnana, or knowledge, means to understand one's constitutional position, and vijnana refers to practical
+application of that knowledge in life. In the human form of life, one should come to the position of jnana
+and vijnana, but despite this great opportunity if one does not develop knowledge and practical
+application of knowledge through the help of a spiritual master and the sastras--in other words, if one
+misuses this opportunity--then in the next life he is sure to be born in a species of nonmoving living
+entities. Nonmoving living entities include hills, mountains, trees, plants, etc. This stage of life is called
+punyatam or mukhyatam, namely, making all activities zero. Philosophers who support stopping all
+activities are called sunyavadi. By nature's own way, our activities are to be gradually diverted to
+devotional service. But there are philosophers who, instead of purifying their activities, try to make
+everything zero, or void of all activities. This lack of activity is represented by the trees and the hills. This
+is a kind of punishment inflicted by the laws of nature. If we do not properly execute our mission of life in
+self-realization, nature's punishment will render us inactive by putting us in the form of trees and hills.
+Therefore activities directed toward sense gratification are condemned herein. One who is constantly
+thinking of activities to earn money and gratify the senses is following a path which is suicidal. Factually
+all human society is following this path. Some way or other, people are determined to earn money or get
+money by begging, borrowing or stealing and applying that for sense gratification. Such a civilization is
+the greatest obstacle in the path of self-realization.
 </p>
 
 </div>
@@ -121,7 +129,7 @@ other demigods--are servants of the Supreme Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

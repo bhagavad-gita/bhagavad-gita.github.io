@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.14.11.html">4.14.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasyabhiseka arabdho
-brahmanair brahma-vadibhih
-abhisecanikany asmai
-ajahruh sarvato janah
-<p></p>
+nirupitah praja-palah
+sa jighamsati vai prajah
+tathapi santvayemamum
+nasmams tat-patakam sprset
+<br>
 <h2>Synonyms</h2>
-tasya--his; abhisekah--coronation; arabdhah--was arranged; brahmanaih--by the learned brahmanas;
-brahma-vadibhih--attached to the Vedic rituals; abhisecanikani--various paraphernalia for performing the
-ceremony; asmai--unto him; ajahruh--collected; sarvatah--from all directions; janah--people.
-<p></p>
+nirupitah--appointed; praja-palah--the king; sah--he; jighamsati--desires to harm; vai--certainly; prajah--
+the citizens; tatha api--nevertheless; santvayema--we should pacify; amum--him; na--not; asman--us; tat--
+his; patakam--sinful result; sprset--may touch.
+<br>
 <h2>Translation</h2>
-The learned brahmanas, who were very attached to the Vedic ritualistic ceremonies, then arranged for
-the King's coronation. People from all directions collected all the different paraphernalia for the
-ceremony. Thus everything was complete.
+We appointed this Vena king of the state in order to give protection to the citizens, but now he has
+become the enemy of the citizens. Despite all these discrepancies, we should at once try to pacify him. By
+doing so, we may not be touched by the sinful results caused by him.
+<br>
+<h2>Purport</h2>
+The saintly sages elected King Vena to become king, but he proved to be mischievous; therefore the
+sages were very much afraid of incurring sinful reaction. The law of karma prohibits a person even to
+associate with a mischievous individual. By electing Vena to the throne, the saintly sages certainly
+associated with him. Ultimately King Vena became so mischievous that the saintly sages actually became
+afraid of becoming contaminated by his activities. Thus before taking any action against him, the sages
+tried to pacify and correct him so that he might turn from his mischief.
 </p>
 
 </div>
@@ -70,7 +117,7 @@ ceremony. Thus everything was complete.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

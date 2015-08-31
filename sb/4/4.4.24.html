@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.4.24.html">4.4.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 maitreya uvaca
 ity adhvare daksam anudya satru-han
 ksitav udicim nisasada santa-vak
 sprstva jalam pita-dukula-samvrta
 nimilya drg yoga-patham samavisat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 maitreyah uvaca--Maitreya said; iti--thus; adhvare--in the arena of sacrifice; daksam--to Daksa; anudya--
 speaking; satru-han--O annihilator of enemies; ksitau--on the ground; udicim--facing north; nisasada--sat
 down; santa-vak--in silence; sprstva--after touching; jalam--water; pita-dukula-samvrta--dressed in yellow
 garments; nimilya--closing; drk--the vision; yoga-patham--the mystic yoga process; samavisat--became
 absorbed.
-<p></p>
+<br>
 <h2>Translation</h2>
 Maitreya the sage told Vidura: O annihilator of enemies, while thus speaking to her father in the arena
 of sacrifice, Sati sat down on the ground and faced north. Dressed in saffron garments, she sanctified
 herself with water and closed her eyes to absorb herself in the process of mystic yoga.
-<p></p>
+<br>
 <h2>Purport</h2>
 It is said that when a man desires to quit his body he dresses in saffron garments. Therefore it appears
 that Sati changed her dress, indicating that she was going to quit the body given her by Daksa. Daksa was
@@ -91,7 +130,7 @@ soul to another body or sphere.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

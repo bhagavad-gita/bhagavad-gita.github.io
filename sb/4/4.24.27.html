@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.27.html">4.24.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kala-kanyodita-vaco
-nisamya yavanesvarah
-cikirsur deva-guhyam sa
-sasmitam tam abhasata
-<p></p>
+sri-rudra uvaca
+yuyam vedisadah putra
+viditam vas cikirsitam
+anugrahaya bhadram va
+evam me darsanam krtam
+<br>
 <h2>Synonyms</h2>
-kala-kanya--by the daughter of Time; udita--expressed; vacah--words; nisamya--hearing; yavanaisvarah--
-the King of the Yavanas; cikirsuh--desiring to execute; deva--of providence; guhyam--confidential
-duty; sah--he; sa-smitam--smilingly; tam--her; abhasata--addressed.
-<p></p>
+sri-rudrah uvaca--Lord Siva began to speak; yuyam--all of you; vedisadah--of King Pracinabarhi;
+putrah--sons; viditam--knowing; vah--your; cikirsitam--desires; anugrahaya--for the matter of showing
+you mercy; bhadram--all good fortune unto you; vah--all of you; evam--thus; me--my; darsanam--
+audience; krtam--you have done.
+<br>
 <h2>Translation</h2>
-After hearing the statement of Kalakanya, daughter of Time, the King of the Yavanas began to smile and
-devise a means for executing his confidential duty on behalf of providence. He then addressed Kalakanya
-as follows.
-<p></p>
+Lord Siva said: You are all the sons of King Pracinabarhi, and I wish all good fortune to you. I also know
+what you are going to do, and therefore I am visible to you just to show my mercy upon you.
+<br>
 <h2>Purport</h2>
-In Caitanya-caritamrta (Adi 5.142) it is said:
-ekale isvara krsna, ara saba bhrtya
-yare yaiche nacaya, se taiche kare nrtya
-Actually the supreme controller is the Personality of Godhead, Krsna, and everyone is His servant.
-Yavana-raja, the King of the Yavanas, was also a servant of Krsna. Consequently, he wanted to execute the
-purpose of Krsna through the agency of Kalakanya. Although Kalakanya means invalidity or old age,
-Yavana-raja wanted to serve Krsna by introducing Kalakanya everywhere. Thus a sane person, by attaining
-old age, will become fearful of death. Foolish people engage in material activities as if they will live
-forever and enjoy material advancement, but actually there is no material advancement. Under illusion
-people think that material opulence will save them, but although there has been much advancement in
-material science, the problems of human society--birth, death, old age and disease--are still unsolved.
-Nonetheless foolish scientists are thinking that they have advanced materially. When Kalakanya, the
-invalidity of old age, attacks them, they become fearful of death, if they are sane. Those who are insane
-simply do not care for death, nor do they know what is going to happen after death. They are under the
-wrong impression that after death there is no life, and consequently they act very irresponsibly in this life
-and enjoy unrestricted sense gratification. For an intelligent person, the appearance of old age is an
-impetus to spiritual life. People naturally fear impending death. The King of the Yavanas tried to utilize
-Kalakanya for this purpose.
+By these words Lord Siva indicates that what the princes were going to do was known to him. It is a fact
+that they were going to worship Lord Visnu by severe austerities and penances. Knowing this fact, Lord
+Siva immediately became very pleased, as apparent by the next verse. This indicates that a person who is
+not yet a devotee of the Supreme Personality of Godhead but who desires to serve the Supreme Lord
+receives the benedictions of the demigods, headed by the chief demigod, Lord Siva. Thus a devotee of the
+Lord does not need to try to please the demigods separately. Simply by worshiping the Supreme Lord, a
+devotee can please all of them. Nor does he have to ask the demigods for material benedictions, for the
+demigods, being pleased with the devotee, automatically offer him everything that he needs. The
+demigods are servants of the Lord, and they are always prepared to help a devotee in all circumstances.
+Therefore Srila Bilvamangala Thakura said that if one has unalloyed devotion for the Supreme Lord, the
+goddess of liberation is ready to serve him, to say nothing of the gods of material opulences. Indeed, all
+the demigods are simply waiting for an opportunity to serve the devotee. Thus there is no need for a
+devotee of Krsna to endeavor for material opulence or liberation. By being situated in the transcendental
+position of devotional service, he receives all the benefits of dharma, artha, kama and moksa.
 </p>
 
 </div>
@@ -90,7 +126,7 @@ Kalakanya for this purpose.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

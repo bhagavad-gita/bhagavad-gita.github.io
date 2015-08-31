@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.5.html">4.18.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-siddha vidyadhara daitya
-danava guhyakadayah
-sunanda-nanda-pramukhah
-parsada-pravara hareh
-<p></p>
+tan anadrtya yo 'vidvan
+arthan arabhate svayam
+tasya vyabhicaranty artha
+arabdhas ca punah punah
+<br>
 <h2>Synonyms</h2>
-siddhah--the residents of Siddhaloka; vidyadharah--the residents of Vidyadhara-loka; daityah--the
-demoniac descendants of Diti; danavah--the asuras; guhyaka-adayah--the Yaksas, etc.; sunanda-nandapramukhah--
-headed by Sunanda and Nanda, the chief of Lord Visnu's associates from Vaikuntha;
-parsada--associates; pravarah--most respectful; hareh--of the Supreme Personality of Godhead.
-<p></p>
+tan--those; anadrtya--neglecting; yah--anyone who; avidvan--rascal; arthan--schemes; arabhate--begins;
+svayam--personally; tasya--his; vyabhicaranti--do not become successful; arthah--purposes; arabdhah--
+attempted; ca--and; punah punah--again and again.
+<br>
 <h2>Translation</h2>
-The Lord was accompanied by the residents of Siddhaloka and Vidyadhara-loka, all the descendants of
-Diti, and the demons and the Yaksas. He was also accompanied by His chief associates, headed by
-Sunanda and Nanda.
+A foolish person who manufactures his own ways and means through mental speculation and does not
+recognize the authority of the sages who lay down unimpeachable directions is simply unsuccessful again
+and again in his attempts.
+<br>
+<h2>Purport</h2>
+At the present moment it has become fashionable to disobey the unimpeachable directions given by the
+acaryas and liberated souls of the past. Presently people are so fallen that they cannot distinguish between
+a liberated soul and a conditioned soul. A conditioned soul is hampered by four defects: he is sure to
+commit mistakes, he is sure to become illusioned, he has a tendency to cheat others, and his senses are
+imperfect. Consequently we have to take direction from liberated persons. This Krsna consciousness
+movement directly receives instructions from the Supreme personality of Godhead via persons who are
+strictly following His instructions. Although a follower may not be a liberated person, if he follows the
+supreme, liberated Personality of Godhead, his actions are naturally liberated from the contamination of
+the material nature. Lord Caitanya therefore says: "By My order you may become a spiritual master." One
+can immediately become a spiritual master by having full faith in the transcendental words of the
+Supreme Personality of Godhead and by following His instructions. Materialistic men are not interested in
+taking directions from a liberated person, but they are very much interested in their own concocted ideas,
+which make them repeatedly fail in their attempts. Because the entire world is now following the
+imperfect directions of conditioned souls, humanity is completely bewildered.
 </p>
 
 </div>
@@ -71,7 +125,7 @@ Sunanda and Nanda.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

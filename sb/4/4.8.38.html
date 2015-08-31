@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.38.html">4.8.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sraddhaya vakyam devarser
-harsa-vegena dharsitah
-varta-hartur atiprito
-haram pradan maha-dhanam
-<p></p>
+nunam bhavan bhagavato
+yo 'ngajah paramesthinah
+vitudann atate vinam
+hitaya jagato 'rkavat
+<br>
 <h2>Synonyms</h2>
-sraddhaya--keeping faith; vakyam--in the words; devarseh--of the great sage Narada; harsa-vegena--by
-great satisfaction; dharsitah--overwhelmed; varta-hartuh--with the messenger who brought the news;
-atipritah--being very satisfied; haram--a pearl necklace; pradat--offered; maha-dhanam--very valuable.
-<p></p>
+nunam--certainly; bhavan--Your Honor; bhagavatah--of the Lord; yah--that which; anga-jah--born from
+the body; paramesthinah--Lord Brahma; vitudan--by playing on; atate--travel all over; vinam--a musical
+instrument; hitaya--for the welfare; jagatah--of the world; arka-vat--like the sun.
+<br>
 <h2>Translation</h2>
-Although he could not believe the words of the messenger, he had full faith in the word of the great sage
-Narada. Thus he was greatly overwhelmed by the news, and he immediately offered the messenger a
-highly valuable necklace in great satisfaction.
+My dear lord, you are a worthy son of Lord Brahma, and you travel, playing on your musical
+instrument, the vina, for the welfare of the entire universe. You are like the sun, which rotates in the
+universe for the benefit of all living beings.
+<br>
+<h2>Purport</h2>
+Dhruva Maharaja, although a young child, expressed his hope that he might be offered the benediction
+of a kingdom which would exceed in opulence those of his father and grandfather. He also expressed his
+gladness that he had met such an exalted person as Narada, whose only concern was to illuminate the
+world, like the sun, which rotates all over the universe only for the purpose of benefiting the inhabitants
+of all planets. Narada Muni travels all over the universe for the sole purpose of performing the best
+welfare activity for the entire universe by teaching everyone how to become a devotee of the Supreme
+Personality of Godhead. Thus Dhruva Maharaja felt fully assured that Narada Muni could fulfill his desire,
+even though the desire was very extraordinary.
+The example of the sun is very significant. The sun is so kind that he distributes his sunshine
+everywhere, without consideration. Dhruva Maharaja requested Narada Muni to be merciful to him. He
+pointed out that Narada travels all over the universe just for the purpose of doing good to all conditioned
+souls. He requested that Narada Muni show his mercy by awarding him the benefit of his particular
+desire. Dhruva Maharaja was strongly determined to fulfill his desire, and it was for that purpose that he
+had left his home and palace.
 </p>
 
 </div>
@@ -70,7 +125,7 @@ highly valuable necklace in great satisfaction.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.24.html">4.8.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-istva mam yajna-hrdayam
-yajnaih puskala-daksinaih
-bhuktva cehasisah satya
-ante mam samsmarisyasi
-<p></p>
+maitreya uvaca
+evam sanjalpitam matur
+akarnyarthagamam vacah
+sanniyamyatmanatmanam
+niscakrama pituh purat
+<br>
 <h2>Synonyms</h2>
-istva--after worshiping; mam--Me; yajna-hrdayam--the heart of all sacrifices; yajnaih--by great sacrifices;
-puskala-daksinaih--comprehending distribution of great charities; bhuktva--after enjoying; ca--also; iha--
-within this world; asisah--blessings; satyah--true; ante--at the end; mam--Me; samsmarisyasi--you will be
-able to remember.
-<p></p>
+maitreyah uvaca--the great sage Maitreya said; evam--thus; sanjalpitam--spoken together; matuh--from
+the mother; akarnya--hearing; artha-agamam--purposeful; vacah--words; sanniyamya--controlling;
+atmana--by the mind; atmanam--own self; niscakrama--got out; pituh--of the father; purat--from the
+house.
+<br>
 <h2>Translation</h2>
-The Lord continued: I am the heart of all sacrifices. You will be able to perform many great sacrifices
-and also give great charities. In this way you will be able to enjoy the blessings of material happiness in
-this life, and at the time of your death you will be able to remember Me.
-<p></p>
+The great sage Maitreya continued: The instruction of Dhruva Maharaja's mother, Suniti, was actually
+meant for fulfilling his desired objective. Therefore, after deliberate consideration and with intelligence
+and fixed determination, he left his father's house.
+<br>
 <h2>Purport</h2>
-The most important factor in this verse is the Lord's instructions regarding how to remember the
-Supreme Personality of Godhead at the end of life. Ante narayana-smrtih: the result of whatever we do in
-executing spiritual activities is successful if we can remember Narayana, the Supreme Personality of
-Godhead. This program of constant remembrance can be disturbed by many things, but Dhruva
-Maharaja's life would be so pure, as assured by the Lord Himself, that Dhruva would never forget Him.
-Thus at the time of his death he would remember the Supreme Lord, and before his death he would enjoy
-this material world, not by sense gratification, but by performing great sacrifices. As stated in the Vedas,
-when one performs great sacrifices he must give charity, not only to the brahmanas, but also to the
-ksatriyas, vaisyas and sudras. It is assured here that Dhruva Maharaja would be able to perform such
-activities. In this age of Kali, however, the great sacrifice is the performance of sankirtana-yajna. Our
-Krsna consciousness movement is designed to teach people (and to learn ourselves) the exact instruction
-of the Personality of Godhead. In this way we shall continuously perform the sankirtana-yajna and
-continuously chant the Hare Krsna mantra. Then at the end of our lives we shall certainly be able to
-remember Krsna, and our program of life will be successful. In this age, distribution of prasada has
-replaced distribution of money. No one has sufficient money to distribute, but if we distribute krsnaprasada
-as far as possible, this is more valuable than the distribution of money.
+Both the mother and the son were lamenting Dhruva Maharaja's having been insulted by his stepmother
+and his father's not having taken any step on this issue. But mere lamentation is useless--one should find
+out the means to mitigate one's lamentation. Thus both mother and son decided to take shelter of the
+lotus feet of the Lord because that is the only solution to all material problems. It is indicated in this
+connection that Dhruva Maharaja left his father's capital city to go to a secluded place to search out the
+Supreme Personality of Godhead. It is the instruction of Prahlada Maharaja also that if one is seeking
+peace of mind he should free himself from all contamination of family life and take shelter of the Supreme
+Godhead by going to the forest. To the Gaudiya Vaisnava this forest is the forest of Vrnda, or Vrndavana.
+If one takes shelter of Vrndavana under Vrndavanesvari, Srimati Radharani, certainly all the problems of
+his life are solved very easily.
 </p>
 
 </div>
@@ -89,7 +123,7 @@ as far as possible, this is more valuable than the distribution of money.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

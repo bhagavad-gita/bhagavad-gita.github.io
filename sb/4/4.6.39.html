@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.39.html">4.6.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-jagad-udbhava-sthiti-layesu daivato
-bahu-bhidyamana-gunayatma-mayaya
-racitatma-bheda-mataye sva-samsthaya
-vinivartita-bhrama-gunatmane namah
-<p></p>
+tam brahma-nirvana-samadhim asritam
+vyupasritam girisam yoga-kaksam
+sa-loka-pala munayo manunam
+adyam manum pranjalayah pranemuh
+<br>
 <h2>Synonyms</h2>
-jagat--the material world; udbhava--creation; sthiti--maintenance; layesu--in annihilation; daivatah--
-destiny; bahu--many; bhidyamana--being variegated; gunaya--by material qualities; atma-mayaya--by His
-material energy; racita--produced; atma--in the living entities; bheda-mataye--who produced different
-inclinations; sva-samsthaya--by His internal potency; vinivartita--caused to stop; bhrama--interaction;
-guna--of material modes; atmane--unto Him in His personal form; namah--obeisances.
-<p></p>
+tam--him (Lord Siva); brahma-nirvana--in brahmananda; samadhim--in trance; asritam--absorbed;
+vyupasritam--leaning on; girisam--Lord Siva; yoga-kaksam--having his left knee firmly fixed with a
+knotted cloth; sa-loka-palah--along with the demigods (headed by Indra); munayah--the sages;
+manunam--of all thinkers; adyam--the chief; manum--thinker; pranjalayah--with folded palms;
+pranemuh--offered respectful obeisances.
+<br>
 <h2>Translation</h2>
-We offer our respectful obeisances unto the Supreme, who has created varieties of manifestations and
-put them under the spell of the three qualities of the material world in order to create, maintain and
-annihilate them. He Himself is not under the control of the external energy; in His personal feature He is
-completely devoid of the variegated manifestation of material qualities, and He is under no illusion of false
-identification.
-<p></p>
+All the sages and demigods, headed by Indra, offered their respectful obeisances unto Lord Siva with
+folded hands. Lord Siva was dressed in saffron garments and absorbed in trance, thus appearing to be the
+foremost of all sages.
+<br>
 <h2>Purport</h2>
-Two situations are described in this verse. One is the creation, maintenance and annihilation of the
-material world, and the other is the Lord's own establishment. There is also quality in the Lord's own
-establishment, the kingdom of God. lt is stated here that Goloka is His personal situation. There is also
-quality in Goloka, but that quality is not divided into creation, maintenance and annihilation. In the
-external energy, the interaction of the three qualities makes it possible for things to be created,
-maintained and annihilated. But in the spiritual world, or the kingdom of God, there is no such
-exhibition, since everything is eternal, sentient and blissful. There is a class of philosophers who
-misunderstand the appearance of the Personality of Godhead within this material world. They are under
-the impression that when the Supreme Personality of Godhead appears, He is under the spell of the three
-qualities, like all the other living entities who appear within this material world. That is their
-misunderstanding; as it is clearly stated here (sva-samsthaya), by His internal potency He is
-transcendental to all these material qualities. Similarly, in Bhagavad-gita the Lord says, "I appear by My
-internal potency." Both the internal and external potencies are under the control of the Supreme, so He
-does not come under the control of either of these potencies. Rather, everything is under His control. In
-order to manifest His transcendental name, form, quality, pastimes and paraphernalia, He brings into
-action His internal energy. On account of the variegatedness of the external potency, there are
-manifestations of many qualitative demigods, beginning with Brahma and Lord Siva, and people are
-attracted to these demigods according to their own material quality. But when one is transcendental or
-surpasses the material qualities, he is simply fixed in the worship of the Supreme Personality. This fact is
-explained in Bhagavad-gita: anyone engaged in the service of the Lord is already transcendental to the
-variegatedness and interaction of the three material qualities. The summary is that the conditioned souls
-are being pulled by the action and reaction of the material qualities, which create a differentiation of
-energies. But in the spiritual world the worshipable one is the Supreme Lord and no one else.
+In this verse the word brahmananda is significant. This brahmananda, or brahma-nirvana, is explained
+by Prahlada Maharaja. When one is completely absorbed in the adhoksaja, the Supreme Personality of
+Godhead, who is beyond the sense perception of materialistic persons, one is situated in brahmananda.
+It is impossible to conceive of the existence, name, form, quality and pastimes of the Supreme
+Personality of Godhead because He is transcendentally situated beyond the conception of materialistic
+persons. Because materialists cannot imagine or conceive of the Supreme Personality of Godhead, they
+may think that God is dead, but factually He is always existing in His sac-cid-ananda-vigraha, His eternal
+form. Constant meditation concentrated on the form of the Lord is called samadhi, ecstasy or trance.
+Samadhi means particularly concentrated attention, so one who has achieved the qualification of always
+meditating on the Personality of Godhead is to be understood to be always in trance and enjoying
+brahma-nirvana, or brahmananda. Lord Siva exhibited those symptoms, and therefore it is stated that he
+was absorbed in brahmananda.
+Another significant word is yoga-kaksam. Yoga-kaksa is the sitting posture in which the left thigh is
+fixed under one's tightly knotted saffron-colored garment. Also the words manunam adyam are significant
+here because they mean a philosopher, or one who is thoughtful and can think very nicely. Such a man is
+called manu. Lord Siva is described in this verse as the chief of all thinkers. Lord Siva, of course, does not
+engage in useless mental speculation, but as stated in the previous verse, he is always thoughtful regarding
+how to deliver the demons from their fallen condition of life. It is said that during the advent of Lord
+Caitanya, Sadasiva appeared as Advaita Prabhu, and Advaita Prabhu's chief concern was to elevate the
+fallen conditioned souls to the platform of devotional service to Lord Krsna. Since people were engaged in
+useless occupations which would continue their material existence, Lord Siva, in the form of Lord
+Advaita, appealed to the Supreme Lord to appear as Lord Caitanya to deliver these illusioned souls.
+Actually Lord Caitanya appeared on the request of Lord Advaita. Similarly, Lord Siva has a sampradaya,
+the Rudra-sampradaya. He is always thinking about the deliverance of the fallen souls, as exhibited by
+Lord Advaita Prabhu.
 </p>
 
 </div>
@@ -99,7 +138,7 @@ energies. But in the spiritual world the worshipable one is the Supreme Lord and
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

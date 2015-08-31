@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.54.html">4.22.54</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.54</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/54"><b>54</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhavan bhaktimata labhyo
-durlabhah sarva-dehinam
-svarajyasyapy abhimata
-ekantenatma-vid-gatih
-<p></p>
+vijitasvam dhumrakesam
+haryaksam dravinam vrkam
+sarvesam loka-palanam
+dadharaikah prthur gunan
+<br>
 <h2>Synonyms</h2>
-bhavan--Your Grace; bhakti-mata--by the devotee; labhyah--obtainable; durlabhah--very difficult to be
-obtained; sarva-dehinam--of all other living entities; svarajyasya--of the King of heaven; api--even;
-abhimatah--the ultimate goal; ekantena--by oneness; atma-vit--of the self-realized; gatih--the ultimate
-destination.
-<p></p>
+vijitasvam--of the name Vijitasva; dhumrakesam--of the name Dhumrakesa; haryaksam--of the name
+Haryaksa; dravinam--of the name Dravina; vrkam--of the name Vrka; sarvesam--of all; loka-palanam--the
+governing heads of all planets; dadhara--accepted; ekah--one; prthuh--Prthu Maharaja; gunan--all
+qualities.
+<br>
 <h2>Translation</h2>
-My dear Lord, the king in charge of the heavenly kingdom is also desirous of obtaining the ultimate goal
-of life--devotional service. Similarly, You are the ultimate destination of those who identify themselves
-with You [aham brahmasmi]. However, it is very difficult for them to attain You, whereas a devotee can
-very easily attain Your Lordship.
-<p></p>
+After begetting five sons, named Vijitasva, Dhumrakesa, Haryaksa, Dravina and Vrka, Prthu Maharaja
+continued to rule the planet. He accepted all the qualities of the deities who governed all other planets.
+<br>
 <h2>Purport</h2>
-As stated in Brahma-samhita: vedesu durlabham adurlabham atma-bhaktau. This indicates that it is very
-difficult for one to attain the ultimate goal of life and reach the supreme destination, Vaikunthaloka or
-Goloka Vrndavana, simply by studying Vedanta philosophy or Vedic literature. However, this highest
-perfectional stage can be attained by the devotees very easily. That is the meaning of vedesu durlabham
-adurlabham atma-bhaktau. The same point is confirmed by Lord Siva in this verse. The Lord is very
-difficult for the karma-yogis, jnana-yogis and dhyana-yogis to attain. Those who are bhakti-yogis,
-however, have no difficulty at all. In the word svarajyasya, svar refers to Svargaloka, the heavenly planet,
-and svarajya refers to the ruler of the heavenly planet, Indra. Generally, karmis desire elevation to
-heavenly planets, but King Indra desires to become perfect in bhakti-yoga. Those who identify themselves
-as aham brahmasmi ("I am the Supreme Brahman, one with the Absolute Truth") also ultimately desire to
-attain perfect liberation in the Vaikuntha planets or Goloka Vrndavana. In Bhagavad-gita (18.55) it is said:
-bhaktya mam abhijanati
-yavan yas casmi tattvatah
-tato mam tattvato jnatva
-visate tad-anantaram
-"One can understand the Supreme Personality as He is only by devotional service. And when one is in
-full consciousness of the Supreme Lord by such devotion, he can enter into the kingdom of God."
-Thus if one desires to enter into the spiritual world, he must try to understand the Supreme Personality
-of Godhead by practicing bhakti-yoga. Simply by practicing bhakti-yoga one can understand the Supreme
-Lord in truth, but without such understanding, one cannot enter the spiritual kingdom. One may be
-elevated to the heavenly planets or may realize himself as Brahman (aham brahmasmi), but that is not the
-end of realization. One must realize the position of the Supreme Personality of Godhead by bhakti-yoga;
-then real perfection of life is attained.
+In each and every planet there is a predominating deity. It is understood from Bhagavad-gita that in the
+sun there is a predominating deity named Vivasvan. Similarly, there is a predominating deity of the moon
+and of the various planets. Actually the predominating deities in all the other planets are descendants
+from the predominating deities of the sun and moon. On this planet earth there are two ksatriya
+dynasties, and one comes from the predominating deity of the sun and the other from the predominating
+deity of the moon. These dynasties are known as Surya-vamsa and Candra-vamsa respectively. When
+monarchy existed on this planet, the chief member was one of the members of the Surya dynasty, or
+Surya-vamsa, and the subordinate kings belonged to the Candra-vamsa. However, Maharaja Prthu was so
+powerful that he could exhibit all the qualities of the predominating deities in other planets.
+In the modern age, people from earth have tried to go to the moon, but they have not been able to find
+anyone there, what to speak of meeting the moon's predominating deity. The Vedic literature, however,
+repeatedly informs us that the moon is full of highly elevated inhabitants who are counted amongst the
+demigods. We are therefore always in doubt about what kind of moon adventure the modern scientists of
+this planet earth have undertaken.
 </p>
 
 </div>
@@ -97,7 +125,7 @@ then real perfection of life is attained.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

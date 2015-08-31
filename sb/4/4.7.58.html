@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.58.html">4.7.58</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.58</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/58"><b>58</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-paricarya bhagavato
-yavatyah purva-sevitah
-ta mantra-hrdayenaiva
-prayunjyan mantra-murtaye
-<p></p>
+evam daksayani hitva
+sati purva-kalevaram
+jajne himavatah ksetre
+menayam iti susruma
+<br>
 <h2>Synonyms</h2>
-paricaryah--service; bhagavatah--of the Personality of Godhead; yavatyah--as they are prescribed (as
-above mentioned); purva-sevitah--recommended or done by previous acaryas; tah--that; mantra--hymns;
-hrdayena--within the heart; eva--certainly; prayunjyat--one should worship; mantra-murtaye--who is
-nondifferent from the mantra.
-<p></p>
+evam--thus; daksayani--the daughter of Daksa; hitva--after giving up; sati--Sati; purva-kalevaram--her
+former body; jajne--was born; himavatah--of the Himalayas; ksetre--in the wife; menayam--in Mena; iti--
+thus; susruma--I have heard.
+<br>
 <h2>Translation</h2>
-One should follow in the footsteps of previous devotees regarding how to worship the Supreme Lord
-with the prescribed paraphernalia, or one should offer worship within the heart by reciting the mantra to
-the Personality of Godhead, who is nondifferent from the mantra.
-<p></p>
+Maitreya said: I have heard that after giving up the body she had received from Daksa, Daksayani (his
+daughter) took her birth in the kingdom of the Himalayas. She was born as the daughter of Mena. I heard
+this from authoritative sources.
+<br>
 <h2>Purport</h2>
-It is recommended here that even if one cannot arrange to worship the forms of the Lord with all
-recommended paraphernalia, one can simply think about the form of the Lord and mentally offer
-everything recommended in the sastras, including flowers, candana pulp, conchshell, umbrella, fan and
-camara. One can meditate upon offering and chant the twelve-syllable mantra, om namo bhagavate
-vasudevaya. Since the mantra and the Supreme Personality of Godhead are nondifferent, one can worship
-the form of the Lord with the mantra in the absence of physical paraphernalia. The story of the brahmana
-who worshiped the Lord within his mind, as related in Bhakti-rasamrta-sindhu, or The Nectar of
-Devotion, should be consulted in this connection. If paraphernalia is not present physically, one can think
-of the items and offer them to the Deity by chanting the mantra. Such are the liberal and potent facilities
-in the process of devotional service.
+Mena is also known as Menaka and is the wife of the king of the Himalayas.
 </p>
 
 </div>
@@ -83,7 +112,7 @@ in the process of devotional service.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

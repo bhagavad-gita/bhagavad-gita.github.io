@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,74 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.39.html">4.22.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sarva-sattvatma-dehaya
-visesaya sthaviyase
-namas trailokya-palaya
-saha ojo-balaya ca
-<p></p>
+yat-pada-pankaja-palasa-vilasa-bhaktya
+karmasayam grathitam udgrathayanti santah
+tadvan na rikta-matayo yatayo 'pi ruddhasroto-
+ganas tam aranam bhaja vasudevam
+<br>
 <h2>Synonyms</h2>
-sarva--all; sattva--existence; atma--soul; dehaya--unto the body; visesaya--diversity; sthaviyase--unto the
-material world; namah--offering obeisances; trai-lokya--three planetary systems; palaya--maintainer;
-saha--along with; ojah--prowess; balaya--unto the strength; ca--also.
-<p></p>
+yat--whose; pada--feet; pankaja--lotus; palasa--petals or toes; vilasa--enjoyment; bhaktya--by devotional
+service; karma--fruitive activities; asayam--desire; grathitam--hard knot; udgrathayanti--root out; santah--
+devotees; tat--that; vat--like; na--never; rikta-matayah--persons devoid of devotional service; yatayah--
+ever-increasingly trying; api--even though; ruddha--stopped; srotah-ganah--the waves of sense enjoyment;
+tam--unto Him; aranam--worthy to take shelter; bhaja--engage in devotional service; vasudevam--unto
+Krsna, the son of Vasudeva.
+<br>
 <h2>Translation</h2>
-My dear Lord, You are the gigantic universal form which contains all the individual bodies of the living
-entities. You are the maintainer of the three worlds, and as such You maintain the mind, senses, body, and
-air of life within them. I therefore offer my respectful obeisances unto You.
-<p></p>
+The devotees, who are always engaged in the service of the toes of the lotus feet of the Lord, can very
+easily overcome hard-knotted desires for fruitive activities. Because this is very difficult, the nondevotees--
+the jnanis and yogis--although trying to stop the waves of sense gratification, cannot do so. Therefore you
+are advised to engage in the devotional service of Krsna, the son of Vasudeva.
+<br>
 <h2>Purport</h2>
-As the individual body of the living entity is composed of millions of cells, germs and microbes, the
-universal body of the Supreme Lord similarly contains all the individual bodies of the living entities. Lord
-Siva is offering his obeisances to the universal body, which includes all other bodies, so that everyone's
-body may fully engage in devotional service. Since this individual body is composed of senses, all the
-senses should be engaged in devotional service. For instance, the smelling instrument, the nose, can
-engage in smelling the flowers offered to the lotus feet of the Lord, the hands can engage in cleansing the
-temple of the Lord, etc. Indeed, being the life air of every living entity, the Lord is the maintainer of the
-three worlds. Consequently He can induce every living entity to engage in his real life's duty with full
-bodily and mental strength. Thus every living entity should serve the Supreme Personality of Godhead by
-his prana (life), artha (wealth), intelligence and words. As stated in the Srimad-Bhagavatam (10.22.35):
-etavaj janma-saphalyam
-dehinam iha dehisu
-pranair arthair dhiya vaca
-sreya-acaranam sada
-Even though one may desire to engage in the service of the Lord, without sanction one cannot do so.
-Lord Siva is offering his prayers in so many different ways in order to show living entities how to engage
-in the devotional service of the Lord.
+There are three kinds of transcendentalists trying to overcome the influence of the modes of material
+nature--the jnanis, yogis and bhaktas. All of them attempt to overcome the influence of the senses, which
+is compared to the incessant waves of a river. The waves of a river flow incessantly, and it is very difficult
+to stop them. Similarly, the waves of desire for material enjoyment are so strong that they cannot be
+stopped by any process other than bhakti-yoga. The bhaktas, by their transcendental devotional service
+unto the lotus feet of the Lord, become so overwhelmed with transcendental bliss that automatically their
+desires for material enjoyment stop. The jnanis and yogis, who are not attached to the lotus feet of the
+Lord, simply struggle against the waves of desire. They are described in this verse as rikta-matayah, which
+means "devoid of devotional service." In other words, the jnanis and yogis, although trying to be free from
+the desires of material activities, actually become more and more entangled in false philosophical
+speculation or strenuous attempts to stop the activities of the senses. As stated previously:
+vasudeve bhagavati
+bhakti-yogah prayojitah
+janayaty asu vairagyam
+jnanam ca yad ahaitukam
+(Bhag. 1.2.7)
+Here also the same point is stressed. Bhaja vasudevam indicates that one who is engaged in the loving
+service of Krsna, the son of Vasudeva, can very easily stop the waves of desires. As long as one continues
+to try to artificially stop the waves of desires, he will certainly be defeated. That is indicated in this verse.
+Desires for fruitive activities are strongly rooted, but the trees of desire can be uprooted completely by
+devotional service because devotional service employs superior desire. One can give up inferior desires
+when engaged in superior desires. To try to stop desires is impossible. One has to desire the Supreme in
+order not to be entangled in inferior desires. Jnanis maintain a desire to become one with the Supreme,
+but such desire is also considered to be kama, lust. Similarly, the yogis desire mystic power, and that is
+also kama. And the bhaktas, not being desirous of any sort of material enjoyment, become purified. There
+is no artificial attempt to stop desire. Desire becomes a source of spiritual enjoyment under the protection
+of the toes of the lotus feet of the Lord. It is stated herein by the Kumaras that the lotus feet of Lord Krsna
+are the ultimate reservoir of all pleasure. One should therefore take shelter of the lotus feet of the Lord
+instead of trying unsuccessfully to stop desires for material enjoyment. As long as one is unable to stop
+the desire for material enjoyment, there is no possibility of becoming liberated from the entanglement of
+material existence. It may be argued that the waves of a river are incessantly flowing and that they cannot
+be stopped, but the waves of the river flow toward the sea. When the tide comes over the river, it
+overwhelms the flowing of the river, and the river itself becomes overflooded, and the waves from the sea
+become more prominent than the waves from the river. Similarly, a devotee with intelligence plans so
+many things for the service of the Lord in Krsna consciousness that stagnant material desires become
+overflooded by the desire to serve the Lord. As confirmed by Yamunacarya, since he has been engaged in
+the service of the lotus feet of the Lord, there is always a current of newer and newer desires flowing to
+serve the Lord, so much so that the stagnant desire of sex life becomes very insignificant. Yamunacarya
+even says that he spits on such desires. Bhagavad-gita (2.59) also confirms: param drstva nivartate. The
+conclusion is that by developing a loving desire for the service of the lotus feet of the Lord, we subdue all
+material desires for sense gratification.
 </p>
 
 </div>
@@ -89,7 +156,7 @@ in the devotional service of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

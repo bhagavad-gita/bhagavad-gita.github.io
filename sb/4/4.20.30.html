@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,75 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.30.html">4.20.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dauhitradin rte mrtyoh
-socyan dharma-vimohitan
-varga-svargapavarganam
-prayenaikatmya-hetuna
-<p></p>
+manye giram te jagatam vimohinim
+varam vrnisveti bhajantam attha yat
+vaca nu tantya yadi te jano 'sitah
+katham punah karma karoti mohitah
+<br>
 <h2>Synonyms</h2>
-dauhitra-adin--grandsons like my father, Vena; rte--except; mrtyoh--of personified death; socyan--
-abominable; dharma-vimohitan--bewildered on the path of religion; varga--religion, economic
-development, sense gratification and liberation; svarga--elevation to the heavenly planets; apavarganam--
-being freed from material contamination; prayena--almost always; eka--one; atmya--the Supreme
-Personality of Godhead; hetuna--on account of.
-<p></p>
+manye--I consider; giram--words; te--Your; jagatam--to the material world; vimohinim--bewildering;
+varam--benediction; vrnisva--just accept; iti--in this way; bhajantam--unto Your devotee; attha--You
+spoke; yat--because; vaca--by the statements of the Vedas; nu--certainly; tantya--by the ropes; yadi--if; te--
+Your; janah--the people in general; asitah--not bound; katham--how; punah--again and again; karma--
+fruitive activities; karoti--perform; mohitah--being enamored.
+<br>
 <h2>Translation</h2>
-Although abominable persons like my father, Vena, the grandson of death personified, are bewildered
-on the path of religion, all the great personalities like those mentioned agree that in this world the only
-bestower of the benedictions of religion, economic development, sense gratification, liberation or
-elevation to the heavenly planets is the Supreme Personality of Godhead.
-<p></p>
+My dear Lord, what You have said to Your unalloyed devotee is certainly very much bewildering. The
+allurements You offer in the Vedas are certainly not suitable for pure devotees. People in general, bound
+by the sweet words of the Vedas, engage themselves again and again in fruitive activities, enamored by the
+results of their actions.
+<br>
 <h2>Purport</h2>
-King Vena, the father of Prthu Maharaja, was condemned by the brahmanas and saintly persons because
-of his denying the existence of the Supreme personality of Godhead and rejecting the method of satisfying
-Him by performance of Vedic sacrifice. In other words, he was an atheist, who did not believe in the
-existence of God, and who consequently stopped all Vedic ritualistic ceremonies in his kingdom. Prthu
-Maharaja considered King Vena's character abominable because Vena was foolish regarding the execution
-of religious performances. Atheists are of the opinion that there is no need to accept the authority of the
-Supreme Personality of Godhead to be successful in religion, economic development, sense gratification
-or liberation. According to them, dharma, or religious principles, are meant to establish an imaginary God
-to encourage one to become moral, honest and just so that the social orders may be maintained in peace
-and tranquillity. Furthermore, they say that actually there is no need to accept God for this purpose, for if
-one follows the principles of morality and honesty, that is sufficient. Similarly, if one makes nice plans
-and works very hard for economic development, automatically the result of economic development will
-come. Similarly, sense gratification also does not depend on the mercy of the Supreme Personality of
-Godhead, for if one earns enough money by any process, one will have sufficient opportunity for sense
-gratification. Insofar as liberation is concerned, they say that there is no need to talk of liberation because
-after death everything is finished. Prthu Maharaja, however, did not accept the authority of such atheists,
-headed by his father, who was the grandson of death personified. Generally, a daughter inherits the
-qualities of her father, and a son gets the qualities of his mother. Thus Mrtyu's daughter, Sunitha, got all
-the qualities of her father, and Vena inherited the qualities of his mother. A person who is always
-subjected to the rules and regulations of repeated birth and death cannot accommodate anything beyond
-materialistic ideas. Since King Vena was such a man, he did not believe in the existence of God. Modern
-civilization agrees with the principles of King Vena, but factually if we scrutinizingly study all the
-conditions of religion, economic development, sense gratification and liberation, we must accept the
-principles of the authority of the Supreme Personality of Godhead. According to Vedic literature, religion
-consists only of the codes of law given by God.
-If one does not accept the authority of the Supreme Godhead in matters of religion and morality, one
-must explain why two persons of the same moral standard achieve different results. It is generally found
-that even if two men have the same moral standards of ethics, honesty and morality, their positions are
-still not the same. Similarly, in economic development it is seen that if two men work very hard day and
-night, still the results are not the same. One person may enjoy great opulence without even working,
-whereas another person, although working very hard, does not even get two sufficient meals a day.
-Similarly, in the matter of sense gratification, sometimes one who has sufficient food is still not happy in
-his family affairs or sometimes is not even married, whereas another person, even though not
-economically well off, has the greatest opportunity for sense gratification. Even an animal like a hog or a
-dog may have greater opportunities for sense gratification than a human being. Aside from liberation,
-even if we consider only the preliminary necessities of life--dharma, artha and kama (religion, economic
-development and sense gratification)--we will see that they are not the same for everyone. Therefore it
-must be accepted that there is someone who determines the different standards. In conclusion, not only
-for liberation must one depend on the Lord, but even for ordinary necessities in this material world. Prthu
-Maharaja therefore indicated that in spite of having rich parents, children are sometimes not happy.
-Similarly, in spite of valuable medicine administered by a competent physician, sometimes a patient dies;
-or in spite of having a big safe boat, sometimes a man drowns. We may thus struggle to counteract
-impediments offered by material nature, but our attempts cannot be successful unless we are favored by
-the Supreme Personality of Godhead.
+Srila Narottama dasa Thakura, a great acarya of the Gaudiya-sampradaya, has said that persons who are
+very much attached to the fruitive activities of the Vedas, namely karma-kanda and jnana-kanda, are
+certainly doomed. In the Vedas there are three categories of activities, known as karma-kanda (fruitive
+activities), jnana-kanda (philosophical research) and upasana-kanda (worship of different demigods for
+receiving material benefits). Those who are engaged in karma-kanda and jnana-kanda are doomed in the
+sense that everyone is doomed who is entrapped by this material body, whether it is a body of a demigod,
+a king, a lower animal or whatever. The sufferings of the threefold miseries of material nature are the
+same for all. Cultivation of knowledge to understand one's spiritual position is also, to a certain extent, a
+waste of time. Because the living entity is an eternal part and parcel of the Supreme Lord, his immediate
+business is to engage himself in devotional service. Prthu Maharaja therefore says that the allurement of
+material benedictions is another trap to entangle one in this material world. He therefore frankly tells the
+Lord that the Lord's offerings of benedictions in the form of material facilities are certainly causes for
+bewilderment. A pure devotee is not at all interested in bhukti or mukti.
+The Lord sometimes offers benedictions to the neophyte devotees who have not yet understood that
+material facilities will not make them happy. In the Caitanya-caritamrta the Lord therefore says that a
+sincere devotee who is not very intelligent may ask some material benefit from the Lord, but the Lord,
+being omniscient, does not generally give material rewards but, on the contrary, takes away whatever
+material facilities are being enjoyed by His devotee, so that ultimately the devotee will completely
+surrender unto Him. In other words, the offering of benedictions in the form of material profit is never
+auspicious for the devotee. The statements of the Vedas which offer elevation to heavenly planets in
+exchange for great sacrifices are simply bewildering. Therefore in Bhagavad-gita (2.42) the Lord says: yam
+imam puspitam vacam pravadanty avipascitah. The less intelligent class of men (avipascitah), attracted by
+the flowery language of the Vedas, engage in fruitive activities to become materially benefited. Thus they
+continue life after life, in different bodily forms, to search very, very hard.
 </p>
 
 </div>
@@ -119,7 +138,7 @@ the Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.14.21.html">4.14.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-stavakams tan abhipretya
-prthur vainyah pratapavan
-megha-nirhradaya vaca
-prahasann idam abravit
-<p></p>
+tam sarva-lokamara-yajna-sangraham
+trayimayam dravyamayam tapomayam
+yajnair vicitrair yajato bhavaya te
+rajan sva-desan anuroddhum arhasi
+<br>
 <h2>Synonyms</h2>
-stavakan--engaged in offering prayers; tan--those persons; abhipretya--seeing, understanding; prthuh--
-King Prthu; vainyah--son of Vena; pratapa-van--greatly powerful; megha-nirhradaya--as grave as the
-thundering of clouds; vaca--with a voice; prahasan--smiling; idam--this; abravit--he spoke.
-<p></p>
+tam--Him; sarva-loka--in all planets; amara--with the predominating deities; yajna--sacrifices;
+sangraham--who accepts; trayi-mayam--the sum total of the three Vedas; dravya-mayam--the owner of all
+paraphernalia; tapah-mayam--the goal of all austerity; yajnaih--by sacrifices; vicitraih--various; yajatah--
+worshiping; bhavaya--for elevation; te--your; rajan--O King; sva-desan--your countrymen; anuroddhum--
+to direct; arhasi--you ought.
+<br>
 <h2>Translation</h2>
-Thus when the greatly powerful King Prthu, the son of Vena, saw the professionals before him, to
-congratulate them he smiled, and with the gravity of the vibrating sounds of clouds he spoke as follows.
+Dear King, the Supreme Personality of Godhead, along with the predominating deities, is the enjoyer of
+the results of all sacrifices in all planets. The Supreme Lord is the sum total of the three Vedas, the owner
+of everything, and the ultimate goal of all austerity. Therefore your countrymen should engage in
+performing various sacrifices for your elevation. Indeed, you should always direct them towards the
+offering of sacrifices.
 </p>
 
 </div>
@@ -69,7 +113,7 @@ congratulate them he smiled, and with the gravity of the vibrating sounds of clo
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

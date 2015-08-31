@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,67 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.29.html">4.22.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sva-dharma-nisthah sata-janmabhih puman
-virincatam eti tatah param hi mam
-avyakrtam bhagavato 'tha vaisnavam
-padam yathaham vibudhah kalatyaye
-<p></p>
+nimitte sati sarvatra
+jaladav api purusah
+atmanas ca parasyapi
+bhidam pasyati nanyada
+<br>
 <h2>Synonyms</h2>
-sva-dharma-nisthah--one who is situated in his own dharma, or occupation; sata-janmabhih--for one
-hundred births; puman--a living entity; virincatam--the post of Lord Brahma; eti--gets; tatah--thereafter;
-param--above; hi--certainly; mam--attains me; avyakrtam--without deviation; bhagavatah--unto the
-Supreme Personality of Godhead; atha--therefore; vaisnavam--a pure devotee of the Lord; padam--post;
-yatha--as; aham--I; vibudhah--demigods; kala-atyaye--after the annihilation of the material world.
-<p></p>
+nimitte--on account of causes; sati--being; sarvatra--everywhere; jala-adau api--water and other
+reflecting media; purusah--the person; atmanah--oneself; ca--and; parasya api--another's self; bhidam--
+differentiation; pasyati--sees; na anyada--there is no other reason.
+<br>
 <h2>Translation</h2>
-A person who executes his occupational duty properly for one hundred births becomes qualified to
-occupy the post of Brahma, and if he becomes more qualified, he can approach Lord Siva. A person who is
-directly surrendered to Lord Krsna, or Visnu, in unalloyed devotional service is immediately promoted to
-the spiritual planets. Lord Siva and other demigods attain these planets after the destruction of this
-material world.
-<p></p>
+Only because of different causes does a person see a difference between himself and others, just as one
+sees the reflection of a body appearing differently manifested on water, on oil or in a mirror.
+<br>
 <h2>Purport</h2>
-This verse gives an idea of the highest perfection of the evolutionary process. As described by the
-Vaisnava poet Jayadeva Gosvami, pralaya-payodhi jale dhrtavan asi vedam. Let us begin tracing the
-evolutionary process from the point of devastation (pralaya), when the whole universe is filled with water.
-At that time there are many fishes and other aquatics, and from these aquatics evolve creepers, trees, etc.
-From these, insects and reptiles evolve, and from them birds, beasts and then human beings and finally
-civilized human beings. Now, the civilized human being is at a junction where he can make further
-evolutionary progress in spiritual life. Here it is stated (sva-dharma-nisthah) that when a living entity
-comes to a civilized form of life, there must be sva-dharma, social divisions according to one's work and
-qualifications. This is indicated in Bhagavad-gita (4.13):
-catur-varnyam maya srstam
-guna-karma-vibhagasah
-"According to the three modes of material nature and the work ascribed to them, the four divisions of
-human society were created by Me."
-In civilized human society there must be the divisions of brahmana, ksatriya, vaisya and sudra, and
-everyone must properly execute his occupational duty in accordance with his division. Here it is
-described (svadharma-nisthah) that it does not matter whether one is a brahmana, ksatriya, vaisya or
-sudra. If one sticks to his position and properly executes his particular duty, he is considered a civilized
-human being. Otherwise he is no better than an animal. It is also mentioned herein that whoever executes
-his occupational duty (sva-dharma) for one hundred births (for instance, if a brahmana continues to act
-as a brahmana) becomes eligible for promotion to Brahmaloka, the planet where Lord Brahma lives. There
-is also a planet called Sivaloka, or Sadasivaloka, which is situated in a marginal position between the
-spiritual and material worlds. If, after being situated in Brahmaloka, one becomes more qualified, he is
-promoted to Sadasivaloka. Similarly, when one becomes even more qualified, he can attain the
-Vaikunthalokas. The Vaikunthalokas are targets for everyone, even the demigods, and they can be
-attained by a devotee who has no desire for material benefit. As indicated in Bhagavad-gita (8.16), one
-does not escape material miseries even if he is elevated to Brahmaloka (abrahma-bhuvanal lokah punar
-avartino 'rjuna). Similarly, one is not very safe even if he is promoted to Sivaloka, because the planet of
-Sivaloka is marginal. However, if one attains Vaikunthaloka, he attains the highest perfection of life and
-the end of the evolutionary process (mam upetya tu kaunteya punar janma na vidyate). In other words, it
-is confirmed herein that a person in human society who has developed consciousness must take to Krsna
-consciousness in order to be promoted to Vaikunthaloka or Krsnaloka immediately after leaving the body.
-Tyaktva deham punar janma naiti mam eti so 'rjuna (Bg. 4.9). A devotee who is fully in Krsna
-consciousness, who is not attracted by any other loka, or planet, including Brahmaloka and Sivaloka, is
-immediately transferred to Krsnaloka (mam eti). That is the highest perfection of life and the perfection of
-the evolutionary process.
+The spirit soul is one, the Supreme Personality of Godhead. He is manifested in svamsa and vibhinnamsa
+expansions. The jivas are vibhinnamsa expansions. The different incarnations of the Supreme
+Personality of Godhead are svamsa expansions. Thus there are different potencies of the Supreme Lord,
+and there are different expansions of the different potencies. In this way, for different reasons there are
+different expansions of the same one principle, the Supreme Personality of Godhead. This understanding
+is real knowledge, but when the living entity is covered by the upadhi, or designated body, he sees
+differences, exactly as one sees differences in reflections of oneself on water, on oil or in a mirror. When
+something is reflected on the water, it appears to be moving. When it is reflected on ice, it appears fixed.
+When it is reflected on oil, it appears hazy. The subject is one, but under different conditions it appears
+differently. When the qualifying factor is taken away, the whole appears to be one. In other words, when
+one comes to the paramahamsa or perfectional stage of life by practicing bhakti-yoga, he sees only Krsna
+everywhere. For him there is no other objective.
+In conclusion, due to different causes, the living entity is visible in different forms as an animal, human
+being, demigod, tree, etc. Actually every living entity is the marginal potency of the Supreme Lord. In
+Bhagavad-gita (5.18), therefore, it is explained that one who actually sees the spirit soul does not
+distinguish between a learned brahmana and a dog, an elephant or a cow. panditah sama-darsinah. One
+who is actually learned sees only the living entity, not the outward covering. Differentiation is therefore
+the result of different karma, or fruitive activities, and when we stop fruitive activities, turning them into
+acts of devotion, we can understand that we are not different from anyone else, regardless of the form.
+This is only possible in Krsna consciousness. In this movement there are many different races of men
+from all parts of the world participating, but because they think of themselves as servants of the Supreme
+Personality of Godhead, they do not differentiate between black and white, yellow and red. The Krsna
+consciousness movement is therefore the only means to make the living entities free of all designations.
 </p>
 
 </div>
@@ -111,7 +133,7 @@ the evolutionary process.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

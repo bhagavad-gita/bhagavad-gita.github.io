@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.12.html">4.5.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-mayura-kekabhirutam
-madandhali-vimurcchitam
-plavitai rakta-kanthanam
-kujitais ca patattrinam
-<p></p>
+bahv evam udvigna-drsocyamane
+janena daksasya muhur mahatmanah
+utpetur utpatatamah sahasraso
+bhayavaha divi bhumau ca paryak
+<br>
 <h2>Synonyms</h2>
-mayura--peacocks; keka--with the cries; abhirutam--resounding; mada--by intoxication; andha--blinded;
-ali--by the bees; vimurcchitam--resounded; plavitaih--with the singing; rakta-kanthanam--of the cuckoos;
-kujitaih--with the whispering; ca--and; patattrinam--of other birds.
-<p></p>
+bahu--much; evam--in this manner; udvigna-drsa--with nervous glances; ucyamane--while this was
+being said; janena--by the persons (assembled at the sacrifice); daksasya--of Daksa; muhuh--again and
+again; maha-atmanah--stronghearted; utpetuh--appeared; utpata-tamah--very powerful symptoms;
+sahasrasah--by the thousands; bhaya-avahah--producing fear; divi--in the sky; bhumau--on the earth; ca--
+and; paryak--from all sides.
+<br>
 <h2>Translation</h2>
-On Kailasa Hill there is always the rhythmical sound of the peacocks' sweet vibrations and the bees'
-humming. Cuckoos are always singing, and other birds whisper amongst themselves.
+While all the people talked amongst themselves, Daksa saw dangerous omens from all sides, from the
+earth and from the sky.
+<br>
+<h2>Purport</h2>
+In this verse Daksa has been described as mahatma. The word mahatma has been commented upon by
+different commentators in various manners. Viraraghava Acarya has indicated that this word mahatma
+means "steady in heart." That is to say that Daksa was so stronghearted that even when his beloved
+daughter was prepared to lay down her life, he was steady and unshaken. But in spite of his being so
+stronghearted, he was perturbed when he saw the various disturbances created by the gigantic black
+demon. Visvanatha Cakravarti Thakura remarks in this connection that even if one is called mahatma, a
+great soul, unless he exhibits the symptoms of a mahatma, he should be considered a duratma, or a
+degraded soul. In Bhagavad-gita (9.13) the word mahatma describes the pure devotee of the Lord:
+mahatmanas tu mam partha daivim prakrtim asritah. A mahatma is always under the guidance of the
+internal energy of the Supreme Personality of Godhead, and thus how could such a misbehaved person as
+Daksa be a mahatma? A mahatma is supposed to have all the good qualities of the demigods, and thus
+Daksa, lacking those qualities, could not be called a mahatma; he should instead be called duratma, a
+degraded soul. The word mahatma to describe the qualifications of Daksa is used sarcastically.
 </p>
 
 </div>
@@ -69,7 +125,7 @@ humming. Cuckoos are always singing, and other birds whisper amongst themselves.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

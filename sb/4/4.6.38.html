@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.38.html">4.6.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yogesvara ucuh
-preyan na te 'nyo 'sty amutas tvayi prabho
-visvatmaniksen na prthag ya atmanah
-athapi bhaktyesa tayopadhavatam
-ananya-vrttyanugrhana vatsala
-<p></p>
+krtvorau daksine savyam
+pada-padmam ca januni
+bahum prakosthe 'ksa-malam
+asinam tarka-mudraya
+<br>
 <h2>Synonyms</h2>
-yoga-isvarah--the great mystics; ucuh--said; preyan--very dear; na--not; te--of You; anyah--another; asti--
-there is; amutah--from that; tvayi--in You; prabho--dear Lord; visva-atmani--in the Supersoul of all living
-entities; ikset--see; na--not; prthak--different; yah--who; atmanah--the living entities; atha api--so much
-more; bhaktya--with devotion; isa--O Lord; taya--with it; upadhavatam--of those who worship; ananyavrttya--
-unfailing; anugrhana--favor; vatsala--O favorable Lord.
-<p></p>
+krtva--having placed; urau--thigh; daksine--at the right; savyam--the left; pada-padmam--lotus feet; ca--
+and; januni--on his knee; bahum--hand; prakosthe--in the end of the right hand; aksa-malam--rudraksa
+beads; asinam--sitting; tarka-mudraya--with the mudra of argument.
+<br>
 <h2>Translation</h2>
-The great mystics said: Dear Lord, persons who see You as nondifferent from themselves, knowing that
-You are the Supersoul of all living entities, are certainly very, very dear to You. You are very favorable
-toward those who engage in devotional service, accepting You as the Lord and themselves as the servants.
-By Your mercy, You are always inclined in their favor.
-<p></p>
+His left leg was placed on his right thigh, and his left hand was placed on his left thigh. In his right hand
+he held rudraksa beads. This sitting posture is called virasana. He sat in the virasana posture, and his
+finger was in the mode of argument.
+<br>
 <h2>Purport</h2>
-It is indicated in this verse that the monists and the great mystics know the Supreme Personality of
-Godhead as one. This oneness is not the misunderstanding that a living entity is equal in every respect to
-the Supreme Personality of Godhead. This monism is based on pure knowledge as described and
-confirmed in Bhagavad-gita (7.17): priyo hi jnanino 'tyartham aham sa ca mama priyah. The Lord says
-that those who are advanced in transcendental knowledge and know the science of Krsna consciousness
-are very dear to Him, and He also is very dear to them. Those who are actually in perfect knowledge of the
-science of God know that the living entities are superior energy of the Supreme Lord. This is stated in
-Bhagavad-gita, Seventh Chapter: the material energy is inferior, and the living entities are superior energy.
-Energy and the energetic are nondifferent; therefore, energies possess the same quality as the energetic.
-Persons who are in full knowledge of the Personality of Godhead, analyzing His different energies and
-knowing their own constitutional position, are certainly very, very dear to the Lord. Persons, however,
-who may not even be conversant with knowledge of the Supreme Personality but who always think of the
-Lord with love and faith, feeling that He is great and that they are His parts and parcels, ever His servitors,
-are even more favored by Him. The particular significance of this verse is that the Lord is addressed as
-vatsala. Vatsala means "always favorably disposed." The Lord's name is bhakta-vatsala. The Lord is
-famous as bhakta-vatsala, which means that He is always favorably inclined to the devotees, whereas He is
-never addressed anywhere in the Vedic literature as jnani-vatsala.
+The sitting posture described herein is called virasana according to the system of astanga-yoga
+performances. In the performance of yoga there are eight divisions, such as yama and niyama--controlling,
+following the rules and regulations, then practicing the sitting postures, etc. Besides virasana there are
+other sitting postures, such as padmasana and siddhasana. Practice of these asanas without elevating
+oneself to the position of realizing the Supersoul, Visnu, is not the perfectional stage of yoga. Lord Siva is
+called yogisvara, the master of all yogis, and Krsna is also called yogesvara. Yogisvara indicates that no one
+can surpass the yoga practice of Lord Siva, and yogesvara indicates that no one can surpass the yogic
+perfection of Krsna. Another significant word is tarka-mudra. This indicates that the fingers are opened
+and the second finger is raised, along with the arm, to impress the audience with some subject matter.
+This is actually a symbolic representation.
 </p>
 
 </div>
@@ -93,7 +121,7 @@ never addressed anywhere in the Vedic literature as jnani-vatsala.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

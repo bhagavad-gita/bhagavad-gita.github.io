@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,76 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.62.html">4.25.62</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.62</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/62"><b>62</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aham bhavan na canyas tvam
-tvam evaham vicaksva bhoh
-na nau pasyanti kavayas
-chidram jatu manag api
-<p></p>
+vipralabdho mahisyaivam
+sarva-prakrti-vancitah
+necchann anukaroty ajnah
+klaibyat krida-mrgo yatha
+<br>
 <h2>Synonyms</h2>
-aham--I; bhavan--you; na--not; ca--also; anyah--different; tvam--you; tvam--you; eva--certainly; aham--
-as I am; vicaksva--just observe; bhoh--My dear friend; na--not; nau--of us; pasyanti--do observe; kavayah--
-learned scholars; chidram--faulty differentiation; jatu--at any time; manak--in a small degree; api--even.
-<p></p>
+vipralabdhah--captivated; mahisya--by the Queen; evam--thus; sarva--all; prakrti--existence; vancitah--
+being cheated; na icchan--without desiring; anukaroti--used to follow and imitate; ajnah--the foolish King;
+klaibyat--by force; krida-mrgah--a pet animal; yatha--just like.
+<br>
 <h2>Translation</h2>
-My dear friend, I, the Supersoul, and you, the individual soul, are not different in quality, for we are
-both spiritual. In fact, My dear friend, you are qualitatively not different from Me in your constitutional
-position. Just try to consider this subject. Those who are actually advanced scholars, who are in
-knowledge, do not find any qualitative difference between you and Me.
-<p></p>
+In this way, King Puranjana was captivated by his nice wife and was thus cheated. Indeed, he became
+cheated in his whole existence in the material world. Even against that poor foolish King's desire, he
+remained under the control of his wife, just like a pet animal that dances according to the order of its
+master.
+<br>
 <h2>Purport</h2>
-Both the Supreme Personality of Godhead and the living entity are qualitatively one. There is no factual
-difference between the two. The Mayavadi philosophers are again and again defeated by the illusory
-energy because they think that there is no separation between the Supersoul and the individual soul or
-that there is no Supersoul. They are also misled in thinking that everything is the Supersoul. However,
-those who are kavayah, learned scholars, actually know the facts. They do not commit such mistakes.
-They know that God and the individual soul are one in quality, but that the individual soul falls under the
-clutches of maya, whereas the Supersoul, the Supreme Personality of Godhead, is the controller of maya.
-Maya is the creation of the Supreme Lord (maya srsta); therefore the Supreme Lord is the controller of
-maya. Although one in quality with the Supreme Lord, the individual soul is under the control of maya.
-Mayavadi philosophers cannot distinguish between the controller and the controlled.
+The word vipralabdhah is very significant in this verse. Vi means "specifically," and pralabdha means
+"obtained." Just to satisfy his desires, the King got the Queen, and thus he became cheated by material
+existence. Although he was not willing to do so, he remained a pet animal under the control of material
+intelligence. Just as a pet monkey dances according to the desires of its master, the King danced according
+to the desires of the Queen. In Srimad-Bhagavatam (5.5.2) it is said, mahat-sevam dvaram ahur vimukteh:
+if one associates with a saintly person, a devotee, one's path of liberation becomes clear. But if one
+associates with a woman or with a person who is too much addicted to a woman, his path of bondage
+becomes completely clear.
+On the whole, for spiritual advancement, one must give up the company of women. This is what is
+meant by the order of sannyasa, the renounced order. Before taking sannyasa, or completely renouncing
+the material world, one has to practice avoiding illicit sex. Sex life, licit or illicit, is practically the same,
+but through illicit sex one becomes more and more captivated. By regulating one's sex life there is a
+chance that one may eventually be able to renounce sex or renounce the association of women. If this can
+be done, advancement in spiritual life comes very easily.
+How one becomes captivated by the association of one's dear wife is explained in this chapter by Narada
+Muni. Attraction for one's wife means attraction for the material qualities. One who is attracted by the
+material quality of darkness is in the lowest stage of life, whereas one who is attracted by the material
+quality of goodness is in a better position. Sometimes we see that when a person is on the platform of
+material goodness, he is attracted more or less by the cultivation of knowledge. This is, of course, a better
+position, for knowledge gives one the preference to accept devotional service. Unless one comes to the
+platform of knowledge, the brahma-bhuta stage, one cannot advance in devotional service. As Krsna says
+in Bhagavad-gita (18.54):
+brahma-bhutah prasannatma
+na socati na kanksati
+samah sarvesu bhutesu
+mad-bhaktim labhate param
+"One who is thus transcendentally situated at once realizes the Supreme Brahman and becomes fully
+joyful. He never laments nor desires to have anything; he is equally disposed to every living entity. In that
+state he attains pure devotional service unto Me."
+The platform of knowledge is advantageous because it is a means by which one may come to the stage of
+devotional service. However, if one takes to devotional service directly, knowledge is revealed without
+separate endeavor. This is confirmed in Srimad-Bhagavatam (1.2.7):
+vasudeve bhagavati
+bhakti-yogah prayojitah
+janayaty asu vairagyam
+jnanam ca yad ahaitukam
+Devotional service automatically reveals actual knowledge of our material existence. One who is
+sufficiently intelligent immediately attains the stage of renunciation of so-called society, family and love as
+well as other things. As long as we are attached to society, family and love of the material world, there is
+no question of knowledge. Nor is there a question of devotional service. By directly taking to devotional
+service, however, one becomes filled with knowledge and renunciation. In this way one's life becomes
+successful.
+Thus end the Bhaktivedanta purports of the Fourth Canto, Twenty-fifth Chapter, of the Srimad-
+Bhagavatam, entitled "The Descriptions of the Characteristics of King Puranjana."
+Chapter Twenty-six
+King Puranjana Goes to the Forest to Hunt, and His Queen Becomes Angry
 </p>
 
 </div>
@@ -83,7 +158,7 @@ Mayavadi philosophers cannot distinguish between the controller and the controll
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

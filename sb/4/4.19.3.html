@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.3.html">4.19.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sudhiyah sadhavo loke
-naradeva narottamah
-nabhidruhyanti bhutebhyo
-yarhi natma kalevaram
-<p></p>
+yatra yajna-patih saksad
+bhagavan harir isvarah
+anvabhuyata sarvatma
+sarva-loka-guruh prabhuh
+<br>
 <h2>Synonyms</h2>
-su-dhiyah--the most intelligent persons; sadhavah--who are inclined to perform welfare activities; loke--
-in this world; nara-deva--O King; nara-uttamah--the best of human beings; na abhidruhyanti--never
-become malicious; bhutebhyah--toward other living beings; yarhi--because; na--never; atma--the self or
-soul; kalevaram--this body.
-<p></p>
+yatra--where; yajna-patih--the enjoyer of all sacrifices; saksat--directly; bhagavan--the Supreme
+personality of Godhead; harih--Lord Visnu; isvarah--the supreme controller; anvabhuyata--became visible;
+sarva-atma--the Supersoul of everyone; sarva-loka-guruh--the master of all planets, or the teacher of
+everyone; prabhuh--the proprietor.
+<br>
 <h2>Translation</h2>
-O King, one who is advanced in intelligence and eager to perform welfare activities for others is
-considered best amongst human beings. An advanced human being is never malicious to others. Those
-with advanced intelligence are always conscious that this material body is different from the soul.
-<p></p>
+The Supreme Personality of Godhead, Lord Visnu, is present in everyone's heart as the Supersoul, and
+He is the proprietor of all planets and the enjoyer of the results of all sacrifices. He was personally present
+at the sacrifices made by King Prthu.
+<br>
 <h2>Purport</h2>
-In daily life we find that when a madman commits murder, he is excused even by a high-court judge.
-The idea is that a living entity is always pure because he is part and parcel of the Supreme personality of
-Godhead. When he falls into the clutches of material energy, he becomes a victim of the three modes of
-material nature. Indeed, whatever he does, he does under the influence of material nature. As stated in
-Bhagavad-gita (5.14):
-na kartrtvam na karmani
-lokasya srjati prabhuh
-na karma-phala-samyogam
-svabhavas tu pravartate
-"The embodied spirit, master of the city of his body, does not create activities, nor does he induce
-people to act, nor does he create the fruits of action. All this is enacted by the modes of material nature."
-Actually the living entity, or soul, does not do anything; everything is done under the influence of the
-modes of material nature. When a man is diseased, the symptoms of the disease become a source of all
-kinds of pain. Those who are advanced in transcendental consciousness, or Krsna consciousness, are
-never envious, neither of the soul nor of the activities of the soul under the influence of material nature.
-Advanced transcendentalists are called sudhiyah. Sudhi means "intelligence," sudhi means "highly
-advanced," and sudhi means "devotee." One who is both devoted and highly advanced in intelligence
-does not take action against the soul or the body. If there is any discrepancy, he forgives. It is said that
-forgiveness is a quality of those who are advancing in spiritual knowledge.
+In this verse the word saksat is significant. Prthu Maharaja was a saktyavesa-avatara incarnation of Lord
+Visnu. Actually Prthu Maharaja was a living entity, but he acquired specific powers from Lord Visnu. Lord
+Visnu, however, is directly the Supreme Personality of Godhead, and thus belongs to the category of
+visnu-tattva. Maharaja Prthu belonged to the jiva-tattva. The visnu-tattva indicates God, whereas the jivatattva
+indicates the part and parcel of God. When God's part and parcel is especially empowered, he is
+called saktyavesa-avatara. Lord Visnu is herein described as harir isvarah. The Lord is so kind that He
+takes all miserable conditions away from His devotees. Consequently He is called Hari. He is described as
+isvara because He can do whatever He likes. He is the supreme controller. The supreme isvara
+purusottama is Lord Krsna. He exhibits His powers as isvara, or the supreme controller, when He assures
+His devotee in Bhagavad-gita (18.66): "Abandon all varieties of religion and just surrender unto Me. I
+shall deliver you from all sinful reaction. Do not fear." He can immediately make His devotee immune
+from all the reactions caused by sinful life if the devotee simply surrenders unto Him. He is described
+herein as sarvatma, meaning that He is present in everyone's heart as the Supersoul, and as such He is the
+supreme teacher of everyone. If we are fortunate enough to take the lessons given by Lord Krsna in
+Bhagavad-gita, our lives immediately become successful. No one can give better instructions to human
+society than Lord Krsna.
 </p>
 
 </div>
@@ -92,7 +128,7 @@ forgiveness is a quality of those who are advancing in spiritual knowledge.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

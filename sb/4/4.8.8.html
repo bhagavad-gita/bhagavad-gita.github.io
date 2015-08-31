@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.8.html">4.8.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvad-dattaya vayunayedam acasta visvam
-supta-prabuddha iva natha bhavat-prapannah
-tasyapavargya-saranam tava pada-mulam
-vismaryate krta-vida katham arta-bandho
-<p></p>
+jaye uttanapadasya
+sunitih surucis tayoh
+surucih preyasi patyur
+netara yat-suto dhruvah
+<br>
 <h2>Synonyms</h2>
-tvat-dattaya--given by You; vayunaya--by knowledge; idam--this; acasta--could see; visvam--whole
-universe; supta-prabuddhah--a man rising from sleep; iva--like; natha--O my Lord; bhavat-prapannah--
-Lord Brahma, who is surrendered unto You; tasya--his; apavargya--of persons desiring liberation;
-saranam--the shelter; tava--Your; pada-mulam--lotus feet; vismaryate--can be forgotten; krta-vida--by a
-learned person; katham--how; arta-bandho--O friend of the distressed.
-<p></p>
+jaye--of the two wives; uttanapadasya--of King Uttanapada; sunitih--Suniti; surucih--Suruci; tayoh--of
+both of them; surucih--Suruci; preyasi--very dear; patyuh--of the husband; na itara--not the other; yat--
+whose; sutah--son; dhruvah--Dhruva.
+<br>
 <h2>Translation</h2>
-O my master, Lord Brahma is fully surrendered unto You. In the beginning You gave him knowledge,
-and thus he could see and understand the entire universe, just as a person awakens from sleep and
-visualizes his immediate duties. You are the only shelter of all persons who desire liberation, and You are
-the friend of all who are distressed. How, therefore, can a learned person who has perfect knowledge ever
-forget You?
-<p></p>
+King Uttanapada had two queens, named Suniti and Suruci. Suruci was much more dear to the King;
+Suniti, who had a son named Dhruva, was not his favorite.
+<br>
 <h2>Purport</h2>
-The Supreme Personality of Godhead cannot be forgotten even for a moment by His surrendered
-devotees. The devotee understands that the Lord's causeless mercy is beyond his estimation; he cannot
-know how much he is benefited by the grace of the Lord. The more a devotee engages himself in the
-devotional service of the Lord, the more encouragement is supplied by the energy of the Lord. In the
-Bhagavad-gita the Lord says that to those who are constantly engaged in devotional service with love and
-affection, the Supreme Personality of Godhead gives intelligence from within, and thus they may make
-further progress. Being so encouraged, the devotee can never forget, at any moment, the Personality of
-Godhead. He always feels obliged to Him for having achieved increased power in devotional service by
-His grace. Saintly persons like Sanaka, Sanatana and Lord Brahma were able to see the entire universe, by
-the mercy of the Lord, through knowledge of the Lord. The example is given that a person may apparently
-abstain from sleep all day, but as long as he is not spiritually enlightened he is actually sleeping. He may
-sleep at night and perform his duties in the daytime, but as long as he does not come to the platform of
-working in spiritual enlightenment he is considered to be always sleeping. A devotee, therefore, never
-forgets the benefit derived from the Lord.
-The Lord is addressed here as arta-bandhu, which means "friend of the distressed." As stated in
-Bhagavad-gita, after many, many births of executing severe austerities in search of knowledge, one comes
-to the point of real knowledge and becomes wise when one surrenders unto the Supreme Personality of
-Godhead. The Mayavadi philosopher, who does not surrender unto the Supreme Person, is understood to
-be lacking in real knowledge. The devotee in perfect knowledge cannot forget his obligation to the Lord at
-any moment.
+The great sage Maitreya wanted to describe the pious activities of the kings. Priyavrata was the first son
+of Svayambhuva Manu, and Uttanapada was the second, but the great sage Maitreya immediately began to
+speak of Dhruva Maharaja, the son of Uttanapada, because Maitreya was very eager to describe pious
+activities. The incidents in the life of Dhruva Maharaja are very attractive for devotees. From his pious
+actions, one can learn how one can detach himself from material possessions and how one can enhance
+one's devotional service by severe austerities and penances. By hearing the activities of pious Dhruva, one
+can enhance one's faith in God and can directly connect with the Supreme Personality of Godhead, and
+thus one can very soon be elevated to the transcendental platform of devotional service. The example of
+Dhruva Maharaja's austerities can immediately generate a feeling of devotional service in the hearts of the
+hearers.
 </p>
 
 </div>
@@ -96,7 +120,7 @@ any moment.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

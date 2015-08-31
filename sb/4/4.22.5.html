@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.5.html">4.22.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-antardhano nabhasvatyam
-havirdhanam avindata
-ya indram asva-hartaram
-vidvan api na jaghnivan
-<p></p>
+tat-pada-sauca-salilair
+marjitalaka-bandhanah
+tatra silavatam vrttam
+acaran manayann iva
+<br>
 <h2>Synonyms</h2>
-antardhanah--the king of the name Antardhana; nabhasvatyam--unto his wife Nabhasvati;
-havirdhanam--of the name Havirdhana; avindata--obtained; yah--who; indram--King Indra; asvahartaram--
-who was stealing the horse of his father; vidvan api--although he knew it; na jaghnivan--did not
-kill.
-<p></p>
+tat-pada--their lotus feet; sauca--washed; salilaih--water; marjita--sprinkled; alaka--hair; bandhanah--
+bunch; tatra--there; silavatam--of the respectable gentlemen; vrttam--behavior; acaran--behaving;
+manayan--practicing; iva--like.
+<br>
 <h2>Translation</h2>
-Maharaja Antardhana had another wife, named Nabhasvati, and by her he was happy to beget another
-son, named Havirdhana. Since Maharaja Antardhana was very liberal, he did not kill Indra while the
-demigod was stealing his father's horse at the sacrifice.
-<p></p>
+After this, the King took the water which had washed the lotus feet of the Kumaras and sprinkled it over
+his hair. By such respectful actions, the King, as an exemplary personality, showed how to receive a
+spiritually advanced personality.
+<br>
 <h2>Purport</h2>
-It is understood from various scriptures and puranas that the King of heaven, Indra, was very expert in
-stealing and kidnapping. He could steal anything without being visible to the proprietor, and he could
-kidnap anyone's wife without being detected. Once he raped the wife of Gautama Muni by using his
-disappearing art, and similarly by becoming invisible he stole the horse of Maharaja Prthu. Although in
-human society such activities are considered abominable, the demigod Indra was not considered to be
-degraded by them. Although Antardhana could understand that King Indra was stealing the horse from
-his father, he did not kill Indra, for he knew that if one who is very powerful sometimes commits an
-abominable act, it should be disregarded. In Bhagavad-gita (9.30) it is clearly stated:
-api cet su-duracaro
-bhajate mam ananya-bhak
-sadhur eva sa mantavyah
-samyag vyavasito hi sah
-Thus the Lord says that even if a devotee commits an abominable act, he should be considered a sadhu,
-or a pious man, because of his unflinching devotion to the Lord. The devotees of the Lord never willingly
-commit any sinful act, but sometimes they commit something abominable due to their previous habits.
-Such acts should not be taken very seriously, however, because the devotees of the Lord are very
-powerful, whether they are on the heavenly planets or on this planet. If by chance they commit something
-abominable, it should not be taken into account, but should be overlooked.
+Sri Caitanya Mahaprabhu has said, apani acari prabhu jivere sikhaya. It is very well known that
+whatever Sri Caitanya Mahaprabhu taught in His life as acarya, He Himself practiced. When He was
+preaching as a devotee, although He was detected by several great personalities to be the incarnation of
+Krsna, He never agreed to be addressed as an incarnation. Even though one may be an incarnation of
+Krsna, or especially empowered by Him, he should not advertise that he is an incarnation. People will
+automatically accept the real truth in due course of time. Prthu Maharaja was the ideal Vaisnava king;
+therefore he taught others by his personal behavior how to receive and respect saintly persons like the
+Kumaras. When a saintly person comes to one's home, it is the Vedic custom first to wash his feet with
+water and then sprinkle this water over the heads of oneself and one's family. Prthu Maharaja did this, for
+he was an exemplary teacher of the people in general.
 </p>
 
 </div>
@@ -91,7 +121,7 @@ abominable, it should not be taken into account, but should be overlooked.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.16.html">4.24.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa saptabhih satair eko
-vimsatya ca satam samah
-puranjana-puradhyakso
-gandharvair yuyudhe bali
-<p></p>
+vidura uvaca
+pracetasam giritrena
+yathasit pathi sangamah
+yad utaha harah pritas
+tan no brahman vadarthavat
+<br>
 <h2>Synonyms</h2>
-sah--he; saptabhih--with seven; sataih--hundred; ekah--alone; vimsatya--with twenty; ca--also; satam--
-hundred; samah--years; puranjana--of King Puranjana; pura-adhyaksah--superintendent of the city;
-gandharvaih--with the Gandharvas; yuyudhe--fought; bali--very valiant.
-<p></p>
+vidurah uvaca--Vidura inquired; pracetasam--of all the Pracetas; giritrena--by Lord Siva; yatha--just as;
+asit--it was; pathi--on the road; sangamah--meeting; yat--which; uta aha--said; harah--Lord Siva; pritah--
+being pleased; tat--that; nah--unto us; brahman--O great brahmana; vada--speak; artha-vat--with clear
+meaning.
+<br>
 <h2>Translation</h2>
-The five-hooded serpent, the superintendent and protector of the city of King Puranjana, fought with
-the Gandharvas for one hundred years. He fought alone, with all of them, although they numbered 720.
-<p></p>
+Vidura asked Maitreya: My dear brahmana, why did the Pracetas meet Lord Siva on the way? Please tell
+me how the meeting happened, how Lord Siva became very pleased with them and how he instructed
+them. Certainly such talks are important, and I wish that you please be merciful upon me and describe
+them.
+<br>
 <h2>Purport</h2>
-The 360 days and 360 nights combine to become the 720 soldiers of Candavega (time). One has to fight
-these soldiers throughout one's lifespan, beginning with birth and ending with death. This fight is called
-the struggle for existence. Despite this struggle, however, the living entity does not die. As confirmed in
-Bhagavad-gita (2.20), the living entity is eternal:
-na jayate mriyate va kadacin
-nayam bhutva bhavita va na bhuyah
-ajo nityah sasvato 'yam purano
-na hanyate hanyamane sarire
-"For the soul there is never birth nor death. Nor, having once been, does he ever cease to be. He is
-unborn, eternal, ever-existing, undying and primeval. He is not slain when the body is slain." Actually the
-living entity does not take birth nor does he die, but he has to fight with the stringent laws of material
-nature throughout the entire span of his lifetime. He must also face different kinds of miserable
-conditions. Despite all this, the living entity, due to illusion, thinks that he is well situated in sense
-gratification.
+Whenever there are some important talks between a devotee and the Lord or between exalted devotees,
+one should be very much curious to hear them. At the meeting of Naimisaranya, where Suta Gosvami
+spoke Srimad-Bhagavatam to all the great sages, Suta Gosvami was also asked about the talks between
+Maharaja Pariksit and Sukadeva Gosvami, for the sages believed that the talks between Sukadeva Gosvami
+and Maharaja Pariksit must have been as important as the talks between Lord Krsna and Arjuna. As
+everyone is still eager to learn the subject of Bhagavad-gita in order to become perfectly enlightened,
+Vidura was similarly eager to learn from the great sage Maitreya about the talks between Lord Siva and the
+Pracetas.
 </p>
 
 </div>
@@ -85,7 +122,7 @@ gratification.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,57 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.3.html">4.18.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatra yajna-patih saksad
-bhagavan harir isvarah
-anvabhuyata sarvatma
-sarva-loka-guruh prabhuh
-<p></p>
+asmil loke 'thavamusmin
+munibhis tattva-darsibhih
+drsta yogah prayuktas ca
+pumsam sreyah-prasiddhaye
+<br>
 <h2>Synonyms</h2>
-yatra--where; yajna-patih--the enjoyer of all sacrifices; saksat--directly; bhagavan--the Supreme
-personality of Godhead; harih--Lord Visnu; isvarah--the supreme controller; anvabhuyata--became visible;
-sarva-atma--the Supersoul of everyone; sarva-loka-guruh--the master of all planets, or the teacher of
-everyone; prabhuh--the proprietor.
-<p></p>
+asmin--in this; loke--duration of life; atha va--or; amusmin--in the next life; munibhih--by the great
+sages; tattva--the truth; darsibhih--by those who have seen it; drstah--prescribed; yogah--methods;
+prayuktah--applied; ca--also; pumsam--of the people in general; sreyah--benefit; prasiddhaye--in the
+matter of obtaining.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead, Lord Visnu, is present in everyone's heart as the Supersoul, and
-He is the proprietor of all planets and the enjoyer of the results of all sacrifices. He was personally present
-at the sacrifices made by King Prthu.
-<p></p>
+To benefit all human society, not only in this life but in the next, the great seers and sages have
+prescribed various methods conducive to the prosperity of the people in general.
+<br>
 <h2>Purport</h2>
-In this verse the word saksat is significant. Prthu Maharaja was a saktyavesa-avatara incarnation of Lord
-Visnu. Actually Prthu Maharaja was a living entity, but he acquired specific powers from Lord Visnu. Lord
-Visnu, however, is directly the Supreme Personality of Godhead, and thus belongs to the category of
-visnu-tattva. Maharaja Prthu belonged to the jiva-tattva. The visnu-tattva indicates God, whereas the jivatattva
-indicates the part and parcel of God. When God's part and parcel is especially empowered, he is
-called saktyavesa-avatara. Lord Visnu is herein described as harir isvarah. The Lord is so kind that He
-takes all miserable conditions away from His devotees. Consequently He is called Hari. He is described as
-isvara because He can do whatever He likes. He is the supreme controller. The supreme isvara
-purusottama is Lord Krsna. He exhibits His powers as isvara, or the supreme controller, when He assures
-His devotee in Bhagavad-gita (18.66): "Abandon all varieties of religion and just surrender unto Me. I
-shall deliver you from all sinful reaction. Do not fear." He can immediately make His devotee immune
-from all the reactions caused by sinful life if the devotee simply surrenders unto Him. He is described
-herein as sarvatma, meaning that He is present in everyone's heart as the Supersoul, and as such He is the
-supreme teacher of everyone. If we are fortunate enough to take the lessons given by Lord Krsna in
-Bhagavad-gita, our lives immediately become successful. No one can give better instructions to human
-society than Lord Krsna.
+Vedic civilization takes advantage of the perfect knowledge presented in the Vedas and presented by
+great sages and brahmanas for the benefit of human society. Vedic injunctions are known as sruti, and the
+additional supplementary presentations of these principles, as given by the great sages, are known as
+smrti. They follow the principles of Vedic instruction. Human society should take advantage of the
+instructions from both sruti and smrti. If one wants to advance in spiritual life, he must take these
+instructions and follow the principles. In Bhakti-rasamrta-sindhu, Srila Rupa Gosvami says that if one
+poses himself as advanced in spiritual life but does not refer to the srutis and smrtis he is simply a
+disturbance in society. One should follow the principles laid down in srutis and smrtis not only in one's
+spiritual life but in material life as well. As far as human society is concerned, it should follow the Manusmrti
+as well, for these laws are given by Manu, the father of mankind.
+In the Manu-smrti it is stated that a woman should not be given independence, but should be given
+protection by her father, husband and elderly sons. In all circumstances a woman should remain
+dependent upon some guardian. Presently women are given full independence like men, but actually we
+can see that such independent women are no happier than those women who are placed under guardians.
+If people follow the injunctions given by the great sages, srutis and smrtis, they can actually be happy in
+both this life and the next. Unfortunately rascals are manufacturing so many ways and means to be happy.
+Everyone is inventing so many methods. Consequently human society has lost the standard ways of life,
+both materially and spiritually, and as a result people are bewildered, and there is no peace or happiness
+in the world. Although they are trying to solve the problems of human society in the United Nations, they
+are still baffled. Because they do not follow the liberated instructions of the Vedas, they are unhappy.
+Two significant words used in this verse are asmin and amusmin. Asmin means "in this life," and
+amusmin means "in the next life." Unfortunately in this age, even exalted professors and learned men
+believe that there is no next life and that everything is finished in this life. Since they are rascals and fools,
+what advice can they give? Still they are passing as learned scholars and professors. In this verse the word
+amusmin is very explicit. It is the duty of everyone to mold his life in such a way that he will have a
+profitable next life. Just as a boy is educated in order to become happy later, one should be educated in
+this life in order to attain an eternal and prosperous life after death. It is therefore essential that people
+follow what is given in the srutis and smrtis to make sure that the human mission is successful.
 </p>
 
 </div>
@@ -89,7 +139,7 @@ society than Lord Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

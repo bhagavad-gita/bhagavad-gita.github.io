@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.26.html">4.24.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atho bhajasva mam bhadra
-bhajantim me dayam kuru
-etavan pauruso dharmo
-yad artan anukampate
-<p></p>
+sa tan prapannarti-haro
+bhagavan dharma-vatsalah
+dharma-jnan sila-sampannan
+pritah pritan uvaca ha
+<br>
 <h2>Synonyms</h2>
-atho--therefore; bhajasva--accept; mam--me; bhadra--O gentle one; bhajantim--willing to serve; me--to
-me; dayam--mercy; kuru--do; etavan--such a measure; paurusah--for any gentleman; dharmah--religious
-principle; yat--that; artan--to the distressed; anukampate--is compassionate.
-<p></p>
+sah--Lord Siva; tan--them; prapanna-arti-harah--one who drives away all kinds of dangers; bhagavan--
+the lord; dharma-vatsalah--very much fond of religious principles; dharma-jnan--persons who are aware
+of religious principles; sila-sampannan--very well behaved; pritah--being pleased; pritan--of very gentle
+behavior; uvaca--talked with them; ha--in the past.
+<br>
 <h2>Translation</h2>
-Kalakanya continued: O gentle one, I am now present before you to serve you. Please accept me and
-thus show me mercy. It is a gentleman's greatest duty to be compassionate upon a person who is
-distressed.
-<p></p>
+Lord Siva became very pleased with the Pracetas because generally Lord Siva is the protector of pious
+persons and persons of gentle behavior. Being very much pleased with the princes, he began to speak as
+follows.
+<br>
 <h2>Purport</h2>
-Yavana-raja, the King of the Yavanas, could also refuse to accept Kalakanya, daughter of Time, but he
-considered the request due to the order of Narada Muni. Thus he accepted Kalakanya in a different way.
-In other words, the injunctions of Narada Muni, or the path of devotional service, can be accepted by
-anyone within the three worlds, and certainly by the King of the Yavanas. Lord Caitanya Himself
-requested everyone to preach the cult of bhakti-yoga all over the world, in every village and town.
-Preachers in the Krsna consciousness movement have actually experienced that even the yavanas and
-mlecchas have taken to spiritual life on the strength of Narada Muni's pancaratrika-vidhi. When mankind
-follows the disciplic succession, as recommended by Caitanya Mahaprabhu, everyone throughout the
-world will benefit.
+The Supreme Personality of Godhead, Visnu, or Krsna, is known as bhakta-vatsala, and herein we find
+Lord Siva described as dharma-vatsala. Of course, the word dharma-vatsala refers to a person who lives
+according to religious principles. That is understood. Nonetheless, these two words have additional
+significance. Sometimes Lord Siva has to deal with persons who are in the modes of passion and
+ignorance. Such persons are not always very much religious and pious in their activities, but since they
+worship Lord Siva for some material profit, they sometimes obey the religious principles. As soon as Lord
+Siva sees that his devotees are following religious principles, he blesses them. The Pracetas, sons of
+Pracinabarhi, were naturally very pious and gentle, and consequently Lord Siva was immediately pleased
+with them. Lord Siva could understand that the princes were sons of Vaisnavas, and as such Lord Siva
+offered prayers to the Supreme Personality of Godhead as follows.
 </p>
 
 </div>
@@ -81,7 +122,7 @@ world will benefit.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

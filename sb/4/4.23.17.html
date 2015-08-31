@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.17.html">4.23.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rama ucuh
-nara-natha na janimas
-tvat-priya yad vyavasyati
-bhutale niravastare
-sayanam pasya satru-han
-<p></p>
+indriyesu manas tani
+tan-matresu yathodbhavam
+bhutadinamuny utkrsya
+mahaty atmani sandadhe
+<br>
 <h2>Synonyms</h2>
-ramah ucuh--the women thus spoke; nara-natha--O King; na janimah--we do not know; tvat-priya--your
-beloved; yat vyavasyati--why she has taken to this sort of life; bhu-tale--on the ground; niravastare--
-without bedding; sayanam--lying down; pasya--look; satru-han--O killer of enemies.
-<p></p>
+indriyesu--in the sense organs; manah--the mind; tani--the sense organs; tat-matresu--in the objects of
+the senses; yatha-udbhavam--wherefrom they generated; bhuta-adina--by the five elements; amuni--all
+those sense objects; utkrsya--taking out; mahati--in the mahat-tattva; atmani--unto the ego; sandadhe--
+amalgamated.
+<br>
 <h2>Translation</h2>
-All the women addressed the King: O master of the citizens, we do not know why your dear wife has
-taken on this sort of existence. O killer of enemies, kindly look! She is lying on the ground without
-bedding. We cannot understand why she is acting this way.
-<p></p>
+He amalgamated the mind with the senses and the senses with the sense objects, according to their
+respective positions, and he also amalgamated the material ego with the total material energy, mahattattva.
+<br>
 <h2>Purport</h2>
-When a person is devoid of devotional service, or visnu-bhakti, he takes to many sinful activities. King
-Puranjana left home, neglected his own wife and engaged himself in killing animals. This is the position
-of all materialistic men. They do not care for a married chaste wife. They take the wife only as an
-instrument for sense enjoyment, not as a means for devotional service. To have unrestricted sex life, the
-karmis work very hard. They have concluded that the best course is to have sex with any woman and
-simply pay the price for her, as though she were a mercantile commodity. Thus they engage their energy
-in working very hard for such material acquisitions. Such materialistic people have lost their good
-intelligence. They must search out their intelligence within the heart. A person who does not have a
-chaste wife accepted by religious principles always has a bewildered intelligence.
-The wife of King Puranjana was lying on the ground because she was neglected by her husband.
-Actually the woman must always be protected by her husband. We always speak of the goddess of fortune
-as being placed on the chest of Narayana. In other words, the wife must remain embraced by her husband.
-Thus she becomes beloved and well protected. Just as one saves his money and places it under his own
-personal protection, one should similarly protect his wife by his own personal supervision. Just as
-intelligence is always within the heart, so a beloved chaste wife should always have her place on the chest
-of a good husband. This is the proper relationship between husband and wife. A wife is therefore called
-ardhangani, or half of the body. One cannot remain with only one leg, one hand or only one side of the
-body. He must have two sides. Similarly, according to nature's way, husband and wife should live
-together. In the lower species of life, among birds and animals, it is seen that by nature's arrangement the
-husband and wife live together. It is similarly ideal in human life for the husband and wife to live
-together. The home should be a place for devotional service, and the wife should be chaste and accepted
-by a ritualistic ceremony. In this way one can become happy at home.
+In respect to the ego, the total material energy is sundered in two parts--one agitated by the mode of
+ignorance and the other agitated by the modes of passion and goodness. Due to agitation by the mode of
+ignorance, the five gross elements are created. Due to agitation by the mode of passion, the mind is
+created, and due to agitation by the mode of goodness, false egoism, or identification with matter, is
+created. The mind is protected by a particular type of demigod. Sometimes the mind (manah) is also
+understood to have a controlling deity or demigod. In this way the total mind, namely the material mind
+controlled by material demigods, was amalgamated with the senses. The senses, in turn, were
+amalgamated with the sense objects. The sense objects are forms, tastes, smells, sounds, etc. Sound is the
+ultimate source of the sense objects. The mind was attracted by the senses and the senses by the sense
+objects, and all of them were ultimately amalgamated in the sky. The creation is so arranged that cause
+and effect follow one after the other. The merging process involves amalgamating the effect with the
+original cause. Since the ultimate cause in the material world is mahat-tattva, everything was gradually
+wound up and amalgamated with the mahat-tattva. This may be compared to sunya-vada, or voidism, but
+this is the process for cleansing the real spiritual mind, or consciousness.
+When the mind is completely washed of all material contamination, the pure consciousness acts. The
+sound vibration from the spiritual sky can automatically cleanse all material contaminations, as confirmed
+by Caitanya Mahaprabhu: ceto-darpana-marjanam. We need only take the advice of Lord Caitanya
+Mahaprabhu and chant the Hare Krsna mantra to cleanse the mind of all material contamination, and this
+may be considered the summary of this difficult verse. As soon as the whole material contamination is
+washed away by this process of chanting, all desires and reactions to material activities become
+immediately vanquished, and real life, peaceful existence, begins. In this age of Kali it is very difficult to
+adopt the yogic process mentioned in this verse. Unless one is very expert in such yoga, the best course is
+to adopt the ways and means of Lord Caitanya Mahaprabhu, sri-krsna-sankirtanam. Thus one can
+gloriously become freed from all material contamination by the simple process of chanting Hare Krsna,
+Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare. Just as life in this
+material world has its beginning in material sound, similarly a spiritual life has its beginning in this
+spiritual sound vibration.
 </p>
 
 </div>
@@ -95,7 +138,7 @@ by a ritualistic ceremony. In this way one can become happy at home.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.20.html">4.15.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ayam bhuvo mandalam odayadrer
-goptaika-viro naradeva-nathah
-asthaya jaitram ratham atta-capah
-paryasyate daksinato yatharkah
-<p></p>
+sindhavah parvata nadyo
+ratha-vithir mahatmanah
+suto 'tha magadho vandi
+tam stotum upatasthire
+<br>
 <h2>Synonyms</h2>
-ayam--this King; bhuvah--of the world; mandalam--the globe; a-udaya-adreh--from the mountain where
-the first appearance of the sun is visible; gopta--will protect; eka--uniquely; virah--powerful, heroic; naradeva--
-of all kings, gods in human society; nathah--the master; asthaya--being situated on; jaitram--
-victorious; ratham--his chariot; atta-capah--holding the bow; paryasyate--he will circumambulate;
-daksinatah--from the southern side; yatha--like; arkah--the sun.
-<p></p>
+sindhavah--the seas; parvatah--the mountains; nadyah--the rivers; ratha-vithih--the paths for the chariot
+to pass; maha-atmanah--of the great soul; sutah--a professional who offers praises; atha--then; magadhah--
+a professional bard; vandi--a professional who offers prayers; tam--him; stotum--to praise; upatasthire--
+presented themselves.
+<br>
 <h2>Translation</h2>
-This King, being uniquely powerful and heroic, will have no competitor. He will travel around the globe
-on his victorious chariot, holding his invincible bow in his hand and appearing exactly like the sun,
-which rotates in its own orbit from the south.
-<p></p>
-<h2>Purport</h2>
-In this verse the word yatharkah indicates that the sun is not fixed but is rotating in its orbit, which is
-set by the Supreme Personality of Godhead. This is confirmed in the Brahma-samhita and also in other
-parts of Srimad-Bhagavatam. In the Fifth Canto of Srimad-Bhagavatam it is stated that the sun rotates in
-its own orbit at the rate of sixteen thousand miles per second. Similarly, Brahma-samhita states,
-yasyajnaya bhramati sambhrta-kala-cakrah: the sun rotates in its own orbit according to the order of the
-Supreme Personality of Godhead. The conclusion is that the sun is not fixed in one place. As far as Prthu
-Maharaja is concerned, it is indicated that his ruling power would extend all over the world. The
-Himalaya Mountains, from which the sunrise is first seen, are called udayacala or udayadri. It is herein
-indicated that Prthu Maharaja's reign over the world would cover even the Himalaya Mountains and
-extend to the borders of all oceans and seas. In other words, his reign would cover the entire planet.
-Another significant word in this verse is naradeva. As described in previous verses, the qualified king--
-be he King Prthu or any other king who rules over the state as an ideal king--should be understood to be
-God in human form. According to Vedic culture, the king is honored as the Supreme Personality of
-Godhead because he represents Narayana, who also gives protection to the citizens. He is therefore natha,
-or the proprietor. Even Sanatana Gosvami gave respect to the Nawab Hussain Shah as naradeva, although
-the Nawab was Muhammadan. A king or governmental head must therefore be so competent to rule over
-the state that the citizens will worship him as God in human form. That is the perfectional stage for the
-head of any government or state.
+The seas, mountains and rivers gave him room to drive his chariot without impediments, and a suta, a
+magadha and a vandi offered prayers and praises. They all presented themselves before him to perform
+their respective duties.
 </p>
 
 </div>
@@ -92,7 +110,7 @@ head of any government or state.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

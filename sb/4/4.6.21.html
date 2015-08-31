@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.21.html">4.6.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vaksasy adhisrita-vadhur vana-maly udarahasavaloka-
-kalaya ramayams ca visvam
-parsva-bhramad-vyajana-camara-raja-hamsah
-svetatapatra-sasinopari rajyamanah
-<p></p>
+karnantraikapadasvasyair
+nirjustam vrka-nabhibhih
+kadali-khanda-samruddhanalini-
+pulina-sriyam
+<br>
 <h2>Synonyms</h2>
-vaksasi--on the chest; adhisrita--situated; vadhuh--a woman (the goddess of fortune, Laksmi); vanamali--
-garlanded with forest flowers; udara--beautiful; hasa--smiling; avaloka--glance; kalaya--with a small
-part; ramayan--pleasing; ca--and; visvam--the whole world; parsva--side; bhramat--moving back and forth;
-vyajana-camara--white yak-tail hair for fanning; raja-hamsah--swan; sveta-atapatra-sasina--with a white
-canopy like the moon; upari--above; rajyamanah--looking beautiful.
-<p></p>
+karnantra--by the karnantra; ekapada--the ekapada; asvasyaih--by the asvasya; nirjustam--fully enjoyed;
+vrka-nabhibhih--by the vrka and nabhi, or kasturi deer; kadali--of banana trees; khanda--with groups;
+samruddha--covered; nalini--of small lakes filled with lotus flowers; pulina--with the sandy banks;
+sriyam--very beautiful.
+<br>
 <h2>Translation</h2>
-Lord Visnu looked extraordinarily beautiful because the goddess of fortune and a garland were situated
-on His chest. His face was beautifully decorated with a smiling attitude which can captivate the entire
-world, especially the devotees. Fans of white hair appeared on both sides of the Lord like white swans,
-and the white canopy overhead looked like the moon.
-<p></p>
-<h2>Purport</h2>
-The smiling face of Lord Visnu is pleasing to the whole world. Not only devotees but even nondevotees
-are attracted by such a smile. This verse nicely describes how the sun, moon, eight-petaled lotus flower
-and humming black bees were represented by the fans of hair, the overhead canopy, the moving earrings
-on both sides of His face, and His blackish hair. All together, accompanied by the conchshell, wheel, club,
-lotus flower, bow, arrows, shield and sword in His hands, these presented a grand and beautiful audience
-for Lord Visnu which captivated all the demigods there, including Daksa and Lord Brahma.
+There are varieties of deer, such as karnantra, ekapada, asvasya, vrka and kasturi, the deer which bears
+musk. Besides the deer there are many banana trees which decorate the small hillside lakes very nicely.
 </p>
 
 </div>
@@ -81,7 +109,7 @@ for Lord Visnu which captivated all the demigods there, including Daksa and Lord
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

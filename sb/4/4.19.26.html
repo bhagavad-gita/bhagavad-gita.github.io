@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,62 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.26.html">4.19.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasah sivam susrava arya-sangame
-yadrcchaya copasrnoti te sakrt
-katham guna-jno viramed vina pasum
-srir yat pravavre guna-sangrahecchaya
-<p></p>
+tad abhijnaya bhagavan
+prthuh prthu-parakramah
+indraya kupito banam
+adattodyata-karmukah
+<br>
 <h2>Synonyms</h2>
-yasah--glorification; sivam--all-auspicious; su-sravah--O highly glorified Lord; arya-sangame--in the
-association of advanced devotees; yadrcchaya--somehow or other; ca--also; upasrnoti--hears; te--Your;
-sakrt--even once; katham--how; guna-jnah--one who appreciates good qualities; viramet--can cease; vina--
-unless; pasum--an animal; srih--the goddess of fortune; yat--which; pravavre--accepted; guna--Your
-qualities; sangraha--to receive; icchaya--with a desire.
-<p></p>
+tat--that; abhijnaya--understanding; bhagavan--the incarnation of Godhead; prthuh--King Prthu; prthuparakramah--
+celebrated as very powerful; indraya--upon Indra; kupitah--being very angry; banam--an
+arrow; adatta--took up; udyata--having taken up; karmukah--the bow.
+<br>
 <h2>Translation</h2>
-My dear highly glorified Lord, if one, in the association of pure devotees, hears even once the glories of
-Your activities, he does not, unless he is nothing but an animal, give up the association of devotees, for no
-intelligent person would be so careless as to leave their association. The perfection of chanting and
-hearing about Your glories was accepted even by the goddess of fortune, who desired to hear of Your
-unlimited activities and transcendental glories.
-<p></p>
+Maharaja Prthu, who was celebrated as very powerful, immediately took up his bow and arrows and
+prepared to kill Indra himself, because Indra had introduced such irregular sannyasa orders.
+<br>
 <h2>Purport</h2>
-The association of devotees (arya-sangama) is the most important factor in this world. The word arya
-refers to those who are advancing spiritually. In the history of the human race, the Aryan family is
-considered to be the most elevated community in the world because it adopts the Vedic civilization. The
-Aryan family is distributed all over the world and is known as Indo-Aryan. In prehistoric days all of the
-members of the Aryan family followed the Vedic principles, and therefore they became spiritually
-advanced. The kings, known as rajarsis, were so perfectly educated as ksatriyas, or protectors of the
-citizens, and so greatly advanced in spiritual life, that there was not a bit of trouble for the citizens.
-The glorification of the Supreme Lord can be very much appreciated by the Aryan family. Although
-there is no bar for others, the members of the Aryan family very quickly catch the essence of spiritual life.
-How is it that we are finding it very easy to spread Krsna consciousness among the Europeans and
-Americans? History reports that the Americans and Europeans proved their capability when they were
-anxious to expand colonization, but at the present time, being contaminated by the advancement of
-material science, their sons and grandsons are turning into reprobates. This is due to their having lost
-their original spiritual culture, which is Vedic civilization. Presently these descendants of the Aryan family
-are taking this Krsna consciousness movement very seriously. Others who are associating with them and
-hearing the chanting of the Hare Krsna maha-mantra from the lips of pure devotees are also becoming
-captivated by the transcendental vibration. Transcendental vibrations are very much effective when
-chanted among Aryans, but even though one does not belong to the Aryan family, he will become a
-Vaisnava simply by hearing the mantra because the vibration has great influence over everyone.
-Maharaja Prthu points out that even the goddess of fortune, who is the constant companion of Lord
-Narayana, specifically wanted to hear about the Lord's glories, and for the association of the gopis, who
-are pure devotees, the goddess of fortune, Laksmi, underwent severe austerities. The impersonalist may
-ask why one should bother chanting the Hare Krsna maha-mantra continually for so many years instead
-of stopping and trying for kaivalya, liberation, or merging into the existence of the Lord. In answer,
-Maharaja Prthu maintains that the attraction of this chanting is so great that one cannot give up the
-process unless he is an animal. This is the case even if one comes in contact with this transcendental
-vibration by chance. Prthu Maharaja is very emphatic in this connection--only an animal can give up the
-practice of chanting Hare Krsna. Those who are not animals but actually intelligent, advanced, human,
-civilized men cannot give up this practice of continually chanting Hare Krsna, Hare Krsna, Krsna Krsna,
-Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare.
+It is the duty of the king not to tolerate the introduction of any irreligious systems. Since King Prthu
+was an incarnation of the Supreme personality of Godhead, certainly his duty was to cut down all kinds of
+irreligious systems. Following in his footsteps, all heads of state should themselves be bona fide
+representatives of God and should cut down all irreligious systems. Unfortunately they are cowards who
+declare a secular state. Such a mentality is a way of compromising religious and irreligious systems, but
+because of this citizens are generally becoming uninterested in spiritual advancement. Thus the situation
+deteriorates to such an extent that human society becomes hellish.
 </p>
 
 </div>
@@ -106,7 +117,7 @@ Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

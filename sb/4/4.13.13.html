@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.13.html">4.13.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam adhyavasayainam
-munayo gudha-manyavah
-upavrajyabruvan venam
-santvayitva ca samabhih
-<p></p>
+pusparnasya prabha bharya
+dosa ca dve babhuvatuh
+pratar madhyandinam sayam
+iti hy asan prabha-sutah
+<br>
 <h2>Synonyms</h2>
-evam--thus; adhyavasaya--having decided; enam--him; munayah--the great sages; gudha-manyavah--
-concealing their anger; upavrajya--having approached; abruvan--spoke; venam--to King Vena;
-santvayitva--after pacifying; ca--also; samabhih--with sweet words.
-<p></p>
+pusparnasya--of Pusparna; prabha--Prabha; bharya--wife; dosa--Dosa; ca--also; dve--two; babhuvatuh--
+were; pratah--Pratar; madhyandinam--Madhyandinam; sayam--Sayam; iti--thus; hi--certainly; asan--were;
+prabha-sutah--sons of Prabha.
+<br>
 <h2>Translation</h2>
-The great sages, having thus decided, approached King Vena. Concealing their real anger, they pacified
-him with sweet words and then spoke as follows.
+Pusparna had two wives, named Prabha and Dosa. Prabha had three sons, named Pratar, Madhyandinam
+and Sayam.
 </p>
 
 </div>
@@ -69,7 +108,7 @@ him with sweet words and then spoke as follows.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

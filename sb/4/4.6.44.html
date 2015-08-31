@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,66 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.44.html">4.6.44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/44"><b>44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vidyadhara ucuh
-tvan-mayayartham abhipadya kalevare 'smin
-krtva mamaham iti durmatir utpathaih svaih
-ksipto 'py asad-visaya-lalasa atma-moham
-yusmat-kathamrta-nisevaka udvyudasyet
-<p></p>
+tvam eva dharmartha-dughabhipattaye
+daksena sutrena sasarjithadhvaram
+tvayaiva loke 'vasitas ca setavo
+yan brahmanah sraddadhate dhrta-vratah
+<br>
 <h2>Synonyms</h2>
-vidyadharah--the Vidyadharas; ucuh--said; tvat-mayaya--by Your external potency; artham--the human
-body; abhipadya--after obtaining; kalevare--in the body; asmin--in this; krtva--having misidentified;
-mama--mine; aham--I; iti--thus; durmatih--the ignorant person; utpathaih--by wrong roads; svaih--by
-one's own belongings; ksiptah--distracted; api--even; asat--temporary; visaya-lalasah--having his
-happiness in sense objects; atma-moham--the illusion of the body as the self; yusmat--Your; katha--topics;
-amrta--nectar; nisevakah--relishing; ut--from a long distance; vyudasyet--can be delivered.
-<p></p>
+tvam--Your Lordship; eva--certainly; dharma-artha-dugha--benefit derived from religion and economic
+development; abhipattaye--for their protection; daksena--by Daksa; sutrena--making him the cause;
+sasarjitha--created; adhvaram--sacrifices; tvaya--by you; eva--certainly; loke--in this world; avasitah--
+regulated; ca--and; setavah--respect for the varnasrama institution; yan--which; brahmanah--the
+brahmanas; sraddadhate--respect very much; dhrta-vratah--taking it as a vow.
+<br>
 <h2>Translation</h2>
-The Vidyadharas said: Dear Lord, this human form of body is meant for attaining the highest
-perfectional objective, but, impelled by Your external energy, the living entity misidentifies himself with
-his body and with the material energy, and therefore, influenced by maya, he wants to become happy by
-material enjoyment. He is misled and always attracted by temporary, illusory happiness. But Your
-transcendental activities are so powerful that if one engages in the hearing and chanting of such topics, he
-can be delivered from illusion.
-<p></p>
+My dear lord, Your Lordship has introduced the system of sacrifices through the agency of Daksa, and
+thus one may derive the benefits of religious activities and economic development. Under your regulative
+principles, the institution of the four varnas and asramas is respected. The brahmanas therefore vow to
+follow this system strictly.
+<br>
 <h2>Purport</h2>
-The human form of life is called arthada because the body can very nicely help the embodied soul to
-achieve the highest perfection. Prahlada Maharaja said that even though temporary, the body can give us
-the highest perfectional achievement. In the process of evolution from the lower to the higher grade of
-living, the human form of life is a great boon. But maya is so strong that in spite of achieving this great
-boon of the human form of life, we are influenced by temporary material happiness, and we forget our
-goal of life. We are attracted by things which will cease to exist. The beginning of such attraction is the
-temporary body. In this horrible condition of life there is only one way of liberation--to engage in the
-activities of transcendental chanting and hearing of the holy name of the Supreme Lord: Hare Krsna, Hare
-Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare. The words yusmatkathamrta-
-nisevakah mean "those who engage in relishing the nectar of the topics of Your Lordship."
-There are two narrative books which especially concern the words and activities of Krsna. Bhagavad-gita
-is the instruction given by Krsna, and Srimad-Bhagavatam is the book containing topics exclusively about
-Krsna and His devotees. These two books are the special nectar of the words of Krsna. For those who
-engage in the preaching of these two Vedic literatures it is very easy to get out of the illusory conditional
-life imposed upon us by maya. The illusion is that the conditioned soul does not try to understand his
-spiritual identity. He is more interested in his external body, which is only a flash and which will be
-finished as soon as the time is designated. The whole atmosphere will change when the living entity has to
-transmigrate from one body to another. Under the spell of maya, he will again be satisfied in a different
-atmosphere. This spell of maya is called avaranatmika sakti because it is so strong that the living entity is
-satisfied in any abominable condition. Even if he is born as a worm living within the intestine or abdomen
-in the midst of urine and stool, still he is satisfied. This is the covering influence of maya. But the human
-form of life is a chance to understand, and if one misses this opportunity, he is most unfortunate. The way
-to get out of illusory maya is to engage in the topics of Krsna. Lord Caitanya advocated a process whereby
-everyone may remain in his present position without change but simply hear from the proper
-authoritative sources about Krsna. Lord Caitanya advised everyone to spread the word of Krsna. He
-advised, "All of you become spiritual masters. Your duty is simply to talk to whomever you meet of Krsna
-or of the instructions given by Krsna." The International Society for Krishna Consciousness is operating
-for this purpose. We do not ask anyone to first change his position and then come to us. Instead, we
-invite everyone to come with us and simply chant Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare
-Rama, Hare Rama, Rama Rama, Hare Hare, because we know that if one simply chants and hears the
-topics of Krsna, one's life will change; he will see a new light, and his life will be successful.
+The Vedic system of varna and asrama is never to be neglected, for these divisions are created by the
+Supreme Lord Himself for the upkeep of social and religious order in human society. The brahmanas, as
+the intelligent class of men in society, must vow to steadily respect this regulative principle. The tendency
+in this age of Kali to make a classless society and not observe the principles of varna and asrama is a
+manifestation of an impossible dream. Destruction of the social and spiritual orders will not bring
+fulfillment of the idea of a classless society. One should strictly observe the principles of varna and asrama
+for the satisfaction of the creator, for it is stated in the Bhagavad-gita by Lord Krsna that the four orders of
+the social system--brahmanas, ksatriyas, vaisyas and sudras--are His creation. They should act according
+to the regulative principles of this institution and satisfy the Lord, just as different parts of the body all
+engage in the service of the whole. The whole is the Supreme Personality of Godhead in His virat-rupa, or
+universal form. The brahmanas, ksatriyas, vaisyas and sudras are respectively the mouth, arms, abdomen
+and legs of the universal form of the Lord. As long as they are engaged in the service of the complete
+whole, their position is secure, otherwise they fall down from their respective positions and become
+degraded.
 </p>
 
 </div>
@@ -110,7 +128,7 @@ topics of Krsna, one's life will change; he will see a new light, and his life w
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

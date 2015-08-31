@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.50.html">4.25.50</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.50</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/50"><b>50</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-citim darumayim citva
-tasyam patyuh kalevaram
-adipya canumarane
-vilapanti mano dadhe
-<p></p>
+pitrhur nrpa purya dvar
+daksinena puranjanah
+rastram daksina-pancalam
+yati srutadharanvitah
+<br>
 <h2>Synonyms</h2>
-citim--funeral pyre; daru-mayim--made with wood; citva--having piled up; tasyam--on that; patyuh--of
-the husband; kalevaram--body; adipya--after igniting; ca--also; anumarane--to die along with him;
-vilapanti--lamenting; manah--her mind; dadhe--fixed.
-<p></p>
+pitrhuh--of the name Pitrhu; nrpa--O King; puryah--of the city; dvah--gate; daksinena--on the southern
+side; puranjanah--King Puranjana; rastram--country; daksina--southern; pancalam--of the name Pancala;
+yati--used to go; sruta-dhara-anvitah--along with his friend Srutadhara.
+<br>
 <h2>Translation</h2>
-She then prepared a blazing fire with firewood and placed the dead body of her husband upon it. When
-this was finished, she lamented severely and prepared herself to perish in the fire with her husband.
-<p></p>
+The southern gate of the city was known as Pitrhu, and through that gate King Puranjana used to visit
+the city named Daksina-pancala, accompanied by his friend Srutadhara.
+<br>
 <h2>Purport</h2>
-It is the long-standing tradition of the Vedic system that a faithful wife dies along with her husband.
-This is called saha-marana. In India this system was prevalent even to the date of British occupation. At
-that time, however, a wife who did not wish to die with her husband was sometimes forced to do so by
-her relatives. Formerly that was not the case. The wife used to enter the fire voluntarily. The British
-government stopped this practice, considering it inhuman. However, from the early history of India we
-find that when Maharaja Pandu died, he was survived by two wives--Madri and Kunti. The question was
-whether both should die or one should die. After the death of Maharaja Pandu, his wives settled that one
-should remain and the other should go. Madri would perish with her husband in the fire, and Kunti
-would remain to take charge of the five Pandava children. Even as late as 1936 we saw a devoted wife
-voluntarily enter the fire of her husband.
-This indicates that a devotee's wife must be prepared to act in such a way. Similarly, a devoted disciple
-of the spiritual master would rather die with the spiritual master than fail to execute the spiritual master's
-mission. As the Supreme Personality of Godhead comes down upon this earth to reestablish the principles
-of religion, so His representative, the spiritual master, also comes to reestablish religious principles. It is
-the duty of the disciples to take charge of the mission of the spiritual master and execute it properly.
-Otherwise the disciple should decide to die along with the spiritual master. In other words, to execute the
-will of the spiritual master, the disciple should be prepared to lay down his life and abandon all personal
-considerations.
+The right ear is used for karma-kandiya, or fruitive activities. As long as one is attached to the
+enjoyment of material resources, he hears from the right ear and uses the five senses to elevate himself to
+the higher planetary systems like Pitrloka. Consequently, the right ear is here described as the Pitrhu gate.
 </p>
 
 </div>
@@ -89,7 +113,7 @@ considerations.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

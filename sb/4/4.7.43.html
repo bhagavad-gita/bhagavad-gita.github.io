@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,54 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.43.html">4.7.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-snatvanusavanam tasmin
-kalindyah salile sive
-krtvocitani nivasann
-atmanah kalpitasanah
-<p></p>
+gandharva ucuh
+amsamsas te deva maricy-adaya ete
+brahmendradya deva-gana rudra-purogah
+krida-bhandam visvam idam yasya vibhuman
+tasmai nityam natha namas te karavama
+<br>
 <h2>Synonyms</h2>
-snatva--after taking bath; anusavanam--three times; tasmin--in that; kalindyah--in the River Kalindi (the
-Yamuna); salile--in the water; sive--which is very auspicious; krtva--performing; ucitani--suitable;
-nivasan--sitting; atmanah--of the self; kalpita-asanah--having prepared a sitting place.
-<p></p>
+gandharvah--the Gandharvas; ucuh--said; amsa-amsah--parts and parcels of Your body; te--Your; deva--
+dear Lord; marici-adayah--Marici and the great sages; ete--these; brahma-indra-adyah--headed by Brahma
+and Indra; deva-ganah--the demigods; rudra-purogah--having Lord Siva as the chief; krida-bhandam--a
+plaything; visvam--the whole creation; idam--this; yasya--of whom; vibhuman--the Supreme Almighty
+Great; tasmai--unto Him; nityam--always; natha--O Lord; namah--respectful obeisances; te--unto You;
+karavama--we offer.
+<br>
 <h2>Translation</h2>
-Narada Muni instructed: My dear boy, in the waters of the Yamuna River, which is known as Kalindi,
-you should take three baths daily because the water is very auspicious, sacred and clear. After bathing,
-you should perform the necessary regulative principles for astanga-yoga and then sit down on your asana
-[sitting place] in a calm and quiet position.
-<p></p>
+The Gandharvas said: Dear Lord, all the demigods, including Lord Siva, Lord Brahma, Indra and Marici
+and the great sages, are all only differentiated parts and parcels of Your body. You are the Supreme
+Almighty Great; the whole creation is just like a plaything for You. We always accept You as the Supreme
+Personality of Godhead, and we offer our respectful obeisances unto You.
+<br>
 <h2>Purport</h2>
-It appears from this statement that Dhruva Maharaja had already been instructed how to practice the
-eightfold yoga system, which is known as astanga-yoga. This system is explained in our Bhagavad-gita As
-It Is, in the chapter entitled, "Dhyana-yoga." It is understood that in astanga-yoga one practices settling
-the mind and then concentrating it on the form of Lord Visnu, as will be described in the following verses.
-It is clearly stated here that astanga-yoga is not a bodily gymnastic exercise, but a practice to concentrate
-the mind on the form of Visnu. Before sitting on his asana, which is also described in Bhagavad-gita, one
-has to cleanse himself very nicely in clear or sacred water thrice daily. The water of the Yamuna is
-naturally very clear and pure, and thus if anyone bathes there three times, undoubtedly he will be very
-greatly purified externally. Narada Muni, therefore, instructed Dhruva Maharaja to go to the bank of the
-Yamuna and thus become externally purified. This is part of the gradual process of practicing mystic yoga.
+In the Brahma-samhita it is said that Krsna is the Supreme Personality of Godhead. There may be many
+gods, from Brahma, Lord Siva, Indra and Candra down to the rulers of the lower planetary systems, the
+presidents, ministers, chairmen and kings. In fact, anyone can think that he is God. That is the false,
+puffed-up conviction of material life. Actually Visnu is the Supreme Lord, but there is even one above
+Visnu, for Visnu is also the plenary portion of a part of Krsna. In this verse this is referred to by the word
+amsamsah, which refers to part and parcel of a part and parcel. There are similar verses in the Caitanyacaritamrta
+which indicate that the Supreme Lord's parts and parcels again expand into other parts and
+parcels. As described in Srimad-Bhagavatam, there are many manifestations of Visnu and many
+manifestations of living entities. Visnu manifestations are called svamsa, partial manifestations, and the
+living entities are called vibhinnamsa. The demigods like Brahma and Indra have been promoted to such
+exalted positions by pious activities and austerities, but actually Visnu, or Krsna, is the master of
+everyone. ln the Caitanya-caritamrta it is said, ekale isvara krsna, ara saba bhrtya. This means that Krsna
+alone is the Supreme Personality of Godhead, and all others, even the visnu-tattva and certainly the living
+entities, are His servitors. Baladeva is the immediate expansion of Krsna. He also engages in the service of
+Krsna, and certainly the ordinary living entities are serving. Everyone is created, constitutionally, for
+serving Krsna. Here the Gandharvas acknowledge that although the demigods may represent themselves
+as the Supreme, actually they are not supreme. Real supremacy belongs to Krsna. Krsnas tu bhagavan
+svayam is the statement of Srimad-Bhagavatam: "Krsna is the only Supreme Lord." Worship of Krsna
+alone, therefore, includes worship of all the parts and parcels, just as watering the root of a tree also
+waters all the branches, twigs, leaves and flowers.
 </p>
 
 </div>
@@ -83,7 +136,7 @@ Yamuna and thus become externally purified. This is part of the gradual process 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

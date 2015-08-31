@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.21.html">4.5.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-karnantraikapadasvasyair
-nirjustam vrka-nabhibhih
-kadali-khanda-samruddhanalini-
-pulina-sriyam
-<p></p>
+pusno hy apatayad dantan
+kalingasya yatha balah
+sapyamane garimani
+yo 'hasad darsayan datah
+<br>
 <h2>Synonyms</h2>
-karnantra--by the karnantra; ekapada--the ekapada; asvasyaih--by the asvasya; nirjustam--fully enjoyed;
-vrka-nabhibhih--by the vrka and nabhi, or kasturi deer; kadali--of banana trees; khanda--with groups;
-samruddha--covered; nalini--of small lakes filled with lotus flowers; pulina--with the sandy banks;
-sriyam--very beautiful.
-<p></p>
+pusnah--of Pusa; hi--since; apatayat--extracted; dantan--the teeth; kalingasya--of the King of Kalinga;
+yatha--as; balah--Baladeva; sapyamane--while being cursed; garimani--Lord Siva; yah--who (Pusa);
+ahasat--smiled; darsayan--showing; datah--his teeth.
+<br>
 <h2>Translation</h2>
-There are varieties of deer, such as karnantra, ekapada, asvasya, vrka and kasturi, the deer which bears
-musk. Besides the deer there are many banana trees which decorate the small hillside lakes very nicely.
+Just as Baladeva knocked out the teeth of Dantavakra, the King of Kalinga, during the gambling match
+at the marriage ceremony of Aniruddha, Virabhadra knocked out the teeth of both Daksa, who had shown
+them while cursing Lord Siva, and Pusa, who by smiling sympathetically had also shown his teeth.
+<br>
+<h2>Purport</h2>
+Mere a reference is made to the marriage of Aniruddha, a grandson of Lord Krsna's. He kidnapped the
+daughter of Dantavakra, and thereafter he was arrested. Just as he was to be punished for the kidnapping,
+the soldiers from Dvaraka arrived, headed by Balarama, and a fight ensued amongst the ksatriyas. This
+sort of fight was very common, especially during marriage ceremonies, when everyone was in a
+challenging spirit. In that challenging spirit, a fight was sure to occur, and in such fights there was
+commonly killing and misfortune. After finishing such fighting, the parties would come to a compromise,
+and everything would be settled. This Daksa yajna was similar to such events. Now all of them--Daksa and
+the demigods Bhaga and Pusa and Bhrgu Muni--were punished by the soldiers of Lord Siva, but later
+everything would come to a peaceful end. So this spirit of fighting between one another was not exactly
+inimical. Because everyone was so powerful and wanted to show his strength by Vedic mantra or mystic
+power, all these fighting skills were very elaborately exhibited by the different parties at the Daksa yajna.
 </p>
 
 </div>
@@ -70,7 +122,7 @@ musk. Besides the deer there are many banana trees which decorate the small hill
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

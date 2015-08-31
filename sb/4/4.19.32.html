@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.32.html">4.19.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-ity adi-rajena nutah sa visva-drk
-tam aha rajan mayi bhaktir astu te
-distyedrsi dhir mayi te krta yaya
-mayam madiyam tarati sma dustyajam
-<p></p>
+prthu-kirteh prthor bhuyat
+tarhy ekona-sata-kratuh
+alam te kratubhih svistair
+yad bhavan moksa-dharma-vit
+<br>
 <h2>Synonyms</h2>
-maitreyah--Maitreya, the great sage; uvaca--spoke; iti--thus; adi-rajena--by the original king (Prthu);
-nutah--being worshiped; sah--He (the Supreme Personality of Godhead); visva-drk--the seer of the whole
-universe; tam--unto him; aha--said; rajan--my dear King; mayi--unto Me; bhaktih--devotional service;
-astu--let it be; te--your; distya--by good fortune; idrsi--like this; dhih--intelligence; mayi--unto Me; te--by
-you; krta--having been performed; yaya--by which; mayam--illusory energy; madiyam--My; tarati--crosses
-over; sma--certainly; dustyajam--very difficult to give up.
-<p></p>
+prthu-kirteh--of wide renown; prthoh--of King Prthu; bhuyat--let it be; tarhi--therefore; eka-una-satakratuh--
+he who performed ninety-nine yajnas; alam--there is nothing to be gained; te--of you; kratubhih--
+by performing sacrifices; su-istaih--well performed; yat--because; bhavan--yourself; moksa-dharma-vit--
+the knower of the path of liberation.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued by saying that the Lord, the seer of the universe, after hearing Prthu
-Maharaja's prayer, addressed the King: My dear King, may you always be blessed by engaging in My
-devotional service. Only by such purity of purpose, as you yourself very intelligently express, can one
-cross over the insurmountable illusory energy of maya.
-<p></p>
+"Let there be only ninety-nine sacrificial performances for Maharaja Prthu," Lord Brahma concluded.
+Lord Brahma then turned towards Maharaja Prthu and informed him that since he was thoroughly aware
+of the path of liberation, what was the use in performing more sacrifices?
+<br>
 <h2>Purport</h2>
-This is also confirmed in Bhagavad-gita, wherein the Lord also claims that the illusory energy is
-insurmountable. No one can transcend the illusory energy of maya by fruitive activity, speculative
-philosophy or mystic yoga. The only means for transcending illusory energy is devotional service, as the
-Lord Himself states: mam eva ye prapadyante mayam etam taranti te (Bg. 7.14). If one wants to cross over
-the ocean of material existence, there is no alternative than to take to devotional service. A devotee,
-therefore, should not care for any material position, whether in heaven or in hell. A pure devotee should
-always engage in the service of the Lord, for that is his real occupation. Simply by sticking to that
-position, one can overcome the stringent laws of material nature.
+Lord Brahma came down to pacify King Prthu regarding his continual performance of one hundred
+sacrifices. King Prthu was determined to perform one hundred sacrifices, and King Indra took this very
+seriously because Indra himself was known as the performer of one hundred sacrifices. Just as it is the
+nature of all living entities within this material world to become envious of their competitors, King Indra,
+although King of heaven, was also envious of King Prthu and therefore wanted to stop him from
+performing one hundred sacrifices. Actually there was great competition, and King Indra, to satisfy his
+senses, began to invent so many irreligious systems to obstruct King Prthu. To stop these irreligious
+inventions, Lord Brahma personally appeared in the sacrificial arena. As far as Maharaja Prthu was
+concerned, he was a great devotee of the Supreme Personality of Godhead; therefore it was not necessary
+for him to perform the prescribed Vedic ritualistic ceremonies. Such ceremonies are known as karma, and
+there is no need for a devotee in the transcendental position to execute them. As the ideal king, however,
+it was King Prthu's duty to perform sacrifices. A compromise was therefore to be worked out. By the
+blessings of Lord Brahma, King Prthu would become more famous than King Indra. Thus Prthu's
+determination to perform one hundred sacrifices was indirectly fulfilled by the blessings of Lord Brahma.
 </p>
 
 </div>
@@ -85,7 +126,7 @@ position, one can overcome the stringent laws of material nature.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

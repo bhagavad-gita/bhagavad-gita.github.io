@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,53 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.10.html">4.22.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasyedam deva-yajanam
-anuyajnam vitanvatah
-pracinagraih kusair asid
-astrtam vasudha-talam
-<p></p>
+adhana api te dhanyah
+sadhavo grha-medhinah
+yad-grha hy arha-varyambutrna-
+bhumisvaravarah
+<br>
 <h2>Synonyms</h2>
-yasya--whose; idam--this; deva-yajanam--satisfying the demigods by sacrifices; anuyajnam--continually
-sacrificing; vitanvatah--executing; pracina-agraih--keeping the kusa grass facing toward the eastern side;
-kusaih--the kusa grass; asit--remained; astrtam--scattered; vasudha-talam--all over the surface of the
-globe.
-<p></p>
+adhanah--not very rich; api--although; te--they; dhanyah--glorious; sadhavah--saintly persons; grhamedhinah--
+persons who are attached to family life; yat-grhah--whose house; hi--certainly; arha-varya--the
+most worshipable; ambu--water; trna--grass; bhumi--land; isvara--the master; avarah--the servants.
+<br>
 <h2>Translation</h2>
-Maharaja Barhisat executed many sacrifices all over the world. He scattered kusa grasses and kept the
-tops of the grasses pointed eastward.
-<p></p>
+A person who is not very rich and is attached to family life becomes highly glorified when saintly
+persons are present in his home. The master and servants who are engaged in offering the exalted visitors
+water, a sitting place and paraphernalia for reception are glorified, and the home itself is also glorified.
+<br>
 <h2>Purport</h2>
-As stated in the previous verse (kriya-kandesu nisnatah), Maharaja Barhisat dived very deeply into the
-fruitive activities of sacrifice. This means that as soon as he finished one yajna in one place, he began
-performing another yajna in the immediate vicinity. At the present moment there is a similar need to
-perform sankirtana-yajna all over the world. The Krsna consciousness movement has started performing
-sankirtana-yajna in different places, and it has been experienced that wherever sankirtana-yajna is
-performed, many thousands of people gather and take part in it. Imperceptible auspiciousness achieved in
-this connection should be continued all over the world. The members of the Krsna consciousness
-movement should perform sankirtana-yajnas one after another, so much that all the people of the world
-will either jokingly or seriously chant Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare
-Rama, Rama Rama, Hare Hare, and thus they will derive the benefit of cleansing the heart. The holy name
-of the Lord (harer nama) is so powerful that whether it is chanted jokingly or seriously the effect of
-vibrating this transcendental sound will be equally distributed. It is not possible at the present moment to
-perform repeated yajnas as Maharaja Barhisat performed, but it is within our means to perform
-sankirtana-yajna, which does not cost anything. One can sit down anywhere and chant Hare Krsna, Hare
-Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare. If the surface of the globe
-is overflooded with the chanting of the Hare Krsna mantra, the people of the world will be very, very
-happy.
+Materially if a man is not very rich, he is not glorious, and spiritually if a man is too attached to family
+life, he is also not glorious. But saintly persons are quite ready to visit the house of a poor man or a man
+who is attached to material family life. When this happens, the owner of the house and his servants are
+glorified because they offer water for washing the feet of a saintly person, sitting places and other things
+to receive him. The conclusion is that if a saintly person goes to the house of even an unimportant man,
+such a person becomes glorious by his blessings. It is therefore the Vedic system that a householder invite
+a saintly person in his home to receive his blessings. This system is still current in India, and therefore
+saintly persons, wherever they go, are hosted by the householders, who in turn get an opportunity to
+receive transcendental knowledge. It is the duty of a sannyasi, therefore, to travel everywhere just to favor
+the householders, who are generally ignorant of the values of spiritual life.
+It may be argued that all householders are not very rich and that one cannot receive great saintly
+persons or preachers because they are always accompanied by their disciples. If a householder is to
+receive a saintly person, he has to receive his entourage also. It is said in the sastras that Durvasa Muni
+was always accompanied by sixty thousand disciples and that if there was a little discrepancy in their
+reception, he would be very angry and would sometimes curse the host. The fact is that every
+householder, regardless of his position or economic condition, can at least receive saintly guests with
+great devotion and offer them drinking water, for drinking water is available always. In India the custom
+is that even an ordinary person is offered a glass of water if he suddenly visits and one cannot offer him
+foodstuff. If there is no water, then one can offer a sitting place, even if it is on straw mats. And if one has
+no straw mat, he can immediately cleanse the ground and ask the guest to sit there. Supposing that a
+householder cannot even do that, then with folded hands he can simply receive the guest, saying,
+"Welcome." And if he cannot do that, then he should feel very sorry for his poor condition and shed tears
+and simply offer obeisances with his whole family, wife and children. In this way he can satisfy any guest,
+even if the guest is a saintly person or a king.
 </p>
 
 </div>
@@ -89,7 +135,7 @@ happy.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

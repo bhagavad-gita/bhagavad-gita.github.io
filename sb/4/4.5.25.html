@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,59 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.25.html">4.5.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yayoh sura-striyah ksattar
-avaruhya sva-dhisnyatah
-kridanti pumsah sincantyo
-vigahya rati-karsitah
-<p></p>
+sadhu-vadas tada tesam
+karma tat tasya pasyatam
+bhuta-preta-pisacanam
+anyesam tad-viparyayah
+<br>
 <h2>Synonyms</h2>
-yayoh--in both of which (rivers); sura-striyah--the celestial damsels along with their husbands; ksattah--
-O Vidura; avaruhya--descending; sva-dhisnyatah--from their own airplanes; kridanti--they play; pumsah--
-their husbands; sincantyah--sprinkling with water; vigahya--after entering (the water); rati-karsitah--
-whose enjoyment has become diminished.
-<p></p>
+sadhu-vadah--joyful exclamation; tada--at that time; tesam--of those (followers of Lord Siva); karma--
+action; tat--that; tasya--of him (Virabhadra); pasyatam--seeing; bhuta-preta-pisacanam--of the bhutas
+(ghosts), pretas and pisacas; anyesam--of the others (in the party of Daksa); tat-viparyayah--the opposite
+of that (an exclamation of grief).
+<br>
 <h2>Translation</h2>
-My dear .ksatta, Vidura, the celestial damsels come down to those rivers in their airplanes with their
-husbands, and after sexual enjoyment, they enter the water and enjoy sprinkling their husbands with
-water.
-<p></p>
-<h2>Purport</h2>
-It is understood that even the damsels of the heavenly planets are polluted by thoughts of sex
-enjoyment, and therefore they come in airplanes to bathe in the rivers Nanda and Alakananda. It is
-significant that these rivers, Nanda and Alakananda, are sanctified by the dust of the lotus feet of the
-Supreme Personality of Godhead. In other words, just as the Ganges is sacred because its water emanates
-from the toes of the Supreme Personality of Godhead, Narayana, so whenever water or anything is in
-touch with devotional service to the Supreme Personality of Godhead, it is purified and spiritualized. The
-rules and regulations of devotional service are based on this principle: anything in touch with the lotus
-feet of the Lord is immediately freed from all material contamination.
-The damsels of the heavenly planets, polluted by thoughts of sex life, come down to bathe in the
-sanctified rivers and enjoy sprinkling water on their husbands. Two words are very significant in this
-connection. Rati-karsitah means that the damsels become morose after sex enjoyment. Although they
-accept sex enjoyment as a bodily demand, afterwards they are not happy.
-Another significant point is that Lord Govinda, the Supreme Personality of Godhead, is described here
-as Tirthapada. Tirtha means "sanctified place," and pada means "the lotus feet of the Lord." People go to a
-sanctified place to free themselves from all sinful reactions. In other words, those who are devoted to the
-lotus feet of the Supreme Personality of Godhead, Krsna, automatically become sanctified. The Lord's
-lotus feet are called tirtha-pada because under their protection there are hundreds and thousands of
-saintly persons who sanctify the sacred places of pilgrimage. Srila Narottama dasa Thakura, a great acarya
-of the Gaudiya Vaisnava-sampradaya, advises us not to travel to different places of pilgrimage.
-Undoubtedly it is troublesome to go from one place to another, but one who is intelligent can take shelter
-of the lotus feet of Govinda and thereby be automatically sanctified as the result of his pilgrimage. Anyone
-who is fixed in the service of the lotus feet of Govinda is called tirtha-pada; he does not need to travel on
-various pilgrimages, for he can enjoy all the benefits of such travel simply by engaging in the service of
-the lotus feet of the Lord. Such a pure devotee, who has implicit faith in the lotus feet of the Lord, can
-create sacred places in any part of the world where he decides to remain. Tirthi-kurvanti tirthani (Bhag.
-1.13.10). The places are sanctified due to the presence of pure devotees; any place automatically becomes
-a place of pilgrimage if either the Lord or His pure devotee remains or resides there. In other words, such
-a pure devotee, who is engaged one hundred percent in the service of the Lord, can remain anywhere in
-the universe, and that part of the universe immediately becomes a sacred place where he can peacefully
-render service to the Lord as the Lord desires.
+Upon seeing the action of Virabhadra, the party of Lord Siva was pleased and cried out joyfully, and all
+the bhutas, ghosts and demons that had come made a tumultuous sound. On the other hand, the
+brahmanas in charge of the sacrifice cried out in grief at the death of Daksa.
 </p>
 
 </div>
@@ -103,7 +110,7 @@ render service to the Lord as the Lord desires.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

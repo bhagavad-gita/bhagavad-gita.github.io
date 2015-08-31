@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.20.html">4.20.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-caru citra-padam slaksnam
-mrstam gudham aviklavam
-sarvesam upakarartham
-tada anuvadann iva
-<p></p>
+prasthanabhimukho 'py enam
+anugraha-vilambitah
+pasyan padma-palasakso
+na pratasthe suhrt satam
+<br>
 <h2>Synonyms</h2>
-caru--beautiful; citra-padam--flowery; slaksnam--very clear; mrstam--very great; gudham--meaningful;
-aviklavam--without any doubt; sarvesam--for all; upakara-artham--just to benefit them; tada--at that time;
-anuvadan--began to repeat; iva--like.
-<p></p>
+prasthana--to leave; abhimukhah--ready; api--although; enam--him (Prthu); anugraha--by kindness;
+vilambitah--detained; pasyan--seeing; padma-palasa-aksah--the Lord, whose eyes are like the petals of a
+lotus flower; na--not; pratasthe--departed; suhrt--the well-wisher; satam--of the devotees.
+<br>
 <h2>Translation</h2>
-Maharaja Prthu's speech was very beautiful, full of metaphorical language, clearly understandable and
-very pleasing to hear. His words were all grave and certain. It appears that when he spoke, he expressed
-his personal realization of the Absolute Truth in order to benefit all who were present.
-<p></p>
+The Lord was just about to leave, but because He was so greatly inclined toward the behavior of King
+Prthu, He did not depart. Seeing the behavior of Maharaja Prthu with His lotus eyes, He was detained
+because He is always the well-wisher of His devotees.
+<br>
 <h2>Purport</h2>
-Maharaja Prthu was beautiful in his external bodily features, and his speech was also very glorious in all
-respects. His words, which were nicely composed in highly metaphorical ornamental language, were
-pleasing to hear and were not only mellow but also very clearly understandable and without doubt or
-ambiguity.
+Here the words suhrt satam are very significant. The Supreme Personality of Godhead is always very
+inclined toward His devotee and is always thinking of the devotee's well-being. This is not partiality. As
+stated in Bhagavad-gita, the Lord is equal to everyone (samo 'ham sarva-bhutesu), but to one who
+particularly engages in His service, He is very much inclined. In another place, the Lord says that a
+devotee always exists in His heart, and He also exists always in the heart of the devotee.
+The special inclination of the Supreme Personality of Godhead for His pure devotee is not unnatural,
+nor is it partiality. For example, sometimes a father has several children, but he has special affection for
+one child who is very much inclined toward him. This is explained in Bhagavad-gita (10.10):
+tesam satata-yuktanam
+bhajatam priti-purvakam
+dadami buddhi-yogam tam
+yena mam upayanti te
+Those who constantly engage in the devotional service of the Lord in love and affection are directly in
+contact with the Supreme Personality of Godhead sitting as the Supersoul in everyone's heart. The Lord is
+not far away from the devotee. He is always in everyone's heart, but only the devotee can realize the Lord's
+presence, and thus he is directly connected, and he takes instruction from the Lord at every moment.
+Therefore, there is no chance of a devotee's being in error, nor is there any partiality on the part of the
+Lord for His pure devotees.
 </p>
 
 </div>
@@ -76,7 +129,7 @@ ambiguity.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

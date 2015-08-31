@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.30.html">4.10.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvam pratyag-atmani tada bhagavaty ananta
-ananda-matra upapanna-samasta-saktau
-bhaktim vidhaya paramam sanakair avidyagranthim
-vibhetsyasi mamaham iti prarudham
-<p></p>
+munaya ucuh
+auttanapada bhagavams tava sarngadhanva
+devah ksinotv avanatarti-haro vipaksan
+yan-namadheyam abhidhaya nisamya caddha
+loko 'njasa tarati dustaram anga mrtyum
+<br>
 <h2>Synonyms</h2>
-tvam--you; pratyak-atmani--unto the Supersoul; tada--at that time; bhagavati--unto the Supreme
-Personality of Godhead; anante--who is unlimited; ananda-matre--the reservoir of all pleasure; upapanna--
-possessed of; samasta--all; saktau--potencies; bhaktim--devotional service; vidhaya--by rendering;
-paramam--supreme; sanakaih--very soon; avidya--of illusion; granthim--the knot; vibhetsyasi--you will
-undo; mama--my; aham--I; iti--thus; prarudham--firmly fixed.
-<p></p>
+munayah ucuh--the sages said; auttanapada--O son of King Uttanapada; bhagavan--the Supreme
+Personality of Godhead; tava--your; sarnga-dhanva--one who bears the bow called Sarnga; devah--the
+Lord; ksinotu--may He kill; avanata--of the surrendered soul; arti--the distresses; harah--who removes;
+vipaksan--enemies; yat--whose; namadheyam--holy name; abhidhaya--uttering; nisamya--hearing; ca--
+also; addha--immediately; lokah--persons; anjasa--fully; tarati--overcome; dustaram--insurmountable;
+anga--O Dhruva; mrtyum--death.
+<br>
 <h2>Translation</h2>
-Thus regaining your natural position and rendering service unto the Supreme Lord, who is the allpowerful
-reservoir of all pleasure and who lives in all living entities as the Supersoul, you will very soon
-forget the illusory understanding of "I" and "my."
-<p></p>
+All the sages said: Dear Dhruva, O son of King Uttanapada, may the Supreme Personality of Godhead
+known as Sarngadhanva, who relieves the distresses of His devotees, kill all your threatening enemies. The
+holy name of the Lord is as powerful as the Lord Himself. Therefore, simply by chanting and hearing the
+holy name of the Lord, many men can be fully protected from fierce death without difficulty. Thus a
+devotee is saved.
+<br>
 <h2>Purport</h2>
-Dhruva Maharaja was already a liberated person because at the age of five years he had seen the
-Supreme Personality of Godhead. But even though liberated, he was, for the time being, afflicted by the
-illusion of maya, thinking himself the brother of Uttama in the bodily concept of life. The whole material
-world is working on the basis of "I" and "mine." This is the root of attraction to the material world. If one
-is attracted by this root of illusory conceptions--"I" and "mine"--he will have to remain within this
-material world in different exalted or nasty positions. By the grace of Lord Krsna, the sages and Lord
-Manu reminded Dhruva Maharaja that he should not continue this material conception of "I" and "mine."
-Simply by devotional service unto the Lord his illusion could be eradicated without difficulty.
+The great rsis approached Dhruva Maharaja at a time when his mind was very perplexed due to the
+magical feats exhibited by the Yaksas. A devotee is always protected by the Supreme Personality of
+Godhead. By His inspiration only, the sages came to encourage Dhruva Maharaja and assure him that
+there was no danger because he was a soul fully surrendered to the Supreme Lord. By the grace of the
+Lord, if a devotee, at the time of death, can simply chant His holy name--Hare Krsna, Hare Krsna, Krsna
+Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare--simply by chanting this maha-mantra,
+he immediately surpasses the great ocean of the material sky and enters the spiritual sky. He never has to
+come back for repetition of birth and death. Simply by chanting the holy name of the Lord, one can
+surpass the ocean of death, so Dhruva Maharaja was certainly able to surpass the illusory magical feats of
+the Yaksas, which for the time being disturbed his mind.
+Thus end the Bhaktivedanta purports of the Fourth Canto, Tenth Chapter, of the Srimad-Bhagavatam,
+entitled "Dhruva Maharaja's Fight With the Yaksas."
+Chapter Eleven
+Svayambhuva Manu Advises Dhruva Maharaja to Stop Fighting
 </p>
 
 </div>
@@ -82,7 +131,7 @@ Simply by devotional service unto the Lord his illusion could be eradicated with
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

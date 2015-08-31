@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.17.1.html">4.17.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 maitreya uvaca
-ittham prthum abhistuya
-rusa prasphuritadharam
-punar ahavanir bhita
-samstabhyatmanam atmana
-<p></p>
+evam sa bhagavan vainyah
+khyapito guna-karmabhih
+chandayam asa tan kamaih
+pratipujyabhinandya ca
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great saint Maitreya continued to speak; ittham--thus; prthum--unto King Prthu;
-abhistuya--after offering prayers; rusa--in anger; prasphurita--trembling; adharam--his lips; punah--again;
-aha--she said; avanih--the planet earth; bhita--in fear; samstabhya--after settling; atmanam--the mind;
-atmana--by the intelligence.
-<p></p>
+maitreyah uvaca--the great sage Maitreya continued to speak; evam--thus; sah--he; bhagavan--the
+Personality of Godhead; vainyah--in the form of the son of King Vena; khyapitah--being glorified; gunakarmabhih--
+by qualities and factual activities; chandayam asa--pacified; tan--those reciters; kamaih--by
+various presentations; pratipujya--offering all respects; abhinandya--offering prayers; ca--also.
+<br>
 <h2>Translation</h2>
-The great saint Maitreya continued to address Vidura: My dear Vidura, at that time, after the planet
-earth finished her prayers, King Prthu was still not pacified, and his lips trembled in great anger. Although
-the planet earth was frightened, she made up her mind and began to speak as follows in order to convince
-the King.
+The great sage Maitreya continued: In this way the reciters who were glorifying Maharaja Prthu readily
+described his qualities and chivalrous activities. At the end, Maharaja Prthu offered them various
+presentations with all due respect and worshiped them adequately.
 </p>
 
 </div>
@@ -73,7 +111,7 @@ the King.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

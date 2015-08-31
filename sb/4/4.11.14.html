@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,53 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.11.14.html">4.11.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam bahu-savam kalam
-mahatmavicalendriyah
-tri-vargaupayikam nitva
-putrayadan nrpasanam
-<p></p>
+samprasanne bhagavati
+purusah prakrtair gunaih
+vimukto jiva-nirmukto
+brahma nirvanam rcchati
+<br>
 <h2>Synonyms</h2>
-evam--thus; bahu--many; savam--years; kalam--time; maha-atma--great soul; avicala-indriyah--without
-being disturbed by sense agitation; tri-varga--three kinds of worldly activities; aupayikam--favorable for
-executing; nitva--having passed; putraya--to his son; adat--he handed over; nrpa-asanam--the royal
-throne.
-<p></p>
+samprasanne--upon satisfaction; bhagavati--of the Supreme Personality of Godhead; purusah--a person;
+prakrtaih--from the material; gunaih--modes of nature; vimuktah--being liberated; jiva-nirmuktah--freed
+from the subtle body also; brahma--unlimited; nirvanam--spiritual bliss; rcchati--achieves.
+<br>
 <h2>Translation</h2>
-The self-controlled great soul Dhruva Maharaja thus passed many, many years favorably executing three
-kinds of worldly activities, namely religiosity, economic development and satisfaction of all material
-desires. Thereafter he handed over the charge of the royal throne to his son.
-<p></p>
+One who actually satisfies the Supreme Personality of Godhead during one's lifetime becomes liberated
+from the gross and subtle material conditions. Thus being freed from all material modes of nature, he
+achieves unlimited spiritual bliss.
+<br>
 <h2>Purport</h2>
-Perfection of materialistic life is suitably attained by the process of observing religious principles. This
-leads automatically to successful economic development, and thus there is no difficulty in satisfying all
-material desires. Since Dhruva Maharaja, as a king, had to keep up his status quo or it would not have
-been possible to rule over the people in general, he did it perfectly. But as soon as he saw that his son was
-grown up and could take charge of the royal throne, he immediately handed over the charge and retired
-from all material engagements.
-One word used here is very significant--avicalendriyah, which means that he was not disturbed by the
-agitation of the senses nor was his sensory power diminished, although in years he was a very old man.
-Since he ruled over the world for thirty-six thousand years, naturally one may conclude that he became
-very, very old, but factually his senses were very young--and yet he was not interested in sense
-gratification. In other words, he remained self-controlled. He performed his duties perfectly according to
-the materialistic way. That is the way of behavior of great devotees. Srila Raghunatha dasa Gosvami, one
-of the direct disciples of Lord Caitanya, was the son of a very rich man. Although he had no interest in
-enjoying material happiness, when he was entrusted with doing something in managing the state, he did it
-perfectly. Srila Gaurasundara advised him, "From within, keep yourself and your mind completely aloof,
-but externally execute the material duties just as they need to be done." This transcendental position can
-be achieved by devotees only, as described in the Bhagavad-gita: while others, such as yogis, try to control
-their senses by force, devotees, even though possessing full sensory powers, do not use them because they
-engage in higher, transcendental activities.
+In the previous verse it has been explained that one should treat all living entities with tolerance, mercy,
+friendship and equality. By such behavior one satisfies the Supreme Personality of Godhead, and upon His
+satisfaction the devotee immediately becomes free from all material conditions. The Lord also confirms
+this in the Bhagavad-gita: "Anyone who sincerely and seriously engages in My service immediately
+becomes situated in the transcendental stage wherein he can enjoy unlimited spiritual bliss." Everyone in
+this material world is struggling hard in order to achieve blissful life. Unfortunately, people do not know
+how to achieve it. Atheists do not believe in God, and certainly they do not please Him. Here it is clearly
+said that upon pleasing the Supreme Personality of Godhead one immediately attains to the spiritual
+platform and enjoys unlimited blissful life. To become free from material existence means to become free
+from the influence of material nature.
+The word samprasanne, which is used in this verse, means "being satisfied." A person should act in such
+a way that the Lord is satisfied by the activity; it is not that he himself is to be satisfied. Of course, when
+the Lord is satisfied, the devotee automatically becomes satisfied. This is the secret of the process of
+bhakti-yoga. Outside of bhakti-yoga, everyone is trying to satisfy himself. No one is trying to satisfy the
+Lord. Karmis grossly try to satisfy their senses, but even those who are elevated to the platform of
+knowledge also try to satisfy themselves, in a subtle form. Karmis try to satisfy themselves by sense
+gratification, and jnanis try to satisfy themselves by subtle activities or mental speculation and thinking
+themselves to be God. Yogis also try to satisfy themselves, by thinking that they can achieve different
+mystic perfections. But only devotees try to satisfy the Supreme Personality of Godhead. The devotees'
+process of self-realization is completely different from the processes of the karmis, jnanis and yogis.
+Everyone else is trying to satisfy himself, whereas the devotee tries only to satisfy the Lord. The
+devotional process is completely different from the others; by working to please the Lord by engaging his
+senses in the Lord's loving service, the devotee is immediately situated on the transcendental platform,
+and he enjoys unlimited blissful life.
 </p>
 
 </div>
@@ -92,7 +135,7 @@ engage in higher, transcendental activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

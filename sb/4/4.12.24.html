@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.24.html">4.12.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-etad akhyahi me brahman
-sunithatmaja-cestitam
-sraddadhanaya bhaktaya
-tvam paravara-vittamah
-<p></p>
+tasyakhila-jagad-dhatur
+avam devasya sarnginah
+parsadav iha sampraptau
+netum tvam bhagavat-padam
+<br>
 <h2>Synonyms</h2>
-etat--all these; akhyahi--please describe; me--unto me; brahman--O great brahmana; sunitha-atmaja--of
-the son of Sunitha, Vena; cestitam--activities; sraddadhanaya--faithful; bhaktaya--unto your devotee;
-tvam--you; para-avara--with past and future; vit-tamah--well conversant.
-<p></p>
+tasya--His; akhila--entire; jagat--universe; dhatuh--creator; avam--we; devasya--of the Supreme
+Personality of Godhead; sarnginah--who has the bow named Sarnga; parsadau--associates; iha--now;
+sampraptau--approached; netum--to take; tvam--you; bhagavat-padam--to the position of the Supreme
+Personality of Godhead.
+<br>
 <h2>Translation</h2>
-Vidura requested Maitreya: My dear brahmana, you are well conversant with all subjects, both past and
-future. Therefore I wish to hear from you all the activities of King Vena. I am your faithful devotee, so
-please explain this.
-<p></p>
+We are representatives of the Supreme Personality of Godhead, the creator of the whole universe, who
+carries in His hand the bow named Sarnga. We have been specifically deputed to take you to the spiritual
+world.
+<br>
 <h2>Purport</h2>
-Vidura accepted Maitreya as his spiritual master. A disciple always inquires from the spiritual master,
-and the spiritual master answers the question, provided the disciple is very gentle and devoted. Srila
-Visvanatha Cakravarti Thakura said that by the mercy of the spiritual master one is blessed with the
-mercy of the Supreme Lord. The spiritual master is not inclined to disclose all the secrets of
-transcendental science unless the disciple is very submissive and devoted. As stated in the Bhagavad-gita,
-the process of receiving knowledge from the spiritual master entails submission, inquiry and service.
+In Bhagavad-gita the Lord says that simply by knowing His transcendental pastimes (whether within
+this material world or in the spiritual world), anyone who understands factually who He is, how He
+appears and how He acts can be immediately fit for transfer to the spiritual world. This principle stated in
+the Bhagavad-gita operated in the case of King Dhruva. Throughout his life he tried to understand the
+Supreme Personality of Godhead by austerity and penances. Now, the mature result was that Dhruva
+Maharaja became fit to be carried to the spiritual world, accompanied by the confidential associates of the
+Lord.
 </p>
 
 </div>
@@ -78,7 +119,7 @@ the process of receiving knowledge from the spiritual master entails submission,
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

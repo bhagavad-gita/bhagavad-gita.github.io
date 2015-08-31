@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.16.8.html">4.16.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-suta uvaca
-codito vidurenaivam
-vasudeva-katham prati
-prasasya tam prita-mana
-maitreyah pratyabhasata
-<p></p>
+deve 'varsaty asau devo
+naradeva-vapur harih
+krcchra-pranah praja hy esa
+raksisyaty anjasendravat
+<br>
 <h2>Synonyms</h2>
-sutah uvaca--Suta Gosvami said; coditah--inspired; vidurena--by Vidura; evam--thus; vasudeva--of Lord
-Krsna; katham--narration; prati--about; prasasya--praising; tam--him; prita-manah--being very pleased;
-maitreyah--the saint Maitreya; pratyabhasata--replied.
-<p></p>
+deve--when the demigod (Indra); avarsati--does not supply rains; asau--that; devah--Maharaja Prthu;
+nara-deva--of the king; vapuh--having the body; harih--the Supreme Personality of Godhead; krcchrapranah--
+suffering living entities; prajah--the citizens; hi--certainly; esah--this; raksisyati--will protect;
+anjasa--very easily; indra-vat--like King Indra.
+<br>
 <h2>Translation</h2>
-Suta Gosvami continued: When Vidura became inspired to hear of the activities of Lord Krsna in His
-various incarnations, Maitreya, also being inspired and being very pleased with Vidura, began to praise
-him. Then Maitreya spoke as follows.
-<p></p>
+When there is no rainfall and the citizens are in great danger due to the scarcity of water, this royal
+Personality of Godhead will be able to supply rains exactly like the heavenly King Indra. Thus he will very
+easily be able to protect the citizens from drought.
+<br>
 <h2>Purport</h2>
-Talk of krsna-katha, or topics about Lord Krsna or His incarnations, is spiritually so inspiring that the
-reciter and hearer are never exhausted. That is the nature of spiritual talks. We have actually seen that one
-can never become satiated by hearing the conversations between Vidura and Maitreya. Both of them are
-devotees, and the more Vidura inquires, the more Maitreya is encouraged to speak. A symptom of
-spiritual talks is that no one feels tired. Thus upon hearing the questions of Vidura, the great sage
-Maitreya did not feel disgusted but rather felt encouraged to speak at greater length.
+King Prthu is very appropriately compared to the sun and the demigod Indra. King Indra of the
+heavenly planets is in charge of distributing water over the earth and other planetary systems. It is
+indicated that King Prthu would arrange for the distribution of rainfall personally if Indra failed to
+discharge his duty properly. Sometimes the King of heaven, Indra, would become angry at the inhabitants
+of the earth if they did not offer sacrifices to appease him. King Prthu, however, being an incarnation of
+the Supreme Personality of Godhead, did not depend on the mercy of the heavenly King. It is foretold
+herein that if there would be a scarcity of rain, King Prthu would manage to counteract the deficiency by
+virtue of his godly powers. Such powers were also exhibited by Lord Krsna when He was present in
+Vrndavana. Indeed, when Indra poured incessant water on Vrndavana for seven days, the inhabitants were
+protected by Krsna, who raised Govardhana Hill over their heads as a great umbrella. Thus Lord Krsna is
+also known as Govardhana-dhari.
 </p>
 
 </div>
@@ -79,7 +123,7 @@ Maitreya did not feel disgusted but rather felt encouraged to speak at greater l
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

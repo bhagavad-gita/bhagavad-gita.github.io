@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.27.html">4.10.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam eva mrtyum amrtam tata daivam
-sarvatmanopehi jagat-parayanam
-yasmai balim visva-srjo haranti
-gavo yatha vai nasi dama-yantritah
-<p></p>
+samudra urmibhir bhimah
+plavayan sarvato bhuvam
+asasada maha-hradah
+kalpanta iva bhisanah
+<br>
 <h2>Synonyms</h2>
-tam--unto Him; eva--certainly; mrtyum--death; amrtam--immortality; tata--my dear son; daivam--the
-Supreme; sarva-atmana--in all respects; upehi--surrender; jagat--of the world; parayanam--ultimate goal;
-yasmai--unto whom; balim--offerings; visva-srjah--all the demigods like Brahma; haranti--bear; gavah--
-bulls; yatha--as; vai--without fail; nasi--in the nose; dama--by a rope; yantritah--controlled.
-<p></p>
+samudrah--the sea; urmibhih--with waves; bhimah--fierce; plavayan--inundating; sarvatah--in all
+directions; bhuvam--the earth; asasada--came forward; maha-hradah--making great sounds; kalpa-ante--
+(the dissolution) at the end of a kalpa; iva--like; bhisanah--fearful.
+<br>
 <h2>Translation</h2>
-My dear boy Dhruva, please surrender unto the Supreme Personality of Godhead, who is the ultimate
-goal of the progress of the world. Everyone, including the demigods headed by Lord Brahma, is working
-under His control, just as a bull, prompted by a rope in its nose, is controlled by its owner.
-<p></p>
-<h2>Purport</h2>
-The material disease is to declare independence from the supreme controller. Factually, our material
-existence begins when we forget the supreme controller and wish to lord it over material nature. Everyone
-in the material world is trying his best to become the supreme controller--individually, nationally, socially
-and in many other ways. Dhruva Maharaja was advised to stop fighting by his grandfather, who was
-concerned that Dhruva was adhering to a personal ambition to fight to annihilate the whole race of
-Yaksas. In this verse, therefore, Svayambhuva Manu seeks to eradicate the last tinge of false ambition in
-Dhruva by explaining the position of the supreme controller. The words mrtyum amrtam, "death and
-immortality," are significant. In Bhagavad-gita the Lord says, "I am ultimate death, who takes away
-everything from the demons." The demons' business is to continually struggle for existence as lords over
-material nature. The demons repeatedly meet death after death and create a network of involvement in the
-material world. The Lord is death for the demons, but for devotees He is amrta, eternal life. Devotees who
-render continuous service to the Lord have already attained immortality, for whatever they are doing in
-this life they will continue to do in the next. They will simply change their material bodies for spiritual
-bodies. Unlike the demons, they no longer have to change material bodies, The Lord, therefore, is
-simultaneously death and immortality. He is death for demons and immortality for devotees. He is the
-ultimate goal of everyone because He is the cause of all causes. Dhruva Maharaja was advised to surrender
-unto Him in all respects, without keeping any personal ambition. One may put forward the argument,
-"Why are the demigods worshiped?" The answer is given here that demigods are worshiped by less
-intelligent men. The demigods themselves accept sacrifices for the ultimate satisfaction of the Supreme
-Personality of Godhead.
+Then, as if it were the time of the dissolution of the whole world, the fierce sea with foaming waves and
+great roaring sounds came forward before him.
 </p>
 
 </div>
@@ -93,7 +108,7 @@ Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

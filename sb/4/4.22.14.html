@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,59 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.14.html">4.22.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pitradistah praja-sarge
-tapase 'rnavam avisan
-dasa-varsa-sahasrani
-tapasarcams tapas-patim
-<p></p>
+bhavatsu kusala-prasna
+atmaramesu nesyate
+kusalakusala yatra
+na santi mati-vrttayah
+<br>
 <h2>Synonyms</h2>
-pitra--by the father; adistah--being ordered by; praja-sarge--in the matter of begetting children; tapase--
-for executing austerity; arnavam--in the ocean; avisan--entered; dasa-varsa--ten years; sahasrani--such
-thousands; tapasa--by their austerity; arcan--worshiped; tapah--of austerity; patim--the master.
-<p></p>
+bhavatsu--unto you; kusala--good fortune; prasnah--question; atma-aramesu--one who is always
+engaged in spiritual bliss; na isyate--there is no need of; kusala--good fortune; akusalah--inauspiciousness;
+yatra--where; na--never; santi--exists; mati-vrttayah--mental concoction.
+<br>
 <h2>Translation</h2>
-When all these Pracetas were ordered by their father to marry and beget children, they all entered the
-ocean and practiced austerities and penances for ten thousand years. Thus they worshiped the master of
-all austerity, the Supreme Personality of Godhead.
-<p></p>
+Prthu Maharaja continued: My dear sirs, there is no need to ask about your good and bad fortune
+because you are always absorbed in spiritual bliss. The mental concoction of the auspicious and
+inauspicious does not exist in you.
+<br>
 <h2>Purport</h2>
-Sometimes great sages and ascetics enter the Himalaya Mountains in order to find seclusion from the
-turmoil of the world. It appears, however, that all the Pracetas, the sons of Pracinabarhi, entered the
-depths of the ocean to perform austerity in a secluded place. Since they performed austerities for ten
-thousand years, this incident took place in the Satya-yuga, when people used to live for a hundred
-thousand years. It is also significant that by their austerity they worshiped the master of austerity, Sri
-Krsna, the Supreme Personality of Godhead. If one wants to perform austerities and penances in order to
-attain the supreme goal, one must attain the favor of the Supreme Personality of Godhead. If one achieves
-the favor of the Supreme Lord, it is to be understood that he has finished all kinds of austerities and
-penances and has attained efficiency in their execution. On the other hand, if one does not attain the
-perfect stage of devotional service, all austerities and penances actually have no meaning, for without the
-Supreme Lord no one can attain the highest results derived from performing them. As stated in Bhagavadgita
-(5.29), Lord Sri Krsna is the master of all penances and sacrifices. Bhoktaram yajna-tapasam sarvaloka-
-mahesvaram. Thus the desired result of performing austerities may be derived from Lord Krsna.
-In Srimad-Bhagavatam (3.33.7) it is stated:
-aho bata sva-paco 'to gariyan
-yaj-jihvagre vartate nama tubhyam
-tepus tapas te juhuvuh sasnur arya
-brahmanucur nama grnanti ye te
-Even if a person is born in a family of candalas--the lowest birth one can get in human society--he is
-glorious if he chants the holy names of the Lord, for it is to be understood that by such chanting a devotee
-definitely proves that he underwent all kinds of austerities in his previous life. By the grace of Lord
-Caitanya, one who chants the maha-mantra (Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare
-Rama, Hare Rama, Rama Rama, Hare Hare) attains the highest perfectional stage, which had previously
-been attained by people who entered the ocean and executed austerities for ten thousand years. In this age
-of Kali, if a person does not take advantage of chanting the Hare Krsna mantra, which is offered as a great
-concession to the fallen human beings of this age, it is to be understood that he is very much bewildered
-by the illusory energy of the Lord.
+In the Caitanya-caritamrta (Antya 4.176) it is said:
+'dvaite' bhadrabhadra-jnana, saba----'manodharma'
+'ei bhala, ei manda,'----ei saba 'bhrama'
+In this material world the auspicious and inauspicious are simply mental concoctions because such
+things exist only due to association with the material world. This is called illusion, or atma-maya. We
+think ourselves created by material nature exactly as we think ourselves experiencing so many things in a
+dream. The spirit soul, however, is always transcendental. There is no question of becoming materially
+covered. This covering is simply something like a hallucination or a dream. In Bhagavad-gita (2.62) it is
+also said, sangat sanjayate kamah. Simply by association we create artificial material necessities. Dhyayato
+visayan pumsah sangas tesupajayate. When we forget our real constitutional position and wish to enjoy
+the material resources, our material desires manifest, and we associate with varieties of material
+enjoyment. As soon as the concoctions of material enjoyment are there, because of our association we
+create a sort of lust or eagerness to enjoy them, and when that false enjoyment does not actually make us
+happy, we create another illusion, known as anger, and by the manifestation of anger, the illusion
+becomes stronger. When we are illusioned in this way, forgetfulness of our relationship with Krsna
+follows, and by thus losing Krsna consciousness, our real intelligence is defeated. In this way we become
+entangled in this material world. In Bhagavad-gita (2.63) it is said:
+krodhad bhavati sammohah
+sammohat smrti-vibhramah
+smrti-bhramsad buddhi-naso
+buddhi-nasat pranasyati
+By material association we lose our spiritual consciousness; consequently there is the question of the
+auspicious and inauspicious. But those who are atmarama, or self-realized, have transcended such
+questions. The atmaramas, or self-realized persons, gradually making further progress in spiritual bliss,
+come to the platform of association with the Supreme personality of Godhead. That is the perfection of
+life. In the beginning, the Kumaras were self-realized impersonalists, but gradually they became attracted
+to the personal pastimes of the Supreme Lord. The conclusion is that for those who are always engaged in
+the devotional service of the Personality of Godhead, the duality of the auspicious and inauspicious does
+not arise. Prthu Maharaja is therefore asking about auspiciousness not for the sake of the Kumaras but for
+his own sake.
 </p>
 
 </div>
@@ -99,7 +141,7 @@ by the illusory energy of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

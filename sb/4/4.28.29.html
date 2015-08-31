@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.29.html">4.28.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vidura uvaca
-so 'yam adya maha-yogin
-bhavata karunatmana
-darsitas tamasah paro
-yatrakincana-go harih
-<p></p>
+upayeme virya-panam
+vaidarbhim malayadhvajah
+yudhi nirjitya rajanyan
+pandyah para-puranjayah
+<br>
 <h2>Synonyms</h2>
-vidurah uvaca--Vidura said; sah--that; ayam--this; adya--today; maha-yogin--O great mystic; bhavata--by
-you; karuna-atmana--most merciful; darsitah--I have been shown; tamasah--of the darkness; parah--the
-other side; yatra--where; akincana-gah--approachable by the materially free; harih--the Supreme
-Personality of Godhead.
-<p></p>
+upayeme--married; virya--of valor or prowess; panam--the prize; vaidarbhim--daughter of Vidarbha;
+malaya-dhvajah--Malayadhvaja; yudhi--in the fight; nirjitya--after conquering; rajanyan--other princes;
+pandyah--best of the learned, or born in the country known as Pandu; para--transcendental; puram--city;
+jayah--conqueror.
+<br>
 <h2>Translation</h2>
-Sri Vidura said: O great mystic, O greatest of all devotees, by your causeless mercy I have been shown
-the path of liberation from this world of darkness. By following this path, a person liberated from the
-material world can return home, back to Godhead.
-<p></p>
+It was fixed that Vaidarbhi, daughter of King Vidarbha, was to be married to a very powerful man,
+Malayadhvaja, an inhabitant of the Pandu country. After conquering other princes, he married the
+daughter of King Vidarbha.
+<br>
 <h2>Purport</h2>
-This material world is called tamah, dark, and the spiritual world is called light. The Vedas enjoin that
-everyone should try to get out of the darkness and go to the kingdom of light. Information of that
-kingdom of light can be attained through the mercy of a self-realized soul. One also has to get rid of all
-material desires. As soon as one frees himself from material desires and associates with a liberated person,
-the path back home, back to Godhead, is clear.
+It is customary among ksatriyas for a princess to be offered under certain conditions. For instance,
+Draupadi was offered in marriage to one who could pierce a fish with an arrow simply by seeing the
+reflection of that fish. Krsna married one of His queens after conquering seven strong bulls. The Vedic
+system is for a daughter of a king to be offered under certain conditions. Vaidarbhi, the daughter of
+Vidarbha, was offered to a great devotee and powerful king. Since King Malayadhvaja was both a powerful
+king and great devotee, he fulfilled all the requirements. The name Malayadhvaja signifies a great devotee
+who stands as firm as Malaya Hill and, through his propaganda, makes other devotees similarly as firm.
+Such a maha-bhagavata can prevail over the opinions of all others. A strong devotee makes propaganda
+against all other spiritual conceptions--namely jnana, karma and yoga. With his devotional flag unfurled,
+he always stands fast to conquer other conceptions of transcendental realization. Whenever there is an
+argument between a devotee and a nondevotee, the pure, strong devotee comes out victorious.
+The word pandya comes from the word panda, meaning "knowledge." Unless one is highly learned, he
+cannot conquer nondevotional conceptions. The word para means "transcendental," and pura means
+"city." The para-pura is Vaikuntha, the kingdom of God, and the word jaya refers to one who can
+conquer. This means that a pure devotee, who is strong in devotional service and who has conquered all
+nondevotional conceptions, can also conquer the kingdom of God. In other words, one can conquer the
+kingdom of God, Vaikuntha, only by rendering devotional service. The Supreme Personality of Godhead
+is called ajita, meaning that no one can conquer Him, but a devotee, by strong devotional service and
+sincere attachment to the Supreme Personality of Godhead, can easily conquer Him. Lord Krsna is fear
+personified for everyone, but He voluntarily agreed to fear the stick of mother Yasoda. Krsna, God, cannot
+be conquered by anyone but His devotee. Such a devotee kindly married the daughter of King Vidarbha.
 </p>
 
 </div>
@@ -79,7 +133,7 @@ the path back home, back to Godhead, is clear.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

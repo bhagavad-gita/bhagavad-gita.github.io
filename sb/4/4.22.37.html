@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,79 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.37.html">4.22.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-svargapavarga-dvaraya
-nityam suci-sade namah
-namo hiranya-viryaya
-catur-hotraya tantave
-<p></p>
+tat tvam narendra jagatam atha tasthusam ca
+dehendriyasu-dhisanatmabhir avrtanam
+yah ksetravit-tapataya hrdi visvag avih
+pratyak cakasti bhagavams tam avehi so 'smi
+<br>
 <h2>Synonyms</h2>
-svarga--the heavenly planets; apavarga--the path of liberation; dvaraya--unto the door of; nityam--
-eternally; suci-sade--unto the most purified; namah--my obeisances unto You; namah--my obeisances;
-hiranya--gold; viryaya--semen; catuh-hotraya--the Vedic sacrifices of the name; tantave--unto one who
-expands.
-<p></p>
+tat--therefore; tvam--you; nara-indra--O best of kings; jagatam--of the moving; atha--therefore;
+tasthusam--the immovable; ca--also; deha--body; indriya--senses; asu--life air; dhisana--by consideration;
+atmabhih--self-realization; avrtanam--those who are covered in that way; yah--one who; ksetra-vit--
+knower of the field; tapataya--by controlling; hrdi--within the heart; visvak--everywhere; avih--manifest;
+pratyak--in every hair follicle; cakasti--shining; bhagavan--the Supreme Personality of Godhead; tam--
+unto Him; avehi--try to understand; sah asmi--I am that.
+<br>
 <h2>Translation</h2>
-My Lord, O Aniruddha, You are the authority by which the doors of the higher planetary systems and
-liberation are opened. You are always within the pure heart of the living entity. Therefore I offer my
-obeisances unto You. You are the possessor of semen which is like gold, and thus, in the form of fire, You
-help the Vedic sacrifices, beginning with catur-hotra. Therefore I offer my obeisances unto You.
-<p></p>
+Sanat-kumara advised the King: Therefore, my dear King Prthu, try to understand the Supreme
+Personality of Godhead, who is living within everyone's heart along with the individual soul, in each and
+every body, either moving or not moving. The individual souls are fully covered by the gross material
+body and subtle body made of the life air and intelligence.
+<br>
 <h2>Purport</h2>
-The word svarga indicates a position in the higher or heavenly planetary systems, and the word
-apavarga means "liberation." Those who are attached to the karma-kandiya activities described in the
-Vedas are actually entangled in the three modes of material nature. The Bhagavad-gita therefore says that
-one should be above the dominion of fruitive activities. There are different kinds of liberation, or mukti.
-The best mukti is engagement in the devotional service of the Supreme Lord. Not only does Lord
-Aniruddha help fruitive actors by elevating them to the higher planetary systems, but He also helps the
-devotee engage in devotional service by dint of His inexhaustible energy. Just as heat is the source of
-material energy, the inspiration of Lord Aniruddha is the energy by which one can engage in executing
-devotional service.
+In this verse it is specifically advised that instead of wasting time in the human form of life endeavoring
+for economic development and sense gratification, one should try to cultivate spiritual values by
+understanding the Supreme Personality of Godhead, who is existing with the individual soul within
+everyone's heart. The individual soul and the Supreme Personality of Godhead in His Paramatma feature
+are both sitting within this body, which is covered by gross and subtle elements. To understand this is to
+attain actual spiritual culture. There are two ways of advancing in spiritual culture--by the method of the
+impersonalist philosophers and by devotional service. The impersonalist comes to the conclusion that he
+and the Supreme Spirit are one, whereas devotees, or personalists, realize the Absolute Truth by
+understanding that because the Absolute Truth is the supreme predominator and we living entities are
+predominated, our duty is to serve Him. The Vedic injunctions say, tat tvam asi, "You are the same," and
+so'ham, "I am the same." The impersonalist conception of these mantras is that the Supreme Lord, or the
+Absolute Truth, and the living entity are one, but from the devotee's point of view these mantras assert
+that both the Supreme Lord and ourselves are of the same quality. Tat tvam asi, ayam atma brahma. Both
+the Supreme Lord and the living entity are spirit. Understanding this is self-realization. The human form
+of life is meant for understanding the Supreme Lord and oneself by spiritual cultivation of knowledge.
+One should not waste valuable life simply engaged in economic development and sense gratification.
+In this verse the word ksetra-vit is also important. This word is explained in Bhagavad-gita (13.2): idam
+sariram kaunteya ksetram ity abhidhiyate. This body is called ksetra (the field of activities), and the
+proprietors of the body (the individual soul and the Supersoul sitting within the body) are both called
+ksetra-vit. But there is a difference between the two kinds of ksetra-vit. One ksetra-vit, or knower of the
+body, namely the Paramatma, or the Supersoul, is directing the individual soul. When we rightly take the
+direction of the Supersoul, our life becomes successful. He is directing from within and from without.
+From within He is directing as caitya-guru, or the spiritual master sitting within the heart. Indirectly He is
+also helping the living entity by manifesting Himself as the spiritual master outside. In both ways the Lord
+is giving directions to the living entity so that he may finish up his material activities and come back
+home, back to Godhead. The presence of the Supreme Soul and the individual soul within the body can
+be perceived by anyone by the fact that as long as the individual soul and the Supersoul are both living
+within the body, the body is always shining and fresh. But as soon as the Supersoul and the individual
+soul give up possession of the gross body, it immediately decomposes. One who is spiritually advanced
+can thus understand the real difference between a dead body and a living body. In conclusion, one should
+not waste his time by so-called economic development and sense gratification, but should cultivate
+spiritual knowledge to understand the Supersoul and the individual soul and their relationship. In this
+way, by advancement of knowledge, one can achieve liberation and the ultimate goal of life. It is said that
+if one takes to the path of liberation, even rejecting his so-called duties in the material world, he is not a
+loser at all. But a person who does not take to the path of liberation yet carefully executes economic
+development and sense gratification loses everything. Narada's statement before Vyasadeva is appropriate
+in this connection:
+tyaktva sva-dharmam caranambujam harer
+bhajann apakvo 'tha patet tato yadi
+yatra kva vabhadram abhud amusya kim
+ko vartha apto 'bhajatam sva-dharmatah
+(Bhag. 1.5.17)
+If a person, out of sentiment or for some other reason, takes to the shelter of the lotus feet of the Lord
+and in due course of time does not succeed in coming to the ultimate goal of life or falls down due to lack
+of experience, there is no loss. But for a person who does not take to devotional service yet executes his
+material duties very nicely, there is no gain.
 </p>
 
 </div>
@@ -83,7 +161,7 @@ devotional service.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

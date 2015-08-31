@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.26.html">4.5.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yayos tat-snana-vibhrastanava-
-kunkuma-pinjaram
-vitrso 'pi pibanty ambhah
-payayanto gaja gajih
-<p></p>
+juhavaitac chiras tasmin
+daksinagnav amarsitah
+tad-deva-yajanam dagdhva
+pratisthad guhyakalayam
+<br>
 <h2>Synonyms</h2>
-yayoh--in both of which rivers; tat-snana--by the bathing of them (the damsels of the heavenly planets);
-vibhrasta--fallen off; nava--fresh; kunkuma--with kunkuma powder; pinjaram--yellow; vitrsah--not being
-thirsty; api--even; pibanti--drink; ambhah--the water; payayantah--causing to drink; gajah--the elephants;
-gajih--the female elephants.
-<p></p>
+juhava--sacrificed as an oblation; etat--that; sirah--head; tasmin--in that; daksina-agnau--in the
+sacrificial fire on the southern side; amarsitah--Virabhadra, being greatly angry; tat--of Daksa; devayajanam--
+the arrangements for the sacrifice to the demigods; dagdhva--having set fire; pratisthat--
+departed; guhyaka-alayam--to the abode of the Guhyakas (Kailasa).
+<br>
 <h2>Translation</h2>
-After the damsels of the heavenly planets bathe in the water, it becomes yellowish and fragrant due to
-the kunkuma from their bodies. Thus the elephants come to bathe there with their wives, the sheelephants,
-and they also drink the water, although they are not thirsty.
+Virabhadra then took the head and with great anger threw it into the southern side of the sacrificial fire,
+offering it as an oblation. In this way the followers of Lord Siva devastated all the arrangements for
+sacrifice. After setting fire to the whole arena, they departed for their master's abode, Kailasa.
+Thus end the Bhaktivedanta purports of the Fourth Canto, Fifth Chapter, of the Srimad-Bhagavatam,
+entitled "Frustration of the Sacrifice of Daksa."
+Chapter Six
+Brahma Satisfies Lord Siva
 </p>
 
 </div>
@@ -71,7 +114,7 @@ and they also drink the water, although they are not thirsty.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

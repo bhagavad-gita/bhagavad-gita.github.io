@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,73 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.38.html">4.20.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-brahmanya-devah purusah puratano
-nityam harir yac-caranabhivandanat
-avapa laksmim anapayinim yaso
-jagat-pavitram ca mahattamagranih
-<p></p>
+adrstaya namaskrtya
+nrpah sandarsitatmane
+avyaktaya ca devanam
+devaya sva-puram yayau
+<br>
 <h2>Synonyms</h2>
-brahmanya-devah--the Lord of the brahminical culture; purusah--the Supreme Personality; puratanah--
-the oldest; nityam--eternal; harih--the Personality of Godhead; yat--whose; carana--lotus feet;
-abhivandanat--by means of worshiping; avapa--obtained; laksmim--opulences; anapayinim--perpetually;
-yasah--reputation; jagat--universal; pavitram--purified; ca--also; mahat--great; tama--supreme; agranih--
-foremost.
-<p></p>
+adrstaya--unto one who is beyond the purview of material vision; namah-krtya--offering obeisances;
+nrpah--the King; sandarsita--revealed; atmane--unto the Supreme Soul; avyaktaya--who is beyond the
+manifestation of the material world; ca--also; devanam--of the demigods; devaya--unto the Supreme Lord;
+sva-puram--to his own house; yayau--returned.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead, the ancient, eternal Godhead, who is foremost amongst all great
-personalities, obtained the opulence of His staunch reputation, which purifies the entire universe, by
-worshiping the lotus feet of those brahmanas and Vaisnavas.
-<p></p>
+King Prthu then offered his respectful obeisances unto the Supreme Personality of Godhead, who is the
+Supreme Lord of all demigods. Although not an object of material vision, the Lord revealed Himself to the
+sight of Maharaja Prthu. After offering obeisances to the Lord, the King returned to his home.
+<br>
 <h2>Purport</h2>
-The Supreme Person is described herein as brahmanya-deva. Brahmanya refers to the brahmanas, the
-Vaisnavas or the brahminical culture, and deva means "worshipable Lord." Therefore unless one is on the
-transcendental platform of being a Vaisnava or on the highest platform of material goodness (as a
-brahmana), he cannot appreciate the Supreme Personality of Godhead. In the lower stages of ignorance
-and passion, it is difficult to appreciate or understand the Supreme Lord. Therefore the Lord is described
-herein as the worshipable Deity for persons in brahminical and Vaisnava culture.
-namo brahmanya-devaya
-go-brahmana-hitaya ca
-jagad-dhitaya krsnaya
-govindaya namo namah
-(Visnu Purana 1.19.65)
-Lord Krsna, the Supreme personality of Godhead, is the prime protector of brahminical culture and the
-cow. Without knowing and respecting these, one cannot realize the science of God, and without this
-knowledge, any welfare activities or humanitarian propaganda cannot be successful. The Lord is purusa,
-or the supreme enjoyer. Not only is He the enjoyer when He appears as a manifested incarnation, but He
-is the enjoyer since time immemorial, from the very beginning (puratanah), and eternally (nityam). Yaccaranabhivandanat:
-Prthu Maharaja said that the Supreme Personality of Godhead attained this opulence
-of eternal fame simply by worshiping the lotus feet of the brahmanas. In the Bhagavad-gita it is said that
-the Lord does not need to work to achieve material gain. Since He is perpetually supremely perfect, He
-does not need to obtain anything, but still it is said that He obtained His opulences by worshiping the
-lotus feet of the brahmanas. These are His exemplary actions. When Lord Sri Krsna was in Dvaraka, He
-offered His respects by bowing down at the lotus feet of Narada. When Sudama Vipra came to His house,
-Lord Krsna personally washed his feet and gave him a seat on His personal bed. Although He is the
-Supreme personality of Godhead, Lord Sri Krsna offered His respects to Maharaja Yudhisthira and Kunti.
-The Lord's exemplary behavior is to teach us. We should learn from His personal behavior how to give
-protection to the cow, how to cultivate brahminical qualities and how to respect the brahmanas and the
-Vaisnavas. The Lord says in Bhagavad-gita (3.21), yad yad acarati sresthas tat tad evetaro janah: "If the
-leading personalities behave in a certain manner, others follow them automatically." Who can be more of
-a leading personality than the Supreme personality of Godhead, and whose behavior could be more
-exemplary? It is not that He needed to do all these things to acquire material gain, but all of these acts
-were performed just to teach us how to behave in this material world.
-The Supreme personality of Godhead is described herein as mahattama-agranih. Within this material
-world, the mahattamas, or great personalities, are Lord Brahma and Lord Siva, but He is above them all.
-Narayanah paro'vyaktat: the Supreme Personality of Godhead is in a transcendental position, above
-everything created within this material world. His opulence, His riches, His beauty, His wisdom, His
-knowledge, His renunciation and His reputation are all jagat-pavitram, universally purifying. The more we
-discuss His opulences, the more the universe becomes purer and purer. In the material world, the
-opulences possessed by a material person are never fixed. Today one may be a very rich man, but
-tomorrow he may become poor; today one is very famous, but tomorrow he may be infamous. Materially
-obtained opulences are never fixed, but all six opulences perpetually exist in the Supreme Personality of
-Godhead, not only in the spiritual world, but also in this material world. Lord Krsna's reputation is fixed,
-and His book of wisdom, Bhagavad-gita, is still honored. Everything pertaining to the Supreme
-Personality of Godhead is eternally existing.
+The Supreme Lord is not visible to material eyes, but when the material senses are inclined to the
+transcendental loving service of the Lord and are thus purified, the Lord reveals Himself to the vision of
+the devotee. Avyakta means "unmanifested." Although the material world is the creation of the Supreme
+Personality of Godhead, He is unmanifested to material eyes. Maharaja Prthu, however, developed
+spiritual eyes by his pure devotional service. Here, therefore, the Lord is described as sandarsitatma, for
+He reveals Himself to the vision of the devotee, although He is not visible to ordinary eyes.
+Thus end the Bhaktivedanta purports of the Fourth Canto, Twentieth Chapter, of the Srimad-Bhagavatam,
+entitled "Lord Visnu's Appearance in the Sacrificial Arena of Maharaja Prthu."
+Chapter Twenty-one
+Instructions by Maharaja Prthu
 </p>
 
 </div>
@@ -117,7 +122,7 @@ Personality of Godhead is eternally existing.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.50.html">4.6.50</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.50</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/50"><b>50</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-bhagavan uvaca
-aham brahma ca sarvas ca
-jagatah karanam param
-atmesvara upadrasta
-svayan-drg avisesanah
-<p></p>
+kurv adhvarasyoddharanam hatasya bhoh
+tvayasamaptasya mano prajapateh
+na yatra bhagam tava bhagino daduh
+kuyajino yena makho niniyate
+<br>
 <h2>Synonyms</h2>
-sri-bhagavan--Lord Visnu; uvaca--said; aham--I; brahma--Brahma; ca--and; sarvah--Lord Siva; ca--and;
-jagatah--of the material manifestation; karanam--cause; param--supreme; atma-isvarah--the Supersoul;
-upadrasta--the witness; svayam-drk--self-sufficient; avisesanah--there is no difference.
-<p></p>
+kuru--just execute; adhvarasya--of the sacrifice; uddharanam--complete regularly; hatasya--killed;
+bhoh--O; tvaya--by you; asamaptasya--of the unfinished sacrifice; mano--O Lord Siva; prajapateh--of
+Maharaja Daksa; na--not; yatra--where; bhagam--share; tava--your; bhaginah--deserving to take the share;
+daduh--did not give; ku-yajinah--bad priests; yena--by the bestower; makhah--sacrifice; niniyate--gets the
+result.
+<br>
 <h2>Translation</h2>
-Lord Visnu replied: Brahma, Lord Siva and I are the supreme cause of the material manifestation. I am
-the Supersoul, the self sufficient witness. But impersonally there is no difference between Brahma, Lord
-Siva and Me.
-<p></p>
-<h2>Purport</h2>
-Lord Brahma was born out of the transcendental body of Lord Visnu, and Lord Siva was born out of the
-body of Brahma. Lord Visnu, therefore, is the supreme cause. In the Vedas also it is stated that in the
-beginning there was only Visnu, Narayana; there was no Brahma or Siva. Similarly, Sankaracarya
-confirmed this: narayanah parah. Narayana, or Lord Visnu, is the origin, and Brahma and Siva are
-manifested after creation. Lord Visnu is also atmesvara, the Supersoul in everyone. Under His direction,
-everything is prompted from within. For example, in the beginning of the Srimad-Bhagavatam it is stated,
-tene brahma hrda: He first educated Lord Brahma from within.
-In Bhagavad-gita (10.2) Lord Krsna states, aham adir hi devanam: Lord Visnu, or Krsna, is the origin of
-all demigods, including Lord Brahma and Lord Siva. In another place in Bhagavad-gita (10.8) Krsna states,
-aham sarvasya prabhavah: "Everything is generated from Me." This includes all the demigods. Similarly,
-in the Vedanta-sutra: janmady asya yatah. And in the Upanisads is the statement yato va imani bhutani
-jayante. Everything is generated from Lord Visnu, everything is maintained by Him, and everything is
-annihilated by His energy. Therefore, by their actions and reactions, the energies which come from Him
-create the cosmic manifestations and also dissolve the whole creation. Thus the Lord is the cause and also
-the effect. Whatever effect we see is the interaction of His energy, and because the energy is generated
-from Him, He is both cause and effect. Simultaneously, everything is different and the same. It is said that
-everything is Brahman: sarvam khalv idam brahma. In the highest vision, nothing is beyond Brahman, and
-therefore Lord Brahma and Lord Siva are certainly nondifferent from Him.
+My dear Lord Siva, you are a shareholder of a portion of the sacrifice, and you are the giver of the result.
+The bad priests did not deliver your share, and therefore you destroyed everything, and the sacrifice
+remains unfinished. Now you can do the needful and take your rightful share.
 </p>
 
 </div>
@@ -91,7 +111,7 @@ therefore Lord Brahma and Lord Siva are certainly nondifferent from Him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

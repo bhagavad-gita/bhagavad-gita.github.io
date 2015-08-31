@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.14.16.html">4.14.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-brahma brahmamayam varma
-bharati haram uttamam
-harih sudarsanam cakram
-tat-patny avyahatam sriyam
-<p></p>
+sa te ma vinased vira
+prajanam ksema-laksanah
+yasmin vinaste nrpatir
+aisvaryad avarohati
+<br>
 <h2>Synonyms</h2>
-brahma--Lord Brahma; brahma-mayam--made of spiritual knowledge; varma--armor; bharati--the
-goddess of learning; haram--necklace; uttamam--transcendental; harih--the Supreme Personality of
-Godhead; sudarsanam cakram--Sudarsana disc; tat-patni--His wife (Laksmi); avyahatam--imperishable;
-sriyam--beauty and opulence.
-<p></p>
+sah--that spiritual life; te--by you; ma--do not; vinaset--let it be spoiled; vira--O hero; prajanam--of the
+people; ksema-laksanah--the cause of prosperity; yasmin--which; vinaste--being spoiled; nrpatih--the
+king; aisvaryat--from opulence; avarohati--falls down.
+<br>
 <h2>Translation</h2>
-Lord Brahma presented King Prthu with a protective garment made of spiritual knowledge. Bharati
-[Sarasvati], the wife of Brahma, gave him a transcendental necklace. Lord Visnu presented him with a
-Sudarsana disc, and Lord Visnu's wife, the goddess of fortune, gave him imperishable opulences.
-<p></p>
+The sages continued: O great hero, for this reason you should not be the cause of spoiling the spiritual
+life of the general populace. If their spiritual life is spoiled because of your activities, you will certainly fall
+down from your opulent and royal position.
+<br>
 <h2>Purport</h2>
-All the demigods presented various gifts to King Prthu. Hari, an incarnation of the Supreme Personality
-of Godhead known as Upendra in the heavenly planet, presented the King with a Sudarsana disc. It
-should be understood that this Sudarsana disc is not exactly the same type of Sudarsana disc used by the
-Personality of Godhead, Krsna, or Visnu. Since Maharaja Prthu was a partial representation of the
-Supreme Personality of Godhead's power, the Sudarsana disc given to him represented the partial power
-of the original Sudarsana disc.
+Formerly, in practically all parts of the world, there were monarchies, but gradually as monarchy
+declined from the ideal life of religion to the godless life of sense gratification, monarchies all over the
+world were abolished. However, simply abolishing monarchy and replacing it with democracy is not
+sufficient unless the government men are religious and follow in the footsteps of great religious
+personalities.
 </p>
 
 </div>
@@ -79,7 +116,7 @@ of the original Sudarsana disc.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

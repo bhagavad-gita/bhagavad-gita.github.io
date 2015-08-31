@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,71 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.9.15.html">4.9.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nadatsu yatudhanesu
-jaya-kasisv atho mrdhe
-udatisthad rathas tasya
-niharad iva bhaskarah
-<p></p>
+tvam nitya-mukta-parisuddha-vibuddha atma
+kuta-stha adi-puruso bhagavams try-adhisah
+yad-buddhy-avasthitim akhanditaya sva-drstya
+drasta sthitav adhimakho vyatirikta asse
+<br>
 <h2>Synonyms</h2>
-nadatsu--while exclaiming; yatudhanesu--the ghostly Yaksas; jaya-kasisu--proclaiming victory; atho--
-then; mrdhe--in the fighting; udatisthat--appeared; rathah--the chariot; tasya--of Dhruva Maharaja;
-niharat--from the mist; iva--like; bhaskarah--the sun.
-<p></p>
+tvam--You; nitya--eternally; mukta--liberated; parisuddha--uncontaminated; vibuddhah--full of
+knowledge; atma--the Supreme Soul; kuta-sthah--changeless; adi--original; purusah--person; bhagavan--
+the Lord, full with six opulences; tri-adhisah--master of the three modes; yat--whence; buddhi--of
+intellectual activities; avasthitim--all stages; akhanditaya--unbroken; sva-drstya--by transcendental vision;
+drasta--You witness; sthitau--for maintaining (the universe); adhimakhah--enjoyer of the results of all
+sacrifices; vyatiriktah--differently; asse--You are situated.
+<br>
 <h2>Translation</h2>
-The Yaksas, being temporarily victorious, exclaimed that they had conquered Dhruva Maharaja. But in
-the meantime Dhruva's chariot suddenly appeared, just as the sun suddenly appears from within foggy
-mist.
-<p></p>
+My Lord, by Your unbroken transcendental glance You are the supreme witness of all stages of
+intellectual activities. You are eternally liberated, Your existence is situated in pure goodness, and You are
+existent in the Supersoul without change. You are the original Personality of Godhead, full with six
+opulences, and You are eternally the master of the three modes of material nature. Thus, You are always
+different from the ordinary living entities. As Lord Visnu, You maintain all the affairs of the entire
+universe, and yet You stand aloof and are the enjoyer of the results of all sacrifices.
+<br>
 <h2>Purport</h2>
-Here Dhruva Maharaja is compared to the sun and the great assembly of the Yaksas to foggy mist. Fog is
-insignificant in comparison with the sun. Although the sun is sometimes seen to be covered by fog, in fact
-the sun cannot be covered by anything. Our eyes may be covered by a cloud, but the sun is never covered.
-By this comparison to the sun, the greatness of Dhruva Maharaja in all circumstances is affirmed.
+An atheistic argument against the supremacy of the Supreme Personality of Godhead states that if God,
+the Supreme Person, appears and disappears and sleeps and awakens, then what is the difference between
+God and the living entity? Dhruva Maharaja is carefully distinguishing the existence of the Supreme
+Personality of Godhead from that of the living entities. He points out the following differences. The Lord
+is eternally liberated. Whenever He appears, even within this material world, He is never entangled by the
+three modes of material nature. He is known, therefore, as try-adhisa, the master of the three modes of
+material nature. In Bhagavad-gita (7.14) it is said, daivi hy esa guna-mayi mama maya duratyaya: the
+living entities are all entangled in the three modes of material nature. The external energy of the Lord is
+very strong, but the Lord, as the master of the three modes of material nature, is ever liberated from the
+action and reaction of those modes. He, therefore, is uncontaminated, as stated in the Isopanisad. The
+contamination of the material world does not affect the Supreme Godhead. Krsna therefore says in the
+Bhagavad-gita that those who are rascals and fools think of Him as an ordinary human being, not knowing
+His param bhavam. param bhavam refers to His being always transcendentally situated. Material
+contamination cannot affect Him.
+Another difference between the Lord and the living entity is that a living entity is always in darkness.
+Even though he may be situated in the mode of goodness, there are still so many things which are
+unknown to him. But it is not the same for the Supreme Personality of Godhead. He knows past, present
+and future and everything that is happening in everyone's heart. Bhagavad-gita confirms this (vedaham
+samatitani). The Lord is not part of the soul--He is the unchangeable Supreme Soul, and the living entities
+are His parts and parcels. The living entity is forced to appear in this material world under the direction of
+daiva-maya, but when the Lord appears, He comes by His own internal potency, atma-maya. Besides that,
+a living entity is within the time of past, present and future. His life has a beginning, a birth, and in the
+conditioned state his life ends with death. But the Lord is adi-purusa, the original person. In the Brahmasamhita
+Lord Brahma offers his respect to the adi-purusa, Govinda, the original person, who has no
+beginning, whereas the creation of this material world has a beginning. The Vedanta says, janmady asya
+yatah; everything is born from the Supreme, but the Supreme has no birth. He has all the six opulences in
+full and beyond comparison, He is the master of material nature, His intelligence is not broken under any
+circumstances, and He stands aloof, although He is the maintainer of the whole creation. As stated in the
+Vedas (Katha Upanisad 2.2.13), nityo nityanam cetanas cetananam. The Lord is the supreme maintainer.
+Living entities are meant to serve Him by offering sacrifices, for He is the rightful enjoyer of the results of
+all sacrifices. Everyone, therefore, should engage himself in the devotional service of the Lord with his
+life, his riches, his intelligence and his words. This is the original, constitutional position of the living
+entities. One should never compare the sleeping of an ordinary living entity to the sleeping of the
+Supreme personality of Godhead in the Causal Ocean. There is no stage at which the living entity can
+compare to the Supreme Person. The Mayavadi philosophers, being unable to adjust to all this, come to
+the conclusion of impersonalism or voidism.
 </p>
 
 </div>
@@ -76,7 +153,7 @@ By this comparison to the sun, the greatness of Dhruva Maharaja in all circumsta
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

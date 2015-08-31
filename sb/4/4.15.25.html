@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.25.html">4.15.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-esa sva-sadmopavane sametya
-sanat-kumaram bhagavantam ekam
-aradhya bhaktyalabhatamalam taj
-jnanam yato brahma param vidanti
-<p></p>
+prabhavo hy atmanah stotram
+jugupsanty api visrutah
+hrimantah paramodarah
+paurusam va vigarhitam
+<br>
 <h2>Synonyms</h2>
-esah--this King; sva-sadma--of his palace; upavane--in the garden; sametya--meeting; sanat-kumaram--
-Sanat-kumara; bhagavantam--the worshipable; ekam--alone; aradhya--worshiping; bhaktya--with
-devotion; alabhata--he will achieve; amalam--without contamination; tat--that; jnanam--transcendental
-knowledge; yatah--by which; brahma--spirit; param--supreme, transcendental; vidanti--they enjoy, they
-know.
-<p></p>
+prabhavah--very powerful persons; hi--certainly; atmanah--of themselves; stotram--praise; jugupsanti--
+do not like; api--although; visrutah--very famous; hri-mantah--modest; parama-udarah--very
+magnanimous persons; paurusam--powerful actions; va--also; vigarhitam--abominable.
+<br>
 <h2>Translation</h2>
-This King Prthu will meet Sanat-kumara, one of the four Kumaras, in the garden of his palace
-compound. The King will worship him with devotion and will be fortunate to receive instructions by
-which one can enjoy transcendental bliss.
-<p></p>
-<h2>Purport</h2>
-The word vidanti refers to one who knows something or enjoys something. When a person is properly
-instructed by a spiritual master and understands transcendental bliss, he enjoys life. As stated in
-Bhagavad-gita (18.54), brahma-bhutah prasannatma na socati na kanksati. When one attains to the
-Brahman platform, he neither hankers nor laments. He actually partakes of transcendental, blissful
-enjoyment. Although King Prthu was an incarnation of Visnu, he nonetheless taught the people in his
-kingdom to take instructions from a spiritual master who represents the disciplic succession. Thus one
-can become fortunate and enjoy a blissful life even within this material world. In this verse the verb
-vidanti is sometimes taken to mean "understanding." Thus when a person understands Brahman, or the
-supreme source of everything, he enjoys a blissful life.
+As a person with a sense of honor and magnanimity does not like to hear about his abominable actions,
+a person who is very famous and powerful does not like to hear himself praised.
 </p>
 
 </div>
@@ -83,7 +108,7 @@ supreme source of everything, he enjoys a blissful life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

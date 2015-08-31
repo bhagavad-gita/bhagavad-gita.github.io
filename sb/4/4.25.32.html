@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.32.html">4.25.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-agastyah prag duhitaram
-upayeme dhrta-vratam
-yasyam drdhacyuto jata
-idhmavahatmajo munih
-<p></p>
+narada uvaca
+ittham puranjanam nari
+yacamanam adhiravat
+abhyanandata tam viram
+hasanti vira mohita
+<br>
 <h2>Synonyms</h2>
-agastyah--the great sage Agastya; prak--first; duhitaram--daughter; upayeme--married; dhrta-vratam--
-taken to vows; yasyam--through whom; drdhacyutah--named Drdhacyuta; jatah--was born; idhmavaha--
-named Idhmavaha; atma-jah--son; munih--the great sage.
-<p></p>
+naradah uvaca--the great sage Narada continued to speak; ittham--upon this; puranjanam--unto
+Puranjana; nari--the woman; yacamanam--begging; adhira-vat--being too impatient; abhyanandata--she
+addressed; tam--him; viram--the hero; hasanti--smiling; vira--O hero; mohita--being attracted by him.
+<br>
 <h2>Translation</h2>
-The great sage named Agastya married the first-born daughter of Malayadhvaja, the avowed devotee of
-Lord Krsna. From her one son was born, whose name was Drdhacyuta, and from him another son was
-born, whose name was Idhmavaha.
-<p></p>
+Narada continued: My dear King, when Puranjana became so attracted and impatient to touch the girl
+and enjoy her, the girl also became attracted by his words and accepted his request by smiling. By this
+time she was certainly attracted by the King.
+<br>
 <h2>Purport</h2>
-The name Agastya Muni is very significant. Agastya Muni represents the mind. The word agastya
-indicates that the senses do not act independently, and the word muni means "mind." The mind is the
-center of all the senses, and thus the senses cannot work independent of the mind. When the mind takes
-to the cult of bhakti, it engages in devotional service. The cult of bhakti (bhakti-lata) is the first daughter
-of Malayadhvaja, and as previously described, her eyes are always upon Krsna (asiteksanam). One cannot
-render bhakti to any demigod. Bhakti can be rendered only to Visnu (sravanam kirtanam visnoh).
-Thinking the Absolute Truth to be without form, the Mayavadis say that the word bhakti can apply to any
-form of worship. If this were the case, a devotee could imagine any demigod or any godly form and
-worship it. This, however, is not the real fact. The real fact is that bhakti can be applied only to Lord
-Visnu and His expansions. Therefore bhakti-lata is drdha-vrata, the great vow, for when the mind is
-completely engaged in devotional service, the mind does not fall down. If one tries to advance by other
-means--by karma-yoga or jnana-yoga--one will fall down, but if one is fixed in bhakti, he never falls down.
-Thus from bhakti-lata the son Drdhacyuta is born, and from Drdhacyuta the next son, Idhmavaha, is
-born. The word idhma-vaha refers to one who carries wood for burning in a sacrifice when approaching a
-spiritual master. The point is that bhakti-lata, the cult of devotion, fixes one in his spiritual position. One
-so fixed never comes down, and he begets children who are strict followers of the sastric injunctions. As
-said in the Vedas:
-tad-vijnanartham sa gurum evabhigacchet
-samit-panih srotriyam brahma-nistham
-In the line of devotional service, those who are initiated are strict followers of the Vedic scriptural
-injunctions.
+By this incident we can understand that when a man is aggressive and begins to woo a woman, the
+woman becomes attracted to the man. This process is described in the Bhagavatam (5.5.8) as pumsah
+striya mithuni-bhavam etam. This attraction is enacted on the platform of sexual life. Thus the sex
+impulse is the platform of material engagement. This conditional life, the platform of material sense
+enjoyment, is the cause of forgetfulness of spiritual life. In this way a living entity's original Krsna
+consciousness becomes covered or converted into material consciousness. Thus one engages in the
+business of sense gratification.
 </p>
 
 </div>
@@ -93,7 +119,7 @@ injunctions.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

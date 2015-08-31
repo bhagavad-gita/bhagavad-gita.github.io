@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,80 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.33.html">4.21.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-trih krtva idam akarnya
-naro nary athavadrta
-aprajah suprajatamo
-nirdhano dhanavattamah
-<p></p>
+tam eva yuyam bhajatatma-vrttibhir
+mano-vacah-kaya-gunaih sva-karmabhih
+amayinah kama-dughanghri-pankajam
+yathadhikaravasitartha-siddhayah
+<br>
 <h2>Synonyms</h2>
-trih--thrice; krtvah--repeating; idam--this; akarnya--hearing; narah--man; nari--woman; athava--or;
-adrta--in great respect; aprajah--one who has no children; su-praja-tamah--surrounded by many children;
-nirdhanah--without any money; dhana-vat--rich; tamah--the greatest.
-<p></p>
+tam--unto Him; eva--certainly; yuyam--all you citizens; bhajata--worship; atma--own; vrttibhih--
+occupational duty; manah--mind; vacah--words; kaya--body; gunaih--by the particular qualities; svakarmabhih--
+by occupational duties; amayinah--without reservation; kama-dugha--fulfilling all desires;
+anghri-pankajam--the lotus feet; yatha--as far as; adhikara--ability; avasita-artha--fully convinced of one's
+interest; siddhayah--satisfaction.
+<br>
 <h2>Translation</h2>
-It does not matter whether one is a man or woman. Anyone who, with great respect, hears this narration
-of Maharaja Prthu will become the father of many children if he is without children and will become the
-richest of men if he is without money.
-<p></p>
+Prthu Maharaja advised his citizens: Engaging your minds, your words, your bodies and the results of
+your occupational duties, and being always open-minded, you should all render devotional service to the
+Lord. According to your abilities and the occupations in which you are situated, you should engage your
+service at the lotus feet of the Supreme Personality of Godhead with full confidence and without
+reservation. Then you will surely be successful in achieving the final objective in your lives.
+<br>
 <h2>Purport</h2>
-Materialistic persons who are very fond of money and great families worship different demigods to
-attain their desires, especially goddess Durga, Lord Siva and Lord Brahma. Such materialistic persons are
-called sriyaisvarya-prajepsavah. Sri means "beauty," aisvarya means "riches," praja means "children," and
-ipsavah means "desiring." As described in the Second Canto of Srimad-Bhagavatam, one has to worship
-various demigods for different types of benedictions. However, here it is indicated that simply by hearing
-of the life and character of Maharaja Prthu, one can have both riches and children in enormous quantities.
-One simply has to read and understand the history, the life and activities of Prthu Maharaja. It is advised
-that one read them at least three times. Those who are materially afflicted will so benefit by hearing of the
-Supreme Lord and His devotees that they need not go to any demigod. The word suprajatamah
-("surrounded by many children") is very significant in this verse, for one may have many children but
-may not have any qualified children. Here, however, it is stated (su-prajatamah) that all the children thus
-attained would be qualified in education, wealth, beauty and strength--everything complete.
+As stated in the Eighteenth Chapter of Bhagavad-gita, sva-karmana tam abhyarcya: one has to worship
+the Supreme Personality of Godhead by one's occupational duties. This necessitates accepting the
+principle of four varnas and four asramas. Prthu Maharaja therefore says, gunaih sva-karmabhih. This
+phrase is explained in Bhagavad-gita. Catur-varnyam maya srstam guna-karma-vibhagasah: "The four
+castes (the brahmanas, ksatriyas, vaisyas and sudras) are created by the Supreme Personality of Godhead
+according to the material modes of nature and the particular duties discharged in those modes." A person
+who is situated in the mode of goodness is certainly more intelligent than others. Therefore he can
+practice the brahminical activities--namely speaking the truth, controlling the senses, controlling the
+mind, remaining always clean, practicing tolerance, having full knowledge about one's self-identity, and
+understanding devotional service. In this way, if he engages himself in the loving service of the Lord as an
+actual brahmana, his aim to achieve the final interest of life is attained. Similarly, the ksatriya's duties are
+to give protection to the citizens, to give all his possessions in charity, to be strictly Vedic in the
+management of state affairs and to be unafraid to fight whenever there is an attack by enemies. In this
+way, a ksatriya can satisfy the Supreme Personality of Godhead by his occupational duties. Similarly, a
+vaisya can satisfy the Supreme Godhead by properly executing his occupational duties--engaging himself
+in producing foodstuffs, giving protection to cows, and trading if necessary when there is an excess of
+agricultural production. Similarly, because sudras do not have ample intelligence, they should simply
+engage as workers to serve the higher statuses of social life. Everyone's aim should be to satisfy the
+Supreme Personality of Godhead by engaging his mind in thinking always of Krsna, his words in always
+offering prayers to the Lord or preaching about the glories of the Lord, and his body in executing the
+service required to satisfy the Lord. As there are four divisions within our body--the head, the arms, the
+belly and the legs--similarly, human society, taken as a whole, is divided into four classes of men
+according to their material qualities and occupational duties. Thus the brahminical or intelligent men
+have to execute the duty of the head, the ksatriyas must fulfill the duty of the arms, the vaisya class must
+fulfill the duty of the belly, and the sudras must fulfill the duty of the legs. In executing the prescribed
+duties of life, no one is higher or lower; there are such divisions as "higher" and "lower," but since there is
+actually a common interest--to satisfy the Supreme personality of Godhead--there are no distinctions
+between them.
+The question may be raised that since the Lord is supposed to be worshiped by great demigods like Lord
+Brahma, Lord Siva and others, how can an ordinary human being on this planet serve Him? This is clearly
+explained by Prthu Maharaja by the use of the word yathadhikara, "according to one's ability." If one
+sincerely executes his occupational duty, that will be sufficient. One does not need to become like Lord
+Brahma, Lord Siva, Indra, Lord Caitanya or Ramanujacarya, whose capabilities are certainly far above
+ours. Even a sudra, who is in the lowest stage of life according to the material qualities, can achieve the
+same success. Anyone can become successful in devotional service provided he displays no duplicity. It is
+explained here that one must be very frank and open-minded (amayinah). To be situated in a lower status
+of life is not a disqualification for success in devotional service. The only qualification is that whether one
+is a brahmana, ksatriya, vaisya or sudra, he must be open, frank and free from reservations. Then, by
+performing his particular occupational duty under the guidance of a proper spiritual master, he can
+achieve the highest success in life. As confirmed by the Lord Himself, striyo vaisyas tatha sudras te 'pi
+yanti param gatim (Bg. 9.32). It does not matter what one is, whether a brahmana, ksatriya, vaisya, sudra
+or a degraded woman. If one engages himself seriously in devotional service, working with body, mind
+and intelligence, he is sure to be successful in going back home, back to Godhead. The Lord's lotus feet
+are described here as kama-dughanghri-pankajam because they have all power to fulfill the desires of
+everyone. A devotee is happy even in this life because although in material existence we have many needs,
+all his material needs are satisfied, and when he at last quits his body, he goes back home, back to
+Godhead, without a doubt.
 </p>
 
 </div>
@@ -84,7 +162,7 @@ attained would be qualified in education, wealth, beauty and strength--everythin
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

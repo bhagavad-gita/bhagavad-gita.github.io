@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.3.5-7.html">4.3.5-7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.5-7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5-7"><b>5-7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tad upasrutya nabhasi
 khe-caranam prajalpatam
@@ -61,7 +100,7 @@ drstva sva-nilayabhyase
 lolaksir mrsta-kundalah
 patim bhuta-patim devam
 autsukyad abhyabhasata
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tat--then; upasrutya--hearing; nabhasi--in the sky; khe-caranam--of those who were flying in the air (the
 Gandharvas); prajalpatam--the conversation; sati--Sati; daksayani--the daughter of Daksa; devi--the wife of
@@ -72,14 +111,14 @@ having nice necklaces with lockets; su-vasasah--dressed in fine clothing; drstva
 abhyase--near her residence; lola-aksih--having beautiful glittering eyes; mrsta-kundalah--nice
 earrings; patim--her husband; bhuta-patim--the master of the bhutas; devam--the demigod; autsukyat--
 from great anxiety; abhyabhasata--she spoke.
-<p></p>
+<br>
 <h2>Translation</h2>
 The chaste lady Sati, the daughter of Daksa, heard the heavenly denizens flying in the sky conversing
 about the great sacrifice being performed by her father. When she saw that from all directions the
 beautiful wives of the heavenly denizens, their eyes very beautifully glittering, were near her residence
 and were going to the sacrifice dressed in fine clothing and ornamented with earrings and necklaces with
 lockets, she approached her husband, the master of the bhutas, in great anxiety, and spoke as follows.
-<p></p>
+<br>
 <h2>Purport</h2>
 It appears that the residence of Lord Siva was not on this planet but somewhere in outer space,
 otherwise how could Sati have seen the airplanes coming from different directions towards this planet and
@@ -100,7 +139,7 @@ inclination of a woman.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

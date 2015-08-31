@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,57 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.17.8.html">4.17.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nunam ta virudhah ksina
-mayi kalena bhuyasa
-tatra yogena drstena
-bhavan adatum arhati
-<p></p>
+suta uvaca
+codito vidurenaivam
+vasudeva-katham prati
+prasasya tam prita-mana
+maitreyah pratyabhasata
+<br>
 <h2>Synonyms</h2>
-nunam--therefore; tah--those; virudhah--herbs and grains; ksinah--deteriorated; mayi--within me;
-kalena--in course of time; bhuyasa--very much; tatra--therefore; yogena--by proper means; drstena--
-acknowledged; bhavan--Your Majesty; adatum--to take; arhati--ought.
-<p></p>
+sutah uvaca--Suta Gosvami said; coditah--inspired; vidurena--by Vidura; evam--thus; vasudeva--of Lord
+Krsna; katham--narration; prati--about; prasasya--praising; tam--him; prita-manah--being very pleased;
+maitreyah--the saint Maitreya; pratyabhasata--replied.
+<br>
 <h2>Translation</h2>
-Due to being stocked for a very long time, all the grain seeds within me have certainly deteriorated.
-Therefore you should immediately arrange to take these seeds out by the standard process, which is
-recommended by the acaryas or sastras.
-<p></p>
+Suta Gosvami continued: When Vidura became inspired to hear of the activities of Lord Krsna in His
+various incarnations, Maitreya, also being inspired and being very pleased with Vidura, began to praise
+him. Then Maitreya spoke as follows.
+<br>
 <h2>Purport</h2>
-When there is a scarcity of grain, the government should follow the methods prescribed in the sastra
-and approved by the acaryas; thus there will be a sufficient production of grains, and food scarcity and
-famine can be checked. Bhagavad-gita recommends that we perform yajna, sacrifices. By the performance
-of yajna, sufficient clouds gather in the sky, and when there are sufficient clouds, there is also sufficient
-rainfall. In this way agricultural matters are taken care of. When there is sufficient grain production, the
-general populace eats the grains, and animals like cows, goats and other domestic animals eat the grasses
-and grains also. According to this arrangement, human beings should perform the sacrifices
-recommended in the sastras, and if they do so there will no longer be food scarcity. In Kali-yuga, the only
-sacrifice recommended is sankirtana-yajna.
-In this verse there are two significant words: yogena, "by the approved method," and drstena, "as
-exemplified by the former acaryas." One is mistaken if he thinks that by applying modern machines such
-as tractors, grains can be produced. If one goes to a desert and uses a tractor, there is still no possibility of
-producing grains. We may adopt various means, but it is essential to know that the planet earth will stop
-producing grains if sacrifices are not performed. The earth has already explained that because
-nondevotees are enjoying the production of food, she has reserved food seeds for the performance of
-sacrifice. Now, of course, atheists will not believe in this spiritual method of producing grains, but
-whether they believe or not, the fact remains that we are not independent to produce grain by mechanical
-means. As far as the approved method is concerned, it is enjoined in the sastras that intelligent men in
-this age will take to the sankirtana movement, and by so doing they shall worship the Supreme
-Personality of Godhead Lord Caitanya, whose bodily complexion is golden and who is always
-accompanied by His confidential devotees to preach this Krsna consciousness movement all over the
-world. In its present condition, the world can only be saved by introducing this sankirtana, this Krsna
-consciousness movement. As we have learned from the previous verse, one who is not in Krsna
-consciousness is considered a thief. Even though he may be materially very advanced, a thief cannot be
-placed in a comfortable position. A thief is a thief, and he is punishable. Because people are without Krsna
-consciousness, they have become thieves, and consequently they are being punished by the laws of
-material nature. No one can check this, not even by introducing so many relief funds and humanitarian
-institutions. Unless the people of the world take to Krsna consciousness, there will be a scarcity of food
-and much suffering.
+Talk of krsna-katha, or topics about Lord Krsna or His incarnations, is spiritually so inspiring that the
+reciter and hearer are never exhausted. That is the nature of spiritual talks. We have actually seen that one
+can never become satiated by hearing the conversations between Vidura and Maitreya. Both of them are
+devotees, and the more Vidura inquires, the more Maitreya is encouraged to speak. A symptom of
+spiritual talks is that no one feels tired. Thus upon hearing the questions of Vidura, the great sage
+Maitreya did not feel disgusted but rather felt encouraged to speak at greater length.
 </p>
 
 </div>
@@ -101,7 +118,7 @@ and much suffering.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,57 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.25.html">4.25.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vikrsyamanah prasabham
-yavanena baliyasa
-navindat tamasavistah
-sakhayam suhrdam purah
-<p></p>
+tam aha lalitam virah
+savrida-smita-sobhanam
+snigdhenapanga-punkhena
+sprstah premodbhramad-bhruva
+<br>
 <h2>Synonyms</h2>
-vikrsyamanah--being dragged; prasabham--forcibly; yavanena--by the Yavana; baliyasa--who was very
-powerful; na avindat--could not remember; tamasa--by darkness of ignorance; avistah--being covered;
-sakhayam--his friend; suhrdam--always a well-wisher; purah--from the very beginning.
-<p></p>
+tam--unto her; aha--addressed; lalitam--very gently; virah--the hero; sa-vrida--with shyness; smita--
+smiling; sobhanam--very beautiful; snigdhena--by sex desire; apanga-punkhena--by the arrow of glancing;
+sprstah--thus pierced; prema-udbhramat--exciting love; bhruva--by the eyebrows.
+<br>
 <h2>Translation</h2>
-When King Puranjana was being dragged with great force by the powerful Yavana, out of his gross
-ignorance he still could not remember his friend and well-wisher, the Supersoul.
-<p></p>
+Puranjana, the hero, became attracted by the eyebrows and smiling face of the very beautiful girl and
+was immediately pierced by the arrows of her lusty desires. When she smiled shyly, she looked very
+beautiful to Puranjana, who, although a hero, could not refrain from addressing her.
+<br>
 <h2>Purport</h2>
-In Bhagavad-gita (5.29) Lord Krsna says:
-bhoktaram yajna-tapasam
-sarva-loka-mahesvaram
-suhrdam sarva-bhutanam
-jnatva mam santim rcchati
-A person can be in full Krsna consciousness and become happy and satisfied if he knows but three
-things--namely, that the Supreme Lord Krsna is the enjoyer of all benefits, that He is the proprietor of
-everything, and that He is the supreme friend of all living entities. If one does not know this and functions
-instead under the bodily conception, he is always harassed by the tribulations offered by material nature.
-In actuality, the Supreme Lord is sitting by the side of everyone. Isvarah sarva-bhutanam hrd-dese 'rjuna
-tisthati (Bg. 18.61). The living entity and the Supersoul are sitting side by side in the same tree, but
-despite being harassed by the laws of material nature, the foolish living entity does not turn toward the
-Supreme Personality of Godhead for protection. However, he thinks that he is able to protect himself from
-the stringent laws of material nature. This, however, is not possible. The living entity must turn toward
-the Supreme Personality of Godhead and surrender unto Him. Only then will he be saved from the
-onslaught of the powerful Yavana, or Yamaraja.
-The word sakhayam ("friend") is very significant in this verse because God is eternally present beside
-the living entity. The Supreme Lord is also described as suhrdam ("ever well-wisher"). The Supreme Lord
-is always a well-wisher, just like a father or mother. Despite all the offenses of a son, the father and
-mother are always the son's well-wisher. Similarly, despite all our offenses and defiance of the desires of
-the Supreme Personality of Godhead, the Lord will give us immediate relief from all the hardships offered
-by material nature if we simply surrender unto Him, as confirmed in Bhagavad-gita (mam eva ye
-prapadyante mayam etam taranti te). Unfortunately, due to our bad association and great attachment for
-sense gratification, we do not remember our best friend, the Supreme Personality of Godhead.
+Every living entity is a hero in two ways. When he is a victim of the illusory energy, he works as a great
+hero in the material world, as a great leader, politician, businessman, industrialist, etc., and his heroic
+activities contribute to the material advancement of civilization. One can also become a hero by being
+master of the senses, a gosvami. Material activities are false heroic activities, whereas restraining the
+senses from material engagement is great heroism. However great a hero one may be in the material
+world, he can be immediately conquered by the lumps of flesh and blood known as the breasts of women.
+In the history of material activities there are many examples, like the Roman hero Antony, who became
+captivated by the beauty of Cleopatra. Similarly, a great hero in India named Baji Rao became a victim of a
+woman during the time of Maharashtrian politics, and he was defeated. From history we understand that
+formerly politicians used to employ beautiful girls who were trained as visa-kanya. These girls had poison
+injected into their bodies from the beginning of their lives so that in due course of time they would
+become so immune to the poison and so poisonous themselves that simply by kissing a person they could
+kill him. These poisonous girls were engaged to see an enemy and kill him with a kiss. Thus there are
+many instances in human history of heroes who have been curbed simply by women. Being part and
+parcel of Krsna, the living entity is certainly a great hero, but due to his own weakness he becomes
+attracted to the material features.
+krsna-bahirmukha hana bhoga-vancha kare
+nikata-stha maya tare japatiya dhare
+It is said in the prema-vivarta that when a living entity wants to enjoy material nature, he is immediately
+victimized by the material energy. A living entity is not forced to come into the material world. He makes
+his own choice, being attracted by beautiful women. Every living entity has the freedom to be attracted by
+material nature or to stand as a hero and resist that attraction. It is simply a question of the living entity's
+being attracted or not being attracted. There is no question of his being forced to come into contact with
+material energy. One who can keep himself steady and resist the attraction of material nature is certainly a
+hero and deserves to be called a gosvami. Unless one is master of the senses, he cannot become a gosvami.
+The living entity can take one of two positions in this world. He may become a servant of his senses, or he
+may become master of them. By becoming a servant of the senses, one becomes a great material hero, and
+by becoming master of the senses, he becomes a gosvami, or spiritual hero.
 </p>
 
 </div>
@@ -95,7 +139,7 @@ sense gratification, we do not remember our best friend, the Supreme Personality
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

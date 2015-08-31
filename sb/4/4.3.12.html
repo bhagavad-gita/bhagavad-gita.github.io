@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.3.12.html">4.3.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 pasya prayantir abhavanya-yosito
 'py alankrtah kanta-sakha varuthasah
 yasam vrajadbhih siti-kantha manditam
 nabho vimanaih kala-hamsa-pandubhih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 pasya--just see; prayantih--going; abhava--O never-born; anya-yositah--other women; api--certainly;
 alankrtah--ornamented; kanta-sakhah--with their husbands and friends; varuthasah--in large numbers;
 yasam--of them; vrajadbhih--flying; siti-kantha--O blue-throated one; manditam--decorated; nabhah--the
 sky; vimanaih--with airplanes; kala-hamsa--swans; pandubhih--white.
-<p></p>
+<br>
 <h2>Translation</h2>
 O never-born, O blue-throated one, not only my relatives but also other women, dressed in nice clothes
 and decorated with ornaments, are going there with their husbands and friends. Just see how their flocks
 of white airplanes have made the entire sky very beautiful.
-<p></p>
+<br>
 <h2>Purport</h2>
 Here Lord Siva is addressed as abhava, which means "one who is never born," although generally he is
 known as bhava, "one who is born." Rudra, Lord Siva, is actually born from between the eyes of Brahma,
@@ -88,7 +127,7 @@ should do so out of his great kindness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.5.html">4.7.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sangrahena mayakhyatah
-pratisargas tavanagha
-trih srutvaitat puman punyam
-vidhunoty atmano malam
-<p></p>
+bahubhyam asvinoh pusno
+hastabhyam krta-bahavah
+bhavantv adhvaryavas canye
+basta-smasrur bhrgur bhavet
+<br>
 <h2>Synonyms</h2>
-sangrahena--in summary; maya--by me; akhyatah--is explained; pratisargah--cause of devastation; tava--
-your; anagha--O pure one; trih--three times; srutva--having heard; etat--this description; puman--one
-who; punyam--piety; vidhunoti--washes off; atmanah--of the soul; malam--contamination.
-<p></p>
+bahubhyam--with two arms; asvinoh--of Asvini-kumara; pusnah--of Pusa; hastabhyam--with two hands;
+krta-bahavah--those in need of arms; bhavantu--they will have to; adhvaryavah--the priests; ca--and;
+anye--others; basta-smasruh--the beard of the goat; bhrguh--Bhrgu; bhavet--he may have.
+<br>
 <h2>Translation</h2>
-My dear Vidura, I have summarily explained the causes of devastation. One who hears this description
-three times attains piety and washes the sinful contamination from his soul.
-<p></p>
+Those who have had their arms cut off will have to work with the arms of Asvini-kumara, and those
+whose hands were cut off will have to do their work with the hands of Pusa. The priests will also have to
+act in that manner. As for Bhrgu, he will have the beard from the goat's head.
+<br>
 <h2>Purport</h2>
-The creation takes place on the basis of goodness, but devastation takes place because of irreligion. That
-is the way of material creation and devastation. Here it is stated that the cause of devastation is Adharma,
-or Irreligion. The descendants of Irreligion and Falsity, born one after another, are Bluffing, Cheating,
-Greed, Cunning, Anger, Envy, Quarrel, Harsh Speech, Death, Fear, Severe Pain and Hell. All these
-descendants are described as signs of devastation. If a person is pious and hears about these causes of
-devastation, he will feel hatred for all these, and that will cause his advancement in a life of piety. Piety
-refers to the process of cleansing the heart. As recommended by Lord Caitanya, one has to cleanse the
-dust from the mirror of the mind, and then advancement on the path of liberation begins. Here also the
-same process is recommended. Malam means: "contamination." We should learn to despise all the causes
-of devastation, beginning from irreligion and cheating, and then we shall be able to make advancement in
-a life of piety. The possibility of our attaining Krsna consciousness will be easier, and we shall not be
-subjected to repeated devastation. The present life is repeated birth and death, but if we seek the path of
-liberation, we may be saved from repeated suffering.
+Bhrgu Muni, a great supporter of Daksa, was awarded the beard of the goat's head which was substituted
+for the head of Daksa. It appears from the exchange of Daksa's head that the modern scientific theory that
+the brain substance is the cause of all intelligent work is not valid. The brain substance of Daksa and that
+of a goat are different, but Daksa still acted like himself, even though his head was replaced by that of a
+goat. The conclusion is that it is the particular consciousness of an individual soul which acts. The brain
+substance is only an instrument which has nothing to do with real intelligence. The real intelligence,
+mind and consciousness are part of the particular individual soul. It will be found in the verses ahead that
+after Daksa's head was replaced by the goat's head, he was as intelligent as he had previously been. He
+prayed very nicely to satisfy Lord Siva and Lord Visnu, which is not possible for a goat to do. Therefore it
+is definitely concluded that the brain substance is not the center of intelligence; it is the consciousness of
+a particular soul that works intelligently. The whole movement of Krsna consciousness is to purify the
+consciousness. It doesn't matter what kind of brain one has because if he simply transfers his
+consciousness from matter to Krsna, his life becomes successful. It is confirmed by the Lord Himself in
+Bhagavad-gita that anyone who takes up Krsna consciousness achieves the highest perfection of life,
+regardless of whatever abominable condition of life he may have fallen into. Specifically, anyone in Krsna
+consciousness goes back to Godhead, back to home, on leaving his present material body.
 </p>
 
 </div>
@@ -84,7 +127,7 @@ liberation, we may be saved from repeated suffering.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

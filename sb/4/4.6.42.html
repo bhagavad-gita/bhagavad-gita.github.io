@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.42.html">4.6.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-deva ucuh
-pura kalpapaye sva-krtam udari-krtya vikrtam
-tvam evadyas tasmin salila uragendradhisayane
-puman sese siddhair hrdi vimrsitadhyatma-padavih
-sa evadyaksnor yah pathi carasi bhrtyan avasi nah
-<p></p>
+brahmovaca
+jane tvam isam visvasya
+jagato yoni-bijayoh
+sakteh sivasya ca param
+yat tad brahma nirantaram
+<br>
 <h2>Synonyms</h2>
-devah--the demigods; ucuh--said; pura--formerly; kalpa-apaye--at the devastation of the kalpa; svakrtam--
-self-produced; udari-krtya--having drawn within Your abdomen; vikrtam--effect; tvam--You; eva--
-certainly; adyah--original; tasmin--in that; salile--water; uraga-indra--on Sesa; adhisayane--on the bed;
-puman--personality; sese--taking rest; siddhaih--by the liberated souls (like Sanaka, etc.); hrdi--in the
-heart; vimrsita--meditated on; adhyatma-padavih--the path of philosophical speculation; sah--He; eva--
-certainly; adya--now; aksnoh--of both eyes; yah--who; pathi--on the path; carasi--You move; bhrtyan--
-servants; avasi--protect; nah--us.
-<p></p>
+brahma uvaca--Lord Brahma said; jane--I know; tvam--you (Lord Siva); isam--the controller; visvasya--
+of the entire material manifestation; jagatah--of the cosmic manifestation; yoni-bijayoh--of both the
+mother and father; sakteh--of potency; sivasya--of Siva; ca--and; param--the Supreme; yat--which; tat--
+that; brahma--without change; nirantaram--with no material qualities.
+<br>
 <h2>Translation</h2>
-The demigods said: Dear Lord, formerly, when there was a devastation, You conserved all the different
-energies of material manifestation. At that time, all the inhabitants of the higher planets, represented by
-such liberated souls as Sanaka, were meditating on You by philosophical speculation. You are therefore
-the original person, and You rest in the water of devastation on the bed of the Sesa snake. Now, today,
-You are visible to us, who are all Your servants. Please give us protection.
-<p></p>
+Lord Brahma said: My dear Lord Siva, I know that you are the controller of the entire material
+manifestation, the combination father and mother of the cosmic manifestation, and the Supreme Brahman
+beyond the cosmic manifestation as well. I know you in that way.
+<br>
 <h2>Purport</h2>
-The devastation indicated in this verse is the partial devastation of the lower planets within the universe
-when Lord Brahma goes to sleep. The higher planetary systems, beginning with Maharloka, Janaloka and
-Tapoloka, are not inundated at the time of this devastation. The Lord is the creator, as indicated in this
-verse, because the energies of creation are manifested through His body, and after annihilation, He
-conserves all the energy within His abdomen.
-Another significant point in this verse is that the demigods said, "We are all Your servants (bhrtyan).
-Give us Your protection." The demigods depend on the protection of Visnu; they are not independent.
-Bhagavad-gita, therefore, condemns the worship of demigods because there is no need of it and clearly
-states that only those who have lost their sense go asking favors of the demigods. Generally, if anyone has
-material desires to be fulfilled, he can ask Visnu instead of going to the demigods. Those who worship
-demigods are not very intelligent. Besides that, the demigods say, "We are Your eternal servants." So those
-who are servants, or devotees of the Lord, are not very much concerned with fruitive activities, the
-performance of the prescribed yajnas, or mental speculation. They simply serve the Supreme Personality
-of Godhead sincerely, with love and faith, performing everything with that loving service, and the Lord
-gives such devotees direct protection. In Bhagavad-gita Lord Krsna says, "Simply surrender unto Me, and I
-will give you protection from all the reactions of sinful activities." This material world is so created that
-one has to act sinfully, knowingly or unknowingly, and unless his life is dedicated to Visnu, he has to
-suffer all the reactions of sinful activities. But one who surrenders and dedicates his life for the service of
-the Lord has direct protection from the Lord. He has no fear of suffering from sinful activities, nor does he
-desire, willingly or unwillingly, to do anything which is sinful.
+Although Lord Brahma had received very respectful obeisances from Lord Siva, he knew that Lord Siva
+was in a more exalted position than himself. Lord Siva's position is described in Brahma-samhita: there is
+no difference between Lord Visnu and Lord Siva in their original positions, but still Lord Siva is different
+from Lord Visnu. The example is given that the milk in yogurt is not different from the original milk from
+which it was made.
 </p>
 
 </div>
@@ -99,7 +118,7 @@ desire, willingly or unwillingly, to do anything which is sinful.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

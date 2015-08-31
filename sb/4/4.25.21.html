@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.21.html">4.25.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-katham nu daraka dina
-darakir vaparayanah
-vartisyante mayi gate
-bhinna-nava ivodadhau
-<p></p>
+panca-sirsahina guptam
+pratiharena sarvatah
+anvesamanam rsabham
+apraudham kama-rupinim
+<br>
 <h2>Synonyms</h2>
-katham--how; nu--indeed; darakah--sons; dinah--poor; darakih--daughters; va--or; aparayanah--having
-no one else to depend on; vartisyante--will live; mayi--when 1; gate--gone from this world; bhinna--
-broken; navah--boat; iva--like; udadhau--in the ocean.
-<p></p>
+panca--five; sirsa--heads; ahina--by a snake; guptam--protected; pratiharena--by a bodyguard; sarvatah--
+all around; anvesamanam--one who is searching after; rsabham--a husband; apraudham--not very old;
+kama-rupinim--very attractive to fulfill lusty desires.
+<br>
 <h2>Translation</h2>
-King Puranjana continued worrying: "After I pass from this world, how will my sons and daughters,
-who are now fully dependent on me, live and continue their lives? Their position will be similar to that of
-passengers aboard a ship wrecked in the midst of the ocean."
-<p></p>
+The woman was protected on all sides by a five-hooded snake. She was very beautiful and young, and
+she appeared very anxious to find a suitable husband.
+<br>
 <h2>Purport</h2>
-At the time of death every living entity worries about what will happen to his wife and children.
-Similarly, a politician also worries about what will happen to his country or his political party. Unless one
-is fully Krsna conscious, he has to accept a body in the next life according to his particular state of
-consciousness. Since Puranjana is thinking of his wife and children and is overly engrossed in thoughts of
-his wife, he will accept the body of a woman. Similarly, a politician or so-called nationalist who is
-inordinately attached to the land of his birth will certainly be reborn in the same land after ending his
-political career. One's next life will also be affected by the acts one performs during this life. Sometimes
-politicians act most sinfully for their own sense gratification. It is not unusual for a politician to kill the
-opposing party. Even though a politician may be allowed to take birth in his so-called homeland, he still
-has to undergo suffering due to his sinful activities in his previous life.
-This science of transmigration is completely unknown to modern scientists. So-called scientists do not
-like to bother with these things because if they would at all consider this subtle subject matter and the
-problems of life, they would see that their future is very dark. Thus they try to avoid considering the
-future and continue committing all kinds of sinful activities in the name of social, political and national
-necessity.
+The vital force of a living entity includes the five kinds of air working within the body, which are known
+as prana, apana, vyana, samana and udana. The vital force is compared to a serpent because a serpent can
+live by simply drinking air. The vital force carried by the air is described as the pratihara, or the
+bodyguard. Without the vital force one cannot live for a moment. Indeed, all the senses are working
+under the protection of the vital force.
+The woman, who represents intelligence, was searching after a husband. This indicates that intelligence
+cannot act without consciousness. A beautiful woman is useless unless protected by the proper husband.
+Intelligence must always be very fresh; therefore the word apraudham ("very young") is used here.
+Material enjoyment means utilizing the intelligence for the sake of rupa, rasa, gandha, sabda and sparsa,
+or form, taste, smell, sound and touch.
 </p>
 
 </div>
@@ -87,7 +120,7 @@ necessity.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

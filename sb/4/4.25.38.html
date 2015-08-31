@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.38.html">4.25.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tapasa vidyaya pakvakasayo
-niyamair yamaih
-yuyuje brahmany atmanam
-vijitaksanilasayah
-<p></p>
+kam nu tvad-anyam ramaye
+hy arati-jnam akovidam
+asamparayabhimukham
+asvastana-vidam pasum
+<br>
 <h2>Synonyms</h2>
-tapasa--by austerity; vidyaya--by education; pakva--burned up; kasayah--all dirty things; niyamaih--by
-regulative principles; yamaih--by self-control; yuyuje--he fixed; brahmani--in spiritual realization;
-atmanam--his self; vijita--completely controlled; aksa--senses; anila--life; asayah--consciousness.
-<p></p>
+kam--unto whom; nu--then; tvat--than you; anyam--other; ramaye--I shall allow to enjoy; hi--certainly;
+arati-jnam--without knowledge of sex enjoyment; akovidam--therefore almost foolish; asamparaya--
+without knowledge of the next life; abhimukham--looking forward; asvastana-vidam--one who does not
+know what is happening next; pasum--like animals.
+<br>
 <h2>Translation</h2>
-By worshiping, executing austerities and following the regulative principles, King Malayadhvaja
-conquered his senses, his life and his consciousness. Thus he fixed everything on the central point of the
-Supreme Brahman [Krsna].
-<p></p>
+Mow can I expect to unite with others, who are neither conversant about sex nor capable of knowing
+how to enjoy life while living or after death? Such foolish persons are like animals because they do not
+know the process of sense enjoyment in this life and after death.
+<br>
 <h2>Purport</h2>
-Whenever the word brahman appears, the impersonalists take this to mean the impersonal effulgence,
-the brahmajyoti. Actually, however, Parabrahman, the Supreme Brahman, is Krsna, Vasudeva. As stated in
-Bhagavad-gita (7.19), vasudevah sarvam iti: Vasudeva extends everywhere as the impersonal Brahman.
-One cannot fix one's mind upon an impersonal "something." Bhagavad-gita (12.5) therefore says, kleso
-'dhikataras tesam avyaktasakta-cetasam: "For those whose minds are attached to the unmanifested,
-impersonal feature of the Supreme, advancement is very troublesome." Consequently, when it is said
-herein that King Malayadhvaja fixed his mind on Brahman, "Brahman" means the Supreme Personality of
-Godhead, Vasudeva.
+Since there are 8,400,000 species of life, there are also many different living conditions. In the lower
+grades of life (in plant and tree life) there is no system for sexual intercourse. In the upper grades (in the
+life of birds and bees) there is sex, but the insects and animals do not know how to actually enjoy sex life.
+In the human form of life, however, there is full knowledge of how to enjoy sex. Indeed, there are many
+so-called philosophers who give directions on how to enjoy sex life. There is even a science called kamasastra,
+which is the science of sex. In human life there are also such divisions as brahmacarya, grhastha,
+vanaprastha and sannyasa. There is no sex life except in the grhastha, or householder, asrama. The
+brahmacari is not allowed any sex, a vanaprastha voluntarily refrains from sex, and the sannyasi is
+completely renounced. The karmis do not practice brahmacarya, vanaprastha or sannyasa life, for they are
+very much interested in grhastha life. In other words, a human being is very much materially inclined.
+Indeed, all living entities are materially inclined. They prefer grhastha life because there is a concession
+for sex. The karmis think the other statuses of life are worse than animal life, for animals also have sex,
+whereas the brahmacari, vanaprastha and sannyasi completely give up sex. The karmis, therefore, abhor
+these orders of spiritual life.
 </p>
 
 </div>
@@ -80,7 +126,7 @@ Godhead, Vasudeva.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.30.html">4.24.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-prajvaro 'yam mama bhrata
-tvam ca me bhagini bhava
-caramy ubhabhyam loke 'sminn
-avyakto bhima-sainikah
-<p></p>
+atha bhagavata yuyam
+priyah stha bhagavan yatha
+na mad bhagavatanam ca
+preyan anyo 'sti karhicit
+<br>
 <h2>Synonyms</h2>
-prajvarah--named Prajvara; ayam--this; mama--my; bhrata--brother; tvam--you; ca--also; me--my;
-bhagini--sister; bhava--become; carami--I shall go about; ubhabhyam--by both of you; loke--in the world;
-asmin--this; avyaktah--without being manifest; bhima--dangerous; sainikah--with soldiers.
-<p></p>
+atha--therefore; bhagavatah--devotees; yuyam--all of you; priyah--very dear to me; stha--you are;
+bhagavan--the Supreme Personality of Godhead; yatha--as; na--neither; mat--than me; bhagavatanam--of
+the devotees; ca--also; preyan--very dear; anyah--others; asti--there is; karhicit--at any time.
+<br>
 <h2>Translation</h2>
-The King of the Yavanas continued: Here is my brother Prajvara. I now accept you as my sister. I shall
-employ both of you, as well as my dangerous soldiers, to act imperceptibly within this world.
-<p></p>
+You are all devotees of the Lord, and as such I appreciate that you are as respectable as the Supreme
+Personality of Godhead Himself. I know in this way that the devotees also respect me and that I am dear
+to them. Thus no one can be as dear to the devotees as I am.
+<br>
 <h2>Purport</h2>
-Kalakanya was sent by Narada Muni to Yavana-raja so that she might become his wife, but instead of
-accepting her as his wife, Yavana-raja accepted her as his sister. Those who do not follow the Vedic
-principles are unrestricted as far as sex life is concerned. Consequently they sometimes do not hesitate to
-have sex with their sisters. In this age of Kali there are many instances of such incest. Although Yavanaraja
-accepted the request of Narada Muni to show respect to him, he was nonetheless thinking of illicit
-sex. This was due to his being the King of the yavanas and mlecchas.
-The word prajvarah is very significant, for it means "the fever sent by Lord Visnu." Such a fever is
-always set at 107 degrees, the temperature at which a man dies. Thus the King of the mlecchas and
-yavanas requested the daughter of Time, Kalakanya, to become his sister. There was no need to ask her to
-become his wife, for the yavanas and mlecchas do not make distinctions as far as sex life is concerned.
-Thus one may outwardly be a sister, mother or daughter and still have sex. Yavana-raja's brother was
-Prajvara, and Kalakanya was invalidity itself. Combined and strengthened by the soldiers of Yavana-raja--
-namely nonhygienic conditions, illicit sex and ultimately a high degree of temperature to bring on death--
-they would be able to smash the materialistic way of life. In this connection it is significant that Narada
-was immune to the attack of jara, or invalidity, and similarly jara, or the destructive force, cannot attack
-any follower of Narada Muni or a pure Vaisnava.
-Thus end the Bhaktivedanta purports of the Fourth Canto, Twenty-seventh Chapter, of the Srimad-
-Bhagavatam, entitled "Attack by Candavega on the City of King Puranjana; the Character of Kalakanya."
-Chapter Twenty-eight
-Puranjana Becomes a Woman in the Next Life
+It is said, vaisnavanam yatha sambhuh: Lord Siva is the best of all devotees. Therefore all devotees of
+Lord Krsna are also devotees of Lord Siva. In Vrndavana there is Lord Siva's temple called Gopisvara. The
+gopis used to worship not only Lord Siva but Katyayani, or Durga, as well, but their aim was to attain the
+favor of Lord Krsna. A devotee of Lord Krsna does not disrespect Lord Siva, but worships Lord Siva as the
+most exalted devotee of Lord Krsna. Consequently whenever a devotee worships Lord Siva, he prays to
+Lord Siva to achieve the favor of Krsna, and he does not request material profit. In Bhagavad-gita (7.20) it
+is said that generally people worship demigods for some material profit. Kamais tais tair hrta jnanah.
+Driven by material lust, they worship demigods, but a devotee never does so, for he is never driven by
+material lust. That is the difference between a devotee's respect for Lord Siva and an asura's respect for
+him. The asura worships Lord Siva, takes some benediction from him, misuses the benediction and
+ultimately is killed by the Supreme Personality of Godhead, who awards him liberation.
+Because Lord Siva is a great devotee of the Supreme Personality of Godhead, he loves all the devotees of
+the Supreme Lord. Lord Siva told the Pracetas that because they were devotees of the Lord, he loved them
+very much. Lord Siva was not kind and merciful only to the Pracetas; anyone who is a devotee of the
+Supreme Personality of Godhead is very dear to Lord Siva. Not only are the devotees dear to Lord Siva,
+but he respects them as much as he respects the Supreme Personality of Godhead. Similarly, devotees of
+the Supreme Lord also worship Lord Siva as the most dear devotee of Lord Krsna. They do not worship
+him as a separate Personality of Godhead. It is stated in the list of nama-aparadhas that it is an offense to
+think that the chanting of the name of Hari and the chanting of Hara, or Siva, are the same. The devotees
+must always know that Lord Visnu is the Supreme Personality of Godhead and that Lord Siva is His
+devotee. A devotee should be offered respect on the level of the Supreme Personality of Godhead, and
+sometimes even more respect. Indeed, Lord Rama, the Personality of Godhead Himself, sometimes
+worshiped Lord Siva. If a devotee is worshiped by the Lord, why should a devotee not be worshiped by
+other devotees on the same level with the Lord? This is the conclusion. From this verse it appears that
+Lord Siva blesses the asuras simply for the sake of formality. Actually he loves one who is devoted to the
+Supreme Personality of Godhead.
 </p>
 
 </div>
@@ -91,7 +137,7 @@ Puranjana Becomes a Woman in the Next Life
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

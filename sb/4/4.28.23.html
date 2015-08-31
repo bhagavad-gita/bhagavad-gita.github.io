@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.23.html">4.28.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-iti pracetaso rajann
-anyas ca bhagavat-kathah
-sravayitva brahma-lokam
-yayau svayambhuvo munih
-<p></p>
+pasuvad yavanair esa
+niyamanah svakam ksayam
+anvadravann anupathah
+socanto bhrsam aturah
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--Maitreya said; iti--thus; pracetasah--the Pracetas; rajan--O King; anyah--others; ca--
-also; bhagavat-kathah--topics about the relationship with the Supreme Personality of Godhead;
-sravayitva--after instructing; brahma-lokam--to Brahmaloka; yayau--went back; svayambhuvah--the son of
-Lord Brahma; munih--the great sage.
-<p></p>
+pasu-vat--like an animal; yavanaih--by the Yavanas; esah--Puranjana; niyamanah--being arrested and
+taken away; svakam--to their own; ksayam--abode; anvadravan--followed; anupathah--his attendants;
+socantah--lamenting; bhrsam--greatly; aturah--being distressed.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued: My dear King Vidura, Sri Narada Muni, the son of Lord Brahma,
-thus described all these relationships with the Supreme Personality of Godhead to the Pracetas. Afterward,
-he returned to Brahmaloka.
-<p></p>
+When the Yavanas were taking King Puranjana away to their place, binding him like an animal, the
+King's followers became greatly aggrieved. While they lamented, they were forced to go along with him.
+<br>
 <h2>Purport</h2>
-One has to hear about the Supreme Personality of Godhead from a pure devotee. The Pracetas got this
-opportunity from the great sage Narada, who told them of the activities of the Supreme Personality of
-Godhead and His devotees.
+When Yamaraja and his assistants take a living entity away to the place of judgment, the life, life air and
+desires, being followers of the living entity, also go with him. This is confirmed in the Vedas. When the
+living entity is taken away or arrested by Yamaraja (tam utkramantam), the life air also goes with him
+(prano 'nutkramati), and when the life air is gone (pranam anutkramantam), all the senses (sarve pranah)
+also go along (anutkramanti). When the living entity and the life air are gone, the lump of matter
+produced of five elements--earth, water, air, fire and ether--is rejected and left behind. The living entity
+then goes to the court of judgment, and Yamaraja decides what kind of body he is going to get next. This
+process is unknown to modern scientists. Every living entity is responsible for his activities in this life,
+and after death he is taken to the court of Yamaraja, where it is decided what kind of body he will take
+next. Although the gross material body is left, the living entity and his desires, as well as the resultant
+reactions of his past activities, go on. It is Yamaraja who decides what kind of body one gets next in
+accordance with one's past actions.
 </p>
 
 </div>
@@ -77,7 +122,7 @@ Godhead and His devotees.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

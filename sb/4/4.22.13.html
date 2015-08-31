@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.13.html">4.22.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pracinabarhisah putrah
-satadrutyam dasabhavan
-tulya-nama-vratah sarve
-dharma-snatah pracetasah
-<p></p>
+kaccin nah kusalam natha
+indriyarthartha-vedinam
+vyasanavapa etasmin
+patitanam sva-karmabhih
+<br>
 <h2>Synonyms</h2>
-pracinabarhisah--of King Pracinabarhi; putrah--sons; satadrutyam--in the womb of Satadruti; dasa--ten;
-abhavan--became manifest; tulya--equally; nama--name; vratah--vow; sarve--all; dharma--religiosity;
-snatah--completely merged in; pracetasah--all of them being designated as Pracetas.
-<p></p>
+kaccit--whether; nah--our; kusalam--good fortune; nathah--O masters; indriya-artha--sense gratification
+as the ultimate goal of life; artha-vedinam--persons who understand only sense gratification; vyasana--
+illness; avape--got; etasmin--in this material existence; patitanam--those who are fallen; sva-karmabhih--
+by their own ability.
+<br>
 <h2>Translation</h2>
-King Pracinabarhi begot ten children in the womb of Satadruti. All of them were equally endowed with
-religiosity, and all of them were known as the Pracetas.
-<p></p>
+Prthu Maharaja inquired from the sages about persons entangled in this dangerous material existence
+because of their previous actions; could such persons, whose only aim is sense gratification, be blessed
+with any good fortune?
+<br>
 <h2>Purport</h2>
-The word dharma-snatah is significant, for the ten children were all merged in the practice of religion.
-In addition, they possessed all good qualities. One is supposed to be perfect when one is perfectly
-religious, perfect in the execution of one's vows to render devotional service, perfect in knowledge, perfect
-in good behavior, and so on. All the Pracetas were on the same level of perfection.
+Maharaja Prthu did not ask the Kumaras about their good fortune, for the Kumaras are always
+auspicious by dint of their life in celibacy. Since they are always engaged on the path of liberation, there
+was no question of ill fortune. In other words, brahmanas and Vaisnavas who are strictly following the
+path of spiritual advancement are always fortunate. The question was asked by Prthu Maharaja for his
+own sake, since he was in the position of a grhastha and in charge of the royal authority. Kings are not
+only grhasthas, who are generally absorbed in sense gratification, but are sometimes employed to kill
+animals in hunting because they have to practice the killing art, otherwise it is very difficult for them to
+fight their enemies. Such things are not auspicious. Four kinds of sinful activities--associating with
+woman for illicit sex, eating meat, intoxication and gambling--are allowed for the ksatriyas. For political
+reasons, sometimes they have to take to these sinful activities. Ksatriyas do not refrain from gambling.
+One vivid example is the Pandavas. When the Pandavas were challenged by the opposite party,
+Duryodhana, to gamble and risk their kingdom, they could not refrain, and by that gambling they lost
+their kingdom, and their wife was insulted. Similarly, the ksatriyas cannot refrain from fighting if
+challenged by the opposite party. Therefore Prthu Maharaja, taking consideration of all these facts,
+inquired whether there is any auspicious path. Grhastha life is inauspicious because grhastha means
+consciousness for sense gratification, and as soon as there is sense gratification, one's position is always
+full of dangers. This material world is said to be padam padam yad vipadam na tesam, dangerous in every
+step (Bhag. 10.14.58). Everyone in this material world is struggling hard for sense gratification. Clearing
+all these points, Maharaja Prthu inquired from the four Kumaras about the fallen conditioned souls who
+are rotting in this material world due to their past bad or inauspicious activities. Is there any possibility
+for their auspicious spiritual life? In this verse, the word indriyarthartha-vedinam is very significant. It
+indicates persons whose only aim is to satisfy the senses. They are also described as patitanam, or fallen.
+Only one who stops all activities for sense gratification is considered to be elevated. Another significant
+word is sva-karmabhih. One becomes fallen by dint of his own past bad activities. Everyone is responsible
+for his fallen condition because of his own activities. When activities are changed to devotional service,
+one's auspicious life begins.
 </p>
 
 </div>
@@ -75,7 +138,7 @@ in good behavior, and so on. All the Pracetas were on the same level of perfecti
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

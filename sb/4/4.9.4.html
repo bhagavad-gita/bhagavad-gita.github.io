@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.9.4.html">4.9.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dhruvo bhratr-vadham srutva
-kopamarsa-sucarpitah
-jaitram syandanam asthaya
-gatah punya-janalayam
-<p></p>
+sa tam vivaksantam atad-vidam harir
+jnatvasya sarvasya ca hrdy avasthitah
+krtanjalim brahmamayena kambuna
+pasparsa balam krpaya kapole
+<br>
 <h2>Synonyms</h2>
-dhruvah--Dhruva Maharaja; bhratr-vadham--the killing of his brother; srutva--hearing this news; kopa--
-anger; amarsa--vengeance; suca--lamentation; arpitah--being filled with; jaitram--victorious; syandanam--
-chariot; asthaya--getting on; gatah--went; punya-jana-alayam--to the city of the Yaksas.
-<p></p>
+sah--the Supreme Personality of Godhead; tam--Dhruva Maharaja; vivaksantam--wanting to offer
+prayers describing His qualities; a-tat-vidam--not experienced at that; harih--the Personality of Godhead;
+jnatva--having understood; asya--of Dhruva Maharaja; sarvasya--of everyone; ca--and; hrdi--in the heart;
+avasthitah--being situated; krta-anjalim--situated with folded hands; brahma-mayena--just consistent with
+the words of the Vedic hymns; kambuna--with His conchshell; pasparsa--touched; balam--the boy;
+krpaya--out of causeless mercy; kapole--on the forehead.
+<br>
 <h2>Translation</h2>
-When Dhruva Maharaja heard of the killing of his brother Uttama by the Yaksas in the Himalaya
-Mountains, being overwhelmed with lamentation and anger, he got on his chariot and went out for
-victory over the city of the Yaksas, Alakapuri.
-<p></p>
+Although Dhruva Maharaja was a small boy, he wanted to offer prayers to the Supreme Personality of
+Godhead in suitable language. But because he was inexperienced, he could not adjust himself
+immediately. The Supreme Personality of Godhead, being situated in everyone's heart, could understand
+Dhruva Maharaja's awkward position. Out of His causeless mercy He touched His conchshell to the
+forehead of Dhruva Maharaja, who stood before Him with folded hands.
+<br>
 <h2>Purport</h2>
-Dhruva Maharaja's becoming angry, overwhelmed with grief, and envious of the enemies was not
-incompatible with his position as a great devotee. It is a misunderstanding that a devotee should not be
-angry, envious or overwhelmed by lamentation. Dhruva Maharaja was the king, and when his brother was
-unceremoniously killed, it was his duty to take revenge against the Yaksas from the Himalayas.
+Every devotee wants to chant the transcendental qualities of the Lord. Devotees are always interested in
+hearing about the Lord's transcendental qualities, and they are always eager to glorify these qualities, but
+sometimes they feel inconvenienced by humbleness. The Personality of Godhead, being situated in
+everyone's heart, specifically gives a devotee intelligence to describe Him. It is therefore understood that
+when a devotee writes or speaks about the Supreme Personality of Godhead, his words are dictated by the
+Lord from within. This is confirmed in Bhagavad-gita, Tenth Chapter: to those who constantly engage in
+the transcendental loving service of the Lord, the Lord, from within, dictates what to do next in order to
+serve Him. When Dhruva Maharaja felt hesitant, not knowing how to describe the Lord for want of
+sufficient experience, the Lord, out of His causeless mercy, touched His conchshell to Dhruva's forehead,
+and he was transcendentally inspired. This transcendental inspiration is called brahma-maya because
+when one is thus inspired, the sound he produces exactly corresponds to the sound vibration of the
+Vedas. This is not the ordinary sound vibration of this material world. Therefore the sound vibration of
+the Hare Krsna mantra, although presented in the ordinary alphabet, should not be taken as mundane or
+material.
 </p>
 
 </div>
@@ -76,7 +130,7 @@ unceremoniously killed, it was his duty to take revenge against the Yaksas from 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

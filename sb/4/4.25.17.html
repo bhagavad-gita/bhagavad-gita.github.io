@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.17.html">4.25.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aham mameti svikrtya
-grhesu kumatir grhi
-dadhyau pramadaya dino
-viprayoga upasthite
-<p></p>
+puryas tu bahyopavane
+divya-druma-latakule
+nadad-vihangali-kulakolahala-
+jalasaye
+<br>
 <h2>Synonyms</h2>
-aham--I; mama--mine; iti--thus; svi-krtya--accepting; grhesu--in the home; ku-matih--whose mind is full
-of obnoxious thoughts; grhi--the householder; dadhyau--turns his attention to; pramadaya--with his wife;
-dinah--very poor; viprayoge--when separation; upasthite--occurred.
-<p></p>
+puryah--of that town; tu--then; bahya-upavane--in an outside garden; divya--very nice; druma--trees;
+lata--creepers; akule--filled with; nadat--vibrating; vihanga--birds; ali--bees; kula--groups of; kolahala--
+humming; jala-asaye--with a lake.
+<br>
 <h2>Translation</h2>
-King Puranjana was overly attached to his family and conceptions of "I" and "mine." Because he was
-overly attracted to his wife, he was already quite poverty-stricken. At the time of separation, he became
-very sorry.
-<p></p>
+On the outskirts of that city were many beautiful trees and creepers encircling a nice lake. Also
+surrounding that lake were many groups of birds and bees that were always chanting and humming.
+<br>
 <h2>Purport</h2>
-It is clear in this verse that at the time of death thoughts of material enjoyment do not go away. This
-indicates that the living entity, the soul, is carried by the subtle body--mind, intelligence and ego. Due to
-false ego, the living entity still wants to enjoy the material world, and for want of material enjoyment he
-becomes sorry or sad. He still makes intellectual plans to further his existence, and therefore, although he
-gives up the gross body, he is carried by the subtle body to another gross body. The transmigration of the
-subtle body is never visible to material eyes; therefore when one gives up the gross body, we think that he
-is finished. Plans for material enjoyment are made by the subtle body, and the gross body is the
-instrument for enjoying these plans. Thus the gross body can be compared to the wife, for the wife is the
-agent for all kinds of sense gratification. Because of long association with the gross body, the living entity
-becomes very sad to be separated from it. The mental activity of the living entity obliges him to accept
-another gross body and continue his material existence.
-The Sanskrit word stri means "expansion." Through the wife one expands his various objects of
-attraction--sons, daughters, grandsons and so on. Attachment to family members becomes very prominent
-at the time of death. One often sees that just before leaving his body a man may call for his beloved son to
-give him charge of his wife and other paraphernalia. He may say, "My dear boy, I am being forced to
-leave. Please take charge of the family affairs." He speaks in this way, not even knowing his destination.
+Since the body is a great city, there must be various arrangements such as lakes and gardens for sense
+enjoyment. Of the various parts of the body, those which incite sexual impulses are referred to here
+indirectly. Because the body has genitals, when the living entity attains the right age--be he man or
+woman--he becomes agitated by the sex impulse. As long as one remains a child, he is not agitated by
+seeing a beautiful woman. Although the sense organs are present, unless the age is ripe there is no sex
+impulse. The favorable conditions surrounding the sex impulse are compared here to a garden or a nice
+solitary park. When one sees the opposite sex, naturally the sex impulse increases. It is said that if a man
+in a solitary place does not become agitated upon seeing a woman, he is to be considered a brahmacari.
+But this practice is almost impossible. The sex impulse is so strong that even by seeing, touching or
+talking, coming into contact with, or even thinking of the opposite sex--even in so many subtle ways--one
+becomes sexually impelled. Consequently, a brahmacari or sannyasi is prohibited to associate with
+women, especially in a secret place. The sastras enjoin that one should not even talk to a woman in a
+secret place, even if she happens to be one's own daughter, sister or mother. The sex impulse is so strong
+that even if one is very learned, he becomes agitated in such circumstances. If this is the case, how can a
+young man in a nice park remain calm and quiet after seeing a beautiful young woman?
 </p>
 
 </div>
@@ -88,7 +125,7 @@ leave. Please take charge of the family affairs." He speaks in this way, not eve
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

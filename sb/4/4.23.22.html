@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.22.html">4.23.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-paramo 'nugraho dando
-bhrtyesu prabhunarpitah
-balo na veda tat tanvi
-bandhu-krtyam amarsanah
-<p></p>
+vidhaya krtyam hradini-jalapluta
+dattvodakam bhartur udara-karmanah
+natva divi-sthams tridasams trih paritya
+vivesa vahnim dhyayati bhartr-padau
+<br>
 <h2>Synonyms</h2>
-paramah--supreme; anugrahah--mercy; dandah--punishment; bhrtyesu--upon the servants; prabhuna--
-by the master; arpitah--awarded; balah--foolish; na--does not; veda--know; tat--that; tanvi--O slender
-maiden; bandhu-krtyam--the duty of a friend; amarsanah--angry.
-<p></p>
+vidhaya--executing; krtyam--the regulative function; hradini--in the water of the river; jala-apluta--
+taking bath completely; dattva udakam--offering oblations of water; bhartuh--of her husband; udarakarmanah--
+who was so liberal; natva--offering obeisances; divi-sthan--situated in the sky; tri-dasan--the
+thirty million demigods; trih--three times; paritya--circumambulating; vivesa--entered; vahnim--the fire;
+dhyayati--while thinking of; bhartr--of her husband; padau--the two lotus feet.
+<br>
 <h2>Translation</h2>
-My dear slender maiden, when a master chastises his servant, the servant should accept this as great
-mercy. One who becomes angry must be very foolish not to know that such is the duty of his friend.
-<p></p>
+After this, the Queen executed the necessary funerary functions and offered oblations of water. After
+bathing in the river, she offered obeisances to various demigods situated in the sky in the different
+planetary systems. She then circumambulated the fire and, while thinking of the lotus feet of her husband,
+entered its flames.
+<br>
 <h2>Purport</h2>
-It is said that when a foolish man is instructed in something very nice, he generally cannot accept it.
-Indeed, he actually becomes angry. Such anger is compared to the poison of a serpent, for when a serpent
-is fed milk and bananas, its poison actually increases. Instead of becoming merciful or sober, the serpent
-increases its poisonous venom when fed nice foodstuffs. Similarly, when a fool is instructed, he does not
-rectify himself, but actually becomes angry.
+The entrance of a chaste wife into the flames of the pyre of her dead husband is known as saha-gamana,
+which means "dying with the husband." This system of saha-gamana had been practiced in Vedic
+civilization from time immemorial. Even after the British period in India this practice was rigidly
+observed, but soon it degraded to the point that even when the wife was not strong enough to enter the
+fire of her dead husband, the relatives would force her to enter. Thus this practice had to be stopped, but
+even today there are still some solitary cases where a wife we personally knew of a chaste wife who died in
+this way.
 </p>
 
 </div>
@@ -76,7 +121,7 @@ rectify himself, but actually becomes angry.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

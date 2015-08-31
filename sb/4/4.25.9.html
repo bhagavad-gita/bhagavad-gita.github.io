@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,68 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.9.html">4.25.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kaman abhilasan dino
-yata-yamams ca kanyaya
-vigatatma-gati-snehah
-putra-darams ca lalayan
-<p></p>
+atra te kathayisye 'mum
+itihasam puratanam
+puranjanasya caritam
+nibodha gadato mama
+<br>
 <h2>Synonyms</h2>
-kaman--objects of enjoyment; abhilasan--always lusting after; dinah--the poor man; yata-yaman--stale;
-ca--also; kanyaya--by the influence of Kalakanya; vigata--lost; atma-gati--real purpose of life; snehah--
-attachment to; putra--sons; daran--wife; ca--and; lalayan--affectionately maintaining.
-<p></p>
+atra--herewith; te--unto you; kathayisye--I shall speak; amum--on this subject matter; itihasam--history;
+puratanam--very old; puranjanasya--in the matter of Puranjana; caritam--his character; nibodha--try to
+understand; gadatah mama--while I am speaking.
+<br>
 <h2>Translation</h2>
-The objects of enjoyment became stale by the influence of Kalakanya. Due to the continuance of his
-lusty desires, King Puranjana became very poor in everything. Thus he did not understand the aim of life.
-He was still very affectionate toward his wife and children, and he worried about maintaining them.
-<p></p>
+In this connection I wish to narrate an old history connected with the character of a king called
+Puranjana. Please try to hear me with great attention.
+<br>
 <h2>Purport</h2>
-This is exactly the position of present civilization. Everyone is engaged in maintaining the body, home
-and family. Consequently everyone becomes confused at the end of life, not knowing what spiritual life
-and the goal of human life are. In a civilization of sense gratification there cannot be spiritual life, because
-a person thinks only of this life. Although the next life is a fact, no information is given about it.
+The great sage Narada Muni turned toward another topic--the history of King Puranjana. This is
+nothing but the history of King Pracinabarhisat told in a different way. In other words, this is an
+allegorical presentation. The word puranjana means "one who enjoys in a body." This is clearly explained
+in the next few chapters. Because a person entangled in material activities wants to hear stories of material
+activities, Narada Muni turned to the topics of King Puranjana, who is none other than King
+Pracinabarhisat. Narada Muni did not directly deprecate the value of performing sacrifices in which
+animals are sacrificed. Lord Buddha, however, directly rejected all animal sacrifice. Srila Jayadeva
+Gosvami has stated: nindasi yajna-vidher ahaha sruti-jatam. The word sruti jatam indicates that in the
+Vedas animal sacrifice is recommended, but Lord Buddha directly denied Vedic authority in order to stop
+animal sacrifice. Consequently Lord Buddha is not accepted by the followers of the Vedas. Because he
+does not accept the authority of the Vedas, Lord Buddha is depicted as an agnostic or atheist. The great
+sage Narada cannot decry the authority of the Vedas, but he wanted to indicate to King Pracinabarhisat
+that the path of karma-kanda is very difficult and risky.
+Foolish persons accept the difficult path of karma-kanda for the sake of sense enjoyment, and those who
+are too much attached to sense enjoyment are called mudhas (rascals). It is very difficult for a mudha to
+understand the ultimate goal of life. In the propagation of the Krsna consciousness movement, we actually
+see that many people are not attracted because they are mudhas engaged in fruitive activity. It is said:
+upadeso hi murkhanam prakopaya na santaye. If good instructions are given to a foolish rascal, he simply
+becomes angry and turns against the instructions instead of taking advantage of them. Because Narada
+Muni knew this very well, he indirectly instructed the King by giving him the history of his entire life. In
+order to wear a gold or diamond nose pin or earring, one has to pierce the ear or nose. Such pain endured
+for the sake of sense gratification is endured on the path of karma-kanda, the path of fruitive activity. If
+one wishes to enjoy something in the future, he has to endure trouble in the present. If one wants to
+become a millionaire in the future and enjoy his riches, he has to work very hard at the present moment
+in order to accumulate money. This is karma-kandiya. Those who are too much attached to such a path
+undergo the risk anyway. Narada Muni wanted to show King Pracinabarhisat how one undergoes great
+troubles and miseries in order to engage in fruitive activity. A person who is very much attached to
+material activity is called visayi. A visayi is an enjoyer of visaya, which means eating, sleeping, mating and
+defending. Narada Muni is indirectly indicating through the story of King Puranjana that eating, sleeping,
+mating and defending are troublesome and risky.
+The words itihasam ("history") and puratanam ("old") indicate that although a living entity lives within
+the material body, the history of the living entity within the material body is very old. In this regard, Srila
+Bhaktivinoda Thakura has sung, anadi karama-phale, padi' bhavarnava jale, taribare na dekhi upaya: "Due
+to my past fruitive activities I have fallen into the water of material existence, and I cannot find any way to
+get out of it." Every living entity is suffering in this material existence from past activities; therefore
+everyone has a very old history. Foolish material scientists have manufactured their own theories of
+evolution, which are simply concerned with the material body. But actually this is not the real evolution.
+The real evolution is the history of the living entity, who is puranjana, "living within the body." Sri
+Narada Muni will explain this evolutionary theory in a different way for the understanding of sane
+persons.
 </p>
 
 </div>
@@ -76,7 +150,7 @@ a person thinks only of this life. Although the next life is a fact, no informat
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

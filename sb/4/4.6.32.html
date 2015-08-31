@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.32.html">4.6.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-indra uvaca
-idam apy acyuta visva-bhavanam
-vapur ananda-karam mano-drsam
-sura-vidvit-ksapanair udayudhair
-bhuja-dandair upapannam astabhih
-<p></p>
+sa yojana-satotsedhah
+padona-vitapayatah
+paryak-krtacala-cchayo
+nirnidas tapa-varjitah
+<br>
 <h2>Synonyms</h2>
-indrah uvaca--King Indra said; idam--this; api--certainly; acyuta--O infallible one; visva-bhavanam--for
-the welfare of the universe; vapuh--transcendental form; ananda-karam--a cause of pleasure; manahdrsam--
-to the mind and the eye; sura-vidvit--envious of Your devotees; ksapanaih--by punishment; udayudhaih--
-with uplifted weapons; bhuja-dandaih--with arms; upapannam--possessed of; astabhih--with
-eight.
-<p></p>
+sah--that banyan tree; yojana-sata--one hundred yojanas (eight hundred miles); utsedhah--height; padauna--
+less by a quarter (six hundred miles); vitapa--by the branches; ayatah--spread out; paryak--all
+around; krta--made; acala--unshaken; chayah--the shadow; nirnidah--without bird nests; tapa-varjitah--
+without heat.
+<br>
 <h2>Translation</h2>
-King Indra said: My dear Lord, Your transcendental form with eight hands and weapons in each of them
-appears for the welfare of the entire universe, and it is very pleasing to the mind and eyes. In such a form,
-Your Lordship is always prepared to punish the demons, who are envious of Your devotees.
-<p></p>
+That banyan tree was eight hundred miles high, and its branches spread over six hundred miles around.
+The tree cast a fine shade which permanently cooled the temperature, yet there was no noise of birds.
+<br>
 <h2>Purport</h2>
-It is generally understood from revealed scriptures that Lord Visnu appears with four hands, but in this
-particular sacrificial arena Lord Visnu arrived with eight hands. King Indra said, "Even though we are
-accustomed to see Your four-handed Visnu form, this appearance with eight hands is as real as the fourhanded
-form." As Lord Brahma had said, to realize the transcendental form of the Lord is beyond the
-power of the senses. In reply to that statement by Brahma, King Indra said that even though the
-transcendental form of the Lord is not perceivable by the material senses, His activities and His
-transcendental form can be understood. The Lord's uncommon features, uncommon activities and
-uncommon beauty can be perceived even by an ordinary man. For example, when Lord Krsna appeared
-just like a six- or seven-year-old boy in Vrndavana, He was approached by the residents there. There were
-torrents of rain, and the Lord saved the residents of Vrndavana by lifting Govardhana Hill and resting it
-on the little finger of His left hand for seven days. This uncommon feature of the Lord should convince
-even materialistic persons who want to speculate to the limit of their material senses. The activities of the
-Lord are pleasing to experimental vision also, but impersonalists will not believe in His identity because
-they study the personality of the Lord by comparing their personality to His. Because men in this material
-world cannot lift a hill, they do not believe that the Lord can lift one. They accept the statements of
-Srimad-Bhagavatam to be allegorical, and they try to interpret them in their own way. But factually the
-Lord lifted the hill in the presence of all the inhabitants of Vrndavana, as corroborated by great acaryas
-and authors like Vyasadeva and Narada. Everything about the Lord--His activities, pastimes and
-uncommon features--should be accepted as is, and in this way, even in our present condition, we can
-understand the Lord. ln the instance herein, King Indra confirmed: "Your presence with eight hands is as
-good as Your presence with four hands." There is no doubt about it.
+Generally, in every tree there are bird nests, and the birds congregate in the evening and create noise.
+But it appears that this banyan tree was devoid of nests, and therefore it was calm, quiet and peaceful.
+There were no disturbances from noise or heat, and therefore this place was just suitable for meditation.
 </p>
 
 </div>
@@ -96,7 +114,7 @@ good as Your presence with four hands." There is no doubt about it.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

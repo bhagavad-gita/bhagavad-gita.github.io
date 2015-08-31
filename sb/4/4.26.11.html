@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,64 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.11.html">4.26.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nalini nalini nase
-gandhah saurabha ucyate
-ghrano 'vadhuto mukhyasyam
-vipano vag rasavid rasah
-<p></p>
+tatah ksut-trt-parisranto
+nivrtto grham eyivan
+krta-snanocitaharah
+samvivesa gata-klamah
+<br>
 <h2>Synonyms</h2>
-nalini--named Nalini; nalini--named Nalini; nase--the two nostrils; gandhah--aroma; saurabhah--
-Saurabha (fragrance); ucyate--is called; ghranah--the sense of smell; avadhutah--called Avadhuta;
-mukhya--called Mukhya (principal); asyam--the mouth; vipanah--named Vipana; vak--the faculty of
-speech; rasa-vit--named Rasajna (expert in tasting); rasah--the sense of taste.
-<p></p>
+tatah--thereafter; ksut--by hunger; trt--thirst; parisrantah--being too fatigued; nivrttah--having ceased;
+grham eyivan--came back to his home; krta--taken; snana--bath; ucita-aharah--exactly required foodstuffs;
+samvivesa--took rest; gata-klamah--freed from all fatigue.
+<br>
 <h2>Translation</h2>
-The two doors named Nalini and Nalini should be known as the two nostrils, and the city named
-Saurabha represents aroma. The companion spoken of as Avadhuta is the sense of smell. The door called
-Mukhya is the mouth, and Vipana is the faculty of speech. Rasajna is the sense of taste.
-<p></p>
+After this, the King, very much fatigued, hungry and thirsty, returned to his royal palace. After
+returning, he took a bath and had an appropriate dinner. Then he took rest and thus became freed from
+all restlessness.
+<br>
 <h2>Purport</h2>
-The word avadhuta means "most free." A person is not under the rules and regulations of any
-injunction when he has attained the stage of avadhuta. In other words, he can act as he likes. This
-avadhuta stage is exactly like air, which does not care for any obstruction. In Bhagavad-gita (6.34) it is
-said:
-cancalam hi manah krsna
-pramathi balavad drdham
-tasyaham nigraham manye
-vayor iva suduskaram
-"The mind is restless, turbulent, obstinate and very strong, O Krsna, and to subdue it is, it seems to me,
-more difficult than controlling the wind."
-Just as the air or wind cannot be checked by anyone, the two nostrils, situated in one place, enjoy the
-sense of smell without impediment. When the tongue is present, the mouth continually tastes all kinds of
-relishable foodstuffs.
+A materialistic person works throughout the whole week very, very hard. He is always asking, "Where is
+money? Where is money?" Then, at the end of the week, he wants to retire from these activities and go to
+some secluded place to rest. King Puranjana returned to his home because he was very much fatigued
+from hunting animals in the forest. In this way his conscience came to stop him from committing further
+sinful activities and make him return home. In Bhagavad-gita materialistic persons are described as
+duskrtinah, which indicates those who are always engaged in sinful activities. When a person comes to his
+senses and understands how he is engaging in sinful activities, he returns to his conscience, which is
+herein figuratively described as the palace. Generally a materialistic person is infected by the material
+modes of passion and ignorance. The results of passion and ignorance are lust and greed. In the life of a
+materialist, activity means working in lust and greed. However, when he comes to his senses, he wants to
+retire. According to Vedic civilization, such retirement is positively recommended, and this portion of life
+is called vanaprastha. Retirement is absolutely necessary for a materialist who wants to become free from
+the activities of a sinful life.
+King Puranjana's coming home, taking bath and having an appropriate dinner indicate that a
+materialistic person must retire from sinful activities and become purified by accepting a spiritual master
+and hearing from him about the values of life. If one would do this, he would feel completely refreshed,
+just as one feels after taking a bath. After receiving initiation from a bona fide spiritual master, one must
+abandon all kinds of sinful activities, namely illicit sex, intoxication, gambling and meat-eating.
+The word ucitaharah used in this verse is important. Ucita means "appropriate." One must eat
+appropriately and not take after food as hogs take after stool. For a human being there are eatables
+described in Bhagavad-gita (17.8) as sattvika-ahara, or food in the mode of goodness. One should not
+indulge in eating food in the modes of passion and ignorance. This is called ucitahara, or appropriate
+eating. One who is always eating meat or drinking liquor, which is eating and drinking in passion and
+ignorance, must give these things up so that his real consciousness may be awakened. In this way one may
+become peaceful and refreshed. If one is restless or fatigued, one cannot understand the science of God.
+As stated in Srimad-Bhagavatam (1.2.20):
+evam prasanna-manaso
+bhagavad-bhakti-yogatah
+bhagavat-tattva-vijnanam
+mukta-sangasya jayate
+Unless one can become free from the influence of passion and ignorance, he cannot be pacified, and
+without being pacified, one cannot understand the science of God. King Puranjana's returning home is
+indicative of man's returning to his original consciousness, known as Krsna consciousness. Krsna
+consciousness is absolutely necessary for one who has committed a lot of sinful activities, especially
+killing animals or hunting in the forest.
 </p>
 
 </div>
@@ -86,7 +146,7 @@ relishable foodstuffs.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

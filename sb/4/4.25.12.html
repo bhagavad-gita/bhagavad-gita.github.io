@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.12.html">4.25.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasyam sandahyamanayam
-sapaurah saparicchadah
-kautumbikah kutumbinya
-upatapyata sanvayah
-<p></p>
+na sadhu mene tah sarva
+bhutale yavatih purah
+kaman kamayamano 'sau
+tasya tasyopapattaye
+<br>
 <h2>Synonyms</h2>
-tasyam--when that city; sandahyamanayam--was ablaze; sa-paurah--along with all the citizens; saparicchadah--
-along with all servants and followers; kautumbikah--the King, having so many relatives;
-kutumbinya--along with his wife; upatapyata--began to suffer the heat of the fire; sa-anvayah--along with
-descendants.
-<p></p>
+na--never; sadhu--good; mene--thought; tah--them; sarvah--all; bhu-tale--on this earth; yavatih--all
+kinds of; purah--residential houses; kaman--objects for sense enjoyment; kamayamanah--desiring; asau--
+that King; tasya--his; tasya--his; upapattaye--for obtaining.
+<br>
 <h2>Translation</h2>
-When the city was set ablaze, all the citizens and servants of the King, as well as all family members,
-sons, grandsons, wives and other relatives, were within the fire. King Puranjana thus became very
-unhappy.
-<p></p>
+King Puranjana had unlimited desires for sense enjoyment; consequently he traveled all over the world
+to find a place where all his desires could be fulfilled. Unfortunately he found a feeling of insufficiency
+everywhere.
+<br>
 <h2>Purport</h2>
-There are many parts of the body--the senses, the limbs, the skin, the muscles, blood, marrow, etc.--and
-all these are considered here figuratively as sons, grandsons, citizens and dependents. When the body is
-attacked by the visnu-jvara, the fiery condition becomes so acute that sometimes one remains in a coma.
-This means that the body is in such severe pain that one becomes unconscious and cannot feel the
-miseries taking place within the body. Indeed, the living entity becomes so helpless at the time of death
-that, although unwilling, he is forced to give up the body and enter another. In Bhagavad-gita it is stated
-that man may, by scientific advancement, improve the temporary living conditions, but that he cannot
-avoid the pangs of birth, old age, disease and death. These are under the control of the Supreme
-Personality of Godhead through the agency of material nature. A foolish person cannot understand this
-simple fact. Now people are very busy trying to find petroleum in the midst of the ocean. They are very
-anxious to make provisions for the future petroleum supply, but they do not make any attempts to
-ameliorate the conditions of birth, old age, disease and death. Thus a person in ignorance, not knowing
-anything about his own future life, is certainly defeated in all his activities.
+Srila Vidyapati, a great Vaisnava poet, has sung:
+tatala saikate, vari-bindu-sama,
+suta-mita-ramani-samaje
+Material sense gratification, with society, friendship and love, is herein compared to a drop of water
+falling on a desert. A desert requires oceans of water to satisfy it, and if only a drop of water is supplied,
+what is its use? Similarly, the living entity is part and parcel of the Supreme Personality of Godhead, who,
+as stated in the Vedanta-sutra, is anandamayo 'bhyasat, full of enjoyment. Being part and parcel of the
+Supreme Personality of Godhead, the living entity is also seeking complete enjoyment. However, complete
+enjoyment cannot be achieved separate from the Supreme Personality of Godhead. In his wanderings in
+the different species of life, the living entity may taste some type of enjoyment in one body or another, but
+full enjoyment of the senses cannot be obtained in any material body. Thus Puranjana, the living entity,
+wanders in different types of bodies, but everywhere meets frustration in his attempt to enjoy. In other
+words, the spiritual spark covered by matter cannot fully enjoy the senses in any circumstance in material
+life. A deer may become absorbed in the musical sounds vibrated by the hunter, but the result is that it
+loses its life. Similarly, a fish is very expert in gratifying its tongue, but when it eats the bait offered by the
+fisherman, it loses its life. Even the elephant, who is so strong, is captured and loses its independence
+while satisfying its genitals with a female elephant. In each and every species of life, the living entity gets a
+body to satisfy various senses, but he cannot enjoy all his senses at one time. In the human form of life he
+gets an opportunity to enjoy all his senses pervertedly, but the result is that he becomes so harassed in his
+attempted sense gratification that he ultimately becomes morose. As he tries to satisfy his senses more and
+more, he becomes more and more entangled.
 </p>
 
 </div>
@@ -86,7 +132,7 @@ anything about his own future life, is certainly defeated in all his activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

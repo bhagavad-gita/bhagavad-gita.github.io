@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,53 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.30.html">4.28.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-ity anamya tam amantrya
-viduro gajasahvayam
-svanam didrksuh prayayau
-jnatinam nirvrtasayah
-<p></p>
+tasyam sa janayam cakra
+atmajam asiteksanam
+yaviyasah sapta sutan
+sapta dravida-bhubhrtah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; anamya--offering obeisances; tam--unto Maitreya;
-amantrya--taking permission; vidurah--Vidura; gaja-sahvayam--the city of Hastinapura; svanam--own;
-didrksuh--desiring to see; prayayau--left that place; jnatinam--of his kinsmen; nirvrta-asayah--free from
-material desires.
-<p></p>
+tasyam--through her; sah--the King; janayam cakre--begot; atmajam--daughter; asita--blue or black;
+iksanam--whose eyes; yaviyasah--younger, very powerful; sapta--seven; sutan--sons; sapta--seven;
+dravida--province of Dravida, or South India; bhu--of the land; bhrtah--kings.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami continued: Vidura thus offered obeisances unto the great sage Maitreya and, taking
-his permission, started for the city of Hastinapura to see his own kinsmen, although he had no material
-desires.
-<p></p>
+King Malayadhvaja fathered one daughter, who had very black eyes. He also had seven sons, who later
+became rulers of that tract of land known as Dravida. Thus there were seven kings in that land.
+<br>
 <h2>Purport</h2>
-When a saintly person wants to see his kinsmen, he has no material desire to see them. He simply wants
-to give them some instructions so that they can benefit. Vidura belonged to the royal family of the
-Kauravas, and although he knew that all the family members were destroyed at the Battle of Kuruksetra,
-he nonetheless wanted to see his elder brother, Dhrtarastra, to see if he could deliver Dhrtarastra from the
-clutches of maya. When a great saintly person like Vidura sees his relatives, he desires only to deliver
-them from the clutches of maya. Vidura thus offered his respectful obeisances to his spiritual master and
-departed for the city of Hastinapura, the kingdom of the Kauravas.
+King Malayadhvaja was a great devotee, and after he married the daughter of King Vidarbha, he gave her
+one nice daughter, whose eyes were black. Figuratively this means that the daughter of King
+Malayadhvaja was also bestowed with devotional service, for her eyes were always fixed on Krsna. A
+devotee has no vision in his life other than Krsna. The seven sons are the seven processes of devotional
+service--hearing, chanting, remembering, offering worship, offering prayers, rendering transcendental
+loving service and serving the lotus feet of the Lord. Of the nine types of devotional service, only seven
+were immediately given. The balance--friendship and surrendering everything--were to be developed later.
+In other words, devotional service is divided into two categories--namely vidhi-marga and raga-marga.
+The process of becoming friends with the Lord and sacrificing everything for Him belongs to the category
+of raga-marga, the stage of developed devotional service. For the neophyte, the important processes are
+those of hearing and chanting (sravanam kirtanam), remembering Krsna, worshiping the Deity in the
+temple, offering prayers and always engaging in the service of the Lord, and worshiping the lotus feet of
+the Lord.
+The word yaviyasah indicates that these processes are very powerful. After a devotee engages in the
+processes of sravanam kirtanam visnoh smaranam pada-sevanam. arcanam vandanam dasyam, and is able
+to secure these processes, he can later become a devotee capable of rendering spontaneous devotional
+service--namely sakhyam and atma-nivedanam. Generally the great acaryas who preach devotional service
+all over the world belong to the category of sakhyam atma-nivedanam. A neophyte devotee cannot
+actually become a preacher. The neophyte is advised to execute devotional service in the seven other
+fields (sravanam kirtanam, etc.). If one can successfully execute the preliminary seven items, he can in the
+future be situated on the platform of sakhyam atma-nivedanam.
+The specific mention of Dravida-desa refers to the five Dravida-desas in South India. All are very strong
+in rendering the preliminary devotional processes (sravanam kirtanam). Some great acaryas, like
+Ramanujacarya and Madhvacarya, also came from Dravida-desa and became great preachers. They were
+all situated on the platform of sakhyam atma-nivedanam.
 </p>
 
 </div>
@@ -81,7 +135,7 @@ departed for the city of Hastinapura, the kingdom of the Kauravas.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

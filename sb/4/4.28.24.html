@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.24.html">4.28.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-te 'pi tan-mukha-niryatam
-yaso loka-malapaham
-harer nisamya tat-padam
-dhyayantas tad-gatim yayuh
-<p></p>
+purim vihayopagata
+uparuddho bhujangamah
+yada tam evanu puri
+visirna prakrtim gata
+<br>
 <h2>Synonyms</h2>
-te--the Pracetas; api--also; tat--of Narada; mukha--from the mouth; niryatam--gone forth; yasah--
-glorification; loka--of the world; mala--sins; apaham--destroying; hareh--of Lord Hari; nisamya--having
-heard; tat--of the Lord; padam--feet; dhyayantah--meditating upon; tat-gatim--unto His abode; yayuh--
-went.
-<p></p>
+purim--the city; vihaya--having given up; upagatah--gone out; uparuddhah--arrested; bhujangamah--the
+serpent; yada--when; tam--him; eva--certainly; anu--after; puri--the city; visirna--scattered; prakrtim--
+matter; gata--turned into.
+<br>
 <h2>Translation</h2>
-Hearing from Narada's mouth the glories of the Lord, which vanquish all the ill fortune of the world, the
-Pracetas also became attached to the Supreme Personality of Godhead. Meditating on His lotus feet, they
-advanced to the ultimate destination.
-<p></p>
+The serpent, who had already been arrested by the soldiers of Yavana-raja and was out of the city, began
+to follow his master along with the others. As soon as they all left the city, it was immediately dismantled
+and smashed to dust.
+<br>
 <h2>Purport</h2>
-Here it is seen that by hearing the glories of the Lord from a realized devotee the Pracetas easily attained
-strong attachment for the Supreme personality of Godhead. Then, meditating on the lotus feet of the
-Supreme Lord at the end of their lives, they advanced to the ultimate goal, Visnuloka. It is sure and
-certain that anyone who always hears the glories of the Lord and thinks of His lotus feet will reach that
-supreme destination. As Krsna says in Bhagavad-gita (18.65):
-man-mana bhava mad-bhakto
-mad-yaji mam namaskuru
-mam evaisyasi satyam te
-pratijane priyo 'si me
-"Always think of Me and become My devotee. Worship Me and offer your homage unto Me. Thus you
-will come to Me without fail. I promise you this because you are My very dear friend."
+When the living entity is arrested, all his followers--namely the life air, the senses and sense objects--
+immediately leave the lump of matter, the body. When the living entity and his companions leave, the
+body no longer works but turns into basic material elements--earth, water, fire, air and ether. When a city
+attacked by enemies is vacated by its inhabitants, the enemy immediately takes advantage of that city and
+bombards it to smash the whole thing to dust. When we say, "Dust thou art, and unto dust thou shall
+return," we refer to the body. When a city is attacked and bombarded by enemies, the citizens generally
+leave, and the city ceases to exist.
+It is a foolish person who engages in improving the condition of a city without caring for the citizens or
+inhabitants. Similarly, a living entity who is not properly enlightened in spiritual knowledge simply takes
+care of the external body, not knowing that the spirit soul is the principal factor within the body. When
+one is advanced in spiritual knowledge, the spirit soul is saved from eternal transmigration. The
+Bhagavatam considers those who are attached to their bodies to be like cows and asses (sa eva go-kharah).
+The cow is a very innocent animal, and the ass is a beast of burden. One who labors under the bodily
+conception simply works like an ass and does not know his self-interest. It is therefore said:
+yasyatma-buddhih kunape tri-dhatuke
+sva-dhih kalatradisu bhauma ijya-dhih
+yat-tirtha-buddhih salile na karhicij
+janesv abhijnesu sa eva go-kharah
+"A human being who identifies this body made of three elements with his self, who considers the byproducts
+of the body to be his kinsmen, who considers the land of birth worshipable, and who goes to a
+place of pilgrimage simply to take a bath rather than meet men of transcendental knowledge there, is to be
+considered like an ass or a cow." (Bhag. 10.84.13)
+Human civilization devoid of Krsna consciousness is simply a civilization of lower animals. Sometimes
+such a civilization may study the dead body and consider the brain or the heart. However, no part of the
+body is important unless the spirit soul is present. In a modern civilization of cows and asses, scientists
+try to search out some value in the brain or heart of a dead man.
 </p>
 
 </div>
@@ -84,7 +137,7 @@ will come to Me without fail. I promise you this because you are My very dear fr
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

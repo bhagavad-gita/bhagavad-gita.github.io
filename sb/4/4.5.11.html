@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.11.html">4.5.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nanamala-prasravanair
-nana-kandara-sanubhih
-ramanam viharantinam
-ramanaih siddha-yositam
-<p></p>
+amarsayitva tam asahya-tejasam
+manyu-plutam durniriksyam bhru-kutya
+karala-damstrabhir udasta-bhaganam
+syat svasti kim kopayato vidhatuh
+<br>
 <h2>Synonyms</h2>
-nana--various; amala--transparent; prasravanaih--with waterfalls; nana--various; kandara--caves;
-sanubhih--with summits; ramanam--giving pleasure; viharantinam--sporting; ramanaih--with their lovers;
-siddha-yositam--of the damsels of the mystics.
-<p></p>
+amarsayitva--after causing to become angry; tam--him (Lord Siva); asahya-tejasam--with an unbearable
+effulgence; manyu-plutam--filled with anger; durniriksyam--not able to be looked at; bhru-kutya--by the
+movement of his brows; karala-damstrabhih--by his fearful teeth; udasta-bhaganam--having scattered the
+luminaries; syat--there should be; svasti--good fortune; kim--how; kopayatah--causing (Lord Siva) to be
+angry; vidhatuh--of Brahma.
+<br>
 <h2>Translation</h2>
-There are many waterfalls, and in the mountains there are many beautiful caves in which the very
-beautiful wives of the mystics are found.
+The gigantic black man bared his fearful teeth. By the movements of his brows he scattered the
+luminaries all over the sky, and he covered them with his strong, piercing effulgence. Because of the
+misbehavior of Daksa, even Lord Brahma, Daksa's father, could not have been saved from the great
+exhibition of anger.
 </p>
 
 </div>
@@ -69,7 +112,7 @@ beautiful wives of the mystics are found.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.17.html">4.22.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sangamah khalu viprarse
-siveneha saririnam
-durlabho munayo dadhyur
-asangad yam abhipsitam
-<p></p>
+maitreya uvaca
+prthos tat suktam akarnya
+saram susthu mitam madhu
+smayamana iva pritya
+kumarah pratyuvaca ha
+<br>
 <h2>Synonyms</h2>
-sangamah--association; khalu--certainly; vipra-rse--O best of the brahmanas; sivena--along with Lord
-Siva; iha--in this world; saririnam--those who are encaged in material bodies; durlabhah--very rare;
-munayah--great sages; dadhyuh--engaged themselves in meditation; asangat--being detached from
-anything else; yam--unto whom; abhipsitam--desiring.
-<p></p>
+maitreyah uvaca--the great sage Maitreya continued to speak; prthoh--of King Prthu; tat--that; suktam--
+Vedic conclusion; akarnya--hearing; saram--very substantial; susthu--appropriate; mitam--minimized;
+madhu--sweet to hear; smayamanah--smiling; iva--like; pritya--out of great satisfaction; kumarah--
+celibate; pratyuvaca--replied; ha--thus.
+<br>
 <h2>Translation</h2>
-The great sage Vidura continued: O best of the brahmanas, it is very difficult for living entities encaged
-within this material body to have personal contact with Lord Siva. Even great sages who have no material
-attachments do not contact him, despite their always being absorbed in meditation to attain his personal
-contact.
-<p></p>
+The great sage Maitreya continued: Thus Sanat-kumara, the best of the celibates, after hearing the
+speech of Prthu Maharaja, which was meaningful, appropriate, full of precise words and very sweet to
+hear, smiled with full satisfaction and began to speak as follows.
+<br>
 <h2>Purport</h2>
-Since Lord Siva does not incarnate himself unless there is some special reason, it is very difficult for an
-ordinary person to contact him. However, Lord Siva does descend on a special occasion when he is
-ordered by the Supreme Personality of Godhead. In this regard, it is stated in the Padma Purana that Lord
-Siva appeared as a brahmana in the age of Kali to preach the Mayavada philosophy, which is nothing but a
-type of Buddhist philosophy. It is stated in Padma Purana:
-mayavadam asac-chastram
-pracchannam bauddham ucyate
-mayaiva vihitam devi
-kalau brahmana-murtina
-Lord Siva, speaking to Parvati-devi, foretold that he would spread the Mayavada philosophy in the guise
-of a sannyasi brahmana just to eradicate Buddhist philosophy. This sannyasi was Sripada Sankaracarya. In
-order to overcome the effects of Buddhist philosophy and spread Vedanta philosophy, Sripada
-Sankaracarya had to make some compromise with the Buddhist philosophy, and as such he preached the
-philosophy of monism, for it was required at that time. Otherwise there was no need for his preaching
-Mayavada philosophy. At the present moment there is no need for Mayavada philosophy or Buddhist
-philosophy, and Lord Caitanya rejected both of them. This Krsna consciousness movement is spreading
-the philosophy of Lord Caitanya and rejecting the philosophy of both classes of Mayavadi. Strictly
-speaking, both Buddhist philosophy and Sankara's philosophy are but different types of Mayavada dealing
-on the platform of material existence. Neither of these philosophies has spiritual significance. There is
-spiritual significance only after one accepts the philosophy of Bhagavad-gita, which culminates in
-surrendering unto the Supreme Personality of Godhead. Generally people worship Lord Siva for some
-material benefit, and although they cannot see him personally, they derive great material profit by
-worshiping him.
+Prthu Maharaja's talks before the Kumaras were very laudable because of so many qualifications. A
+speech should be composed of selected words, very sweet to hear and appropriate to the situation. Such
+speech is called meaningful. All these good qualifications are present in Prthu Maharaja's speech because
+he is a perfect devotee. It is said, yasyasti bhaktir bhagavaty akincana sarvair gunais tatra samasate surah:
+"For one who has unflinching devotional faith in the Supreme Personality of Godhead and is engaged in
+His service, all good qualities become manifest in his person." (Bhag. 5.18.12) Thus the Kumaras were
+very much pleased, and Sanat-kumara began to speak as follows.
 </p>
 
 </div>
@@ -97,7 +120,7 @@ worshiping him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.16.1.html">4.16.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 maitreya uvaca
-evam sa bhagavan vainyah
-khyapito guna-karmabhih
-chandayam asa tan kamaih
-pratipujyabhinandya ca
-<p></p>
+iti bruvanam nrpatim
+gayaka muni-coditah
+tustuvus tusta-manasas
+tad-vag-amrta-sevaya
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great sage Maitreya continued to speak; evam--thus; sah--he; bhagavan--the
-Personality of Godhead; vainyah--in the form of the son of King Vena; khyapitah--being glorified; gunakarmabhih--
-by qualities and factual activities; chandayam asa--pacified; tan--those reciters; kamaih--by
-various presentations; pratipujya--offering all respects; abhinandya--offering prayers; ca--also.
-<p></p>
+maitreyah uvaca--the great sage Maitreya said; iti--thus; bruvanam--speaking; nrpatim--the King;
+gayakah--the reciters; muni--by the sages; coditah--having been instructed; tustuvuh--praised, satisfied;
+tusta--being pleased; manasah--their minds; tat--his; vak--words; amrta--nectarean; sevaya--by hearing.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued: In this way the reciters who were glorifying Maharaja Prthu readily
-described his qualities and chivalrous activities. At the end, Maharaja Prthu offered them various
-presentations with all due respect and worshiped them adequately.
+The great sage Maitreya continued: While King Prthu thus spoke, the humility of his nectarean speeches
+pleased the reciters very much. Then again they continued to praise the King highly with exalted prayers,
+as they had been instructed by the great sages.
+<br>
+<h2>Purport</h2>
+Here the word muni-coditah indicates instructions received from great sages and saintly persons.
+Although Maharaja Prthu was simply enthroned on the royal seat and was not at that time exhibiting his
+godly powers, the reciters like the suta, the magadha and the vandi understood that King Prthu was an
+incarnation of God. They could understand this by the instructions given by the great sages and learned
+brahmanas. We have to understand the incarnations of God by the instructions of authorized persons. We
+cannot manufacture a God by our own concoctions. As stated by Narottama dasa Thakura, sadhu-sastraguru:
+one has to test all spiritual matters according to the instructions of saintly persons, scriptures and
+the spiritual master. The spiritual master is one who follows the instructions of his predecessors, namely
+the sadhus, or saintly persons. A bona fide spiritual master does not mention anything not mentioned in
+the authorized scriptures. Ordinary people have to follow the instructions of sadhu, sastra and guru.
+Those statements made in the sastras and those made by the bona fide sadhu or guru cannot differ from
+one another.
+Reciters like the suta and the magadha were confidentially aware that King Prthu was an incarnation of
+the Personality of Godhead. Although the King denied such praise because he was not at that time
+exhibiting his godly qualities, the reciters did not stop praising him. Rather, they were very pleased with
+the King, who, although actually an incarnation of God, was so humble and delightful in his dealings with
+devotees. In this connection we may note that previously (4.15.21) it was mentioned that King Prthu was
+smiling and was in a pleasant mood while speaking to the reciters. Thus we have to learn from the Lord or
+His incarnation how to become gentle and humble. The King's behavior was very pleasing to the reciters,
+and consequently the reciters continued their praise and even foretold the King's future activities, as they
+had been instructed by the sadhus and sages.
 </p>
 
 </div>
@@ -72,7 +133,7 @@ presentations with all due respect and worshiped them adequately.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

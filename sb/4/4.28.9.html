@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,54 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.9.html">4.28.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-narada uvaca
-taj janma tani karmani
-tad ayus tan mano vacah
-nrnam yena hi visvatma
-sevyate harir isvarah
-<p></p>
+kaman abhilasan dino
+yata-yamams ca kanyaya
+vigatatma-gati-snehah
+putra-darams ca lalayan
+<br>
 <h2>Synonyms</h2>
-naradah uvaca--Narada said; tat janma--that birth; tani--those; karmani--fruitive activities; tat--that;
-ayuh--span of life; tat--that; manah--mind; vacah--words; nrnam--of human beings; yena--by which; hi--
-certainly; visva-atma--the Supersoul; sevyate--is served; harih--the Supreme Personality of Godhead;
-isvarah--the supreme controller.
-<p></p>
+kaman--objects of enjoyment; abhilasan--always lusting after; dinah--the poor man; yata-yaman--stale;
+ca--also; kanyaya--by the influence of Kalakanya; vigata--lost; atma-gati--real purpose of life; snehah--
+attachment to; putra--sons; daran--wife; ca--and; lalayan--affectionately maintaining.
+<br>
 <h2>Translation</h2>
-The great sage Narada said: When a living entity is born to engage in the devotional service of the
-Supreme Personality of Godhead, who is the supreme controller, his birth, all his fruitive activities, his
-life-span, his mind and his words are all factually perfect.
-<p></p>
+The objects of enjoyment became stale by the influence of Kalakanya. Due to the continuance of his
+lusty desires, King Puranjana became very poor in everything. Thus he did not understand the aim of life.
+He was still very affectionate toward his wife and children, and he worried about maintaining them.
+<br>
 <h2>Purport</h2>
-In this verse the word nrnam is very important. There are many other births besides human birth, but
-Narada Muni is herein especially speaking of human birth. Among human beings there are different types
-of men. Of these, those who are advanced in spiritual consciousness, or Krsna consciousness, are called
-Aryans. Among Aryans, one who engages in the devotional service of the Lord is most successful in life.
-The word nrnam indicates that lower animals are not expected to engage in the devotional service of the
-Lord. But in perfect human society everyone should engage in the devotional service of the Lord. It does
-not matter whether one is born poor or rich, black or white. There may be so many material distinctions
-for one who takes birth in human society, but everyone should engage in the Lord's devotional service. At
-the present moment civilized nations have given up God consciousness for economic development. They
-are actually no longer interested in advancing in God consciousness. Formerly their forefathers were
-engaged in executing religious principles. Whether one is Hindu, Muslim, Buddhist, Jewish or whatever,
-everyone has some religious institution. Real religion, however, means becoming God conscious. It is
-particularly mentioned herein that birth is successful if an interest in Krsna consciousness is taken.
-Activity is successful if it results in serving the Lord. Philosophical speculation or mental speculation is
-successful when engaged in understanding the Supreme Personality of Godhead. The senses are worth
-possessing when engaged in the service of the Lord. Actually, devotional service means engaging the
-senses in the service of the Lord. At the present moment our senses are not purified; therefore our senses
-are engaged in the service of society, friendship, love, politics, sociology and so on. However, when the
-senses are engaged in the service of the Lord, one attains bhakti, or devotional service. In the next verse
-these matters will be more clearly explained.
-When one great devotee of Lord Caitanya Mahaprabhu saw the Lord, he said that all his desires were
-fulfilled. He said, "Today everything is auspicious. Today my birthplace and neighborhood are completely
-glorified. Today my senses, from my eyes down to my toes, are fortunate. Today my life is successful
-because I have been able to see the lotus feet that are worshiped by the goddess of fortune."
+This is exactly the position of present civilization. Everyone is engaged in maintaining the body, home
+and family. Consequently everyone becomes confused at the end of life, not knowing what spiritual life
+and the goal of human life are. In a civilization of sense gratification there cannot be spiritual life, because
+a person thinks only of this life. Although the next life is a fact, no information is given about it.
 </p>
 
 </div>
@@ -98,7 +115,7 @@ because I have been able to see the lotus feet that are worshiped by the goddess
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.40.html">4.25.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa vyapakatayatmanam
-vyatiriktatayatmani
-vidvan svapna ivamarsasaksinam
-virarama ha
-<p></p>
+pitr-devarsi-martyanam
+bhutanam atmanas ca ha
+ksemyam vadanti saranam
+bhave 'smin yad grhasramah
+<br>
 <h2>Synonyms</h2>
-sah--King Malayadhvaja; vyapakataya--by all-pervasiveness; atmanam--the Supersoul; vyatiriktataya--by
-differentiation; atmani--in his own self; vidvan--perfectly educated; svapne--in a dream; iva--like; amarsa--
-of deliberation; saksinam--the witness; virarama--became indifferent; ha--certainly.
-<p></p>
+pitr--forefathers; deva--demigods; rsi--sages; martyanam--of humanity in general; bhutanam--of the
+infinite living entities; atmanah--of oneself; ca--also; ha--certainly; ksemyam--beneficial; vadanti--they say;
+saranam--shelter; bhave--in the material world; asmin--this; yat--that which; grha-asramah--householder
+life.
+<br>
 <h2>Translation</h2>
-King Malayadhvaja attained perfect knowledge by being able to distinguish the Supersoul from the
-individual soul. The individual soul is localized, whereas the Supersoul is all-pervasive. He became perfect
-in knowledge that the material body is not the soul but that the soul is the witness of the material body.
-<p></p>
+The woman continued: According to authorities, the householder life is pleasing not only to oneself but
+to all the forefathers, demigods, great sages, saintly persons and everyone else. A householder life is thus
+beneficial.
+<br>
 <h2>Purport</h2>
-The conditioned soul is often frustrated in trying to understand the distinctions between the material
-body, the Supersoul and the individual soul. There are two types of Mayavadi philosophers--the followers
-of the Buddhist philosophy and the followers of the Sankara philosophy. The followers of Buddha do not
-recognize that there is anything beyond the body; the followers of Sankara conclude that there is no
-separate existence of the Paramatma, the Supersoul. The Sankarites believe that the individual soul is
-identical with the Paramatma in the ultimate analysis. But the Vaisnava philosopher, who is perfect in
-knowledge, knows that the body is made of the external energy and that the Supersoul, the Paramatma,
-the Supreme Personality of Godhead, is sitting with the individual soul and is distinct from him. As Lord
-Krsna states in Bhagavad-gita (13.3):
-ksetrajnam capi mam viddhi
-sarva-ksetresu bharata
-ksetra-ksetrajnayor jnanam
-yat taj jnanam matam mama
-"O scion of Bharata, you should understand that I am also the knower in all bodies, and to understand
-this body and its owner is called knowledge. That is My opinion."
-The body is taken to be the field, and the individual soul is taken to be the worker in that field. Yet there
-is another, who is known as the Supersoul, who, along with the individual soul, simply witnesses. The
-individual soul works and enjoys the fruits of the body, whereas the Supersoul simply witnesses the
-activities of the individual soul but does not enjoy the fruits of those activities. The Supersoul is present in
-every field of activity, whereas the individual soul is present in his one localized body. King Malayadhvaja
-attained this perfection of knowledge and was able to distinguish between the soul and the Supersoul and
-the soul and the material body.
+According to the Vedic system, when one is born in this material world he has many obligations. He has
+obligations to the demigods--the demigods of the sun and moon, King Indra, Varuna, etc.--because they
+are supplying the necessities of life. We receive heat, light, water and all other natural amenities through
+the mercy of the demigods. We are also indebted to our forefathers, who have given us these bodies,
+paternal property, intelligence, society, friendship and love. Similarly, we are indebted to the general
+public for politics and sociology, and we are also indebted to lower animals such as horses, cows, asses,
+dogs and cats. In this way, as soon as one is born in this material world as a human being, he has so many
+obligations and is bound to repay all these obligations. If he does not repay them, he is further entangled
+in the process of birth and death. The grhamedhi, however, who is overly addicted to material things,
+does not know that if he simply takes shelter at the lotus feet of Mukunda, he is immediately freed from
+all obligations to others. Unfortunately a grhamedhi does not have any interest in Krsna consciousness.
+Prahlada Maharaja says:
+matir na krsne paratah svato va
+mitho 'bhipadyeta grha-vratanam
+(Bhag. 7.5.30)
+A grha-vrata is the same as a grhamedhi. One who takes sex life to be supreme finds action in Krsna
+consciousness confusing. Either due to his own personal consideration or due to his having taken
+instructions from others or conferring with them, he becomes addicted to sexual indulgence and cannot
+act in Krsna consciousness.
 </p>
 
 </div>
@@ -94,7 +131,7 @@ the soul and the material body.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

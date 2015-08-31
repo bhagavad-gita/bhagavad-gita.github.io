@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.23.html">4.13.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vena uvaca
-balisa bata yuyam va
-adharme dharma-maninah
-ye vrttidam patim hitva
-jaram patim upasate
-<p></p>
+navadhyeyah praja-palah
+prajabhir aghavan api
+yad asau loka-palanam
+bibharty ojah sva-tejasa
+<br>
 <h2>Synonyms</h2>
-venah--King Vena; uvaca--replied; balisah--childish; bata--oh; yuyam--all of you; va--indeed; adharme--
-in irreligious principles; dharma-maninah--accepting as religious; ye--all of you who; vrttidam--providing
-maintenance; patim--husband; hitva--giving up; jaram--paramour; patim--husband; upasate--worship.
-<p></p>
+na--never; avadhyeyah--to be insulted; praja-palah--the king; prajabhih--by the citizens; aghavan--ever
+sinful; api--even though; yat--because; asau--he; loka-palanam--of many kings; bibharti--maintains; ojah--
+prowess; sva-tejasa--by personal influence.
+<br>
 <h2>Translation</h2>
-King Vena replied: You are not at all experienced. It is very much regrettable that you are maintaining
-something which is not religious and are accepting it as religious. Indeed, I think you are giving up your
-real husband, who maintains you, and are searching after some paramour to worship.
-<p></p>
+It is the duty of all citizens in a state never to insult the king, even though he sometimes appears to have
+done something very sinful. Because of his prowess, the king is always more influential than all other
+ruling chiefs.
+<br>
 <h2>Purport</h2>
-King Vena was so foolish that he accused the saintly sages of being inexperienced like small children. In
-other words, he was accusing them of not having perfect knowledge. In this way he could reject their
-advice and make accusations against them, comparing them to a woman who does not care for her
-husband who maintains her but goes to satisfy a paramour who does not maintain her. The purpose of
-this simile is apparent. It is the duty of the ksatriyas to engage the brahmanas in different types of
-religious activities, and the king is supposed to be the maintainer of the brahmanas. If the brahmanas do
-not worship the king but instead go to the demigods, they are as polluted as unchaste women.
+According to Vedic civilization the king is supposed to be the representative of the Supreme Personality
+of Godhead. He is called nara-narayana, indicating that Narayana, the Supreme Personality of Godhead,
+appears in human society as the king. It is etiquette that neither a brahmana nor a ksatriya king is ever
+insulted by the citizens; even though a king appears to be sinful, the citizens should not insult him. But in
+the case of Vena it appears that he was cursed by the nara-devatas; therefore, it was concluded that his
+sinful activities were very grievous.
 </p>
 
 </div>
@@ -80,7 +117,7 @@ not worship the king but instead go to the demigods, they are as polluted as unc
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

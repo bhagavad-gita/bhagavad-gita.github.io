@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.40.html">4.7.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-narada uvaca
-jananyabhihitah panthah
-sa vai nihsreyasasya te
-bhagavan vasudevas tam
-bhaja tam pravanatmana
-<p></p>
+brahmovaca
+namas te srita-sattvaya
+dharmadinam ca sutaye
+nirgunaya ca yat-kastham
+naham vedapare 'pi ca
+<br>
 <h2>Synonyms</h2>
-naradah uvaca--the great sage Narada said; jananya--by your mother; abhihitah--stated; panthah--the
-path; sah--that; vai--certainly; nihsreyasasya--the ultimate goal of life; te--for you; bhagavan--the Supreme
-Personality of Godhead; vasudevah--Krsna; tam--unto Him; bhaja--render your service; tam--by Him;
-pravana-atmana--fully absorbing your mind.
-<p></p>
+brahma--the personified Vedas; uvaca--said; namah--respectful obeisances; te--unto You; srita-sattvaya--
+the shelter of the quality of goodness; dharma-adinam--of all religion, austerity and penance; ca--and;
+sutaye--the source; nirgunaya--transcendental to material qualities; ca--and; yat--of whom (of the
+Supreme Lord); kastham--the situation; na--not; aham--I; veda--know; apare--others; api--certainly; ca--
+and.
+<br>
 <h2>Translation</h2>
-The great sage Narada told Dhruva Maharaja: The instruction given by your mother, Suniti, to follow
-the path of devotional service to the Supreme Personality of Godhead, is just suitable for you. You should
-therefore completely absorb yourself in the devotional service of the Lord.
-<p></p>
+The personified Vedas said: We offer our respectful obeisances unto You, the Lord, the shelter of the
+quality of goodness and therefore the source of all religion, austerity and penance, for You are
+transcendental to all material qualities and no one knows You or Your actual situation.
+<br>
 <h2>Purport</h2>
-Dhruva Maharaja's demand was to achieve an abode even greater than Lord Brahma's. Within this
-universe, Lord Brahma is supposed to be in the most exalted position, for he is the chief of all demigods,
-but Dhruva Maharaja wanted a realm beyond his. Therefore his desire was not to be fulfilled by
-worshiping any demigod. As described in Bhagavad-gita, the benedictions offered by the demigods are all
-temporary. Therefore Narada Muni asked Dhruva Maharaja to follow the path recommended by his
-mother--to worship Krsna, Vasudeva. When Krsna offers anything, it is beyond the expectation of the
-devotee. Both Suniti and Narada Muni knew that the demand of Dhruva Maharaja was impossible for any
-demigod to fulfill, and therefore both of them recommended following the process of devotional service to
-Lord Krsna.
-Narada Muni is referred to here as bhagavan because he can bless any person just as the Supreme
-Personality of Godhead can. He was very pleased with Dhruva Maharaja, and he could have at once
-personally given whatever he wanted, but that is not the duty of the spiritual master. His duty is to engage
-the disciple in proper devotional service as prescribed in the sastras. Krsna was similarly present before
-Arjuna, and even though He could have given him all facilities for victory over the opposing party without
-a fight, He did not do so; instead He asked Arjuna to fight. In the same way, Narada Muni asked Dhruva
-Maharaja to undergo devotional discipline in order to achieve the desired result.
+In the material world there is the trinity of the three material qualities. Lord Visnu has accepted the
+superintendence of the quality of goodness, which is the source of religion, knowledge, austerity,
+renunciation, opulence, etc. Because of this, actual peace, prosperity, knowledge and religion can be
+attained when the living entities are under the control of the quality of goodness in the material world. As
+soon as they are subjected to the control of the other two qualities, namely passion and ignorance, their
+precarious conditional life becomes intolerable. But Lord Visnu, in His original position, is always
+nirguna, which means transcendental to these material qualities. Guna means "quality," and nir means
+"negation." This does not indicate, however, that He has no qualities; He has transcendental qualities by
+which He appears and manifests His pastimes. The positive transcendental qualitative manifestation is
+unknown to the students of the Vedas as well as to the great stalwart demigods like Brahma and Siva.
+Actually, the transcendental qualities are manifested only to the devotees. As confirmed in Bhagavad-gita,
+simply by discharging devotional service one can understand the transcendental position of the Supreme
+Lord. Those who are in the mode of goodness can partially enter into the transcendental understanding,
+but it is advised in Bhagavad-gita that one has to surpass this. The Vedic principles are based on the three
+qualities of the material modes. One has to transcend the three qualities, and then one can be situated in
+pure and simple spiritual life.
 </p>
 
 </div>
@@ -90,7 +130,7 @@ Maharaja to undergo devotional discipline in order to achieve the desired result
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.11.html">4.22.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-samudrim devadevoktam
-upayeme satadrutim
-yam viksya caru-sarvangim
-kisorim susthv-alankrtam
-parikramantim udvahe
-cakame 'gnih sukim iva
-<p></p>
+vyalalaya-druma vai tesv
+ariktakhila-sampadah
+yad-grhas tirtha-padiyapadatirtha-
+vivarjitah
+<br>
 <h2>Synonyms</h2>
-samudrim--unto the daughter of the ocean; deva-deva-uktam--being advised by the supreme demigod,
-Lord Brahma; upayeme--married; satadrutim--of the name Satadruti; yam--whom; viksya--seeing; caru--
-very attractive; sarva-angim--all the features of the body; kisorim--youthful; susthu--sufficiently;
-alankrtam--decorated with ornaments; parikramantim--circumambulating; udvahe--in the marriage
-ceremony; cakame--being attracted; agnih--the fire-god; sukim--unto Suki; iva--like.
-<p></p>
+vyala--venomous serpents; alaya--home; drumah--tree; vai--certainly; tesu--in those houses; arikta--
+abundantly; akhila--all; sampadah--opulences; yat--that; grhah--houses; tirtha-padiya--in relation with the
+feet of great saintly persons; pada-tirtha--the water which washed their feet; vivarjitah--without.
+<br>
 <h2>Translation</h2>
-Maharaja Barhisat--henceforward known as Pracinabarhi--was ordered by the supreme demigod Lord
-Brahma to marry the daughter of the ocean named Satadruti. Her bodily features were completely
-beautiful, and she was very young. She was decorated with the proper garments, and when she came into
-the marriage arena and began circumambulating it, the fire-god Agni became so attracted to her that he
-desired her company, exactly as he had formerly desired to enjoy Suki.
-<p></p>
+On the contrary, even though full of all opulence and material prosperity, any householder's house
+where the devotees of the Lord are never allowed to come in, and where there is no water for washing
+their feet, is to be considered a tree in which all venomous serpents live.
+<br>
 <h2>Purport</h2>
-In this verse the word susthv-alankrtam is significant. According to the Vedic system, when a girl is
-married, she is very profusely and gorgeously decorated with costly saris and jewelry, and during the
-marriage ceremony the bride circumambulates the bridegroom seven times. After this, the bridegroom
-and bride look at one another and become attracted for life. When the bridegroom finds the bride very
-beautiful, the attraction between them immediately becomes very strongly fixed. As stated in Srimad-
-Bhagavatam, men and women are naturally attracted to one another, and when they are united by
-marriage that attraction becomes very strong. Being so strongly attracted, the bridegroom attempts to set
-up a nice homestead and eventually a good field for producing grains. Then children come, then friends
-and then wealth. In this way the male becomes more and more entangled in the material conceptions of
-life, and he begins to think, "This is mine," and"it is I who am acting." In this way the illusion of material
-existence is perpetuated.
-The words sukim iva are also significant, for the fire-god Agni became attracted by the beauty of
-Satadruti while she was circumambulating the bridegroom Pracinabarhi, just as he had previously been
-attracted to the beauty of Suki, the wife of Saptarsi. When the fire-god had been present long ago at the
-assembly of Saptarsi, he was attracted by the beauty of Suki when she was circumambulating in the same
-way. Agni's wife, named Svaha, took the form of Suki and enjoyed sex life with Agni. Not only the firegod
-Agni but the heavenly god Indra and sometimes even Lord Brahma and Lord Siva--all very highly
-situated demigods--are subject to being attracted by sex at any time. The sex drive is so strong in the
-living entities that the whole material world is running on sex attraction only, and it is due to sex
-attraction that one remains in the material world and is obliged to accept different types of bodies. The
-attraction of sex life is more clearly explained in the next verse.
+In this verse the word tirtha-padiya indicates devotees of Lord Visnu, or Vaisnavas. As far as brahmanas
+are concerned, in the previous verse the mode of reception has been already described. Now, in this verse,
+special stress is being given to the Vaisnavas. Generally the sannyasis, or those in the renounced order of
+life, take trouble to enlighten the householders. There are ekadandi sannyasis and tridandi sannyasis. The
+ekadandi sannyasis are generally followers of Sankaracarya and are known as Mayavadi sannyasis,
+whereas the tridandi sannyasis are followers of Vaisnava acaryas--Ramanujacarya, Madhvacarya and so
+on--and they take trouble to enlighten the householders. Ekadandi sannyasis can be situated on the
+platform of pure Brahman because they are aware that the spirit soul is different from the body, but they
+are mainly impersonalists. The Vaisnavas know that the Absolute Truth is the Supreme Person and that
+the Brahman effulgence is based on the Supreme Personality of Godhead, as confirmed in the Bhagavadgita
+(14.27): brahmano hi pratisthaham. The conclusion is that tirtha-padiya refers to Vaisnavas. In the
+Bhagavatam (1.13.10) there is also another reference: tirthi-kurvanti tirthani. Wherever he goes, a
+Vaisnava immediately makes that place a tirtha, a place of pilgrimage. The Vaisnava sannyasis travel all
+over the world to make every place a place of pilgrimage by the touch of their lotus feet. It is mentioned
+here that any house which does not receive a Vaisnava in the manner already explained in the previous
+verse is to be considered the residential quarters of venomous serpents. It is said that around the
+sandalwood tree, which is a very valuable tree, there is a venomous serpent. Sandalwood is very cold, and
+venomous serpents, because of their poisonous teeth, are always very warm, and they take shelter of the
+sandalwood trees to become cooler. Similarly, there are many rich men who keep watchdogs or doormen
+and put up signs that say, "Do not enter," "Trespassers not allowed," "Beware of the dog," etc. Sometimes
+in Western countries a trespasser is shot, and there is no crime in such shooting. This is the position of
+demoniac householders, and such houses are considered to be the residential quarters of venomous
+snakes. The members of such families are no better than snakes because snakes are very much envious,
+and when that envy is directed to the saintly persons, their position becomes more dangerous. It is said by
+Canakya Pandita that there are two envious living entities--the snake and the envious man. The envious
+man is more dangerous than a snake because a snake can be subdued by charming mantras or by some
+herbs, but an envious person cannot be pacified by any means.
 </p>
 
 </div>
@@ -99,7 +138,7 @@ attraction of sex life is more clearly explained in the next verse.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

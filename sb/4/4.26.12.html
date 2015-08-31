@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.12.html">4.26.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-apano vyavaharo 'tra
-citram andho bahudanam
-pitrhur daksinah karna
-uttaro devahuh smrtah
-<p></p>
+atmanam arhayam cakre
+dhupalepa-srag-adibhih
+sadhv-alankrta-sarvango
+mahisyam adadhe manah
+<br>
 <h2>Synonyms</h2>
-apanah--named Apana; vyavaharah--business of the tongue; atra--here; citram--of all varieties; andhah--
-eatables; bahudanam--named Bahudana; pitr-huh--named Pitrhu; daksinah--right; karnah--ear; uttarah--
-left; deva-huh--Devahu; smrtah--is called.
-<p></p>
+atmanam--himself; arhayam--as it ought to be done; cakre--did; dhupa--incense; alepa--smearing the
+body with sandalwood pulp; srak--garlands; adibhih--beginning with; sadhu--saintly, beautifully;
+alankrta--being decorated; sarva-angah--all over the body; mahisyam--unto the Queen; adadhe--he gave;
+manah--mind.
+<br>
 <h2>Translation</h2>
-The city called Apana represents engagement of the tongue in speech, and Bahudana is the variety of
-foodstuffs. The right ear is called the gate of Pitrhu, and the left ear is called the gate of Devahu.
+After this, King Puranjana decorated his body with suitable ornaments. He also smeared scented
+sandalwood pulp over his body and put on flower garlands. In this way he became completely refreshed.
+After this, he began to search out his Queen.
+<br>
+<h2>Purport</h2>
+When a man comes into good consciousness and accepts a saintly person as a spiritual master, he hears
+many Vedic instructions in the form of philosophy, stories, narrations about great devotees and
+transactions between God and His devotees. In this way a man becomes refreshed in mind, exactly like a
+person who smears scented sandalwood pulp all over his body and decorates himself with ornaments.
+These decorations may be compared to knowledge of religion and the self. Through such knowledge one
+becomes detached from a materialistic way of life and engages himself in always hearing Srimad-
+Bhagavatam, Bhagavad-gita and other Vedic literatures. The word sadhv-alankrta used in this verse
+indicates that one must be absorbed in knowledge gathered from the instructions of saintly persons. Just
+as King Puranjana began to search out his better half, the Queen, one who is decorated with knowledge
+and instructions from saintly persons should try to search out his original consciousness, Krsna
+consciousness. One cannot return to Krsna consciousness unless he is favored by the instructions of a
+saintly person. Therefore Srila Narottama dasa Thakura sings: sadhu-sastra-guru-vakya, cittete kariya
+aikya. If we want to become saintly persons, or if we want to return to our original Krsna consciousness,
+we must associate with sadhu (a saintly person), sastra (authoritative Vedic literature) and guru (a bona
+fide spiritual master). This is the process.
 </p>
 
 </div>
@@ -69,7 +127,7 @@ foodstuffs. The right ear is called the gate of Pitrhu, and the left ear is call
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

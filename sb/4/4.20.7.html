@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,53 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.7.html">4.20.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa evam adiny anavadya-cestitah
-karmani bhuyamsi mahan mahattamah
-kurvan sasasavani-mandalam yasah
-sphitam nidhayaruruhe param padam
-<p></p>
+ekah suddhah svayam-jyotir
+nirguno 'sau gunasrayah
+sarva-go 'navrtah saksi
+niratmatmatmanah parah
+<br>
 <h2>Synonyms</h2>
-sah--King Prthu; evam--thus; adini--from the very beginning; anavadya--magnanimous; cestitah--
-performing various works; karmani--work; bhuyamsi--repeatedly; mahan--great; mahat-tamah--greater
-than the greatest; kurvan--performing; sasasa--ruled; avani-mandalam--the surface of the earth; yasah--
-reputation; sphitam--widespread; nidhaya--achieving; aruruhe--was elevated; param padam--to the lotus
-feet of the Supreme Lord.
-<p></p>
+ekah--one; suddhah--pure; svayam--self; jyotih--effulgent; nirgunah--without material qualifications;
+asau--that; guna-asrayah--the reservoir of good qualities; sarva-gah--able to go everywhere; anavrtah--
+without being covered by matter; saksi--witness; niratma--without another self; atma-atmanah--to the
+body and mind; parah--transcendental.
+<br>
 <h2>Translation</h2>
-King Prthu was greater than the greatest soul and was therefore worshipable by everyone. He performed
-many glorious activities in ruling over the surface of the world and was always magnanimous. After
-achieving such great success and a reputation which spread throughout the universe, he at last obtained
-the lotus feet of the Supreme Personality of Godhead.
-<p></p>
+The individual soul is one, Pure, nonmaterial and self-effulgent. He is the reservoir of all good qualities,
+and He is all-pervading. He is without material covering, and He is the witness of all activities. He is
+completely distinguished from other living entities, and He is transcendental to all embodied souls.
+<br>
 <h2>Purport</h2>
-A responsible king or chief executive has many responsible duties to attend to in ruling over the
-citizens. The most important duty of the monarch or the government is to perform various sacrifices as
-enjoined in the Vedic literatures. The next duty of the king is to see that every citizen executes the
-prescribed duties for his particular community. It is the king's duty to see that everyone perfectly executes
-the duties prescribed for the varna and asrama divisions of society. Besides that, as exemplified by King
-Prthu, he must develop the earth for the greatest possible production of food grains.
-There are different types of great personalities--some are positive great personalities, some comparative
-and some superlative--but King Prthu exceeded all of them. He is therefore described here as mahattamah,
-greater than the greatest. Maharaja Prthu was a ksatriya, and he discharged his ksatriya duties perfectly.
-Similarly, brahmanas, vaisyas and sudras can discharge their respective duties perfectly and thus at the
-ultimate end of life be promoted to the transcendental world, which is called param padam. Param padam,
-or the Vaikuntha planets, can be achieved only by devotional service. The impersonal Brahman region is
-also called param padam, but unless one is attached to the personality of Godhead one must again fall
-down to the material world from the impersonal param padam situation. It is said, therefore, aruhya
-krcchrena param padam tatah: the impersonalists endeavor very strenuously to achieve the param padam,
-or impersonal brahmajyoti, but unfortunately, being bereft of a relationship with the Supreme personality
-of Godhead, they come down again to the material world. If one flies in outer space, he can go very high
-up, but unless he reaches a planet he must come down again to earth. Similarly, because the
-impersonalists who reach the param padam of the impersonal brahmajyoti do not enter into the
-Vaikuntha planets, they come down again to this material world and are given shelter in one of the
-material planets. Although they may attain Brahmaloka, or Satyaloka, all such planets are situated in the
-material world.
+In the previous verse two significant words are used: asamsaktah, meaning "without attachment," and
+budhah, meaning "fully cognizant of everything." By full cognizance it is meant that one should know
+about his own constitutional position as well as the position of the Supreme Personality of Godhead.
+According to Sri Visvanatha Cakravarti Thakura, in this verse Lord Visnu is describing Himself, or the
+Paramatma. The Paramatma is always distinguished from the embodied soul as well as the material world.
+Therefore He has been described as para. That para, or Supreme personality of Godhead, is eka, meaning
+"one." The Lord is one, whereas the conditioned souls embodied within the material world exist in many
+varieties of form. There are demigods, human beings, animals, trees, birds, bees and so forth. Thus the
+living entities are not eka but many. As confirmed in the Vedas: nityo nityanam cetanas cetananam. The
+living entities, who are many and who are entangled in this material world, are not pure. However, the
+Supreme personality of Godhead is pure and detached. Due to being covered by the material body, the
+living entities are not self-effulgent, but the Supreme Personality of Godhead, Paramatma, is self-effulgent.
+The living entities, being contaminated by the modes of material nature, are called saguna, whereas
+Paramatma, the Supreme Personality of Godhead, is nirguna, not being under the influence of the
+material modes. The living entities, being encaged in material qualities, are gunasrita, whereas the
+Supreme personality of Godhead is gunasraya. The conditioned soul's vision is covered by material
+contamination; therefore he cannot see the cause of his actions, and he cannot see his past lives. The
+Supreme Personality of Godhead, not being covered by a material body, is the witness of all the activities
+of the living entity. But both of them, the living entity and the Paramatma, the Supreme personality of
+Godhead, are atma, or spirit. They are one in quality, yet they are different in so many ways, especially in
+regard to the six opulences the Supreme personality of Godhead has in full. Full knowledge means that
+the jiva-atma, the living entity, must know both his position and the Supreme's position. That is full
+knowledge.
 </p>
 
 </div>
@@ -97,7 +135,7 @@ material world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

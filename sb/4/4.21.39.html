@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.39.html">4.21.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-anudinam idam adarena srnvan
-prthu-caritam prathayan vimukta-sangah
-bhagavati bhava-sindhu-pota-pade
-sa ca nipunam labhate ratim manusyah
-<p></p>
+yat-sevayasesa-guhasayah sva-rad
+vipra-priyas tusyati kamam isvarah
+tad eva tad-dharma-parair vinitaih
+sarvatmana brahma-kulam nisevyatam
+<br>
 <h2>Synonyms</h2>
-anu-dinam--day after day; idam--this; adarena--with great respect; srnvan--hearing; prthu-caritam--the
-narration of Prthu Maharaja; prathayan--chanting; vimukta--liberated; sangah--association; bhagavati--
-unto the Supreme Personality of Godhead; bhava-sindhu--the ocean of nescience; pota--the boat; pade--
-whose lotus feet; sah--he; ca--also; nipunam--complete; labhate--achieves; ratim--attachment; manusyah--
-the person.
-<p></p>
+yat--whose; sevaya--by serving; asesa--unlimited; guha-asayah--dwelling within the heart of everyone;
+sva-rat--but still fully independent; vipra-priyah--very dear to the brahmanas and Vaisnavas; tusyati--
+becomes satisfied; kamam--of desires; isvarah--the Supreme Personality of Godhead; tat--that; eva--
+certainly; tat-dharma-paraih--by following in the footsteps of the Lord; vinitaih--by humbleness; sarvaatmana--
+in all respects; brahma-kulam--the descendants of brahmanas and Vaisnavas; nisevyatam--always
+being engaged in their service.
+<br>
 <h2>Translation</h2>
-Whoever, with great reverence and adoration, regularly reads, chants and describes the history of
-Maharaja Prthu's activities will certainly increase unflinching faith and attraction for the lotus feet of the
-Lord. The Lord's lotus feet are the boat by which one can cross the ocean of nescience.
-<p></p>
+The Supreme Personality of Godhead, who is everlastingly independent and who exists in everyone's
+heart, is very pleased with those who follow in His footsteps and engage without reservation in the service
+of the descendants of brahmanas and Vaisnavas, for He is always dear to brahmanas and Vaisnavas and
+they are always dear to Him.
+<br>
 <h2>Purport</h2>
-The word bhava-sindhu-pota-pade is significant in this verse. The lotus feet of the Lord are known as
-mahat-padam; this means that the total source of material existence rests on the lotus feet of the Lord. As
-stated in Bhagavad-gita (10.8), aham sarvasya prabhavah: everything is emanating from Him. This cosmic
-manifestation, which is compared to an ocean of nescience, is also resting on the lotus feet of the Lord. As
-such, this great ocean of nescience is minimized by a person who is a pure devotee. One who has taken
-shelter of the lotus feet of the Lord need not cross over the ocean, for he has already crossed it by virtue of
-his position at the Lord's lotus feet. By hearing and chanting of the glories of the Lord or the Lord's
-devotee, one can become firmly fixed in the service of the lotus feet of the Lord. This position can also be
-achieved very easily by narrating the history of the life of Prthu Maharaja regularly every day. The word
-vimukta-sangah is also significant in this connection. Because we associate with the three qualities of
-material nature, our position in this material world is full of dangers, but when we engage in the
-devotional service of the Lord by the process of sravanam and kirtanam, we immediately become vimuktasanga,
-or liberated.
-Thus end the Bhaktivedanta purports of the Fourth Canto, Twenty-third Chapter, of the Srimad-
-Bhagavatam, entitled "Maharaja Prthu's Going Back Home."
-Chapter Twenty-four
-Chanting the Song Sung by Lord Siva
+It is said that the Lord is most pleased when He sees one engage in the service of His devotee. He does
+not need any service from anyone because He is complete, but it is in our own interest to offer all kinds of
+services to the Supreme Personality of Godhead. These services can be offered to the Supreme Person not
+directly but through the service of brahmanas and Vaisnavas. Srila Narottama dasa Thakura sings, chadiya
+vaisnava-seva nistara payeche keba, which means that unless one serves the Vaisnavas and brahmanas,
+one cannot get liberation from the material clutches. Srila Visvanatha Cakravarti Thakura also says, yasya
+prasadad bhagavat-prasadah: by satisfying the senses of the spiritual master, one can satisfy the senses of
+the Supreme Personality of Godhead. Thus this behavior is not only mentioned in scriptures but also
+followed by acaryas. Prthu Maharaja advised his citizens to follow the exemplary behavior of the Lord
+Himself and thus engage in the service of brahmanas and Vaisnavas.
 </p>
 
 </div>
@@ -91,7 +125,7 @@ Chanting the Song Sung by Lord Siva
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

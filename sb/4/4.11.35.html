@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.11.35.html">4.11.35</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.35</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/35"><b>35</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tri-lokim deva-yanena
-so 'tivrajya munin api
-parastad yad dhruva-gatir
-visnoh padam athabhyagat
-<p></p>
+evam svayambhuvah pautram
+anusasya manur dhruvam
+tenabhivanditah sakam
+rsibhih sva-puram yayau
+<br>
 <h2>Synonyms</h2>
-tri-lokim--the three planetary systems; deva-yanena--by the transcendental airplane; sah--Dhruva;
-ativrajya--having surpassed; munin--great sages; api--even; parastat--beyond; yat--which; dhruva-gatih--
-Dhruva, who attained permanent life; visnoh--of Lord Visnu; padam--abode; atha--then; abhyagat--
-achieved.
-<p></p>
+evam--thus; svayambhuvah--Lord Svayambhuva Manu; pautram--to his grandson; anusasya--after giving
+instruction; manuh--Lord Manu; dhruvam--to Dhruva Maharaja; tena--by him; abhivanditah--being
+offered obeisances to; sakam--together; rsibhih--with the sages; sva-puram--to his own abode; yayau--
+went.
+<br>
 <h2>Translation</h2>
-Dhruva Maharaja thus surpassed the seven planetary systems of the great sages who are known as
-saptarsi. Beyond that region, he achieved the transcendental situation of permanent life in the planet
-where Lord Visnu lives.
-<p></p>
-<h2>Purport</h2>
-The airplane was piloted by the two chief associates of Lord Visnu, namely Sunanda and Nanda. Only
-such spiritual astronauts can pilot their airplane beyond the seven planets and arrive in the region of
-eternal blissful life. It is confirmed in the Bhagavad-gita also (paras tasmat tu bhavo 'nyah) that beyond
-this planetary system begins the spiritual sky, where everything is permanent and blissful. The planets
-there are known as Visnuloka or Vaikunthaloka. Only there can one get an eternal blissful life of
-knowledge. Below Vaikunthaloka is the material universe, where Lord Brahma and others in Brahmaloka
-can live until the annihilation of this universe; but that life is not permanent. That is also confirmed in the
-Bhagavad-gita (abrahma-bhuvanal lokah). Even if one goes to the topmost planet, one cannot achieve
-eternal life. Only by arriving in Vaikunthaloka can one live an eternally blissful life.
+Thus Svayambhuva Manu, after giving instruction to Dhruva Maharaja, his grandson, received
+respectful obeisances from him. Then Lord Manu and the great sages went back to their respective homes.
+Thus end the Bhaktivedanta purports of the Fourth Canto, Eleventh Chapter, of the Srimad-Bhagavatam,
+entitled "Svayambhuva Manu Advises Dhruva Maharaja to Stop Fighting."
+Chapter Twelve
+Dhruva Maharaja Goes Back to Godhead
 </p>
 
 </div>
@@ -82,7 +113,7 @@ eternal life. Only by arriving in Vaikunthaloka can one live an eternally blissf
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.11.28.html">4.11.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-nisamya vaikuntha-niyojya-mukhyayor
-madhu-cyutam vacam urukrama-priyah
-krtabhisekah krta-nitya-mangalo
-munin pranamyasisam abhyavadayat
-<p></p>
+yah panca-varso jananim tvam vihaya
+matuh sapatnya vacasa bhinna-marma
+vanam gatas tapasa pratyag-aksam
+aradhya lebhe murdhni padam tri-lokyah
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great sage Maitreya said; nisamya--after hearing; vaikuntha--of the Lord; niyojya--
-associates; mukhyayoh--of the chief; madhu-cyutam--like pouring honey; vacam--speeches; urukramapriyah--
-Dhruva Maharaja, who was very dear to the Lord; krta-abhisekah--took his sacred bath; krta--
-performed; nitya-mangalah--his daily spiritual duties; munin--to the sages; pranamya--having offered
-obeisances; asisam--blessings; abhyavadayat--accepted.
-<p></p>
+yah--one who; panca-varsah--five years old; jananim--mother; tvam--you; vihaya--leaving aside; matuh--
+of the mother; sa-patnyah--of the co-wife; vacasa--by the words; bhinna-marma--aggrieved at heart;
+vanam--to the forest; gatah--went; tapasa--by austerity; pratyak-aksam--the Supreme Lord; aradhya--
+worshiping; lebhe--achieved; murdhni--on the top; padam--the position; tri-lokyah--of the three worlds.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued: Maharaja Dhruva was very dear to the Supreme Personality of
-Godhead. When he heard the sweet speeches of the Lord's chief associates in the Vaikuntha planet, he
-immediately took his sacred bath, dressed himself with suitable ornaments, and performed his daily
-spiritual duties. Thereafter he offered his respectful obeisances to the great sages present there and
-accepted their blessings.
-<p></p>
+My dear Dhruva, at the age of only five years you were very grievously afflicted by the words of your
+mother's co-wife, and you very boldly gave up the protection of your mother and went to the forest to
+engage in the yogic process for realization of the Supreme Personality of Godhead. As a result of this you
+have already achieved the topmost position in all the three worlds.
+<br>
 <h2>Purport</h2>
-We should mark how dutiful Dhruva Maharaja was in his devotional service, even at the time he left
-this material world. He was constantly alert in the performance of devotional duties. Every devotee should
-take his bath early in the morning and decorate his body with tilaka. In Kali-yuga one can hardly acquire
-gold or jeweled ornaments, but the twelve tilaka marks on the body are sufficient as auspicious
-decorations to purify the body. Since Dhruva Maharaja was living at that time at Badarikasrama, there
-were other great sages there. He did not become puffed up because the airplane sent by Lord Visnu was
-waiting for him; as a humble Vaisnava, he accepted blessings from all the sages before riding on the plane
-brought by the chief of the Vaikuntha associates.
+Manu was very proud that Dhruva Maharaja was one of the descendants in his family because at the age
+of only five years Dhruva began meditating upon the Supreme Personality of Godhead and within six
+months he was able to see the Supreme Lord face to face. Factually, Dhruva Maharaja is the glory of the
+Manu dynasty, or the human family. The human family begins from Manu. The Sanskrit word for man is
+manusya, which means "descendant of Manu." Not only is Dhruva Maharaja the glory of the family of
+Svayambhuva Manu, but he is the glory of the entire human society. Because Dhruva Maharaja had
+already surrendered to the Supreme Godhead, he was especially requested not to do anything unbefitting
+a surrendered soul.
 </p>
 
 </div>
@@ -85,7 +121,7 @@ brought by the chief of the Vaikuntha associates.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

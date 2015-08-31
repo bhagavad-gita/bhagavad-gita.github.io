@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.11.16.html">4.11.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atma-stry-apatya-suhrdo balam rddha-kosam
-antah-puram parivihara-bhuvas ca ramyah
-bhu-mandalam jaladhi-mekhalam akalayya
-kalopasrstam iti sa prayayau visalam
-<p></p>
+evam pravartate sargah
+sthitih samyama eva ca
+guna-vyatikarad rajan
+mayaya paramatmanah
+<br>
 <h2>Synonyms</h2>
-atma--body; stri--wives; apatya--children; suhrdah--friends; balam--influence, army; rddha-kosam--rich
-treasury; antah-puram--female residential quarters; parivihara-bhuvah--pleasure-grounds; ca--and;
-ramyah--beautiful; bhu-mandalam--the complete earth; jala-dhi--by oceans; mekhalam--bound; akalayya--
-considering; kala--by time; upasrstam--created; iti--thus; sah--he; prayayau--went; visalam--to
-Badarikasrama.
-<p></p>
+evam--thus; pravartate--occurs; sargah--creation; sthitih--maintenance; samyamah--annihilation; eva--
+certainly; ca--and; guna--of the modes; vyatikarat--by interaction; rajan--O King; mayaya--by the illusory
+energy; parama-atmanah--of the Supreme Personality of Godhead.
+<br>
 <h2>Translation</h2>
-Thus Dhruva Maharaja, at the end, left his kingdom, which extended all over the earth and was
-bounded by the great oceans. He considered his body, his wives, his children, his friends, his army, his
-rich treasury, his very comfortable palaces and his many enjoyable pleasure-grounds to be creations of the
-illusory energy. Thus in due course of time he retired to the forest in the Himalayas known as
-Badarikasrama.
-<p></p>
+Manu continued: My dear King Dhruva, it is simply by the illusory, material energy of the Supreme
+Personality of Godhead and by the interaction of the three modes of material nature that creation,
+maintenance and annihilation take place.
+<br>
 <h2>Purport</h2>
-In the beginning of his life, when he went to the forest in search of the Supreme Personality of Godhead,
-Dhruva Maharaja realized that all bodily conceptions of pleasure are products of the illusory energy. In
-the very beginning, of course, he was after the kingdom of his father, and in order to get it he went to
-search for the Supreme Lord. But he later realized that everything is the creation of the illusory energy.
-From the acts of Srila Dhruva Maharaja we can understand that somehow or other if one becomes Krsna
-conscious--it does not matter what his motivation is in the beginning--he will eventually realize the real
-truth by the grace of the Lord. In the beginning, Dhruva Maharaja was interested in the kingdom of his
-father, but later he became a great devotee, maha-bhagavata, and had no interest in material enjoyment.
-The perfection of life can be achieved only by devotees. Even if one completes only a minute percentage of
-devotional service and then falls down from his immature position, he is better than a person who fully
-engages in the fruitive activities of this material world.
+First, creation takes place with the ingredients of the five elements of material nature. Then, by the
+interaction of the modes of material nature, maintenance also takes place. When a child is born, the
+parents immediately see to its maintenance. This tendency for maintenance of offspring is present not
+only in human society, but in animal society as well. Even tigers care for their cubs, although their
+propensity is to eat other animals. By the interaction of the material modes of nature, creation,
+maintenance and also annihilation take place inevitably. But at the same time we should know that all is
+conducted under the superintendence of the Supreme Personality of Godhead. Everything is going on
+under that process. Creation is the action of the rajo-guna, the mode of passion; maintenance is the action
+of sattva-guna, the mode of goodness; and annihilation is the action of tamo-guna, the mode of ignorance.
+We can see that those who are situated in the mode of goodness live longer than those who are situated in
+the tamo-guna or rajo-guna. In other words, if one is elevated to the mode of goodness, he is elevated to a
+higher planetary system, where the duration of life is very great. Urdhvam gacchanti sattva-sthah: great
+rsis, sages and sannyasis who maintain themselves in sattva-guna, or the mode of material goodness, are
+elevated to a higher planetary system. Those who are transcendental even to the material modes of nature
+are situated in the mode of pure goodness; they attain eternal life in the spiritual world.
 </p>
 
 </div>
@@ -87,7 +126,7 @@ engages in the fruitive activities of this material world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

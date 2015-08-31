@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,64 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.4.html">4.26.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yada jighrksan purusah
-kartsnyena prakrter gunan
-nava-dvaram dvi-hastanghri
-tatramanuta sadhv iti
-<p></p>
+cacara mrgayam tatra
+drpta attesu-karmukah
+vihaya jayam atad-arham
+mrga-vyasana-lalasah
+<br>
 <h2>Synonyms</h2>
-yada--when; jighrksan--desiring to enjoy; purusah--the living entity; kartsnyena--in total; prakrteh--of
-material nature; gunan--the modes; nava-dvaram--having nine gates; dvi--two; hasta--hands; anghri--legs;
-tatra--there; amanuta--he thought; sadhu--very good; iti--thus.
-<p></p>
+cacara--executed; mrgayam--hunting; tatra--there; drptah--being proud; atta--having taken; isu--arrows;
+karmukah--bow; vihaya--giving up; jayam--his wife; a-tat-arham--although impossible; mrga--hunting;
+vyasana--evil activities; lalasah--being inspired by.
+<br>
 <h2>Translation</h2>
-When the living entity wants to enjoy the modes of material nature in their totality, he prefers, out of
-many bodily forms, to accept that body which has nine gates, two hands and two legs. Thus he prefers to
-become a human being or a demigod.
-<p></p>
+It was almost impossible for King Puranjana to give up the company of his Queen even for a moment.
+Nonetheless, on that day, being very much inspired by the desire to hunt, he took up his bow and arrow
+with great pride and went to the forest, not caring for his wife.
+<br>
 <h2>Purport</h2>
-This is a very nice explanation of how the spiritual being, the part and parcel of Krsna, God, accepts a
-material body by virtue of his own desires. Accepting two hands, two legs, and so on, the living entity
-fully enjoys the modes of material nature. Lord Krsna says in Bhagavad-gita (7.27):
-iccha-dvesa-samutthena
-dvandva-mohena bharata
-sarva-bhutani sammoham
-sarge yanti parantapa
-"O scion of Bharata [Arjuna], O conqueror of the foe, all living entities are born into delusion, overcome
-by the dualities of desire and hate."
-Originally the living entity is a spiritual being, but when he actually desires to enjoy this material world,
-he comes down. From this verse we can understand that the living entity first accepts a body that is
-human in form, but gradually, due to his degraded activities, he falls into lower forms of life--into the
-animal, plant and aquatic forms. By the gradual process of evolution, the living entity again attains the
-body of a human being and is given another chance to get out of the process of transmigration. If he again
-misses his chance in the human form to understand his position, he is again placed in the cycle of birth
-and death in various types of bodies.
-The desire of the living entity to come into the material world is not very difficult to understand.
-Although one may be born in a family of Aryans, where there are restrictions against meat-eating,
-intoxication, gambling and illicit sex, still one may want to enjoy these forbidden things. There is always
-someone who wants to go to a prostitute for illicit sex or to a hotel to eat meat and drink wine. There is
-always someone who wants to gamble at nightclubs or enjoy so-called sports. All these propensities are
-already within the hearts of the living entities, but some living entities stop to enjoy these abominable
-activities and consequently fall down to a degraded platform. The more one desires a degraded life within
-his heart, the more he falls down to occupy different forms of abominable existence. This is the process of
-transmigration and evolution. A particular type of animal may have a strong tendency to enjoy one kind
-of sense enjoyment, but in the human form one can enjoy all the senses. The human form has the facility
-to utilize all the senses for gratification. Unless one is properly trained, he becomes a victim of the modes
-of material nature, as confirmed by Bhagavad-gita (3.27):
-prakrteh kriyamanani
-gunaih karmani sarvasah
-ahankara-vimudhatma
-kartaham iti manyate
-"The bewildered spirit soul, under the influence of the three modes of material nature, thinks himself
-the doer of activities that are in actuality carried out by nature." As soon as one desires to enjoy his
-senses, he puts himself under the control of material energy and automatically, or mechanically, is placed
-into the cycle of birth and death in various life-forms.
+One form of hunting is known as woman-hunting. A conditioned soul is never satisfied with one wife.
+Those whose senses are very much uncontrolled especially try to hunt for many women. King Puranjana's
+abandoning the company of his religiously married wife is representative of the conditioned soul's attempt
+to hunt for many women for sense gratification. Wherever a king goes, he is supposed to be accompanied
+by his queen, but when the king, or conditioned soul, becomes greatly overpowered by the desire for
+sense gratification, he does not care for religious principles. Instead, with great pride, he accepts the bow
+and arrow of attachment and hatred. Our consciousness is always working in two ways--the right way and
+the wrong way. When one becomes too proud of his position, influenced by the mode of passion, he gives
+up the right path and accepts the wrong one. Ksatriya kings are sometimes advised to go to the forest to
+hunt ferocious animals just to learn how to kill, but such forays are never meant for sense gratification.
+Killing animals to eat their flesh is forbidden for human beings.
 </p>
 
 </div>
@@ -108,7 +122,7 @@ into the cycle of birth and death in various life-forms.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

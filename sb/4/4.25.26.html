@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.26.html">4.25.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam yajna-pasavo 'nena
-samjnapta ye 'dayaluna
-kutharais cicchiduh kruddhah
-smaranto 'mivam asya tat
-<p></p>
+ka tvam kanja-palasaksi
+kasyasiha kutah sati
+imam upa purim bhiru
+kim cikirsasi samsa me
+<br>
 <h2>Synonyms</h2>
-tam--him; yajna-pasavah--the sacrificial animals; anena--by him; samjnaptah--killed; ye--all of them
-who; adayaluna--by the most unkind; kutharaih--by axes; cicchiduh--pierced to pieces; kruddhah--being
-very angry; smarantah--remembering; amivam--sinful activity; asya--of him; tat--that.
-<p></p>
+ka--who; tvam--you; kanja-palasa--like the petals of the lotus; aksi--eyes; kasya--whose; asi--you are;
+iha--here; kutah--wherefrom; sati--O chaste one; imam--this; upa--near; purim--city; bhiru--O timid one;
+kim--what; cikirsasi--you are trying to do; samsa--kindly explain; me--unto me.
+<br>
 <h2>Translation</h2>
-That most unkind king, Puranjana, had killed many animals in various sacrifices. Now, taking
-advantage of this opportunity, all these animals began to pierce him with their horns. It was as though he
-were being cut to pieces by axes.
-<p></p>
+My dear lotus-eyed, kindly explain to me where you are coming from, who you are, and whose daughter
+you are. You appear very chaste. What is the purpose of your coming here? What are you trying to do?
+Please explain all these things to me.
+<br>
 <h2>Purport</h2>
-Those who are very enthusiastic about killing animals in the name of religion or for food must await
-similar punishment after death. The word mamsa ("meat") indicates that those animals whom we kill will
-be given an opportunity to kill us. Although in actuality no living entity is killed, the pains of being
-pierced by the horns of animals will be experienced after death. Not knowing this, rascals unhesitatingly
-go on killing poor animals. So-called human civilization has opened many slaughterhouses for animals in
-the name of religion or food. Those who are a little religious kill animals in temples, mosques or
-synagogues, and those who are more fallen maintain various slaughterhouses. Just as in civilized human
-society the law is a life for a life, no living entity can encroach upon another living entity as far as the
-Supreme Lord is concerned. Everyone should be given freedom to live at the cost of the supreme father,
-and animal-killing--either for religion or for food--is always condemned by the Supreme Personality of
-Godhead. In Bhagavad-gita (16.19) Lord Krsna says:
-tan aham dvisatah kruran
-samsaresu naradhaman
-ksipamy ajasram asubhan
-asurisv eva yonisu
-"Those who are envious and mischievous, who are the lowest among men, are cast by Me into the ocean
-of material existence, into various demoniac species of life." The animal-killers (dvisatah), envying other
-living entities and the Supreme Personality of Godhead, are placed in darkness and cannot understand the
-theme and objective of life. This is further explained in the following verses.
+The first aphorism in the Vedanta-sutra is athato brahma jijnasa. In the human form of life one should
+put many questions to himself and to his intelligence. In the various forms of life lower than human life
+the intelligence does not go beyond the range of life's primary necessities--namely eating, sleeping, mating
+and defending. Dogs, cats and tigers are always busy trying to find something to eat or a place to sleep,
+trying to defend and have sexual intercourse successfully. In the human form of life, however, one should
+be intelligent enough to ask what he is, why he has come into the world, what his duty is, who is the
+supreme controller, what is the difference between dull matter and the living entity, etc. There are so
+many questions, and the person who is actually intelligent should simply inquire about the supreme
+source of everything: athato brahma jijnasa. A living entity is always connected with a certain amount of
+intelligence, but in the human form of life the living entity must inquire about his spiritual identity. This
+is real human intelligence. It is said that one who is simply conscious of the body is no better than an
+animal, even though he be in the human form. In Bhagavad-gita (15.15) Sri Krsna says, sarvasya caham
+hrdi sannivisto mattah smrtir jnanam apohanam ca: "I am seated in everyone's heart, and from Me come
+remembrance, knowledge and forgetfulness." In the animal form the living entity is completely forgetful
+of his relationship with God. This is called apohanam, or forgetfulness. In the human form of life,
+however, consciousness is more greatly developed, and consequently the human being has a chance to
+understand his relationship with God. In the human form one should utilize his intelligence by asking all
+these questions, just as Puranjana, the living entity, is asking the unknown girl where she has come from,
+what her business is, why she is present, etc. These are inquiries about atma-tattva--self-realization. The
+conclusion is that unless a living entity is inquisitive about self-realization he is nothing but an animal.
 </p>
 
 </div>
@@ -91,7 +131,7 @@ theme and objective of life. This is further explained in the following verses.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.11.30.html">4.11.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tadottanapadah putro
-dadarsantakam agatam
-mrtyor murdhni padam dattva
-arurohadbhutam grham
-<p></p>
+tvam pratyag-atmani tada bhagavaty ananta
+ananda-matra upapanna-samasta-saktau
+bhaktim vidhaya paramam sanakair avidyagranthim
+vibhetsyasi mamaham iti prarudham
+<br>
 <h2>Synonyms</h2>
-tada--then; uttanapadah--of King Uttanapada; putrah--son; dadarsa--could see; antakam--death
-personified; agatam--approached him; mrtyoh murdhni--on the head of death; padam--feet; dattva--
-placing; aruroha--got up; adbhutam--wonderful; grham--on the airplane which resembled a big house.
-<p></p>
+tvam--you; pratyak-atmani--unto the Supersoul; tada--at that time; bhagavati--unto the Supreme
+Personality of Godhead; anante--who is unlimited; ananda-matre--the reservoir of all pleasure; upapanna--
+possessed of; samasta--all; saktau--potencies; bhaktim--devotional service; vidhaya--by rendering;
+paramam--supreme; sanakaih--very soon; avidya--of illusion; granthim--the knot; vibhetsyasi--you will
+undo; mama--my; aham--I; iti--thus; prarudham--firmly fixed.
+<br>
 <h2>Translation</h2>
-When Dhruva Maharaja was attempting to get on the transcendental plane, he saw death personified
-approach him. Not caring for death, however, he took advantage of the opportunity to put his feet on the
-head of death, and thus he got up on the airplane, which was as big as a house.
-<p></p>
+Thus regaining your natural position and rendering service unto the Supreme Lord, who is the allpowerful
+reservoir of all pleasure and who lives in all living entities as the Supersoul, you will very soon
+forget the illusory understanding of "I" and "my."
+<br>
 <h2>Purport</h2>
-To take the passing away of a devotee and the passing away of a nondevotee as one and the same is
-completely misleading. While ascending the transcendental airplane, Dhruva Maharaja suddenly saw
-death personified before him, but he was not afraid. Instead of death's giving him trouble, Dhruva
-Maharaja took advantage of death's presence and put his feet on the head of death. People with a poor
-fund of knowledge do not know the difference between the death of a devotee and the death of a
-nondevotee. In this connection, an example can be given: a cat carries its kittens in its mouth, and it also
-catches a rat in its mouth. Superficially, the catching of the rat and the kitten appear to be one and the
-same, but actually they are not. When the cat catches the rat in its mouth it means death for the rat,
-whereas when the cat catches the kitten, the kitten enjoys it. When Dhruva Maharaja boarded the
-airplane, he took advantage of the arrival of death personified, who came to offer him obeisances; putting
-his feet on the head of death, he got up on the unique airplane, which is described here to be as big as a
-house (grham).
-There are many other similar instances in Bhagavata literature. It is stated that when Kardama Muni
-created an airplane to carry his wife, Devahuti, all over the universe, the airplane was like a big city,
-carrying many houses, lakes and gardens. Modern scientists have manufactured big airplanes, but they are
-packed with passengers, who experience all sorts of discomforts while riding in them.
-Material scientists are not even perfect in manufacturing a material airplane. In order to compare to the
-plane used by Kardama or the plane sent from Visnuloka, they must manufacture an airplane equipped
-like a big city, with all the comforts of life--lakes, gardens, parks, etc. Their plane must be able to fly in
-outer space and hover, and visit all other planets. If they invent such a plane, they will not have to make
-different space stations for fuel to travel into outer space. Such a plane would have an unlimited supply of
-fuel, or, like the plane from Visnuloka, would fly without it.
+Dhruva Maharaja was already a liberated person because at the age of five years he had seen the
+Supreme Personality of Godhead. But even though liberated, he was, for the time being, afflicted by the
+illusion of maya, thinking himself the brother of Uttama in the bodily concept of life. The whole material
+world is working on the basis of "I" and "mine." This is the root of attraction to the material world. If one
+is attracted by this root of illusory conceptions--"I" and "mine"--he will have to remain within this
+material world in different exalted or nasty positions. By the grace of Lord Krsna, the sages and Lord
+Manu reminded Dhruva Maharaja that he should not continue this material conception of "I" and "mine."
+Simply by devotional service unto the Lord his illusion could be eradicated without difficulty.
 </p>
 
 </div>
@@ -94,7 +121,7 @@ fuel, or, like the plane from Visnuloka, would fly without it.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

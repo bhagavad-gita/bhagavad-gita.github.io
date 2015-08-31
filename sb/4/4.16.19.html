@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,61 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.16.19.html">4.16.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa tvam jighamsase kasmad
-dinam akrta-kilbisam
-ahanisyat katham yosam
-dharma-jna iti yo matah
-<p></p>
+ayam tu saksad bhagavams try-adhisah
+kuta-stha atma kalayavatirnah
+yasminn avidya-racitam nirarthakam
+pasyanti nanatvam api pratitam
+<br>
 <h2>Synonyms</h2>
-sah--that very person; tvam--you; jighamsase--want to kill; kasmat--why; dinam--poor; akrta--without
-having done; kilbisam--any sinful activities; ahanisyat--would kill; katham--how; yosam--a woman;
-dharma-jnah--the knower of religious principles; iti--thus; yah--one who; matah--is considered.
-<p></p>
+ayam--this King; tu--then; saksat--directly; bhagavan--the Supreme Personality of Godhead; tri-adhisah--
+the master of the three planetary systems; kuta-sthah--without any change; atma--the Supersoul; kalaya--
+by a partial plenary expansion; avatirnah--descended; yasmin--in whom; avidya-racitam--created by
+nescience; nirarthakam--without meaning; pasyanti--they see; nanatvam--material variegatedness; api--
+certainly; pratitam--understood.
+<br>
 <h2>Translation</h2>
-The cow-shaped earth continued to appeal to the King: I am very poor and have not committed any
-sinful activities. I do not know why you want to kill me. Since you are supposed to be the knower of all
-religious principles, why are you so envious of me, and why are you so anxious to kill a woman?
-<p></p>
+This King is the master of the three worlds, and he is directly empowered by the Supreme Personality of
+Godhead. He is without change, and he is an incarnation of the Supreme known as a saktyavesa-avatara.
+Being a liberated soul and completely learned, he sees all material varieties as meaningless because their
+basic principle is nescience.
+<br>
 <h2>Purport</h2>
-The earth appealed to the King in two ways. A king who knows religious principles cannot kill anyone
-who has not committed sinful activities. Apart from this, a woman is not to be killed, even if she does
-commit some sinful activities. Since the earth was innocent and was also a woman, the King should not
-kill her.
+The reciters of these prayers are describing the transcendental qualities of Prthu Maharaja. These
+qualities are summarized in the words saksad bhagavan. This indicates that Maharaja Prthu is directly the
+Supreme Personality of Godhead and therefore possesses unlimited good qualities. Being an incarnation of
+the Supreme Personality of Godhead, Maharaja Prthu could not be equaled in his excellent qualities. The
+Supreme Personality of Godhead is fully equipped with six kinds of opulences, and King Prthu was also
+empowered in such a way that he could display these six opulences of the Supreme Personality of
+Godhead in full.
+The word kuta-stha, meaning "without change," is also very significant. There are two kinds of living
+entities--nitya-mukta and nitya-baddha. A nitya-mukta never forgets his position as the eternal servant of
+the Supreme Personality of Godhead. One who does not forget this position and knows that he is part and
+parcel of the Supreme Lord is nitya-mukta. Such a nitya-mukta living entity represents the Supersoul as
+His expansion. As stated in the Vedas, nityo nityanam. Thus the nitya-mukta living entity knows that he
+is an expansion of the supreme nitya, or the eternal Supreme Personality of Godhead. Being in such a
+position, he sees the material world with a different vision. The living entity who is nitya-baddha, or
+eternally conditioned, sees the material varieties as being actually different from one another. In this
+connection we should remember that the embodiment of the conditioned soul is considered to be like a
+dress. One may dress in different ways, but a really learned man does not take dresses into consideration.
+As stated in Bhagavad-gita (5.18):
+vidya-vinaya-sampanne
+brahmane gavi hastini
+suni caiva svapake ca
+panditah sama-darsinah
+"The humble sage, by virtue of true knowledge, sees with equal vision a learned and gentle brahmana, a
+cow, an elephant, a dog and a dog-eater [outcaste]."
+Thus a learned man does not look upon the dresses that externally cover the living entity, but sees the
+pure soul within the varieties of dress and knows very well that the varieties of dress are the creation of
+nescience (avidya-racitam). Being a saktyavesa-avatara, empowered by the Supreme Personality of
+Godhead, Prthu Maharaja did not change his spiritual position, and consequently there was no possibility
+of his viewing the material world as reality.
 </p>
 
 </div>
@@ -76,7 +143,7 @@ kill her.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

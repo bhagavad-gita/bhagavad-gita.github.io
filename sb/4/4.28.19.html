@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.19.html">4.28.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dayaya sarva-bhutesu
-santustya yena kena va
-sarvendriyopasantya ca
-tusyaty asu janardanah
-<p></p>
+na mayy anasite bhunkte
+nasnate snati mat-para
+mayi ruste susantrasta
+bhartsite yata-vag bhayat
+<br>
 <h2>Synonyms</h2>
-dayaya--by showing mercy; sarva-bhutesu--to all living entities; santustya--by being satisfied; yena kena
-va--somehow or other; sarva-indriya--all the senses; upasantya--by controlling; ca--also; tusyati--becomes
-satisfied; asu--very soon; janardanah--the Lord of all living entities.
-<p></p>
+na--never; mayi--when I; anasite--had not eaten; bhunkte--she would eat; na--never; asnate--had not
+taken bath; snati--she would take her bath; mat-para--always devoted to me; mayi--when I; ruste--was
+angry; su-santrasta--very much frightened; bhartsite--when I chastised; yata-vak--fully controlled of
+words; bhayat--out of fear.
+<br>
 <h2>Translation</h2>
-By showing mercy to all living entities, being satisfied somehow or other and controlling the senses
-from sense enjoyment, one can very quickly satisfy the Supreme Personality of Godhead, Janardana.
-<p></p>
+King Puranjana then began to think of his past dealings with his wife. He recalled that his wife would
+not take her dinner until he had finished his, that she would not take her bath until he had finished his,
+and that she was always very much attached to him, so much so that if he would sometimes become angry
+and chastise her, she would simply remain silent and tolerate his misbehavior.
+<br>
 <h2>Purport</h2>
-These are some of the ways in which the Supreme Personality of Godhead can be satisfied by the
-devotee. The first item mentioned is dayaya sarva-bhutesu, showing mercy to all conditioned souls. The
-best way to show mercy is to spread Krsna consciousness. The entire world is suffering for want of this
-knowledge. People should know that the Supreme Personality of Godhead is the original cause of
-everything. Knowing this, everyone should directly engage in His devotional service. Those who are
-actually learned, advanced in spiritual understanding, should preach Krsna consciousness all over the
-world so that people may take to it and make their lives successful.
-The word sarva-bhutesu is significant because it applies not only to species of life. The devotee can do
-good not only to humanity but to all living entities as well. Everyone can benefit spiritually by the
-chanting of the Hare Krsna maha-mantra. When the transcendental vibration of Hare Krsna is sounded,
-even the trees, animals and insects benefit. Thus when one chants the Hare Krsna maha-mantra loudly, he
-actually shows mercy to all living entities. To spread the Krsna consciousness movement throughout the
-world, the devotees should be satisfied in all conditions.
-narayana-parah sarve
-na kutascana bibhyati
-svargapavarga-narakesv
-api tulyartha-darsinah
-(Bhag. 6.17.28)
-It does not matter to the pure devotee if he has to go to hell to preach. The Supreme Lord lives in the
-heart of a hog, although the Lord is in Vaikuntha. Even while preaching in hell, a pure devotee remains a
-pure devotee by his constant association with the Supreme Personality of Godhead. To attain this state,
-one has to control his senses. The senses are automatically controlled when one's mind is engaged in the
-service of the Lord.
+A wife is always supposed to be submissive to her husband. Submission, mild behavior and subservience
+are qualities in a wife which make a husband very thoughtful of her. For family life it is very good for a
+husband to be attached to his wife, but it is not very good for spiritual advancement. Thus Krsna
+consciousness must be established in every home. If a husband and wife are very much attached to one
+another in Krsna consciousness, they will both benefit because Krsna is the center of their existence.
+Otherwise, if the husband is too much attached to his wife, he becomes a woman in his next life. The
+woman, being overly attached to her husband, becomes a man in her next life. Of course, it is an
+advantage for a woman to become a man, but it is not at all advantageous for the man to become a
+woman.
 </p>
 
 </div>
@@ -94,7 +122,7 @@ service of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

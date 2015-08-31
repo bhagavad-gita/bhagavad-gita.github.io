@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.15.html">4.21.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-utsarpayams tu tam murdhni
-kramenavesya nihsprhah
-vayum vayau ksitau kayam
-tejas tejasy ayuyujat
-<p></p>
+pramsuh pinayata-bhujo
+gaurah kanjaruneksanah
+sunasah sumukhah saumyah
+pinamsah sudvija-smitah
+<br>
 <h2>Synonyms</h2>
-utsarpayan--thus placing; tu--but; tam--the air; murdhni--on the head; kramena--gradually; avesya--
-placing; nihsprhah--being freed from all material desires; vayum--the air portion of the body; vayau--in
-the total air covering the universe; ksitau--in the total covering of earth; kayam--this material body; tejah--
-the fire in the body; tejasi--in the total fire of the material covering; ayuyujat--mixed.
-<p></p>
+pramsuh--very tall; pina-ayata--full and broad; bhujah--arms; gaurah--fair-complexioned; kanja--
+lotuslike; aruna-iksanah--with bright eyes resembling a morning sunrise; su-nasah--straight nose; sumukhah--
+with a beautiful face; saumyah--of a grave bodily stature; pina-amsah--shoulders raised; su--
+beautiful; dvija--teeth; smitah--smiling.
+<br>
 <h2>Translation</h2>
-In this way, Prthu Maharaja gradually raised his air of life up to the hole in his skull, whereupon he lost
-all desire for material existence. Gradually he merged his air of life with the totality of air, his body with
-the totality of earth, and the fire within his body with the totality of fire.
-<p></p>
+King Prthu's body was tall and sturdy, and his complexion was fair. His arms were full and broad and
+his eyes as bright as the rising sun. His nose was straight, his face very beautiful and his personality grave.
+His teeth were set beautifully in his smiling face.
+<br>
 <h2>Purport</h2>
-When the spiritual spark, which is described as one ten-thousandth part of the tip of a hair, is forced
-into material existence, that spark is covered by gross and subtle material elements. The material body is
-composed of five gross elements--earth, water, fire, air and ether--and three subtle elements--mind,
-intelligence and ego. When one attains liberation, he is freed from these material coverings. Indeed,
-success in yoga involves getting free from these material coverings and entering into spiritual existence.
-Lord Buddha's teachings of nirvana are based on this principle. Lord Buddha instructed his followers to
-give up these material coverings by means of meditation and yoga. Lord Buddha did not give any
-information about the soul, but if one follows his instructions strictly, he will ultimately become free from
-the material coverings and attain nirvana.
-When a living entity gives up the material coverings, he remains a spirit soul. This spirit soul must enter
-into the spiritual sky to merge into the Brahman effulgence. Unfortunately, unless the living entity has
-information of the spiritual world and the Vaikunthas, there is a 99.9 percent chance of his falling down
-again into material existence. There is, however, a small chance of being promoted to a spiritual planet
-from the Brahman effulgence, or the brahmajyoti. This brahmajyoti is considered by impersonalists to be
-without variety, and the Buddhists consider it to be void. In either case, whether one accepts the spiritual
-sky as being without variety or void, there is none of the spiritual bliss which is enjoyed in the spiritual
-planets, the Vaikunthas or Krsnaloka. In the absence of varieties of enjoyment, the spirit soul gradually
-feels an attraction to enjoy a life of bliss, and not having any information of Krsnaloka or Vaikunthaloka,
-he naturally falls down to material activities in order to enjoy material varieties.
+Amongst the four social orders (brahmanas, ksatriyas, vaisyas and sudras), the ksatriyas, both men and
+women, are generally very beautiful. As will be apparent from the following verses, it is to be concluded
+that not only were Maharaja Prthu's bodily features attractive, as described here, but he had specific allauspicious
+signs in his bodily construction.
+As it is said, "The face is the index of the mind." One's mental constitution is exhibited by his facial
+features. The bodily features of a particular person are exhibited in accordance with his past deeds, for
+according to one's past deeds, his next bodily features--whether in human society, animal society or
+demigod society--are determined. This is proof of the transmigration of the soul through different types of
+bodies.
 </p>
 
 </div>
@@ -92,7 +121,7 @@ he naturally falls down to material activities in order to enjoy material variet
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

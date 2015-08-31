@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,68 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.39.html">4.23.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dharmo hy atrartha-kamau ca
-prajanando 'mrtam yasah
-loka visoka viraja
-yan na kevalino viduh
-<p></p>
+anudinam idam adarena srnvan
+prthu-caritam prathayan vimukta-sangah
+bhagavati bhava-sindhu-pota-pade
+sa ca nipunam labhate ratim manusyah
+<br>
 <h2>Synonyms</h2>
-dharmah--religious ritual; hi--certainly; atra--here (in this grhastha-asrama, or householder life); artha--
-economic development; kamau--sense gratification; ca--and; praja-anandah--the pleasure of generations;
-amrtam--the results of sacrifice; yasah--reputation; lokah--planetary systems; visokah--without
-lamentation; virajah--without disease; yan--which; na--never; kevalinah--the transcendentalists; viduh--
-know.
-<p></p>
+anu-dinam--day after day; idam--this; adarena--with great respect; srnvan--hearing; prthu-caritam--the
+narration of Prthu Maharaja; prathayan--chanting; vimukta--liberated; sangah--association; bhagavati--
+unto the Supreme Personality of Godhead; bhava-sindhu--the ocean of nescience; pota--the boat; pade--
+whose lotus feet; sah--he; ca--also; nipunam--complete; labhate--achieves; ratim--attachment; manusyah--
+the person.
+<br>
 <h2>Translation</h2>
-The woman continued: In this material world, a householder's life brings all kinds of happiness in
-religion, economic development, sense gratification and the begetting of children, sons and grandsons.
-After that, one may desire liberation as well as material reputation. The householder can appreciate the
-results of sacrifices, which enable him to gain promotion to superior planetary systems. All this material
-happiness is practically unknown to the transcendentalists. They cannot even imagine such happiness.
-<p></p>
+Whoever, with great reverence and adoration, regularly reads, chants and describes the history of
+Maharaja Prthu's activities will certainly increase unflinching faith and attraction for the lotus feet of the
+Lord. The Lord's lotus feet are the boat by which one can cross the ocean of nescience.
+<br>
 <h2>Purport</h2>
-According to Vedic instructions, there are two paths for human activities. One is called pravrtti-marga,
-and the other is called nivrtti-marga. The basic principle for either of these paths is religious life. In
-animal life there is only pravrtti-marga. pravrtti-marga means sense enjoyment, and nivrtti-marga means
-spiritual advancement. In the life of animals and demons, there is no conception of nivrtti-marga, nor is
-there any actual conception of pravrtti-marga. pravrtti-marga maintains that even though one has the
-propensity for sense gratification, he can gratify his senses according to the directions of the Vedic
-injunctions. For example, everyone has the propensity for sex life, but in demoniac civilization sex is
-enjoyed without restriction. According to Vedic culture, sex is enjoyed under Vedic instructions. Thus the
-Vedas give direction to civilized human beings to enable them to satisfy their propensities for sense
-gratification.
-In the nivrtti-marga, however, on the path of transcendental realization, sex is completely forbidden.
-The social orders are divided into four parts--brahmacarya, grhastha, vanaprastha and sannyasa--and only
-in the householder life can the pravrtti-marga be encouraged or accepted according to Vedic instructions.
-In the orders of brahmacarya, vanaprastha and sannyasa, there are no facilities for sex.
-In this verse the woman is advocating pravrtti-marga only and is discouraging the path of nivrtti-marga.
-She clearly says that the yatis, the transcendentalists, who are concerned only with spiritual life
-(kaivalya), cannot imagine the happiness of pravrtti-marga. In other words, the man who follows the
-Vedic principles enjoys the materialistic way of life not only by becoming happy in this life, but also in the
-next life by being promoted to the heavenly planets. In this life such a person gets all kinds of material
-opulences, such as sons and grandsons, because he is always engaged in various religious functions. The
-material distresses are birth, old age, disease and death, but those who are interested in pravrtti-marga
-hold various religious functions at the time of birth, old age, disease and death. Without caring for the
-distresses of birth, old age, disease and death, they are addicted to performing the special functions
-according to the Vedic ritualistic ceremonies.
-Factually, however, pravrtti-marga is based on sex life. As stated in Srimad-Bhagavatam (7.9.45), yan
-maithunadi-grhamedhi-sukham hi tuccham. A householder who is too much addicted to pravrtti-marga is
-actually called a grhamedhi, not a grhastha. Although the grhastha desires sense gratification, he acts
-according to Vedic instructions. The grhamedhi, however, who is interested only in sense gratification,
-does not follow any Vedic instruction. The grhamedhi engages himself as an advocate of sex life and also
-allows his sons and daughters to engage in sex and to be deprived of any glorious end in life. A grhastha
-enjoys sex life in this life as well as in the next, but a grhamedhi does not know what the next life is about
-because he is simply interested in sex in this life. On the whole, when one is too much inclined toward
-sex, he does not care for the transcendental spiritual life. In this age of Kali especially, no one is interested
-in spiritual advancement. Even though it is sometimes found that one may be interested in spiritual
-advancement, he is most likely to accept a bogus method of spiritual life, being misguided by so many
-pretenders.
+The word bhava-sindhu-pota-pade is significant in this verse. The lotus feet of the Lord are known as
+mahat-padam; this means that the total source of material existence rests on the lotus feet of the Lord. As
+stated in Bhagavad-gita (10.8), aham sarvasya prabhavah: everything is emanating from Him. This cosmic
+manifestation, which is compared to an ocean of nescience, is also resting on the lotus feet of the Lord. As
+such, this great ocean of nescience is minimized by a person who is a pure devotee. One who has taken
+shelter of the lotus feet of the Lord need not cross over the ocean, for he has already crossed it by virtue of
+his position at the Lord's lotus feet. By hearing and chanting of the glories of the Lord or the Lord's
+devotee, one can become firmly fixed in the service of the lotus feet of the Lord. This position can also be
+achieved very easily by narrating the history of the life of Prthu Maharaja regularly every day. The word
+vimukta-sangah is also significant in this connection. Because we associate with the three qualities of
+material nature, our position in this material world is full of dangers, but when we engage in the
+devotional service of the Lord by the process of sravanam and kirtanam, we immediately become vimuktasanga,
+or liberated.
+Thus end the Bhaktivedanta purports of the Fourth Canto, Twenty-third Chapter, of the Srimad-
+Bhagavatam, entitled "Maharaja Prthu's Going Back Home."
+Chapter Twenty-four
+Chanting the Song Sung by Lord Siva
 </p>
 
 </div>
@@ -112,7 +130,7 @@ pretenders.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

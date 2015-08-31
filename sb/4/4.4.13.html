@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.4.13.html">4.4.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 nascaryam etad yad asatsu sarvada
 mahad-vininda kunapatma-vadisu
 sersyam mahapurusa-pada-pamsubhir
 nirasta-tejahsu tad eva sobhanam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; ascaryam--wonderful; etat--this; yat--which; asatsu--evil; sarvada--always; mahat-vininda--the
 deriding of great souls; kunapa-atma-vadisu--among those who have accepted the dead body as the self;
 sa-irsyam--envy; maha-purusa--of great personalities; pada-pamsubhih--by the dust of the feet; nirastatejahsu--
 whose glory is diminished; tat--that; eva--certainly; sobhanam--very good.
-<p></p>
+<br>
 <h2>Translation</h2>
 It is not wonderful for persons who have accepted the transient material body as the self to engage
 always in deriding great souls. Such envy on the part of materialistic persons is very good because that is
 the way they fall down. They are diminished by the dust of the feet of great personalities.
-<p></p>
+<br>
 <h2>Purport</h2>
 Everything depends on the strength of the recipient. For example, due to the scorching sunshine many
 vegetables and flowers dry up, and many grow luxuriantly. Thus it is the recipient that causes growth and
@@ -87,7 +126,7 @@ such a concept of life is considered to be in the class of animals like cows and
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

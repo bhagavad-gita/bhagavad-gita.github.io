@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.4.html">4.18.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-anvito brahma-sarvabhyam
-loka-palaih sahanugaih
-upagiyamano gandharvair
-munibhis capsaro-ganaih
-<p></p>
+tan atisthati yah samyag
+upayan purva-darsitan
+avarah sraddhayopeta
+upeyan vindate 'njasa
+<br>
 <h2>Synonyms</h2>
-anvitah--being accompanied; brahma--by Lord Brahma; sarvabhyam--and by Lord Siva; loka-palaih--by
-the predominating chiefs of all different planets; saha anugaih--along with their followers;
-upagiyamanah--being praised; gandharvaih--by the residents of Gandharvaloka; munibhih--by great sages;
-ca--also; apsarah-ganaih--by the residents of Apsaroloka.
-<p></p>
+tan--those; atisthati--follows; yah--anyone who; samyak--completely; upayan--principles; purva--
+formerly; darsitan--instructed; avarah--inexperienced; sraddhaya--with faith; upetah--being situated;
+upeyan--the fruits of activities; vindate--enjoys; anjasa--very easily.
+<br>
 <h2>Translation</h2>
-When Lord Visnu appeared in the sacrificial arena, Lord Brahma, Lord Siva and all the chief
-predominating personalities of every planet, as well as their followers, came with Him. When He appeared
-on the scene, the residents of Gandharvaloka, the great sages, and the residents of Apsaroloka all praised
-Him.
+One who follows the principles and instructions enjoined by the great sages of the past can utilize these
+instructions for practical purposes. Such a person can very easily enjoy life and pleasures.
+<br>
+<h2>Purport</h2>
+The Vedic principles (mahajano yena gatah sa panthah) urge us to follow in the footsteps of great
+liberated souls. In this way we can receive benefit in both this life and the next, and we can also improve
+our material life. By following the principles laid down by great sages and saints of the past, we can very
+easily understand the aim of all life. The word avarah, meaning "inexperienced," is very significant in this
+verse. Every conditioned soul is inexperienced. Everyone is abodha jata--born a fool and rascal. In
+democratic government at the present moment all kinds of fools and rascals are making decisions. But
+what can they do? What is the result of their legislation? They enact something today just to whimsically
+repeal it tomorrow. One political party utilizes a country for one purpose, and the next moment another
+political party forms a different type of government and nullifies all the laws and regulations. This process
+of chewing the chewed (punah punas carvita-carvananam) will never make human society happy. In
+order to make all human society happy and prosperous, we should accept the standard methods given by
+liberated persons.
 </p>
 
 </div>
@@ -72,7 +122,7 @@ Him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

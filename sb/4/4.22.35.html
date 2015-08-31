@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,53 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.35.html">4.22.35</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.35</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/35"><b>35</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sankarsanaya suksmaya
-durantayantakaya ca
-namo visva-prabodhaya
-pradyumnayantar-atmane
-<p></p>
+tatrapi moksa evartha
+atyantikatayesyate
+traivargyo 'rtho yato nityam
+krtanta-bhaya-samyutah
+<br>
 <h2>Synonyms</h2>
-sankarsanaya--unto the master of integration; suksmaya--unto the subtle unmanifested material
-ingredients; durantaya--unto the unsurpassable; antakaya--unto the master of disintegration; ca--also;
-namah--obeisances; visva-prabodhaya--unto the master of the development of the universe;
-pradyumnaya--unto Lord Pradyumna; antah-atmane--unto the Supersoul in everyone's heart.
-<p></p>
+tatra--there; api--also; moksah--liberation; eva--certainly; arthe--for the matter of; atyantikataya--most
+important; isyate--taken in that way; trai-vargyah--the three others, namely religion, economic
+development and sense gratification; arthah--interest; yatah--wherefrom; nityam--regularly; krta-anta--
+death; bhaya--fear; samyutah--attached.
+<br>
 <h2>Translation</h2>
-My dear Lord, You are the origin of the subtle material ingredients, the master of all integration as well
-as the master of all disintegration, the predominating Deity named Sankarsana, and the master of all
-intelligence, known as the predominating Deity Pradyumna. Therefore, I offer my respectful obeisances
-unto You.
-<p></p>
+Out of the four principles--namely religion, economic development, sense gratification and liberation--
+liberation has to be taken very seriously. The other three are subject to destruction by the stringent law of
+nature--death.
+<br>
 <h2>Purport</h2>
-The whole universe is maintained by the integrating power of the Supreme Lord, who is known in that
-capacity by the name Sankarsana. The material scientists may have discovered the law of gravity, which
-maintains the integration of objects within the material energy, yet the master of all integration can create
-devastation by the disintegrating blazing fire emanating from His mouth. A description of this can be
-found in the Eleventh Chapter of Bhagavad-gita, wherein the universal form of the Lord is described. The
-master of integration is also the destroyer of this world by virtue of His disintegrating energy. Sankarsana
-is the master of integration and disintegration, whereas Pradyumna, another feature of Lord Vasudeva, is
-responsible for universal growth and maintenance. The word suksmaya is significant because within this
-gross material body there are subtle material bodies--namely mind, intelligence and ego. The Lord in His
-different features (Vasudeva, Aniruddha, Pradyumna and Sankarsana) maintains both the gross and subtle
-material elements of this world. As mentioned in Bhagavad-gita, the gross material elements are earth,
-water, fire, air and ether, and the subtle material elements are mind, intelligence and ego. All of them are
-controlled by the Supreme Personality of Godhead as Vasudeva, Sankarsana, Pradyumna and Aniruddha,
-and this will be further explained in the following verse.
+Moksa, or liberation, has to be taken very seriously, even at the sacrifice of the other three items. As
+advised by Suta Gosvami in the beginning of Srimad-Bhagavatam, religious principles are not based on
+success in economic development. Because we are very attached to sense gratification, we go to God, to
+the temple or churches, for some economic reasons. Then again, economic development does not mean
+sense gratification. Everything should be adjusted in such a way that we attain liberation. Therefore in
+this verse, liberation, moksa, is stressed. The other three items are material and therefore subject to
+destruction. Even if somehow we accumulate a great bank balance in this life and possess many material
+things, everything will be finished with death. In Bhagavad-gita it is said that death is the Supreme
+Personality of Godhead, who ultimately takes away everything acquired by the materialistic person.
+Foolishly we do not care for this. Foolishly we are not afraid of death, nor do we consider that death will
+take away everything acquired by the process of dharma, artha and kama. By dharma, or pious activities,
+we may be elevated to the heavenly planets, but this does not mean freedom from the clutches of birth,
+death, old age and disease. The purport is that we can sacrifice our interests in traivargya--religious
+principles, economic development and sense gratification--but we cannot sacrifice the cause of liberation.
+Regarding liberation, it is stated in Bhagavad-gita (4.9): tyaktva deham punar janma naiti. Liberation
+means that after giving up this body one does not have to accept another material body. To the
+impersonalists liberation means merging into the existence of impersonal Brahman. But factually this is
+not moksa because one has to again fall down into this material world from that impersonal position. One
+should therefore seek the shelter of the Supreme Personality of Godhead and engage in His devotional
+service. That is real liberation. The conclusion is that we should not stress pious activities, economic
+development and sense gratification, but should concern ourselves with approaching Lord Visnu in His
+spiritual planets, of which the topmost is Goloka Vrndavana, where Lord Krsna lives. Therefore this Krsna
+consciousness movement is the greatest gift for persons who are actually desiring liberation.
 </p>
 
 </div>
@@ -88,7 +135,7 @@ and this will be further explained in the following verse.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

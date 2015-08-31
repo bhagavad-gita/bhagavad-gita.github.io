@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.24.html">4.10.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na caite putraka bhratur
-hantaro dhanadanugah
-visargadanayos tata
-pumso daivam hi karanam
-<p></p>
+vavrsu rudhiraughasrkpuya-
+vin-mutra-medasah
+nipetur gaganad asya
+kabandhany agrato 'nagha
+<br>
 <h2>Synonyms</h2>
-na--never; ca--also; ete--all these; putraka--my dear son; bhratuh--of your brother; hantarah--killers;
-dhanada--of Kuvera; anugah--followers; visarga--of birth; adanayoh--of death; tata--my dear son;
-pumsah--of a living entity; daivam--the Supreme; hi--certainly; karanam--the cause.
-<p></p>
+vavrsuh--showered; rudhira--of blood; ogha--an inundation; asrk--mucus; puya--pus; vit--stool; mutra--
+urine; medasah--and marrow; nipetuh--began to fall; gaganat--from the sky; asya--of Dhruva;
+kabandhani--trunks of bodies; agratah--in front; anagha--O faultless Vidura.
+<br>
 <h2>Translation</h2>
-My dear son, those Yaksas, who are descendants of Kuvera, are not actually the killers of your brother;
-the birth and death of every living entity are caused by the Supreme, who is certainly the cause of all
-causes.
+My dear faultless Vidura, in that rainfall there was blood, mucus, pus, stool, urine and marrow falling
+heavily before Dhruva Maharaja, and there were trunks of bodies falling from the sky.
 </p>
 
 </div>
@@ -70,7 +108,7 @@ causes.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

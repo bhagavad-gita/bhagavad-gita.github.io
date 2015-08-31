@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,66 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.28.html">4.28.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-imam tu kausaravinopavarnitam
-ksatta nisamyajita-vada-sat-katham
-pravrddha-bhavo 'sru-kalakulo muner
-dadhara murdhna caranam hrda hareh
-<p></p>
+tam eva manasa grhnan
+babhuva pramadottama
+anantaram vidarbhasya
+raja-simhasya vesmani
+<br>
 <h2>Synonyms</h2>
-imam--all this; tu--then; kausaravina--by Maitreya; upavarnitam--described; ksatta--Vidura; nisamya--
-after hearing; ajita-vada--glorification of the Supreme Lord; sat-katham--transcendental message;
-pravrddha--enhanced; bhavah--ecstasies; asru--of tears; kala--by particles; akulah--overwhelmed; muneh--
-of the great sage; dadhara--captured; murdhna--by the head; caranam--the lotus feet; hrda--by the heart;
-hareh--of the Supreme Personality of Godhead.
-<p></p>
+tam--her; eva--certainly; manasa--by the mind; grhnan--accepting; babhuva--became; pramada--woman;
+uttama--highly situated; anantaram--after death; vidarbhasya--of Vidarbha; raja-simhasya--of the most
+powerful king; vesmani--at the house.
+<br>
 <h2>Translation</h2>
-My dear King, in this way, after hearing the transcendental messages of the Supreme Personality of
-Godhead and His devotees from the great sage Maitreya, Vidura was overwhelmed with ecstasy. With
-tears in his eyes, he immediately fell down at the lotus feet of his guru, his spiritual master. He then fixed
-the Supreme Personality of Godhead within the core of his heart.
-<p></p>
+King Puranjana gave up his body while remembering his wife, and consequently in his next life he
+became a very beautiful and well-situated woman. He took his next birth as the daughter of King
+Vidarbha in the very house of the King.
+<br>
 <h2>Purport</h2>
-This is a sign of associating with great devotees. A devotee takes instructions from a liberated soul and is
-thus overwhelmed by ecstasy from transcendental pleasure. As stated by Prahlada Maharaja:
-naisam matis tavad urukramanghrim
-sprsaty anarthapagamo yad-arthah
-mahiyasam pada-rajo-'bhisekam
-niskincananam na vrnita yavat
-(Bhag. 7.5.32)
-One cannot become a perfect devotee of the Lord without having touched the lotus feet of a great
-devotee. One who has nothing to do with this material world is called niskincana. The process of selfrealization
-and the path home, back to Godhead, means surrendering to the bona fide spiritual master and
-taking the dust of his lotus feet on one's head. Thus one advances on the path of transcendental
-realization. Vidura had this relationship with Maitreya, and he attained the results.
+Since King Puranjana thought of his wife at the time of death, he attained the body of a woman in his
+next birth. This verifies the following verse in Bhagavad-gita (8.6):
+yam yam vapi smaran bhavam
+tyajaty ante kalevaram
+tam tam evaiti kaunteya
+sada tad-bhava-bhavitah
+"Whatever state of being one remembers when he quits his body, that state he will attain without fail."
+When a living entity is accustomed to think of a particular subject matter or become absorbed in a
+certain type of thought, he will think of that subject at the time of death. At the time of death, one will
+think of the subject that has occupied his life while he was awake, lightly sleeping or dreaming, or while
+he was deeply sleeping. After falling from the association of the Supreme Lord, the living entity thus
+transmigrates from one bodily form to another according to nature's course, until he finally attains the
+human form. If he is absorbed in material thoughts and ignorant of spiritual life, and if he does not take
+shelter under the lotus feet of the Supreme Personality of Godhead, Govinda, who solves all questions of
+birth and death, he will become a woman in the next life, especially if he thinks of his wife. As stated in
+Srimad-Bhagavatam (3.31.1): karmana daiva-netrena. A living entity acts piously and impiously, and
+sometimes in both ways. All actions are taken into account, and the living entity is offered a new body by
+his superiors. Although King Puranjana was overly attached to his wife, he nonetheless performed many
+pious fruitive activities. Consequently, although he took the form of a woman, he was given a chance to
+be the daughter of a powerful king. As confirmed in Bhagavad-gita (6.41):
+prapya punya-krtam lokan
+usitva sasvatih samah
+sucinam srimatam gehe
+yoga-bhrasto 'bhijayate
+"The unsuccessful yogi, after many, many years of enjoyment on the planets of the pious living entities,
+is born into a family of righteous people or into a family of rich aristocracy."
+If a person falls from the path of bhakti-yoga, God realization, due to attachment to fruitive activity,
+philosophical speculation or mystic yoga, he is given a chance to take birth in a high and rich family. The
+higher authorities appointed by the Supreme Personality of Godhead thus render justice to the living
+entity according to the living entity's desires. Although King Puranjana was overly absorbed in thoughts
+of his wife and thus became a woman, he took birth in the family of a king due to his previous pious
+activities. The conclusion is that all our activities are taken into consideration before we are awarded
+another body. Narada Muni therefore advised Vyasadeva that one should take to Krsna consciousness,
+devotional service, and abandon all ordinary occupational duties. This advice was also given by Lord
+Krsna Himself. Although a devotee may fall from the path of spiritual consciousness, he will nonetheless
+attain a human body in the home of a devotee or a rich man. In this way one can resume his devotional
+service.
 </p>
 
 </div>
@@ -87,7 +148,7 @@ realization. Vidura had this relationship with Maitreya, and he attained the res
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

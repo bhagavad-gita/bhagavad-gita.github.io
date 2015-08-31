@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.2.html">4.7.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-mrsadharmasya bharyasid
-dambham mayam ca satru-han
-asuta mithunam tat tu
-nirrtir jagrhe 'prajah
-<p></p>
+mahadeva uvaca
+nagham prajesa balanam
+varnaye nanucintaye
+deva-mayabhibhutanam
+dandas tatra dhrto maya
+<br>
 <h2>Synonyms</h2>
-mrsa--Mrsa; adharmasya--of Irreligion; bharya--wife; asit--was; dambham--Bluffing; mayam--Cheating;
-ca--and; satru-han--O slayer of enemies; asuta--produced; mithunam--combination; tat--that; tu--but;
-nirrtih--Nirrti; jagrhe--took; aprajah--being childless.
-<p></p>
+mahadevah--Lord Siva; uvaca--said; na--not; agham--offense; praja-isa--O lord of created beings;
+balanam--of the children; varnaye--I regard; na--not; anucintaye--I consider; deva-maya--the external
+energy of the Lord; abhibhutanam--of those deluded by; dandah--rod; tatra--there; dhrtah--used; maya--by
+me.
+<br>
 <h2>Translation</h2>
-Another son of Lord Brahma was Irreligion, whose wife's name was Falsity. From their combination
-were born two demons named Dambha, or Bluffing, and Maya, or Cheating. These two demons were
-taken by a demon named Nirrti, who had no children.
-<p></p>
+Lord Siva said: My dear father, Brahma, I do not mind the offenses created by the demigods. Because
+these demigods are childish and less intelligent, I do not take a serious view of their offenses, and I have
+punished them only in order to right them.
+<br>
 <h2>Purport</h2>
-It is understood herein that Adharma, Irreligion, was also a son of Brahma, and he married his sister
-Mrsa. This is the beginning of sex life between brother and sister. This unnatural combination of sex life
-can be possible in human society only where there is Adharma, or Irreligion. It is understood that in the
-beginning of creation Brahma created not only saintly sons like Sanaka, Sanatana and Narada but also
-demonic offspring like Nirrti, Adharma, Dambha and Falsity. Everything was created by Brahma in the
-beginning. Regarding Narada, it is understood that because his previous life was very pious and his
-association very good, he was born as Narada. Others were also born in their own capacities, according to
-their backgrounds. The law of karma continues birth after birth, and when there is a new creation, the
-same karma comes back with the living entities. They are born in different capacities according to karma
-even though their father is originally Brahma, who is the exalted qualitative incarnation of the Supreme
-Personality of Godhead.
+There are two types of punishment. One is that which a conqueror imposes on an enemy, and the other
+is like that a father imposes on his son. There is a gulf of difference between these two kinds of
+punishment. Lord Siva is by nature a Vaisnava, a great devotee, and his name in this connection is
+Asutosa. He is always satisfied, and therefore he did not become angry as if he were an enemy. He is not
+inimical to any living entity; rather, he always wishes the welfare of all. Whenever he chastises a person, it
+is just like a father's punishment of his son. Lord Siva is like a father because he never takes seriously any
+offense by any living entities, especially the demigods.
 </p>
 
 </div>
@@ -83,7 +120,7 @@ Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

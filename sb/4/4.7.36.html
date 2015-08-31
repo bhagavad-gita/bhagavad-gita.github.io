@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,62 +81,61 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.36.html">4.7.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-athapi me 'vinitasya
-ksattram ghoram upeyusah
-surucya durvaco-banair
-na bhinne srayate hrdi
-<p></p>
+yajamany uvaca
+svagatam te prasidesa tubhyam namah
+srinivasa sriya kantaya trahi nah
+tvam rte 'dhisa nangair makhah sobhate
+sirsa-hinah ka-bandho yatha purusah
+<br>
 <h2>Synonyms</h2>
-atha api--therefore; me--my; avinitasya--not very submissive; ksattram--the spirit of a ksatriya; ghoram--
-intolerant; upeyusah--achieved; surucyah--of Queen Suruci; durvacah--harsh words; banaih--by the
-arrows; na--not; bhinne--being pierced; srayate--remain in; hrdi--the heart.
-<p></p>
+yajamani--the wife of Daksa; uvaca--prayed; su-agatam--auspicious appearance; te--Your; prasida--
+become pleased; isa--my dear Lord; tubhyam--unto You; namah--respectful obeisances; srinivasa--O abode
+of the goddess of fortune; sriya--with Laksmi; kantaya--Your wife; trahi--protect; nah--us; tvam--You; rte--
+without; adhisa--O supreme controller; na--not; angaih--with bodily limbs; makhah--the sacrificial arena;
+sobhate--is beautiful; sirsa-hinah--without the head; ka-bandhah--possessed of only a body; yatha--as;
+purusah--a person.
+<br>
 <h2>Translation</h2>
-My dear lord, I am very impudent for not accepting your instructions, but this is not my fault. It is due
-to my having been born in a ksatriya family. My stepmother, Suruci, has pierced my heart with her harsh
-words. Therefore your valuable instruction does not stand in my heart.
-<p></p>
+The wife of Daksa prayed as follows: My dear Lord, it is very fortunate that You have appeared in this
+arena of sacrifice. I offer my respectful obeisances unto You, and I request that You be pleased on this
+occasion. The sacrificial arena is not beautiful without You, just as a body is not beautiful without the
+head.
+<br>
 <h2>Purport</h2>
-It is said that the heart or mind is just like an earthen pot; once broken, it cannot be repaired by any
-means. Dhruva Maharaja gave this example to Narada Muni. He said that his heart, having been pierced
-by the arrows of his stepmother's harsh words, felt so broken that nothing seemed valuable but his desire
-to counteract her insult. His stepmother had said that because he was born from the womb of Suniti, a
-neglected queen of Maharaja Uttanapada, Dhruva Maharaja was not fit to sit either on the throne or on his
-father's lap. In other words, according to his stepmother, he could not be declared king. Dhruva
-Maharaja's determination, therefore, was to become king of a planet exalted even beyond that possessed
-by Lord Brahma, the greatest of all the demigods.
-Dhruva Maharaja indirectly informed the great sage Narada that there are four kinds of human spirit--
-the brahminical spirit, the ksatriya spirit, the vaisya spirit and the sudra spirit. The spirit of one caste is
-not applicable to the members of another. The philosophical spirit enunciated by Narada Muni might
-have been suitable for a brahmana spirit, but it was not suitable for a ksatriya. Dhruva frankly admitted
-that he was lacking in brahminical humility and was therefore unable to accept the philosophy of Narada
-Muni.
-The statements of Dhruva Maharaja indicate that unless a child is trained according to his tendency,
-there is no possibility of his developing his particular spirit. It was the duty of the spiritual master or
-teacher to observe the psychological movement of a particular boy and thus train him in a particular
-occupational duty. Dhruva Maharaja, having already been trained in the ksatriya spirit, would not accept
-the brahminical philosophy. In America we have practical experience of this incompatibility of the
-brahminical and ksatriya temperaments. The American boys, who have simply been trained as sudras, are
-not at all fit to fight in battle. Therefore, when they are called to join the military, they refuse because they
-do not have ksatriya spirit. This is a cause of great dissatisfaction in society.
-That the boys do not have the ksatriya spirit does not mean that they are trained in brahminical
-qualities; they are trained as sudras, and thus in frustration they are becoming hippies. However, as soon
-as they enter the Krsna consciousness movement being started in America, they are trained to meet the
-brahminical qualifications, even though they have fallen to the lowest conditions as sudras. In other
-words, since the Krsna consciousness movement is open for everyone, people in general can attain the
-brahminical qualifications. This is the greatest need at the present moment, for now there are actually no
-brahmanas or ksatriyas but only some vaisyas and, for the most part, sudras. The classification of society
-into brahmanas, ksatriyas, vaisyas and sudras is very scientific. In the human social body, the brahmanas
-are considered the head, the ksatriyas are the arms, the vaisyas are the belly, and the sudras are the legs.
-At the present moment the body has legs and a belly, but there are no arms or head, and therefore society
-is topsy-turvy. It is necessary to reestablish the brahminical qualifications in order to raise the fallen
-human society to the highest standard of spiritual consciousness.
+Another name of Lord Visnu is Yajnesvara. In Bhagavad-gita it is said that all activities should be
+performed as Visnu-yajna, for the pleasure of Lord Visnu. Unless we please Him, whatever we do is the
+cause of our bondage in the material world. This is confirmed herein by the wife of Daksa: "Without Your
+presence, the grandeur of this sacrificial ceremony is useless, just as a body without the head, however
+decorated it may be, is useless." The comparison is equally applicable to the social body. Material
+civilization is very proud of being advanced, but it is actually the useless trunk of a body without a head.
+Without Krsna consciousness, without an understanding of Visnu, the Supreme personality of Godhead,
+any advancement in a civilization, no matter how sophisticated, is of no value. There is a statement in the
+Hari-bhakti-sudhodaya (3.11):
+bhagavad-bhakti-hinasya
+jatih sastram japas tapah
+apranasyaiva dehasya
+mandanam loka-ranjanam
+The purport is that sometimes when a friend or relative dies, especially among lower class men, the
+dead body is decorated. Dressed and ornamented, the body is taken in procession. That sort of decoration
+of the dead body has no actual value because the life force is already gone. Similarly, any aristocracy, any
+social prestige or any advancement of material civilization without Krsna consciousness is as good as the
+decoration of a dead body. The name of the wife of Daksa was Prasuti, and she was the daughter of
+Svayambhuva Manu. Her sister, Devahuti, was married to Kardama Muni, and Kapiladeva, the Personality
+of Godhead, became her son. Prasuti, then, was the aunt of Lord Visnu. She was asking the favor of Lord
+Visnu in an affectionate mode; since she was His aunt, she sought some special favor. Also significant in
+this verse is that the Lord is praised with the goddess of fortune. Wherever Lord Visnu is worshiped,
+naturally there is the favor of the goddess of fortune. Lord Visnu is addressed as amrta, transcendental.
+The demigods, including Brahma and Lord Siva, were produced after the creation, but Lord Visnu existed
+before the creation. He is addressed, therefore, as amrta. Lord Visnu is worshiped with His internal energy
+by the Vaisnavas. Prasuti, the wife of Daksa, implored the Lord to turn the priests into Vaisnavas instead
+of simply fruitive workers performing sacrifices for some material benefits.
 </p>
 
 </div>
@@ -106,7 +143,7 @@ human society to the highest standard of spiritual consciousness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

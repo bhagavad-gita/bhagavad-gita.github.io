@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.24.html">4.21.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kurvatyah kusumasaram
-tasmin mandara-sanuni
-nadatsv amara-turyesu
-grnanti sma parasparam
-<p></p>
+ya uddharet karam raja
+praja dharmesv asiksayan
+prajanam samalam bhunkte
+bhagam ca svam jahati sah
+<br>
 <h2>Synonyms</h2>
-kurvatyah--just showering; kusuma-asaram--showers of flowers; tasmin--in that; mandara--of Mandara
-Hill; sanuni--on the top; nadatsu--vibrating; amara-turyesu--beating of the drums of the demigods; grnanti
-sma--they were talking; parasparam--amongst themselves as follows.
-<p></p>
+yah--anyone (king or governor); uddharet--exact; karam--taxes; raja--king; prajah--the citizens;
+dharmesu--in executing their respective duties; asiksayan--without teaching them how to execute their
+respective duties; prajanam--of the citizens; samalam--impious; bhunkte--enjoys; bhagam--fortune; ca--
+also; svam--own; jahati--gives up; sah--that king.
+<br>
 <h2>Translation</h2>
-At that time the demigods were situated on the top of Mandara Hill, and all their wives began to shower
-flowers on the funeral pyre and began to talk amongst themselves as follows.
+Any king who does not teach his citizens about their respective duties in terms of varna and asrama but
+who simply exacts tolls and taxes from them is liable to suffer for the impious activities which have been
+performed by the citizens. In addition to such degradation, the king also loses his own fortune.
+<br>
+<h2>Purport</h2>
+A king, governor or president should not take the opportunity to occupy his post without also
+discharging his duty. He must teach the people within the state how to observe the divisions of varna and
+asrama. If a king neglects to give such instructions and is simply satisfied with levying taxes, then those
+who share in the collection--namely, all the government servants and the head of the state--are liable to
+share in the impious activities of the general masses. The laws of nature are very subtle. For example, if
+one eats in a place which is very sinful, he shares in the resultant reaction of the sinful activities
+performed there. (It is a Vedic system, therefore, for a householder to call brahmanas and Vaisnavas to eat
+at ceremonial performances in his house because the brahmanas and Vaisnavas can immunize him from
+sinful activities. But it is not the duty of rigid brahmanas and Vaisnavas to accept invitations everywhere.
+There is, of course, no objection to taking part in feasts in which prasada is distributed.) There are many
+subtle laws which are practically unknown to people in general, but the Krsna consciousness movement is
+very scientifically distributing all this Vedic knowledge for the benefit of the people of the world.
 </p>
 
 </div>
@@ -69,7 +124,7 @@ flowers on the funeral pyre and began to talk amongst themselves as follows.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

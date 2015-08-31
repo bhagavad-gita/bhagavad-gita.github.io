@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.11.html">4.15.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-durasado durvisaha
-asanno 'pi viduravat
-naivabhibhavitum sakyo
-venarany-utthito 'nalah
-<p></p>
+tasyabhiseka arabdho
+brahmanair brahma-vadibhih
+abhisecanikany asmai
+ajahruh sarvato janah
+<br>
 <h2>Synonyms</h2>
-durasadah--unapproachable; durvisahah--unbearable; asannah--being approached; api--although;
-vidura-vat--as if far away; na--never; eva--certainly; abhibhavitum--to be overcome; sakyah--able; vena--
-King Vena; arani--the wood that produces fire; utthitah--being born of; analah--fire.
-<p></p>
+tasya--his; abhisekah--coronation; arabdhah--was arranged; brahmanaih--by the learned brahmanas;
+brahma-vadibhih--attached to the Vedic rituals; abhisecanikani--various paraphernalia for performing the
+ceremony; asmai--unto him; ajahruh--collected; sarvatah--from all directions; janah--people.
+<br>
 <h2>Translation</h2>
-King Prthu was born of the dead body of King Vena as fire is produced from arani wood. Thus King
-Prthu will always remain just like fire, and his enemies will not be able to approach him. Indeed, he will
-be unbearable to his enemies, for although staying very near him, they will never be able to approach him
-but will have to remain as if far away. No one will be able to overcome the strength of King Prthu.
-<p></p>
-<h2>Purport</h2>
-Arani wood is a kind of fuel used to ignite fire by friction. At the time of performing sacrifices, one can
-ignite a fire from arani wood. Although born of his dead father, King Prthu would still remain just like
-fire. Just as fire is not easily approached, King Prthu would be unapproachable by his enemies, even
-though they would appear to be very near him.
+The learned brahmanas, who were very attached to the Vedic ritualistic ceremonies, then arranged for
+the King's coronation. People from all directions collected all the different paraphernalia for the
+ceremony. Thus everything was complete.
 </p>
 
 </div>
@@ -77,7 +109,7 @@ though they would appear to be very near him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

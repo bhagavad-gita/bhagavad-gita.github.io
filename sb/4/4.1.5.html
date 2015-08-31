@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.1.5.html">4.1.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 aninye sva-grham putryah
 putram vitata-rocisam
 svayambhuvo muda yukto
 rucir jagraha daksinam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 aninye--brought to; sva-grham--home; putryah--born of the daughter; putram--the son; vitata-rocisam--
 very powerful; svayambhuvah--the Manu named Svayambhuva; muda--being very pleased; yuktah--with;
 rucih--the great sage Ruci; jagraha--kept; daksinam--the daughter named Daksina.
-<p></p>
+<br>
 <h2>Translation</h2>
 Svayambhuva Manu very gladly brought home the beautiful boy named Yajna, and Ruci, his son-in-law,
 kept with him the daughter, Daksina.
-<p></p>
+<br>
 <h2>Purport</h2>
 Svayambhuva Manu was very glad to see that his daughter Akuti had given birth to both a boy and girl.
 He was afraid that he would take one son and that because of this his son-in-law Ruci might be sorry.
@@ -89,7 +128,7 @@ consciousness; that will free one from the reactions of material activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

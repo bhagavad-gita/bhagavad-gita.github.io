@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.8.html">4.5.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa ittham adisya suran ajas tu taih
-samanvitah pitrbhih sa-prajesaih
-yayau sva-dhisnyan nilayam pura-dvisah
-kailasam adri-pravaram priyam prabhoh
-<p></p>
+vata na vanti na hi santi dasyavah
+pracina-barhir jivati hogra-dandah
+gavo na kalyanta idam kuto rajo
+loko 'dhuna kim pralayaya kalpate
+<br>
 <h2>Synonyms</h2>
-sah--he (Brahma); ittham--thus; adisya--after instructing; suran--the demigods; ajah--Lord Brahma; tu--
-then; taih--those; samanvitah--followed; pitrbhih--by the Pitas; sa-prajesaih--along with the lords of the
-living entities; yayau--went; sva-dhisnyat--from his own place; nilayam--the abode; pura-dvisah--of Lord
-Siva; kailasam--Kailasa; adri-pravaram--the best among mountains; priyam--dear; prabhoh--of the lord
-(Siva).
-<p></p>
+vatah--the winds; na vanti--are not blowing; na--not; hi--because; santi--are possible; dasyavah--
+plunderers; pracina-barhih--old King Barhi; jivati--is living; ha--still; ugra-dandah--who would sternly
+punish; gavah--the cows; na kalyante--are not being driven; idam--this; kutah--from where; rajah--dust;
+lokah--the planet; adhuna--now; kim--is it; pralayaya--for dissolution; kalpate--to be considered ready.
+<br>
 <h2>Translation</h2>
-After thus instructing all the demigods, the Pitas and the lords of the living entities, Lord Brahma took
-them with him and left for the abode of Lord Siva, known as the Kailasa Hill.
-<p></p>
+Conjecturing on the origin of the storm, they said: There is no wind blowing, and no cows are passing,
+nor is it possible that this dust storm could be raised by plunderers, for there is still the strong King Barhi,
+who would punish them. Where is this dust storm blowing from? Is the dissolution of the planet now to
+occur?
+<br>
 <h2>Purport</h2>
-The abode of Lord Siva, which is known as Kailasa, is described in the fourteen verses which follow.
+Specifically significant in this verse is pracina-barhir jivati. The king of that part of the land was known
+as Barhi, and although he was old, he was still living, and he was a very strong ruler. Thus there was no
+possibility of an invasion by thieves and plunderers. Indirectly it is stated here that thieves, plunderers,
+rogues and unwanted population can exist only in a state or kingdom where there is no strong ruler.
+When, in the name of justice, thieves are allowed liberty, the state and kingdom are disturbed by such
+plunderers and unwanted population. The dust storm created by the soldiers and assistants of Lord Siva
+resembled the situation at the time of the dissolution of this world. When there is a need for the
+dissolution of the material creation, this function is conducted by Lord Siva. Therefore the situation now
+created by him resembled the dissolution of the cosmic manifestation.
 </p>
 
 </div>
@@ -74,7 +122,7 @@ The abode of Lord Siva, which is known as Kailasa, is described in the fourteen 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

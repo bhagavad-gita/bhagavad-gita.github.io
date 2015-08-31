@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.34.html">4.23.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ihadya santam atmanam
-vidama na tatah param
-yeneyam nirmita vira
-puri saranam atmanah
-<p></p>
+aspasta-kirtih suyasa
+murkho bhavati panditah
+idam svasty-ayanam pumsam
+amangalya-nivaranam
+<br>
 <h2>Synonyms</h2>
-iha--here; adya--today; santam--existing; atmanam--living entities; vidama--that much we know; na--
-not; tatah param--beyond that; yena--by whom; iyam--this; nirmita--created; vira--O great hero; puri--city;
-saranam--resting place; atmanah--of all living entities.
-<p></p>
+aspasta-kirtih--unmanifested reputation; su-yasah--very famous; murkhah--illiterate; bhavati--becomes;
+panditah--learned; idam--this; svasti-ayanam--auspiciousness; pumsam--of the men; amangalya--
+inauspiciousness; nivaranam--prohibiting.
+<br>
 <h2>Translation</h2>
-O great hero, we only know that we are existing in this place. We do not know what will come after.
-Indeed, we are so foolish that we do not care to understand who has created this beautiful place for our
-residence.
-<p></p>
+Also, one who hears this narration three times will become very reputable if he is not recognized in
+society, and he will become a great scholar if he is illiterate. In other words, hearing of the narrations of
+Prthu Maharaja is so auspicious that it drives away all bad luck.
+<br>
 <h2>Purport</h2>
-This lack of Krsna consciousness is called ignorance. In Srimad-Bhagavatam (5.5.5) it is called
-parabhavas tavad abodha jatah. Everyone is born ignorant. The Bhagavatam therefore says that we are all
-born ignorant within this material world. In our ignorance we may create nationalism, philanthropy,
-internationalism, science, philosophy and so many other things. The basic principle behind all these is
-ignorance. What then is the value of all this advancement of knowledge if the basic principle is ignorance?
-Unless a person comes to Krsna consciousness, all of his activities are defeated. This human form of life is
-especially meant to dissipate ignorance, but without understanding how to dissipate ignorance people are
-planning and building many things. After death, however, all of this is finished.
+In the material world, everyone wants some profit, some adoration and some reputation. By associating
+in different ways with the Supreme Personality of godhead or His devotee, one can very easily become
+opulent in every respect. Even if one is not known or recognized by society, he becomes very famous and
+important if he takes to devotional service and preaching. As far as education is concerned, one can
+become recognized in society as a great learned scholar simply by hearing Srimad-Bhagavatam and
+Bhagavad-gita, wherein the pastimes of the Lord and His devotees are described. This material world is
+full of dangers at every step, but a devotee has no fear because devotional service is so auspicious that it
+automatically counteracts all kinds of bad luck. Since hearing about Prthu Maharaja is one of the items of
+devotional service (sravanam), naturally hearing about him brings all good fortune.
 </p>
 
 </div>
@@ -80,7 +120,7 @@ planning and building many things. After death, however, all of this is finished
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

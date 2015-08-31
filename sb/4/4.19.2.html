@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.2.html">4.19.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-bhagavan uvaca
-esa te 'karsid bhangam
-haya-medha-satasya ha
-ksamapayata atmanam
-amusya ksantum arhasi
-<p></p>
+tad abhipretya bhagavan
+karmatisayam atmanah
+sata-kratur na mamrse
+prthor yajna-mahotsavam
+<br>
 <h2>Synonyms</h2>
-sri-bhagavan uvaca--the Supreme Personality of Godhead, Lord Visnu, spoke; esah--this Lord Indra; te--
-your; akarsit--performed; bhangam--disturbance; haya--horse; medha--sacrifice; satasya--of the onehundredth;
-ha--indeed; ksamapayatah--who is asking pardon; atmanam--unto yourself; amusya--him;
-ksantum--to forgive; arhasi--you ought.
-<p></p>
+tat abhipretya--considering this matter; bhagavan--the most powerful; karma-atisayam--excelling in
+fruitive activities; atmanah--of himself; sata-kratuh--King Indra, who had performed a hundred sacrifices;
+na--not; mamrse--did tolerate; prthoh--of King Prthu; yajna--sacrificial; maha-utsavam--great ceremonies.
+<br>
 <h2>Translation</h2>
-Lord Visnu, the Supreme Personality of Godhead, said: My dear King Prthu, Indra, the King of heaven,
-has disturbed your execution of one hundred sacrifices. Now he has come with Me to be forgiven by you.
-Therefore excuse him.
-<p></p>
+When the most powerful Indra, the King of heaven, saw this, he considered the fact that King Prthu was
+going to exceed him in fruitive activities. Thus Indra could not tolerate the great sacrificial ceremonies
+performed by King Prthu.
+<br>
 <h2>Purport</h2>
-In this verse the word atmanam is very significant. It is a custom among yogis and jnanis to address one
-another (or even an ordinary man) as one's self, for a transcendentalist never accepts a living being to be
-the body. Since the individual self is part and parcel of the Supreme Personality of Godhead, the self and
-the Superself are qualitatively nondifferent. As the next verse will explain, the body is only a superficial
-covering, and consequently an advanced transcendentalist will not make a distinction between one self
-and another.
+In the material world everyone who comes to enjoy himself or lord it over material nature is envious of
+others. This envy is also found in the personality of the King of heaven, Indra. As evident from revealed
+scriptures, Indra was several times envious of many persons. He was especially envious of great fruitive
+activities and the execution of yoga practices, or siddhis. Indeed, he could not tolerate them, and he
+desired to break them up. He was envious due to fear that those who performed great sacrifices for the
+execution of mystic yoga might occupy his seat. Since no one in this material world can tolerate another's
+advancement, everyone in the material world is called matsara, envious. In the beginning of Srimad-
+Bhagavatam it is therefore said that Srimad-Bhagavatam is meant for those who are completely nirmatsara
+(nonenvious). In other words, one who is not free from the contamination of envy cannot advance in
+Krsna consciousness. In Krsna consciousness, however, if someone excels another person, the devotee
+who is excelled thinks how fortunate the other person is to be advancing in devotional service. Such
+nonenvy is typical of Vaikuntha. However, when one is envious of his competitor, that is material. The
+demigods posted in the material world are not exempt from envy.
 </p>
 
 </div>
@@ -80,7 +124,7 @@ and another.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

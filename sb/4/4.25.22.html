@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,60 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.22.html">4.25.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam krpanaya buddhya
-socantam atad-arhanam
-grahitum krta-dhir enam
-bhaya-namabhyapadyata
-<p></p>
+sunasam sudatim balam
+sukapolam varananam
+sama-vinyasta-karnabhyam
+bibhratim kundala-sriyam
+<br>
 <h2>Synonyms</h2>
-evam--thus; krpanaya--by miserly; buddhya--intelligence; socantam--lamenting; a-tat-arhanam--on
-which he should not have lamented; grahitum--in order to arrest; krta-dhih--the determined King of the
-Yavanas; enam--him; bhaya-nama--whose name was fear; abhyapadyata--came there immediately.
-<p></p>
+su-nasam--very beautiful nose; su-datim--very beautiful teeth; balam--the young woman; su-kapolam--
+nice forehead; vara-ananam--beautiful face; sama--equally; vinyasta--arranged; karnabhyam--both ears;
+bibhratim--dazzling; kundala-sriyam--having beautiful earrings.
+<br>
 <h2>Translation</h2>
-Although King Puranjana should not have lamented over the fate of his wife and children, he
-nonetheless did so due to his miserly intelligence. In the meantime, Yavana-raja, whose name was fear
-itself, immediately drew near to arrest him.
-<p></p>
+The woman's nose, teeth and forehead were all very beautiful. Her ears were equally very beautiful and
+were bedecked with dazzling earrings.
+<br>
 <h2>Purport</h2>
-Foolish people do not know that every individual soul is responsible for his own actions and reactions
-in life. As long as a living entity in the form of a child or boy is innocent, it is the duty of the father and
-mother to lead him into a proper understanding of the values of life. When a child is grown, it should be
-left up to him to execute the duties of life properly. The parent, after his death, cannot help his child. A
-father may leave some estate for his children's immediate help, but he should not be overly absorbed in
-thoughts of how his family will survive after his death. This is the disease of the conditioned soul. Not
-only does he commit sinful activities for his own sense gratification, but he accumulates great wealth to
-leave behind so that his children may also gorgeously arrange for sense gratification.
-In any case, everyone is afraid of death, and therefore death is called bhaya, or fear. Although King
-Puranjana was engaged in thinking of his wife and children, death did not wait for him. Death does not
-wait for any man; it will immediately carry out its duty. Since death must take away the living entity
-without hesitation, it is the ultimate God realization of the atheists, who spoil their lives thinking of
-country, society and relatives, to the neglect of God consciousness. In this verse the word atad-arhanam is
-very significant, for it means that one should not be overly engaged in welfare activities for one's family
-members, countrymen, society and community. None of these will help a person to advance spiritually.
-Unfortunately, in present-day society so-called educated men have no idea what spiritual progress is.
-Although they have the opportunity in the human form of life to make spiritual progress, they remain
-misers. They use their lives improperly and simply waste them thinking about the material welfare of their
-relatives, countrymen, society and so on. One's actual duty is to learn how to conquer death. Lord Krsna
-states the process of conquering death in Bhagavad-gita (4.9):
-janma karma ca me divyam
-evam yo vetti tattvatah
-tyaktva deham punar janma
-naiti mam eti so 'rjuna
-"One who knows the transcendental nature of My appearance and activities does not, upon leaving the
-body, take his birth again in this material world, but attains My eternal abode, O Arjuna."
-After giving up this body, one who is fully Krsna conscious does not accept another material body but
-returns home, back to Godhead. Everyone should try to attain this perfection. Unfortunately, instead of
-doing so, people are absorbed in thoughts of society, friendship, love and relatives. This Krsna
-consciousness movement, however, is educating people throughout the world and informing them how to
-conquer death. Harim vina na srtim taranti. One cannot conquer death without taking shelter of the
-Supreme Personality of Godhead.
+The body of intelligence enjoys the objects of sense gratification that cover it, such as smell, vision and
+hearing. The word sunasam ("beautiful nose") indicates the organ for acquiring knowledge by smell.
+Similarly, the mouth is the instrument for acquiring knowledge by taste, for by chewing an object and
+touching it with the tongue we can understand its taste. The word sukapolam ("nice forehead") indicates
+a clear brain capable of understanding things as they are. By intelligence one can set things in order. The
+earrings set upon the two ears are placed there by the work of the intelligence. Thus the ways of acquiring
+knowledge are described metaphorically.
 </p>
 
 </div>
@@ -104,7 +117,7 @@ Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,57 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.27.html">4.28.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yo naradad atma-vidyam
-adhigamya punar mahim
-bhuktva vibhajya putrebhya
-aisvaram samagat padam
-<p></p>
+ananta-pare tamasi
+magno nasta-smrtih samah
+sasvatir anubhuyartim
+pramada-sanga-dusitah
+<br>
 <h2>Synonyms</h2>
-yah--one who; naradat--from the great sage Narada; atma-vidyam--spiritual knowledge; adhigamya--
-after learning; punah--again; mahim--the earth; bhuktva--after enjoying; vibhajya--after dividing;
-putrebhyah--unto his sons; aisvaram--transcendental; samagat--achieved; padam--position.
-<p></p>
+ananta-pare--unlimitedly expanded; tamasi--in the material existence of darkness; magnah--being
+merged; nasta-smrtih--bereft of all intelligence; samah--for many years; sasvatih--practically eternally;
+anubhuya--experiencing; artim--the threefold miseries; pramada--of women; sanga--by association;
+dusitah--being contaminated.
+<br>
 <h2>Translation</h2>
-Although Maharaja Priyavrata received instructions from the great sage Narada, he still engaged in
-ruling the earth. After fully enjoying material possessions, he divided his property among his sons. He
-then attained a position by which he could return home, back to Godhead.
+Due to his contaminated association with women, a living entity like King Puranjana eternally suffers all
+the pangs of material existence and remains in the dark region of material life, bereft of all remembrance
+for many, many years.
+<br>
+<h2>Purport</h2>
+This is a description of material existence. Material existence is experienced when one becomes attached
+to a woman and forgets his real identity as the eternal servant of Krsna (nasta-smrtih). In this way, in one
+body after another, the living entity perpetually suffers the threefold miseries of material existence. To
+save human civilization from the darkness of ignorance, this movement was started. The main purpose of
+the Krsna consciousness movement is to enlighten the forgetful living entity and remind him of his
+original Krsna consciousness. In this way the living entity can be saved from the catastrophe of ignorance
+as well as bodily transmigration. As Srila Bhaktivinoda Thakura has sung:
+anadi karama-phale, padi' bhavarnava-jale,
+taribare na dekhi upaya
+ei visaya-halahale, diva-nisi hiya jvale,
+mana kabhu sukha nahi paya
+"Because of my past fruitive activities, I have now fallen into an ocean of nescience. I cannot find any
+means to get out of this great ocean, which is indeed like an ocean of poison. We are trying to be happy
+through sense enjoyment, but actually that so-called enjoyment is like food that is too hot and causes
+burning in the heart. I feel a burning sensation constantly, day and night, and thus my mind cannot find
+satisfaction."
+Material existence is always full of anxiety. People are always trying to find many ways to mitigate
+anxiety, but because they are not guided by a real leader, they try to forget material anxiety through drink
+and sex indulgence. Foolish people do not know that by attempting to escape anxiety by drink and sex,
+they simply increase their duration of material life. It is not possible to escape material anxiety in this
+way.
+The word pramada-sanga-dusitah indicates that apart from all other contamination, if one simply
+remains attached to a woman, that single contamination will be sufficient to prolong one's miserable
+material existence. Consequently, in Vedic civilization one is trained from the beginning to give up
+attachment for women. The first stage of life is brahmacari, the second stage grhastha, the third stage
+vanaprastha, and the fourth stage sannyasa. All these stages are devised to enable one to detach himself
+from the association of women.
 </p>
 
 </div>
@@ -70,7 +139,7 @@ then attained a position by which he could return home, back to Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

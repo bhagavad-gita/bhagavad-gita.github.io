@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.1.html">4.22.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 maitreya uvaca
-vijitasvo 'dhirajasit
-prthu-putrah prthu-sravah
-yaviyobhyo 'dadat kastha
-bhratrbhyo bhratr-vatsalah
-<p></p>
+janesu pragrnatsv evam
+prthum prthula-vikramam
+tatropajagmur munayas
+catvarah surya-varcasah
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--Maitreya continued to speak; vijitasvah--of the name Vijitasva; adhiraja--the emperor;
-asit--became; prthu-putrah--the son of Maharaja Prthu; prthu-sravah--of great activities; yaviyobhyah--
-unto the younger brothers; adadat--offered; kasthah--different directions; bhratrbhyah--unto the brothers;
-bhratr-vatsalah--very affectionate to the brothers.
-<p></p>
+maitreyah uvaca--the great sage Maitreya continued to speak; janesu--the citizens; pragrnatsu--while
+praying for; evam--thus; prthum--unto Maharaja Prthu; prthula--highly; vikramam--powerful; tatra--there;
+upajagmuh--arrived; munayah--the Kumaras; catvarah--four; surya--as the sun; varcasah--bright.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued: Vijitasva, the eldest son of Maharaja Prthu, who had a reputation
-like his father's, became emperor and gave his younger brothers different directions of the world to
-govern, for he was very affectionate toward his brothers.
-<p></p>
-<h2>Purport</h2>
-After describing the life and character of Maharaja Prthu in the previous chapter, the great sage Maitreya
-began to speak about the sons and grandsons in the genealogical line of the Prthu dynasty. After the death
-of Maharaja Prthu, his eldest son, Vijitasva, became emperor of the world. King Vijitasva was very
-affectionate toward his younger brothers, and therefore he wanted them to rule different directions of the
-world. From time immemorial the eldest son generally becomes king after the death of the previous king.
-When the Pandavas ruled the earth, Maharaja Yudhisthira, the eldest son of King Pandu, became emperor,
-and his younger brothers assisted him. Similarly, King Vijitasva's younger brothers were appointed to
-govern the different directions of the world.
+The great sage Maitreya said: While the citizens were thus praying to the most powerful King Prthu, the
+four Kumaras, who were as bright as the sun, arrived on the spot.
 </p>
 
 </div>
@@ -82,7 +109,7 @@ govern the different directions of the world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

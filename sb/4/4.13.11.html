@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.11.html">4.13.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nirupitah praja-palah
-sa jighamsati vai prajah
-tathapi santvayemamum
-nasmams tat-patakam sprset
-<p></p>
+matva tam jadam unmattam
+kula-vrddhah samantrinah
+vatsaram bhupatim cakrur
+yaviyamsam bhrameh sutam
+<br>
 <h2>Synonyms</h2>
-nirupitah--appointed; praja-palah--the king; sah--he; jighamsati--desires to harm; vai--certainly; prajah--
-the citizens; tatha api--nevertheless; santvayema--we should pacify; amum--him; na--not; asman--us; tat--
-his; patakam--sinful result; sprset--may touch.
-<p></p>
+matva--thinking; tam--Utkala; jadam--without intelligence; unmattam--mad; kula-vrddhah--the elderly
+members of the family; samantrinah--with the ministers; vatsaram--Vatsara; bhu-patim--ruler of the
+world; cakruh--they made; yaviyamsam--younger; bhrameh--of Bhrami; sutam--son.
+<br>
 <h2>Translation</h2>
-We appointed this Vena king of the state in order to give protection to the citizens, but now he has
-become the enemy of the citizens. Despite all these discrepancies, we should at once try to pacify him. By
-doing so, we may not be touched by the sinful results caused by him.
-<p></p>
+For this reason the ministers and all the elderly members of the family thought Utkala to be without
+intelligence and, in fact, mad. Thus his younger brother, named Vatsara, the son of Bhrami, was elevated
+to the royal throne, and he became king of the world.
+<br>
 <h2>Purport</h2>
-The saintly sages elected King Vena to become king, but he proved to be mischievous; therefore the
-sages were very much afraid of incurring sinful reaction. The law of karma prohibits a person even to
-associate with a mischievous individual. By electing Vena to the throne, the saintly sages certainly
-associated with him. Ultimately King Vena became so mischievous that the saintly sages actually became
-afraid of becoming contaminated by his activities. Thus before taking any action against him, the sages
-tried to pacify and correct him so that he might turn from his mischief.
+It appears that although there was monarchy, it was not at all an autocracy. There were senior family
+members and ministers who could make changes and elect the proper person to the throne, although the
+throne could be occupied only by the royal family. In modern days also, wherever there is monarchy,
+sometimes the ministers and elderly members of the family select one member from the royal family to
+occupy the throne in preference to another.
 </p>
 
 </div>
@@ -78,7 +116,7 @@ tried to pacify and correct him so that he might turn from his mischief.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

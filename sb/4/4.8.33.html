@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.33.html">4.8.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-daivim mayam upasritya
-prasupta iva bhinna-drk
-tapye dvitiye 'py asati
-bhratr-bhratrvya-hrd-ruja
-<p></p>
+yasya yad daiva-vihitam
+sa tena sukha-duhkhayoh
+atmanam tosayan dehi
+tamasah param rcchati
+<br>
 <h2>Synonyms</h2>
-daivim--of the Personality of Godhead; mayam--the illusory energy; upasritya--taking shelter of;
-prasuptah--dreaming while asleep; iva--like; bhinna-drk--having separated vision; tapye--I lamented;
-dvitiye--in the illusory energy; api--although; asati--temporary; bhratr--brother; bhratrvya--enemy; hrt--
-within the heart; ruja--by lamentation.
-<p></p>
+yasya--anyone; yat--that which; daiva--by destiny; vihitam--destined; sah--such a person; tena--by that;
+sukha-duhkhayoh--happiness or distress; atmanam--one's self; tosayan--being satisfied; dehi--an
+embodied soul; tamasah--of the darkness; param--to the other side; rcchati--crosses.
+<br>
 <h2>Translation</h2>
-Dhruva Maharaja lamented: I was under the influence of the illusory energy; being ignorant of the
-actual facts, I was sleeping on her lap. Under a vision of duality, I saw my brother as my enemy, and
-falsely I lamented within my heart, thinking, "They are my enemies."
-<p></p>
+One should try to keep himself satisfied in any condition of life--whether distress or happiness--which is
+offered by the supreme will. A person who endures in this way is able to cross over the darkness of
+nescience very easily.
+<br>
 <h2>Purport</h2>
-Real knowledge is revealed to a devotee only when he comes to the right conclusion about life by the
-grace of the Lord. Our creation of friends and enemies within this material world is something like
-dreaming at night. In dreams we create so many things out of various impressions in the subconscious
-mind, but all such creations are simply temporary and unreal. In the same way, although apparently we
-are awake in material life, because we have no information of the soul and the Supersoul, we create many
-friends and enemies simply out of imagination. Srila Krsnadasa Kaviraja Gosvami says that within this
-material world or material consciousness, good and bad are the same. The distinction between good and
-bad is simply a mental concoction. The actual fact is that all living entities are sons of God, or by-products
-of His marginal energy. Because of our being contaminated by the modes of material nature, we
-distinguish one spiritual spark from another. That is also another kind of dreaming. It is stated in the
-Bhagavad-gita that those who are actually learned do not make any distinction between a learned scholar,
-a brahmana, an elephant, a dog and a candala. They do not see in terms of the external body; rather, they
-see the person as spirit soul. By higher understanding one can know that the material body is nothing but
-a combination of the five material elements. In that sense also the bodily construction of a human being
-and that of a demigod are one and the same. From the spiritual point of view we are all spiritual sparks,
-parts and parcels of the Supreme Spirit, God. Either materially or spiritually we are basically one, but we
-make friends and enemies as dictated by the illusory energy. Dhruva Maharaja therefore said, daivim
-mayam upasritya: the cause of his bewilderment was his association with the illusory, material energy.
+Material existence consists of pious and impious fruitive activities. As long as one is engaged in any kind
+of activity other than devotional service, it will result in the happiness and distress of this material world.
+When we enjoy life in so-called material happiness, it is to be understood that we are diminishing the
+resultant actions of our pious activities. And when we are put into suffering, it is to be understood that we
+are diminishing the resultant actions of our impious activities. Instead of being attached to the
+circumstantial happiness and distress resulting from pious or impious activities, if we want to get out of
+the clutches of this nescience, then whatever position we are put in by the will of the Lord we should
+accept. Thus if we simply surrender unto the Supreme Personality of Godhead, we shall get out of the
+clutches of this material existence.
 </p>
 
 </div>
@@ -91,7 +120,7 @@ mayam upasritya: the cause of his bewilderment was his association with the illu
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

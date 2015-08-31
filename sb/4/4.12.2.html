@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.2.html">4.12.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vidura uvaca
-ke te pracetaso nama
-kasyapatyani suvrata
-kasyanvavaye prakhyatah
-kutra va satram asata
-<p></p>
+dhanada uvaca
+bho bhoh ksatriya-dayada
+paritusto 'smi te 'nagha
+yat tvam pitamahadesad
+vairam dustyajam atyajah
+<br>
 <h2>Synonyms</h2>
-vidurah uvaca--Vidura inquired; ke--who were; te--they; pracetasah--the Pracetas; nama--of the name;
-kasya--whose; apatyani--sons; su-vrata--O Maitreya, who have taken an auspicious vow; kasya--whose;
-anvavaye--in the family; prakhyatah--famous; kutra--where; va--also; satram--the sacrifice; asata--was
-performed.
-<p></p>
+dhana-dah uvaca--the master of the treasury (Kuvera) said; bhoh bhoh--O; ksatriya-dayada--O son of a
+ksatriya; paritustah--very glad; asmi--I am; te--with you; anagha--O sinless one; yat--because; tvam--you;
+pitamaha--of your grandfather; adesat--under the instruction; vairam--enmity; dustyajam--difficult to
+avoid; atyajah--have given up.
+<br>
 <h2>Translation</h2>
-Vidura inquired from Maitreya: O greatly advanced devotee, who were the Pracetas? To which family
-did they belong? Whose sons were they, and where did they perform the great sacrifices?
-<p></p>
-<h2>Purport</h2>
-The great Narada's singing, in the previous chapter, of three verses in the sacrificial arena of the Pracetas
-gave another impetus to Vidura to ask further questions.
+The master of the treasury, Kuvera, said: O sinless son of a ksatriya, I am very glad to know that under
+the instruction of your grandfather you have given up your enmity, although it is very difficult to avoid. I
+am very pleased with you.
 </p>
 
 </div>
@@ -75,7 +111,7 @@ gave another impetus to Vidura to ask further questions.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

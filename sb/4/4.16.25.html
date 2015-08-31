@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.16.25.html">4.16.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-amusam ksut-paritanam
-artanam paridevitam
-samayisyami mad-banair
-bhinnayas tava medasa
-<p></p>
+esa sva-sadmopavane sametya
+sanat-kumaram bhagavantam ekam
+aradhya bhaktyalabhatamalam taj
+jnanam yato brahma param vidanti
+<br>
 <h2>Synonyms</h2>
-amusam--of all of them; ksut-paritanam--suffering from hunger; artanam--of the distressed;
-paridevitam--the lamentation; samayisyami--I shall pacify; mat-banaih--by my arrows; bhinnayah--being
-cut to pieces; tava--of you; medasa--by the flesh.
-<p></p>
+esah--this King; sva-sadma--of his palace; upavane--in the garden; sametya--meeting; sanat-kumaram--
+Sanat-kumara; bhagavantam--the worshipable; ekam--alone; aradhya--worshiping; bhaktya--with
+devotion; alabhata--he will achieve; amalam--without contamination; tat--that; jnanam--transcendental
+knowledge; yatah--by which; brahma--spirit; param--supreme, transcendental; vidanti--they enjoy, they
+know.
+<br>
 <h2>Translation</h2>
-Now, with the help of my arrows, I shall cut you to pieces and with your flesh satisfy the hungerstricken
-citizens, who are now crying for want of grains. Thus I shall satisfy the crying citizens of my
-kingdom.
-<p></p>
+This King Prthu will meet Sanat-kumara, one of the four Kumaras, in the garden of his palace
+compound. The King will worship him with devotion and will be fortunate to receive instructions by
+which one can enjoy transcendental bliss.
+<br>
 <h2>Purport</h2>
-Here we find some indication of how the government can arrange for the eating of cow flesh. It is here
-indicated that in a rare circumstance when there is no supply of grains, the government may sanction the
-eating of meat. However, when there is sufficient food, the government should not allow the eating of
-cow's flesh just to satisfy the fastidious tongue. In other words, in rare circumstances, when people are
-suffering for want of grains, meat-eating or flesh-eating can be allowed, but not otherwise. The
-maintenance of slaughterhouses for the satisfaction of the tongue and the killing of animals unnecessarily
-should never be sanctioned by a government.
-As described in a previous verse, cows and other animals should be given sufficient grass to eat. If
-despite a sufficient supply of grass a cow does not supply milk, and if there is an acute shortage of food,
-the dried-up cow may be utilized to feed the hungry masses of people. According to the law of necessity,
-first of all human society must try to produce food grains and vegetables, but if they fail in this, they can
-indulge in flesh-eating. Otherwise not. As human society is presently structured, there is sufficient
-production of grains all over the world. Therefore the opening of slaughterhouses cannot be supported. In
-some nations there is so much surplus grain that sometimes extra grain is thrown into the sea, and
-sometimes the government forbids further production of grain. The conclusion is that the earth produces
-sufficient grain to feed the entire population, but the distribution of this grain is restricted due to trade
-regulations and a desire for profit. Consequently in some places there is scarcity of grain and in others
-profuse production. If there were one government on the surface of the earth to handle the distribution of
-grain, there would be no question of scarcity, no necessity to open slaughterhouses, and no need to
-present false theories about over-population.
+The word vidanti refers to one who knows something or enjoys something. When a person is properly
+instructed by a spiritual master and understands transcendental bliss, he enjoys life. As stated in
+Bhagavad-gita (18.54), brahma-bhutah prasannatma na socati na kanksati. When one attains to the
+Brahman platform, he neither hankers nor laments. He actually partakes of transcendental, blissful
+enjoyment. Although King Prthu was an incarnation of Visnu, he nonetheless taught the people in his
+kingdom to take instructions from a spiritual master who represents the disciplic succession. Thus one
+can become fortunate and enjoy a blissful life even within this material world. In this verse the verb
+vidanti is sometimes taken to mean "understanding." Thus when a person understands Brahman, or the
+supreme source of everything, he enjoys a blissful life.
 </p>
 
 </div>
@@ -92,7 +122,7 @@ present false theories about over-population.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

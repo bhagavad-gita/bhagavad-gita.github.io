@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.17.21.html">4.17.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yaksa-raksamsi bhutani
-pisacah pisitasanah
-bhutesa-vatsa duduhuh
-kapale ksatajasavam
-<p></p>
+mam vipatyajaram navam
+yatra visvam pratisthitam
+atmanam ca prajas cemah
+katham ambhasi dhasyasi
+<br>
 <h2>Synonyms</h2>
-yaksa--the Yaksas (the descendants of Kuvera); raksamsi--the Raksasas (meat-eaters); bhutani--ghosts;
-pisacah--witches; pisita-asanah--who are all habituated to eating flesh; bhutesa--Lord Siva's incarnation
-Rudra; vatsah--whose calf; duduhuh--milked out; kapale--in a pot of skulls; ksata-ja--blood; asavam--a
-fermented beverage.
-<p></p>
+mam--me; vipatya--breaking to pieces; ajaram--very strong; navam--boat; yatra--where; visvam--all
+worldly paraphernalia; pratisthitam--standing; atmanam--yourself; ca--and; prajah--your subjects; ca--
+also; imah--all these; katham--how; ambhasi--in the water; dhasyasi--you will hold.
+<br>
 <h2>Translation</h2>
-Then the Yaksas, Raksasas, ghosts and witches, who are habituated to eating flesh, transformed Lord
-Siva's incarnation Rudra [Bhutanatha] into a calf and milked out beverages made of blood and put them
-in a pot made of skulls.
-<p></p>
+The cow-shaped earth continued: My dear King, I am just like a strong boat, and all the paraphernalia of
+the world is standing upon me. If you break me to pieces, how can you protect yourself and your subjects
+from drowning?
+<br>
 <h2>Purport</h2>
-There are some types of living entities in the form of human beings whose living conditions and eatables
-are most abominable. Generally they eat flesh and fermented blood, which is mentioned in this verse as
-ksatajasavam. The leaders of such degraded men known as Yaksas, Raksasas, bhutas and pisacas, are all in
-the mode of ignorance. They have been placed under the control of Rudra. Rudra is the incarnation of
-Lord Siva and is in charge of the mode of ignorance in material nature. Another name of Lord Siva is
-Bhutanatha, meaning "master of ghosts." Rudra was born from between Brahma's eyes when Brahma was
-very angry at the four Kumaras.
+Beneath the entire planetary system is the garbha water. Lord Visnu lies on this garbha water, and from
+His abdomen a lotus stem grows, and all the planets within the universe are floating in the air, being
+supported by this lotus stem. If a planet is destroyed, it must fall into the water of garbha. The earth
+therefore warned King Prthu that he could gain nothing by destroying her. Indeed, how would he protect
+himself and his citizens from drowning in the garbha water? In other words, outer space may be
+compared to an ocean of air, and each and every planet is floating on it just as a boat or island floats on
+the ocean. Sometimes planets are called dvipa, or islands, and sometimes they are called boats. Thus the
+cosmic manifestation is partially explained in this reference by the cow-shaped earth.
 </p>
 
 </div>
@@ -80,7 +119,7 @@ very angry at the four Kumaras.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

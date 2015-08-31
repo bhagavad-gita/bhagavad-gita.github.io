@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.7.html">4.25.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-visirnam sva-purim viksya
-pratikulan anadrtan
-putran pautranugamatyan
-jayam ca gata-sauhrdam
-<p></p>
+narada uvaca
+bho bhoh prajapate rajan
+pasun pasya tvayadhvare
+samjnapitan jiva-sanghan
+nirghrnena sahasrasah
+<br>
 <h2>Synonyms</h2>
-visirnam--scattered; sva-purim--his own town; viksya--seeing; pratikulan--opposing elements;
-anadrtan--being disrespectful; putran--sons; pautra--grandsons; anuga--servants; amatyan--ministers;
-jayam--wife; ca--and; gata-sauhrdam--indifferent.
-<p></p>
+naradah uvaca--the great sage Narada replied; bhoh bhoh--hello; praja-pate--O ruler of the citizens;
+rajan--O King; pasun--animals; pasya--please see; tvaya--by you; adhvare--in the sacrifice; samjnapitan--
+killed; jiva-sanghan--groups of animals; nirghrnena--without pity; sahasrasah--in thousands.
+<br>
 <h2>Translation</h2>
-King Puranjana then saw that everything in his town was scattered and that his sons, grandsons,
-servants and ministers were all gradually opposing him. He also noted that his wife was becoming cold
-and indifferent.
-<p></p>
+The great saint Narada said: O ruler of the citizens, my dear King, please see in the sky those animals
+which you have sacrificed without compassion and without mercy in the sacrificial arena.
+<br>
 <h2>Purport</h2>
-When one becomes an invalid, his senses and organs are weakened. In other words, they are no longer
-under one's control. The senses and sense objects then begin to oppose him. When a person is in a
-distressed condition, even his family members--his sons, grandsons and wife--become disrespectful. They
-no longer are under the command of the master of the house. Just as we wish to use our senses for sense
-gratification, the senses also require strength from the body in reciprocation. A man keeps a family for
-enjoyment, and similarly family members demand enjoyment from the head of the family. When they do
-not receive sufficient money from him, they grow disinterested and ignore his commands or desires. This
-is all due to one's being a krpana (miser). This word krpana, used in the sixth verse, is in opposition to
-the word brahmana. In the human form of life one should become a brahmana, which means that one
-should understand the constitutional position of the Absolute Truth, Brahman, and then engage in His
-service as a Vaisnava. We get this facility in the human form of life, but if we do not properly utilize this
-opportunity, we become a krpana, miser. A miser is one who gets money but does not spend it properly.
-This human form of life is especially meant for understanding Brahman, for becoming a brahmana, and if
-we do not utilize it properly, we remain a krpana. We can actually see that when one has money but does
-not spend it, he remains a miser and is never happy. Similarly, when one's intelligence is spoiled due to
-sense gratification, he remains a miser throughout his life.
+Because animal sacrifice is recommended in the Vedas, there are animal sacrifices in almost all religious
+rituals. However, one should not be satisfied simply by killing animals according to the directions of the
+scriptures. One should transcend the ritualistic ceremonies and try to understand the actual truth, the
+purpose of life. Narada Muni wanted to instruct the King about the real purpose of life and invoke a spirit
+of renunciation in his heart. Knowledge and the spirit of renunciation (jnana-vairagya) are the ultimate
+goal of life. Without knowledge, one cannot become detached from material enjoyment, and without
+being detached from material enjoyment, one cannot make spiritual advancement. Karmis are generally
+engaged in sense gratification, and for this end they are prepared to commit so many sinful activities.
+Animal sacrifice is but one such sinful activity. Consequently, by his mystic power Narada Muni showed
+King Pracinabarhisat the dead animals which he had sacrificed.
 </p>
 
 </div>
@@ -88,7 +121,7 @@ sense gratification, he remains a miser throughout his life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

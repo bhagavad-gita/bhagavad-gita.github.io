@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,95 +81,63 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.42.html">4.22.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-namas ta asisam isa
-manave karanatmane
-namo dharmaya brhate
-krsnayakuntha-medhase
-purusaya puranaya
-sankhya-yogesvaraya ca
-<p></p>
+rajovaca
+krto me 'nugrahah purvam
+harinartanukampina
+tam apadayitum brahman
+bhagavan yuyam agatah
+<br>
 <h2>Synonyms</h2>
-namah--offering obeisances; te--unto You; asisam isa--O topmost of all bestowers of benediction;
-manave--unto the supreme mind or supreme Manu; karana-atmane--the supreme cause of all causes;
-namah--offering obeisances; dharmaya--unto one who knows the best of all religion; brhate--the greatest;
-krsnaya--unto Krsna; akuntha-medhase--unto one whose brain activity is never checked; purusaya--the
-Supreme Person; puranaya--the oldest of the old; sankhya-yoga-isvaraya--the master of the principles of
-sankhya-yoga; ca--and.
-<p></p>
+raja uvaca--the King said; krtah--done; me--unto me; anugrahah--causeless mercy; purvam--formerly;
+harina--by the Supreme Personality of Godhead, Lord Visnu; arta-anukampina--compassionate for
+persons in distress; tam--that; apadayitum--to confirm it; brahman--O brahmana; bhagavan--O powerful
+one; yuyam--all of you; agatah--have arrived here.
+<br>
 <h2>Translation</h2>
-My dear Lord, You are the topmost of all bestowers of all benediction, the oldest and supreme enjoyer
-amongst all enjoyers. You are the master of all the worlds' metaphysical philosophy, for You are the
-supreme cause of all causes, Lord Krsna. You are the greatest of all religious principles, the supreme mind,
-and You have a brain which is never checked by any condition. Therefore I repeatedly offer my obeisances
-unto You.
-<p></p>
+The King said: O brahmana, O powerful one, formerly Lord Visnu showed me His causeless mercy,
+indicating that you would come to my house, and to confirm that blessing, you have all come.
+<br>
 <h2>Purport</h2>
-The words krsnaya akuntha-medhase are significant in this verse. Modern scientists have stopped their
-brainwork by discovering the theory of uncertainty, but factually for a living being there cannot be any
-brain activity which is not checked by time and space limitations. A living entity is called anu, an atomic
-particle of the supreme soul, and therefore his brain is also atomic. It cannot accommodate unlimited
-knowledge. This does not mean, however, that the Supreme Personality of Godhead, Krsna, has a limited
-brain. What Krsna says and does is not limited by time and space. In Bhagavad-gita (7.26) the Lord says:
-vedaham samatitani
-vartamanani carjuna
-bhavisyani ca bhutani
-mam tu veda na kascana
-"O Arjuna, as the Supreme Personality of Godhead, I know everything that has happened in the past, all
-that is happening in the present, and all things that are yet to come. I also know all living entities; but Me
-no one knows."
-Krsna knows everything, but one cannot know Krsna without being favored by Him. Thus for Krsna
-and His representative there is no question of a theory of uncertainty. What Krsna says is all perfect and
-certain and is applicable to the past, present and future. Nor is there any uncertainty for one who knows
-exactly what Krsna says. The Krsna consciousness movement is based on Bhagavad-gita as it is, as spoken
-by Lord Krsna, and for those who are engaged in this movement, there is no question of uncertainty.
-Lord Krsna is also addressed herein as asisam isa. The great saintly personalities, sages and demigods are
-able to offer benedictions to ordinary living entities, but they in turn are benedicted by the Supreme
-Personality of Godhead. Without being benedicted by Krsna, one cannot offer benediction to anyone else.
-The word manave, meaning "unto the supreme Manu," is also significant. The supreme Manu in Vedic
-literature is Svayambhuva Manu, who is an incarnation of Krsna. All the Manus are empowered
-incarnations of Krsna (manvantara-avatara). There are fourteen Manus in one day of Brahma, 420 in one
-month, all the Manus are directors of human society, ultimately Krsna is the supreme director of human
-society. In another sense, the word manave indicates the perfection of all kinds of mantras. The mantra
-delivers the conditioned soul from his bondage; so simply by chanting the mantra Hare Krsna, Hare
-Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare, one can gain deliverance
-from any condition.
-Karanatmane: everything has a cause. The theory of chance is repudiated in this verse. Because
-everything has its cause, there is no question of chance. Because so-called philosophers and scientists are
-unable to find the real cause, they foolishly say that everything happens by chance. In Brahma-samhita
-Krsna is described as the cause of all causes; therefore He is addressed herein as karanatmane. His very
-personality is the original cause of everything, the root of everything and the seed of everything. As
-described in the Vedanta-sutra (1.1.2), janmady asya yatah: the Absolute Truth is the supreme cause of all
-emanations.
-The word sankhya-yogesvaraya is also significant herein, for Krsna is described in Bhagavad-gita as
-Yogesvara, the master of all mystic powers. Without possessing inconceivable mystic powers, one cannot
-be accepted as God. In this age of Kali, those who have a little fragmental portion of mystic power claim
-to be God, but such pseudo Gods can only be accepted as fools, for only Krsna is the Supreme Person who
-possesses all mystic and yogic perfections. The sankhya-yoga system popular at the present moment was
-propounded by the atheist Kapila, but the original sankhya-yoga system was propounded by an
-incarnation of Krsna also named Kapila, the son of Devahuti. Similarly, Dattatreya, another incarnation of
-Krsna, also explained the sankhya-yoga system. Thus Krsna is the origin of all sankhya-yoga systems and
-mystic yoga powers.
-The words purusaya puranaya are also worthy of special attention. In Brahma-samhita, Krsna is
-accepted as the adi-purusa, the original person, or the original enjoyer. In Bhagavad-gita, Lord Krsna is
-also accepted as purana-purusa, the oldest person. Although He is the oldest of all personalities, He is also
-the youngest of all, or nava-yauvana. Another significant word is dharmaya. Since Krsna is the original
-propounder of all kinds of religious principles, it is said: dharmam tu saksad bhagavat-pranitam (Bhag.
-6.3.19). No one can introduce a new type of religion, for religion is already there, having been established
-by Lord Krsna. In Bhagavad-gita Krsna informs us of the original dharma and asks us to give up all kinds
-of religious principles. The real dharma is surrender unto Him. In the Mahabharata, it is also said:
-ye ca veda-vido vipra
-ye cadhyatma-vido janah
-te vadanti mahatmanam
-krsnam dharmam sanatanam
-The purport is that one who has studied the Vedas perfectly, who is a perfect vipra, or knower of the
-Vedas, who knows what spiritual life actually is, speaks about Krsna, the Supreme Person, as one's
-sanatana-dharma. Lord Siva therefore teaches us the principles of sanatana-dharma.
+When Lord Visnu appeared in the great arena of sacrifice at the time when King Prthu was performing a
+great sacrifice (asvamedha), He predicted that the Kumaras would very soon come and advise the King.
+Therefore Prthu Maharaja remembered the causeless mercy of the Lord and thus welcomed the arrival of
+the Kumaras, who were fulfilling the Lord's prediction. In other words, when the Lord makes a
+prediction, He fulfills that prediction through some of His devotees. Similarly, Lord Caitanya Mahaprabhu
+predicted that both His glorious names and the Hare Krsna maha-mantra would be broadcast in all the
+towns and villages of the world. Srila Bhaktivinoda Thakura and Srila Bhaktisiddhanta Sarasvati
+Prabhupada desired to fulfill this great prediction, and we are following in their footsteps.
+Regarding His devotees, Lord Krsna told Arjuna, kaunteya pratijanihi na me bhaktah pranasyati: "O son
+of Kunti, declare it boldly that My devotee will never perish." (Bg. 9.31) The point is that the Lord
+Himself could declare such things, but it was His desire to make the declaration through Arjuna and thus
+doubly assure that His promise would never be broken. The Lord Himself promises, and His confidential
+devotees execute the promise. The Lord makes so many promises for the benefit of suffering humanity.
+Although the Lord is very compassionate upon suffering humanity, human beings are generally not very
+anxious to serve Him. The relationship is something like that between the father and the son; the father is
+always anxious for the welfare of the son, even though the son forgets or neglects the father. The word
+anukampina is significant; the Lord is so compassionate upon the living entities that He comes Himself
+into this world in order to benefit fallen souls.
+yada yada hi dharmasya
+glanir bhavati bharata
+abhyutthanam adharmasya
+tadatmanam srjamy aham
+"Whenever and wherever there is a decline in religious practice, O descendant of Bharata, and a
+predominant rise of irreligion--at that time I descend Myself." (Bg. 4.7)
+Thus it is out of compassion that the Lord appears in His different forms. Lord Sri Krsna appeared on
+this planet out of compassion for fallen souls; Lord Buddha appeared out of compassion for the poor
+animals who were being killed by the demons; Lord Nrsimhadeva appeared out of compassion for
+Prahlada Maharaja. The conclusion is that the Lord is so compassionate upon the fallen souls within this
+material world that He comes Himself or sends His devotees and His servants to fulfill His desire to have
+all the fallen souls come back home, back to Godhead. Thus Lord Sri Krsna instructed Bhagavad-gita to
+Arjuna for the benefit of the entire human society. Intelligent men should therefore seriously consider this
+Krsna consciousness movement and fully utilize the instructions of Bhagavad-gita as preached without
+adulteration by His pure devotees.
 </p>
 
 </div>
@@ -139,7 +145,7 @@ sanatana-dharma. Lord Siva therefore teaches us the principles of sanatana-dharm
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,57 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.46.html">4.21.46</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.46</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/46"><b>46</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-svam eva brahmano bhunkte
-svam vaste svam dadati ca
-tasyaivanugrahenannam
-bhunjate ksatriyadayah
-<p></p>
+putrena jayate lokan
+iti satyavati srutih
+brahma-danda-hatah papo
+yad veno 'tyatarat tamah
+<br>
 <h2>Synonyms</h2>
-svam--own; eva--certainly; brahmanah--the brahmana; bhunkte--enjoy; svam--own; vaste--clothing;
-svam--own; dadati--gives in charity; ca--and; tasya--his; eva--certainly; anugrahena--by the mercy of;
-annam--food grains; bhunjate--eats; ksatriya-adayah--other divisions of society, headed by the ksatriyas.
-<p></p>
+putrena--by the son; jayate--one becomes victorious; lokan--all the heavenly planets; iti--thus; satyavati--
+becomes true; srutih--the Vedas; brahma-danda--by the curse of brahmanas; hatah--killed; papah--
+the most sinful; yat--as; venah--the father of Maharaja Prthu; ati--great; atarat--became delivered; tamah--
+from the darkness of hellish life.
+<br>
 <h2>Translation</h2>
-The ksatriyas, vaisyas and sudras eat their food by virtue of the brahmanas' mercy. It is the brahmanas
-who enjoy their own property, clothe themselves with their own property and give charity with their own
-property.
-<p></p>
+They all declared that the Vedic conclusion that one can conquer the heavenly planets by the action of a
+putra, or son, was fulfilled, for the most sinful Vena, who had been killed by the curse of the brahmanas,
+was now delivered from the darkest region of hellish life by his son, Maharaja Prthu.
+<br>
 <h2>Purport</h2>
-The Supreme Personality of Godhead is worshiped with the words namo brahmanya-devaya, which
-indicate that the Supreme Lord accepts the brahmanas as worshipable gods. The Supreme Lord is
-worshiped by everyone, yet to teach others He worships the brahmanas. Everyone should follow the
-instructions of the brahmanas, for their only business is to spread sabda-brahma, or Vedic knowledge, all
-over the world. Whenever there is a scarcity of brahmanas to spread Vedic knowledge, chaos throughout
-human society results. Since brahmanas and Vaisnavas are direct servants of the Supreme Personality of
-Godhead, they do not depend on others. In actuality, everything in the world belongs to the brahmanas,
-and out of their humility the brahmanas accept charity from the ksatriyas, or kings, and the vaisyas, or
-merchants. Everything belongs to the brahmanas, but the ksatriya government and the mercantile people
-keep everything in custody, like bankers, and whenever the brahmanas need money, the ksatriyas and
-vaisyas should supply it. It is like a savings account with money which the depositor can draw out at his
-will. The brahmanas, being engaged in the service of the Lord, have very little time to handle the finances
-of the world, and therefore the riches are kept by the ksatriyas, or the kings, who are to produce money
-upon the brahmanas' demand. Actually the brahmanas or Vaisnavas do not live at others' cost; they live by
-spending their own money, although it appears that they are collecting this money from others. Ksatriyas
-and vaisyas have no right to give charity, for whatever they possess belongs to the brahmanas. Therefore
-charity should be given by the ksatriyas and vaisyas under the instructions of the brahmanas.
-Unfortunately at the present moment there is a scarcity of brahmanas, and since the so-called ksatriyas
-and vaisyas do not carry out the orders of the brahmanas, the world is in a chaotic condition.
-The second line of this verse indicates that the ksatriyas, vaisyas and sudras eat only by virtue of the
-brahmana's mercy; in other words, they should not eat anything which is forbidden by the brahmanas.
-The brahmanas and Vaisnavas know what to eat, and by their personal example they do not eat anything
-which is not offered first to the Supreme Personality of Godhead. They eat only prasada, or remnants of
-the food offered to the Lord. The ksatriyas, vaisyas and sudras should eat only krsna-prasada, which is
-afforded them by the mercy of the brahmanas. They cannot open slaughterhouses and eat meat, fish or
-eggs or drink liquor, or earn money for this purpose without authorization. In the present age, because
-society is not guided by brahminical instruction, the whole population is only absorbed in sinful activities.
-Consequently, everyone is deservedly being punished by the laws of nature. This is the situation in this
-age of Kali.
+According to the Vedic version, there is a hellish planet called Put, and one who delivers a person from
+there is called putra. The purpose of marriage, therefore, is to have a putra, or son who is able to deliver
+his father, even if the father falls down to the hellish condition of put. Maharaja Prthu's father, Vena, was
+a most sinful person and was therefore cursed to death by the brahmanas. Now all the great saintly
+persons, sages and brahmanas present in the meeting, after hearing from Maharaja Prthu about his great
+mission in life, became convinced that the statement of the Vedas had been fully proved. The purpose of
+accepting a wife in religious marriage, as sanctioned in the Vedas, is to have a putra, a son qualified to
+deliver his father from the darkest region of hellish life. Marriage is not intended for sense gratification
+but for getting a son fully qualified to deliver his father. But if a son is raised to become an unqualified
+demon, how can he deliver his father from hellish life? It is therefore the duty of a father to become a
+Vaisnava and raise his children to become Vaisnavas; then even if by chance the father falls into a hellish
+life in his next birth, such a son can deliver him, as Maharaja Prthu delivered his father.
 </p>
 
 </div>
@@ -101,7 +124,7 @@ age of Kali.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

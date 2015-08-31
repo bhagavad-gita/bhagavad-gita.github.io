@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,73 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.16.html">4.22.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vidura uvaca
-pracetasam giritrena
-yathasit pathi sangamah
-yad utaha harah pritas
-tan no brahman vadarthavat
-<p></p>
+vyaktam atmavatam atma
+bhagavan atma-bhavanah
+svanam anugrahayemam
+siddha-rupi caraty ajah
+<br>
 <h2>Synonyms</h2>
-vidurah uvaca--Vidura inquired; pracetasam--of all the Pracetas; giritrena--by Lord Siva; yatha--just as;
-asit--it was; pathi--on the road; sangamah--meeting; yat--which; uta aha--said; harah--Lord Siva; pritah--
-being pleased; tat--that; nah--unto us; brahman--O great brahmana; vada--speak; artha-vat--with clear
-meaning.
-<p></p>
+vyaktam--clear; atma-vatam--of the transcendentalists; atma--the goal of life; bhagavan--the Supreme
+Personality of Godhead; atma-bhavanah--always wishing to elevate the living entities; svanam--whose
+own devotees; anugrahaya--just to show mercy; imam--this way; siddha-rupi--perfectly self-realized;
+carati--travels; ajah--Narayana.
+<br>
 <h2>Translation</h2>
-Vidura asked Maitreya: My dear brahmana, why did the Pracetas meet Lord Siva on the way? Please tell
-me how the meeting happened, how Lord Siva became very pleased with them and how he instructed
-them. Certainly such talks are important, and I wish that you please be merciful upon me and describe
-them.
-<p></p>
+The Supreme Personality of Godhead is always anxious to elevate the living entities, who are His parts
+and parcels, and for their special benefit, the Lord travels all over the world in the form of self-realized
+persons like you.
+<br>
 <h2>Purport</h2>
-Whenever there are some important talks between a devotee and the Lord or between exalted devotees,
-one should be very much curious to hear them. At the meeting of Naimisaranya, where Suta Gosvami
-spoke Srimad-Bhagavatam to all the great sages, Suta Gosvami was also asked about the talks between
-Maharaja Pariksit and Sukadeva Gosvami, for the sages believed that the talks between Sukadeva Gosvami
-and Maharaja Pariksit must have been as important as the talks between Lord Krsna and Arjuna. As
-everyone is still eager to learn the subject of Bhagavad-gita in order to become perfectly enlightened,
-Vidura was similarly eager to learn from the great sage Maitreya about the talks between Lord Siva and the
-Pracetas.
+There are different kinds of transcendentalists, namely the jnanis, or impersonalists, the mystic yogis
+and, of course, all the devotees of the Supreme Personality of Godhead. The Kumaras, however, were both
+yogis and jnanis and finally bhaktas later on. In the beginning they were impersonalists, but later they
+developed devotional activities; therefore they are the best of the transcendentalists. The devotees are
+representatives of the Supreme Personality of Godhead, and to elevate the conditioned souls to their
+original consciousness, they travel all over the universes to enlighten the conditioned souls about Krsna
+consciousness. The best devotees are atmavat, or those who have fully realized the Supreme Soul. The
+Supreme personality of Godhead, as Paramatma, is sitting within everyone's heart, trying to elevate
+everyone to the platform of Krsna consciousness. Therefore He is called atma-bhavana. The Supreme
+Personality of Godhead is always trying to give the individual soul the intelligence to understand about
+Himself. He is always with the individual as a friend sitting by the side of a friend, and He gives facilities
+to all living entities according to their desires.
+The word atmavatam is significant in this verse. There are three different kinds of devotees, namely
+kanistha-adhikari, madhyama-adhikari and uttama-adhikari: the neophyte, the preacher and the mahabhagavata,
+or the highly advanced devotee. The highly advanced devotee is one who knows the
+conclusion of the Vedas in full knowledge; thus he becomes a devotee. Indeed, not only is he convinced
+himself, but he can convince others on the strength of Vedic evidence. The advanced devotee can also see
+all other living entities as part and parcel of the Supreme Lord, without discrimination. The madhyamaadhikari
+(preacher) is also well versed in the sastras and can convince others also, but he discriminates
+between the favorable and the unfavorable. In other words, the madhyama-adhikari does not care for the
+demoniac living entities, and the neophyte kanistha-adhikari does not know much about sastra but has
+full faith in the Supreme Personality of Godhead. The Kumaras, however, were maha-bhagavatas because
+after scrutinizingly studying the Absolute Truth, they became devotees. In other words, they were in full
+knowledge of the Vedic conclusion. In the Bhagavad-gita it is confirmed by the Lord that there are many
+devotees, but a devotee who is fully conversant in the Vedic conclusion is very dear to Him. Everyone is
+trying to elevate himself to the highest position according to his mentality. The karmis, who have a bodily
+concept of life, try to enjoy sense gratification to the utmost. The jnanis' idea of the highest position is
+merging into the effulgence of the Lord. But a devotee's highest position is in preaching all over the world
+the glories of the Supreme Personality of Godhead. Therefore the devotees are actually the representatives
+of the Supreme Lord, and as such they travel all over the world directly as Narayana because they carry
+Narayana within their hearts and preach His glories. The representative of Narayana is as good as
+Narayana, but he is not to conclude, like the Mayavadis, that he has become Narayana. Generally, a
+sannyasi is addressed as Narayana by the Mayavadis. Their idea is that simply by taking sannyasa one
+becomes equal to Narayana or becomes Narayana Himself. The Vaisnava conclusion is different, as stated
+by Srila Visvanatha Cakravarti Thakura:
+saksad-dharitvena samasta-sastrair
+uktas tatha bhavyata eva sadbhih
+kinto prabhor yah priya eva tasya
+vande guroh sri-caranaravindam
+According to the Vaisnava philosophy, a devotee is as good as Narayana not by becoming Narayana but
+by becoming the most confidential servant of Narayana. Such great personalities act as spiritual masters
+for the benefit of the people in general, and as such, a spiritual master who is preaching the glories of
+Narayana should be accepted as Narayana and be given all respects due Him.
 </p>
 
 </div>
@@ -83,7 +155,7 @@ Pracetas.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

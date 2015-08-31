@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.28.html">4.18.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vayam marutvantam ihartha-nasanam
-hvayamahe tvac-chravasa hata-tvisam
-ayatayamopahavair anantaram
-prasahya rajan juhavama te 'hitam
-<p></p>
+tato mahipatih pritah
+sarva-kama-dugham prthuh
+duhitrtve cakaremam
+premna duhitr-vatsalah
+<br>
 <h2>Synonyms</h2>
-vayam--we; marut-vantam--King Indra; iha--here; artha--of your interest; nasanam--the destroyer;
-hvayamahe--we shall call; tvat-sravasa--by your glory; hata-tvisam--already bereft of his power;
-ayatayama--never before used; upahavaih--by mantras of invocation; anantaram--without delay;
-prasahya--by force; rajan--O King; juhavama--we shall sacrifice in the fire; te--your; ahitam--enemy.
-<p></p>
+tatah--thereafter; mahi-patih--the King; pritah--being pleased; sarva-kama--all desirables; dugham--
+producing as milk; prthuh--King Prthu; duhitrtve--treating as his daughter; cakara--did; imam--unto the
+planet earth; premna--out of affection; duhitr-vatsalah--affectionate to his daughter.
+<br>
 <h2>Translation</h2>
-Dear King, Indra's powers are already reduced due to his attempt to impede the execution of your
-sacrifice. We shall call him by Vedic mantras which were never before used, and certainly he will come.
-Thus by the power of our mantra, we shall cast him into the fire because he is your enemy.
-<p></p>
-<h2>Purport</h2>
-By chanting the Vedic mantras properly in a sacrifice, one can perform many wonderful things. In Kaliyuga,
-however, there are no qualified brahmanas who can chant the mantras properly. Consequently no
-attempt should be made to perform such big sacrifices. In this age the only sacrifice recommended is the
-sankirtana movement.
+Thereafter King Prthu was very satisfied with the planet earth, for she sufficiently supplied all food to
+various living entities. Thus he developed an affection for the planet earth, just as if she were his own
+daughter.
 </p>
 
 </div>
@@ -77,7 +109,7 @@ sankirtana movement.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

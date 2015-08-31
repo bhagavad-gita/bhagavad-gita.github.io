@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.34.html">4.12.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tams tan kaman harir dadyad
-yan yan kamayate janah
-aradhito yathaivaisa
-tatha pumsam phalodayah
-<p></p>
+tatra tatra prasamsadbhih
+pathi vaimanikaih suraih
+avakiryamano dadrse
+kusumaih kramaso grahan
+<br>
 <h2>Synonyms</h2>
-tan tan--those; kaman--desired objects; harih--the Lord; dadyat--will award; yan yan--whatsoever;
-kamayate--desires; janah--the person; aradhitah--being worshiped; yatha--as; eva--certainly; esah--the
-Lord; tatha--similarly; pumsam--of men; phala-udayah--the result.
-<p></p>
+tatra tatra--here and there; prasamsadbhih--by persons engaged in the praise of Dhruva Maharaja;
+pathi--on the path; vaimanikaih--carried by different types of airplanes; suraih--by the demigods;
+avakiryamanah--being covered; dadrse--could see; kusumaih--by flowers; kramasah--one after another;
+grahan--all the planets of the solar system.
+<br>
 <h2>Translation</h2>
-The performer of the sacrifices [under karma-kanda activities] achieves the fulfillment of the desire for
-which he worships the Lord.
-<p></p>
+While Dhruva Maharaja was passing through space, he gradually saw all the planets of the solar system,
+and on the path he saw all the demigods in their airplanes showering flowers upon him like rain.
+<br>
 <h2>Purport</h2>
-In the Bhagavad-gita the Lord says that He awards benedictions to the worshiper according to his desire.
-The Supreme Personality of Godhead gives all living entities conditioned within this material world full
-freedom to act in their own way. But to His devotee He says that instead of working in that way, it is
-better to surrender unto Him, for He will take charge of the devotee. That is the difference between a
-devotee and a fruitive actor. The fruitive actor enjoys only the fruits of his own activities, but a devotee,
-being under the guidance of the Supreme Lord, simply advances in devotional service to achieve the
-ultimate goal of life--to go back home, back to Godhead. The significant word in this verse is kaman,
-which means "sense gratificatory desires." A devotee is devoid of all kaman. He is anyabhilasita-sunya: a
-devotee is always devoid of all desires for sense gratification. His only aim is to satisfy or gratify the senses
-of the Lord. That is the difference between a karmi and a devotee.
+There is a Vedic version, yasmin vijnate sarvam evam vijnatam bhavati, which means that by knowing
+the Supreme Personality of Godhead, everything becomes known to the devotee. Similarly, by going to
+the planet of the Supreme Personality of Godhead, one can know all the other planetary systems on the
+path to Vaikuntha. We should remember that Dhruva Maharaja's body was different from our bodies.
+While boarding the Vaikuntha airplane, his body changed to a completely spiritual golden hue. No one
+can surpass the higher planets in a material body, but when one gets a spiritual body he can travel not
+only to the higher planetary system of this material world, but even to the still higher planetary system
+known as Vaikunthaloka. It is well known that Narada Muni travels everywhere, both in the spiritual and
+material worlds.
+It should be noted also that while Suniti was going to Vaikunthaloka she also changed her body into
+spiritual form. Like Sri Suniti, every mother should train her child to become a devotee like Dhruva
+Maharaja. Suniti instructed her son, even at the age of five years, to be unattached to worldly affairs and to
+go to the forest to search out the Supreme Lord. She never desired that her son remain at home
+comfortably without ever undertaking austerities and penances to achieve the favor of the Supreme
+Personality of Godhead. Every mother, like Suniti, must take care of her son and train him to become a
+brahmacari from the age of five years and to undergo austerities and penances for spiritual realization.
+The benefit will be that if her son becomes a strong devotee like Dhruva, certainly not only will he be
+transferred back home, back to Godhead, but she will also be transferred with him to the spiritual world,
+even though she may be unable to undergo austerities and penances in executing devotional service.
 </p>
 
 </div>
@@ -81,7 +130,7 @@ of the Lord. That is the difference between a karmi and a devotee.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

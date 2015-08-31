@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.4.html">4.22.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pavakah pavamanas ca
-sucir ity agnayah pura
-vasistha-sapad utpannah
-punar yoga-gatim gatah
-<p></p>
+gauravad yantritah sabhyah
+prasrayanata-kandharah
+vidhivat pujayam cakre
+grhitadhyarhanasanan
+<br>
 <h2>Synonyms</h2>
-pavakah--of the name Pavaka; pavamanah--of the name Pavamana; ca--also; sucih--of the name Suci;
-iti--thus; agnayah--the fire-gods; pura--formerly; vasistha--the great sage Vasistha; sapat--by being cursed;
-utpannah--now born as such; punah--again; yoga-gatim--the destination of mystic yoga practice; gatah--
-attained.
-<p></p>
+gauravat--glories; yantritah--completely; sabhyah--most civilized; prasraya--by humbleness; anatakandharah--
+bowing down his shoulder; vidhi-vat--according to the instructions of the sastra; pujayam--by
+worshiping; cakre--performed; grhita--accepting; adhi--including; arhana--paraphernalia for reception;
+asanan--sitting places.
+<br>
 <h2>Translation</h2>
-The three sons of Maharaja Antardhana were named Pavaka, Pavamana and Suci. Formerly these three
-personalities were the demigods of fire, but due to the curse of the great sage Vasistha, they became the
-sons of Maharaja Antardhana. As such, they were as powerful as the fire-gods, and they attained the
-destination of mystic yoga power, being again situated as the demigods of fire.
-<p></p>
+When the great sages accepted their reception, according to the instructions of the sastras, and finally
+took their seats offered by the King, the King, influenced by the glories of the sages, immediately bowed
+down. Thus he worshiped the four Kumaras.
+<br>
 <h2>Purport</h2>
-In the Bhagavad-gita (6.41-43) it is stated that one who falls down from yoga practice is elevated to the
-heavenly planets, and after enjoying the material facilities there he again comes down to the earthly planet
-and takes birth in a very rich family or a very pious brahmana family. Thus it is to be understood that
-when demigods fall down, they come to earth as sons of very rich and pious families. In such families, the
-living entity gets an opportunity to execute Krsna consciousness and thereby gain promotion to his
-desired goal. The sons of Maharaja Antardhana had been the demigods in charge of fire, and they regained
-their former position and by mystic power returned to the heavenly planets.
+The four Kumaras are parampara spiritual masters of the Vaisnava sampradaya. Out of the four
+sampradayas, namely Brahma-sampradaya, Sri-sampradaya, Kumara-sampradaya and Rudra-sampradaya,
+the disciplic succession of spiritual master to disciple known as the Kumara-sampradaya is coming down
+from the four Kumaras. So Prthu Maharaja was very respectful to the sampradaya-acaryas. As it is said by
+Srila Visvanatha Cakravarti Thakura, saksad-dharitvena samasta-sastraih: a spiritual master, or the
+parampara-acarya, should be respected exactly like the Supreme Personality of Godhead. The word
+vidhivat is significant in this verse. This means that Prthu Maharaja also strictly followed the injunctions
+of the sastra in receiving a spiritual master, or acarya, of the transcendental disciplic succession.
+Whenever an acarya is seen, one should immediately bow down before him. Prthu Maharaja did this
+properly; therefore the words used here are prasrayanata-kandharah. Out of humility, he bowed down
+before the Kumaras.
 </p>
 
 </div>
@@ -81,7 +123,7 @@ their former position and by mystic power returned to the heavenly planets.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

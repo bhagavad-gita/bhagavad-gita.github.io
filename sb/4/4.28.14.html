@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.14.html">4.28.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatha taror mula-nisecanena
-trpyanti tat-skandha-bhujopasakhah
-pranopaharac ca yathendriyanam
-tathaiva sarvarhanam acyutejya
-<p></p>
+na seke so 'vitum tatra
+puru-krcchroru-vepathuh
+gantum aicchat tato vrksakotarad
+iva sanalat
+<br>
 <h2>Synonyms</h2>
-yatha--as; taroh--of a tree; mula--the root; nisecanena--by watering; trpyanti--are satisfied; tat--its;
-skandha--trunk; bhuja--branches; upasakhah--and twigs; prana--the life air; upaharat--by feeding; ca--and;
-yatha--as; indriyanam--of the senses; tatha eva--similarly; sarva--of all demigods; arhanam--worship;
-acyuta--of the Supreme Personality of Godhead; ijya--worship.
-<p></p>
+na--not; seke--was able; sah--he; avitum--to protect; tatra--there; puru--very much; krcchra--difficulty;
+uru--great; vepathuh--suffering; gantum--to go out; aicchat--desired; tatah--from there; vrksa--of a tree;
+kotarat--from the hollow; iva--like; sa-analat--on fire.
+<br>
 <h2>Translation</h2>
-As pouring water on the root of a tree energizes the trunk, branches, twigs and everything else, and as
-supplying food to the stomach enlivens the senses and limbs of the body, simply worshiping the Supreme
-Personality of Godhead through devotional service automatically satisfies the demigods, who are parts of
-that Supreme Personality.
-<p></p>
+As a serpent living within the cavity of a tree wishes to leave when there is a forest fire, so the city's
+police superintendent, the snake, wished to leave the city due to the fire's severe heat.
+<br>
 <h2>Purport</h2>
-Sometimes people ask why this Krsna consciousness movement simply advocates worship of Krsna to
-the exclusion of the demigods. The answer is given in this verse. The example of pouring water on the
-root of a tree is very appropriate. In Bhagavad-gita (15.1) it is said, urdhva-mulam adhah-sakham: this
-cosmic manifestation has expanded downward, and the root is the Supreme Personality of Godhead. As
-the Lord confirms in Bhagavad-gita (10.8), aham sarvasya prabhavah: "I am the source of all spiritual and
-material worlds." Krsna is the root of everything; therefore rendering service to the Supreme Personality
-of Godhead, Krsna (krsna-seva), means automatically serving all the demigods. Sometimes it is argued
-that karma and jnana require a mixture of bhakti in order to be successfully executed, and sometimes it is
-argued that bhakti also requires karma and jnana for its successful termination. The fact is, however, that
-although karma and jnana cannot be successful without bhakti, bhakti does not require the help of karma
-and jnana. Actually, as described by Srila Rupa Gosvami, anyabhilasita-sunyam jnana-karmady-anavrtam:
-pure devotional service should not be contaminated by the touch of karma and jnana. Modern society is
-involved in various types of philanthropic works, humanitarian works and so on, but people do not know
-that these activities will never be successful unless Krsna, the Supreme Personality of Godhead, is brought
-into the center. One may ask what harm there is in worshiping Krsna and the different parts of His body,
-the demigods, and the answer is also given in this verse. The point is that by supplying food to the
-stomach, the indriyas, the senses, are automatically satisfied. If one tries to feed his eyes or ears
-independently, the result is only havoc. Simply by supplying food to the stomach, we satisfy all of the
-senses. It is neither necessary nor feasible to render separate service to the individual senses. The
-conclusion is that by serving Krsna (krsna-seva), everything is complete. As confirmed in Caitanyacaritamrta
-(Madhya 22.62), krsne bhakti kaile sarva-karma krta haya: if one is engaged in the devotional
-service of the Lord, the Supreme Personality of Godhead, everything is automatically accomplished.
+It becomes very difficult for snakes to leave a forest when there is a fire. Other animals may flee due to
+their long legs, but serpents, only being able to crawl, are generally burnt in the fire. At the last stage, the
+limbs of the body are not as much affected as the life air.
 </p>
 
 </div>
@@ -96,7 +113,7 @@ service of the Lord, the Supreme Personality of Godhead, everything is automatic
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

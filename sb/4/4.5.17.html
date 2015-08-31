@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.17.html">4.5.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-panasodumbarasvatthaplaksa-
-nyagrodha-hingubhih
-bhurjair osadhibhih pugai
-rajapugais ca jambubhih
-<p></p>
+bhrgum babandha maniman
+virabhadrah prajapatim
+candesah pusanam devam
+bhagam nandisvaro 'grahit
+<br>
 <h2>Synonyms</h2>
-panasa-udumbara-asvattha-plaksa-nyagrodha-hingubhih--with panasas (jackfruit trees), udumbaras,
-asvatthas, plaksas, nyagrodhas and trees producing asafetida; bhurjaih--with bhurjas; osadhibhih--with
-betel nut trees; pugaih--with pugas; rajapugaih--with rajapugas; ca--and; jambubhih--with jambus.
-<p></p>
+bhrgum--Bhrgu Muni; babandha--arrested; maniman--Maniman; virabhadrah--Virabhadra; prajapatim--
+Prajapati Daksa; candesah--Candesa; pusanam--Pusa; devam--the demigod; bhagam--Bhaga; nandisvarah--
+Nandisvara; agrahit--arrested.
+<br>
 <h2>Translation</h2>
-Kailasa Hill is also decorated with such trees as kata, jackfruit, julara, banyan trees, plaksas, nyagrodhas
-and trees producing asafetida. Also there are trees of betel nuts and bhurja-patra, as well as rajapuga,
-blackberries and similar other trees.
+Maniman, one of the followers of Lord Siva, arrested Bhrgu Muni, and Virabhadra, the black demon,
+arrested Prajapati Daksa. Another follower, who was named Candesa, arrested Pusa. Nandisvara arrested
+the demigod Bhaga.
 </p>
 
 </div>
@@ -70,7 +109,7 @@ blackberries and similar other trees.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

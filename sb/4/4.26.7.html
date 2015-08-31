@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,54 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.7.html">4.26.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-brhad-balam mano vidyad
-ubhayendriya-nayakam
-pancalah panca visaya
-yan-madhye nava-kham puram
-<p></p>
+ya evam karma niyatam
+vidvan kurvita manavah
+karmana tena rajendra
+jnanena na sa lipyate
+<br>
 <h2>Synonyms</h2>
-brhat-balam--very powerful; manah--the mind; vidyat--one should know; ubhaya-indriya--of both
-groups of senses; nayakam--the leader; pancalah--the kingdom named Pancala; panca--five; visayah--sense
-objects; yat--of which; madhye--in the midst; nava-kham--having nine apertures; puram--the city.
-<p></p>
+yah--anyone who; evam--thus; karma--activities; niyatam--regulated; vidvan--learned; kurvita--should
+perform; manavah--a human being; karmana--by such activities; tena--by this; raja-indra--O King;
+jnanena--by advancement of knowledge; na--never; sah--he; lipyate--becomes involved.
+<br>
 <h2>Translation</h2>
-The eleventh attendant, who is the commander of the others, is known as the mind. He is the leader of
-the senses both in the acquisition of knowledge and in the performance of work. The Pancala kingdom is
-that atmosphere in which the five sense objects are enjoyed. Within that Pancala kingdom is the city of
-the body, which has nine gates.
-<p></p>
+Narada Muni continued to speak to King Pracinabarhisat: My dear King, any person who works
+according to the directions of the Vedic scriptures does not become involved in fruitive activities.
+<br>
 <h2>Purport</h2>
-The mind is the center of all activities and is described here as brhad-bala, very powerful. To get out of
-the clutches of maya, material existence, one has to control his mind. According to training, the mind is
-the friend and the enemy of the living entity. If one gets a good manager, his estate is very nicely
-managed, but if the manager is a thief, his estate is spoiled. Similarly, in his material, conditional
-existence, the living entity gives power of attorney to his mind. As such, he is liable to be misdirected by
-his mind into enjoying sense objects. Srila Ambarisa Maharaja therefore first engaged his mind upon the
-lotus feet of the Lord. Sa vai manah krsna-padaravindayoh. When the mind is engaged in meditation on
-the lotus feet of the Lord, the senses are controlled. This system of control is called yama, and this means
-"subduing the senses." One who can subdue the senses is called a gosvami, but one who cannot control
-the mind is called go-dasa. The mind directs the activities of the senses, which are expressed through
-different outlets, as described in the next verse.
+Just as a government may issue trade licenses in order for its citizens to act in a certain way, the Vedas
+contain injunctions that restrain and regulate all of our fruitive activities. All living entities have come
+into this material world to enjoy themselves. Consequently, the Vedas are given to regulate sense
+enjoyment. One who enjoys his senses under the Vedic regulative principles does not become entangled
+in the actions and reactions of his activities. As stated in Bhagavad-gita (3.9), yajnarthat karmanah: one
+should act only for the performance of yajna, or to satisfy Lord Visnu. Anyatra loko 'yam karmabandhanah:
+otherwise any action will produce a reaction by which the living entity will be bound. A
+human being is especially meant to attain liberation from the bondage of birth, death, old age and disease.
+He is therefore directed by the Vedic regulative principles to work in such a way that he may fulfill his
+desires for sense gratification and at the same time gradually become freed from material bondage. Action
+according to such principles is called knowledge. Indeed, the word veda means "knowledge." The words
+jnanena na sa lipyate indicate that by following the Vedic principles, one does not become involved in the
+actions and reactions of his fruitive activities.
+Everyone is therefore advised to act in terms of the Vedic injunctions and not irresponsibly. When a
+person within a state acts according to the laws and licenses of the government, he does not become
+involved in criminal activities. Man-made laws, however, are always defective because they are made by
+men who are prone to committing mistakes, being illusioned, cheating and having imperfect senses. The
+Vedic instructions are different because they do not have these four defects. Vedic instructions are not
+subject to mistakes. The knowledge of the Vedas is knowledge received directly from God, and there is
+consequently no question of illusion, cheating, mistakes or imperfect senses. All Vedic knowledge is
+perfect because it is received directly from God by the parampara, disciplic succession. In Srimad-
+Bhagavatam (1.1.1) it is said: tene brahma hrda ya adi-kavaye. The original creature of this universe,
+known as the adi-kavi, or Lord Brahma, was instructed by Krsna through the heart. After receiving these
+Vedic instructions from Lord Krsna Himself, Brahma distributed the knowledge by the parampara system
+to Narada, and Narada in turn distributed the knowledge to Vyasa. In this way Vedic knowledge is
+perfect. If we act according to Vedic knowledge, there is no question of being involved in sinful activities.
 </p>
 
 </div>
@@ -84,7 +136,7 @@ different outlets, as described in the next verse.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

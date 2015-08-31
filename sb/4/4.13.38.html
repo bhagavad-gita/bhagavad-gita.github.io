@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.38.html">4.13.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam mrsanta rsayo
-dhavatam sarvato-disam
-pamsuh samutthito bhuris
-coranam abhilumpatam
-<p></p>
+sa tat pum-savanam rajni
+prasya vai patyur adadhe
+garbham kala upavrtte
+kumaram susuve 'praja
+<br>
 <h2>Synonyms</h2>
-evam--thus; mrsantah--while considering; rsayah--the great saintly persons; dhavatam--running;
-sarvatah-disam--from all directions; pamsuh--dust; samutthitah--arose; bhurih--much; coranam--from
-thieves and rogues; abhilumpatam--engaged in plundering.
-<p></p>
+sa--she; tat--that food; pum-savanam--which produces a male child; rajni--the Queen; prasya--eating;
+vai--indeed; patyuh--from the husband; adadhe--conceived; garbham--pregnancy; kale--when the due
+time; upavrtte--appeared; kumaram--a son; susuve--gave birth to; apraja--having no son.
+<br>
 <h2>Translation</h2>
-When the great sages were carrying on their discussion in this way, they saw a dust storm arising from
-all directions. This storm was caused by the running of thieves and rogues, who were engaged in
-plundering the citizens.
-<p></p>
+Although the Queen had no son, after eating that food, which had the power to produce a male child,
+she became pregnant by her husband, and in due course of time she gave birth to a son.
+<br>
 <h2>Purport</h2>
-Thieves and rogues simply await some political upset in order to take the opportunity to plunder the
-people in general. To keep thieves and rogues inactive in their profession, a strong government is always
-required.
+Among the ten kinds of purificatory processes, one is pum-savanam, in which the wife is offered some
+prasada, or remnants of foodstuff offered to Lord Visnu, so that after sexual intercourse with her husband
+she may conceive a child.
 </p>
 
 </div>
@@ -75,7 +113,7 @@ required.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

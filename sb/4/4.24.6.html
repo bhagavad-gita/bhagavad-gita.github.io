@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.6.html">4.24.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasyam ajanayat putran
-puranjanyam puranjanah
-satany ekadasa virad
-ayuso 'rdham athatyagat
-<p></p>
+rajnam vrttim karadanadanda-
+sulkadi-darunam
+manyamano dirgha-sattravyajena
+visasarja ha
+<br>
 <h2>Synonyms</h2>
-tasyam--within her; ajanayat--he begot; putran--sons; puranjanyam--in Puranjani; puranjanah--King
-Puranjana; satani--hundreds; ekadasa--eleven; virat--O King; ayusah--of life; ardham--half; atha--in this
-way; atyagat--he passed.
-<p></p>
+rajnam--of the kings; vrttim--source of livelihood; kara--taxes; adana--realization; danda--punishment;
+sulka--fines; adi--etc.; darunam--which are very severe; manyamanah--thinking like that; dirgha--long;
+sattra--sacrifice; vyajena--on the plea; visasarja--gave up; ha--in the past.
+<br>
 <h2>Translation</h2>
-The great sage Narada then addressed King Pracinabarhisat: O one whose life-span is great [virat], in
-this way King Puranjana begot 1,100 sons within the womb of his wife, Puranjani. However, in this
-business he passed away half of his life-span.
-<p></p>
+Whenever Antardhana, the supreme royal power, had to exact taxes, punish his citizens or fine them
+severely, he was not willing to do so. Consequently he retired from the execution of such duties and
+engaged himself in the performance of different sacrifices.
+<br>
 <h2>Purport</h2>
-In this verse there are several significant words, the first of which are ekadasa satani. Puranjana had
-begotten 1,100 sons within the womb of his wife, and thus passed away half of his life. Actually every man
-follows a similar process. If one lives for one hundred years at the utmost, in his family life he simply
-begets children up to the age of fifty. Unfortunately at the present moment people do not live even a
-hundred years; nonetheless they beget children up to the age of sixty. Another point is that formerly
-people used to beget one hundred to two hundred sons and daughters. As will be evident from the next
-verse, King Puranjana not only begot 1,100 sons but also 110 daughters. At the present moment no one
-can produce such huge quantities of children. Instead, mankind is very busy checking the increase of
-population by contraceptive methods.
-We do not find in Vedic literatures that they ever used contraceptive methods, although they were
-begetting hundreds of children. Checking population by contraceptive method is another sinful activity,
-but in this age of Kali people have become so sinful that they do not care for the resultant reactions of
-their sinful lives. King Puranjana lay down with his wife, Puranjani, and begot a large number of children,
-and there is no mention in these verses that he used contraceptive methods. According to the Vedic
-scriptures the contraceptive method should be restraint in sex life. It is not that one should indulge in
-unrestricted sex life and avoid children by using some method to check pregnancy. If a man is in good
-consciousness, he consults with his religious wife, and as a result of this consultation, with intelligence,
-one advances in his ability to estimate the value of life. In other words, if one is fortunate enough to have
-a good, conscientious wife, he can decide by mutual consultation that human life is meant for advancing
-in Krsna consciousness and not for begetting a large number of children. Children are called parinama, or
-by-products, and when one consults his good intelligence he can see that his by-products should be the
-expansion of his Krsna consciousness.
+It is clear herein that the king sometimes has to perform duties which are not very desirable just because
+he is the king. Similarly, Arjuna was not at all willing to fight because fighting or killing one's own
+kinsmen and family members is not at all desirable. Nonetheless the ksatriyas had to perform such
+undesirable actions as a matter of duty. Maharaja Antardhana was not very happy while exacting taxes or
+punishing the citizens for their criminal activities; therefore, on the plea of performing sacrifices, he
+retired from the royal majestic power at a very early age.
 </p>
 
 </div>
@@ -94,7 +117,7 @@ expansion of his Krsna consciousness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

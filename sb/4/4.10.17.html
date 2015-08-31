@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,61 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.17.html">4.10.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nimitta-matram tatrasin
-nirgunah purusarsabhah
-vyaktavyaktam idam visvam
-yatra bhramati lohavat
-<p></p>
+tasya te capa-nirmukta
+bhittva varmani raksasam
+kayan avivisus tigma
+girin asanayo yatha
+<br>
 <h2>Synonyms</h2>
-nimitta-matram--remote cause; tatra--then; asit--was; nirgunah--uncontaminated; purusa-rsabhah--the
-Supreme Person; vyakta--manifested; avyaktam--unmanifested; idam--this; visvam--world; yatra--where;
-bhramati--moves; loha-vat--like iron.
-<p></p>
+tasya--of Dhruva; te--those arrows; capa--from the bow; nirmuktah--released; bhittva--having pierced;
+varmani--shields; raksasam--of the demons; kayan--bodies; avivisuh--entered; tigmah--sharp; girin--
+mountains; asanayah--thunderbolts; yatha--just like.
+<br>
 <h2>Translation</h2>
-My dear Dhruva, the Supreme Personality of Godhead is uncontaminated by the material modes of
-nature. He is the remote cause of the creation of this material cosmic manifestation. When He gives the
-impetus, many other causes and effects are produced, and thus the whole universe moves, just as iron
-moves by the integrated force of a magnet.
-<p></p>
-<h2>Purport</h2>
-How the external energy of the Supreme Personality of Godhead works within this material world is
-explained in this verse. Everything is happening by the energy of the Supreme Lord. The atheistic
-philosophers, who do not agree to accept the Supreme Personality of Godhead as the original cause of
-creation, think that the material world moves by the action and reaction of different material elements. A
-simple example of the interaction of elements occurs when we mix soda and acid and the movement of
-effervescence is produced. But one cannot produce life by such interaction of chemicals. There are
-8,400,000 different species of life, with different wishes and different actions. How the material force is
-working cannot be explained just on the basis of chemical reaction. A suitable example in this connection
-is that of the potter and the potter's wheel. The potter's wheel rotates, and several varieties of earthen pots
-come out. There are many causes for the earthen pots, but the original cause is the potter, who sets a force
-on the wheel. That force comes by his superintendence. The same idea is explained in Bhagavad-gita--
-behind all material action and reaction there is Krsna, the Supreme Personality of Godhead. Krsna says
-that everything depends on His energy, and yet He is not everywhere. The pot is produced under certain
-conditions of action and reaction of material energy, but the potter is not in the pot. In a similar way, the
-material creation is set up by the Lord, but He remains aloof. As stated in the Vedas, He simply glanced
-over it, and the agitation of matter immediately began.
-In Bhagavad-gita it is also said that the Lord impregnates the material energy with the part-and-parcel
-jivas, and thus the different forms and different activities immediately ensue. Because of the different
-desires and karmic activities of the jiva soul, different types of bodies in different species are produced. In
-Darwin's theory there is no acceptance of the living entity as spirit soul, and therefore his explanation of
-evolution is incomplete. Varieties of phenomena occur within this universe on account of the actions and
-reactions of the three material modes, but the original creator, or the cause, is the Supreme Personality of
-Godhead, who is mentioned here as nimitta-matram, the remote cause. He simply pushes the wheel with
-His energy. According to the Mayavadi philosophers, the Supreme Brahman has transformed Himself into
-many varieties of forms, but that is not the fact. He is always transcendental to the actions and reactions of
-the material gunas, although He is the cause of all causes. Lord Brahma says, therefore, in the Brahmasamhita
-(5.1):
-isvarah paramah krsnah
-sac-cid-ananda-vigrahah
-anadir adir govindah
-sarva-karana-karanam
-There are many causes and effects, but the original cause is Sri Krsna.
+The sharp arrows released from the bow of Dhruva Maharaja pierced the shields and bodies of the
+enemy, like the thunderbolts released by the King of heaven, which dismantle the bodies of the
+mountains.
 </p>
 
 </div>
@@ -105,7 +109,7 @@ There are many causes and effects, but the original cause is Sri Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

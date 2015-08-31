@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.6.html">4.10.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tan hanyamanan abhiviksya guhyakan
-anagasas citra-rathena bhurisah
-auttanapadim krpaya pitamaho
-manur jagadopagatah saharsibhih
-<p></p>
+dadhmau sankham brhad-bahuh
+kham disas canunadayan
+yenodvigna-drsah ksattar
+upadevyo 'trasan bhrsam
+<br>
 <h2>Synonyms</h2>
-tan--those Yaksas; hanyamanan--being killed; abhiviksya--seeing; guhyakan--the Yaksas; anagasah--
-offenseless; citra-rathena--by Dhruva Maharaja, who had a beautiful chariot; bhurisah--greatly;
-auttanapadim--unto the son of Uttanapada; krpaya--out of mercy; pita-mahah--the grandfather; manuh--
-Svayambhuva Manu; jagada--gave instructions; upagatah--approached; saha-rsibhih--with great sages.
-<p></p>
+dadhmau--blew; sankham--conchshell; brhat-bahuh--the mighty-armed; kham--the sky; disah ca--and
+all directions; anunadayan--causing to resound; yena--by which; udvigna-drsah--appeared very anxious;
+ksattah--my dear Vidura; upadevyah--the wives of the Yaksas; atrasan--became frightened; bhrsam--
+greatly.
+<br>
 <h2>Translation</h2>
-When Svayambhuva Manu saw that his grandson Dhruva Maharaja was killing so many of the Yaksas
-who were not actually offenders, out of his great compassion he approached Dhruva with great sages to
-give him good instruction.
-<p></p>
-<h2>Purport</h2>
-Dhruva Maharaja attacked Alakapuri, the city of the Yaksas, because his brother was killed by one of
-them. Actually only one of the citizens, not all of them, was guilty of killing his brother, Uttama. Dhruva
-Maharaja, of course, took a very serious step when his brother was killed by the Yaksas. War was
-declared, and the fighting was going on. This sometimes happens in present days also--for one man's fault
-a whole state is sometimes attacked. This kind of wholesale attack is not approved by Manu, the father
-and lawgiver of the human race. He therefore wanted to stop his grandson Dhruva from continuing to kill
-the Yaksa citizens who were not offenders.
+Maitreya continued: My dear Vidura, as soon as Dhruva Maharaja reached Alakapuri, he immediately
+blew his conchshell, and the sound reverberated throughout the entire sky and in every direction. The
+wives of the Yaksas became very much frightened. From their eyes it was apparent that they were full of
+anxiety.
 </p>
 
 </div>
@@ -80,7 +111,7 @@ the Yaksa citizens who were not offenders.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

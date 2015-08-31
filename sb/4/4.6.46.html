@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.46.html">4.6.46</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.46</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/46"><b>46</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvam pura gam rasaya maha-sukaro
-damstraya padminim varanendro yatha
-stuyamano nadal lilaya yogibhir
-vyujjahartha trayi-gatra yajna-kratuh
-<p></p>
+na vai satam tvac-caranarpitatmanam
+bhutesu sarvesv abhipasyatam tava
+bhutani catmany aprthag-didrksatam
+prayena roso 'bhibhaved yatha pasum
+<br>
 <h2>Synonyms</h2>
-tvam--You; pura--in the past; gam--the earth; rasayah--from within the water; maha-sukarah--the great
-boar incarnation; damstraya--with Your tusk; padminim--a lotus; varana-indrah--an elephant; yatha--as;
-stuyamanah--being offered prayers; nadan--vibrating; lilaya--very easily; yogibhih--by great sages like
-Sanaka, etc.; vyujjahartha--picked up; trayi-gatra--O personified Vedic knowledge; yajna-kratuh--having
-the form of sacrifice.
-<p></p>
+na--not; vai--but; satam--of the devotees; tvat-carana-arpita-atmanam--of those who are completely
+surrendered at your lotus feet; bhutesu--among living entities; sarvesu--all varieties; abhipasyatam--
+perfectly seeing; tava--your; bhutani--living entities; ca--and; atmani--in the Supreme; aprthak--
+nondifferent; didrksatam--those who see like that; prayena--almost always; rosah--anger; abhibhavet--
+takes place; yatha--exactly like; pasum--the animals.
+<br>
 <h2>Translation</h2>
-Dear Lord, O personified Vedic knowledge, in the past millennium, long, long ago, when You appeared
-as the great boar incarnation, You picked up the world from the water, as an elephant picks up a lotus
-flower from a lake. When You vibrated transcendental sound in that gigantic form of a boar, the sound
-was accepted as a sacrificial hymn, and great sages like Sanaka meditated upon it and offered prayers for
-Your glorification.
-<p></p>
+My dear Lord, devotees who have fully dedicated their lives unto your lotus feet certainly observe your
+presence as Paramatma in each and every being, and as such they do not differentiate between one living
+being and another. Such persons treat all living entities equally. They never become overwhelmed by
+anger like animals, who can see nothing without differentiation.
+<br>
 <h2>Purport</h2>
-A significant word used in this verse is trayi-gatra, which means that the transcendental form of the
-Lord is the Vedas. Anyone who engages in the worship of the Deity, or the form of the Lord in the temple,
-is understood to be studying all the Vedas twenty-four hours a day. Simply by decorating the Deities of
-the Lord, Radha and Krsna, in the temple, one very minutely studies the injunctions of the Vedas. Even a
-neophyte devotee who simply engages in the worship of the Deity is understood to be in direct touch with
-the purport of Vedic knowledge. As confirmed in Bhagavad-gita (15.15), vedais ca sarvair aham eva
-vedyah: the purport of the Vedas is to understand Him, Krsna. One who worships and serves Krsna
-directly has understood the truths of the Vedas.
+When the Supreme Personality of Godhead becomes angry or kills a demon, materially this may appear
+unfavorable, but spiritually it is a blissful blessing upon him. Therefore pure devotees do not make any
+distinction between the Lord's anger and His blessings. They see both with reference to the Lord's
+behavior with others and themselves. A devotee does not find fault with the behavior of the Lord in any
+circumstances.
 </p>
 
 </div>
@@ -84,7 +119,7 @@ directly has understood the truths of the Vedas.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

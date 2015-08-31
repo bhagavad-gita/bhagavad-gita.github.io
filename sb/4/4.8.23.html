@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,65 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.23.html">4.8.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvad-bhratary uttame naste
-mrgayayam tu tan-manah
-anvesanti vanam mata
-davagnim sa praveksyati
-<p></p>
+nanyam tatah padma-palasa-locanad
+duhkha-cchidam te mrgayami kancana
+yo mrgyate hasta-grhita-padmaya
+sriyetarair anga vimrgyamanaya
+<br>
 <h2>Synonyms</h2>
-tvat--your; bhratari--brother; uttame--Uttama; naste--being killed; mrgayayam--in hunting; tu--then; tatmanah--
-being too afflicted; anvesanti--while searching out; vanam--in the forest; mata--the mother; davaagnim--
-in the forest fire; sa--she; praveksyati--will enter.
-<p></p>
+na anyam--no others; tatah--therefore; padma-palasa-locanat--from the lotus-eyed Supreme Personality
+of Godhead; duhkha-chidam--one who can mitigate others' difficulties; te--your; mrgayami--I am
+searching after; kancana--anyone else; yah--who; mrgyate--searches; hasta-grhita-padmaya--taking a lotus
+flower in the hand; sriya--the goddess of fortune; itaraih--by others; anga--my dear boy; vimrgyamanaya--
+one who is worshiped.
+<br>
 <h2>Translation</h2>
-The Lord continued: Sometime in the future your brother, Uttama, will go hunting in the forest, and
-while absorbed in hunting, he will be killed. Your stepmother, Suruci, being maddened upon the death of
-her son, will go to search him out in the forest, but she will be devoured by a forest fire.
-<p></p>
+My dear Dhruva, as far as I am concerned, I do not find anyone who can mitigate your distress but the
+Supreme Personality of Godhead, whose eyes are like lotus petals. Many demigods such as Lord Brahma
+seek the pleasure of the goddess of fortune, but the goddess of fortune herself, with a lotus flower in her
+hand, is always ready to render service to the Supreme Lord.
+<br>
 <h2>Purport</h2>
-Dhruva Maharaja came to the forest to search out the Supreme Personality of Godhead with a revenging
-spirit against his stepmother. His stepmother had insulted Dhruva, who was not an ordinary person, but a
-great Vaisnava. An offense at the lotus feet of a Vaisnava is the greatest offense in this world. Because of
-having insulted Dhruva Maharaja, Suruci would become mad upon the death of her son and would enter a
-forest fire, and thus her life would be ended. This was specifically mentioned by the Lord to Dhruva
-because he was determined for revenge against her. From this we should take the lesson that we should
-never try to insult a Vaisnava. Not only should we not insult a Vaisnava, but we should not insult anyone
-unnecessarily. When Suruci insulted Dhruva Maharaja, he was just a child. She of course did not know
-that Dhruva was a great recognized Vaisnava, and so her offense was committed unknowingly. When one
-serves a Vaisnava unknowingly, one still gets the good result, and if one unknowingly insults a Vaisnava,
-one suffers the bad result. A Vaisnava is especially favored by the Supreme Personality of Godhead.
-Pleasing him or displeasing him directly affects the pleasure and displeasure of the Supreme Lord. Srila
-Visvanatha Cakravarti Thakura, in his eight stanzas of prayer to the spiritual master, has sung, yasya
-prasadad bhagavat-prasadah: by pleasing the spiritual master, who is a pure Vaisnava, one pleases the
-Personality of Godhead, but if one displeases the spiritual master one does not know where he is going.
+Suniti pointed out herewith that the benediction received from the Supreme Personality of Godhead and
+that received from the demigods are not on an equal level. Foolish persons say that no matter whom one
+worships one will get the same result, but actually that is not a fact. In Bhagavad-gita it is also said that
+benedictions received from the demigods are all temporary and are meant for the less intelligent. In other
+words, because the demigods are all materialistically conditioned souls, although they are situated in very
+exalted positions, their benedictions cannot be permanent. permanent benediction is spiritual
+benediction, since a spirit soul is eternal. It is also said in Bhagavad-gita that only persons who have lost
+their intelligence go to worship the demigods. Therefore Suniti told her son that he should not seek the
+mercy of the demigods, but should directly approach the Supreme Personality of Godhead to mitigate his
+misery.
+Material opulences are controlled by the Supreme Personality of Godhead through His different
+potencies and specifically the goddess of fortune. Therefore, those who are after material opulences seek
+the pleasure or mercy of the goddess of fortune. Even the highly placed demigods worship the goddess of
+fortune, but the goddess of fortune, Maha-Laksmi herself, is always seeking the pleasure of the Supreme
+Personality of Godhead. Anyone, therefore, who takes to the worship of the Supreme Lord automatically
+receives the blessings of the goddess of fortune. At this stage of his life, Dhruva Maharaja was seeking
+material opulences, and his mother advised rightly that even for material opulences it is better to worship
+not the demigods but the Supreme Lord.
+Although a pure devotee does not seek benedictions from the Supreme Lord for material advancement,
+it is stated in Bhagavad-gita that pious persons go to the Lord even for material benedictions. A person
+who goes to the Supreme Personality of Godhead for material gain is gradually purified in association
+with the Supreme Lord. Thus he becomes free from all material desires and is elevated to the platform of
+spiritual life. Unless one is raised to the spiritual platform, it is not possible for him to completely
+transcend all material contamination.
+Suniti, the mother of Dhruva, was a farseeing woman, and therefore she advised her son to worship the
+Supreme Lord and no one else. The Lord is described herein as lotus eyed (padma-palasa-locanat). When
+a person is fatigued, if he sees a lotus flower all his fatigue can be immediately reduced to nil. Similarly,
+when an aggrieved person sees the lotus face of the Supreme personality of Godhead, immediately all his
+grief is reduced. A lotus flower is also an insignia in the hand of Lord Visnu as well as in the hand of the
+goddess of fortune. The worshipers of the goddess of fortune and Lord Visnu together are certainly very
+opulent in all respects, even in material life. The Lord is sometimes described as siva-virinci-nutam, which
+means that Lord Siva and Lord Brahma also offer their respectful obeisances unto the lotus feet of the
+Supreme Personality of Godhead, Narayana.
 </p>
 
 </div>
@@ -87,7 +147,7 @@ Personality of Godhead, but if one displeases the spiritual master one does not 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

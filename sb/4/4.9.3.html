@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.9.3.html">4.9.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-uttamas tv akrtodvaho
-mrgayayam baliyasa
-hatah punya-janenadrau
-tan-matasya gatim gata
-<p></p>
+tad-darsanenagata-sadhvasah ksitav
+avandatangam vinamayya dandavat
+drgbhyam prapasyan prapibann ivarbhakas
+cumbann ivasyena bhujair ivaslisan
+<br>
 <h2>Synonyms</h2>
-uttamah--Uttama; tu--but; akrta--without; udvahah--marriage; mrgayayam--on a hunting excursion;
-baliyasa--very powerful; hatah--was killed; punya-janena--by a Yaksa; adrau--on the Himalaya Mountains;
-tat--his; mata--mother (Suruci); asya--of her son; gatim--way; gata--followed.
-<p></p>
+tat-darsanena--after seeing the Lord; agata-sadhvasah--Dhruva Maharaja, being greatly confused;
+ksitau--on the ground; avandata--offered obeisances; angam--his body; vinamayya--prostrating; dandavat--
+just like a rod; drgbhyam--with his eyes; prapasyan--looking upon; prapiban--drinking; iva--like;
+arbhakah--the boy; cumban--kissing; iva--like; asyena--with his mouth; bhujaih--with his arms; iva--like;
+aslisan--embracing.
+<br>
 <h2>Translation</h2>
-Dhruva Maharaja's younger brother Uttama, who was still unmarried, once went on a hunting excursion
-and was killed by a powerful Yaksa in the Himalaya Mountains. Along with him, his mother, Suruci, also
-followed the path of her son [she died].
+When Dhruva Maharaja saw his Lord just in front of him, he was greatly agitated and offered Him
+obeisances and respect. He fell flat before Him like a rod and became absorbed in love of Godhead.
+Dhruva Maharaja, in ecstasy, looked upon the Lord as if he were drinking the Lord with his eyes, kissing
+the lotus feet of the Lord with his mouth, and embracing the Lord with his arms.
+<br>
+<h2>Purport</h2>
+Naturally, when Dhruva Maharaja personally saw the Supreme Personality of Godhead face to face, he
+was very much agitated in awe and respect, and it appeared as if he were drinking the entire body of the
+Lord with his eyes. The devotee's love for the Supreme Personality of Godhead is so intense that he wants
+to kiss the lotus feet of the Lord constantly, and he wants to touch the tips of the toes of the Lord and
+constantly embrace His lotus feet. All these features of Dhruva Maharaja's bodily expression indicate that
+upon seeing the Lord face to face he developed the eight kinds of transcendental ecstasy in his body.
 </p>
 
 </div>
@@ -70,7 +120,7 @@ followed the path of her son [she died].
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

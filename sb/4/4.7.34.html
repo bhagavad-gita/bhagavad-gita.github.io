@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.34.html">4.7.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gunadhikan mudam lipsed
-anukrosam gunadhamat
-maitrim samanad anvicchen
-na tapair abhibhuyate
-<p></p>
+rsaya ucuh
+ananvitam te bhagavan vicestitam
+yad atmana carasi hi karma najyase
+vibhutaye yata upasedur isvarim
+na manyate svayam anuvartatim bhavan
+<br>
 <h2>Synonyms</h2>
-guna-adhikat--one who is more qualified; mudam--pleasure; lipset--one should feel; anukrosam--
-compassion; guna-adhamat--one who is less qualified; maitrim--friendship; samanat--with an equal;
-anvicchet--one should desire; na--not; tapaih--by tribulation; abhibhuyate--becomes affected.
-<p></p>
+rsayah--the sages; ucuh--prayed; ananvitam--wonderful; te--Your; bhagavan--O possessor of all
+opulences; vicestitam--activities; yat--which; atmana--by Your potencies; carasi--You execute; hi--
+certainly; karma--to such activities; na ajyase--You are not attached; vibhutaye--for her mercy; yatah--from
+whom; upaseduh--worshiped; isvarim--Laksmi, the goddess of fortune; na manyate--are not attached;
+svayam--Yourself; anuvartatim--to Your obedient servant (Laksmi); bhavan--Your Lordship.
+<br>
 <h2>Translation</h2>
-Every man should act like this: when he meets a person more qualified than himself, he should be very
-pleased; when he meets someone less qualified than himself, he should be compassionate toward him; and
-when he meets someone equal to himself, he should make friendship with him. In this way one is never
-affected by the threefold miseries of this material world.
-<p></p>
+The sages prayed: Dear Lord, Your activities are most wonderful, and although You do everything by
+Your different potencies, You are not at all attached to such activities. You are not even attached to the
+goddess of fortune, who is worshiped by the great demigods like Brahma, who pray to achieve her mercy.
+<br>
 <h2>Purport</h2>
-Generally when we find someone more qualified than ourselves, we become envious of him; when we
-find someone less qualified, we deride him; and when we find someone equal we become very proud of
-our activities. These are the causes of all material tribulations. The great sage Narada therefore advised
-that a devotee should act perfectly. Instead of being envious of a more qualified man, one should be jolly
-to receive him. Instead of being oppressive to a less qualified man, one should be compassionate toward
-him just to raise him to the proper standard. And when one meets an equal, instead of being proud of
-one's own activities before him, one should treat him as a friend. One should also have compassion for the
-people in general, who are suffering due to forgetfulness of Krsna. These important functions will make
-one happy within this material world.
+In Bhagavad-gita it is said that the Lord has no desire to achieve any result from His wonderful
+activities, nor has He any need to perform them. But still, in order to give an example to people in general,
+He sometimes acts, and those activities are very wonderful. He is not attached to anything. Na mam
+karmani limpanti: although He acts very wonderfully, He is not at all attached to anything (Bg. 4.14). He
+is self-sufficient. The example is given here that the goddess of fortune, Laksmi, is always engaged in the
+service of the Lord, but still He is not attached to her. Even great demigods like Brahma worship the
+goddess of fortune in order to win her favor, but although the Lord is worshiped by many hundreds and
+thousands of goddesses of fortune, He is not at all attached to any one of them. This distinction
+concerning the exalted transcendental position of the Lord is specifically mentioned by the great sages; He
+is not like the ordinary living entity, who is attached to the results of pious activities.
 </p>
 
 </div>
@@ -82,7 +124,7 @@ one happy within this material world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

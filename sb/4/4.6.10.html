@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.10.html">4.6.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tada vrsadhvaja-dvesakalilatma
-prajapatih
-sivavalokad abhavac
-charad-dhrada ivamalah
-<p></p>
+nana-manimayaih srngair
+nana-dhatu-vicitritaih
+nana-druma-lata-gulmair
+nana-mrga-ganavrtaih
+<br>
 <h2>Synonyms</h2>
-tada--at that time; vrsa-dhvaja--Lord Siva, who rides on a bull; dvesa--envy; kalila-atma--polluted heart;
-prajapatih--King Daksa; siva--Lord Siva; avalokat--by seeing him; abhavat--became; sarat--in the autumn;
-hradah--lake; iva--like; amalah--cleansed.
-<p></p>
+nana--different kinds; mani--jewels; mayaih--made of; srngaih--with the peaks; nana-dhatu-vicitritaih--
+decorated with various minerals; nana--various; druma--trees; lata--creepers; gulmaih--plants; nana--
+various; mrga-gana--by groups of deer; avrtaih--inhabited by.
+<br>
 <h2>Translation</h2>
-At that time, when Daksa saw Lord Siva, who rides upon a bull, his heart, which was polluted by envy
-of Lord Siva, was immediately cleansed, just as the water in a lake is cleansed by autumn rains.
-<p></p>
-<h2>Purport</h2>
-Here is an example of why Lord Siva is called auspicious. lf anyone sees Lord Siva with devotion and
-reverence, his heart is immediately cleansed. King Daksa was polluted by envy of Lord Siva, and yet by
-seeing him with a little love and devotion, his heart immediately became cleansed. In the rainy season, the
-reservoirs of water become dirty and muddy, but as soon as the autumn rain comes, all the water
-immediately becomes clear and transparent. Similarly, although Daksa's heart was impure because of his
-having slandered Lord Siva, for which he was severely punished, Daksa now came to consciousness, and
-just by seeing Lord Siva with veneration and respect, he became immediately purified.
+Kailasa is full of mountains filled with all kinds of valuable jewels and minerals and surrounded by all
+varieties of valuable trees and plants. The top of the hill is nicely decorated by various types of deer.
 </p>
 
 </div>
@@ -78,7 +108,7 @@ just by seeing Lord Siva with veneration and respect, he became immediately puri
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

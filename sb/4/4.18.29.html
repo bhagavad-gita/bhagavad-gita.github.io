@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.29.html">4.18.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ity amantrya kratu-patim
-vidurasyartvijo rusa
-srug-ghastan juhvato 'bhyetya
-svayambhuh pratyasedhata
-<p></p>
+curnayan sva-dhanus-kotya
+giri-kutani raja-rat
+bhu-mandalam idam vainyah
+prayas cakre samam vibhuh
+<br>
 <h2>Synonyms</h2>
-iti--thus; amantrya--after informing; kratu-patim--King Prthu, the master of the sacrifice; vidura--O
-Vidura; asya--of Prthu; rtvijah--the priests; rusa--in great anger; sruk-hastan--with the sacrificial ladle in
-hand; juhvatah--performing the fire sacrifice; abhyetya--having begun; svayambhuh--Lord Brahma;
-pratyasedhata--asked them to stop.
-<p></p>
+curnayan--making into pieces; sva--his own; dhanuh-kotya--by the power of his bow; giri--of the hills;
+kutani--the tops; raja-rat--the emperor; bhu-mandalam--the whole earth; idam--this; vainyah--the son of
+Vena; prayah--almost; cakre--made; samam--level; vibhuh--the powerful.
+<br>
 <h2>Translation</h2>
-My dear Vidura, after giving the King this advice, the priests who had been engaged in performing the
-sacrifice called for Indra, the King of heaven, in a mood of great anger. When they were just ready to put
-the oblation in the fire, Lord Brahma appeared on the scene and forbade them to start the sacrifice.
+After this, the king of all kings, Maharaja Prthu, leveled all rough places on the surface of the globe by
+breaking up the hills with the strength of his bow. By his grace the surface of the globe almost became
+flat.
+<br>
+<h2>Purport</h2>
+Generally the mountainous and hilly portions of the earth are made flat by the striking of thunderbolts.
+Generally this is the business of King Indra of the heavenly planets, but King Prthu, an incarnation of the
+Supreme Personality of Godhead, did not wait for King Indra to break up the hills and mountains but did
+so himself by using his strong bow.
 </p>
 
 </div>
@@ -71,7 +115,7 @@ the oblation in the fire, Lord Brahma appeared on the scene and forbade them to 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

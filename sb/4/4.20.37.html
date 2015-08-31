@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,71 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.37.html">4.20.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ma jatu tejah prabhaven maharddhibhis
-titiksaya tapasa vidyaya ca
-dedipyamane 'jita-devatanam
-kule svayam raja-kulad dvijanam
-<p></p>
+bhagavan api rajarseh
+sopadhyayasya cacyutah
+harann iva mano 'musya
+sva-dhama pratyapadyata
+<br>
 <h2>Synonyms</h2>
-ma--never do it; jatu--at any time; tejah--supreme power; prabhavet--exhibit; maha--great; rddhibhih--
-by opulence; titiksaya--by tolerance; tapasa--penance; vidyaya--by education; ca--also; dedipyamane--
-upon those who are already glorified; ajita-devatanam--Vaisnavas, or the devotees of the Supreme
-Personality of Godhead; kule--in the society; svayam--personally; raja-kulat--greater than the royal family;
-dvijanam--of the brahmanas.
-<p></p>
+bhagavan--the Supreme Personality of Godhead; api--also; raja-rseh--of the saintly King; saupadhyayasya--
+along with all the priests; ca--also; acyutah--the infallible Lord; haran--captivating; iva--
+indeed; manah--the mind; amusya--of him; sva-dhama--to His abode; pratyapadyata--returned.
+<br>
 <h2>Translation</h2>
-The brahmanas and Vaisnavas are personally glorified by their characteristic powers of tolerance,
-penance, knowledge and education. By dint of all these spiritual assets, Vaisnavas are more powerful than
-royalty. It is therefore advised that the princely order not exhibit its material prowess before these two
-communities and should avoid offending them.
-<p></p>
+The infallible Supreme Personality of Godhead, having captivated the minds of the King and the priests
+who were present, returned to His abode in the spiritual sky.
+<br>
 <h2>Purport</h2>
-Prthu Maharaja has explained in the previous verse the importance of devotional service for both the
-rulers and the citizens of the state. Now he explains how one can be steadily fixed in devotional service.
-Sri Caitanya Mahaprabhu, while instructing Srila Rupa Gosvami, has compared the devotional service of
-the Lord with a creeper. A creeper has a feeble stem and requires the support of another tree to grow, and
-while growing, it requires sufficient protection so that it may not be lost. While describing the system of
-protection for the creeper of devotional service, Sri Caitanya Mahaprabhu has especially stressed
-protection from offenses unto the lotus feet of Vaisnavas. Such offenses are called vaisnava-aparadha.
-Aparadha means "offense." If one commits vaisnava-aparadhas, all of his progress in devotional service
-will be checked. Even though one is very much advanced in devotional service, if he commits offenses at
-the feet of a Vaisnava, his advancement is all spoiled. In the sastras it is found that a very great yogi,
-Durvasa Muni, committed a vaisnava-aparadha and thus for one full year had to travel all over the
-universe, even to Vaikunthaloka, to defend himself from the offense. At last, even when he approached
-the Supreme Personality of Godhead in Vaikuntha, he was refused protection. Therefore one should be
-very careful about committing offenses at the feet of a Vaisnava. The most grievous type of vaisnavaaparadha
-is called gurv-aparadha, which refers to offenses at the lotus feet of the spiritual master. In the
-chanting of the holy name of the Supreme Personality of Godhead, this gurv-aparadha is considered the
-most grievous offense. Guror avajna sruti-sastra-nindanam (Padma Purana). Among the ten offenses
-committed against the chanting of the holy name, the first offenses are disobedience of the spiritual
-master and blasphemy of the Vedic literature.
-The simple definition of Vaisnava is given by Sri Caitanya Mahaprabhu: a person who immediately
-reminds one of the Supreme Personality of Godhead, Krsna, is a Vaisnava. In this verse, both Vaisnavas
-and brahmanas are mentioned. A Vaisnava is a learned brahmana and is therefore designated as
-brahmana-vaisnava, brahmana-pandita or as a Vaisnava and brahmana. In other words, a Vaisnava is
-supposed to be a brahmana already, but a brahmana may not be a pure Vaisnava. When a person
-understands his pure identity, brahma janati, he immediately becomes a brahmana. In the brahmana
-stage, one's understanding of the Absolute Truth is mainly based on the impersonal view. When a
-brahmana, however, rises to the platform of personal understanding of the Supreme Godhead, he becomes
-a Vaisnava. A Vaisnava is transcendental even to a brahmana. In the material conception, the position of a
-brahmana is the highest in human society, but a Vaisnava is transcendental even to a brahmana. Both the
-brahmana and Vaisnava are spiritually advanced. A brahmana's qualifications are mentioned in Bhagavadgita
-as truthfulness, mental equanimity, control of the senses, the power of tolerance, simplicity,
-knowledge of the Absolute Truth, firm faith in the scriptures, and practical application of the brahminical
-qualities in life. In addition to all these qualifications, when one fully engages in the transcendental loving
-service of the Lord, he becomes a Vaisnava. Prthu Maharaja warns his citizens who are actually engaged in
-the devotional service of the Lord to take care against offenses to the brahmanas and Vaisnavas. Offenses
-at their lotus feet are so destructive that even the descendants of Yadu who were born in the family of
-Lord Krsna were destroyed due to offenses at their feet. The Supreme Personality of Godhead cannot
-tolerate any offense at the lotus feet of brahmanas and Vaisnavas. Sometimes, due to their powerful
-positions, princes or government servants neglect the position of brahmanas and Vaisnavas, not knowing
-that because of their offense they will be ruined.
+Because the Supreme Personality of Godhead is all-spiritual, He can descend from the spiritual sky
+without changing His body, and thus He is known as acyuta, or infallible. When a living entity falls down
+to the material world, however, he has to accept a material body, and therefore, in his material
+embodiment, he cannot be called acyuta. Because he falls down from his real engagement in the service of
+the Lord, the living entity gets a material body to suffer or try to enjoy in the miserable material
+conditions of life. Therefore the fallen living entity is cyuta, whereas the Lord is called acyuta. The Lord
+was attractive for everyone--not only the King but also the priestly order, who were very much addicted to
+the performance of Vedic rituals. Because the Lord is all-attractive, He is called Krsna, or "one who
+attracts everyone." The Lord appeared in the sacrificial arena of Maharaja Prthu as Ksirodakasayi Visnu,
+who is a plenary expansion of Lord Krsna. He is the second incarnation from Karanodakasayi Visnu, who
+is the origin of material creation and who expands as Garbhodakasayi Visnu, who then enters into each
+and every universe. Ksirodakasayi Visnu is one of the purusas who control the material modes of nature.
 </p>
 
 </div>
@@ -115,7 +122,7 @@ that because of their offense they will be ruined.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

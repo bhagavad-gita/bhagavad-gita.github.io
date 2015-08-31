@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.9.25.html">4.9.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatah khe 'drsyata girir
-nipetuh sarvato-disam
-gada-parigha-nistrimsamusalah
-sasma-varsinah
-<p></p>
+tato gantasi mat-sthanam
+sarva-loka-namaskrtam
+uparistad rsibhyas tvam
+yato navartate gatah
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; khe--in the sky; adrsyata--was visible; girih--a mountain; nipetuh--fell down; sarvatahdisam--
-from all directions; gada--clubs; parigha--iron bludgeons; nistrimsa--swords; musalah--maces; saasma--
-great pieces of stone; varsinah--with a shower of.
-<p></p>
+tatah--thereafter; ganta asi--you will go; mat-sthanam--to My abode; sarva-loka--by all planetary
+systems; namah-krtam--offered obeisances; uparistat--situated higher; rsibhyah--than the planetary
+systems of the rsis; tvam--you; yatah--wherefrom; na--never; avartate--will come back; gatah--having gone
+there.
+<br>
 <h2>Translation</h2>
-Next, a great mountain was visible in the sky, and from all directions hailstones fell, along with lances,
-clubs, swords, iron bludgeons and great pieces of stone.
+The Personality of Godhead continued: My dear Dhruva, after your material life in this body, you will
+go to My planet, which is always offered obeisances by the residents of all other planetary systems. It is
+situated above the planets of the seven rsis, and having gone there you will never have to come back again
+to this material world.
+<br>
+<h2>Purport</h2>
+In this verse the word navartate is very significant. The Lord says, "You will not come back to this
+material world, for you will reach mat-sthanam, My abode." Therefore Dhruvaloka, or the polestar, is the
+abode of Lord Visnu within this material world. Upon it there is an ocean of milk, and within that ocean
+there is an island known as Svetadvipa. It is clearly indicated that this planet is situated above the seven
+planetary systems of the rsis, and because this planet is Visnuloka, it is worshiped by all other planetary
+systems. It may be questioned here what will happen to the planet known as Dhruvaloka at the time of the
+dissolution of this universe. The answer is simple: Dhruvaloka remains, like other Vaikunthalokas beyond
+this universe. Srila Visvanatha Cakravarti Thakura has commented in this connection that the very word
+navartate indicates that this planet is eternal.
 </p>
 
 </div>
@@ -69,7 +122,7 @@ clubs, swords, iron bludgeons and great pieces of stone.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

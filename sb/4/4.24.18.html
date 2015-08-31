@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,91 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.18.html">4.24.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa eva puryam madhu-bhuk
-pancalesu sva-parsadaih
-upanitam balim grhnan
-stri-jito navidad bhayam
-<p></p>
+atmaramo 'pi yas tv asya
+loka-kalpasya radhase
+saktya yukto vicarati
+ghoraya bhagavan bhavah
+<br>
 <h2>Synonyms</h2>
-sah--he; eva--certainly; puryam--within the city; madhu-bhuk--enjoying sex life; pancalesu--in the
-kingdom of Pancala (five sense objects); sva-parsadaih--along with his followers; upanitam--brought;
-balim--taxes; grhnan--accepting; stri-jitah--conquered by women; na--did not; avidat--understand;
-bhayam--fear of death.
-<p></p>
+atma-aramah--self-satisfied; api--although he is; yah--one who is; tu--but; asya--this; loka--material
+world; kalpasya--when manifested; radhase--for the matter of helping its existence; saktya--potencies;
+yuktah--being engaged; vicarati--he acts; ghoraya--very dangerous; bhagavan--His Lordship; bhavah--Siva.
+<br>
 <h2>Translation</h2>
-King Puranjana collected taxes in the city known as Pancala and thus was able to engage in sexual
-indulgence. Being completely under the control of women, he could not understand that his life was
-passing away and that he was reaching the point of death.
-<p></p>
+Lord Siva, the most powerful demigod, second only to Lord Visnu, is self-sufficient. Although he has
+nothing to aspire for in the material world, for the benefit of those in the material world he is always
+busily engaged everywhere and is accompanied by his dangerous energies like goddess Kali and goddess
+Durga.
+<br>
 <h2>Purport</h2>
-Government men--including kings, presidents, secretaries and ministers--are in a position to utilize
-taxes collected from the citizens for sense gratification. It is stated in Srimad-Bhagavatam that in this Kaliyuga
-government men (rajanyas) and those connected with the government, as well as exalted
-government ministers, secretaries and presidents, will all simply collect taxes for sense gratification. The
-government is top-heavy, and without increasing taxes the government cannot maintain itself. When
-taxes are collected they are utilized for the sense gratification of the government officials. Such
-irresponsible politicians forget that there is a time when death will come to take away all their sense
-gratification. Some of them are convinced that after life everything is finished. This atheistic theory was
-conceived long ago by a philosopher called Carvaka. Carvaka recommended that man should live very
-opulently by either begging, borrowing or stealing. He also maintained that one should not be afraid of
-death, the next life, the past life or an impious life because after the body is burnt to ashes, everything is
-finished. This is the philosophy of those who are too much materially addicted. Such philosophizing will
-not save one from the danger of death, nor will it save one from an abominable afterlife.
+Lord Siva is known as the greatest devotee of the Supreme Personality of Godhead. He is known as the
+best of all types of Vaisnavas (vaisnavanam yatha sambhuh). Consequently, Lord Siva has a Vaisnava
+sampradaya, the disciplic succession known as the Rudra-sampradaya. Just as there is a Brahmasampradaya
+coming directly from Lord Brahma, the Rudra-sampradaya comes directly from Lord Siva.
+Lord Siva is one of the twelve great personalities, as stated in Srimad-Bhagavatam (6.3.20):
+svayambhur naradah sambhuh
+kumarah kapilo manuh
+prahlado janako bhismo
+balir vaiyasakir vayam
+These are twelve great authorities in preaching God consciousness. The name Sambhu means Lord Siva.
+His disciplic succession is also known as the Visnusvami-sampradaya, and the current Visnusvamisampradaya
+is also known as the Vallabha-sampradaya. The current Brahma-sampradaya is known as the
+Madhva-Gaudiya-sampradaya. Even though Lord Siva appeared to preach Mayavada philosophy, at the
+end of his pastime in the form of Sankaracarya, he preached the Vaisnava philosophy: bhaja govindam
+bhaja govindam bhaja govindam mudha-mate. He stressed worshiping Lord Krsna, or Govinda, three
+times in this verse and especially warned his followers that they could not possibly achieve deliverance, or
+mukti, simply by word jugglery and grammatical puzzles. If one is actually serious to attain mukti, he
+must worship Lord Krsna. That is Sripada Sankaracarya's last instruction.
+Herein it is mentioned that Lord Siva is always accompanied by his material energy (saktya ghoraya).
+Material energy--goddess Durga, or goddess Kali--is always under his control. Goddess Kali and Durga
+serve him by killing all the asuras, or demons. Sometimes Kali becomes so infuriated that she
+indiscriminately kills all kinds of asuras. There is a popular picture of goddess Kali in which she wears a
+garland composed of the heads of the asuras and holds in her left hand a captured head and in her right
+hand a great khadga, or chopper, for killing asuras. Great wars are symbolic representations of Kali's
+devastation of the asuras and are actually conducted by the goddess Kali.
+srsti-sthiti-pralaya-sadhana-saktir eka
+(Brahma-samhita 5.44)
+Asuras try to pacify the goddess Kali, or Durga, by worshiping her in material opulence, but when the
+asuras become too intolerable, goddess Kali does not discriminate in killing them wholesale. Asuras do
+not know the secret of the energy of Lord Siva, and they prefer to worship goddess Kali or Durga or Lord
+Siva for material benefit. Due to their demoniac character, they are reluctant to surrender to Lord Krsna,
+as indicated by Bhagavad-gita (7.15):
+na mam duskrtino mudhah
+prapadyante naradhamah
+mayayapahrta-jnana
+asuram bhavam asritah
+Lord Siva's duty is very dangerous because he has to employ the energy of goddess Kali (or Durga). In
+another popular picture the goddess Kali is sometimes seen standing on the prostrate body of Lord Siva,
+which indicates that sometimes Lord Siva has to fall down flat in order to stop goddess Kali from killing
+the asuras. Since Lord Siva controls the great material energy (goddess Durga), worshipers of Lord Siva
+attain very opulent positions within this material world. Under Lord Siva's direction, a worshiper of Lord
+Siva gets all kinds of material facilities. In contrast, a Vaisnava, or worshiper of Lord Visnu, gradually
+becomes poorer in material possessions because Lord Visnu does not trick His devotees into becoming
+materially entangled by possessions. Lord Visnu gives His devotees intelligence from within, as stated in
+Bhagavad-gita (10.10):
+tesam satata-yuktanam
+bhajatam priti-purvakam
+dadami buddhi-yogam tam
+yena mam upayanti te
+"To those who are constantly devoted and worship Me with love, I give the understanding by which
+they can come to Me."
+Thus Lord Visnu gives intelligence to His devotee so that the devotee can make progress on the path
+back home, back to Godhead. Since a devotee has nothing to do with any kind of material possession, he
+does not come under the control of goddess Kali, or the goddess Durga.
+Lord Siva is also in charge of the tamo-guna, or the mode of ignorance in this material world. His
+potency, the goddess Durga, is described as keeping all living entities in the darkness of ignorance (ya
+devi sarva-bhutesu nidra-rupam samsthita). Both Lord Brahma and Lord Siva are incarnations of Lord
+Visnu, but Lord Brahma is in charge of the creation whereas Lord Siva is in charge of the destruction,
+which he carries out with the help of his material energy, goddess Kali, or goddess Durga. Thus in this
+verse Lord Siva is described as being accompanied by dangerous potencies (saktya ghoraya), and that is
+the actual position of Lord Siva.
 </p>
 
 </div>
@@ -86,7 +173,7 @@ not save one from the danger of death, nor will it save one from an abominable a
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

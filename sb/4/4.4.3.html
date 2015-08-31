@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.4.3.html">4.4.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tato vinihsvasya sati vihaya tam
 sokena rosena ca duyata hrda
 pitror agat straina-vimudha-dhir grhan
 premnatmano yo 'rdham adat satam priyah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tatah--then; vinihsvasya--breathing very heavily; sati--Sati; vihaya--leaving; tam--him (Lord Siva);
 sokena--by bereavement; rosena--by anger; ca--and; duyata--afflicted; hrda--with the heart; pitroh--of her
 father; agat--she went; straina--by her womanly nature; vimudha--deluded; dhih--intelligence; grhan--to
 the house; premna--due to affection; atmanah--of his body; yah--who; ardham--half; adat--gave; satam--to
 the saintly; priyah--dear.
-<p></p>
+<br>
 <h2>Translation</h2>
 Thereafter Sati left her husband, Lord Siva, who had given her half his body due to affection. Breathing
 very heavily because of anger and bereavement, she went to the house of her father. This less intelligent
 act was due to her being a weak woman.
-<p></p>
+<br>
 <h2>Purport</h2>
 According to the Vedic conception of family life, the husband gives half his body to his wife, and the
 wife gives half of her body to her husband. In other words, a husband without a wife or a wife without a
@@ -86,7 +125,7 @@ misunderstanding. If she does so, it is understood to be due to her womanly weak
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

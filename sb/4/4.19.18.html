@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.18.html">4.19.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sprsantam padayoh premna
-vriditam svena karmana
-sata-kratum parisvajya
-vidvesam visasarja ha
-<p></p>
+tat tasya cadbhutam karma
+vicaksya paramarsayah
+namadheyam dadus tasmai
+vijitasva iti prabho
+<br>
 <h2>Synonyms</h2>
-sprsantam--touching; padayoh--the feet; premna--in ecstasy; vriditam--ashamed; svena--his own;
-karmana--by activities; sata-kratum--King Indra; parisvajya--embracing; vidvesam--envy; visasarja--gave
-up; ha--of course.
-<p></p>
+tat--that; tasya--his; ca--also; adbhutam--wonderful; karma--activity; vicaksya--after observing; paramarsayah--
+the great sages; namadheyam--the name; daduh--they offered; tasmai--to him; vijita-asvah--
+Vijitasva (he who has won the horse); iti--thus; prabho--my dear Lord Vidura.
+<br>
 <h2>Translation</h2>
-As King Indra was standing by, he became ashamed of his own activities and fell down before King
-Prthu to touch his lotus feet. But Prthu Maharaja immediately embraced him in great ecstasy and gave up
-all envy against him for his having stolen the horse meant for the sacrifice.
-<p></p>
-<h2>Purport</h2>
-There are many cases in which a person becomes an offender to the lotus feet of a Vaisnava and later
-becomes repentant. Here also we find that although the King of heaven, Indra, was so powerful that he
-accompanied Lord Visnu, he felt himself a great offender for stealing Prthu Maharaja's horse that was
-meant for sacrifice. An offender at the lotus feet of a Vaisnava is never excused by the Supreme
-Personality of Godhead. There are many instances illustrating this fact. Ambarisa Maharaja was offended
-by Durvasa Muni, a great sage and mystic yogi, and Durvasa also had to fall down at the lotus feet of
-Ambarisa Maharaja. Indra decided to fall down at the lotus feet of King Prthu, but the King was so
-magnanimous a Vaisnava that he did not want Maharaja Indra to fall down at his feet. Instead, King Prthu
-immediately picked him up and embraced him, and both of them forgot all the past incidents. Both King
-Indra and Maharaja Prthu were envious and angry with each other, but since both of them were
-Vaisnavas, or servants of Lord Visnu, it was their duty to adjust the cause of their envy. This is also a firstclass
-example of cooperative behavior between Vaisnavas. In the present days, however, because people
-are not Vaisnavas, they fight perpetually among one another and are vanquished without finishing the
-mission of human life. There is a great need to propagate the Krsna consciousness movement in the world
-so that even though people sometimes become angry and malicious toward one another, because of their
-being Krsna conscious such rivalry, competition and envy can be adjusted without difficulty.
+My dear Lord Vidura, when the great sages observed the wonderful prowess of the son of King Prthu,
+they all agreed to give him the name Vijitasva.
 </p>
 
 </div>
@@ -88,7 +108,7 @@ being Krsna conscious such rivalry, competition and envy can be adjusted without
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

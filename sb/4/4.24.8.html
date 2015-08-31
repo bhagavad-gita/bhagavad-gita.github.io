@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.8.html">4.24.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa pancala-patih putran
-pitr-vamsa-vivardhanan
-daraih samyojayam asa
-duhitrh sadrsair varaih
-<p></p>
+havirdhanad dhavirdhani
+vidurasuta sat sutan
+barhisadam gayam suklam
+krsnam satyam jitavratam
+<br>
 <h2>Synonyms</h2>
-sah--he; pancala-patih--the King of Pancala; putran--sons; pitr-vamsa--paternal family; vivardhanan--
-increasing; daraih--with wives; samyojayam asa--married; duhitrh--daughters; sadrsaih--qualified; varaih--
-with husbands.
-<p></p>
+havirdhanat--from Havirdhana; havirdhani--the name of the wife of Havirdhana; vidura--O Vidura;
+asuta--gave birth; sat--six; sutan--sons; barhisadam--of the name Barhisat; gayam--of the name Gaya;
+suklam--of the name Sukla; krsnam--of the name Krsna; satyam--of the name Satya; jitavratam--of the
+name Jitavrata.
+<br>
 <h2>Translation</h2>
-After this, King Puranjana, King of the Pancala country, in order to increase the descendants of his
-paternal family, married his sons with qualified wives and married his daughters with qualified husbands.
-<p></p>
-<h2>Purport</h2>
-According to the Vedic system, everyone should marry. One has to accept a wife because a wife will
-produce children, and the children in their turn will offer foodstuffs and funeral ceremonies so that the
-forefathers, wherever they may live, will be made happy. The offering of oblations in the name of Lord
-Visnu is called pindodaka, and it is necessary that the descendants of a family offer pinda to the
-forefathers.
-Not only was Puranjana, the King of Pancala, satisfied in his own sex life, but he arranged for the sex
-life of his 1,100 sons and 110 daughters. In this way one can elevate an aristocratic family to the platform
-of a dynasty. It is significant in this verse that Puranjana got both sons and daughters married. It is the
-duty of a father and mother to arrange for the marriage of their sons and daughters. That is the obligation
-in Vedic society. Sons and daughters should not be allowed freedom to intermingle with the opposite sex
-unless they are married. This Vedic social organization is very good in that it stops the promulgation of
-illicit sex life, or varna-sankara, which appears under different names in this present day. Unfortunately in
-this age although the father and mother are anxious to get their children married, the children refuse to
-get married by the arrangement of the parents. Consequently, the number of varna-sankara has increased
-throughout the world under different names.
+Havirdhana, the son of Maharaja Antardhana, had a wife named Havirdhani, who gave birth to six sons,
+named Barhisat, Gaya, Sukla, Krsna, Satya and Jitavrata.
 </p>
 
 </div>
@@ -86,7 +109,7 @@ throughout the world under different names.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

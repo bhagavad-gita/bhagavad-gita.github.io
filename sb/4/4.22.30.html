@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,54 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.30.html">4.22.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atha bhagavata yuyam
-priyah stha bhagavan yatha
-na mad bhagavatanam ca
-preyan anyo 'sti karhicit
-<p></p>
+indriyair visayakrstair
+aksiptam dhyayatam manah
+cetanam harate buddheh
+stambas toyam iva hradat
+<br>
 <h2>Synonyms</h2>
-atha--therefore; bhagavatah--devotees; yuyam--all of you; priyah--very dear to me; stha--you are;
-bhagavan--the Supreme Personality of Godhead; yatha--as; na--neither; mat--than me; bhagavatanam--of
-the devotees; ca--also; preyan--very dear; anyah--others; asti--there is; karhicit--at any time.
-<p></p>
+indriyaih--by the senses; visaya--the sense objects; akrstaih--being attracted; aksiptam--agitated;
+dhyayatam--always thinking of; manah--mind; cetanam--consciousness; harate--becomes lost; buddheh--
+of intelligence; stambah--big straws; toyam--water; iva--like; hradat--from the lake.
+<br>
 <h2>Translation</h2>
-You are all devotees of the Lord, and as such I appreciate that you are as respectable as the Supreme
-Personality of Godhead Himself. I know in this way that the devotees also respect me and that I am dear
-to them. Thus no one can be as dear to the devotees as I am.
-<p></p>
+When one's mind and senses are attracted to sense objects for enjoyment, the mind becomes agitated.
+As a result of continually thinking of sense objects, one's real consciousness almost becomes lost, like the
+water in a lake that is gradually sucked up by the big grass straws on its bank.
+<br>
 <h2>Purport</h2>
-It is said, vaisnavanam yatha sambhuh: Lord Siva is the best of all devotees. Therefore all devotees of
-Lord Krsna are also devotees of Lord Siva. In Vrndavana there is Lord Siva's temple called Gopisvara. The
-gopis used to worship not only Lord Siva but Katyayani, or Durga, as well, but their aim was to attain the
-favor of Lord Krsna. A devotee of Lord Krsna does not disrespect Lord Siva, but worships Lord Siva as the
-most exalted devotee of Lord Krsna. Consequently whenever a devotee worships Lord Siva, he prays to
-Lord Siva to achieve the favor of Krsna, and he does not request material profit. In Bhagavad-gita (7.20) it
-is said that generally people worship demigods for some material profit. Kamais tais tair hrta jnanah.
-Driven by material lust, they worship demigods, but a devotee never does so, for he is never driven by
-material lust. That is the difference between a devotee's respect for Lord Siva and an asura's respect for
-him. The asura worships Lord Siva, takes some benediction from him, misuses the benediction and
-ultimately is killed by the Supreme Personality of Godhead, who awards him liberation.
-Because Lord Siva is a great devotee of the Supreme Personality of Godhead, he loves all the devotees of
-the Supreme Lord. Lord Siva told the Pracetas that because they were devotees of the Lord, he loved them
-very much. Lord Siva was not kind and merciful only to the Pracetas; anyone who is a devotee of the
-Supreme Personality of Godhead is very dear to Lord Siva. Not only are the devotees dear to Lord Siva,
-but he respects them as much as he respects the Supreme Personality of Godhead. Similarly, devotees of
-the Supreme Lord also worship Lord Siva as the most dear devotee of Lord Krsna. They do not worship
-him as a separate Personality of Godhead. It is stated in the list of nama-aparadhas that it is an offense to
-think that the chanting of the name of Hari and the chanting of Hara, or Siva, are the same. The devotees
-must always know that Lord Visnu is the Supreme Personality of Godhead and that Lord Siva is His
-devotee. A devotee should be offered respect on the level of the Supreme Personality of Godhead, and
-sometimes even more respect. Indeed, Lord Rama, the Personality of Godhead Himself, sometimes
-worshiped Lord Siva. If a devotee is worshiped by the Lord, why should a devotee not be worshiped by
-other devotees on the same level with the Lord? This is the conclusion. From this verse it appears that
-Lord Siva blesses the asuras simply for the sake of formality. Actually he loves one who is devoted to the
-Supreme Personality of Godhead.
+In this verse it is very nicely explained how our original Krsna consciousness becomes polluted and we
+gradually become almost completely forgetful of our relationship with the Supreme Lord. In the previous
+verse it is recommended that we should always keep in touch with the devotional service of the Lord so
+that the blazing fire of devotional service can gradually burn into ashes material desires and we can
+become liberated from the repetition of birth and death. This is also how we can indirectly keep our
+staunch faith in the lotus feet of the Supreme Personality of Godhead. When the mind is allowed to think
+of sense gratification continuously, it becomes the cause of our material bondage. If our mind is simply
+filled with sense gratification, even though we want Krsna consciousness, by continuous practice we
+cannot forget the subject matter of sense gratification. If one takes up the sannyasa order of life but is not
+able to control the mind, he will think of objects of sense gratification--namely family, society, expensive
+house, etc. Even though he goes to the Himalayas or the forest, his mind will continue thinking of the
+objects of sense gratification. In this way, gradually one's intelligence will be affected. When intelligence is
+affected, one loses his original taste for Krsna consciousness.
+The example given here is very appropriate. If a big lake is covered all around by long kusa grass, just
+like columns, the waters dry up. Similarly, when the big columns of material desire increase, the clear
+water of consciousness is dried up. Therefore these columns of kusa grass should be cut or thrown away
+from the very beginning. Sri Caitanya Mahaprabhu has instructed that if from the very beginning we do
+not take care of unwanted grass in the paddy fields, the fertilizing agents or water will be used by them,
+and the paddy plants will dry up. The material desire for sense enjoyment is the cause of our falldown in
+this material world, and thus we suffer the threefold miseries and continuous birth, death, old age and
+disease. However, if we turn our desires toward the transcendental loving service of the Lord, our desires
+become purified. We cannot kill desires. We have to purify them of different designations. If we
+constantly think of being a member of a particular nation, society or family and continuously think about
+them, we become very strongly entangled in the conditioned life of birth and death. But if our desires are
+applied to the service of the Lord, they become purified, and thus we become immediately freed from
+material contamination.
 </p>
 
 </div>
@@ -98,7 +137,7 @@ Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

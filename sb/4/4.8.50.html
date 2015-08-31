@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.50.html">4.8.50</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.50</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/50"><b>50</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-payah stanabhyam susrava
-netra-jaih salilaih sivaih
-tadabhisicyamanabhyam
-vira vira-suvo muhuh
-<p></p>
+padbhyam nakha-mani-srenya
+vilasadbhyam samarcatam
+hrt-padma-karnika-dhisnyam
+akramyatmany avasthitam
+<br>
 <h2>Synonyms</h2>
-payah--milk; stanabhyam--from both breasts; susrava--began to flow down; netra-jaih--from the eyes;
-salilaih--by tears; sivaih--auspicious; tada--at that time; abhisicyamanabhyam--being wetted; vira--my dear
-Vidura; vira-suvah--of the mother who gave birth to a hero; muhuh--constantly.
-<p></p>
+padbhyam--by His lotus feet; nakha-mani-srenya--by the light of the jewellike nails on the toes;
+vilasadbhyam--glittering lotus feet; samarcatam--persons who are engaged in worshiping them; hrtpadma-
+karnika--the whorl of the lotus flower of the heart; dhisnyam--situated; akramya--seizing; atmani--
+in the heart; avasthitam--situated.
+<br>
 <h2>Translation</h2>
-My dear Vidura, Suniti was the mother of a great hero. Her tears, together with the milk flowing from
-her breasts, wet the whole body of Dhruva Maharaja. This was a great, auspicious sign.
-<p></p>
-<h2>Purport</h2>
-When Deities are installed, They are washed with milk, yogurt and water, and this ceremony is called
-abhiseka. In this verse it has been especially mentioned that the tears which flowed down from the eyes of
-Suniti were all-auspicious. This auspiciousness of the abhiseka ceremony performed by his beloved
-mother was an indication that in the very near future Dhruva Maharaja would be installed on the throne
-of his father. The history of Dhruva Maharaja's leaving home was that his father refused to give him a
-place on his lap, and Dhruva Maharaja determined that unless he got the throne of his father he would
-not come back. Now this abhiseka ceremony performed by his beloved mother was an indication that he
-would occupy the throne of Maharaja Uttanapada.
-It is also significant in this verse that Suniti, mother of Dhruva Maharaja, is described as vira-su, a
-mother who produced a great hero. There are many heroes in the world, but there is no comparison to
-Dhruva Maharaja, who was not only a heroic emperor of this planet, but also a great devotee. A devotee is
-also a great hero because he conquers the influence of maya. When Lord Caitanya inquired from
-Ramananda Raya about the most famous man in this world, the latter replied that anyone who is known
-as a great devotee of the Lord is to be accepted as the most famous.
+Real yogis meditate upon the transcendental form of the Lord as He stands on the whorl of the lotus of
+their hearts, the jewellike nails of His lotus feet glittering.
 </p>
 
 </div>
@@ -85,7 +109,7 @@ as a great devotee of the Lord is to be accepted as the most famous.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

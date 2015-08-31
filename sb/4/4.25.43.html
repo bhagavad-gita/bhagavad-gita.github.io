@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.43.html">4.25.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-patim parama-dharma-jnam
-vaidarbhi malayadhvajam
-premna paryacarad dhitva
-bhogan sa pati-devata
-<p></p>
+narada uvaca
+iti tau dam-pati tatra
+samudya samayam mithah
+tam pravisya purim rajan
+mumudate satam samah
+<br>
 <h2>Synonyms</h2>
-patim--her husband; parama--supreme; dharma-jnam--knower of religious principles; vaidarbhi--the
-daughter of Vidarbha; malaya-dhvajam--named Malayadhvaja; premna--with love and affection;
-paryacarat--served in devotion; hitva--giving up; bhogan--sense enjoyments; sa--she; pati-devata--
-accepting her husband as the Supreme Lord.
-<p></p>
+naradah uvaca--the great sage Narada spoke; iti--thus; tau--they; dam-pati--husband and wife; tatra--
+there; samudya--being equally enthusiastic; samayam--accepting one another; mithah--mutually; tam--in
+that place; pravisya--entering; purim--in that city; rajan--O King; mumudate--they enjoyed life; satam--
+one hundred; samah--years.
+<br>
 <h2>Translation</h2>
-The daughter of King Vidarbha accepted her husband all in all as the Supreme. She gave up all sensual
-enjoyment and in complete renunciation followed the principles of her husband, who was so advanced.
-Thus she remained engaged in his service.
-<p></p>
+The great sage Narada continued: My dear King, those two--the man and the woman--supporting one
+another through mutual understanding, entered that city and enjoyed life for one hundred years.
+<br>
 <h2>Purport</h2>
-Figuratively, King Malayadhvaja is the spiritual master, and his wife, Vaidarbhi, is the disciple. The
-disciple accepts the spiritual master as the Supreme Personality of Godhead. As stated by Visvanatha
-Cakravarti Thakura in Gurv-astaka, saksad-dharitvena: "One directly accepts the guru, the spiritual
-master, as the Supreme Personality of Godhead." One should accept the spiritual master not in the sense
-that the Mayavadi philosophers do, but in the way recommended here. Since the spiritual master is the
-most confidential servant of the Lord, he should be treated exactly like the Supreme Personality of
-Godhead. The spiritual master should never be neglected or disobeyed, like an ordinary person.
-If a woman is fortunate enough to be the wife of a pure devotee, she can serve her husband without any
-desire for sense gratification. If she remains engaged in the service of her exalted husband, she will
-automatically attain the spiritual perfections of her husband. If a disciple gets a bona fide spiritual master,
-simply by satisfying him, he can attain a similar opportunity to serve the Supreme personality of Godhead.
+One hundred years is significant in this connection because every human being is given the concession
+to live up to a hundred years. The span of life is different on different planets, according to the planet's
+distance from the sun. In other words, one hundred years on this planet is different from one hundred
+years on another planet. Lord Brahma lives for one hundred years according to time on the Brahmaloka
+planet, but one day of Brahma is equal to millions of years on this planet. Similarly, the days on the
+heavenly planets are equal to six months on this planet. On every planet, however, the span of life for a
+human being is roughly one hundred years. According to the life-spans on different planets, the standards
+of living also differ.
 </p>
 
 </div>
@@ -84,7 +120,7 @@ simply by satisfying him, he can attain a similar opportunity to serve the Supre
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

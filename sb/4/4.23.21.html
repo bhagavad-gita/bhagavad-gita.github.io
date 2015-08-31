@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.21.html">4.23.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-puranjana uvaca
-nunam tv akrta-punyas te
-bhrtya yesv isvarah subhe
-krtagahsv atmasat krtva
-siksa-dandam na yunjate
-<p></p>
+deham vipannakhila-cetanadikam
+patyuh prthivya dayitasya catmanah
+alaksya kincic ca vilapya sa sati
+citam atharopayad adri-sanuni
+<br>
 <h2>Synonyms</h2>
-puranjanah uvaca--Puranjana said; nunam--certainly; tu--then; akrta-punyah--those who are not pious;
-te--such; bhrtyah--servants; yesu--unto whom; isvarah--the masters; subhe--O most auspicious one; krtaagahsu--
-having committed an offense; atmasat--accepting as their own; krtva--doing so; siksa--instructive;
-dandam--punishment; na yunjate--do not give.
-<p></p>
+deham--body; vipanna--completely failing; akhila--all; cetana--feeling; adikam--symptoms; patyuh--of
+her husband; prthivyah--the world; dayitasya--of the merciful; ca atmanah--also of herself; alaksya--by
+seeing; kincit--very little; ca--and; vilapya--lamenting; sa--she; sati--the chaste; citam--unto the fire; atha--
+now; aropayat--placed; adri--hill; sanuni--on the top.
+<br>
 <h2>Translation</h2>
-King Puranjana said: My dear beautiful wife, when a master accepts a servant as his own man, but does
-not punish him for his offenses, the servant must be considered unfortunate.
-<p></p>
+When Queen Arci saw that her husband, who had been so merciful to her and the earth, no longer
+showed symptoms of life, she lamented for a little while and then built a fiery pyre on top of a hill and
+placed the body of her husband on it.
+<br>
 <h2>Purport</h2>
-According to Vedic civilization, domestic animals and servants are treated exactly like one's own
-children. Animals and children are sometimes punished not out of vengeance but out of love. Similarly, a
-master sometimes punishes his servant, not out of vengeance but out of love, to correct him and bring
-him to the right point. Thus King Puranjana took his punishment dealt by his wife, the Queen, as mercy
-upon him. He considered himself the most obedient servant of the Queen. She was angry at him for his
-sinful activities--namely, hunting in the forest and leaving her at home. King Puranjana accepted the
-punishment as actual love and affection from his wife. In the same way, when a person is punished by the
-laws of nature, by the will of God, he should not be disturbed. A real devotee thinks in this way. When a
-devotee is put into an awkward position, he takes it as the mercy of the Supreme Lord.
-tat te 'nukampam susamiksamano
-bhunjana evatma-krtam vipakam
-hrd-vag-vapurbhir vidadhan namas te
-jiveta yo mukti-pade sa daya-bhak
-(Bhag. 10.14.8)
-This verse states that the devotee accepts a reversal of his position in life as a benediction by the Lord
-and consequently offers the Lord more obeisances and prayers, thinking that the punishment is due to his
-past misdeeds and that the Lord is punishing him very mildly. The punishment awarded by the state or by
-God for one's own faults is actually for one's benefit. In the Manu-samhita it is said that the King should
-be considered merciful when he condemns a murderer to death because a murderer punished in this life
-becomes freed from his sinful activity and in the next life takes birth cleared of all sins. If one accepts
-punishment as a reward dealt by the master, he becomes intelligent enough not to commit the same
-mistake again.
+After seeing all the life symptoms in her husband stop, the Queen lamented for a while. The word kincit
+means "for a little while." The Queen was completely aware that her husband was not dead, although the
+symptoms of life--action, intelligence and sense perception--had ceased. As stated in Bhagavad-gita (2.13):
+dehino 'smin yatha dehe
+kaumaram yauvanam jara
+tatha dehantara-praptir
+dhiras tatra na muhyati
+"As the embodied soul continually passes, in this body, from boyhood to youth to old age, the soul
+similarly passes into another body at death. The self-realized soul is not bewildered by such a change."
+When a living entity transfers from one body to another, a process generally known as death, a sane
+man does not lament, for he knows that the living entity is not dead but is simply transferred from one
+body to another. The Queen should have been afraid of being alone in the forest with the body of her
+husband, but since she was a great wife of a great personality, she lamented for a while but immediately
+understood that she had many duties to perform. Thus instead of wasting her time in lamentation, she
+immediately prepared a fiery pyre on top of a hill and then placed the body of her husband on it to be
+burned.
+Maharaja Prthu is described here as dayita, for not only was he the king of the earth, but he treated the
+earth as his protected child. Similarly, he protected his wife also. It was the duty of the king to give
+protection to everyone, especially to the earth or land which he ruled, as well as the citizens and his
+family members. Since Prthu Maharaja was a perfect king, he gave protection to everyone, and therefore
+he is described here as dayita.
 </p>
 
 </div>
@@ -95,7 +133,7 @@ mistake again.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

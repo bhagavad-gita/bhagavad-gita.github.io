@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.52.html">4.7.52</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.52</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/52"><b>52</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam bhagavato rupam
-subhadram dhyayato manah
-nirvrtya paraya turnam
-sampannam na nivartate
-<p></p>
+tasmin brahmany advitiye
+kevale paramatmani
+brahma-rudrau ca bhutani
+bhedenajno 'nupasyati
+<br>
 <h2>Synonyms</h2>
-evam--thus; bhagavatah--of the Supreme Personality of Godhead; rupam--form; su-bhadram--very
-auspicious; dhyayatah--meditating; manah--the mind; nirvrtya--being freed from all material
-contamination; paraya--transcendental; turnam--very soon; sampannam--being enriched; na--never;
-nivartate--come down.
-<p></p>
+tasmin--Him; brahmani--the Supreme Brahman; advitiye--without a second; kevale--being one; paramaatmani--
+the Supersoul; brahma-rudrau--both Brahma and Siva; ca--and; bhutani--the living entities;
+bhedena--with separation; ajnah--one who is not properly conversant; anupasyati--thinks.
+<br>
 <h2>Translation</h2>
-One who meditates in this way, concentrating his mind upon the always auspicious form of the Lord, is
-very soon freed from all material contamination, and he does not come down from meditation upon the
-Lord.
-<p></p>
+The Lord continued: One who is not in proper knowledge thinks that demigods like Brahma and Siva
+are independent, or he even thinks that the living entities are independent.
+<br>
 <h2>Purport</h2>
-This fixed meditation is called samadhi, or trance. A person constantly engaged in the transcendental
-loving service of the Lord cannot be deviated from meditating on the form of the Lord, as described
-herein. The arcana-marga, or the devotional path prescribed in the Pancaratra system of devotional service
-for worshiping the Deity in the temple, makes the devotee think constantly of the Lord; that is samadhi,
-or trance. One who practices in this way cannot deviate from the service of the Lord, and that makes him
-perfect in the mission of human life.
+The living entities, including Brahma, are not independently separated, but are counted within the
+marginal potency of the Supreme Lord. The Supreme Lord, being the Supersoul in every living entity,
+including Lord Brahma and Lord Siva, is directing everyone in the activities of the material modes of
+nature. No one can act independently of the sanction of the Lord, and therefore, indirectly, no one is
+different from the Supreme Person--certainly not Brahma and Rudra, who are incarnations of the material
+nature's modes of passion and ignorance.
 </p>
 
 </div>
@@ -79,7 +116,7 @@ perfect in the mission of human life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

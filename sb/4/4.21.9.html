@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.9.html">4.21.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sanat-kumaro bhagavan
-yad ahadhyatmikam param
-yogam tenaiva purusam
-abhajat purusarsabhah
-<p></p>
+vidura uvaca
+so 'bhisiktah prthur viprair
+labdhasesa-surarhanah
+bibhrat sa vaisnavam tejo
+bahvor yabhyam dudoha gam
+<br>
 <h2>Synonyms</h2>
-sanat-kumarah--Sanat-kumara; bhagavan--most powerful; yat--that which; aha--said; adhyatmikam--
-spiritual advancement of life; param--ultimate; yogam--mysticism; tena--by that; eva--certainly; purusam--
-the Supreme Person; abhajat--worshiped; purusa-rsabhah--the best of human beings.
-<p></p>
+vidurah uvaca--Vidura said; sah--he (King Prthu); abhisiktah--when enthroned; prthuh--King Prthu;
+vipraih--by the great sages and brahmanas; labdha--achieved; asesa--innumerable; sura-arhanah--
+presentations by the demigods; bibhrat--expanding; sah--he; vaisnavam--who has received through Lord
+Visnu; tejah--strength; bahvoh--arms; yabhyam--by which; dudoha--exploited; gam--the earth.
+<br>
 <h2>Translation</h2>
-Thus the best amongst human beings, Maharaja Prthu, followed that path of spiritual advancement
-which was advised by Sanat-kumara. That is to say, he worshiped the Supreme Personality of Godhead,
-Krsna.
-<p></p>
+Vidura said: My dear brahmana Maitreya, it is very enlightening to understand that King Prthu was
+enthroned by the great sages and brahmanas. All the demigods presented him with innumerable gifts, and
+he also expanded his influence upon personally receiving strength from Lord Visnu. Thus he greatly
+developed the earth.
+<br>
 <h2>Purport</h2>
-In this verse it is clearly said that Maharaja Prthu, practicing the pranayama-yoga system, engaged in the
-service of the Supreme personality of Godhead as advised by the saint Sanat-kumara. In this verse the
-words purusam abhajat purusarsabhah are significant: purusarsabha refers to Maharaja Prthu, the best
-amongst human beings, and purusam refers to the Supreme Personality of Godhead. The conclusion is
-that the best man amongst all men engages in the service of the Supreme Person. One purusa is
-worshipable, and the other purusa is the worshiper. When the purusa who worships, the living entity,
-thinks of becoming one with the Supreme person, he simply becomes bewildered and falls into the
-darkness of ignorance. As stated by Lord Krsna in Bhagavad-gita (2.12), all living entities assembled in the
-battlefield, as well as Krsna Himself, were also present in the past as individuals and would continue to be
-present in the future as individuals also. Therefore the two purusas, the living entity and the Supreme
-Personality of Godhead, never lose their respective identities.
-Actually, one who is self-realized engages himself in the service of the Lord perpetually, both in this life
-and in the next. Indeed, for devotees there is no difference between this life and the next. In this life a
-neophyte devotee is trained to serve the Supreme personality of Godhead, and in the next life he
-approaches that Supreme Person in Vaikuntha and renders the same devotional service. Even for the
-neophyte devotee, devotional service is considered brahma-bhuyaya kalpate. Devotional service to the
-Lord is never considered a material activity. Since he is acting on the brahma-bhuta platform, a devotee is
-already liberated. He therefore has no need to practice any other type of yoga in order to approach the
-brahma-bhuta stage. If the devotee adheres strictly to the orders of the spiritual master, follows the rules
-and regulations and chants the Hare Krsna mantra, it should be concluded that he is already at the
-brahma-bhuta stage, as confirmed in Bhagavad-gita (14.26):
-mam ca yo 'vyabhicarena
-bhakti-yogena sevate
-sa gunan samatityaitan
-brahma-bhuyaya kalpate
-"One who is engaged in full devotional service, unfailing in all circumstances, at once transcends the
-modes of material nature and thus comes to the level of Brahman."
+Because Prthu Maharaja was an empowered incarnation of Lord Visnu and was naturally a great
+Vaisnava devotee of the Lord, all the demigods were pleased with him and presented different gifts to help
+him in exercising his royal power, and the great sages and saintly persons also joined in his coronation.
+Thus blessed by them, he ruled over the earth and exploited its resources for the greatest satisfaction of
+the people in general. This has already been explained in the previous chapters regarding the activities of
+King Prthu. As will be apparent from the next verse, every executive head of state should follow in the
+footsteps of Maharaja Prthu in ruling over his kingdom. Regardless of whether the chief executive is a
+king or president, or whether the government is monarchical or democratic, this process is so perfect that
+if it is followed, everyone will become happy, and thus it will be very easy for all to execute devotional
+service to the Supreme personality of Godhead.
 </p>
 
 </div>
@@ -99,7 +124,7 @@ modes of material nature and thus comes to the level of Brahman."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.23.html">4.15.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-visphurjayann aja-gavam dhanuh svayam
-yadacarat ksmam avisahyam ajau
-tada nililyur disi disy asanto
-langulam udyamya yatha mrgendrah
-<p></p>
+tasmat parokse 'smad-upasrutany alam
+karisyatha stotram apicya-vacah
+saty uttamasloka-gunanuvade
+jugupsitam na stavayanti sabhyah
+<br>
 <h2>Synonyms</h2>
-visphurjayan--vibrating; aja-gavam--made of the horns of goats and bulls; dhanuh--his bow; svayam--
-personally; yada--when; acarat--will travel; ksmam--on the earth; avisahyam--irresistible; ajau--in battle;
-tada--at that time; nililyuh--will hide themselves; disi disi--in all directions; asantah--demoniac men;
-langulam--tail; udyamya--keeping high; yatha--as; mrgendrah--the lion.
-<p></p>
+tasmat--therefore; parokse--in some future time; asmat--my; upasrutani--about the qualities spoken of;
+alam--sufficiently; karisyatha--you will be able to offer; stotram--prayers; apicya-vacah--O gentle reciters;
+sati--being the proper engagement; uttama-sloka--of the Supreme Personality of Godhead; guna--of the
+qualities; anuvade--discussion; jugupsitam--to an abominable person; na--never; stavayanti--offer prayers;
+sabhyah--persons who are gentle.
+<br>
 <h2>Translation</h2>
-When the lion travels in the forest with its tail turned upward, all menial animals hide themselves.
-Similarly, when King Prthu will travel over his kingdom and vibrate the string of his bow, which is made
-of the horns of goats and bulls and is irresistible in battle, all demoniac rogues and thieves will hide
-themselves in all directions.
-<p></p>
+O gentle reciters, offer such prayers in due course of time, when the qualities of which you have spoken
+actually manifest themselves in me. The gentle who offer prayers to the Supreme Personality of Godhead
+do not attribute such qualities to a human being, who does not actually have them.
+<br>
 <h2>Purport</h2>
-It is very appropriate to compare a powerful king like Prthu to a lion. In India, ksatriya kings are still
-called singh, which means "lion." Unless rogues, thieves and other demoniac people in a state are afraid of
-the executive head, who rules the kingdom with a strong hand, there cannot be peace or prosperity in the
-state. Thus it is most regrettable when a woman becomes the executive head instead of a lionlike king. In
-such a situation the people are considered very unfortunate.
+Gentle devotees of the Supreme Personality of Godhead know perfectly well who is God and who is not.
+Nondevotee impersonalists, however, who have no idea what God is and who never offer prayers to the
+Supreme Personality of Godhead, are always interested in accepting a human being as God and offering
+such prayers to him. This is the difference between a devotee and a demon. Demons manufacture their
+own gods, or a demon himself claims to be God, following in the footsteps of Ravana and Hiranyakasipu.
+Although Prthu Maharaja was factually an incarnation of the Supreme Personality of Godhead, he rejected
+those praises because the qualities of the Supreme Person were not yet manifest in him. He wanted to
+stress that one who does not actually possess these qualities should not try to engage his followers and
+devotees in offering him glory for them, even though these qualities might be manifest in the future. If a
+man who does not factually possess the attributes of a great personality engages his followers in praising
+him with the expectation that such attributes will develop in the future, that sort of praise is actually an
+insult.
 </p>
 
 </div>
@@ -79,7 +125,7 @@ such a situation the people are considered very unfortunate.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

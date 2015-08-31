@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.65.html">4.8.65</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.65</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/65"><b>65</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-uttanapado rajarsih
-prabhavam tanayasya tam
-srutva drstvadbhutatamam
-prapede vismayam param
-<p></p>
+rajovaca
+suto me balako brahman
+strainenakarunatmana
+nirvasitah panca-varsah
+saha matra mahan kavih
+<br>
 <h2>Synonyms</h2>
-uttanapadah--King Uttanapada; raja-rsih--great saintly king; prabhavam--influence; tanayasya--of his
-son; tam--that; srutva--hearing; drstva--seeing; adbhuta--wonderful; tamam--in the superlative degree;
-prapede--happily felt; vismayam--wonder; param--supreme.
-<p></p>
+raja uvaca--the King replied; sutah--son; me--my; balakah--tender boy; brahman--my dear brahmana;
+strainena--one who is too addicted to his wife; akaruna-atmana--one who is very hard of heart and
+without mercy; nirvasitah--is banished; panca-varsah--although the boy is five years old; saha--with;
+matra--mother; mahan--great personality; kavih--devotee.
+<br>
 <h2>Translation</h2>
-The saintly King Uttanapada, hearing of the glorious deeds of Dhruva Maharaja and personally seeing
-also how influential and great he was, felt very satisfied, for Dhruva's activities were wonderful to the
-supreme degree.
-<p></p>
+The King replied: O best of the brahmanas, I am very much addicted to my wife, and I am so fallen that
+I have abandoned all merciful behavior, even to my son, who is only five years old. I have banished him
+and his mother, even though he is a great soul and a great devotee.
+<br>
 <h2>Purport</h2>
-When Dhruva Maharaja was in the forest executing his austerities, his father, Uttanapada, heard
-everything about his very wonderful activities. Although Dhruva Maharaja was the son of a king and was
-only five years old, he went to the forest and executed devotional service under strict austerity. Therefore
-his acts were all wonderful, and when he came back home, naturally, because of his spiritual
-qualifications, he became very popular amongst the citizens. He must have performed many wonderful
-activities by the grace of the Lord. No one is more satisfied than the father of a person who is credited
-with glorious activities. Maharaja Uttanapada was not an ordinary king; he was a rajarsi, a saintly king.
-Formerly this earth was ruled by one saintly king only. Kings were trained to become saintly; therefore
-they had no other concern than the welfare of the citizens. These saintly kings were properly trained, and
-as mentioned in Bhagavad-gita also, the science of God, or the yoga system of devotional service known as
-Bhagavad-gita, was spoken to the saintly king of the sun planet, and gradually it descended through the
-ksatriya kings who were generated from the sun and the moon. If the head of the government is saintly,
-certainly the citizens become saintly, and they are very happy because both their spiritual and physical
-needs and hankerings are satisfied.
+In this verse there are some specific words which are to be understood very carefully. The King said that
+since he was very much addicted to his wife, he had lost all his mercy. That is the result of becoming too
+affectionate toward women. The King had two wives; the first wife was Suniti, and the second was Suruci.
+He was too attached to the second wife, however, so he could not behave well with Dhruva Maharaja.
+That was the cause of Dhruva's leaving home to perform austerities. Although as a father the King was
+affectionate toward his son, he minimized his affection for Dhruva Maharaja because he was too much
+addicted to the second wife. Now he was repenting that both Dhruva Maharaja and his mother, Suniti,
+were practically banished. Dhruva Maharaja went to the forest, and since his mother was being neglected
+by the King, she was therefore almost banished also. The King repented having banished his boy, for
+Dhruva was only five years old and a father should not banish his wife and children or neglect their
+maintenance. Repentant over his neglect of both Suniti and her son, he was morose, and his face appeared
+withered. According to Manu-smrti, one should never desert his wife and children. In a case where the
+wife and children are disobedient and do not follow the principles of home life, they are sometimes given
+up. But in the case of Dhruva Maharaja this was not applicable because Dhruva was very mannerly and
+obedient. Moreover, he was a great devotee. Such a person is never to be neglected, yet the King was
+obliged to banish him. Now he was very sorry.
 </p>
 
 </div>
@@ -86,7 +129,7 @@ needs and hankerings are satisfied.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.18.html">4.5.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kharjuramratakamradyaih
-priyala-madhukengudaih
-druma-jatibhir anyais ca
-rajitam venu-kicakaih
-<p></p>
+sarva evartvijo drstva
+sadasyah sa-divaukasah
+tair ardyamanah subhrsam
+gravabhir naikadhadravan
+<br>
 <h2>Synonyms</h2>
-kharjura-amrataka-amra-adyaih--with kharjuras, amratakas, amras and others; priyala-madhukaingudaih--
-with priyalas, madhukas and ingudas; druma-jatibhih--with varieties of trees; anyaih--other;
-ca--and; rajitam--decorated; venu-kicakaih--with venus (bamboos) and kicakas (hollow bamboos).
-<p></p>
+sarve--all; eva--certainly; rtvijah--the priests; drstva--after seeing; sadasyah--all the members assembled
+in the sacrifice; sa-divaukasah--along with the demigods; taih--by those (stones); ardyamanah--being
+disturbed; su-bhrsam--very greatly; gravabhih--by stones; na ekadha--in different directions; adravan--
+began to disperse.
+<br>
 <h2>Translation</h2>
-There are mango trees, priyala, madhuka and inguda. Besides these there are other trees, like thin
-bamboos, kicaka and varieties of other bamboo trees, all decorating the tract of Kailasa Hill.
+There was a continuous shower of stones, and all the priests and other members assembled at the
+sacrifice were put into immense misery. For fear of their lives, they dispersed in different directions.
 </p>
 
 </div>
@@ -69,7 +109,7 @@ bamboos, kicaka and varieties of other bamboo trees, all decorating the tract of
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

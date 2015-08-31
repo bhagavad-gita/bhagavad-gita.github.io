@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.33.html">4.23.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na vidama vayam samyak
-kartaram purusarsabha
-atmanas ca parasyapi
-gotram nama ca yat-krtam
-<p></p>
+trih krtva idam akarnya
+naro nary athavadrta
+aprajah suprajatamo
+nirdhano dhanavattamah
+<br>
 <h2>Synonyms</h2>
-na--do not; vidama--know; vayam--I; samyak--perfectly; kartaram--maker; purusa-rsabha--O best of
-human beings; atmanah--of myself; ca--and; parasya--of others; api--also; gotram--family history; nama--
-name; ca--and; yat-krtam--which has been made by whom.
-<p></p>
+trih--thrice; krtvah--repeating; idam--this; akarnya--hearing; narah--man; nari--woman; athava--or;
+adrta--in great respect; aprajah--one who has no children; su-praja-tamah--surrounded by many children;
+nirdhanah--without any money; dhana-vat--rich; tamah--the greatest.
+<br>
 <h2>Translation</h2>
-The girl said: O best of human beings, I do not know who has begotten me. I cannot speak to you
-perfectly about this. Nor do I know the names or the origin of the associates with me.
-<p></p>
+It does not matter whether one is a man or woman. Anyone who, with great respect, hears this narration
+of Maharaja Prthu will become the father of many children if he is without children and will become the
+richest of men if he is without money.
+<br>
 <h2>Purport</h2>
-The living entity is ignorant of his origin. He does not know why this material world was created, why
-others are working in this material world and what the ultimate source of this manifestation is. No one
-knows the answers to these questions, and this is called ignorance. By researching into the origin of life,
-important scientists are finding some chemical compositions or cellular combinations, but actually no one
-knows the original source of life within this material world. The phrase brahma jijnasa is used to indicate
-an inquisitiveness to know the original source of our existence in this material world. No philosopher,
-scientist or politician actually knows wherefrom we have come, why we are here struggling so hard for
-existence and where we will go. Generally people are of the opinion that we are all here accidentally and
-that as soon as these bodies are finished all our dramatic activities will be finished and we will become
-zero. Such scientists and philosophers are impersonalists and voidists. In this verse the girl is expressing
-the actual position of the living entity. She cannot tell Puranjana her father's name because she does not
-know from where she has come. Nor does she know why she is present in that place. She frankly says that
-she does not know anything about all this. This is the position of the living entity in the material world.
-There are so many scientists, philosophers and big leaders, but they do not know wherefrom they have
-come, nor do they know why they are busy within this material world to obtain a position of so-called
-happiness. In this material world we have many nice facilities for living, but we are so foolish that we do
-not ask who has made this world habitable for us and has arranged it so nicely. Everything is functioning
-in order, but people foolishly think that they are produced by chance in this material world and that after
-death they will become zero. They think that this beautiful place of habitation will automatically remain.
+Materialistic persons who are very fond of money and great families worship different demigods to
+attain their desires, especially goddess Durga, Lord Siva and Lord Brahma. Such materialistic persons are
+called sriyaisvarya-prajepsavah. Sri means "beauty," aisvarya means "riches," praja means "children," and
+ipsavah means "desiring." As described in the Second Canto of Srimad-Bhagavatam, one has to worship
+various demigods for different types of benedictions. However, here it is indicated that simply by hearing
+of the life and character of Maharaja Prthu, one can have both riches and children in enormous quantities.
+One simply has to read and understand the history, the life and activities of Prthu Maharaja. It is advised
+that one read them at least three times. Those who are materially afflicted will so benefit by hearing of the
+Supreme Lord and His devotees that they need not go to any demigod. The word suprajatamah
+("surrounded by many children") is very significant in this verse, for one may have many children but
+may not have any qualified children. Here, however, it is stated (su-prajatamah) that all the children thus
+attained would be qualified in education, wealth, beauty and strength--everything complete.
 </p>
 
 </div>
@@ -90,7 +123,7 @@ death they will become zero. They think that this beautiful place of habitation 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

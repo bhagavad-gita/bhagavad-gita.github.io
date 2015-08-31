@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.34.html">4.19.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-iti vainyasya rajarseh
-pratinandyarthavad vacah
-pujito 'nugrhitvainam
-gantum cakre 'cyuto matim
-<p></p>
+masmin maharaja krthah sma cintam
+nisamayasmad-vaca adrtatma
+yad dhyayato daiva-hatam nu kartum
+mano 'tirustam visate tamo 'ndham
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great sage Maitreya continued to speak; iti--thus; vainyasya--of the son of King
-Vena (Prthu Maharaja); raja-rseh--of the saintly King; pratinandya--appreciating; artha-vat vacah--the
-prayers, which were full of meaning; pujitah--being worshiped; anugrhitva--sufficiently benedicting;
-enam--King Prthu; gantum--to go from that place; cakre--made up; acyutah--the infallible Lord; matim--
-His mind.
-<p></p>
+ma--do not; asmin--in this; maha-raja--O King; krthah--do; sma--as done in the past; cintam--agitation
+of the mind; nisamaya--please consider; asmat--my; vacah--words; adrta-atma--being very respectful; yat--
+because; dhyayatah--of him who is contemplating; daiva-hatam--that which is thwarted by providence;
+nu--certainly; kartum--to do; manah--the mind; ati-rustam--very angry; visate--enters; tamah--darkness;
+andham--dense.
+<br>
 <h2>Translation</h2>
-The great saint Maitreya told Vidura: The Supreme Personality of Godhead amply appreciated the
-meaningful prayers of Maharaja Prthu. Thus, after being properly worshiped by the King, the Lord blessed
-him and decided to depart.
-<p></p>
+My dear King, do not be agitated and anxious because your sacrifices have not been properly executed
+due to providential impediments. Kindly take my words with great respect. We should always remember
+that if something happens by providential arrangement, we should not be very sorry. The more we try to
+rectify such reversals, the more we enter into the darkest region of materialistic thought.
+<br>
 <h2>Purport</h2>
-Most important in this verse are the words pratinandyarthavad vacah, which indicate that the Lord
-appreciated the very meaningful prayers of the King. When a devotee prays to the Lord, it is not to ask for
-material benefits but to ask the Lord for His favor; he prays that he may be engaged in the service of the
-Lord's lotus feet birth after birth. Lord Caitanya therefore uses the words mama janmani janmani, which
-mean "birth after birth," because a devotee is not even interested in stopping the repetition of birth. The
-Lord and the devotee appear in this material world birth after birth, but such births are transcendental. In
-the Fourth Chapter of Bhagavad-gita the Lord informed Arjuna that both He and Arjuna had undergone
-many, many births previously, but the Lord remembered everything about them whereas Arjuna had
-forgotten. The Lord and His confidential devotees appear many times to fulfill the Lord's mission, but
-since such births are transcendental, they are not accompanied by the miserable conditions of material
-birth, and they are therefore called divya, transcendental.
-One must understand the transcendental birth of the Lord and the devotee. The purpose of the Lord's
-taking birth is to establish devotional service, which is the perfect system of religion, and the purpose of
-the birth of a devotee is to broadcast the same system of religion, or the bhakti cult, all over the world.
-Prthu Maharaja was an incarnation of the power of the Lord to spread the bhakti cult, and the Lord
-blessed him to remain fixed in his position. Thus when the King refused to accept any material
-benediction, the Lord appreciated that refusal very much. Another significant word in this verse is acyuta,
-which means "infallible." Although the Lord appears in this material world, He is never to be considered
-one of the conditioned souls, who are all fallible. When the Lord appears, He remains in His spiritual
-position, uncontaminated by the modes of material nature, and therefore in Bhagavad-gita the Lord
-expresses the quality of His appearance as atma-mayaya, "performed by internal potency." The Lord,
-being infallible, is not forced by material nature to take birth in this material world. He appears in order to
-reestablish the perfect order of religious principles and to vanquish the demoniac influence in human
-society.
+Sometimes the saintly or very religious person also has to meet with reversals in life. Such incidents
+should be taken as providential. Although there may be sufficient cause for being unhappy, one should
+avoid counteracting such reversals, for the more we become implicated in rectifying such reversals, the
+more we enter into the darkest regions of material anxiety. Lord Krsna has also advised us in this
+connection. We should tolerate things instead of becoming agitated.
 </p>
 
 </div>
@@ -99,7 +119,7 @@ society.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

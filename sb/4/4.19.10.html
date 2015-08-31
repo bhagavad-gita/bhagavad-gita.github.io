@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.10.html">4.19.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-parityakta-gunah samyag
-darsano visadasayah
-santim me samavasthanam
-brahma kaivalyam asnute
-<p></p>
+iti cadhoksajesasya
+prthos tu paramodayam
+asuyan bhagavan indrah
+pratighatam acikarat
+<br>
 <h2>Synonyms</h2>
-parityakta-gunah--one who is disassociated from the material modes of nature; samyak--equal;
-darsanah--whose vision; visada--uncontaminated; asayah--whose mind or heart; santim--peace; me--My;
-samavasthanam--equal situation; brahma--spirit; kaivalyam--freedom from material contamination;
-asnute--achieves.
-<p></p>
+iti--thus; ca--also; adhoksaja-isasya--who accepted Adhoksaja as his worshipable Lord; prthoh--of King
+Prthu; tu--then; parama--the topmost; udayam--opulence; asuyan--being envious of; bhagavan--the most
+powerful; indrah--the King of heaven; pratighatam--impediments; acikarat--made.
+<br>
 <h2>Translation</h2>
-When the heart is cleansed of all material contamination, the devotee's mind becomes broader and
-transparent, and he can see things equally. At that stage of life there is peace, and one is situated equally
-with Me as sac-cid-ananda-vigraha.
-<p></p>
+King Prthu was dependent on the Supreme Personality of Godhead, who is known as Adhoksaja.
+Because King Prthu Performed so many sacrifices, he was superhumanly enhanced by the mercy of the
+Supreme Lord. King Prthu's opulence, however, could not be tolerated by the King of heaven, Indra, who
+tried to impede the progress of his opulence.
+<br>
 <h2>Purport</h2>
-The Mayavada conception of kaivalya and that of the Vaisnava community is different. The Mayavadi
-thinks that as soon as one is free from all material contamination, he is merged into the existence of the
-Supreme. The Vaisnava philosopher's conception of kaivalya is different. He understands both his position
-and the position of the Supreme Personality of Godhead. In the uncontaminated condition, the living
-entity understands that he is the eternal servitor of the Supreme, and that is called Brahman realization,
-the spiritual perfection of the living entity. This rapport is very easily achieved. As stated in Bhagavad-gita,
-when one is engaged in the transcendental loving service of the Lord, he is immediately situated on the
-transcendental platform of kaivalya, or Brahman.
+In this verse there are three significant purposes expressed in the words adhoksaja, bhagavan indrah and
+prthoh. Maharaja Prthu is an incarnation of Visnu, yet he is a great devotee of Lord Visnu. Although an
+empowered incarnation of Lord Visnu, he is nonetheless a living entity. As such, he must be a devotee of
+the Supreme Personality of Godhead. Although one is empowered by the Supreme Personality of Godhead
+and is an incarnation, he should not forget his eternal relationship with the Supreme Personality of
+Godhead. In Kali-yuga there are many self-made incarnations, rascals, who declare themselves to be the
+Supreme Personality of Godhead. The words bhagavan indrah indicate that a living entity can even be as
+exalted and powerful as King Indra, for even King Indra is an ordinary living entity in the material world
+and possesses the four defects of the conditioned soul. King Indra is described herein as bhagavan, which
+is generally used in reference to the Supreme Personality of Godhead. In this case, however, King Indra is
+addressed as bhagavan because he has so much power in his hands. Despite his becoming bhagavan, he is
+envious of the incarnation of God, Prthu Maharaja. The defects of material life are so strong that due to
+contamination King Indra becomes envious of an incarnation of God.
+We should try to understand, therefore, how a conditioned soul becomes fallen. The opulence of King
+Prthu was not dependent on material conditions. As described in this verse, he was a great devotee of
+Adhoksaja. The word adhoksaja indicates the Personality of Godhead, who is beyond the expression of
+mind and words. However, the Supreme Personality of Godhead appears before the devotee in His
+original form of eternal bliss and knowledge. The devotee is allowed to see the Supreme Lord face to face,
+although the Lord is beyond the expression of our senses and beyond our direct perception.
 </p>
 
 </div>
@@ -81,7 +131,7 @@ transcendental platform of kaivalya, or Brahman.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.7.html">4.27.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pinayatasta-bhuja-mandala-madhya-laksmya
-spardhac-chriya parivrto vana-malayadyah
-barhismatah purusa aha sutan prapannan
-parjanya-nada-rutaya saghrnavalokah
-<p></p>
+duhitrr dasottara-satam
+pitr-matr-yasaskarih
+silaudarya-gunopetah
+pauranjanyah praja-pate
+<br>
 <h2>Synonyms</h2>
-pina--stout; ayata--long; asta--eight; bhuja--arms; mandala--encirclement; madhya--in the midst of;
-laksmya--with the goddess of fortune; spardhat--contending; sriya--whose beauty; parivrtah--encircled;
-vana-malaya--by a flower garland; adyah--the original Personality of Godhead; barhismatah--of King
-Pracinabarhi; purusah--the Supreme Personality of Godhead; aha--addressed; sutan--the sons;
-prapannan--surrendered; parjanya--like a cloud; nada--whose sound; rutaya--by a voice; sa-ghrna--with
-mercy; avalokah--His glancing.
-<p></p>
+duhitrh--daughters; dasa-uttara--ten more than; satam--one hundred; pitr--like the father; matr--and
+mother; yasaskarih--glorified; sila--good behavior; audarya--magnanimity; guna--good qualities; upetah--
+possessed of; pauranjanyah--daughters of Puranjana; praja-pate--O Prajapati.
+<br>
 <h2>Translation</h2>
-Around the neck of the Personality of Godhead hung a flower garland that reached to His knees. His
-eight stout and elongated arms were decorated with that garland, which challenged the beauty of the
-goddess of fortune. With a merciful glance and a voice like thunder, the Lord addressed the sons of King
-Pracinabarhisat, who were very much surrendered unto Him.
-<p></p>
+O Prajapati, King Pracinabarhisat, in this way King Puranjana also begot 110 daughters. All of these
+were equally glorified like the father and mother. Their behavior was gentle, and they possessed
+magnanimity and other good qualities.
+<br>
 <h2>Purport</h2>
-The word adyah in this verse is very significant. The Supreme Personality of Godhead is the origin even
-of Paramatma and Brahman. As confirmed in Bhagavad-gita (14.27), brahmano hi pratisthaham: the
-Absolute Truth begins not with the impersonal Brahman but with the original Personality of Godhead,
-Krsna. When Arjuna realized Krsna's greatness, he addressed Him in this way:
-param brahma param dhama
-pavitram paramam bhavan
-purusam sasvatam divyam
-adi-devam ajam vibhum
-"You are the Supreme Brahman, the ultimate, the supreme abode and purifier, the Absolute Truth and
-the eternal divine person. You are the primal God, transcendental and original, and You are the unborn
-and all-pervading beauty." (Bg. 10.12)
-The Brahma-samhita also says, anadir adir govindah sarva-karana-karanam: "The Supreme Lord is not
-caused by anything [anadi], but He is the cause of all causes." The Vedanta-sutra says, janmady asya
-yatah: "The Absolute Truth is that from which everything emanates." The Absolute Truth is described as
-adi-purusa. The Absolute Truth is therefore a person and is not impersonal.
+Children begotten under the rules and regulations of the scriptures generally become as good as the
+father and mother, but children born illegitimately mainly become varna-sankara. The varna-sankara
+population is irresponsible to the family, community and even to themselves. Formerly the varna-sankara
+population was checked by the observation of the reformatory method called garbhadhana-samskara, a
+child-begetting religious ceremony. In this verse we find that although King Puranjana had begotten so
+many children, they were not varna-sankara. All of them were good, well-behaved children, and they had
+good qualities like their father and mother.
+Even though we may produce many good children, our desire for sex that is beyond the prescribed
+method is to be considered sinful. Too much enjoyment of any of the senses (not only sex) results in
+sinful activities. Therefore one has to become a svami or gosvami at the end of his life. One may beget
+children up to the age of fifty, but after fifty, one must stop begetting children and should accept the
+vanaprastha order. In this way he must leave home and then become a sannyasi. A sannyasi's title is svami
+or gosvami, which means that he completely refrains from sense enjoyment. One should not accept the
+sannyasa order whimsically; he must be fully confident that he can restrain his desires for sense
+gratification. King Puranjana's family life was, of course, very happy. As mentioned in these verses, he
+begot 1,100 sons and 110 daughters. Everyone desires to have more sons than daughters, and since the
+number of daughters was less than the number of sons, it appears that King Puranjana's family life was
+very comfortable and pleasing.
 </p>
 
 </div>
@@ -91,7 +129,7 @@ adi-purusa. The Absolute Truth is therefore a person and is not impersonal.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

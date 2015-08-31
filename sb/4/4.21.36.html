@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.36.html">4.21.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vijayabhimukho raja
-srutvaitad abhiyati yan
-balim tasmai haranty agre
-rajanah prthave yatha
-<p></p>
+aho mamami vitaranty anugraham
+harim gurum yajna-bhujam adhisvaram
+sva-dharma-yogena yajanti mamaka
+nirantaram ksoni-tale drdha-vratah
+<br>
 <h2>Synonyms</h2>
-vijaya-abhimukhah--one who is about to start for victory; raja--king; srutva--hearing; etat--this;
-abhiyati--starts; yan--on the chariot; balim--taxes; tasmai--unto him; haranti--present; agre--before;
-rajanah--other kings; prthave--unto King Prthu; yatha--as it was done.
-<p></p>
+aho--O all of you; mama--unto me; ami--all of them; vitaranti--distributing; anugraham--mercy; harim--
+the Supreme Personality of Godhead; gurum--the supreme spiritual master; yajna-bhujam--all the
+demigods eligible to accept yajna offerings; adhisvaram--the supreme master; sva-dharma--occupational
+duties; yogena--by dint of; yajanti--worship; mamakah--having a relationship with me; nirantaram--
+incessantly; ksoni-tale--on the surface of the globe; drdha-vratah--with firm determination.
+<br>
 <h2>Translation</h2>
-If a king, who is desirous of attaining victory and ruling power, chants the narration of Prthu Maharaja
-three times before going forth on his chariot, all subordinate kings will automatically render all kinds of
-taxes unto him--as they rendered them unto Maharaja Prthu--simply upon his order.
-<p></p>
+The Supreme Personality of Godhead is the master and enjoyer of the results of all sacrifices, and He is
+the supreme spiritual master as well. All of you citizens on the surface of the globe who have a
+relationship with me and are worshiping Him by dint of your occupational duties are bestowing your
+mercy upon me. Therefore, O my citizens, I thank you.
+<br>
 <h2>Purport</h2>
-Since a ksatriya king naturally desires to rule the world, he wishes to make all other kings subordinate
-to him. This was also the position many years ago when Prthu Maharaja was ruling over the earth. At that
-time he was the only emperor on this planet. Even five thousand years ago, Maharaja Yudhisthira and
-Maharaja Pariksit were the sole emperors of this planet. Sometimes the subordinate kings rebelled, and it
-was necessary for the emperor to go and chastise them. This process of chanting the narrations of the life
-and character of Prthu Maharaja is recommended for conquering kings if they want to fulfill their desire
-to rule the world.
+Maharaja Prthu's advice to his citizens to take to devotional service is now concluded in two ways. He
+has repeatedly advised persons who are neophytes to engage themselves in devotional service according to
+the capacities of the different orders of social and spiritual life, but here he specifically thanks those
+already engaged in such devotional service to the Supreme Personality of Godhead, who is actually the
+enjoyer of all sacrificial ceremonies and who is also the supreme teacher as antaryami, or Paramatma.
+There is specific mention of the word gurum, which indicates the Supreme Personality as caitya-guru. The
+Supreme Godhead in His Paramatma feature is present in everyone's heart, and He is always trying to
+induce the individual soul to surrender unto Him and to engage in devotional service; therefore He is the
+original spiritual master. He manifests Himself as spiritual master both internally and externally to help
+the conditioned soul both ways. Therefore He has been mentioned herein as gurum. It appears, however,
+that in the time of Maharaja Prthu all the people on the surface of the globe were his subjects. Most of
+them--in fact, almost all of them--were engaged in devotional service. Therefore he thanked them in a
+humble way for engaging in devotional service and thus bestowing their mercy upon him. In other words,
+in a state where the citizens and the head of state are engaged in devotional service unto the Supreme
+personality of Godhead, they help one another and are mutually benefited.
 </p>
 
 </div>
@@ -79,7 +129,7 @@ to rule the world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

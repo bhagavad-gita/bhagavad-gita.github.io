@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,54 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.31.html">4.6.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-brahmovaca
-naitat svarupam bhavato 'sau padarthabheda-
-grahaih puruso yavad ikset
-jnanasya carthasya gunasya casrayo
-mayamayad vyatirikto matas tvam
-<p></p>
+vaidurya-krta-sopana
+vapya utpala-malinih
+praptam kimpurusair drstva
+ta arad dadrsur vatam
+<br>
 <h2>Synonyms</h2>
-brahma uvaca--Lord Brahma said; na--not; etat--this; svarupam--eternal form; bhavatah--Your; asau--
-that other; pada-artha--knowledge; bheda--different; grahaih--by the acquiring; purusah--person; yavat--as
-long as; ikset--wants to see; jnanasya--of knowledge; ca--also; arthasya--of the objective; gunasya--of the
-instruments of knowledge; ca--also; asrayah--the basis; maya-mayat--from being made of material energy;
-vyatiriktah--distinct; matah--regarded; tvam--You.
-<p></p>
+vaidurya-krta--made of vaidurya; sopanah--staircases; vapyah--lakes; utpala--of lotus flowers; malinih--
+containing rows; praptam--inhabited; kimpurusaih--by the Kimpurusas; drstva--after seeing; te--those
+demigods; arat--not far away; dadrsuh--saw; vatam--a banyan tree.
+<br>
 <h2>Translation</h2>
-Lord Brahma said: My dear Lord, Your personality and eternal form cannot be understood by any
-person who is trying to know You through the different processes of acquiring knowledge. Your position
-is always transcendental to the material creation, whereas the empiric attempt to understand You is
-material, as are its objectives and instruments.
-<p></p>
-<h2>Purport</h2>
-It is said that the transcendental name, qualities, activities, paraphernalia, etc., of the Supreme
-Personality of Godhead cannot be understood with our material senses. The attempt of the empiric
-philosophers to understand the Absolute Truth by speculation is always futile because their process of
-understanding, their objective and the instruments by which they try to understand the Absolute Truth
-are all material. The Lord is aprakrta, beyond the creation of the material world. This fact is also accepted
-by the great impersonalist Sankaracarya: narayanah paro 'vyaktad andam avyakta-sambhavam. Avyakta, or
-the original material cause, is beyond this material manifestation and is the cause of the material world.
-Because Narayana, the Supreme personality of Godhead, is beyond the material world, one cannot
-speculate upon Him by any material method. One has to understand the Supreme Personality of Godhead
-simply by the transcendental method of Krsna consciousness. This is confirmed in Bhagavad-gita (18.55).
-Bhaktya mam abhijanati: only by devotional service can one understand the transcendental form of the
-Lord. The difference between the impersonalists and the personalists is that the impersonalists, limited by
-their speculative processes, cannot even approach the Supreme Personality of Godhead, whereas the
-devotees please the Supreme personality of Godhead through His transcendental loving service.
-Sevonmukhe hi: due to the service attitude of the devotee, the Lord is revealed to him. The Supreme Lord
-cannot be understood by materialistic persons even though He is present before them. In Bhagavad-gita,
-Lord Krsna therefore condemns such materialists as mudhas. Mudha means "rascal." It is said in the Gita,
-"Only rascals think of Lord Krsna as an ordinary person. They do not know what Lord Krsna's position is
-or what His transcendental potencies are." Unaware of His transcendental potencies, the impersonalists
-deride the person of Lord Krsna, whereas the devotees, by dint of their service attitude, can understand
-Him as the Personality of Godhead. In the Tenth Chapter of Bhagavad-gita, Arjuna also confirmed that it
-is very difficult to understand the personality of the Lord.
+They also saw that the bathing ghatas and their staircases were made of vaidurya-mani. The water was
+full of lotus flowers. Passing by such lakes, the demigods reached a place where there was a great banyan
+tree.
 </p>
 
 </div>
@@ -98,7 +109,7 @@ is very difficult to understand the personality of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

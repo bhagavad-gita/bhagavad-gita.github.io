@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.51.html">4.8.51</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.51</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/51"><b>51</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam sasamsur jana rajnim
-distya te putra arti-ha
-pratilabdhas ciram nasto
-raksita mandalam bhuvah
-<p></p>
+smayamanam abhidhyayet
+sanuragavalokanam
+niyatenaika-bhutena
+manasa varadarsabham
+<br>
 <h2>Synonyms</h2>
-tam--unto Queen Suniti; sasamsuh--offered praise; janah--the people in general; rajnim--unto the
-Queen; distya--by fortune; te--your; putrah--son; arti-ha--will vanquish all your pains; pratilabdhah--now
-returned; ciram--since a long time; nastah--lost; raksita--will protect; mandalam--the globe; bhuvah--
-earthly.
-<p></p>
+smayamanam--the Lord's smiling; abhidhyayet--one should meditate upon Him; sa-anuragaavalokanam--
+one who is looking toward the devotees with great affection; niyatena--in this way, regularly;
+eka-bhutena--with great attention; manasa--with the mind; vara-da-rsabham--one should meditate upon
+the greatest bestower of benedictions.
+<br>
 <h2>Translation</h2>
-The residents of the palace praised the Queen: Dear Queen, your beloved son was lost a long time ago,
-and it is your great fortune that he now has come back. It appears, therefore, that your son will be able to
-protect you for a very long time and will put an end to all your material pangs.
+The Lord is always smiling, and the devotee should constantly see the Lord in this form, as He looks
+very mercifully toward the devotee. In this way the meditator should look toward the Supreme Personality
+of Godhead, the bestower of all benedictions.
+<br>
+<h2>Purport</h2>
+The word niyatena is very significant in this connection, for it indicates that one should execute the
+meditation practice as stated above. One should not manufacture a way of meditation on the Supreme
+Personality of Godhead, but should follow the authorized sastras and personalities. By this prescribed
+method one can practice concentration upon the Lord until one is so fixed that he remains in trance,
+thinking always of the form of the Lord. The word used here is eka-bhutena, which means "with great
+attention and concentration." If one concentrates on the descriptions of the bodily features of the Lord,
+one will never fall down.
 </p>
 
 </div>
@@ -71,7 +119,7 @@ protect you for a very long time and will put an end to all your material pangs.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

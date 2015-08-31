@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,65 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.23.html">4.10.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-avyaktasyaprameyasya
-nana-sakty-udayasya ca
-na vai cikirsitam tata
-ko vedatha sva-sambhavam
-<p></p>
+ksanenacchaditam vyoma
+ghananikena sarvatah
+visphurat-tadita diksu
+trasayat-stanayitnuna
+<br>
 <h2>Synonyms</h2>
-avyaktasya--of the unmanifested; aprameyasya--of the Transcendence; nana--various; sakti--energies;
-udayasya--of Him who gives rise to; ca--also; na--never; vai--certainly; cikirsitam--the plan; tata--my dear
-boy; kah--who; veda--can know; atha--therefore; sva--own; sambhavam--origin.
-<p></p>
+ksanena--within a moment; acchaditam--was covered; vyoma--the sky; ghana--of dense clouds;
+anikena--with a mass; sarvatah--everywhere; visphurat--dazzling; tadita--with lightning; diksu--in all
+directions; trasayat--threatening; stanayitnuna--with thundering.
+<br>
 <h2>Translation</h2>
-The Absolute Truth, Transcendence, is never subject to the understanding of imperfect sensory
-endeavor, nor is He subject to direct experience. He is the master of varieties of energies, like the full
-material energy, and no one can understand His plans or actions; therefore it should be concluded that
-although He is the original cause of all causes, no one can know Him by mental speculation.
-<p></p>
-<h2>Purport</h2>
-The question may be raised, "Since there are so many varieties of philosophers theorizing in different
-ways, which of them is correct?" The answer is that the Absolute Truth, Transcendence, is never subject
-to direct experience or mental speculation. The mental speculator may be called Dr. Frog. The story is
-that a frog in a three-foot well wanted to calculate the length and breadth of the Atlantic Ocean on the
-basis of his knowledge of his own well. But it was an impossible task for Dr. Frog. A person may be a great
-academician, scholar or professor, but he cannot speculate and expect to understand the Absolute Truth,
-for his senses are limited. The cause of all causes, the Absolute Truth, can be known from the Absolute
-Truth Himself, and not by our ascending process to reach Him. When the sun is not visible at night or
-when it is covered by a cloud in the day, it is not possible to uncover it, either by bodily or mental
-strength or by scientific instruments, although the sun is there in the sky. No one can say that he has
-discovered a torchlight so powerful that if one goes on a roof and focuses the torchlight on the night sky,
-the sun will then be seen. There is no such torchlight, nor is it possible.
-The word avyakta, "unmanifested," in this verse indicates that the Absolute Truth cannot be manifested
-by any strain of so-called scientific advancement of knowledge. Transcendence is not the subject matter of
-direct experience. The Absolute Truth may be known in the same way as the sun covered by a cloud or
-covered by night, for when the sun rises in the morning, in its own way, then everyone can see the sun,
-everyone can see the world, and everyone can see himself. This understanding of self-realization is called
-atma-tattva. Unless, however, one comes to this point of understanding atma-tattva, one remains in the
-darkness in which he was born. Under the circumstances, no one can understand the plan of the Supreme
-Personality of Godhead. The Lord is equipped with varieties of energies, as stated in the Vedic literature
-(parasya saktir vividhaiva sruyate). He is equipped with the energy of eternal time. Not only does He have
-the material energy which we see and experience, but He has also many reserve energies that He can
-manifest in due course of time when necessary. The material scientist can simply study the partial
-understanding of the varieties of energies; he can take up one of the energies and try to understand it with
-limited knowledge, but still it is not possible to understand the Absolute Truth in full by dint of material
-science. No material scientist can foretell what is going to happen in the future. The bhakti-yoga process,
-however, is completely different from so-called scientific advancement of knowledge. A devotee
-completely surrenders unto the Supreme, who reveals Himself by His causeless mercy. As stated in
-Bhagavad-gita, dadami buddhi-yogam tam. The Lord says, "I give him intelligence." What is that
-intelligence? Yena mam upayanti te. The Lord gives one the intelligence to cross over the ocean of
-nescience and come back home, back to Godhead. In conclusion, the cause of all causes, the Absolute
-Truth, or Supreme Brahman, cannot be understood by philosophical speculation, but He reveals Himself
-to His devotee because the devotee fully surrenders unto His lotus feet. Bhagavad-gita is therefore to be
-accepted as a revealed scripture spoken by the Absolute Truth Himself when He descended to this planet.
-If any intelligent man wants to know what God is, he should study this transcendental literature under
-the guidance of a bona fide spiritual master. Then it is very easy to understand Krsna as He is.
+Within a moment the whole sky was overcast with dense clouds, and severe thundering was heard.
+There was glittering electric lightning and severe rainfall.
 </p>
 
 </div>
@@ -109,7 +108,7 @@ the guidance of a bona fide spiritual master. Then it is very easy to understand
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,76 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.31.html">4.28.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-etad yah srnuyad rajan
-rajnam hary-arpitatmanam
-ayur dhanam yasah svasti
-gatim aisvaryam apnuyat
-<p></p>
+ekaikasyabhavat tesam
+rajann arbudam arbudam
+bhoksyate yad-vamsa-dharair
+mahi manvantaram param
+<br>
 <h2>Synonyms</h2>
-etat--this; yah--one who; srnuyat--hears; rajan--O King Pariksit; rajnam--of kings; hari--unto the
-Supreme Personality of Godhead; arpita-atmanam--who have given their life and soul; ayuh--duration of
-life; dhanam--wealth; yasah--reputation; svasti--good fortune; gatim--the ultimate goal of life; aisvaryam--
-material opulence; apnuyat--achieves.
-<p></p>
+eka-ekasya--of each one; abhavat--there became; tesam--of them; rajan--O King; arbudam--ten million;
+arbudam--ten million; bhoksyate--is ruled; yat--whose; vamsa-dharaih--by descendants; mahi--the whole
+world; manu-antaram--up to the end of one Manu; param--and afterward.
+<br>
 <h2>Translation</h2>
-O King, those who hear these topics about kings who are completely surrendered to the Supreme
-Personality of Godhead obtain without difficulty a long life, wealth, good reputation, good fortune and,
-ultimately, the opportunity to return home, back to Godhead.
-Thus end the Bhaktivedanta purports of the Fourth Canto, Thirty-first Chapter, of the Srimad-
-Bhagavatam, entitled "Narada Instructs the Pracetas."
-END OF THE FOURTH CANTO
+My dear King Pracinabarhisat, the sons of Malayadhvaja gave birth to many thousands and thousands of
+sons, and all of these have been protecting the entire world up to the end of one Manu's life-span and
+even afterward.
+<br>
+<h2>Purport</h2>
+There are fourteen Manus in one day of Brahma. A manvantara, the life-span of one Manu, is given as 71
+multiplied by 4,320,000 years. After one such Manu passes on, another Manu begins his life-span. In this
+way the life cycle of the universe is going on. As one Manu follows another, the cult of Krsna
+consciousness is being imparted, as confirmed in Bhagavad-gita (4.1):
+sri-bhagavan uvaca
+imam vivasvate yogam
+proktavan aham avyayam
+vivasvan manave praha
+manur iksvakave 'bravit
+"The Blessed Lord said: I instructed this imperishable science of yoga to the sun-god, Vivasvan, and
+Vivasvan instructed it to Manu, the father of mankind, and Manu in turn instructed it to Iksvaku."
+Vivasvan, the sun-god, imparted Bhagavad-gita to one Manu, and this Manu imparted it to his son, who
+imparted it to yet another Manu. In this way the propagation of Krsna consciousness is never stopped. No
+one should think that this Krsna consciousness movement is a new movement. As confirmed by
+Bhagavad-gita and Srimad-Bhagavatam, it is a very, very old movement, for it has been passing down from
+one Manu to another.
+Among Vaisnavas there may be some difference of opinion due to everyone's personal identity, but
+despite all personal differences, the cult of Krsna consciousness must go on. We can see that under the
+instructions of Srila Bhaktivinoda Thakura, Srila Bhaktisiddhanta Sarasvati Gosvami Maharaja began
+preaching the Krsna consciousness movement in an organized way within the past hundred years. The
+disciples of Srila Bhaktisiddhanta Sarasvati Gosvami Maharaja are all Godbrothers, and although there are
+some differences of opinion, and although we are not acting conjointly, every one of us is spreading this
+Krsna consciousness movement according to his own capacity and producing many disciples to spread it
+all over the world. As far as we are concerned, we have already started the International Society for
+Krishna Consciousness, and many thousands of Europeans and Americans have joined this movement.
+Indeed, it is spreading like wildfire. The cult of Krsna consciousness, based on the nine principles of
+devotional service (sravanam kirtanam visnoh smaranam pada-sevanam. arcanam vandanam dasyam
+sakhyam atma-nivedanam), will never be stopped. It will go on without distinction of caste, creed, color
+or country. No one can check it.
+The word bhoksyate is very important in this verse. Just as a king gives protection to his citizens, these
+devotees, following the principles of devotional service, will give protection to all the people of the world.
+The people of the world are very much harassed by so-called religious-principled svamis, yogis, karmis
+and jnanis, but none of these can show the right way to become elevated to the spiritual platform. There
+are primarily four parties spreading devotional service all over the universe. These are the Ramanujasampradaya,
+the Madhva-sampradaya, the Visnusvami-sampradaya and the Nimbarka-sampradaya. The
+Madhva-Gaudiya-sampradaya in particular comes from Lord Caitanya Mahaprabhu. All these devotees are
+spreading this Krsna consciousness movement very widely and giving protection to innocent people who
+are being so much embarrassed by pseudo-avataras, -svamis, -yogis and others.
+</p>
+
+</div>
+
+</div>
+
+<div id="footer">
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
+</div>
+</body>
+</html>
+

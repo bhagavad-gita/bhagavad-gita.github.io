@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.24.html">4.23.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasmin dadhe damam aham tava vira-patni
-yo 'nyatra bhusura-kulat krta-kilbisas tam
-pasye na vita-bhayam unmuditam tri-lokyam
-anyatra vai mura-ripor itaratra dasat
-<p></p>
+kurvatyah kusumasaram
+tasmin mandara-sanuni
+nadatsv amara-turyesu
+grnanti sma parasparam
+<br>
 <h2>Synonyms</h2>
-tasmin--unto him; dadhe--shall give; damam--punishment; aham--I; tava--to you; vira-patni--O wife of
-the hero; yah--one who; anyatra--besides; bhu-sura-kulat--from the group of demigods on this earth (the
-brahmanas); krta--done; kilbisah--offense; tam--him; pasye--I see; na--not; vita--without; bhayam--fear;
-unmuditam--without anxiety; tri-lokyam--within the three worlds; anyatra--elsewhere; vai--certainly;
-mura-ripoh--of the enemy of Mura (Krsna); itaratra--on the other hand; dasat--than the servant.
-<p></p>
+kurvatyah--just showering; kusuma-asaram--showers of flowers; tasmin--in that; mandara--of Mandara
+Hill; sanuni--on the top; nadatsu--vibrating; amara-turyesu--beating of the drums of the demigods; grnanti
+sma--they were talking; parasparam--amongst themselves as follows.
+<br>
 <h2>Translation</h2>
-O hero's wife, kindly tell me if someone has offended you. I am prepared to give such a person
-punishment as long as he does not belong to the brahmana caste. But for the servant of Muraripu [Krsna],
-I excuse no one within or beyond these three worlds. No one can freely move after offending you, for I am
-prepared to punish him.
-<p></p>
-<h2>Purport</h2>
-According to Vedic civilization, a brahmana, or one who is properly qualified to understand the
-Absolute Truth--that is, one belonging to the most intelligent social order--as well as the devotee of Lord
-Krsna, who is known as Muradvisa, enemy of a demon named Mura, is not subject to the rules and
-regulations of the state. In other words, upon breaking the laws of the state, everyone can be punished by
-the government except the brahmanas and Vaisnavas. Brahmanas and Vaisnavas never transgress the laws
-of the state or the laws of nature because they know perfectly well the resultant reactions caused by such
-law-breaking. Even though they may sometimes appear to violate the laws, they are not to be punished by
-the king. This instruction was given to King Pracinabarhisat by Narada Muni. King Puranjana was a
-representative of King Pracinabarhisat, and Narada Muni was reminding King Pracinabarhisat of his
-forefather, Maharaja Prthu, who never chastised a brahmana or a Vaisnava.
-One's pure intelligence, or pure Krsna consciousness, becomes polluted by material activities. Pure
-consciousness can be revived by the process of sacrifice, charity, pious activities, etc., but when one
-pollutes his Krsna consciousness by offending a brahmana or a Vaisnava, it is very difficult to revive. Sri
-Caitanya Mahaprabhu has described the vaisnava-aparadha, or offense to a Vaisnava, as "the mad elephant
-offense." One should be very careful not to offend a Vaisnava or a brahmana. Even the great yogi Durvasa
-was harassed by the Sudarsana cakra when he offended the Vaisnava Maharaja Ambarisa, who was neither
-a brahmana nor a sannyasi but an ordinary householder. Maharaja Ambarisa was a Vaisnava, and
-consequently Durvasa Muni was chastised.
-The conclusion is that if Krsna consciousness is covered by material sins, one can eliminate the sins
-simply by chanting the Hare Krsna mantra, but if one pollutes his Krsna consciousness by offending a
-brahmana or a Vaisnava, one cannot revive it until one properly atones for the sin by pleasing the
-offended Vaisnava or brahmana. This was the course that Durvasa Muni had to follow, for he surrendered
-unto Maharaja Ambarisa. A vaisnava-aparadha cannot be atoned for by any means other than by begging
-the pardon of the offended Vaisnava.
+At that time the demigods were situated on the top of Mandara Hill, and all their wives began to shower
+flowers on the funeral pyre and began to talk amongst themselves as follows.
 </p>
 
 </div>
@@ -99,7 +108,7 @@ the pardon of the offended Vaisnava.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

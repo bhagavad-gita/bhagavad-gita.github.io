@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.3.html">4.28.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tan nirjita-prana-mano-vaco-drso
-jitasanan santa-samana-vigrahan
-pare 'male brahmani yojitatmanah
-surasuredyo dadrse sma naradah
-<p></p>
+kala-kanyapi bubhuje
+puranjana-puram balat
+yayabhibhutah purusah
+sadyo nihsaratam iyat
+<br>
 <h2>Synonyms</h2>
-tan--all of them; nirjita--completely controlled; prana--the life air (by the pranayama process); manah--
-mind; vacah--words; drsah--and vision; jita-asanan--who conquered the yogic asana, or sitting posture;
-santa--pacified; samana--straight; vigrahan--whose bodies; pare--transcendental; amale--free from all
-material contamination; brahmani--in the Supreme; yojita--engaged; atmanah--whose minds; sura-asuraidyah--
-worshiped by the demons and by the demigods; dadrse--saw; sma--in the past; naradah--the great
-sage Narada.
-<p></p>
+kala-kanya--the daughter of Kala; api--also; bubhuje--took possession of; puranjana-puram--the city of
+Puranjana; balat--by force; yaya--by whom; abhibhutah--being overwhelmed; purusah--a person; sadyah--
+immediately; nihsaratam--uselessness; iyat--gets.
+<br>
 <h2>Translation</h2>
-After practicing the yogasana for mystic yoga, the Pracetas managed to control their life air, mind, words
-and external vision. Thus by the pranayama process they were completely relieved of material attachment.
-By remaining perpendicular, they could concentrate their minds on the uppermost Brahman. While they
-were practicing this pranayama, the great sage Narada, who is worshiped both by demons and by
-demigods, came to see them.
-<p></p>
+Gradually Kalakanya, with the help of dangerous soldiers, attacked all the inhabitants of Puranjana's
+city and thus rendered them useless for all purposes.
+<br>
 <h2>Purport</h2>
-In this verse the words pare amale are significant. The realization of Brahman is explained in Srimad-
-Bhagavatam. The Absolute Truth is realized in three phases--impersonal effulgence (Brahman), localized
-Paramatma and the Supreme Personality of Godhead, Bhagavan. In his prayers, Lord Siva concentrated
-upon the personal features of Parabrahman, described in personal terms as snigdha-pravrd-ghana-syamam
-(Bhag. 4.24.45). Following the instructions of Lord Siva, the Pracetas also concentrated their minds on
-the Syamasundara form of the Supreme Brahman. Although impersonal Brahman, Paramatma Brahman
-and Brahman as the Supreme Person are all on the same transcendental platform, the personal feature of
-the Supreme Brahman is the ultimate goal and last word in transcendence.
-The great sage Narada travels everywhere. He goes to the demons and the demigods and is equally
-respected. He is consequently described herein as surasuredya, worshiped both by demons and by
-demigods. For Narada Muni, the door of every house is open. Although there is perpetual animosity
-between the demons and demigods, Narada Muni is welcomed everywhere. Narada is considered one of
-the demigods, of course, and the word devarsi means "the saintly person among the demigods." But not
-even the demons envy Narada Muni; therefore he is equally worshiped both by demons and by demigods.
-A perfect Vaisnava's position should be just like Narada Muni's, completely independent and unbiased.
+At the fag end of life, when the invalidity of old age attacks a man, his body becomes useless for all
+purposes. Therefore Vedic training dictates that when a man is in his boyhood he should be trained in the
+process of brahmacarya; that is, he should be completely engaged in the service of the Lord and should
+not in any way associate with women. When the boy becomes a young man, he marries between the ages
+of twenty and twenty-five. When he is married at the right age, he can immediately beget strong, healthy
+sons. Now female descendants are increasing because young men are very weak sexually. A male child
+will be born if the husband is sexually stronger than the wife, but if the female is stronger, a female child
+will be born. Thus it is essential to practice the system of brahmacarya if one wishes to beget a male child
+when one is married. When one reaches the age of fifty, he should give up family life. At that time one's
+child should be grown up so that the father can leave the family responsibilities to him. The husband and
+wife may then go abroad to live a retired life and travel to different places of pilgrimage. When both the
+husband and wife lose their attachment for family and home, the wife returns home to live under the care
+of her grown-up children and to remain aloof from family affairs. The husband then takes sannyasa to
+render some service to the Supreme Personality of Godhead.
+This is the perfect system of civilization. The human form of life is especially meant for God realization.
+If one is unable to take to the process of Krsna consciousness from the very beginning of life, he must be
+trained to accept these principles at the fag end of life. Unfortunately, there is no training even in
+childhood, nor can one give up his family life even at the end. This is the situation with the city of
+Puranjana, figuratively described in these verses.
 </p>
 
 </div>
@@ -92,7 +129,7 @@ A perfect Vaisnava's position should be just like Narada Muni's, completely inde
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

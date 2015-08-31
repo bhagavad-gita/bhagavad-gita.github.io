@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,56 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.20.html">4.22.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa-samudram upa vistirnam
-apasyan sumahat sarah
-mahan-mana iva svaccham
-prasanna-salilasayam
-<p></p>
+asty eva rajan bhavato madhudvisah
+padaravindasya gunanuvadane
+ratir durapa vidhunoti naisthiki
+kamam kasayam malam antar-atmanah
+<br>
 <h2>Synonyms</h2>
-sa-samudram--almost near the ocean; upa--more or less; vistirnam--very wide and long; apasyan--they
-saw; su-mahat--very great; sarah--reservoir of water; mahat--great soul; manah--mind; iva--like; suaccham--
-clear; prasanna--joyful; salila--water; asayam--taken shelter of.
-<p></p>
+asti--there is; eva--certainly; rajan--O King; bhavatah--your; madhu-dvisah--of the Lord; padaaravindasya--
+of the lotus feet; guna-anuvadane--in glorifying; ratih--attachment; durapa--very difficult;
+vidhunoti--washes; naisthiki--unflinching; kamam--lusty; kasayam--the embellishment of lusty desire;
+malam--dirty; antah-atmanah--from the core of the heart.
+<br>
 <h2>Translation</h2>
-While traveling, the Pracetas happened to see a great reservoir of water which seemed almost as big as
-the ocean. The water of this lake was so calm and quiet that it seemed like the mind of a great soul, and its
-inhabitants, the aquatics, appeared very peaceful and happy to be under the protection of such a watery
-reservoir.
-<p></p>
+Sanat-kumara continued: My dear King, you already have an inclination to glorify the lotus feet of the
+Supreme Personality of Godhead. Such attachment is very difficult to achieve, but when one has attained
+such unflinching faith in the Lord, it automatically cleanses lusty desires from the core of the heart.
+<br>
 <h2>Purport</h2>
-The word sa-samudra means "near the sea." The reservoir of water was like a bay, for it was not very far
-from the sea. The word upa, meaning "more or less," is used in many ways, as in the word upapati, which
-indicates a husband "more or less," that is to say, a lover who is acting like a husband. Upa also means
-"greater," "smaller" or "nearer." Considering all these points, the reservoir of water which was seen by the
-Pracetas while they were traveling was actually a large bay or lake. And unlike the sea or ocean, which has
-turbulent waves, this reservoir was very calm and quiet. Indeed, the water was so clear that it seemed like
-the mind of some great soul. There may be many great souls--jnanis, yogis and bhaktas, or pure devotees,
-are also called great souls--but they are very rarely found. One can find many great souls amongst yogis
-and jnanis, but a truly great soul, a pure devotee of the Lord, who is fully surrendered to the Lord, is very
-rarely found (sa mahatma sudurlabhah, Bg. 7.19). A devotee's mind is always calm, quiet and desireless
-because he is always anyabhilasita-sunyam, having no desire other than to serve Krsna as His personal
-servant, friend, father, mother or conjugal lover. Due to his association with Krsna, a devotee is always
-very calm and cool. It is also significant that within that reservoir all the aquatics were also very calm and
-quiet. Because the disciples of a devotee have taken shelter of a great soul, they become very calm and
-quiet and are not agitated by the waves of the material world.
-This material world is often described as an ocean of nescience. In such an ocean, everything is agitated.
-The mind of a great devotee is also like an ocean or a very large lake, but there is no agitation. As stated in
-Bhagavad-gita (2.41): vyavasayatmika buddhir ekeha kuru-nandana. Those who are fixed in the service of
-the Lord are not agitated by anything. It is also stated in Bhagavad-gita (6.22): yasmin sthito na duhkhena
-gurunapi vicalyate. Even if he suffers some reversals in life, a devotee is never agitated. Therefore whoever
-takes shelter of a great soul or a great devotee becomes pacified. In the Caitanya-caritamrta (Madhya
-19.149) it is stated: krsna-bhakta--niskama, ataeva 'santa.' A devotee of Lord Krsna is always peaceful
-because he has no desire, whereas the yogis, karmis and jnanis have so many desires to fulfill. One may
-argue that the devotees have desires, for they wish to go home, back to Godhead, but such a desire does
-not agitate the mind. Although he wishes to go back to Godhead, a devotee is satisfied in any condition of
-life. Consequently, the word mahan-manah is used in this verse to indicate that the reservoir of water was
-as calm and quiet as the mind of a great devotee.
+satam prasangan mama virya-samvido
+bhavanti hrt-karna-rasayanah kathah
+taj-josanad asv apavarga-vartmani
+sraddha ratir bhaktir anukramisyati
+(Bhag. 3.25.25)
+By association with devotees, dirty things within the heart of a materialistic man are gradually washed
+away by the grace of the Supreme Personality of Godhead. As silver becomes shiny by being polished, the
+heart of a materialistic person is cleansed of lusty desires by the good association of devotees. Actually the
+living being has no connection with this material enjoyment nor with lusty desires. He is simply
+imagining or dreaming while asleep. But by the association of pure devotees, he is awakened, and
+immediately the spirit soul is situated in his own glory by understanding his constitutional position as the
+eternal servant of the Lord. Prthu Maharaja was already a self-realized soul; therefore he had a natural
+inclination to glorify the activities of the Supreme Personality of Godhead, and the Kumaras assured him
+that there was no chance of his falling victim to the illusory energy of the Supreme Lord. In other words,
+the process of hearing and chanting about the glories of the Lord is the only means to clarify the heart of
+material contamination. By the process of karma, jnana and yoga, no one will succeed in driving away
+contamination from the heart, but once a person takes to the shelter of the lotus feet of the Lord by
+devotional service, automatically all dirty things in the heart are removed without difficulty.
 </p>
 
 </div>
@@ -100,7 +130,7 @@ as calm and quiet as the mind of a great devotee.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

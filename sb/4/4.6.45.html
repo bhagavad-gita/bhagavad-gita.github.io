@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.6.45.html">4.6.45</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.45</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/45"><b>45</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-brahmana ucuh
-tvam kratus tvam havis tvam hutasah svayam
-tvam hi mantrah samid-darbha-patrani ca
-tvam sadasyartvijo dampati devata
-agnihotram svadha soma ajyam pasuh
-<p></p>
+tvam karmanam mangala mangalanam
+kartuh sva-lokam tanuse svah param va
+amangalanam ca tamisram ulbanam
+viparyayah kena tad eva kasyacit
+<br>
 <h2>Synonyms</h2>
-brahmanah--the brahmanas; ucuh--said; tvam--You; kratuh--sacrifice; tvam--You; havih--offering of
-clarified butter; tvam--You; huta-asah--fire; svayam--personified; tvam--You; hi--for; mantrah--the Vedic
-hymns; samit-darbha-patrani--the fuel, the kusa grass and the sacrificial pots; ca--and; tvam--You;
-sadasya--the members of the assembly; rtvijah--the priests; dampati--the chief person of the sacrifice and
-his wife; devata--demigods; agni-hotram--the sacred fire ceremony; svadha--the offering to the forefathers;
-somah--the soma plant; ajyam--the clarified butter; pasuh--the sacrificial animal.
-<p></p>
+tvam--Your Lordship; karmanam--of the prescribed duties; mangala--O most auspicious; mangalanam--
+of the auspicious; kartuh--of the performer; sva-lokam--respective higher planetary systems; tanuse--
+expand; svah--heavenly planets; param--transcendental world; va--or; amangalanam--of the inauspicious;
+ca--and; tamisram--the name of a particular hell; ulbanam--ghastly; viparyayah--the opposite; kena--why;
+tat eva--certainly that; kasyacit--for someone.
+<br>
 <h2>Translation</h2>
-The brahmanas said: Dear Lord, You are sacrifice personified. You are the offering of clarified butter,
-You are the fire, You are the chanting of Vedic hymns by which the sacrifice is conducted, You are the
-fuel, You are the flame, You are the kusa grass, and You are the sacrificial pots. You are the priests who
-perform the yajna, You are the demigods headed by Indra, and You are the sacrificial animal. Everything
-that is sacrificed is You or Your energy.
-<p></p>
+O most auspicious lord, you have ordained the heavenly planets, the spiritual Vaikuntha planets and the
+impersonal Brahman sphere as the respective destinations of the performers of auspicious activities.
+Similarly, for others, who are miscreants, you have destined different kinds of hells which are horrible and
+ghastly. Yet sometimes it is found that their destinations are just the opposite. It is very difficult to
+ascertain the cause of this.
+<br>
 <h2>Purport</h2>
-In this statement Lord Visnu's all-pervasiveness is partially explained. It is said in the Visnu purana that
-as a fire situated in one place emanates its heat and illumination everywhere, so whatever we see within
-the material or spiritual worlds is nothing but a manifestation of different energies emanating from the
-Supreme Personality of Godhead. The brahmanas' statement is that Lord Visnu is everything--the fire, the
-offering, the clarified butter, the utensils, the place of sacrifice and the kusa. He is everything. It is
-confirmed herein that the performance of sankirtana-yajna in this age is as good as all other yajnas in all
-other ages. If one performs sankirtana-yajna by chanting Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare.
-Hare Rama, Hare Rama, Rama Rama, Hare Hare, there is no need to arrange elaborate paraphernalia for
-the prescribed sacrificial ceremonies recommended in the Vedas. In the chant of the holy names, Hare and
-Krsna, Hare means the energy of Krsna, and Krsna is the visnu-tattva. Combined together they are
-everything. In this age, persons are harassed by the influence of Kali-yuga and cannot arrange for all the
-requisite paraphernalia for performing sacrifice as recommended in the Vedas. But if one simply chants
-Hare Krsna, it is to be understood that he is performing all kinds of yajna because there is nothing within
-our vision except Hare (the energy of Krsna) and Krsna. There is no difference between Krsna and His
-energies. Thus since everything is a manifestation of His energy, it is to be understood that everything is
-Krsna. One simply has to accept everything in Krsna consciousness, and he is a liberated person. One
-should not misunderstand that because everything is Krsna, Krsna has no personal identity. Krsna is so
-full that in spite of keeping Himself separate from everything by His energy, He is everything. This is
-confirmed in Bhagavad-gita, Ninth Chapter. He is spread throughout the creation as everything, but still
-He is not everything. The philosophy recommended by Lord Caitanya is that He is simultaneously one
-and different.
+The Supreme Personality of Godhead is called the supreme will. It is by the supreme will that
+everything is happening. It is said, therefore, that not a blade of grass moves without the supreme will.
+Generally it is prescribed that performers of pious activities are promoted to the higher planetary systems,
+devotees are promoted to the Vaikunthas, or spiritual worlds, and impersonal speculators are promoted to
+the impersonal Brahman effulgence; but it sometimes so happens that a miscreant like Ajamila is
+immediately promoted to the Vaikunthaloka simply by chanting the name of Narayana. Although when
+Ajamila uttered this vibration he intended to call his son Narayana, Lord Narayana took it seriously and
+immediately gave him promotion to Vaikunthaloka, despite his background, which was full of sinful
+activities. Similarly King Daksa was always engaged in the pious activities of performing sacrifices, yet
+simply because of creating a little misunderstanding with Lord Siva, he was severely taken to task. The
+conclusion is, therefore, that the supreme will is the ultimate judgment; no one can argue upon this. A
+pure devotee therefore submits in all circumstances to the supreme will of the Lord, accepting it as allauspicious.
+tat te 'nukampam susamiksamano
+bhunjana evatma-krtam vipakam
+hrd-vag-vapurbhir vidadhan namas te
+jiveta yo mukti-pade sa daya-bhak
+(Bhag. 10.14.8)
+The purport of this verse is that when a devotee is in a calamitous condition he takes it as a benediction
+of the Supreme Lord and takes responsibility himself for his past misdeeds. In such a condition, he offers
+still more devotional service and is not disturbed. One who lives in such a disposition of mind, engaged in
+devotional service, is the most eligible candidate for promotion to the spiritual world. In other words,
+such a devotee's claim for promotion to the spiritual world is assured in all circumstances.
 </p>
 
 </div>
@@ -99,7 +137,7 @@ and different.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

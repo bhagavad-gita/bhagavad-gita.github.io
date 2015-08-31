@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.13.html">4.18.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atrina codito hantum
-prthu-putro maha-rathah
-anvadhavata sankruddhas
-tistha tistheti cabravit
-<p></p>
+tathapare ca sarvatra
+saram adadate budhah
+tato 'nye ca yatha-kamam
+duduhuh prthu-bhavitam
+<br>
 <h2>Synonyms</h2>
-atrina--by the great sage Atri; coditah--being encouraged; hantum--to kill; prthu-putrah--the son of King
-Prthu; maha-rathah--a great hero; anvadhavata--followed; sankruddhah--being very angry; tistha tistha--
-just wait, just wait; iti--thus; ca--also; abravit--he said.
-<p></p>
+tatha--so; apare--others; ca--also; sarvatra--everywhere; saram--the essence; adadate--took; budhah--the
+intelligent class of men; tatah--thereafter; anye--others; ca--also; yatha-kamam--as much as they desired;
+duduhuh--milked; prthu-bhavitam--the planet earth, controlled by Prthu Maharaja.
+<br>
 <h2>Translation</h2>
-When the son of King Prthu was informed by Atri of King Indra's trick, he immediately became very
-angry and followed Indra to kill him, calling, "Wait! Wait!"
-<p></p>
+Others, who were as intelligent as King Prthu, also took the essence out of the earthly planet. Indeed,
+everyone took this opportunity to follow in the footsteps of King Prthu and get whatever he desired from
+the planet earth.
+<br>
 <h2>Purport</h2>
-The words tistha tistha are used by a ksatriya when he challenges his enemy. When fighting, a ksatriya
-cannot flee from the battlefield. However, when a ksatriya out of cowardice flees from the battlefield,
-showing his back to his enemy, he is challenged with the words tistha tistha. A real ksatriya does not kill
-his enemy from behind, nor does a real ksatriya turn his back on the battlefield. According to ksatriya
-principle and spirit, one either attains victory or dies on the battlefield. Although King Indra was very
-exalted, being the King of heaven, he became degraded due to his stealing the horse intended for sacrifice.
-Therefore he fled without observing the ksatriya principles, and the son of Prthu had to challenge him
-with the words tistha tistha.
+The planet earth is also called vasundhara. The word vasu means "wealth," and dhara means "one who
+holds." All creatures within the earth fulfill the necessities required for human beings, and all living
+entities can be taken out of the earth by the proper means. As suggested by the planet earth, and accepted
+and initiated by King Prthu, whatever is taken from the earth--either from the mines, from the surface of
+the globe or from the atmosphere--should always be considered the property of the Supreme Personality
+of Godhead and should be used for Yajna, Lord Visnu. As soon as the process of yajna is stopped, the
+earth will withhold all productions--vegetables, trees, plants, fruits, flowers, other agricultural products
+and minerals. As confirmed in Bhagavad-gita, the process of yajna was instituted from the beginning of
+creation. By the regular performance of yajna, the equal distribution of wealth and the restriction of sense
+gratification, the entire world will be made peaceful and prosperous. As already mentioned, in this age of
+Kali the simple performance of sankirtana-yajna--the holding of festivals as initiated by the International
+Society for Krishna Consciousness--should be introduced in every town and village. Intelligent men
+should encourage the performance of sankirtana-yajna by their personal behavior. This means that they
+should follow the process of austerity by restricting themselves from illicit sex life, meat-eating, gambling
+and intoxication. If the intelligent men, or the brahmanas of society, would follow the rules and
+regulations, certainly the entire face of this present world, which is in such chaotic condition, would
+change, and people would be happy and prosperous.
 </p>
 
 </div>
@@ -79,7 +128,7 @@ with the words tistha tistha.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,67 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.27.html">4.22.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-rudra uvaca
-yuyam vedisadah putra
-viditam vas cikirsitam
-anugrahaya bhadram va
-evam me darsanam krtam
-<p></p>
+dagdhasayo mukta-samasta-tad-guno
+naivatmano bahir antar vicaste
+paratmanor yad-vyavadhanam purastat
+svapne yatha purusas tad-vinase
+<br>
 <h2>Synonyms</h2>
-sri-rudrah uvaca--Lord Siva began to speak; yuyam--all of you; vedisadah--of King Pracinabarhi;
-putrah--sons; viditam--knowing; vah--your; cikirsitam--desires; anugrahaya--for the matter of showing
-you mercy; bhadram--all good fortune unto you; vah--all of you; evam--thus; me--my; darsanam--
-audience; krtam--you have done.
-<p></p>
+dagdha-asayah--all material desires being burned; mukta--liberated; samasta--all; tat-gunah--qualities in
+connection with matter; na--not; eva--certainly; atmanah--the soul or the Supersoul; bahih--external;
+antah--internal; vicaste--acting; para-atmanoh--of the Supersoul; yat--that; vyavadhanam--difference;
+purastat--as it was in the beginning; svapne--in dream; yatha--as; purusah--a person; tat--that; vinase--
+being finished.
+<br>
 <h2>Translation</h2>
-Lord Siva said: You are all the sons of King Pracinabarhi, and I wish all good fortune to you. I also know
-what you are going to do, and therefore I am visible to you just to show my mercy upon you.
-<p></p>
+When a person becomes devoid of all material desires and liberated from all material qualities, he
+transcends distinctions between actions executed externally and internally. At that time the difference
+between the soul and the Supersoul, which was existing before self-realization, is annihilated. When a
+dream is over, there is no longer a distinction between the dream and the dreamer.
+<br>
 <h2>Purport</h2>
-By these words Lord Siva indicates that what the princes were going to do was known to him. It is a fact
-that they were going to worship Lord Visnu by severe austerities and penances. Knowing this fact, Lord
-Siva immediately became very pleased, as apparent by the next verse. This indicates that a person who is
-not yet a devotee of the Supreme Personality of Godhead but who desires to serve the Supreme Lord
-receives the benedictions of the demigods, headed by the chief demigod, Lord Siva. Thus a devotee of the
-Lord does not need to try to please the demigods separately. Simply by worshiping the Supreme Lord, a
-devotee can please all of them. Nor does he have to ask the demigods for material benedictions, for the
-demigods, being pleased with the devotee, automatically offer him everything that he needs. The
-demigods are servants of the Lord, and they are always prepared to help a devotee in all circumstances.
-Therefore Srila Bilvamangala Thakura said that if one has unalloyed devotion for the Supreme Lord, the
-goddess of liberation is ready to serve him, to say nothing of the gods of material opulences. Indeed, all
-the demigods are simply waiting for an opportunity to serve the devotee. Thus there is no need for a
-devotee of Krsna to endeavor for material opulence or liberation. By being situated in the transcendental
-position of devotional service, he receives all the benefits of dharma, artha, kama and moksa.
+As described by Srila Rupa Gosvami (anyabhilasita-sunyam), one must be devoid of all material desires.
+When a person becomes devoid of all material desires, there is no longer need for speculative knowledge
+or fruitive activities. In that condition it is to be understood that one is free from the material body. The
+example is already given above--a coconut which is dry is loosened from its outward husk. This is the
+stage of liberation. As said in Srimad-Bhagavatam (2.10.6), mukti (liberation) means svarupena
+vyavasthitih--being situated in one's own constitutional position. All material desires are present as long
+as one is in the bodily concept of life, but when one realizes that he is an eternal servant of Krsna, his
+desires are no longer material. A devotee acts in this consciousness. In other words, when material desires
+in connection with the body are finished, one is actually liberated.
+When one is liberated from the material qualities, he does not do anything for his personal sense
+gratification. At that time all activities performed by him are absolute. In the conditioned state there are
+two kinds of activities. One acts on behalf of the body, and at the same time he acts to become liberated.
+The devotee, when he is completely free from all material desires or all material qualities, transcends the
+duality of action for the body and soul. Then the bodily concept of life is completely over. Therefore Srila
+Rupa Gosvami says:
+iha yasya harer dasye
+karmana manasa gira
+nikhilasv apy avasthasu
+jivan-muktah sa ucyate
+When one is completely fixed in the service of the Lord, he is a liberated person in any condition of life.
+He is called jivan-muktah, liberated even within this body. In such a liberated condition, there is no
+distinction between actions for sense gratification and actions for liberation. When one is liberated from
+the desires of sense gratification, he has no longer to suffer the reactions of lamentation or illusion.
+Activities performed by the karmis and jnanis are subject to lamentation and illusion, but a self-realized
+liberated person acting only for the Supreme Personality of Godhead experiences none. This is the stage
+of oneness, or merging into the existence of the Supreme Personality of Godhead. This means that the
+individual soul, while keeping his individuality, no longer has separate interests. He is fully in the service
+of the Lord, and he has nothing to do for his personal sense gratification; therefore he sees only the
+Supreme Personality of Godhead and not himself. His personal interest completely perishes. When a
+person comes out of a dream, the dream vanishes. While dreaming a person may consider himself a king
+and see the royal paraphernalia, his soldiers, etc., but when the dream is over, he does not see anything
+beyond himself. Similarly, a liberated person understands that he is part and parcel of the Supreme Lord
+acting in accordance with the desire of the Supreme Lord, and as such there is no distinction between
+himself and the Supreme Lord, although both of them retain their individuality. Nityo nityanam cetanas
+cetananam. This is the perfect conception of oneness in relation to the Supersoul and the soul.
 </p>
 
 </div>
@@ -87,7 +149,7 @@ position of devotional service, he receives all the benefits of dharma, artha, k
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

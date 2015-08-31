@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,78 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.63.html">4.22.63</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.63</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/63"><b>63</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvam eka adyah purusah supta-saktis
-taya rajah-sattva-tamo vibhidyate
-mahan aham kham marud agni-var-dharah
-surarsayo bhuta-gana idam yatah
-<p></p>
+kirtyordhva-gitaya pumbhis
+trailokye tatra tatra ha
+pravistah karna-randhresu
+strinam ramah satam iva
+<br>
 <h2>Synonyms</h2>
-tvam--Your Lordship; ekah--one; adyah--the original; purusah--person; supta--dormant; saktih--energy;
-taya--by which; rajah--the passion energy; sattva--goodness; tamah--ignorance; vibhidyate--is diversified;
-mahan--the total material energy; aham--egotism; kham--the sky; marut--the air; agni--fire; vah--water;
-dharah--earth; sura-rsayah--the demigods and the great sages; bhuta-ganah--the living entities; idam--all
-this; yatah--from whom.
-<p></p>
+kirtya--by reputation; urdhva-gitaya--by loud declaration; pumbhih--by the general public; trai-lokye--
+all over the universe; tatra tatra--here and there; ha--certainly; pravistah--entering; karna-randhresu--in
+the aural holes; strinam--of the women; ramah--Lord Ramacandra; satam--of the devotees; iva--like.
+<br>
 <h2>Translation</h2>
-My dear Lord, You are the only Supreme Person, the cause of all causes. Before the creation of this
-material world, Your material energy remains in a dormant condition. When Your material energy is
-agitated, the three qualities--namely goodness, passion and ignorance--act, and as a result the total
-material energy--egotism, ether, air, fire, water, earth and all the various demigods and saintly persons--
-becomes manifest. Thus the material world is created.
-<p></p>
+Throughout the whole universe--in the higher, lower and middle planetary systems--Prthu Maharaja's
+reputation was loudly declared, and all ladies and saintly persons heard his glories, which were as sweet
+as the glories of Lord Ramacandra.
+<br>
 <h2>Purport</h2>
-If the whole creation is one--that is, nothing but the Supreme Lord, or Visnu--then why do the expert
-transcendentalists make such categories as are found in the above verse:? Why do learned and expert
-scholars distinguish between matter and spirit? In answer to these questions, Lord Siva says that spirit and
-matter are not creations of various philosophers, but are manifested by Lord Visnu, as described in this
-verse: tvam eka adyah purusah. Spiritual and material categories are made possible by the Supreme
-personality of Godhead, but actually there are no such distinctions for the living entities who are eternally
-engaged in the service of the Lord. There is only a material world for those who want to imitate the Lord
-and become enjoyers. Indeed, the material world is nothing but forgetfulness of the original Supreme
-Personality of Godhead, the creator of everything. The distinction between matter and spirit is created by
-the sleeping energy of the Lord when the Lord wants to give some facility to those living entities who
-want to imitate the Lord in His enjoyment. It is only for them that this material world is created by the
-dormant energy of the Lord. For instance, sometimes children want to imitate their mother and cook in
-the kitchen, and at such a time the mother supplies them with some toys so that the children can imitate
-her cooking. Similarly, when some of the living entities want to imitate the activities of the Lord, this
-material cosmic manifestation is created for them by the Lord. The material creation is therefore caused
-by the Lord through His material energy. It is by the glance of the Lord that the material energy is
-activated. At that time the three material qualities are set into motion, and the material energy is
-manifested first in the form of the mahat-tattva, then egotism, then ether, then air, fire, water and earth.
-After the creation, the living entities are impregnated in the cosmic manifestation, and they emerge as
-Lord Brahma and the seven great rsis, then as different demigods. From the demigods come human
-beings, animals, trees, birds, beasts and everything else. The original cause, however, is the Supreme
-Personality of Godhead, as verified herein--tvam eka adyah purusah. This is also confirmed in Brahmasamhita
-(5.1):
-isvarah paramah krsnah
-sac-cid-ananda-vigrahah
-anadir adir govindah
-sarva-karana-karanam
-Those who are covered by the material energy cannot understand that the origin of everything is the
-Supreme Personality of Godhead, Krsna. This is summarized in the Vedanta aphorism janmady asya yatah
-(Vedanta-sutra 1.1.2). Krsna also confirms this in Bhagavad-gita (10.8):
-aham sarvasya prabhavo
-mattah sarvam pravartate
-iti matva bhajante mam
-budha bhava-samanvitah
-"I am the source of all spiritual and material worlds. Everything emanates from Me. The wise who know
-this perfectly engage in My devotional service and worship Me with all their hearts."
-When Krsna says that He is the origin of everything (aham sarvasya prabhavah), He means that He is
-even the source of Lord Brahma, Lord Siva, the purusa-avataras, the material manifestation and all the
-living entities within the material world. Actually the word prabhava ("creation") only refers to this
-material world, for since the spiritual world is eternally existing, there is no question of creation. In the
-Catuh-sloki of Srimad-Bhagavatam, the Lord says, aham evasam evagre: "I was existing in the beginning
-before the creation." (Bhag. 2.9.33) In the Vedas it is also said, eko narayana asit: "Before the creation
-there was only Narayana." This is also confirmed by Sankaracarya. Narayanah paro 'vyaktat: "Narayana is
-transcendental to the creation." (Gita--bhasya) Since all the activities of Narayana are spiritual, when
-Narayana said, "Let there be creation," that creation was all-spiritual. The "material" only exists for those
-who have forgotten that Narayana is the original cause.
+In this verse the words strinam and ramah are significant. It is the practice amongst ladies to hear and
+enjoy the praises of certain heroes. From this verse it appears that Prthu Maharaja's reputation was so
+great that ladies all over the universe would hear of it with great pleasure. At the same time, his glories
+were heard all over the universe by the devotees, and they were as pleasing as Lord Ramacandra's glories.
+Lord Ramacandra's kingdom is still existing, and recently there was a political party in India named the
+Ramarajya party, which wanted to establish a kingdom resembling the kingdom of Rama. Unfortunately,
+modern politicians want the kingdom of Rama without Rama Himself. Although they have banished the
+idea of God consciousness, they still expect to establish the kingdom of Rama. Such a proposal is rejected
+by devotees. Prthu Maharaja's reputation was heard by saintly persons because he exactly represented
+Lord Ramacandra, the ideal king.
+Thus end the Bhaktivedanta purports of the Fourth Canto, Twenty-second Chapter, of the Srimad-
+Bhagavatam, entitled "Prthu Maharaja's Meeting With the Four Kumaras."
+Chapter Twenty-three
+Maharaja Prthu's Going Back Home
+Maharaja Prthu' s Going Back Home
 </p>
 
 </div>
@@ -122,7 +126,7 @@ who have forgotten that Narayana is the original cause.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

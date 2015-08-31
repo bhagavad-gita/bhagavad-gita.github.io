@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.11.21.html">4.11.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vijnaya tav uttamagaya-kinkarav
-abhyutthitah sadhvasa-vismrta-kramah
-nanama namani grnan madhudvisah
-parsat-pradhanav iti samhatanjalih
-<p></p>
+ayuso 'pacayam jantos
+tathaivopacayam vibhuh
+ubhabhyam rahitah sva-stho
+duhsthasya vidadhaty asau
+<br>
 <h2>Synonyms</h2>
-vijnaya--after understanding; tau--them; uttama-gaya--of Lord Visnu (of excellent renown); kinkarau--
-two servants; abhyutthitah--stood up; sadhvasa--by being puzzled; vismrta--forgot; kramah--proper
-behavior; nanama--offered obeisances; namani--names; grnan--chanting; madhu-dvisah--of the Lord (the
-enemy of Madhu); parsat--associates; pradhanau--chief; iti--thus; samhata--respectfully joined; anjalih--
-with folded hands.
-<p></p>
+ayusah--of duration of life; apacayam--diminution; jantoh--of the living entities; tatha--similarly; eva--
+also; upacayam--increase; vibhuh--the Supreme Personality of Godhead; ubhabhyam--from both of them;
+rahitah--free; sva-sthah--always situated in His transcendental position; duhsthasya--of the living entities
+under the laws of karma; vidadhati--awards; asau--He.
+<br>
 <h2>Translation</h2>
-Dhruva Maharaja, seeing that these uncommon personalities were direct servants of the Supreme
-Personality of Godhead, immediately stood up. But, being puzzled, in hastiness he forgot how to receive
-them in the proper way. Therefore he simply offered obeisances with folded hands and chanted and
-glorified the holy names of the Lord.
-<p></p>
+The Supreme Personality of Godhead, Visnu, is all-powerful, and He awards the results of one's fruitive
+activities. Thus, although one living entity's duration of life is very small whereas that of another is very
+great, He is always in His transcendental position, and there is no question of lessening or increasing His
+duration of life.
+<br>
 <h2>Purport</h2>
-Chanting of the holy names of the Lord is perfect in every way. When Dhruva Maharaja saw the
-Visnudutas, the direct associates of Lord Visnu, four-handed and nicely decorated, he could understand
-who they were, but for the time being he was puzzled. But simply by chanting the holy name of the Lord,
-the Hare Krsna mantra, he could satisfy the uncommon guests who had all of a sudden arrived before
-him. The chanting of the holy name of the Lord is perfect; even though one does not know how to please
-Lord Visnu or His associates, simply by sincerely chanting the holy name of the Lord, everything becomes
-perfect. A devotee, therefore, either in danger or in happiness, constantly chants the Hare Krsna mantra.
-When he is in danger he is immediately relieved, and when he is in a position to see Lord Visnu or His
-associates directly, by chanting this maha-mantra he can please the Lord. This is the absolute nature of
-the maha-mantra. Either in danger or in happiness, it can be chanted without limitation.
+Both the mosquito and Lord Brahma are living entities in the material world; both are minute sparks
+and are part of the Supreme Lord. The very short duration of the life of the mosquito and the very long
+lifetime of Lord Brahma are both awarded by the Supreme Personality of Godhead according to the results
+of their karma. But in the Brahma-samhita we find it said, karmani nirdahati: the Lord diminishes or
+vanquishes the reactions of devotees. The same fact is explained in Bhagavad-gita Yajnarthat karmano
+'nyatra: one should perform karma only for the purpose of satisfying the Supreme Lord, otherwise one is
+bound by the action and reaction of karma. Under the laws of karma a living entity wanders within the
+universe under the rule of eternal time, and sometimes he becomes a mosquito and sometimes Lord
+Brahma. To a sane man this business is not very fruitful. Bhagavad-gita (9.25) gives a warning to the
+living entities: yanti deva-vrata devan--those who are addicted to the worship of the demigods go to the
+planets of the demigods, and those who are addicted to worship of the Pitas, forefathers, go to the Pitas.
+Those who are inclined to material activities remain in the material sphere. But persons who engage in
+devotional service reach the abode of the Supreme Personality of Godhead, where there is neither birth
+nor death nor different varieties of life under the influence of the law of karma. The best interest of the
+living entity is to engage himself in devotional service and go back home, back to Godhead. Srila
+Bhaktivinoda Thakura advised: "My friend, you are being washed away in material nature's waves of time.
+Please try to understand that you are the eternal servant of the Lord. Then everything will stop, and you
+will be eternally happy."
 </p>
 
 </div>
@@ -85,7 +131,7 @@ the maha-mantra. Either in danger or in happiness, it can be chanted without lim
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

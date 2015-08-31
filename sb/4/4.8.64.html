@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.64.html">4.8.64</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.64</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/64"><b>64</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vapyo vaidurya-sopanah
-padmotpala-kumud-vatih
-hamsa-karandava-kulair
-justas cakrahva-sarasaih
-<p></p>
+narada uvaca
+rajan kim dhyayase dirgham
+mukhena parisusyata
+kim va na risyate kamo
+dharmo varthena samyutah
+<br>
 <h2>Synonyms</h2>
-vapyah--lakes; vaidurya--emerald; sopanah--with staircases; padma--lotuses; utpala--blue lotuses;
-kumut-vatih--full of lilies; hamsa--swans; karandava--and ducks; kulaih--by flocks of; justah--inhabited;
-cakrahva--by cakravakas (geese); sarasaih--and by cranes.
-<p></p>
+naradah uvaca--the great sage Narada Muni said; rajan--my dear King; kim--what; dhyayase--thinking
+of; dirgham--very deeply; mukhena--with your face; parisusyata--as if drying up; kim va--whether; na--
+not; risyate--been lost; kamah--sense gratification; dharmah--religious rituals; va--or; arthena--with
+economic development; samyutah--along with.
+<br>
 <h2>Translation</h2>
-There were emerald staircases which led to lakes full of variously colored lotus flowers and lilies, and
-swans, karandavas, cakravakas, cranes and similar other valuable birds were visible in those lakes.
-<p></p>
+The great sage Narada inquired: My dear King, your face appears to be withering up, and you look like
+you have been thinking of something for a very long time. Why is that? Have you been hampered in
+following your path of religious rites, economic development and sense gratification?
+<br>
 <h2>Purport</h2>
-It appears that not only was the palace surrounded by compounds and gardens with varieties of trees,
-but there were small man-made lakes also, where the water was full of many-colored lotus flowers and
-lilies, and to get down to the lakes there were staircases made of valuable jewels such as emeralds. By the
-beautifully positioned garden houses there were many luxuriant birds, such as swans, cakravakas,
-karandavas and cranes. These birds generally do not live in filthy places like crows do. The atmosphere of
-the city was very healthy and beautiful; it can simply be imagined from its description.
+The four stages of advancement of human civilisation are religiosity, economic development, sense
+gratification and, for some, the stage of liberation. Narada Muni did not inquire from the King about his
+liberation, but only regarding the state management, which is meant for advancement of the three
+principles religiosity, economic development and sense gratification. Since those who engage in such
+activities are not interested in liberation, Narada did not inquire from the King about this. Liberation is
+meant for persons who have lost all interest in religious ritualistic ceremonies, economic development and
+sense gratification.
 </p>
 
 </div>
@@ -77,7 +120,7 @@ the city was very healthy and beautiful; it can simply be imagined from its desc
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,56 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.5.html">4.10.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa tan prsatkair abhidhavato mrdhe
-nikrtta-bahuru-sirodharodaran
-ninaya lokam param arka-mandalam
-vrajanti nirbhidya yam urdhva-retasah
-<p></p>
+gatvodicim disam raja
+rudranucara-sevitam
+dadarsa himavad-dronyam
+purim guhyaka-sankulam
+<br>
 <h2>Synonyms</h2>
-sah--he (Dhruva Maharaja); tan--all the Yaksas; prsatkaih--by his arrows; abhidhavatah--coming
-forward; mrdhe--in the battlefield; nikrtta--being separated; bahu--arms; uru--thighs; sirah-dhara--necks;
-udaran--and bellies; ninaya--delivered; lokam--to the planet; param--supreme; arka-mandalam--the sun
-globe; vrajanti--go; nirbhidya--piercing; yam--to which; urdhva-retasah--those who do not discharge
-semen at any time.
-<p></p>
+gatva--going; udicim--northern; disam--direction; raja--King Dhruva; rudra-anucara--by followers of
+Rudra, Lord Siva; sevitam--inhabited; dadarsa--saw; himavat--Himalayan; dronyam--in a valley; purim--a
+city; guhyaka--ghostly persons; sankulam--full of.
+<br>
 <h2>Translation</h2>
-When Dhruva Maharaja saw the Yaksas coming forward, he immediately took his arrows and cut the
-enemies to pieces. Separating their arms, legs, heads and bellies from their bodies, he delivered the Yaksas
-to the planetary system which is situated above the sun globe and which is attainable only by first-class
-brahmacaris, who have never discharged their semen.
-<p></p>
+Dhruva Maharaja went to the northern direction of the Himalayan range. In a valley he saw a city full of
+ghostly persons who were followers of Lord Siva.
+<br>
 <h2>Purport</h2>
-To be killed by the Lord or by His devotees is auspicious for nondevotees. The Yaksas were killed
-indiscriminately by Dhruva Maharaja, but they attained the planetary system attainable only for
-brahmacaris who never discharged their semen. As the impersonalist jnanis or the demons killed by the
-Lord attain Brahmaloka, or Satyaloka, persons killed by a devotee of the Lord also attain Satyaloka. To
-reach the Satyaloka planetary system described here, one has to be elevated above the sun globe. Killing,
-therefore, is not always bad. If the killing is done by the Supreme Personality of Godhead or His devotee
-or in great sacrifices, it is for the benefit of the entity killed in that way. Material so-called nonviolence is
-very insignificant in comparison to killing done by the Supreme Personality of Godhead or His devotees.
-Even when a king or the state government kills a person who is a murderer, that killing is for the benefit
-of the murderer, for thus he may become cleared of all sinful reactions.
-An important word in this verse is urdhva-retasah, which means brahmacaris who have never
-discharged semen. Celibacy is so important that even though one does not undergo any austerities,
-penances or ritualistic ceremonies prescribed in the Vedas, if one simply keeps himself a pure brahmacari,
-not discharging his semen, the result is that after death he goes to the Satyaloka. Generally, sex life is the
-cause of all miseries in the material world. In the Vedic civilization sex life is restricted in various ways.
-Out of the whole population of the social structure, only the grhasthas are allowed restricted sex life. All
-others refrain from sex. The people of this age especially do not know the value of not discharging semen.
-As such, they are variously entangled with material qualities and suffer an existence of struggle only. The
-word urdhva-retasah especially indicates the Mayavadi sannyasis, who undergo strict principles of
-austerity. But in the Bhagavad-gita (8.16) the Lord says that even if one goes up to Brahmaloka, he again
-comes back (abrahma-bhuvanal lokah punar avartino 'rjuna). Therefore, actual mukti, or liberation, can
-be attained only by devotional service, because by devotional service one can go above Brahmaloka, or to
-the spiritual world, wherefrom he never comes back. Mayavadi sannyasis are very proud of becoming
-liberated, but actual liberation is not possible unless one is in touch with the Supreme Lord in devotional
-service. It is said, harim vina na srtim taranti: without Krsna's mercy, no one can have liberation.
+In this verse it is stated that the Yaksas are more or less devotees of Lord Siva. By this indication the
+Yaksas may be taken to be the Himalayan tribes like the Tibetans.
 </p>
 
 </div>
@@ -100,7 +112,7 @@ service. It is said, harim vina na srtim taranti: without Krsna's mercy, no one 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

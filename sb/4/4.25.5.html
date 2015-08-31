@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,62 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.5.html">4.25.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasyam prapidyamanayam
-abhimani puranjanah
-avaporu-vidhams tapan
-kutumbi mamatakulah
-<p></p>
+rajovaca
+na janami maha-bhaga
+param karmapaviddha-dhih
+bruhi me vimalam jnanam
+yena mucyeya karmabhih
+<br>
 <h2>Synonyms</h2>
-tasyam--when the city; prapidyamanayam--was put into different difficulties; abhimani--too much
-absorbed; puranjanah--King Puranjana; avapa--achieved; uru--many; vidhan--varieties; tapan--pains;
-kutumbi--family man; mamata-akulah--too much affected by attachment to family.
-<p></p>
+raja uvaca--the King replied; na--not; janami--I know; maha-bhaga--O great soul; param--
+transcendental; karma--by fruitive activities; apaviddha--being pierced; dhih--my intelligence; bruhi--
+please tell; me--to me; vimalam--spotless; jnanam--knowledge; yena--by which; mucyeya--I can get relief;
+karmabhih--from the fruitive activities.
+<br>
 <h2>Translation</h2>
-When the city was thus endangered by the soldiers and Kalakanya, King Puranjana, being overly
-absorbed in affection for his family, was placed in difficulty by the attack of Yavana-raja and Kalakanya.
-<p></p>
+The King replied: O great soul, Narada, my intelligence is entangled in fruitive activities; therefore I do
+not know the ultimate goal of life. Kindly instruct me in pure knowledge so that I can get out of the
+entanglement of fruitive activities.
+<br>
 <h2>Purport</h2>
-When we refer to the body, we include the external gross body with its various limbs, as well as the
-mind, intelligence and ego. In old age these all become weak when they are attacked by different diseases.
-The proprietor of the body, the living soul, becomes very sad at not being able to use the field of activities
-properly. In Bhagavad-gita it is clearly explained that the living entity is the proprietor of this body (ksetra
-jna) and that the body is the field of activities (ksetra). When a field is overgrown with thorns and weeds,
-it becomes very difficult for the owner to work it. That is the position of the spirit soul when the body
-itself becomes a burden due to disease. Extra burdens are placed on the body in the form of anxiety and
-general deterioration of the bodily functions.
+Sri Narottama dasa Thakura has sung:
+sat-sanga chadi' kainu asate vilasa
+te-karane lagila ye karma-bandha-phansa
+As long as a person is entangled in fruitive activities, he is bound to accept one body after another. This
+is called karma-bandha-phansa--entanglement in fruitive activities. It does not matter whether one is
+engaged in pious or impious activities, for both are causes for further entanglement in material bodies. By
+pious activities one can take birth in a rich family and get a good education and a beautiful body, but this
+does not mean that the distresses of life are ultimately eliminated. In the Western countries it is not
+unusual for one to take birth in a rich aristocratic family, nor is it unusual for one to have a good
+education and a very beautiful body, but this does not mean that Westerners are free from the distresses of
+life. Although at the present moment the younger generation in Western countries has sufficient
+education, beauty and wealth, and although there is enough food, clothing, and facilities for sense
+gratification, they are in distress. Indeed, they are so distressed that they become hippies, and the laws of
+nature force them to accept a wretched life. Thus they go about unclean and without shelter or food, and
+they are forced to sleep in the street. It can be concluded that one cannot become happy by simply
+performing pious activities. It is not a fact that those who are born with a silver spoon in their mouth are
+free from the material miseries of birth, old age, disease and death. The conclusion is that one cannot be
+happy by simply executing pious or impious activities. Such activities simply cause entanglement and
+transmigration from one body to another. Narottama dasa Thakura calls this karma-bandha-phansa.
+King Pracinabarhisat admitted this fact and frankly asked Narada Muni how he could get out of this
+karma-bandha-phansa, entanglement in fruitive activities. This is actually the stage of knowledge
+indicated in the first verse of Vedanta-sutra: athato brahma jijnasa. When one actually reaches the
+platform of frustration in an attempt to discharge karma-bandha-phansa, he inquires about the real value
+of life, which is called brahma jijnasa. In order to inquire about the ultimate goal of life, the Vedas
+(Mundaka Upanisad 11.2.12) enjoin, tad-vijnanartham sa gurum evabhigacchet: "In order to understand
+the transcendental science, one must approach a bona fide spiritual master."
+King Pracinabarhisat found the best spiritual master, Narada Muni, and he therefore asked him about
+that knowledge by which one can get out of the entanglement of karma-bandha-phansa, fruitive activities.
+This is the actual business of human life. Jivasya tattva jijnasa nartho yas ceha karmabhih. As stated in the
+Second Chapter of the First Canto of Srimad-Bhagavatam (1.2.10), a human being's only business is
+inquiring from a bona fide spiritual master about extrication from the entanglement of karma-bandhaphansa.
 </p>
 
 </div>
@@ -79,7 +144,7 @@ general deterioration of the bodily functions.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

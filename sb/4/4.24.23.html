@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.23.html">4.24.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato vihata-sankalpa
-kanyaka yavanesvaram
-mayopadistam asadya
-vavre namna bhayam patim
-<p></p>
+tatra gandharvam akarnya
+divya-marga-manoharam
+visismyu raja-putras te
+mrdanga-panavady anu
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; vihata-sankalpa--being disappointed in her determination; kanyaka--the daughter of
-Time; yavana-isvaram--unto the king of the untouchables; maya upadistam--indicated by me; asadya--
-having approached; vavre--accepted; namna--of the name; bhayam--Fear; patim--as her husband.
-<p></p>
+tatra--there; gandharvam--musical sounds; akarnya--hearing; divya--heavenly; marga--symmetrical;
+manah-haram--beautiful; visismyuh--they became amazed; raja-putrah--all the sons of King Barhisat; te--
+all of them; mrdanga--drums; panava--kettledrums; adi--all together; anu--always.
+<br>
 <h2>Translation</h2>
-After she was thus disappointed by me, with my permission she approached the King of the Yavanas,
-whose name was Bhaya, or Fear, and she accepted him as her husband.
-<p></p>
+The sons of the King became very much amazed when they heard vibrations from various drums and
+kettledrums along with other orderly musical sounds pleasing to the ear.
+<br>
 <h2>Purport</h2>
-Being the most perfect Vaisnava, Sri Narada Muni is always willing to do good to others, even to one
-who curses him. Although Kalakanya, the daughter of Time, was refused by Narada Muni, she was given a
-shelter. Of course no one could give her shelter, but a Vaisnava gives shelter somewhere to such an
-unfortunate girl. When jara, or old age, attacks, everyone dwindles and deteriorates. In one stroke Narada
-Muni gave shelter to Kalakanya and counterattacked the ordinary karmis. If one accepts the instructions
-of Narada Muni, the ocean of fear (bhaya) can be very quickly removed by the grace of that great
-Vaisnava.
+In addition to the various flowers and living entities about the lake, there were also many musical
+vibrations. The void of the impersonalists, which has no variegatedness, is not at all pleasing compared
+with such a scene. Actually one has to attain the perfection of sac-cid-ananda, eternity, bliss and
+knowledge. Because the impersonalists deny these varieties of creation, they cannot actually enjoy
+transcendental bliss. The place where the Pracetas arrived was the abode of Lord Siva. Impersonalists are
+generally worshipers of Lord Siva, but Lord Siva is never without variety in his abode. Thus wherever one
+goes, whether to the planet of Lord Siva, Lord Visnu or Lord Brahma, there is variety to be enjoyed by
+persons full in knowledge and bliss.
 </p>
 
 </div>
@@ -78,7 +118,7 @@ Vaisnava.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

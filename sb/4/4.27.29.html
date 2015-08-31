@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.29.html">4.27.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yenopasantir bhutanam
-ksullakanam apihatam
-antarhito 'ntar-hrdaye
-kasman no veda nasisah
-<p></p>
+tvam avyakta-gatir bhunksva
+lokam karma-vinirmitam
+ya hi me prtana-yukta
+praja-nasam pranesyasi
+<br>
 <h2>Synonyms</h2>
-yena--by which process; upasantih--satisfaction of all desires; bhutanam--of the living entities;
-ksullakanam--very much fallen; api--although; ihatam--desiring many things; antarhitah--hidden; antahhrdaye--
-in the core of the heart; kasmat--why; nah--our; veda--He knows; na--not; asisah--desires.
-<p></p>
+tvam--you; avyakta-gatih--whose movement is imperceptible; bhunksva--enjoy; lokam--this world;
+karma-vinirmitam--manufactured by fruitive activities; ya--one who; hi--certainly; me--my; prtana--
+soldiers; yukta--helped by; praja-nasam--annihilation of the living entities; pranesyasi--you shall carry out
+without any hindrance.
+<br>
 <h2>Translation</h2>
-When the Lord, out of His natural compassion, thinks of His devotee, by that process only are all desires
-of the neophyte devotee fulfilled. The Lord is situated in every living entity's heart, although the living
-entity may be very insignificant. The Lord knows everything about the living entity, including all his
-desires. Although we are very insignificant, why should the Lord not know our desires?
-<p></p>
+This world is a product of fruitive activities. Therefore you may imperceptibly attack people in general.
+Helped by my soldiers, you can kill them without opposition.
+<br>
 <h2>Purport</h2>
-A very advanced devotee does not think himself advanced. He is always very humble. The Supreme
-Personality of Godhead in His plenary expansion as the Paramatma, or Supersoul, sits in everyone's heart
-and can understand the attitudes and desires of His devotees. The Lord also gives opportunity to the
-nondevotees to fulfill their desires, as confirmed in Bhagavad-gita (mattah smrtir jnanam apohanam ca).
-Whatever a living entity desires, however insignificant he may be, is noted by the Lord, who gives him a
-chance to fulfill his desires. If the desires of the nondevotees are fulfilled, why not those of the devotee? A
-pure devotee simply wants to engage in the service of the Lord without material desire, and if he wants
-this within the core of his heart, where the Lord is situated, and if he is without ulterior motive, why
-should the Lord not understand? If a sincere devotee renders service to the Lord or to the arca-vigraha,
-the form of the Lord, all his activities prove successful because the Lord is present within his heart and
-understands his sincerity. Thus if a devotee, with all confidence, goes on discharging the prescribed duties
-of devotional service, he will ultimately attain success.
+The word karma-vinirmitam means "manufactured by fruitive activities." This entire material world,
+especially in these days, is the result of fruitive activities. Everyone is fully engaged in decorating the
+world with highways, motorcars, electricity, skyscrapers, industries, businesses, etc. All this appears very
+nice for those who are simply engaged in sense gratification and who are ignorant of spiritual identity. As
+described in Srimad-Bhagavatam (5.5.4):
+nunam pramattah kurute vikarma
+yad indriya-pritaya aprnoti
+na sadhu manye yata atmano 'yam
+asann api klesada asa dehah
+Those without knowledge of the spirit soul are mad after materialistic activities, and they perform all
+kinds of sinful activities simply for sense gratification. According to Rsabhadeva, such activities are
+inauspicious because they force one to accept an abominable body in the next life. Everyone can
+experience that although we try to keep the body in a comfortable position, it is always giving pain and is
+subjected to the threefold miseries. Otherwise, why are there so many hospitals, welfare boards and
+insurance establishments? Actually, in this world there is no happiness. People are simply engaged trying
+to counteract unhappiness. Foolish people accept unhappiness as happiness; therefore the King of the
+Yavanas decided to attack such foolish people imperceptibly by old age, disease, and ultimately death. Of
+course, after death there must be birth; therefore Yavana-raja thought it wise to kill all the karmis through
+the agency of Kalakanya and thus try to make them aware that materialistic advancement is not actually
+advancement. Every living entity is a spiritual being, and consequently without spiritual advancement the
+human form of life is ruined.
 </p>
 
 </div>
@@ -85,7 +132,7 @@ of devotional service, he will ultimately attain success.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

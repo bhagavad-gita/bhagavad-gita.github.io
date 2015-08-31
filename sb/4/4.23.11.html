@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,63 +81,95 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.11.html">4.23.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatah ksut-trt-parisranto
-nivrtto grham eyivan
-krta-snanocitaharah
-samvivesa gata-klamah
-<p></p>
+tasyanaya bhagavatah parikarma-suddhasattvatmanas
+tad-anusamsmarananupurtya
+jnanam viraktimad abhun nisitena yena
+ciccheda samsaya-padam nija-jiva-kosam
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; ksut--by hunger; trt--thirst; parisrantah--being too fatigued; nivrttah--having ceased;
-grham eyivan--came back to his home; krta--taken; snana--bath; ucita-aharah--exactly required foodstuffs;
-samvivesa--took rest; gata-klamah--freed from all fatigue.
-<p></p>
+tasya--his; anaya--by this; bhagavatah--of the Supreme personality of Godhead; parikarma--activities in
+devotional service; suddha--pure, transcendental; sattva--existence; atmanah--of the mind; tat--of the
+Supreme Personality of Godhead; anusamsmarana--constantly remembering; anupurtya--being perfectly
+done; jnanam--knowledge; virakti--nonattachment; mat--possessing; abhut--became manifested; nisitena--
+by sharpened activities; yena--by which; ciccheda--become separated; samsaya-padam--position of
+doubtfulness; nija--own; jiva-kosam--encagement of the living entity.
+<br>
 <h2>Translation</h2>
-After this, the King, very much fatigued, hungry and thirsty, returned to his royal palace. After
-returning, he took a bath and had an appropriate dinner. Then he took rest and thus became freed from
-all restlessness.
-<p></p>
+By regularly discharging devotional service, Prthu Maharaja became transcendental in mind and could
+therefore constantly think of the lotus feet of the Lord. Because of this, he became completely detached
+and attained perfect knowledge by which he could transcend all doubt. Thus he was freed from the
+clutches of false ego and the material conception of life.
+<br>
 <h2>Purport</h2>
-A materialistic person works throughout the whole week very, very hard. He is always asking, "Where is
-money? Where is money?" Then, at the end of the week, he wants to retire from these activities and go to
-some secluded place to rest. King Puranjana returned to his home because he was very much fatigued
-from hunting animals in the forest. In this way his conscience came to stop him from committing further
-sinful activities and make him return home. In Bhagavad-gita materialistic persons are described as
-duskrtinah, which indicates those who are always engaged in sinful activities. When a person comes to his
-senses and understands how he is engaging in sinful activities, he returns to his conscience, which is
-herein figuratively described as the palace. Generally a materialistic person is infected by the material
-modes of passion and ignorance. The results of passion and ignorance are lust and greed. In the life of a
-materialist, activity means working in lust and greed. However, when he comes to his senses, he wants to
-retire. According to Vedic civilization, such retirement is positively recommended, and this portion of life
-is called vanaprastha. Retirement is absolutely necessary for a materialist who wants to become free from
-the activities of a sinful life.
-King Puranjana's coming home, taking bath and having an appropriate dinner indicate that a
-materialistic person must retire from sinful activities and become purified by accepting a spiritual master
-and hearing from him about the values of life. If one would do this, he would feel completely refreshed,
-just as one feels after taking a bath. After receiving initiation from a bona fide spiritual master, one must
-abandon all kinds of sinful activities, namely illicit sex, intoxication, gambling and meat-eating.
-The word ucitaharah used in this verse is important. Ucita means "appropriate." One must eat
-appropriately and not take after food as hogs take after stool. For a human being there are eatables
-described in Bhagavad-gita (17.8) as sattvika-ahara, or food in the mode of goodness. One should not
-indulge in eating food in the modes of passion and ignorance. This is called ucitahara, or appropriate
-eating. One who is always eating meat or drinking liquor, which is eating and drinking in passion and
-ignorance, must give these things up so that his real consciousness may be awakened. In this way one may
-become peaceful and refreshed. If one is restless or fatigued, one cannot understand the science of God.
-As stated in Srimad-Bhagavatam (1.2.20):
-evam prasanna-manaso
-bhagavad-bhakti-yogatah
-bhagavat-tattva-vijnanam
-mukta-sangasya jayate
-Unless one can become free from the influence of passion and ignorance, he cannot be pacified, and
-without being pacified, one cannot understand the science of God. King Puranjana's returning home is
-indicative of man's returning to his original consciousness, known as Krsna consciousness. Krsna
-consciousness is absolutely necessary for one who has committed a lot of sinful activities, especially
-killing animals or hunting in the forest.
+In the Narada-pancaratra, devotional service to the Lord is likened unto a queen. When a queen gives an
+audience, many maidservants follow her. The maidservants of devotional service are material opulence,
+liberation and mystic powers. The karmis are very much attached to material enjoyment, the jnanis are
+very anxious to become freed from material clutches, and the yogis are very fond of attaining the eight
+kinds of mystic perfection. From the Narada-pancaratra we understand that if one attains the stage of pure
+devotional service, he also attains all the opulences derived from fruitive activities, empiric philosophical
+speculation and mystic yogic practice. Srila Bilvamangala Thakura therefore prayed in his Krsnakarnamrta:
+"My dear Lord, if I have unflinching devotion to You, You become manifest before me
+personally, and the results of fruitive activity and empiric philosophical speculation--namely religion,
+economic development, sense gratification and liberation--become like personal attendants and remain
+standing before me as if awaiting my order." The idea here is that the jnanis, by culture of brahma-vidya,
+spiritual knowledge, struggle very hard to get out of the clutches of material nature, but a devotee, by dint
+of his advancement in devotional service, automatically becomes detached from his material body. When
+the devotee's spiritual body begins to manifest, he actually enters into his activities in transcendental life.
+At present we have contacted a material body, material mind and material intelligence, but when we
+become free from these material conditions, our spiritual body, spiritual mind and spiritual intelligence
+become manifest. In that transcendental state, a devotee attains all the benefits of karma, jnana and yoga.
+Although he never engages in fruitive activities or empiric speculation to attain mystic powers,
+automatically mystic powers appear in his service. A devotee does not want any kind of material opulence,
+but such opulence appears before him automatically. He does not have to endeavor for it. Because of his
+devotional service, he automatically becomes brahma-bhuta. As stated before, this is confirmed in
+Bhagavad-gita (14.26):
+mam ca yo 'vyabhicarena
+bhakti-yogena sevate
+sa gunan samatityaitan
+brahma-bhuyaya kalpate
+"One who is engaged in full devotional service, unfailing in all circumstances, at once transcends the
+modes of material nature and thus comes to the level of Brahman."
+Because of his regular discharge of devotional service, a devotee attains the transcendental stage of life.
+Since his mind is transcendentally situated, he cannot think of anything but the lotus feet of the Lord.
+This is the meaning of the word samsmarana-anupurtya. By constantly thinking of the lotus feet of the
+Lord, the devotee immediately becomes situated in suddha-sattva. Suddha-sattva refers to that platform
+which is above the modes of material nature, including the mode of goodness. In the material world, the
+mode of goodness is considered to be representative of the highest perfection, but one has to transcend
+this mode and come to the stage of suddha-sattva, or pure goodness, where the three qualities of material
+nature cannot act.
+Srila Visvanatha Cakravarti Thakura gives the following example: If one has strong digestive power,
+after eating he automatically lights a fire within his stomach to digest everything and does not need to
+take medicine to aid his digestion. Similarly, the fire of devotional service is so strong that a devotee does
+not need to act separately to attain perfect knowledge or detachment from material attractions. A jnani
+may become detached from material attractions by prolonged discussions on subjects of knowledge and
+may in this way finally come to the brahma-bhuta stage, but a devotee does not have to undergo so much
+trouble. By virtue of his devotional service, he attains the brahma-bhuta stage without a doubt. The yogis
+and jnanis are always doubtful about their constitutional position; therefore they mistakenly think of
+becoming one with the Supreme. However, a devotee's relationship with the Supreme becomes manifest
+beyond all doubt, and he immediately understands that his position is that of eternal servant of the Lord.
+Jnanis and yogis without devotion may think themselves liberated, but actually their intelligence is not as
+pure as that of a devotee. In other words, the jnanis and yogis cannot become factually liberated unless
+they become elevated to the position of devotees.
+aruhya krcchrena param padam tatah
+patanty adho 'nadrta-yusmad-anghrayah
+(Bhag. 10.2.32)
+The jnani and yogis may rise to the highest position, Brahman realization, but because of their lack of
+devotion unto the lotus feet of the Lord, they again fall down into material nature. Therefore jnana and
+yoga should not be accepted as the real processes for liberation. By discharging devotional service,
+Maharaja Prthu automatically transcended all these positions. Since Maharaja Prthu was a saktyavesa
+incarnation of the Supreme Lord, he did not have to act in any way to attain liberation. He came from the
+Vaikuntha world, or spiritual sky, in order to execute the will of the Supreme Lord on earth.
+Consequently he was to return home, back to Godhead, without having to execute jnana, yoga or karma.
+Although Prthu Maharaja was eternally a pure devotee of the Lord, he nonetheless adopted the process of
+devotional service in order to teach the people in general the proper process for executing the duties of
+life and ultimately returning home, back to Godhead.
 </p>
 
 </div>
@@ -107,7 +177,7 @@ killing animals or hunting in the forest.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

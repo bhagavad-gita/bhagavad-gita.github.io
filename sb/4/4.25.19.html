@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.19.html">4.25.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na mayy anasite bhunkte
-nasnate snati mat-para
-mayi ruste susantrasta
-bhartsite yata-vag bhayat
-<p></p>
+nanaranya-mrga-vratair
+anabadhe muni-vrataih
+ahutam manyate pantho
+yatra kokila-kujitaih
+<br>
 <h2>Synonyms</h2>
-na--never; mayi--when I; anasite--had not eaten; bhunkte--she would eat; na--never; asnate--had not
-taken bath; snati--she would take her bath; mat-para--always devoted to me; mayi--when I; ruste--was
-angry; su-santrasta--very much frightened; bhartsite--when I chastised; yata-vak--fully controlled of
-words; bhayat--out of fear.
-<p></p>
+nana--various; aranya--forest; mrga--animals; vrataih--with groups; anabadhe--in the matter of
+nonviolence; muni-vrataih--like the great sages; ahutam--as if invited; manyate--thinks; panthah--
+passenger; yatra--where; kokila--of cuckoos; kujitaih--by the cooing.
+<br>
 <h2>Translation</h2>
-King Puranjana then began to think of his past dealings with his wife. He recalled that his wife would
-not take her dinner until he had finished his, that she would not take her bath until he had finished his,
-and that she was always very much attached to him, so much so that if he would sometimes become angry
-and chastise her, she would simply remain silent and tolerate his misbehavior.
-<p></p>
+In such an atmosphere even the animals of the forest became nonviolent and nonenvious like great
+sages. Consequently, the animals did not attack anyone. Over and above everything was the cooing of the
+cuckoos. Any passenger passing along that path was invited by that atmosphere to take rest in that nice
+garden.
+<br>
 <h2>Purport</h2>
-A wife is always supposed to be submissive to her husband. Submission, mild behavior and subservience
-are qualities in a wife which make a husband very thoughtful of her. For family life it is very good for a
-husband to be attached to his wife, but it is not very good for spiritual advancement. Thus Krsna
-consciousness must be established in every home. If a husband and wife are very much attached to one
-another in Krsna consciousness, they will both benefit because Krsna is the center of their existence.
-Otherwise, if the husband is too much attached to his wife, he becomes a woman in his next life. The
-woman, being overly attached to her husband, becomes a man in her next life. Of course, it is an
-advantage for a woman to become a man, but it is not at all advantageous for the man to become a
-woman.
+A peaceful family with wife and children is compared to the peaceful atmosphere of the forest. Children
+are compared to nonviolent animals. Sometimes, however, wives and children are called svajanakhyadasyu,
+burglars in the name of kinsmen. A man earns his livelihood with hard labor, but the result is that
+he is plundered by his wife and children exactly as a person in a forest is attacked by some thieves and
+burglars who take his money. Nonetheless, in family life the turmoil of wife and children appears to be
+like the cooing of the cuckoos in the garden of family life. Being invited by such an atmosphere, the
+person who is passing through such a blissful family life desires to have his family with him at all costs.
 </p>
 
 </div>
@@ -83,7 +119,7 @@ woman.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

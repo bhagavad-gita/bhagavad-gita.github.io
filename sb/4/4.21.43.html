@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.43.html">4.21.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nispaditas ca kartsnyena
-bhagavadbhir ghrnalubhih
-sadhucchistam hi me sarvam
-atmana saha kim dade
-<p></p>
+tesam aham pada-saroja-renum
+arya vaheyadhi-kiritam ayuh
+yam nityada bibhrata asu papam
+nasyaty amum sarva-guna bhajanti
+<br>
 <h2>Synonyms</h2>
-nispaditah ca--also the order is properly carried out; kartsnyena--in full; bhagavadbhih--by the
-representatives of the Supreme Personality of Godhead; ghrnalubhih--by the most compassionate; sadhuucchistam--
-remnants of the foodstuffs of saintly persons; hi--certainly; me--mine; sarvam--everything;
-atmana--heart and soul; saha--with; kim--what; dade--shall give.
-<p></p>
+tesam--of all of them; aham--I; pada--feet; saroja--lotus; renum--dust; aryah--O respectable persons;
+vaheya--shall bear; adhi--up to; kiritam--helmet; ayuh--up to the end of life; yam--which; nityada--always;
+bibhratah--carrying; asu--very soon; papam--sinful activities; nasyati--are vanquished; amum--all those;
+sarva-gunah--fully qualified; bhajanti--worship.
+<br>
 <h2>Translation</h2>
-My dear brahmana, you have carried out the order thoroughly because you are also as compassionate as
-the Lord. It is my duty, therefore, to offer you something, but all I possess are but remnants of food taken
-by great saintly persons. What shall I give?
-<p></p>
+O respectable personalities present here, I beg the blessings of all of you that I may perpetually carry on
+my crown the dust of the lotus feet of such brahmanas and Vaisnavas until the end of my life. He who can
+carry such dust on his head is very soon relieved of all the reactions which arise from sinful life, and
+eventually he develops all good and desirable qualities.
+<br>
 <h2>Purport</h2>
-The word sadhucchistam is significant in this verse. Prthu Maharaja got his kingdom from great saintly
-persons like Bhrgu and others just as one gets remnants of food. After the death of King Vena, the whole
-world was bereft of a popular ruler. There were so many catastrophes occurring that the great saintly
-persons, headed by Bhrgu, created the body of King Prthu out of the body of his dead father, King Vena.
-Since King Prthu was thus offered the kingdom by the virtue of the mercy of great saintly persons, he did
-not want to divide his kingdom among saints like the Kumaras. When a father is eating food, he may, out
-of compassion, offer the remnants of his food to his son. Although such food may be already chewed by
-the father, it cannot be offered to the father again. Prthu Maharaja's position was something like this;
-whatever he possessed had already been chewed, and therefore he could not offer it to the Kumaras.
-Indirectly, however, he offered everything he possessed to the Kumaras, and consequently they utilized
-his possessions in whatever way they liked. The next verse clarifies this matter.
+It is said that one who has unflinching faith in the Supreme personality of Godhead, which means
+unflinching faith in the Vaisnava or the pure devotee of the Supreme Lord, develops all the good qualities
+of the demigods. Yasyasti bhaktir bhagavaty akincana. sarvair gunais tatra samasate surah (Bhag. 5.18.12).
+Prahlada Maharaja also said, naisam matis tavad urukramanghrim (Bhag. 7.5.32). Unless one takes the
+dust of the lotus feet of a pure Vaisnava on one's head, one cannot understand what the Supreme
+Personality of Godhead is, and unless one knows the Supreme Personality of Godhead, one's life remains
+imperfect. A great soul who has fully surrendered to the Supreme Lord after understanding Him fully and
+after repeatedly undergoing austerities and penances for many, many lives is very rare. The crown of a
+king is simply a big load if the king or head of the state does not actually bear the dust of the lotus feet of
+brahmanas and Vaisnavas. In other words, if a liberal king like Prthu Maharaja does not follow the
+instructions of brahmanas and Vaisnavas or does not follow the brahminical culture, he is simply a
+burden on the state, for he cannot benefit the citizens. Maharaja Prthu is the perfect example of an ideal
+chief executive.
 </p>
 
 </div>
@@ -84,7 +126,7 @@ his possessions in whatever way they liked. The next verse clarifies this matter
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

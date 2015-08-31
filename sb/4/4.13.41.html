@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.41.html">4.13.41</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.41</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/41"><b>41</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-brahmanah sama-drk santo
-dinanam samupeksakah
-sravate brahma tasyapi
-bhinna-bhandat payo yatha
-<p></p>
+akride kridato balan
+vayasyan atidarunah
+prasahya niranukrosah
+pasu-maram amarayat
+<br>
 <h2>Synonyms</h2>
-brahmanah--a brahmana; sama-drk--equipoised; santah--peaceful; dinanam--the poor; samupeksakah--
-grossly neglecting; sravate--diminishes; brahma--spiritual power; tasya--his; api--certainly; bhinnabhandat--
-from a cracked pot; payah--water; yatha--just as.
-<p></p>
+akride--in the playground; kridatah--while playing; balan--boys; vayasyan--of his age; ati-darunah--very
+cruel; prasahya--by force; niranukrosah--merciless; pasu-maram--as if slaughtering animals; amarayat--
+killed.
+<br>
 <h2>Translation</h2>
-The great sages began to think that although a brahmana is peaceful and impartial because he is equal to
-everyone, it is still not his duty to neglect poor humans. By such neglect, a brahmana's spiritual power
-diminishes, just as water kept in a cracked pot leaks out.
-<p></p>
-<h2>Purport</h2>
-Brahmanas, the topmost section of human society, are mostly devotees. They are generally unaware of
-the happenings within the material world because they are always busy in their activities for spiritual
-advancement. Nonetheless, when there is a calamity in human society, they cannot remain impartial. If
-they do not do something to relieve the distressed condition of human society, it is said that due to such
-neglect their spiritual knowledge diminishes. Almost all the sages go to the Himalayas for their personal
-benefit, but Prahlada Maharaja said that he did not want liberation alone. He decided to wait until he was
-able to deliver all the fallen souls of the world.
-In their elevated condition, the brahmanas are called Vaisnavas. There are two types of brahmanas--
-namely, brahmana-pandita and brahmana-vaisnava. A qualified brahmana is naturally very learned, but
-when his learning is advanced in understanding the Supreme Personality of Godhead, he becomes a
-brahmana-vaisnava. Unless one becomes a Vaisnava, one's perfection of brahminical culture is
-incomplete.
-The saintly persons considered very wisely that although King Vena was very sinful, he was born in a
-family descending from Dhruva Maharaja. Therefore the semen in the family must be protected by the
-Supreme Personality of Godhead, Kesava. As such, the sages wanted to take some steps to relieve the
-situation. For want of a king, everything was being disturbed and turned topsy-turvy.
+The boy was so cruel that while playing with young boys of his age he would kill them very mercilessly,
+as if they were animals meant for slaughter.
 </p>
 
 </div>
@@ -88,7 +108,7 @@ situation. For want of a king, everything was being disturbed and turned topsy-t
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

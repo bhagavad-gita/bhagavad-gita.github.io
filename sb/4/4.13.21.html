@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.21.html">4.13.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam sarva-lokamara-yajna-sangraham
-trayimayam dravyamayam tapomayam
-yajnair vicitrair yajato bhavaya te
-rajan sva-desan anuroddhum arhasi
-<p></p>
+vidura uvaca
+tasya sila-nidheh sadhor
+brahmanyasya mahatmanah
+rajnah katham abhud dusta
+praja yad vimana yayau
+<br>
 <h2>Synonyms</h2>
-tam--Him; sarva-loka--in all planets; amara--with the predominating deities; yajna--sacrifices;
-sangraham--who accepts; trayi-mayam--the sum total of the three Vedas; dravya-mayam--the owner of all
-paraphernalia; tapah-mayam--the goal of all austerity; yajnaih--by sacrifices; vicitraih--various; yajatah--
-worshiping; bhavaya--for elevation; te--your; rajan--O King; sva-desan--your countrymen; anuroddhum--
-to direct; arhasi--you ought.
-<p></p>
+vidurah uvaca--Vidura said; tasya--of him (Anga); sila-nidheh--reservoir of good characteristics;
+sadhoh--saintly person; brahmanyasya--lover of brahminical culture; mahatmanah--great soul; rajnah--of
+the king; katham--how; abhut--it was; dusta--bad; praja--son; yat--by which; vimanah--being indifferent;
+yayau--he left.
+<br>
 <h2>Translation</h2>
-Dear King, the Supreme Personality of Godhead, along with the predominating deities, is the enjoyer of
-the results of all sacrifices in all planets. The Supreme Lord is the sum total of the three Vedas, the owner
-of everything, and the ultimate goal of all austerity. Therefore your countrymen should engage in
-performing various sacrifices for your elevation. Indeed, you should always direct them towards the
-offering of sacrifices.
+Vidura inquired from the sage Maitreya: My dear brahmana, King Anga was very gentle. He had high
+character and was a saintly personality and lover of brahminical culture. Mow is it that such a great soul
+got a bad son like Vena, because of whom he became indifferent to his kingdom and left it?
+<br>
+<h2>Purport</h2>
+In family life a man is supposed to live happily with father, mother, wife and children, but sometimes,
+under certain conditions, a father, mother, child or wife becomes an enemy. It is said by Canakya Pandita
+that a father is an enemy when he is too much in debt, a mother is an enemy if she marries for a second
+time, a wife is an enemy when she is very beautiful, and a son is an enemy when he is a foolish rascal. In
+this way, when a family member becomes an enemy it is very difficult to live in family life or remain a
+householder. Generally such situations occur in the material world. Therefore according to Vedic culture
+one has to take leave of his family members just after his fiftieth year so that the balance of his life may be
+completely devoted in search of Krsna consciousness.
 </p>
 
 </div>
@@ -74,7 +121,7 @@ offering of sacrifices.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

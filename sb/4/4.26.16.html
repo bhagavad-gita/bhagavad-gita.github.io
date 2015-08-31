@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.16.html">4.26.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-antah-puram ca hrdayam
-visucir mana ucyate
-tatra moham prasadam va
-harsam prapnoti tad-gunaih
-<p></p>
+kva vartate sa lalana
+majjantam vyasanarnave
+ya mam uddharate prajnam
+dipayanti pade pade
+<br>
 <h2>Synonyms</h2>
-antah-puram--private residence; ca--and; hrdayam--the heart; visucih--the servant named Visucina;
-manah--the mind; ucyate--is said; tatra--there; moham--illusion; prasadam--satisfaction; va--or; harsam--
-jubilation; prapnoti--obtains; tat--of the mind; gunaih--by the modes of nature.
-<p></p>
+kva--where; vartate--is now staying; sa--she; lalana--woman; majjantam--while drowning; vyasanaarnave--
+in the ocean of danger; ya--who; mam--me; uddharate--delivers; prajnam--good intelligence;
+dipayanti--enlightening; pade pade--in every step.
+<br>
 <h2>Translation</h2>
-The word antah-pura refers to the heart. The word visucina, meaning "going everywhere," indicates the
-mind. Within the mind the living entity enjoys the effects of the modes of material nature. These effects
-sometimes cause illusion, sometimes satisfaction and sometimes jubilation.
-<p></p>
+Kindly let me know the whereabouts of that beautiful woman who always saves me when I am
+drowning in the ocean of danger. By giving me good intelligence at every step, she always saves me.
+<br>
 <h2>Purport</h2>
-The mind and intelligence of the living entity in material existence are affected by the modes of material
-nature, and according to the association of the material modes, the mind is habituated to go here and
-there. The heart feels satisfaction, jubilation or illusion according to the effects of the modes of material
-nature. Actually the living entity in his material condition remains inert. It is the modes of material nature
-that act on the mind and heart. The results are enjoyed or suffered by the living entity. This is clearly
-stated in Bhagavad-gita (3.27):
-prakrteh kriyamanani
-gunaih karmani sarvasah
-ahankara-vimudhatma
-kartaham iti manyate
-"The bewildered spirit soul, under the influence of the three modes of material nature, thinks himself
-the doer of activities that are in actuality carried out by nature."
+There is no difference between a good wife and good intelligence. One who possesses good intelligence
+can deliberate properly and save himself from many dangerous conditions. In material existence there is
+danger at every step. In Srimad-Bhagavatam (10.14.58) it is said: padam padam yad vipadam na tesam.
+This material world is not actually a place of residence for an intelligent person or a devotee because here
+there is danger at every step. Vaikuntha is the real home for the devotee, for there is no anxiety and no
+danger. Good intelligence means becoming Krsna conscious. In the Caitanya-caritamrta it is said: krsna ye
+bhaje se bada catura. Unless one is Krsna conscious, he cannot be called an intelligent person.
+Herein we see that King Puranjana was searching after his good wife, who always helped him out of the
+dangerous situations that always occur in material existence. As already explained, a real wife is dharmapatni.
+That is, a woman accepted in marriage by ritualistic ceremony is called dharma-patni, which
+signifies that she is accepted in terms of religious principles. Children born of dharma-patni, or a woman
+married according to religious principles, inherit the property of the father, but children born of a woman
+who is not properly married do not inherit the father's property. The word dharma-patni also refers to a
+chaste wife. A chaste wife is one who never had any connection with men before her marriage. Once a
+woman is given the freedom to mingle with all kinds of men in her youth, it is very difficult for her to
+keep chaste. She generally cannot remain chaste. When butter is brought into the proximity of fire, it
+melts. The woman is like fire, and man is like the butter. But if one gets a chaste wife, accepted through a
+religious marriage ritual, she can be of great help when one is threatened by the many dangerous
+situations of life. Actually such a wife can become the source of all good intelligence. With such a good
+wife, the family's engagement in the devotional service of the Lord actually makes a home a grhasthaasrama,
+or household dedicated to spiritual cultivation.
 </p>
 
 </div>
@@ -84,7 +131,7 @@ the doer of activities that are in actuality carried out by nature."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

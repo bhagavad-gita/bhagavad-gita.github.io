@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.41.html">4.25.41</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.41</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/41"><b>41</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-saksad bhagavatoktena
-guruna harina nrpa
-visuddha-jnana-dipena
-sphurata visvato-mukham
-<p></p>
+ka nama vira vikhyatam
+vadanyam priya-darsanam
+na vrnita priyam praptam
+madrsi tvadrsam patim
+<br>
 <h2>Synonyms</h2>
-saksat--directly; bhagavata--by the Supreme Personality of Godhead; uktena--instructed; guruna--the
-spiritual master; harina--by Lord Hari; nrpa--O King; visuddha--pure; jnana--knowledge; dipena--by the
-light of; sphurata--enlightening; visvatah-mukham--all angles of vision.
-<p></p>
+ka--who; nama--indeed; vira--my dear hero; vikhyatam--famous; vadanyam--magnanimous; priyadarsanam--
+beautiful; na--not; vrnita--would accept; priyam--easily; praptam--gotten; madrsi--like me;
+tvadrsam--like you; patim--husband.
+<br>
 <h2>Translation</h2>
-In this way King Malayadhvaja attained perfect knowledge because in his pure state he was directly
-instructed by the Supreme Personality of Godhead. By means of such enlightening transcendental
-knowledge, he could understand everything from all angles of vision.
-<p></p>
+O my dear hero, who in this world will not accept a husband like you? You are so famous, so
+magnanimous, so beautiful and so easily gotten.
+<br>
 <h2>Purport</h2>
-In this verse the words saksad bhagavatoktena guruna harina are very significant. The Supreme
-Personality of Godhead speaks directly to the individual soul when the devotee has completely purified
-himself by rendering devotional service to the Lord. Lord Krsna confirms this also in Bhagavad-gita
-(10.10):
-tesam satata-yuktanam
-bhajatam priti-purvakam
-dadami buddhi-yogam tam
-yena mam upayanti te
-"To those who are constantly devoted and worship Me with love, I give the understanding by which
-they can come to Me."
-The Lord is the Supersoul seated in everyone's heart, and He acts as the caitya-guru, the spiritual master
-within. However, He gives direct instructions only to the advanced, pure devotees. In the beginning, when
-a devotee is serious and sincere, the Lord gives him directions from within to approach a bona fide
-spiritual master. When one is trained by the spiritual master according to the regulative principles of
-devotional service and is situated on the platform of spontaneous attachment for the Lord (raga-bhakti),
-the Lord also gives instructions from within. Tesam satata-yuktanam bhajatam priti-purvakam. This
-distinct advantage is obtained by a liberated soul. Having attained this stage, King Malayadhvaja was
-directly in touch with the Supreme Lord and was receiving instructions from Him directly.
+Every husband is certainly a great hero to his wife. In other words, if a woman loves a man, that man
+appears very beautiful and magnanimous. Unless one becomes beautiful in the eyes of another, one
+cannot dedicate his whole life to another. The husband is considered very magnanimous because he gives
+as many children to the wife as she likes. Every woman is fond of children; therefore any husband who
+can please his wife by sex and give her children is considered very magnanimous. Not only does the
+husband become magnanimous by begetting children, but by giving his wife ornaments, nice food and
+dresses, he keeps her completely under submission. Such a satisfied wife will never give up the company
+of her husband. Manu-samhita recommends that to keep a wife satisfied a husband should give her some
+ornaments because women are generally fond of home, ornaments, dresses, children, etc. In this way the
+woman is the center of all material enjoyment.
+In this regard, the word vikhyatam is very significant. A man is always famous for his aggression toward
+a beautiful woman, and such aggression is sometimes considered rape. Although rape is not legally
+allowed, it is a fact that a woman likes a man who is very expert at rape.
 </p>
 
 </div>
@@ -90,7 +123,7 @@ directly in touch with the Supreme Lord and was receiving instructions from Him 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

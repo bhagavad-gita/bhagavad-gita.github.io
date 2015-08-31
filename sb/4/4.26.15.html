@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,53 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.15.html">4.26.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vaisasam narakam payur
-lubdhako 'ndhau tu me srnu
-hasta-padau pumams tabhyam
-yukto yati karoti ca
-<p></p>
+na tathaitarhi rocante
+grhesu grha-sampadah
+yadi na syad grhe mata
+patni va pati-devata
+vyange ratha iva prajnah
+ko namasita dinavat
+<br>
 <h2>Synonyms</h2>
-vaisasam--named Vaisasa; narakam--hell; payuh--the working sense in the rectum; lubdhakah--named
-Lubdhaka (very greedy); andhau--blind; tu--then; me--to me; srnu--listen; hasta-padau--hands and legs;
-puman--the living entity; tabhyam--with them; yuktah--being engaged; yati--goes; karoti--works; ca--and.
-<p></p>
+na--not; tatha--like before; etarhi--at this moment; rocante--become pleasing; grhesu--at home; grhasampadah--
+all household paraphernalia; yadi--if; na--not; syat--there is; grhe--at home; mata--mother;
+patni--wife; va--or; pati-devata--devoted to the husband; vyange--without wheels; rathe--in a chariot; iva--
+like; prajnah--learned man; kah--who is that; nama--indeed; asita--would sit; dina-vat--like a povertystricken
+creature.
+<br>
 <h2>Translation</h2>
-When it is said that Puranjana goes to Vaisasa, it is meant that he goes to hell. He is accompanied by
-Lubdhaka, which is the working sense in the rectum. Formerly I have also spoken of two blind associates.
-These associates should be understood to be the hands and legs. Being helped by the hands and legs, the
-living entity performs all kinds of work and moves hither and thither.
+King Puranjana said: I do not understand why my household paraphernalia does not attract me as
+before. I think that if there is neither a mother nor devoted wife at home, the home is like a chariot
+without wheels. Where is the fool who will sit down on such an unworkable chariot?
+<br>
+<h2>Purport</h2>
+The great politician Canakya Pandita said:
+mata yasya grhe nasti
+bharya capriya-vadini
+aranyam tena gantavyam
+yatharanyam tatha grham
+"If a person has neither a mother nor a pleasing wife at home, he should leave home and go to the
+forest, because for him there is no difference between the forest and home." The real mata, or mother, is
+devotional service to the Lord, and the real patni, or devoted wife, is a wife who helps her husband
+execute religious principles in devotional service. These two things are required for a happy home.
+Actually, a woman is supposed to be the energy of the man. Historically, in the background of every
+great man there is either a mother or a wife. One's household life is very successful if he has both a good
+wife and mother. In such a case, everything about household affairs and all the paraphernalia in the house
+becomes very pleasing. Lord Caitanya Mahaprabhu had both a good mother and pleasing wife, and He
+was very happy at home. Nonetheless, for the benefit of the whole human race, He took sannyasa and left
+both His mother and wife. In other words, it is essential that one have both a good mother and wife in
+order to become perfectly happy at home. Otherwise home life has no meaning. Unless one is religiously
+guided by intelligence and renders devotional service unto the Supreme Personality of Godhead, his home
+can never become very pleasing to a saintly person. In other words, if a man has a good mother or a good
+wife, there is no need of his taking sannyasa--that is, unless it is absolutely necessary, as it was for Lord
+Caitanya Mahaprabhu.
 </p>
 
 </div>
@@ -71,7 +135,7 @@ living entity performs all kinds of work and moves hither and thither.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

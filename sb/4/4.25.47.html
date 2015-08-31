@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.47.html">4.25.47</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.47</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/47"><b>47</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atmanam socati dinam
-abandhum viklavasrubhih
-stanav asicya vipine
-susvaram praruroda sa
-<p></p>
+khadyotavirmukhi ca prag
+dvarav ekatra nirmite
+vibhrajitam janapadam
+yati tabhyam dyumat-sakhah
+<br>
 <h2>Synonyms</h2>
-atmanam--about herself; socati--lamenting; dinam--wretched; abandhum--without a friend; viklava--
-brokenhearted; asrubhih--by tears; stanau--her breasts; asicya--wetting; vipine--in the forest; susvaram--
-loudly; praruroda--began to cry; sa--she.
-<p></p>
+khadyota--of the name Khadyota; avirmukhi--of the name Avirmukhi; ca--also; prak--toward the eastern
+side; dvarau--two gates; ekatra--in one place; nirmite--were constructed; vibhrajitam--of the name
+Vibhrajita; jana-padam--city; yati--used to go; tabhyam--by them; dyumat--of the name Dyuman; sakhah--
+with his friend.
+<br>
 <h2>Translation</h2>
-Being now alone and a widow in that forest, the daughter of Vidarbha began to lament, incessantly
-shedding tears, which soaked her breasts, and crying very loudly.
-<p></p>
+The two gates named Khadyota and Avirmukhi were situated facing the eastern side, but they were
+constructed in one place. Through those two gates the King used to go to the city of Vibhrajita
+accompanied by a friend whose name was Dyuman.
+<br>
 <h2>Purport</h2>
-Figuratively the queen is supposed to be the disciple of the king; thus when the mortal body of the
-spiritual master expires, his disciples should cry exactly as the queen cries when the king leaves his body.
-However, the disciple and spiritual master are never separated because the spiritual master always keeps
-company with the disciple as long as the disciple follows strictly the instructions of the spiritual master.
-This is called the association of vani (words). physical presence is called vapuh. As long as the spiritual
-master is physically present, the disciple should serve the physical body of the spiritual master, and when
-the spiritual master is no longer physically existing, the disciple should serve the instructions of the
-spiritual master.
+The two names Khadyota and Avirmukhi mean "glowworm" and "torchlight." This indicates that of the
+two eyes, the left eye is less powerful in its ability to see. Although both eyes are constructed in one place,
+one is stronger than the other in the power to see. The king, or the living entity, uses these two gates to
+see things properly, but he cannot see unless accompanied by a friend whose name is Dyuman. This
+friend is the sun. Although the two eyes are situated in one place, they have no power to see without the
+sunlight. Vibhrajitam janapadam. If one wants to see something very clearly (vibhrajitam), he must see it
+with two eyes and the assistance of his friend the sunlight. Within this body everyone is a king because he
+uses his different gates according to his own will. Although he is very much proud of his power to see or
+hear, he is nonetheless dependent on the assistance of nature.
 </p>
 
 </div>
@@ -79,7 +121,7 @@ spiritual master.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

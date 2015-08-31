@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.21.html">4.18.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atrina coditas tasmai
-sandadhe visikham rusa
-so 'svam rupam ca tad dhitva
-tasthav antarhitah svarat
-<p></p>
+yaksa-raksamsi bhutani
+pisacah pisitasanah
+bhutesa-vatsa duduhuh
+kapale ksatajasavam
+<br>
 <h2>Synonyms</h2>
-atrina--by the great sage Atri; coditah--inspired; tasmai--for Lord Indra; sandadhe--fixed; visikham--his
-arrow; rusa--out of great anger; sah--King Indra; asvam--horse; rupam--the dress of a sannyasi; ca--also;
-tat--that; hitva--giving up; tasthau--he remained there; antarhitah--invisible; sva-rat--the independent
-Indra.
-<p></p>
+yaksa--the Yaksas (the descendants of Kuvera); raksamsi--the Raksasas (meat-eaters); bhutani--ghosts;
+pisacah--witches; pisita-asanah--who are all habituated to eating flesh; bhutesa--Lord Siva's incarnation
+Rudra; vatsah--whose calf; duduhuh--milked out; kapale--in a pot of skulls; ksata-ja--blood; asavam--a
+fermented beverage.
+<br>
 <h2>Translation</h2>
-When the great sage Atri again gave directions, the son of King Prthu became very angry and placed an
-arrow on his bow. Upon seeing this, King Indra immediately abandoned the false dress of a sannyasi and,
-giving up the horse, made himself invisible.
+Then the Yaksas, Raksasas, ghosts and witches, who are habituated to eating flesh, transformed Lord
+Siva's incarnation Rudra [Bhutanatha] into a calf and milked out beverages made of blood and put them
+in a pot made of skulls.
+<br>
+<h2>Purport</h2>
+There are some types of living entities in the form of human beings whose living conditions and eatables
+are most abominable. Generally they eat flesh and fermented blood, which is mentioned in this verse as
+ksatajasavam. The leaders of such degraded men known as Yaksas, Raksasas, bhutas and pisacas, are all in
+the mode of ignorance. They have been placed under the control of Rudra. Rudra is the incarnation of
+Lord Siva and is in charge of the mode of ignorance in material nature. Another name of Lord Siva is
+Bhutanatha, meaning "master of ghosts." Rudra was born from between Brahma's eyes when Brahma was
+very angry at the four Kumaras.
 </p>
 
 </div>
@@ -71,7 +119,7 @@ giving up the horse, made himself invisible.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

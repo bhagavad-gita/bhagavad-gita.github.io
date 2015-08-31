@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.8.45.html">4.8.45</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.45</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/45"><b>45</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-abhivandya pituh padav
-asirbhis cabhimantritah
-nanama matarau sirsna
-sat-krtah saj-janagranih
-<p></p>
+prasadabhimukham sasvat
+prasanna-vadaneksanam
+sunasam subhruvam carukapolam
+sura-sundaram
+<br>
 <h2>Synonyms</h2>
-abhivandya--worshiping; pituh--of his father; padau--the feet; asirbhih--with benedictions; ca--and;
-abhimantritah--was addressed; nanama--he bowed; matarau--to his two mothers; sirsna--with his head;
-sat-krtah--was honored; sat-jana--of the nobles; agranih--the foremost.
-<p></p>
+prasada-abhimukham--always prepared to offer causeless mercy; sasvat--always; prasanna--pleasing;
+vadana--mouth; iksanam--vision; su-nasam--very nicely constructed nose; su-bhruvam--very nicely
+decorated eyebrows; caru--beautiful; kapolam--forehead; sura--the demigods; sundaram--good looking.
+<br>
 <h2>Translation</h2>
-Then Dhruva Maharaja, the foremost of all nobles, first of all offered his obeisances at the feet of his
-father and was honored by his father with various questions. He then bowed his head at the feet of his two
-mothers.
-<p></p>
+[The form of the Lord is described herein.] The Lord's face is perpetually very beautiful and pleasing in
+attitude. To the devotees who see Him, He appears never to be displeased, and He is always prepared to
+award benedictions to them. His eyes, His nicely decorated eyebrows, His raised nose and His broad
+forehead are all very beautiful. He is more beautiful than all the demigods.
+<br>
 <h2>Purport</h2>
-It may be questioned why Dhruva Maharaja offered his respect not only to his mother but also to his
-stepmother, due to whose insults he had to leave home. The answer is that after achieving perfection by
-self-realization and seeing the Supreme Personality of Godhead face to face, Dhruva Maharaja was
-completely freed from all contamination of material desire. Feelings of insult or honor in this material
-world are never perceived by a devotee. Lord Caitanya therefore says that one has to be humbler than the
-grass and, He recommends, more tolerant than the tree to execute devotional service. Dhruva Maharaja,
-therefore, has in this verse been described as saj-janagranih, the foremost of noble men. The pure devotee
-is the noblest of all, and he has no feelings of animosity towards anyone. Duality due to animosity is a
-creation of this material world. There is no such thing in the spiritual world, which is the absolute reality.
+This verse clearly explains how one has to meditate on the form of the Lord. Impersonal meditation is a
+bogus invention of modern days. In none of the Vedic literatures is impersonal meditation recommended.
+In Bhagavad-gita, when meditation is recommended, the word mat-parah, which means "pertaining to
+Me," is used. Any Visnu form pertains to Lord Krsna because Lord Krsna is the original Visnu form.
+Sometimes someone tries to meditate upon the impersonal Brahman, which is described in Bhagavad-gita
+as avyakta, meaning "unmanifested" or "impersonal." But it is remarked by the Lord Himself that those
+who are attached to this impersonal feature of the Lord suffer a very troublesome task because no one can
+concentrate on the impersonal feature. One has to concentrate on the form of the Lord, which is described
+here in connection with Dhruva Maharaja's meditation. As will be apparent from later descriptions,
+Dhruva Maharaja perfected this kind of meditation, and his yoga was successful.
 </p>
 
 </div>
@@ -81,7 +122,7 @@ creation of this material world. There is no such thing in the spiritual world, 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

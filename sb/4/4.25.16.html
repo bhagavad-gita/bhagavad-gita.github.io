@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.16.html">4.25.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-duhitrh putra-pautrams ca
-jami-jamatr-parsadan
-svatvavasistam yat kincid
-grha-kosa-paricchadam
-<p></p>
+sabha-catvara-rathyabhir
+akridayatanapanaih
+caitya-dhvaja-patakabhir
+yuktam vidruma-vedibhih
+<br>
 <h2>Synonyms</h2>
-duhitrh--daughters; putra--sons; pautran--grandsons; ca--and; jami--daughters-in-law; jamatr--sons-inlaw;
-parsadan--associates; svatva--property; avasistam--remaining; yat kincit--whatever; grha--home;
-kosa--accumulation of wealth; paricchadam--household paraphernalia.
-<p></p>
+sabha--assembly houses; catvara--squares; rathyabhih--by streets; akrida-ayatana--gambling houses;
+apanaih--by shops; caitya--resting places; dhvaja-patakabhih--with flags and festoons; yuktam--decorated;
+vidruma--without trees; vedibhih--with platforms.
+<br>
 <h2>Translation</h2>
-King Puranjana then began to think of his daughters, sons, grandsons, daughters-in-law, sons-in-law,
-servants and other associates as well as his house, his household paraphernalia and his little accumulation
-of wealth.
-<p></p>
+In that city there were many assembly houses, street crossings, streets, restaurants, gambling houses,
+markets, resting places, flags, festoons and beautiful parks. All these surrounded the city.
+<br>
 <h2>Purport</h2>
-It is not infrequent for a person overly attached to the material body to request a physician to prolong
-his life at least for some time. If the so-called scientific physician is able to prolong one's life for a few
-minutes through the use of oxygen or other medicines, he thinks that he is very successful in his
-attempts, although ultimately the patient will die. This is called the struggle for existence. At the time of
-death both patient and physician still think of prolonging life, although all the constituents of the body
-are practically dead and gone.
+In this way the capital is described. In the capital there are assembly houses and many squares, many
+street crossings, avenues and streets, many gambling places, markets and places of rest, all decorated with
+flags and festoons. The squares are surrounded with railings and are devoid of trees. The heart of the body
+can be compared to the assembly house, for the living entity is within the heart along with the
+Paramatma, as stated in Bhagavad-gita (15.15): sarvasya caham hrdi sannivisto mattah smrtir jnanam
+apohanam ca. The heart is the center of all remembrance, forgetfulness and deliberation. In the body the
+eyes, ears and nose are different places of attraction for sense enjoyment, and the streets for going hither
+and thither may be compared to different types of air blowing within the body. The yogic process for
+controlling the air within the body and the different nerves is called susumna, the path of liberation. The
+body is also a resting place because when the living entity becomes fatigued he takes rest within the body.
+The palms and the soles of the feet are compared to flags and festoons.
 </p>
 
 </div>
@@ -78,7 +121,7 @@ are practically dead and gone.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

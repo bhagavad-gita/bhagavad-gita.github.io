@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.9.22.html">4.9.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-iti bruvams citra-rathah sva-sarathim
-yattah paresam pratiyoga-sankitah
-susrava sabdam jaladher iveritam
-nabhasvato diksu rajo 'nvadrsyata
-<p></p>
+prasthite tu vanam pitra
+dattva gam dharma-samsrayah
+sat-trimsad-varsa-sahasram
+raksitavyahatendriyah
+<br>
 <h2>Synonyms</h2>
-iti--thus; bruvan--talking; citra-rathah--Dhruva Maharaja, whose chariot was very beautiful; svasarathim--
-to his charioteer; yattah--being on guard; paresam--from his enemies; pratiyoga--counterattack;
-sankitah--being apprehensive; susrava--heard; sabdam--sound; jaladheh--from the ocean; iva--as if;
-iritam--resounded; nabhasvatah--because of wind; diksu--in all directions; rajah--dust; anu--then;
-adrsyata--was perceived.
-<p></p>
+prasthite--after departure; tu--but; vanam--to the forest; pitra--by your father; dattva--awarding; gam--
+the whole world; dharma-samsrayah--under the protection of piety; sat-trimsat--thirty-six; varsa--years;
+sahasram--one thousand; raksita--you will rule; avyahata--without decay; indriyah--the power of the
+senses.
+<br>
 <h2>Translation</h2>
-In the meantime, while Dhruva Maharaja, doubtful of his mystic enemies, was talking with his
-charioteer, they heard a tremendous sound, as if the whole ocean were there, and they found that from
-the sky a great dust storm was coming over them from all directions.
+After your father goes to the forest and awards you the rule of his kingdom, you will rule continuously
+the entire world for thirty-six thousand years, and all your senses will continue to be as strong as they are
+now. You will never become old.
+<br>
+<h2>Purport</h2>
+In the Satya-yuga people generally lived for one hundred thousand years. Dhruva Maharaja's ruling the
+world for thirty-six thousand years was quite possible in those days.
 </p>
 
 </div>
@@ -72,7 +114,7 @@ the sky a great dust storm was coming over them from all directions.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

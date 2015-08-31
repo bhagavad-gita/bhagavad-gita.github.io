@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.46.html">4.13.46</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.46</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/46"><b>46</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasya vamsyas tu naisada
-giri-kanana-gocarah
-yenaharaj jayamano
-vena-kalmasam ulbanam
-<p></p>
+kad-apatyam varam manye
+sad-apatyac chucam padat
+nirvidyeta grhan martyo
+yat-klesa-nivaha grhah
+<br>
 <h2>Synonyms</h2>
-tasya--his (Nisada's); vamsyah--descendants; tu--then; naisadah--called Naisadas; giri-kanana--the hills
-and forests; gocarah--inhabiting; yena--because; aharat--he took upon himself; jayamanah--being born;
-vena--of King Vena; kalmasam--all kinds of sin; ulbanam--very fearful.
-<p></p>
+kad-apatyam--bad son; varam--better; manye--I think; sat-apatyat--than a good son; sucam--of grief;
+padat--the source; nirvidyeta--becomes detached; grhat--from home; martyah--a mortal man; yat--because
+of whom; klesa-nivahah--hellish; grhah--home.
+<br>
 <h2>Translation</h2>
-After his [Nisada's] birth, he immediately took charge of all the resultant actions of King Vena's sinful
-activities. As such, this Naisada class are always engaged in sinful activities like stealing, plundering and
-hunting. Consequently they are only allowed to live in the hills and forests.
-<p></p>
+Then the King thought: A bad son is better than a good son because a good son creates an attachment
+for home, whereas a bad son does not. A bad son creates a hellish home from which an intelligent man
+naturally becomes very easily detached.
+<br>
 <h2>Purport</h2>
-The Naisadas are not allowed to live in cities and towns because they are sinful by nature. As such, their
-bodies are very ugly, and their occupations are also sinful. We should, however, know that even these
-sinful men (who are sometimes called Kiratas) can be delivered from their sinful condition to the topmost
-Vaisnava platform by the mercy of a pure devotee. Engagement in the transcendental loving devotional
-service of the Lord can make anyone, however sinful he may be, fit to return home, back to Godhead. One
-has only to become free from all contamination by the process of devotional service. In this way everyone
-can become fit to return home, back to Godhead. This is confirmed by the Lord Himself in Bhagavad-gita
-(9.32):
-mam hi partha vyapasritya
-ye 'pi syuh papa-yonayah
-striyo vaisyas tatha sudras
-te 'pi yanti param gatim
-"O son of Prtha, those who take shelter of Me, though they be of lower birth--women, vaisyas
-[merchants], as well as sudras [workers]--can approach the supreme destination."
-Thus end the Bhaktivedanta purports of the Fourth Canto, Fourteenth Chapter, of the Srimad-
-Bhagavatam, entitled "The Story of King Vena."
-Chapter Fifteen
-King Prthu's Appearance and Coronation
-King Prthu' s Appearance and Coronation
+The King began to think in terms of attachment and detachment from one's material home. According
+to Prahlada Maharaja, the material home is compared to a blind well. If a man falls down into a blind well,
+it is very difficult to get out of it and begin life again. Prahlada Maharaja has advised that one give up this
+blind well of home life as soon as possible and go to the forest to take shelter of the Supreme Personality
+of Godhead. According to Vedic civilization, this giving up of home by vanaprastha and sannyasa is
+compulsory. But people are so attached to their homes that even up to the point of death they do not like
+to retire from home life. King Anga, therefore, thinking in terms of detachment, accepted his bad son as a
+good impetus for detachment from home life. He therefore considered his bad son his friend since he was
+helping him become detached from his home. Ultimately one has to learn how to detach oneself from
+attachment to material life; therefore, if a bad son, by his bad behavior, helps a householder to go away
+from home, it is a boon.
 </p>
 
 </div>
@@ -91,7 +122,7 @@ King Prthu' s Appearance and Coronation
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

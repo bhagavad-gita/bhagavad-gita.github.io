@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.12.html">4.15.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-antar bahis ca bhutanam
-pasyan karmani caranaih
-udasina ivadhyakso
-vayur atmeva dehinam
-<p></p>
+sarit-samudra girayo
+naga gavah khaga mrgah
+dyauh ksitih sarva-bhutani
+samajahrur upayanam
+<br>
 <h2>Synonyms</h2>
-antah--internally; bahih--externally; ca--and; bhutanam--of living entities; pasyan--seeing; karmani--
-activities; caranaih--by spies; udasinah--neutral; iva--like; adhyaksah--the witness; vayuh--the air of life;
-atma--the living force; iva--like; dehinam--of all the embodied.
-<p></p>
+sarit--the rivers; samudrah--the seas; girayah--the mountains; nagah--the serpents; gavah--the cows;
+khagah--the birds; mrgah--the animals; dyauh--the sky; ksitih--the earth; sarva-bhutani--all living entities;
+samajahruh--collected; upayanam--different kinds of presentations.
+<br>
 <h2>Translation</h2>
-King Prthu will be able to see all the internal and external activities of every one of his citizens. Still no
-one will be able to know his system of espionage, and he himself will remain neutral regarding all matters
-of glorification or vilification paid to him. He will be exactly like air, the life force within the body, which
-is exhibited internally and externally but is always neutral to all affairs.
+All the rivers, seas, hills, mountains, serpents, cows, birds, animals, heavenly planets, the earthly planet
+and all other living entities collected various presentations, according to their ability, to offer the King.
 </p>
 
 </div>
@@ -71,7 +108,7 @@ is exhibited internally and externally but is always neutral to all affairs.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

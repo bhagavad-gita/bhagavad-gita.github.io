@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,57 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.16.html">4.27.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aprthag-dharma-silanam
-sarvesam vah sumadhyama
-aprthag-dharma-sileyam
-bhuyat patny arpitasaya
-<p></p>
+sa saptabhih satair eko
+vimsatya ca satam samah
+puranjana-puradhyakso
+gandharvair yuyudhe bali
+<br>
 <h2>Synonyms</h2>
-aprthak--without differences; dharma--occupation; silanam--whose character; sarvesam--all; vah--of
-you; su-madhyama--a girl whose waist is slender; aprthak--without differences; dharma--occupation; sila--
-well-behaved; iyam--this; bhuyat--may she become; patni--wife; arpita-asaya--fully surrendered.
-<p></p>
+sah--he; saptabhih--with seven; sataih--hundred; ekah--alone; vimsatya--with twenty; ca--also; satam--
+hundred; samah--years; puranjana--of King Puranjana; pura-adhyaksah--superintendent of the city;
+gandharvaih--with the Gandharvas; yuyudhe--fought; bali--very valiant.
+<br>
 <h2>Translation</h2>
-You brothers are all of the same nature, being devotees and obedient sons of your father. Similarly, that
-girl is also of the same type and is dedicated to all of you. Thus both the girl and you, the sons of
-Pracinabarhisat, are on the same platform, being united on a common principle.
-<p></p>
+The five-hooded serpent, the superintendent and protector of the city of King Puranjana, fought with
+the Gandharvas for one hundred years. He fought alone, with all of them, although they numbered 720.
+<br>
 <h2>Purport</h2>
-According to Vedic principles, a woman cannot have many husbands, although a husband can have
-many wives. In special instances, however, it is found that a woman has more than one husband.
-Draupadi, for instance, was married to all of the five Pandava brothers. Similarly, the Supreme Personality
-of Godhead ordered all the sons of Pracinabarhisat to marry the one girl born of the great sage Kandu and
-Pramloca. In special cases, a girl is allowed to marry more than one man, provided she is able to treat her
-husbands equally. This is not possible for an ordinary woman. Only one who is especially qualified can be
-allowed to marry more than one husband. In this age of Kali, to find such an equipoised woman is very
-difficult. Thus according to scripture, kalau panca vivarjayet. In this age a woman is forbidden to marry
-her husband's brother. This system is still practiced in some of the hilly tracts of India. The Lord says:
-aprthag-dharma-sileyam bhuyat patny arpitasaya. With the blessings of the Lord, all things are possible.
-The Lord especially blessed the girl to surrender equally to all brothers. Aprthag-dharma, meaning
-"occupational duty without difference of purpose," is taught in Bhagavad-gita. Bhagavad-gita is divided
-into three primary divisions--karma-yoga, jnana-yoga and bhakti-yoga. The word yoga means "acting on
-behalf of the Supreme Personality of Godhead." As confirmed by Bhagavad-gita (3.9):
-yajnarthat karmano 'nyatra
-loko 'yam karma-bandhanah
-tad-artham karma kaunteya
-mukta-sangah samacara
-"Work done as a sacrifice for Visnu has to be performed, otherwise work binds one to this material
-world. Therefore, O son of Kunti, perform your prescribed duties for His satisfaction, and in that way you
-will always remain unattached and free from bondage."
-One may act according to his own occupational duty just to satisfy the yajna-purusa, the Supreme
-Personality of Godhead. That is called aprthag-dharma. Different limbs of the body may act in different
-ways, but the ultimate objective is to maintain the entire body. Similarly, if we work for the satisfaction of
-the Supreme Personality of Godhead, we will find that we satisfy everything. We should follow in the
-footsteps of the Pracetas, whose only aim was to satisfy the Supreme Lord. This is called aprthag-dharma.
-According to Bhagavad-gita (18.66), sarva-dharman parityajya mam ekam saranam vraja: "Abandon all
-varieties of religion and just surrender unto Me." This is the advice of Lord Krsna. Our only aim should be
-to act in Krsna consciousness for the satisfaction of the Lord. This is oneness, or aprthag-dharma.
+The 360 days and 360 nights combine to become the 720 soldiers of Candavega (time). One has to fight
+these soldiers throughout one's lifespan, beginning with birth and ending with death. This fight is called
+the struggle for existence. Despite this struggle, however, the living entity does not die. As confirmed in
+Bhagavad-gita (2.20), the living entity is eternal:
+na jayate mriyate va kadacin
+nayam bhutva bhavita va na bhuyah
+ajo nityah sasvato 'yam purano
+na hanyate hanyamane sarire
+"For the soul there is never birth nor death. Nor, having once been, does he ever cease to be. He is
+unborn, eternal, ever-existing, undying and primeval. He is not slain when the body is slain." Actually the
+living entity does not take birth nor does he die, but he has to fight with the stringent laws of material
+nature throughout the entire span of his lifetime. He must also face different kinds of miserable
+conditions. Despite all this, the living entity, due to illusion, thinks that he is well situated in sense
+gratification.
 </p>
 
 </div>
@@ -101,7 +124,7 @@ to act in Krsna consciousness for the satisfaction of the Lord. This is oneness,
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

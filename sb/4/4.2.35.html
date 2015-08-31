@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.2.35.html">4.2.35</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.35</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/35"><b>35</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 aplutyavabhrtham yatra
 ganga yamunayanvita
 virajenatmana sarve
 svam svam dhama yayus tatah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 aplutya--taking a bath; avabhrtham--the bath which is taken after performing sacrifices; yatra--where;
 ganga--the River Ganges; yamunaya--by the River Yamuna; anvita--mixed; virajena--without infection;
 atmana--by the mind; sarve--all; svam svam--their respective; dhama--abodes; yayuh--went; tatah--from
 there.
-<p></p>
+<br>
 <h2>Translation</h2>
 My dear Vidura, carrier of bows and arrows, all the demigods who were performing the sacrifice took
 their bath at the confluence of the Ganges and the Yamuna after completing the yajna performance. Such
 a bath is called avabhrtha-snana. After thus becoming purified in heart, they departed for their respective
 abodes.
-<p></p>
+<br>
 <h2>Purport</h2>
 After Lord Siva and, previously, Daksa, left the arena of sacrifice, the sacrifice was not stopped; the sages
 went on for many years in order to satisfy the Supreme Lord. The sacrifice was not destroyed for want of
@@ -109,7 +148,7 @@ Talks Between Lord Siva and Sati
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

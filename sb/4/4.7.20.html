@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.20.html">4.7.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasyanghri-padmam paricarya visvavibhavanayatta-
-gunabhipatteh
-ajo 'dhyatisthat khalu paramesthyam
-padam jitatma-svasanabhivandyam
-<p></p>
+syamo hiranya-rasano 'rka-kirita-justo
+nilalaka-bhramara-mandita-kundalasyah
+sankhabja-cakra-sara-capa-gadasi-carmavyagrair
+hiranmaya-bhujair iva karnikarah
+<br>
 <h2>Synonyms</h2>
-yasya--whose; anghri--leg; padmam--lotus feet; paricarya--worshiping; visva--universe; vibhavanaya--for
-creating; atta--received; guna-abhipatteh--for acquiring the required qualifications; ajah--the unborn
-(Lord Brahma); adhyatisthat--became situated; khalu--undoubtedly; paramesthyam--the supreme position
-within the universe; padam--position; jita-atma--one who has conquered his mind; svasana--by
-controlling the life air; abhivandyam--worshipable.
-<p></p>
+syamah--blackish; hiranya-rasanah--a garment like gold; arka-kirita-justah--with a helmet as dazzling as
+the sun; nila-alaka--bluish curls; bhramara--big black bees; mandita-kundala-asyah--having a face
+decorated with earrings; sankha--conchshell; abja--lotus flower; cakra--wheel; sara--arrows; capa--bow;
+gada--club; asi--sword; carma--shield; vyagraih--filled with; hiranmaya--golden (bracelets and bangles);
+bhujaih--with hands; iva--as; karnikarah--flower tree.
+<br>
 <h2>Translation</h2>
-Suniti continued: The Supreme Personality of Godhead is so great that simply by worshiping His lotus
-feet, your great-grandfather, Lord Brahma, acquired the necessary qualifications to create this universe.
-Although he is unborn and is the chief of all living creatures, he is situated in that exalted post because of
-the mercy of the Supreme Personality of Godhead, whom even great yogis worship by controlling the
-mind and regulating the life air [prana].
-<p></p>
+His complexion was blackish, His garment yellow like gold, and His helmet as dazzling as the sun. His
+hair was bluish, the color of black bees, and His face was decorated with earrings. His eight hands held a
+conchshell, wheel, club, lotus flower, arrow, bow, shield and sword, and they were decorated with golden
+ornaments such as bangles and bracelets. His whole body resembled a blossoming tree beautifully
+decorated with various kinds of flowers.
+<br>
 <h2>Purport</h2>
-Suniti cited the example of Lord Brahma, who was Dhruva Maharaja's great-grandfather. Although Lord
-Brahma is also a living being, by his penance and austerity he acquired the exalted position of creator of
-this universe by the mercy of the Supreme Lord. To become successful in any attempt, one not only has to
-undergo severe penances and austerities, but also must be dependent on the mercy of the Supreme
-Personality of Godhead. This indication had been given to Dhruva Maharaja by his stepmother and was
-now confirmed by his own mother, Suniti.
+The face of Lord Visnu as described in this verse appears like a lotus flower with bees humming over it.
+All of the ornaments on the body of Lord Visnu resemble molten gold of the reddish-gold color of the
+morning sunrise. The Lord appears, just as the morning sun rises, to protect the whole universal creation.
+His arms display different weapons, and His eight hands are compared to the eight petals of a lotus flower.
+All the weapons mentioned are for the protection of His devotees.
+Generally in the four hands of Visnu there are a wheel, club, conchshell and lotus flower. These four
+symbols are seen in the four hands of Visnu in different arrangements. The club and the wheel are the
+Lord's symbols of punishment for the demons and miscreants, and the lotus flower and conchshell are
+used to bless the devotees. There are always two classes of men, the devotees and the demons. As
+confirmed in Bhagavad-gita (paritranaya sadhunam), the Lord is always ready for the protection of the
+devotees and annihilation of the demons. There are demons and devotees in this material world, but in
+the spiritual world there is no such distinction. In other words, Lord Visnu is the proprietor of both the
+material and spiritual worlds. In the material world almost everyone is of the demoniac nature, but there
+are also devotees, who appear to be in the material world although they are always situated in the spiritual
+world. A devotee's position is always transcendental, and he is always protected by Lord Visnu.
 </p>
 
 </div>
@@ -82,7 +130,7 @@ now confirmed by his own mother, Suniti.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

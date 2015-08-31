@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,25 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.16.9.html">4.16.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-yadabhisiktah prthur anga viprair
-amantrito janatayas ca palah
-praja niranne ksiti-prstha etya
-ksut-ksama-dehah patim abhyavocan
-<p></p>
+apyayayaty asau lokam
+vadanamrta-murtina
+sanuragavalokena
+visada-smita-caruna
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--the great sage Maitreya said; yada--when; abhisiktah--was enthroned; prthuh--King
-Prthu; anga--my dear Vidura; vipraih--by the brahmanas; amantritah--was declared; janatayah--of the
-people; ca--also; palah--the protector; prajah--the citizens; niranne--being without food grains; ksitiprsthe--
-the surface of the globe; etya--coming near; ksut--by hunger; ksama--skinny; dehah--their bodies;
-patim--to the protector; abhyavocan--they said.
-<p></p>
+apyayayati--enhances; asau--he; lokam--the whole world; vadana--by his face; amrta-murtina--moonlike;
+sa-anuraga--affectionate; avalokena--with glances; visada--bright; smita--smiling; caruna--beautiful.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya continued: My dear Vidura, at the time King Prthu was enthroned by the great
-sages and brahmanas and declared to be the protector of the citizens, there was a scarcity of food grains.
-The citizens actually became skinny due to starvation. Therefore they came before the King and informed
-him of their real situation.
-<p></p>
-<h2>Purport</h2>
-Information is given herein concerning the selection of the king by the brahmanas. According to the
-varnasrama system, the brahmanas are considered to be the heads of the society and therefore to be
-situated in the topmost social position. The varnasrama-dharma, the institution of four varnas and four
-asramas, is very scientifically designed. As stated in Bhagavad-gita, varnasrama-dharma is not a man-made
-institution, but is God-made. In this narration it is clearly indicated that the brahmanas used to control
-the royal power. When an evil king like Vena ruled, the brahmanas would kill him through their
-brahminical powers and would select a proper ruler by testing his qualifications. In other words, the
-brahmanas, the intelligent men or great sages, would control the monarchical powers. Here we have an
-indication of how the brahmanas elected King Prthu to the throne as the protector of the citizens. The
-citizens, being skinny due to hunger, approached the King and informed him that necessary action should
-be taken. The structure of the varnasrama-dharma; was so nice that the brahmanas would guide the head
-of state. The head of state would then give protection to the citizens. The ksatriyas would take charge of
-protecting the people in general, and under the protection of the ksatriyas, the vaisyas would protect the
-cows, produce food grains and distribute them. Sudras, the working class, would help the higher three
-classes by manual labor. This is the perfect social system.
+This King, Prthu Maharaja, by virtue of his affectionate glances and beautiful moonlike face, which is
+always smiling with great affection for the citizens, will enhance everyone's peaceful life.
 </p>
 
 </div>
@@ -91,7 +107,7 @@ classes by manual labor. This is the perfect social system.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

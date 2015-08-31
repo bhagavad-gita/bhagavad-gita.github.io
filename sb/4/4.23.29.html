@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,54 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.29.html">4.23.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nasam varorv anyatama bhuvi-sprk
-purim imam vira-varena sakam
-arhasy alankartum adabhra-karmana
-lokam param srir iva yajna-pumsa
-<p></p>
+maitreya uvaca
+stuvatisv amara-strisu
+pati-lokam gata vadhuh
+yam va atma-vidam dhuryo
+vainyah prapacyutasrayah
+<br>
 <h2>Synonyms</h2>
-na--not; asam--of these; varoru--O most fortunate one; anya-tama--anyone; bhuvi-sprk--touching the
-ground; purim--city; imam--this; vira-varena--the great hero; sakam--along with; arhasi--you deserve;
-alankartum--to decorate; adabhra--glorious; karmana--whose activities; lokam--world; param--
-transcendental; srih--the goddess of fortune; iva--like; yajna-pumsa--with the enjoyer of all yajnas.
-<p></p>
+maitreyah uvaca--the great sage Maitreya continued to speak; stuvatisu--while glorifying; amara-strisu--
+by the wives of the denizens of heaven; pati-lokam--the planet where the husband had gone; gata--
+reaching; vadhuh--the wife; yam--where; va--or; atma-vidam--of the self-realized souls; dhuryah--the
+topmost; vainyah--the son of King Vena (Prthu Maharaja); prapa--obtained; acyuta-asrayah--under the
+protection of the Supreme Personality of Godhead.
+<br>
 <h2>Translation</h2>
-O greatly fortunate one, it appears that you are none of the women I have mentioned because I see that
-your feet are touching the ground. But if you are some woman of this planet, you can, like the goddess of
-fortune, who, accompanied by Lord Visnu, increases the beauty of the Vaikuntha planets, also increase
-the beauty of this city by associating with me. You should understand that I am a great hero and a very
-powerful king on this planet.
-<p></p>
+The great sage Maitreya continued speaking: My dear Vidura, when the wives of the denizens of heaven
+were thus talking amongst themselves, Queen Arci reached the planet which her husband, Maharaja
+Prthu, the topmost self-realized soul, had attained.
+<br>
 <h2>Purport</h2>
-There is a difference between demoniac mentality and devotional mentality. Devotees know perfectly
-well that the goddess of fortune, who is the constant companion of Visnu, or Narayana, cannot be enjoyed
-by a living entity. This higher sense of understanding is called Krsna consciousness. Nonetheless,
-everyone wants to become happy by imitating the prosperity of Narayana. In this verse Puranjana states
-that the girl appears to be an ordinary woman. However, since he is attracted by her, he requests that she
-become as happy as the goddess of fortune by associating with him. Thus he introduces himself as a great
-king with great influence so that she might accept him as her husband and be as happy as the goddess of
-fortune. To desire to enjoy this material world as a subordinate of the Supreme Personality of Godhead is
-godly. The demons, however, want to enjoy this material world without considering the Supreme
-Personality of Godhead. This is the difference between a demon and a demigod.
-The word bhuvi-sprk mentioned in this verse is very significant. When the demigods sometimes come
-to this planet, they do not touch the ground. Puranjana could understand that this girl did not belong to
-the transcendental world or the higher planetary system because her feet were touching the ground. Since
-every woman in this world wants her husband to be very influential, rich and powerful, Puranjana, to
-seduce the girl, introduced himself as such a personality. In the material world, whether one be a man or a
-woman, one wants to enjoy. A man wants to enjoy a beautiful woman, and a woman wants to enjoy a
-powerful, opulent man. Every living entity who possesses such material desires is called purusa, an
-enjoyer. Superficially it appears that the woman is the enjoyed and the man is the enjoyer, but internally
-everyone is an enjoyer. Consequently everything in this material world is called maya.
+According to Vedic scriptures, a woman who dies with her husband, or enters into the fire in which her
+husband is burning, also enters the same planet her husband attains. In this material world there is a
+planet known as Patiloka, just as there is a planet known as Pitrloka. But in this verse the word pati-loka
+does not refer to any planet within this material universe, for Prthu Maharaja, being topmost amongst
+self-realized souls, certainly returned home, back to Godhead, and attained one of the Vaikuntha planets.
+Queen Arci also entered Patiloka, but this planet is not in the material universe, for she actually entered
+the planet which her husband attained. In the material world also, when a woman dies with her husband,
+she again unites with him in the next birth. Similarly, Maharaja Prthu and Queen Arci united in the
+Vaikuntha planets. In the Vaikuntha planets there are husbands and wives, but there is no question of
+their giving birth to children or having sex life. In the Vaikuntha planets both husbands and wives are
+extraordinarily beautiful, and they are attracted to one another, but they do not enjoy sex life. Indeed,
+they consider sex not to be very relishable because both husband and wife are always absorbed in Krsna
+consciousness and in glorifying and chanting the glories of the Lord.
+According to Bhaktivinoda Thakura also, a husband and wife can turn the home into a place as good as
+Vaikuntha, even while in this material world. Being absorbed in Krsna consciousness, even in this world
+husband and wife can live in Vaikuntha simply by installing the Deity of the Lord within the home and
+serving the Deity according to the directions of the sastras. In this way, they will never feel the sex urge.
+That is the test of advancement in devotional service. One who is advanced in devotional service is never
+attracted by sex life, and as soon as one becomes detached from sex life and proportionately attached to
+the service of the Lord, he actually experiences living in the Vaikuntha planets. In the ultimate issue,
+there is actually no material world, but when one forgets the service of the Lord and engages himself in
+the service of his senses, he is said to be living in the material world.
 </p>
 
 </div>
@@ -94,7 +136,7 @@ everyone is an enjoyer. Consequently everything in this material world is called
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

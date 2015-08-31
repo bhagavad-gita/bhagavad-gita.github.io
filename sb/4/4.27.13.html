@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.13.html">4.27.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kandoh pramlocaya labdha
-kanya kamala-locana
-tam capaviddham jagrhur
-bhuruha nrpa-nandanah
-<p></p>
+candavega iti khyato
+gandharvadhipatir nrpa
+gandharvas tasya balinah
+sasty-uttara-sata-trayam
+<br>
 <h2>Synonyms</h2>
-kandoh--of the sage Kandu; pramlocaya--by a heavenly society girl named Pramloca; labdha--obtained;
-kanya--daughter; kamala-locana--lotus-eyed; tam--her; ca--also; apaviddham--given up; jagrhuh--
-accepted; bhuruhah--the trees; nrpa-nandanah--O sons of King Pracinabarhisat.
-<p></p>
+candavegah--Candavega; iti--thus; khyatah--celebrated; gandharva--belonging to the Gandharvaloka;
+adhipatih--king; nrpa--O King; gandharvah--other Gandharvas; tasya--his; balinah--very powerful
+soldiers; sasti--sixty; uttara--surpassing; sata--hundred; trayam--three.
+<br>
 <h2>Translation</h2>
-O sons of King Pracinabarhisat, the heavenly society girl named Pramloca kept the lotus-eyed daughter
-of Kandu in the care of the forest trees. Then she went back to the heavenly planet. This daughter was
-born by the coupling of the Apsara named Pramloca with the sage Kandu.
-<p></p>
+O King! In Gandharvaloka there is a king named Candavega. Under him there are 360 very powerful
+Gandharva soldiers.
+<br>
 <h2>Purport</h2>
-Whenever a great sage undergoes severe austerities for material power, the King of heaven, Indra,
-becomes very envious. All the demigods have responsible posts for the management of universal affairs
-and are very highly qualified with pious activities. Although they are ordinary living entities, they are able
-to attain responsible posts, like Lord Brahma, Indra, Candra and Varuna. As is the nature of this material
-world, the King of heaven, Indra, is very anxious if a great sage undergoes severe austerities. The whole
-material world is filled with such envy that everyone becomes afraid of his neighbors. Every businessman
-is afraid of his associates because this material world is the field of activities for all kinds of envious
-people who have come here to compete with the opulence of the Supreme Personality of Godhead. Thus
-Indra was very much afraid of the severe austerities performed by the great sage Kandu, and he sent
-Pramloca to break his vows and austerities. A similar incident took place in the case of Visvamitra. From
-other incidents in the sastras, it appears that Indra has always been envious. When King Prthu was
-celebrating various sacrifices, outdoing Indra, Indra became very envious, and he disturbed King Prthu's
-sacrifice. This has already been discussed in previous chapters. King Indra became successful in breaking
-the vow of the great sage Kandu, who became attracted by the beauty of the heavenly society girl
-Pramloca and begot a female child. This child is described herein as lotus-eyed and very beautiful. Being
-thus successful in her mission, Pramloca returned to the heavenly planets, leaving the newborn child to
-the care of the trees. Fortunately, the trees accepted the child and agreed to raise her.
+Time is figuratively described here as Candavega. Since time and tide wait for no man, time is herein
+called Candavega, which means "very swiftly passing away." As time passes, it is calculated in terms of
+years. One year contains 360 days, and the soldiers of Candavega herein mentioned represent these days.
+Time passes swiftly; Candavega's powerful soldiers of Gandharvaloka very swiftly carry away all the days
+of our life. As the sun rises and sets, it snatches away the balance of our life-span. Thus as each day
+passes, each one of us loses some of life's duration. It is therefore said that the duration of one's life cannot
+be saved. But if one is engaged in devotional service, his time cannot be taken away by the sun. As stated
+in Srimad-Bhagavatam (2.3.17), ayur harati vai pumsam udyann astam ca yann asau. The conclusion is
+that if one wants to make himself immortal, he should give up sense gratification. By engaging oneself in
+devotional service, one can gradually enter into the eternal kingdom of God.
+Mirages and other illusory things are sometimes called Gandharvas. Our losing our life-span is taken as
+advancement of age. This imperceptible passing away of the days of life is figuratively referred to in this
+verse as Gandharvas. As explained in later verses, such Gandharvas are both male and female. This
+indicates that both men and women lose their life-span imperceptibly by the force of time, which is herein
+described as Candavega.
 </p>
 
 </div>
@@ -89,7 +125,7 @@ the care of the trees. Fortunately, the trees accepted the child and agreed to r
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,67 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.22.html">4.22.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-matta-bhramara-sausvaryahrsta-
-roma-latanghripam
-padma-kosa-rajo diksu
-viksipat-pavanotsavam
-<p></p>
+sa sraddhaya bhagavad-dharma-caryaya
+jijnasayadhyatmika-yoga-nisthaya
+yogesvaropasanaya ca nityam
+punya-sravah-kathaya punyaya ca
+<br>
 <h2>Synonyms</h2>
-matta--mad; bhramara--bumblebees; sau-svarya--with great humming; hrsta--joyfully; roma--hair on the
-body; lata--creepers; anghripam--trees; padma--lotus flower; kosa--whorl; rajah--saffron; diksu--in all
-directions; viksipat--throwing away; pavana--air; utsavam--festival.
-<p></p>
+sa--that devotional service; sraddhaya--with faith and conviction; bhagavat-dharma--devotional service;
+caryaya--by discussion; jijnasaya--by inquiry; adhyatmika--spiritual; yoga-nisthaya--by conviction in
+spiritual understanding; yoga-isvara--the Supreme Personality of Godhead; upasanaya--by worship of
+Him; ca--and; nityam--regularly; punya-sravah--by hearing which; kathaya--by discussion; punyaya--by
+pious; ca--also.
+<br>
 <h2>Translation</h2>
-There were various trees and creepers on all sides of the lake, and there were mad bumblebees
-humming all about them. The trees appeared to be very jolly due to the sweet humming of the
-bumblebees, and the saffron, which was contained in the lotus flowers, was being thrown into the air.
-These all created such an atmosphere that it appeared as though a festival were taking place there.
-<p></p>
+Attachment for the Supreme can be increased by practicing devotional service, inquiring about the
+Supreme Personality of Godhead, applying bhakti-yoga in life, worshiping the Yogesvara, the Supreme
+Personality of Godhead, and by hearing and chanting about the glories of the Supreme Personality of
+Godhead. These actions are pious in themselves.
+<br>
 <h2>Purport</h2>
-Trees and creepers are also different types of living beings. When bumblebees come upon trees and
-creepers to collect honey, certainly such plants become very happy. On such an occasion the wind also
-takes advantage of the situation by throwing pollen or saffron contained in the lotus flowers. All this
-combines with the sweet vibration created by the swans and the calm of the water. The Pracetas
-considered such a place to be like a continuous festival. From this description it appears that the Pracetas
-reached Sivaloka, which is supposed to be situated near the Himalaya Mountains.
+The word yogesvara is applicable to both the Supreme Personality of Godhead, Krsna, and His devotees
+also. In Bhagavad-gita this word occurs in two places. In the Eighteenth Chapter (18.78), Krsna is
+described as the Supreme Personality of Godhead, Hari, who is the master of all mystic power (yatra
+yogesvarah krsnah). Yogesvara is also described at the end of the Sixth Chapter (6.47): sa me yuktatamo
+matah. This yuktatama indicates the topmost of all yogis--the devotees, who can also be called yogesvara.
+In this verse, yogesvara-upasana means to render service to a pure devotee. Thus Narottama dasa Thakura
+says, chadiya vaisnava-seva nistara payeche keba: without serving a pure devotee, one cannot advance in
+spiritual life. Prahlada Maharaja also has said:
+naisam matis tavad urukramanghrim
+sprsaty anarthapagamo yad-arthah
+mahiyasam pada-rajo-'bhisekam
+niskincananam na vrnita yavat
+(Bhag. 7.5.32)
+One should take shelter of a pure devotee, who has nothing to do with this material world but is simply
+engaged in devotional service. By serving him only, one can transcend the qualitative material condition.
+In this verse it is recommended (yogesvara-upasanaya) that one serve the lotus feet of the topmost yogi,
+or the devotee. To serve the topmost devotee means to hear from him about the glories of the Supreme
+Personality of Godhead. To hear the glories of the Supreme Personality of Godhead from the mouth of a
+pure devotee is to acquire a pious life. In Bhagavad-gita (7.28) it is also said that without being pious one
+cannot engage in devotional service.
+yesam tv anta-gatam papam
+jananam punya-karmanam
+te dvandva-moha-nirmukta
+bhajanti mam drdha-vratah
+To become fixed in devotional service one has to become completely cleansed from the contamination
+of the material modes of nature. For work in devotional service the first item is adau gurv-asrayam: one
+should accept a bona fide spiritual master, and from the bona fide spiritual master inquire about one's
+transcendental occupational duties (sad-dharma-prccha) and follow in the footsteps of great saintly
+persons, devotees (sadhu-marga-anugamanam). These are the instructions given in Bhakti-rasamrtasindhu
+by Rupa Gosvami.
+The conclusion is that to increase attachment for the Supreme Personality of Godhead one has to accept
+a bona fide spiritual master and learn from him the methods of devotional service and hear from him
+about the transcendental message and glorification of the Supreme Personality of Godhead. In this way
+one has to increase his conviction about devotional service. Then it will be very easy to increase
+attachment for the Supreme Personality of Godhead.
 </p>
 
 </div>
@@ -79,7 +149,7 @@ reached Sivaloka, which is supposed to be situated near the Himalaya Mountains.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

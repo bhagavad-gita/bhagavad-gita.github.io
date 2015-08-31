@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,59 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.20.html">4.23.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-anuninye 'tha sanakair
-viro 'nunaya-kovidah
-pasparsa pada-yugalam
-aha cotsanga-lalitam
-<p></p>
+ativa bhartur vrata-dharma-nisthaya
+susrusaya carsa-deha-yatraya
+navindatartim parikarsitapi sa
+preyaskara-sparsana-mana-nirvrtih
+<br>
 <h2>Synonyms</h2>
-anuninye--began to flatter; atha--thus; sanakaih--gradually; virah--the hero; anunaya-kovidah--one who
-is very expert in flattery; pasparsa--touched; pada-yugalam--both the feet; aha--he said; ca--also; utsanga--
-on his lap; lalitam--thus being embraced.
-<p></p>
+ativa--very much; bhartuh--of the husband; vrata-dharma--vow to serve him; nisthaya--by
+determination; susrusaya--by serving; ca--also; arsa--like the great saintly sages; deha--body; yatraya--
+living condition; na--did not; avindata--perceive; artim--any difficulty; parikarsita api--although
+transformed to become lean and thin; sa--she; preyah-kara--very pleasing; sparsana--touching; mana--
+engaged; nirvrtih--pleasure.
+<br>
 <h2>Translation</h2>
-Because the King was very expert in flattery, he began to pacify his Queen very slowly. First he touched
-her two feet, then embraced her nicely, seating her on his lap, and began to speak as follows.
-<p></p>
+Although she was not accustomed to such difficulties, Queen Arci followed her husband in the
+regulative principles of living in the forest like great sages. She lay down on the ground and ate only
+fruits, flowers and leaves, and because she was not fit for these activities, she became frail and thin. Yet
+because of the pleasure she derived in serving her husband, she did not feel any difficulties.
+<br>
 <h2>Purport</h2>
-One has to awaken his Krsna consciousness by first regretting his past deeds. Just as King Puranjana
-began to flatter his Queen, one should, by deliberate consideration, raise himself to the platform of Krsna
-consciousness. To attain such an end, one must touch the lotus feet of the spiritual master. Krsna
-consciousness cannot be achieved by self-endeavor. One must therefore approach a self-realized, Krsna
-conscious person and touch his lotus feet. Prahlada Maharaja therefore said:
-naisam matis tavad urukramanghrim
-sprsaty anarthapagamo yad-arthah
-mahiyasam pada-rajo-'bhisekam
-niskincananam na vrnita yavat
-(Bhag. 7.5.32)
-One cannot come to the precincts of Krsna consciousness unless he touches the dust of the lotus feet of
-a person who has become a mahatma, a great devotee. This is the beginning of the surrendering process.
-Lord Krsna wants everyone to surrender unto Him, and this surrendering process begins when one
-touches the lotus feet of a bona fide spiritual master. By sincerely rendering service to a bona fide spiritual
-master, one begins his spiritual life in Krsna consciousness. Touching the lotus feet of a spiritual master
-means giving up one's false prestige and unnecessarily puffed-up position in the material world. Those
-who remain in the darkness of material existence due to their falsely prestigious positions--so-called
-scientists and philosophers--are actually atheists. They do not know the ultimate cause of everything.
-Although bewildered, they are not ready to surrender themselves to the lotus feet of a person who knows
-things in their proper perspective. In other words, one cannot arouse Krsna consciousness simply by his
-own mental speculation. One must surrender to a bona fide spiritual master. Only this process will help
-one.
+The words bhartur vrata-dharma-nisthaya indicate that a woman's duty, or religious principle, is to
+serve her husband in all conditions. In Vedic civilization a man is taught from the beginning of his life to
+become a brahmacari, then an ideal grhastha, then vanaprastha, then sannyasi, and the wife is taught just
+to follow the husband strictly in all conditions of life. After the period of brahmacarya, a man accepts a
+householder's life, and the woman is also taught by her parents to be a chaste wife. Thus when a girl and
+boy are united, both are trained for a life dedicated to a higher purpose. The boy is trained to execute his
+duty in accordance with the higher purpose of life, and the girl is trained to follow him. The chaste wife's
+duty is to keep her husband pleased in householder life in all respects, and when the husband retires from
+family life, she is to go to the forest and adopt the life of vanaprastha, or vana-vasi. At that time the wife is
+to follow her husband and take care of him, just as she took care of him in householder life. But when the
+husband takes the renounced order of life, namely sannyasa, the wife is to return home and become a
+saintly woman, setting an example for her children and daughters-in-law and showing them how to live a
+life of austerity.
+When Caitanya Mahaprabhu took sannyasa, His wife, Visnupriyadevi, although only sixteen years old,
+also took the vow of austerity due to her husband's leaving home. She chanted her beads, and after
+finishing one round, she collected one grain of rice. In this way, as many rounds as she chanted, she
+would receive the same number of rice grains and then cook them and so take prasada. This is called
+austerity. Even today in India, widows or women whose husbands have taken sannyasa follow the
+principles of austerity, even though they live with their children. Prthu Maharaja's wife, Arci, was steadily
+determined to execute the duty of a wife, and while her husband was in the forest, she followed him in
+eating only fruits and leaves and lying down on the ground. Since a woman's body is considerably more
+delicate than a man's, Queen Arci became very frail and thin, parikarsita. When one engages in austerities,
+his body generally becomes lean and thin. Becoming fat is not a very good qualification in spiritual life
+because a person who is engaged in spiritual life must reduce the comforts of the body--namely eating,
+sleeping and mating--to a minimum. Although Queen Arci became very thin from living in the forest
+according to regulative principles, she was not unhappy, for she was enjoying the honor of serving her
+great husband.
 </p>
 
 </div>
@@ -93,7 +141,7 @@ one.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

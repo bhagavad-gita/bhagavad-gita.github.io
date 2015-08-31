@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.30.html">4.13.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-iti te 'sat-krtas tena
-dvijah pandita-manina
-bhagnayam bhavya-yacnayam
-tasmai vidura cukrudhuh
-<p></p>
+nagacchanty ahuta deva
+na grhnanti grahan iha
+sadasas-patayo bruta
+kim avadyam maya krtam
+<br>
 <h2>Synonyms</h2>
-iti--thus; te--all the great sages; asat-krtah--being insulted; tena--by the King; dvijah--the brahmanas;
-pandita-manina--thinking himself to be very learned; bhagnayam--being broken; bhavya--auspicious;
-yacnayam--their request; tasmai--at him; vidura--O Vidura; cukrudhuh--became very angry.
-<p></p>
+na--not; agacchanti--are coming; ahutah--being invited; devah--the demigods; na--not; grhnanti--are
+accepting; grahan--shares; iha--in the sacrifice; sadasah-patayah--my dear priests; bruta--kindly tell me;
+kim--what; avadyam--offense; maya--by me; krtam--was committed.
+<br>
 <h2>Translation</h2>
-My dear Vidura, all good fortune unto you. The foolish King, who thought himself very learned, thus
-insulted the great sages, and the sages, being brokenhearted by the King's words, became very angry at
-him.
+King Anga addressed the priestly order: My dear priests, kindly tell me what offense I have committed.
+Although invited, the demigods are neither taking part in the sacrifice nor accepting their shares.
 </p>
 
 </div>
@@ -70,7 +108,7 @@ him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

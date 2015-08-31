@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.9.9.html">4.9.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-te vai lalata-lagnais tair
-isubhih sarva eva hi
-matva nirastam atmanam
-asamsan karma tasya tat
-<p></p>
+nunam vimusta-matayas tava mayaya te
+ye tvam bhavapyaya-vimoksanam anya-hetoh
+arcanti kalpaka-tarum kunapopabhogyam
+icchanti yat sparsajam niraye 'pi nrnam
+<br>
 <h2>Synonyms</h2>
-te--they; vai--certainly; lalata-lagnaih--intent upon their heads; taih--by those; isubhih--arrows; sarve--
-all of them; eva--certainly; hi--without fail; matva--thinking; nirastam--defeated; atmanam--themselves;
-asamsan--praised; karma--action; tasya--of him; tat--that.
-<p></p>
+nunam--certainly; vimusta-matayah--those who have lost their right intelligence; tava--Your; mayaya--
+by the influence of the illusory energy; te--they; ye--who; tvam--You; bhava--from birth; apyaya--and
+death; vimoksanam--the cause of liberation; anya-hetoh--for other purposes; arcanti--worship; kalpakatarum--
+who are like the desire tree; kunapa--of this dead body; upabhogyam--sense gratification;
+icchanti--they desire; yat--that which; sparsa-jam--derived by touch sensation; niraye--in hell; api--even;
+nrnam--for persons.
+<br>
 <h2>Translation</h2>
-When the heroes of the Yaksas saw that all their heads were being thus threatened by Dhruva Maharaja,
-they could very easily understand their awkward position, and they concluded that they would certainly
-be defeated. But, as heroes, they lauded the action of Dhruva.
-<p></p>
+Persons who worship You simply for the sense gratification of this bag of skin are certainly influenced
+by Your illusory energy. In spite of having You, who are like a desire tree and are the cause of liberation
+from birth and death, foolish persons, such as me, desire benedictions from You for sense gratification,
+which is available even for those who live in hellish conditions.
+<br>
 <h2>Purport</h2>
-This spirit of fighting in a sporting attitude is very significant in this verse. The Yaksas were severely
-attacked. Dhruva Maharaja was their enemy, but still, upon witnessing the wonderful, heroic acts of
-Maharaja Dhruva, they were very pleased with him. This straightforward appreciation of an enemy's
-prowess is a characteristic of real ksatriya spirit.
+Dhruva Maharaja repented because he had come to the Lord to render devotional service for material
+profit. He here condemns his attitude. Only due to gross lack of knowledge does one worship the Lord for
+material profit or for sense gratification. The Lord is like a desire tree. Anyone can have whatever he
+desires from the Lord, but people in general do not know what kind of benediction they should ask from
+Him. Happiness derived from the touch of skin, or sensuous happiness, is present in the life of hogs and
+dogs. Such happiness is very insignificant. If a devotee worships the Lord for such insignificant happiness,
+he must be considered devoid of all knowledge.
 </p>
 
 </div>
@@ -76,7 +122,7 @@ prowess is a characteristic of real ksatriya spirit.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

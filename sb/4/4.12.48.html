@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,52 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.48.html">4.12.48</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.48</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/48"><b>48</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vijnaya nirvidya gatam patim prajah
-purohitamatya-suhrd-ganadayah
-vicikyur urvyam atisoka-katara
-yatha nigudham purusam kuyoginah
-<p></p>
+prayatah kirtayet pratah
+samavaye dvi-janmanam
+sayam ca punya-slokasya
+dhruvasya caritam mahat
+<br>
 <h2>Synonyms</h2>
-vijnaya--after understanding; nirvidya--being indifferent; gatam--had left; patim--the King; prajah--all
-the citizens; purohita--priests; amatya--ministers; suhrt--friends; gana-adayah--and people in general;
-vicikyuh--searched; urvyam--on the earth; ati-soka-katarah--being greatly aggrieved; yatha--just as;
-nigudham--concealed; purusam--the Supersoul; ku-yoginah--inexperienced mystics.
-<p></p>
+prayatah--with great care; kirtayet--one should chant; pratah--in the morning; samavaye--in the
+association; dvi-janmanam--of the twice-born; sayam--in the evening; ca--also; punya-slokasya--of sacred
+renown; dhruvasya--of Dhruva; caritam--character; mahat--great.
+<br>
 <h2>Translation</h2>
-When it was understood that the King had indifferently left home, all the citizens, priests, ministers,
-friends, and people in general were greatly aggrieved. They began to search for him all over the world, just
-as a less experienced mystic searches out the Supersoul within himself.
-<p></p>
+The great sage Maitreya recommended: One should chant of the character and activities of Dhruva
+Maharaja both in the morning and in the evening, with great attention and care, in a society of brahmanas
+or other twice-born persons.
+<br>
 <h2>Purport</h2>
-The example of searching for the Supersoul within the heart by the less intelligent mystics is very
-instructive. The Absolute Truth is understood in three different features, namely impersonal Brahman,
-localized Paramatma, and the Supreme Personality of Godhead. Such kuyoginah, or less intelligent
-mystics, can by mental speculation reach the point of the impersonal Brahman, but they cannot find the
-Supersoul, who is sitting within each living entity. When the King left, it was certain that he was staying
-somewhere else, but because the citizens did not know how to find him they were frustrated like the less
-intelligent mystics.
+It is said that only in the association of devotees can one understand the importance of the character and
+pastimes of the Supreme Personality of Godhead or His devotees. In this verse it is especially
+recommended that Dhruva Maharaja's character be discussed in a society of the twice-born, which refers
+to the qualified brahmanas, ksatriyas and vaisyas. One should especially seek the society of brahmanas
+who are elevated to the position of Vaisnavas. Thus discussion of Srimad-Bhagavatam, which describes the
+character and pastimes of devotees and the Lord, is very quickly effective. The International Society for
+Krishna Consciousness has been organized for this purpose. In every center of this Society--not only in
+the morning, evening or noon, but practically twenty-four hours a day--there is continuous devotional
+service going on. Anyone who comes in contact with the Society automatically becomes a devotee. We
+have actual experience that many karmis and others come to the Society and find a very pleasing and
+peaceful atmosphere in the temples of ISKCON. In this verse the word dvi janmanam means "of the twiceborn."
+Anyone can join the International Society for Krishna Consciousness and be initiated to become
+twice-born. As recommended by Sanatana Gosvami, by the process of initiation and authorized training,
+any man can become twice-born. The first birth is made possible by the parents, and the second birth is
+made possible by the spiritual father and Vedic knowledge. Unless one is twice-born one cannot
+understand the transcendental characteristics of the Lord and His devotees. Study of the Vedas is therefore
+forbidden for sudras. Simply by academic qualifications a sudra cannot understand the transcendental
+science. At the present moment, throughout the entire world the educational system is geared to produce
+sudras. A big technologist is no more than a big sudra. Kalau sudra-sambhavah: in the age of Kali,
+everyone is a sudra. Because the whole population of the world consists only of sudras, there is a decline
+of spiritual knowledge, and people are unhappy. The Krsna consciousness movement has been started
+especially to create qualified brahmanas to broadcast spiritual knowledge all over the world, for thus
+people may become very happy.
 </p>
 
 </div>
@@ -80,7 +134,7 @@ intelligent mystics.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.17.20.html">4.17.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-anye ca mayino mayam
-antardhanadbhutatmanam
-mayam prakalpya vatsam te
-duduhur dharanamayim
-<p></p>
+praharanti na vai strisu
+krtagahsv api jantavah
+kim uta tvad-vidha rajan
+karuna dina-vatsalah
+<br>
 <h2>Synonyms</h2>
-anye--others; ca--also; mayinah--mystic magicians; mayam--mystic powers; antardhana--disappearing;
-adbhuta--wonderful; atmanam--of the body; mayam--the demon named Maya; prakalpya--making;
-vatsam--the calf; te--they; duduhuh--milked out; dharanamayim--proceeding from will.
-<p></p>
+praharanti--strike; na--never; vai--certainly; strisu--women; krta-agahsu--having committed sinful
+activities; api--although; jantavah--human beings; kim uta--then what to speak of; tvat-vidhah--
+personalities like you; rajan--O King; karunah--merciful; dina-vatsalah--affectionate to the poor.
+<br>
 <h2>Translation</h2>
-Others also, the inhabitants of planets known as Kimpurusa-loka, made the demon Maya into a calf, and
-they milked out mystic powers by which one can disappear immediately from another's vision and appear
-again in a different form.
-<p></p>
-<h2>Purport</h2>
-It is said that the inhabitants of Kimpurusa-loka can perform many wonderful mystic demonstrations. In
-other words, they can exhibit as many wonderful things as one can imagine. The inhabitants of this planet
-can do whatever they like, or whatever they imagine. Such powers are also mystic powers. The possession
-of such mystic power is called isita. The demons generally learn such mystic powers by the practice of
-yoga. In the Dasama-skandha, the Tenth Canto, of Srimad-Bhagavatam, there is a vivid description of how
-the demons appear before Krsna in various wonderful forms. For instance, Bakasura appeared before
-Krsna and His cowherd boyfriends as a gigantic crane. While present on this planet, Lord Krsna had to
-fight with many demons who could exhibit the wonderful mystic powers of Kimpurusa-loka. Although
-the inhabitants of Kimpurusa-loka are naturally endowed with such powers, one can attain these powers
-on this planet by performing different yogic practices.
+Even if a woman does commit some sinful activity, no one should place his hand upon her. And what to
+speak of you, dear King, who are so merciful. You are a protector, and you are affectionate to the poor.
 </p>
 
 </div>
@@ -82,7 +108,7 @@ on this planet by performing different yogic practices.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.57.html">4.22.57</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.57</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/57"><b>57</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ksanardhenapi tulaye
-na svargam napunar-bhavam
-bhagavat-sangi-sangasya
-martyanam kim utasisah
-<p></p>
+durdharsas tejasevagnir
+mahendra iva durjayah
+titiksaya dharitriva
+dyaur ivabhista-do nrnam
+<br>
 <h2>Synonyms</h2>
-ksana-ardhena--by half a moment; api--even; tulaye--compare; na--never; svargam--heavenly planets;
-na--neither; apunah-bhavam--merging into the Supreme; bhagavat--the Supreme Personality of Godhead;
-sangi--associate; sangasya--one who takes advantage of associating; martyanam--of the conditioned soul;
-kim uta--what is there; asisah--blessings.
-<p></p>
+durdharsah--unconquerable; tejasa--by prowess; iva--like; agnih--fire; maha-indrah--the King of heaven;
+iva--likened; durjayah--insuperable; titiksaya--by tolerance; dharitri--the earth; iva--like; dyauh--the
+heavenly planets; iva--like; abhista-dah--fulfilling desires; nrnam--of human society.
+<br>
 <h2>Translation</h2>
-If one by chance associates with a devotee, even for a fraction of a moment, he no longer is subject to
-attraction by the results of karma or jnana. What interest then can he have in the benedictions of the
-demigods, who are subject to the laws of birth and death?
-<p></p>
+Maharaja Prthu was so strong and powerful that no one could disobey his orders any more than one
+could conquer fire itself. He was so strong that he was compared to Indra, the King of heaven, whose
+power is insuperable. On the other hand, Maharaja Prthu was also as tolerant as the earth, and in fulfilling
+various desires of human society, he was like heaven itself.
+<br>
 <h2>Purport</h2>
-Out of three kinds of men--the karmis, jnanis and bhaktas--the bhakta is described herein as the most
-exalted. Srila Prabodhananda Sarasvati has sung: kaivalyam narakayate tridasa-pur akasa-puspayate
-(Caitanya-candramrta). The word kaivalya means to merge into the effulgence of the Supreme Personality
-of Godhead, and the word tridasa-pur refers to the heavenly planets where the demigods live. Thus for a
-devotee, kaivalya-sukha, or merging into the existence of the Lord, is hellish because the bhakta considers
-it suicidal to lose his individuality and merge into the effulgence of Brahman. A bhakta always wants to
-retain his individuality in order to render service to the Lord. Indeed, he considers promotion to the
-upper planetary systems to be no better than a will-o'-the-wisp. Temporary, material happiness holds no
-value for a devotee. The devotee is in such an exalted position that he is not interested in the actions of
-karma or jnana. The resultant actions of karma and jnana are so insignificant to a devotee situated on the
-transcendental platform that he is not in the least interested in them. Bhakti-yoga is sufficient to give the
-bhakta all happiness. As stated in Srimad-Bhagavatam (1.2.6): yayatma suprasidati. One can be fully
-satisfied simply by devotional service, and that is the result of association with a devotee. Without being
-blessed by a pure devotee, no one can be fully satisfied, nor can anyone understand the transcendental
-position of the Supreme Personality of Godhead.
+It is the duty of a king to give protection to the citizens and to fulfill their desires. At the same time, the
+citizens must obey the laws of the state. Maharaja Prthu maintained all the standards of good government,
+and he was so invincible that no one could disobey his orders any more than a person could stop heat and
+light emanating from a fire. He was so strong and powerful that he was compared to the King of heaven,
+Indra. In this age modern scientists have been experimenting with nuclear weapons, and in a former age
+they used to release brahmastras, but all these brahmastras and nuclear weapons are insignificant
+compared to the thunderbolt of the King of heaven. When Indra releases a thunderbolt, even the biggest
+hills and mountains crack. On the other hand, Maharaja Prthu was as tolerant as the earth itself, and he
+fulfilled all the desires of his citizens just like torrents of rain from the sky. Without rainfall, it is not
+possible to fulfill one's various desires on this planet. As stated in Bhagavad-gita (3.14), parjanyad annasambhavah:
+food grains are produced only because rain falls from the sky, and without grains, no one on
+the earth can be satisfied. Consequently an unlimited distribution of mercy is compared to the water
+falling from the clouds. Maharaja Prthu distributed his mercy incessantly, much like rainfall. In other
+words, Maharaja Prthu was softer than a rose flower and harder than a thunderbolt. In this way he ruled
+over his kingdom.
 </p>
 
 </div>
@@ -88,7 +127,7 @@ position of the Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

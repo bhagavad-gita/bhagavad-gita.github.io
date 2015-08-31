@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.18.22.html">4.18.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-viras casvam upadaya
-pitr-yajnam athavrajat
-tad avadyam hare rupam
-jagrhur jnana-durbalah
-<p></p>
+tathahayo dandasukah
+sarpa nagas ca taksakam
+vidhaya vatsam duduhur
+bila-patre visam payah
+<br>
 <h2>Synonyms</h2>
-virah--the son of King Prthu; ca--also; asvam--the horse; upadaya--taking; pitr-yajnam--to the sacrificial
-arena of his father; atha--thereafter; avrajat--went; tat--that; avadyam--abominable; hareh--of Indra;
-rupam--dress; jagrhuh--adopted; jnana-durbalah--those with a poor fund of knowledge.
-<p></p>
+tatha--similarly; ahayah--snakes without hoods; dandasukah--scorpions; sarpah--cobras; nagah--big
+snakes; ca--and; taksakam--Taksaka, chief of the snakes; vidhaya--making; vatsam--calf; duduhuh--milked
+out; bila-patre--in the pot of snake holes; visam--poison; payah--as milk.
+<br>
 <h2>Translation</h2>
-Then the great hero, Vijitasva, the son of King Prthu, again took the horse and returned to his father's
-sacrificial arena. Since that time, certain men with a poor fund of knowledge have adopted the dress of a
-false sannyasi. It was King Indra who introduced this.
-<p></p>
+Thereafter cobras and snakes without hoods, large snakes, scorpions and many other poisonous animals
+took poison out of the planet earth as their milk and kept this poison in snake holes. They made a calf out
+of Taksaka.
+<br>
 <h2>Purport</h2>
-Since time immemorial, the sannyasa order has carried the tridanda. Later Sankaracarya introduced the
-ekadandi-sannyasa. A tridandi-sannyasi is a Vaisnava sannyasi, and an ekadandi-sannyasi is a Mayavadi
-sannyasi. There are many other types of sannyasis, who are not approved by Vedic rituals. A type of
-pseudo-sannyasa was introduced by Indra when he tried to hide himself from the attack of Vijitasva, the
-great son of King Prthu. Now there are many different types of sannyasis. Some of them go naked, and
-some of them carry a skull and trident, generally known as kapalika. All of them were introduced under
-some meaningless circumstances, and those who have a poor fund of knowledge accept these false
-sannyasis and their pretenses, although they are not bona fide guides to spiritual advancement. At the
-present moment some missionary institutions, without referring to the Vedic rituals, have introduced
-some sannyasis who engage in sinful activities. The sinful activities forbidden by the sastras are illicit sex,
-intoxication, meat-eating and gambling. These so-called sannyasis indulge in all these activities. They eat
-meat and flesh, fish, eggs and just about everything. They sometimes drink with the excuse that without
-alcohol, fish and meat, it is impossible to remain in the cold countries near the Arctic zone. These
-sannyasis introduce all these sinful activities in the name of serving the poor, and consequently poor
-animals are cut to pieces and go into the bellies of these sannyasis. As described in the following verses,
-such sannyasis are pakhandis. Vedic literature states that a person who puts Lord Narayana on the level
-with Lord Siva or Lord Brahma immediately becomes a pakhandi. As stated in the Puranas:
-yas tu narayanam devam
-brahma-rudradi-daivataih
-samatvenaiva vikseta
-sa pasandi bhaved dhruvam
-In Kali-yuga the pakhandis are very prominent. However, Lord Sri Caitanya Mahaprabhu has tried to
-kill all these pakhandis by introducing His sankirtana movement. Those who take advantage of this
-sankirtana movement of the International Society for Krishna Consciousness will be able to save
-themselves from the influence of these pakhandis.
+Within this material world there are various types of living entities, and the different types of reptiles
+and scorpions mentioned in this verse are also provided with their sustenance by the arrangement of the
+Supreme Personality of Godhead. The point is that everyone is taking his eatables from the planet earth.
+According to one's association with the material qualities, one develops a certain type of character. Payahpanam
+bhujanganam: if one feeds a serpent milk, the snake will simply increase his venom. However, if
+one supplies milk to a talented sage or saint, the sage will develop finer brain tissues by which he can
+contemplate higher, spiritual life. Thus the Lord is supplying everyone food, but according to the living
+entity's association with the modes of material nature, the living entity develops his specific character.
 </p>
 
 </div>
@@ -97,7 +119,7 @@ themselves from the influence of these pakhandis.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

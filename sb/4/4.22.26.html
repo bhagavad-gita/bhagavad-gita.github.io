@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,62 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.26.html">4.22.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa tan prapannarti-haro
-bhagavan dharma-vatsalah
-dharma-jnan sila-sampannan
-pritah pritan uvaca ha
-<p></p>
+yada ratir brahmani naisthiki puman
+acaryavan jnana-viraga-ramhasa
+dahaty aviryam hrdayam jiva-kosam
+pancatmakam yonim ivotthito 'gnih
+<br>
 <h2>Synonyms</h2>
-sah--Lord Siva; tan--them; prapanna-arti-harah--one who drives away all kinds of dangers; bhagavan--
-the lord; dharma-vatsalah--very much fond of religious principles; dharma-jnan--persons who are aware
-of religious principles; sila-sampannan--very well behaved; pritah--being pleased; pritan--of very gentle
-behavior; uvaca--talked with them; ha--in the past.
-<p></p>
+yada--when; ratih--attachment; brahmani--in the Supreme Personality of Godhead; naisthiki--fixed;
+puman--the person; acaryavan--completely surrendered to the spiritual master; jnana--knowledge; viraga--
+detachment; ramhasa--by the force of; dahati--burns; aviryam--impotent; hrdayam--within the heart; jivakosam--
+the covering of the spirit soul; panca-atmakam--five elements; yonim--source of birth; iva--like;
+utthitah--emanating; agnih--fire.
+<br>
 <h2>Translation</h2>
-Lord Siva became very pleased with the Pracetas because generally Lord Siva is the protector of pious
-persons and persons of gentle behavior. Being very much pleased with the princes, he began to speak as
-follows.
-<p></p>
+Upon becoming fixed in his attachment to the Supreme Personality of Godhead by the grace of the
+spiritual master and by awakening knowledge and detachment, the living entity, situated within the heart
+of the body and covered by the five elements, burns up his material surroundings exactly as fire, arising
+from wood, burns the wood itself.
+<br>
 <h2>Purport</h2>
-The Supreme Personality of Godhead, Visnu, or Krsna, is known as bhakta-vatsala, and herein we find
-Lord Siva described as dharma-vatsala. Of course, the word dharma-vatsala refers to a person who lives
-according to religious principles. That is understood. Nonetheless, these two words have additional
-significance. Sometimes Lord Siva has to deal with persons who are in the modes of passion and
-ignorance. Such persons are not always very much religious and pious in their activities, but since they
-worship Lord Siva for some material profit, they sometimes obey the religious principles. As soon as Lord
-Siva sees that his devotees are following religious principles, he blesses them. The Pracetas, sons of
-Pracinabarhi, were naturally very pious and gentle, and consequently Lord Siva was immediately pleased
-with them. Lord Siva could understand that the princes were sons of Vaisnavas, and as such Lord Siva
-offered prayers to the Supreme Personality of Godhead as follows.
+It is said that both the jivatma, the individual soul, and the Paramatma live together within the heart. In
+the Vedic version it is stated, hrdi hy ayam atma: the soul and Supersoul both live within the heart. The
+individual soul is liberated when it comes out of the material heart or cleanses the heart to make it
+spiritualized. The example given here is very appropriate: yonim ivotthito'gnih. Agni, or fire, comes out of
+wood, and by it the wood is completely destroyed. Similarly, when a living entity increases his attachment
+for the Supreme Personality of Godhead, he is to be considered like fire. A blazing fire is visible by its
+exhibition of heat and light; similarly, when the living entity within the heart becomes enlightened with
+full spiritual knowledge and detached from the material world, he burns up his material covering of the
+five elements--earth, water, fire, air and sky--and becomes free from the five kinds of material
+attachments, namely ignorance, false egoism, attachment to the material world, envy and absorption in
+material consciousness. Therefore pancatmakam, as mentioned in this verse, refers to either the five
+elements or the five coverings of material contamination. When these are all burned into ashes by the
+blazing fire of knowledge and detachment, one is fixed firmly in the devotional service of the Supreme
+Personality of Godhead. Unless one takes shelter of a bona fide spiritual master and advances one's
+attraction for Krsna by the spiritual master's instructions, the five coverings of the living entity cannot be
+uncovered from the material heart. The living entity is centered within the heart, and to take him away
+from the heart is to liberate him. This is the process. One must take shelter of a bona fide spiritual master
+and by his instruction increase one's knowledge in devotional service, become detached from the material
+world and thus become liberated. An advanced devotee, therefore, does not live within the material body
+but within his spiritual body, just as a dry coconut lives detached from the coconut husk, even though
+within the husk. The pure devotee's body is therefore called cin-maya-sarira ("spiritualized body"). In
+other words, a devotee's body is not connected with material activities, and as such, a devotee is always
+liberated (brahma-bhuyaya kalpate), as confirmed in Bhagavad-gita (14.26). Srila Rupa Gosvami also
+confirms this:
+iha yasya harer dasye
+karmana manasa gira
+nikhilasv apy avasthasu
+jivan-muktah sa ucyate
+"Whatever his condition may be, one who is engaged fully with his body, mind and speech in the
+service of the Lord is liberated, even within this body."
 </p>
 
 </div>
@@ -83,7 +144,7 @@ offered prayers to the Supreme Personality of Godhead as follows.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

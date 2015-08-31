@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.5.13.html">4.5.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ahvayantam ivoddhastair
-dvijan kama-dughair drumaih
-vrajantam iva matangair
-grnantam iva nirjharaih
-<p></p>
+tavat sa rudranucarair maha-makho
+nanayudhair vamanakair udayudhaih
+pingaih pisangair makarodarananaih
+paryadravadbhir viduranvarudhyata
+<br>
 <h2>Synonyms</h2>
-ahvayantam--calling; iva--as if; ut-hastaih--with upraised hands (branches); dvijan--the birds; kamadughaih--
-yielding desires; drumaih--with trees; vrajantam--moving; iva--as if; matangaih--by elephants;
-grnantam--resounding; iva--as if; nirjharaih--by the waterfalls.
-<p></p>
+tavat--very quickly; sah--that; rudra-anucaraih--by the followers of Lord Siva; maha-makhah--the arena
+of the great sacrifice; nana--various kinds; ayudhaih--with weapons; vamanakaih--of short stature;
+udayudhaih--upraised; pingaih--blackish; pisangaih--yellowish; makara-udara-ananaih--with bellies and
+faces like sharks'; paryadravadbhih--running all around; vidura--O Vidura; anvarudhyata--was
+surrounded.
+<br>
 <h2>Translation</h2>
-There are tall trees with straight branches that appear to call the sweet birds, and when herds of
-elephants pass through the hills, it appears that the Kailasa Hill moves with them. When the waterfalls
-resound, it appears that Kailasa Hill does also.
+My dear Vidura, all the followers of Lord Siva surrounded the arena of sacrifice. They were of short
+stature and were equipped with various kinds of weapons; their bodies appeared to be like those of
+sharks, blackish and yellowish. They ran all around the sacrificial arena and thus began to create
+disturbances.
 </p>
 
 </div>
@@ -70,7 +112,7 @@ resound, it appears that Kailasa Hill does also.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

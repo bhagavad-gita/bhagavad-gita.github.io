@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.10.html">4.10.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nayam margo hi sadhunam
-hrsikesanuvartinam
-yad atmanam parag grhya
-pasuvad bhuta-vaisasam
-<p></p>
+te 'pi camum amrsyantah
+pada-sparsam ivoragah
+sarair avidhyan yugapad
+dvi-gunam pracikirsavah
+<br>
 <h2>Synonyms</h2>
-na--never; ayam--this; margah--path; hi--certainly; sadhunam--of honest persons; hrsikesa--of the
-Supreme Personality of Godhead; anuvartinam--following the path; yat--which; atmanam--self; parak--the
-body; grhya--thinking to be; pasu-vat--like animals; bhuta--of living entities; vaisasam--killing.
-<p></p>
+te--the Yaksas; api--also; ca--and; amum--at Dhruva; amrsyantah--being intolerant of; pada-sparsam--
+being touched by the feet; iva--like; uragah--serpents; saraih--with arrows; avidhyan--struck; yugapat--
+simultaneously; dvi-gunam--twice as much; pracikirsavah--trying to retaliate.
+<br>
 <h2>Translation</h2>
-One should not accept the body as the self and thus, like the animals, kill the bodies of others. This is
-especially forbidden by saintly persons, who follow the path of devotional service to the Supreme
-Personality of Godhead.
-<p></p>
-<h2>Purport</h2>
-The words sadhunam hrsikesanuvartinam are very significant. Sadhu means "a saintly person." But who
-is a saintly person? A saintly person is he who follows the path of rendering service unto the Supreme
-Personality of Godhead, Hrsikesa. In the Narada-pancaratra it is said, hrsikena hrsikesa-sevanam bhaktir
-ucyate: the process of rendering favorable service to the Supreme Personality of Godhead with one's
-senses is called bhakti, or devotional service. Therefore, why should a person who is already engaged in
-the service of the Lord engage himself in personal sense gratification? Dhruva Maharaja is advised here by
-Lord Manu that he is a pure servitor of the Lord. Why should he unnecessarily engage, like the animals,
-in the bodily concept of life? An animal thinks that the body of another animal is his food; therefore, in
-the bodily concept of life, one animal attacks another. A human being, especially one who is a devotee of
-the Lord, should not act like this. A sadhu, a saintly devotee, is not supposed to kill animals
-unnecessarily.
+Just like serpents, who cannot tolerate being trampled upon by anyone's feet, the Yaksas, being
+intolerant of the wonderful prowess of Dhruva Maharaja, threw twice as many arrows--six from each of
+their soldiers--and thus they very valiantly exhibited their prowess.
 </p>
 
 </div>
@@ -83,7 +109,7 @@ unnecessarily.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

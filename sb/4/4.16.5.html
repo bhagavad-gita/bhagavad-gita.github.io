@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.16.5.html">4.16.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sanat-kumarad bhagavato
-brahman brahma-vid-uttamat
-labdhva jnanam sa-vijnanam
-rajarsih kam gatim gatah
-<p></p>
+esa vai loka-palanam
+bibharty ekas tanau tanuh
+kale kale yatha-bhagam
+lokayor ubhayor hitam
+<br>
 <h2>Synonyms</h2>
-sanat-kumarat--from Sanat-kumara; bhagavatah--the most powerful; brahman--my dear brahmana;
-brahma-vit-uttamat--well versed in the Vedic knowledge; labdhva--after achieving; jnanam--knowledge;
-sa-vijnanam--for practical application; raja-rsih--the great saintly King; kam--which; gatim--destination;
-gatah--achieved.
-<p></p>
+esah--this King; vai--certainly; loka-palanam--of all the demigods; bibharti--bears; ekah--alone; tanau--in
+his body; tanuh--the bodies; kale kale--in due course of time; yatha--according to; bhagam--proper share;
+lokayoh--of planetary systems; ubhayoh--both; hitam--welfare.
+<br>
 <h2>Translation</h2>
-The great saintly King, Maharaja Prthu, received knowledge from Sanat-kumara, who was the greatest
-Vedic scholar. After receiving knowledge to be applied practically in his life, how did the saintly King
-attain his desired destination?
-<p></p>
+This King alone, in his own body, will be able in due course of time to maintain all living entities and
+keep them in a pleasant condition by manifesting himself as different demigods to perform various
+departmental activities. Thus he will maintain the upper planetary system by inducing the populace to
+perform Vedic sacrifices. In due course of time he will also maintain this earthly planet by discharging
+proper rainfall.
+<br>
 <h2>Purport</h2>
-There are four Vaisnava sampradayas (systems) of disciplic succession. One sampradaya comes from
-Lord Brahma, one from the goddess of fortune, one from the Kumaras, headed by Sanat-kumara, and one
-from Lord Siva. These four systems of disciplic succession are still going on. As King Prthu has illustrated,
-one who is serious about receiving transcendental Vedic knowledge must accept a guru, or spiritual
-master, in one of these four disciplic successions. It is said that unless one accepts a mantra from one of
-these sampradayas, the so-called mantra will not act in Kali-yuga. Many sampradayas have sprung up
-without authority, and they are misleading the people by giving unauthorized mantras. The rascals of
-these so-called sampradayas do not observe the Vedic rules and regulations. Although they are addicted to
-all kinds of sinful activities, they still offer the people mantras and thus mislead them. Intelligent persons,
-however, know that such mantras will never be successful, and as such they never patronize such upstart
-spiritual groups. People should be very careful of these nonsensical sampradayas. To get some facility for
-sense gratification, unfortunate people in this age receive mantras from these so-called sampradayas.
-Prthu Maharaja, however, showed by his example that one should receive knowledge from a bona fide
-sampradaya. Therefore Maharaja Prthu accepted Sanat-kumara as his spiritual master.
+The demigods in charge of the various departmental activities that maintain this world are but assistants
+to the Supreme Personality of Godhead. When an incarnation of Godhead descends on this planet,
+demigods like the sun-god, the moon-god or the King of heaven, Indra, all join Him. Consequently the
+incarnation of Godhead is able to act for the departmental demigods to keep the planetary systems in
+order. The protection of the earthly planet is dependent on proper rainfall, and as stated in Bhagavad-gita
+and other scriptures, sacrifices are performed to please those demigods who are in charge of rainfall.
+annad bhavanti bhutani
+parjanyad anna-sambhavah
+yajnad bhavati parjanyo
+yajnah karma-samudbhavah
+"All living bodies subsist on food grains, which are produced from rains. Rains are produced by
+performance of yajna [sacrifice], and yajna is born of prescribed duties." (Bg. 3.14)
+Thus the proper execution of yajna, sacrifice, is required. As indicated herein, King Prthu alone would
+induce all the citizens to engage in such sacrificial activities so that there would not be scarcity or distress.
+In Kali-yuga, however, in the so-called secular state, the executive branch of government is in the charge
+of so-called kings and presidents who are all fools and rascals, ignorant of the intricacies of nature's causes
+and ignorant of the principles of sacrifice. Such rascals simply make various plans, which always fail, and
+the people subsequently suffer disturbances. To counteract this situation, the sastras advise:
+harer nama harer nama
+harer namaiva kevalam
+kalau nasty eva nasty eva
+nasty eva gatir anyatha
+Thus in order to counteract this unfortunate situation in government, the general populace is advised to
+chant the maha-mantra: Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama
+Rama, Hare Hare.
 </p>
 
 </div>
@@ -87,7 +138,7 @@ sampradaya. Therefore Maharaja Prthu accepted Sanat-kumara as his spiritual mast
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

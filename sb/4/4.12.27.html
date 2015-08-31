@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.27.html">4.12.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rajan havimsy adustani
-sraddhayasaditani te
-chandamsy ayata-yamani
-yojitani dhrta-vrataih
-<p></p>
+etad vimana-pravaram
+uttamasloka-maulina
+upasthapitam ayusmann
+adhirodhum tvam arhasi
+<br>
 <h2>Synonyms</h2>
-rajan--O King; havimsi--sacrificial offerings; adustani--not polluted; sraddhaya--with great faith and
-care; asaditani--collected; te--your; chandamsi--the mantras; ayata-yamani--not deficient; yojitani--
-properly executed; dhrta-vrataih--by qualified brahmanas.
-<p></p>
+etat--this; vimana--airplane; pravaram--unique; uttamasloka--the Supreme Personality of Godhead;
+maulina--by the head of all living entities; upasthapitam--sent; ayusman--O immortal one; adhirodhum--
+to board; tvam--you; arhasi--are worthy.
+<br>
 <h2>Translation</h2>
-O King, we know that the paraphernalia to perform the sacrifice is well collected by you with great faith
-and care and is not polluted. Our chanting of the Vedic hymns is also not deficient in any way, for all the
-brahmanas and priests present here are expert and are executing the performances properly.
-<p></p>
+O immortal one, this unique airplane has been sent by the Supreme Personality of Godhead, who is
+worshiped by selected prayers and who is the chief of all living entities. You are quite worthy to board
+such a plane.
+<br>
 <h2>Purport</h2>
-It is the practice of the brahmanas conversant with the science to pronounce a Vedic mantra in the right
-accent. The combination of the mantra and Sanskrit words must be chanted with the right pronunciation,
-otherwise it will not be successful. In this age the brahmanas are neither well versed in the Sanskrit
-language nor very pure in practical life. But by chanting the Hare Krsna mantra one can attain the highest
-benefit of sacrificial performances. Even if the Hare Krsna mantra is not chanted properly, it still has so
-much potency that the chanter gains the effect.
+According to astronomical calculation, along with the polestar there is another star, which is called
+Sisumara, where Lord Visnu, who is in charge of the maintenance of this material world, resides. Sisumara
+or Dhruvaloka can never be reached by anyone but the Vaisnavas, as will be described by the following
+slokas. The associates of Lord Visnu brought the special airplane for Dhruva Maharaja and then informed
+him that Lord Visnu had especially sent this airplane.
+The Vaikuntha airplane does not move by mechanical arrangement. There are three processes for
+moving in outer space. One of the processes is known to the modern scientist. It is called ka-pota-vayu.
+Ka means "outer space," and pota means "ship." There is a second process also called kapota-vayu.
+Kapota means "pigeon." One can train pigeons to carry one into outer space. The third process is very
+subtle. It is called akasa-patana. This akasa-patana system is also material. Just as the mind can fly
+anywhere one likes without mechanical arrangement, so the akasa-patana airplane can fly at the speed of
+mind. Beyond this akasa-patana system is the Vaikuntha process, which is completely spiritual. The
+airplane sent by Lord Visnu to carry Dhruva Maharaja to Sisumara was a completely spiritual,
+transcendental airplane. Material scientists can neither see such vehicles nor imagine how they fly in the
+air. The material scientist has no information about the spiritual sky, although it is mentioned in the
+Bhagavad-gita (paras tasmat tu bhavo 'nyah).
 </p>
 
 </div>
@@ -78,7 +127,7 @@ much potency that the chanter gains the effect.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,65 +81,61 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.28.html">4.25.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam eva manasa grhnan
-babhuva pramadottama
-anantaram vidarbhasya
-raja-simhasya vesmani
-<p></p>
+tvam hrir bhavany asy atha vag rama patim
+vicinvati kim munivad raho vane
+tvad-anghri-kamapta-samasta-kamam
+kva padma-kosah patitah karagrat
+<br>
 <h2>Synonyms</h2>
-tam--her; eva--certainly; manasa--by the mind; grhnan--accepting; babhuva--became; pramada--woman;
-uttama--highly situated; anantaram--after death; vidarbhasya--of Vidarbha; raja-simhasya--of the most
-powerful king; vesmani--at the house.
-<p></p>
+tvam--you; hrih--shyness; bhavani--the wife of Lord Siva; asi--are; atha--rather; vak--Sarasvati, the
+goddess of learning; rama--the goddess of fortune; patim--husband; vicinvati--searching after, thinking of;
+kim--are you; muni-vat--like a sage; rahah--in this lonely place; vane--in the forest; tvat-anghri--your feet;
+kama--desiring; apta--achieved; samasta--all; kamam--desirable things; kva--where is; padma-kosah--the
+lotus flower; patitah--fallen; kara--of the hand; agrat--from the front portion, or palm.
+<br>
 <h2>Translation</h2>
-King Puranjana gave up his body while remembering his wife, and consequently in his next life he
-became a very beautiful and well-situated woman. He took his next birth as the daughter of King
-Vidarbha in the very house of the King.
-<p></p>
+My dear beautiful girl, you are exactly like the goddess of fortune or the wife of Lord Siva or the goddess
+of learning, the wife of Lord Brahma. Although you must be one of them, I see that you are loitering in
+this forest. Indeed, you are as silent as the great sages. Is it that you are searching after your own
+husband? Whoever your husband may be, simply by understanding that you are so faithful to him, he will
+come to possess all opulences. I think you must be the goddess of fortune, but I do not see the lotus
+flower in your hand. Therefore I am asking you where you have thrown that lotus.
+<br>
 <h2>Purport</h2>
-Since King Puranjana thought of his wife at the time of death, he attained the body of a woman in his
-next birth. This verifies the following verse in Bhagavad-gita (8.6):
-yam yam vapi smaran bhavam
-tyajaty ante kalevaram
-tam tam evaiti kaunteya
-sada tad-bhava-bhavitah
-"Whatever state of being one remembers when he quits his body, that state he will attain without fail."
-When a living entity is accustomed to think of a particular subject matter or become absorbed in a
-certain type of thought, he will think of that subject at the time of death. At the time of death, one will
-think of the subject that has occupied his life while he was awake, lightly sleeping or dreaming, or while
-he was deeply sleeping. After falling from the association of the Supreme Lord, the living entity thus
-transmigrates from one bodily form to another according to nature's course, until he finally attains the
-human form. If he is absorbed in material thoughts and ignorant of spiritual life, and if he does not take
-shelter under the lotus feet of the Supreme Personality of Godhead, Govinda, who solves all questions of
-birth and death, he will become a woman in the next life, especially if he thinks of his wife. As stated in
-Srimad-Bhagavatam (3.31.1): karmana daiva-netrena. A living entity acts piously and impiously, and
-sometimes in both ways. All actions are taken into account, and the living entity is offered a new body by
-his superiors. Although King Puranjana was overly attached to his wife, he nonetheless performed many
-pious fruitive activities. Consequently, although he took the form of a woman, he was given a chance to
-be the daughter of a powerful king. As confirmed in Bhagavad-gita (6.41):
-prapya punya-krtam lokan
-usitva sasvatih samah
-sucinam srimatam gehe
-yoga-bhrasto 'bhijayate
-"The unsuccessful yogi, after many, many years of enjoyment on the planets of the pious living entities,
-is born into a family of righteous people or into a family of rich aristocracy."
-If a person falls from the path of bhakti-yoga, God realization, due to attachment to fruitive activity,
-philosophical speculation or mystic yoga, he is given a chance to take birth in a high and rich family. The
-higher authorities appointed by the Supreme Personality of Godhead thus render justice to the living
-entity according to the living entity's desires. Although King Puranjana was overly absorbed in thoughts
-of his wife and thus became a woman, he took birth in the family of a king due to his previous pious
-activities. The conclusion is that all our activities are taken into consideration before we are awarded
-another body. Narada Muni therefore advised Vyasadeva that one should take to Krsna consciousness,
-devotional service, and abandon all ordinary occupational duties. This advice was also given by Lord
-Krsna Himself. Although a devotee may fall from the path of spiritual consciousness, he will nonetheless
-attain a human body in the home of a devotee or a rich man. In this way one can resume his devotional
-service.
+Everyone thinks that his intelligence is perfect. Sometimes one employs his intelligence in the worship
+of Uma, the wife of Lord Siva, in order to obtain a beautiful wife. Sometimes, when one wants to become
+as learned as Lord Brahma, he employs his intelligence in the worship of the goddess of learning,
+Sarasvati. Sometimes, when one wishes to become as opulent as Lord Visnu, he worships the goddess of
+fortune, Laksmi. In this verse all these inquiries are made by King Puranjana, the living entity who is
+bewildered and does not know how to employ his intelligence. Intelligence should be employed in the
+service of the Supreme Personality of Godhead. As soon as one uses his intelligence in this way, the
+goddess of fortune automatically becomes favorable to him. The goddess of fortune, Laksmi, never
+remains without her husband, Lord Visnu. Consequently, when one worships Lord Visnu he
+automatically obtains the favor of the goddess of fortune. One should not, like Ravana, worship the
+goddess of fortune alone, for she cannot remain long without her husband. Thus her other name is
+Cancala, or restless. In this verse it is clear that Puranjana is representing our intelligence while he is
+talking with the girl. He not only appreciated the shyness of the girl but actually became more and more
+attracted by that shyness. He was actually thinking of becoming her husband and consequently was
+asking her whether she was thinking of her prospective husband or whether she was married. This is an
+example of bhoga-iccha--the desire for enjoyment. One who is attracted by such desires becomes
+conditioned in this material world, and one who is not so attracted attains liberation. King Puranjana was
+appreciating the beauty of the girl as if she were the goddess of fortune, but at the same time he was
+careful to understand that the goddess of fortune cannot be enjoyed by anyone except Lord Visnu. Since
+he doubted whether the girl was the goddess of fortune, he inquired about the lotus flower she was not
+holding. The material world is also the goddess of fortune because the material energy works under the
+direction of Lord Visnu, as stated in Bhagavad-gita (mayadhyaksena prakrtih suyate sa-caracaram).
+The material world cannot be enjoyed by any living entity. If one so desires to enjoy it, he immediately
+becomes a demon like Ravana, Hiranyakasipu or Kamsa. Because Ravana wanted to enjoy the goddess of
+fortune, Sitadevi, he was vanquished with all his family, wealth and opulence. One can, however, enjoy
+that maya bestowed upon the living entity by Lord Visnu. The satisfaction of one's senses and desires
+means enjoying maya, not the goddess of fortune.
 </p>
 
 </div>
@@ -109,7 +143,7 @@ service.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

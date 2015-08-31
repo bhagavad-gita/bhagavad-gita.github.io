@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.17.31.html">4.17.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-graman purah pattanani
-durgani vividhani ca
-ghosan vrajan sa-sibiran
-akaran kheta-kharvatan
-<p></p>
+ya etad adav asrjac caracaram
+sva-mayayatmasrayayavitarkyaya
+tayaiva so 'yam kila goptum udyatah
+katham nu mam dharma-paro jighamsati
+<br>
 <h2>Synonyms</h2>
-graman--villages; purah--cities; pattanani--settlements; durgani--forts; vividhani--of different varieties;
-ca--also; ghosan--habitations for the milkmen; vrajan--pens for cattle; sa-sibiran--with camps; akaran--
-mines; kheta--agricultural towns; kharvatan--mountain villages.
-<p></p>
+yah--one who; etat--these; adau--in the beginning of creation; asrjat--created; cara-acaram--moving and
+nonmoving living entities; sva-mayaya--by His own potency; atma-asrayaya--sheltered under His own
+protection; avitarkyaya--inconceivable; taya--by that same maya; eva--certainly; sah--he; ayam--this King;
+kila--certainly; goptum udyatah--prepared to give protection; katham--how; nu--then; mam--me; dharmaparah--
+one who is strictly following religious principles; jighamsati--desires to kill.
+<br>
 <h2>Translation</h2>
-In this way the King founded many types of villages, settlements and towns and built forts, residences
-for cowherdsmen, stables for the animals, and places for the royal camps, mining places, agricultural
-towns and mountain villages.
+In the beginning of creation You created all these moving and nonmoving living entities by Your
+inconceivable energy. Through this very same energy You are now prepared to protect the living entities.
+Indeed, You are the supreme protector of religious principles. Why are You so anxious to kill me, even
+though I am in the form of a cow?
+<br>
+<h2>Purport</h2>
+The planet earth argues that there is no doubt that one who creates can also annihilate by his sweet will.
+The planet earth questions why she should be killed when the Lord is prepared to give protection to
+everyone. After all, it is the earth that is the resting place for all other living entities, and it is the earth
+that produces grains for them.
 </p>
 
 </div>
@@ -70,7 +118,7 @@ towns and mountain villages.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

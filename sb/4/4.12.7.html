@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.12.7.html">4.12.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa janmanopasantatma
-nihsangah sama-darsanah
-dadarsa loke vitatam
-atmanam lokam atmani
-<p></p>
+vrnihi kamam nrpa yan mano-gatam
+mattas tvam auttanapade 'visankitah
+varam vararho 'mbuja-nabha-padayor
+anantaram tvam vayam anga susruma
+<br>
 <h2>Synonyms</h2>
-sah--his son Utkala; janmana--from the very beginning of his birth; upasanta--very well satisfied; atma--
-soul; nihsangah--without attachment; sama-darsanah--equipoised; dadarsa--saw; loke--in the world;
-vitatam--spread; atmanam--the Supersoul; lokam--all the world; atmani--in the Supersoul.
-<p></p>
+vrnihi--please ask; kamam--desire; nrpa--O King; yat--whatever; manah-gatam--within your mind;
+mattah--from me; tvam--you; auttanapade--O son of Maharaja Uttanapada; avisankitah--without
+hesitation; varam--benediction; vara-arhah--worthy to take benedictions; ambuja--lotus flower; nabha--
+whose navel; padayoh--at His lotus feet; anantaram--constantly; tvam--about you; vayam--we; anga--dear
+Dhruva; susruma--have heard.
+<br>
 <h2>Translation</h2>
-From his very birth, Utkala was fully satisfied and unattached to the world. He was equipoised, for he
-could see everything resting in the Supersoul and the Supersoul present in everyone's heart.
-<p></p>
+My dear Dhruva Maharaja, son of Maharaja Uttanapada, we have heard that you are constantly engaged
+in transcendental loving service to the Supreme Personality of Godhead, who is known for His lotus
+navel. You are therefore worthy to take all benedictions from us. Please, therefore, ask without hesitation
+whatever benediction you want from me.
+<br>
 <h2>Purport</h2>
-The symptoms and characteristics of Utkala, the son of Maharaja Dhruva, are those of a mahabhagavata.
-As stated in the Bhagavad-gita (6.30), yo mam pasyati sarvatra sarvam ca mayi pasyati: a highly
-advanced devotee sees the Supreme Personality of Godhead everywhere, and he also sees everything
-resting in the Supreme. It is also confirmed in the Bhagavad-gita (9.4), maya tatam idam sarvam jagad
-avyakta-murtina: Lord Krsna is spread all over the universe in His impersonal feature. Everything is
-resting on Him, but that does not mean that everything is He Himself. A highly advanced maha-bhagavata
-devotee sees in this spirit: he sees the same Supersoul, Paramatma, existing within everyone's heart,
-regardless of discrimination based on the different material forms of the living entities. He sees everyone
-as part and parcel of the Supreme Personality of Godhead. The maha-bhagavata, who experiences the
-Supreme Godhead's presence everywhere, is never missing from the sight of the Supreme Lord, nor is the
-Supreme Lord ever lost from his sight. This is possible only when one is advanced in love of Godhead.
+Dhruva Maharaja, the son of King Uttanapada, was already known throughout the universe as a great
+devotee of the Lord, constantly thinking of His lotus feet. Such a pure, uncontaminated devotee of the
+Lord is worthy to have all the benedictions that can be offered by the demigods. He does not have to
+worship the demigods separately for such benedictions. Kuvera is the treasurer of the demigods, and he is
+personally offering whatever benediction Dhruva Maharaja would like to have from him. Srila
+Bilvamangala Thakura stated, therefore, that for persons who engage in the devotional service of the Lord,
+all material benedictions wait like maidservants. Mukti-devi is just waiting at the door of the devotee to
+offer liberation, or more than that, at any time. To be a devotee is therefore an exalted position. Simply by
+rendering transcendental loving service unto the Supreme Personality of Godhead, one can have all the
+benedictions of the world without separate endeavor. Lord Kuvera said to Dhruva Maharaja that he had
+heard that Dhruva was always in samadhi, or thinking of the lotus feet of the Lord. In other words, he
+knew that for Dhruva Maharaja there was nothing desirable within the three material worlds. He knew
+that Dhruva would ask for nothing but to remember the lotus feet of the Supreme Lord constantly.
 </p>
 
 </div>
@@ -82,7 +127,7 @@ Supreme Lord ever lost from his sight. This is possible only when one is advance
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,56 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.15.html">4.28.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yathaiva suryat prabhavanti varah
-punas ca tasmin pravisanti kale
-bhutani bhumau sthira-jangamani
-tatha harav eva guna-pravahah
-<p></p>
+sithilavayavo yarhi
+gandharvair hrta-paurusah
+yavanair aribhi rajann
+uparuddho ruroda ha
+<br>
 <h2>Synonyms</h2>
-yatha--as; eva--certainly; suryat--from the sun; prabhavanti--is generated; varah--water; punah--again;
-ca--and; tasmin--unto it; pravisanti--enters; kale--in due course of time; bhutani--all living entities;
-bhumau--to the earth; sthira--not moving; jangamani--and moving; tatha--similarly; harau--unto the
-Supreme Personality of Godhead; eva--certainly; guna-pravahah--emanation of material nature.
-<p></p>
+sithila--slackened; avayavah--his limbs; yarhi--when; gandharvaih--by the Gandharvas; hrta--defeated;
+paurusah--his bodily strength; yavanaih--by the Yavanas; aribhih--by the enemies; rajan--O King
+Pracinabarhisat; uparuddhah--being checked; ruroda--cried loudly; ha--indeed.
+<br>
 <h2>Translation</h2>
-During the rainy season, water is generated from the sun, and in due course of time, during the summer
-season, the very same water is again absorbed by the sun. Similarly, all living entities, moving and inert,
-are generated from the earth, and again, after some time, they all return to the earth as dust. Similarly,
-everything emanates from the Supreme Personality of Godhead, and in due course of time everything
-enters into Him again.
-<p></p>
+The limbs of the serpent's body were slackened by the Gandharvas and Yavana soldiers, who had
+thoroughly defeated his bodily strength. When he attempted to leave the body, he was checked by his
+enemies. Being thus baffled in his attempt, he began to cry loudly.
+<br>
 <h2>Purport</h2>
-Because of their poor fund of knowledge, impersonalist philosophers cannot understand how everything
-comes out from the Supreme person and then merges into Him again. As Brahma-samhita (5.40)
-confirms:
-yasya prabha prabhavato jagad-anda-kotikotisv
-asesa-vasudhadi-vibhuti-bhinnam
-tad brahma niskalam anantam asesa-bhutam
-govindam adi-purusam tam aham bhajami
-Transcendental rays emanate from the body of Krsna, and within those rays, which are the Brahman
-effulgence, everything is existing. This is confirmed in Bhagavad-gita (9.4). Mat-sthani sarva-bhutani.
-Although Krsna is not personally present everywhere, His energy is the cause of all creation. The entire
-cosmic manifestation is nothing but a display of Krsna's energy.
-The two examples given in this verse are very vivid. During the rainy season, the rain, by rejuvenating
-the production of vegetables on earth, enables man and animals to obtain living energy. When there is no
-rain, food is scarce, and man and animal simply die. All vegetables, as well as moving living entities, are
-originally products of the earth. They come from the earth, and again they merge into the earth. Similarly,
-the total material energy is generated from the body of Krsna, and at such a time the entire cosmic
-manifestation is visible. When Krsna winds up His energy, everything vanishes. This is explained in a
-different way in Brahma-samhita (5.48):
-yasyaika-nisvasita-kalam athavalambya
-jivanti loma-vilaja jagad-anda-nathah
-visnur mahan sa iha yasya kala-viseso
-govindam adi-purusam tam aham bhajami
-This entire material creation comes from the body of the Supreme Personality of Godhead and at the
-time of annihilation again enters into Him. This process of creation and dissolution is made possible by
-the breathing of the Maha-Visnu, who is only a plenary portion of Krsna.
+At the last stage of life, the different gates of the body are choked by the effects of disease, which are
+caused by an imbalance of bile, mucus and air. Thus the living entity cannot clearly express his
+difficulties, and surrounding relatives hear the sound "ghura ghura" from a dying man. In his Mukundamala-
+stotra, King Kulasekhara states:
+krsna tvadiya-padapankaja-panjarantam
+adyaiva me visatu manasa-raja-hamsah
+prana-prayana-samaye kapha-vata-pittaih
+kanthavarodhana-vidhau smaranam kutas te
+"My dear Krsna, please help me die immediately so that the swan of my mind may be encircled by the
+stem of Your lotus feet. Otherwise at the time of my final breath, when my throat is choked up, how will
+it be possible for me to think of You?" The swan takes great pleasure in diving within water and being
+encircled by the stem of the lotus flower. This entanglement is sporting joy. If, in our healthy condition,
+we think of the lotus feet of the Lord and die, it is most fortunate. In old age, at the time of death, the
+throat sometimes becomes choked with mucus or blocked by air. At such a time the sound vibration of
+Hare Krsna, the maha-mantra, may not come out. Thus one may forget Krsna. Of course, those who are
+strong in Krsna consciousness cannot possibly forget Krsna at any stage because they are accustomed to
+chanting the Hare Krsna mantra, especially when there is a signal from death.
 </p>
 
 </div>
@@ -100,7 +128,7 @@ the breathing of the Maha-Visnu, who is only a plenary portion of Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

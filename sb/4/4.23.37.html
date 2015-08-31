@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.37.html">4.23.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-imam tvam adhitisthasva
-purim nava-mukhim vibho
-mayopanitan grhnanah
-kama-bhogan satam samah
-<p></p>
+muktanya-sango bhagavaty
+amalam bhaktim udvahan
+vainyasya caritam punyam
+srnuyac chravayet pathet
+<br>
 <h2>Synonyms</h2>
-imam--this; tvam--your good self; adhitisthasva--just remain; purim--in the city; nava-mukhim--with
-nine gates; vibho--O my lord; maya--by me; upanitan--arranged; grhnanah--taking; kama-bhogan--the
-materials for sense gratification; satam--a hundred; samah--years.
-<p></p>
+mukta-anya-sangah--being freed from all material contamination; bhagavati--unto the Supreme
+Personality of Godhead; amalam--unalloyed; bhaktim--devotional service; udvahan--carrying out;
+vainyasya--of the son of Maharaja Vena; caritam--character; punyam--pious; srnuyat--must hear;
+sravayet--must induce others to hear; pathet--and go on reading.
+<br>
 <h2>Translation</h2>
-My dear lord, I have just arranged this city of nine gates for you so that you can have all kinds of sense
-gratification. You may live here for one hundred years, and everything for your sense gratification will be
-supplied.
-<p></p>
+A pure devotee who is executing the different processes of devotional service may be situated in the
+transcendental position, being completely absorbed in Krsna consciousness, but even he, while
+discharging devotional service, must hear, read and induce others to hear about the character and life of
+Prthu Maharaja.
+<br>
 <h2>Purport</h2>
-Dharmartha-kama-moksanam darah samprapti-hetavah. The wife is the cause of all kinds of success in
-religion, economic development, sense gratification and ultimately salvation. When one accepts a wife, it
-is to be understood that he is being helped in his progressive march toward liberation. In the beginning of
-life a person is trained as a brahmacari and is then allowed to marry a suitable girl and become a
-householder. If one is thoroughly trained in household life, he finds all facilities for human life--eating,
-sleeping, mating and defending. Everything is there if it is executed according to regulative principles.
+There is a type of neophyte devotee who is very anxious to hear about the pastimes of the Lord,
+especially the rasa-lila chapters in Srimad-Bhagavatam. Such a devotee should know by this instruction
+that the pastimes of Prthu Maharaja are nondifferent from the pastimes of the Supreme Personality of
+Godhead. An ideal king, Prthu Maharaja exhibited all talents in showing how to rule the citizens, how to
+educate them, how to develop the state economically, how to fight enemies, how to perform great
+sacrifices (yajnas), etc. Thus it is recommended for the sahajiya, or the neophyte devotee, to hear, chant
+and get others to hear about the activities of Prthu Maharaja, even though one may think himself to be in
+the transcendental position of advanced devotional service.
 </p>
 
 </div>
@@ -78,7 +121,7 @@ sleeping, mating and defending. Everything is there if it is executed according 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

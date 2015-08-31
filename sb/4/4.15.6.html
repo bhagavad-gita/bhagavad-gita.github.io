@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.6.html">4.15.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vasu kala upadatte
-kale cayam vimuncati
-samah sarvesu bhutesu
-pratapan suryavad vibhuh
-<p></p>
+esa saksad dharer amso
+jato loka-riraksaya
+iyam ca tat-para hi srir
+anujajne 'napayini
+<br>
 <h2>Synonyms</h2>
-vasu--riches; kale--in due course of time; upadatte--exacts; kale--in due course of time; ca--also; ayam--
-this King Prthu; vimuncati--returns; samah--equal; sarvesu--to all; bhutesu--living entities; pratapan--
-shining; surya-vat--like the sun-god; vibhuh--powerful.
-<p></p>
+esah--this male; saksat--directly; hareh--of the Supreme Personality of Godhead; amsah--partial
+representative; jatah--born; loka--the entire world; riraksaya--with a desire to protect; iyam--this female;
+ca--also; tat-para--very much attached to him; hi--certainly; srih--the goddess of fortune; anujajne--took
+birth; anapayini--inseparable.
+<br>
 <h2>Translation</h2>
-This King Prthu will be as powerful as the sun-god, and just as the sun-god equally distributes his
-sunshine to everyone, King Prthu will distribute his mercy equally. Similarly, just as the sun-god
-evaporates water for eight months and, during the rainy season, returns it profusely, this King will also
-exact taxes from the citizens and return these monies in times of need.
-<p></p>
+In the form of King Prthu, the Supreme Personality of Godhead has appeared through a part of His
+potency to protect the people of the world. The goddess of fortune is the constant companion of the Lord,
+and therefore she has incarnated partially as Arci to become King Prthu's queen.
+<br>
 <h2>Purport</h2>
-The process of tax exaction is very nicely explained in this verse. Tax exaction is not meant for the sense
-gratification of the so-called administrative heads. Tax revenues should be distributed to the citizens in
-times of need, during emergencies such as famine or flood. Tax revenues should never be distributed
-amongst governmental servants in the form of high salaries and various other allowances. In Kali-yuga,
-however, the position of the citizens is very horrible because taxes are exacted in so many forms and are
-spent for the personal comforts of the administrators.
-The example of the sun in this verse is very appropriate. The sun is many millions of miles away from
-the earth, and although the sun does not actually touch the earth, it manages to distribute land all over
-the planet by exacting water from the oceans and seas, and it also manages to make that land fertile by
-distributing water during the rainy season. As an ideal king, King Prthu would execute all this business in
-the village and state as expertly as the sun.
+In Bhagavad-gita the Lord says that whenever one sees an extraordinary power, he should conclude that
+a specific partial representation of the Supreme Personality of Godhead is present. There are innumerable
+such personalities, but not all of them are direct visnu-tattva plenary expansions of the Lord. Many living
+entities are classified among the sakti-tattvas. Such incarnations, empowered for specific purposes, are
+known as saktyavesa-avataras. King Prthu was such a saktyavesa-avatara of the Lord. Similarly, Arci, King
+Prthu's wife, was a saktyavesa-avatara of the goddess of fortune.
 </p>
 
 </div>
@@ -84,7 +118,7 @@ the village and state as expertly as the sun.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

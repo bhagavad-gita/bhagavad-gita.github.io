@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,75 +81,54 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.21.7.html">4.21.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-titiksur yata-vag danta
-urdhva-reta jitanilah
-ariradhayisuh krsnam
-acarat tapa uttamam
-<p></p>
+sa evam adiny anavadya-cestitah
+karmani bhuyamsi mahan mahattamah
+kurvan sasasavani-mandalam yasah
+sphitam nidhayaruruhe param padam
+<br>
 <h2>Synonyms</h2>
-titiksuh--tolerating; yata--controlling; vak--words; dantah--controlling the senses; urdhva-retah--
-without discharge of semen; jita-anilah--controlling the life air; ariradhayisuh--simply desiring; krsnam--
-Lord Krsna; acarat--practice; tapah--austerities; uttamam--the best.
-<p></p>
+sah--King Prthu; evam--thus; adini--from the very beginning; anavadya--magnanimous; cestitah--
+performing various works; karmani--work; bhuyamsi--repeatedly; mahan--great; mahat-tamah--greater
+than the greatest; kurvan--performing; sasasa--ruled; avani-mandalam--the surface of the earth; yasah--
+reputation; sphitam--widespread; nidhaya--achieving; aruruhe--was elevated; param padam--to the lotus
+feet of the Supreme Lord.
+<br>
 <h2>Translation</h2>
-Maharaja Prthu underwent all these severe austerities in order to control his words and his senses, to
-refrain from discharging his semen and to control the life air within his body. All this he did for the
-satisfaction of Krsna. He had no other purpose.
-<p></p>
+King Prthu was greater than the greatest soul and was therefore worshipable by everyone. He performed
+many glorious activities in ruling over the surface of the world and was always magnanimous. After
+achieving such great success and a reputation which spread throughout the universe, he at last obtained
+the lotus feet of the Supreme Personality of Godhead.
+<br>
 <h2>Purport</h2>
-In Kali-yuga the following is recommended:
-harer nama harer nama
-harer namaiva kevalam
-kalau nasty eva nasty eva
-nasty eva gatir anyatha
-(Brhan-naradiya Purana)
-In order to be recognized by Krsna, the Supreme Personality of Godhead, one should chant the holy
-name of the Lord continuously, twenty-four hours a day. Unfortunate persons who cannot accept this
-formula prefer to execute some type of pseudomeditation, without accepting the other processes of
-austerity. The fact is, however, that one must accept either the severe method of austerity described above
-to become purified or take to the process of devotional service recommended for pleasing the Supreme
-Lord, Krsna. The person who is Krsna conscious is most intelligent because in Kali-yuga it is not at all
-possible to undergo such severe austerities. We need only follow great personalities like Lord Caitanya
-Mahaprabhu. In His Siksastaka, Lord Caitanya Mahaprabhu wrote, param vijayate sri-krsna-sankirtanam:
-all glories to the holy names of Lord Krsna, which from the very beginning purify the heart and
-immediately liberate one. Bhava-maha-davagni-nirvapanam. If the real purpose of all yoga is to please
-Lord Krsna, then this simple bhakti-yoga system recommended for this age is sufficient. It is necessary,
-however, to engage constantly in the service of the Lord. Although Prthu Maharaja executed his
-austerities long before the appearance of Lord Krsna on this planet, his purpose was still to please Krsna.
-There are many fools who claim that worship of Krsna began only about five thousand years ago, after
-the appearance of Lord Krsna in India, but this is not a fact. Prthu Maharaja worshiped Krsna millions of
-years ago, for Prthu happened to be a descendant of the family of Maharaja Dhruva, who reigned for
-thirty-six thousand years during the Satya-yuga age. Unless his total life-span was one hundred thousand
-years, how could Dhruva Maharaja reign over the world for thirty-six thousand years? The point is that
-Krsna worship existed at the beginning of creation and has continued to exist throughout Satya-yuga,
-Treta-yuga and Dvapara-yuga, and now it is continuing in Kali-yuga. As stated in Bhagavad-gita, Krsna
-appears not only in this millennium of Brahma's life, but in every millennium. Therefore worship of Krsna
-is conducted in all millenniums. It is not that Krsna worship began only when Krsna appeared on this
-planet five thousand years ago. This is a foolish conclusion that is not substantiated by Vedic literatures.
-Also of significance in this verse are the words ariradhayisuh krsnam acarat tapa uttamam. Maharaja
-Prthu underwent severe types of austerities for the express purpose of worshiping Krsna. Krsna is so kind,
-especially in this age, that He appears in the transcendental vibration of His holy name. As is said in the
-Narada-pancaratra, aradhito yadi haris tapasa tatah kim. If Krsna is worshiped, if He is the goal of
-advancement, there is no need for one to execute severe types of tapasya, because one has already reached
-his destination. If, after executing all types of tapasya, one cannot reach Krsna, all his tapasya has no
-value, for without Krsna all austerity is simply wasted labor. Srama eva hi kevalam (Bhag. 1.2.8). We
-should therefore not be discouraged just because we cannot go to the forest and practice severe
-austerities. Our life is so short that we must strictly adhere to the principles laid down by the Vaisnava
-acaryas and peacefully execute Krsna consciousness. There is no need to become despondent. Narottama
-dasa Thakura recommends: anande bala hari, bhaja vrndavana, sri-guru-vaisnava-pade majaiya mana. For
-a transcendental, blissful life, chant the Hare Krsna mantra, come worship the holy place of Vrndavana,
-and always engage in the service of the Lord, of the spiritual master and of the Vaisnavas. This Krsna
-consciousness movement is therefore very safe and easy. We have only to execute the order of the Lord
-and fully surrender unto Him. We have only to execute the order of the spiritual master, preach Krsna
-consciousness and follow in the path of the Vaisnavas. The spiritual master represents both Lord Krsna
-and the Vaisnavas; therefore by following the instructions of the spiritual master and by chanting Hare
-Krsna, everything will be all right.
+A responsible king or chief executive has many responsible duties to attend to in ruling over the
+citizens. The most important duty of the monarch or the government is to perform various sacrifices as
+enjoined in the Vedic literatures. The next duty of the king is to see that every citizen executes the
+prescribed duties for his particular community. It is the king's duty to see that everyone perfectly executes
+the duties prescribed for the varna and asrama divisions of society. Besides that, as exemplified by King
+Prthu, he must develop the earth for the greatest possible production of food grains.
+There are different types of great personalities--some are positive great personalities, some comparative
+and some superlative--but King Prthu exceeded all of them. He is therefore described here as mahattamah,
+greater than the greatest. Maharaja Prthu was a ksatriya, and he discharged his ksatriya duties perfectly.
+Similarly, brahmanas, vaisyas and sudras can discharge their respective duties perfectly and thus at the
+ultimate end of life be promoted to the transcendental world, which is called param padam. Param padam,
+or the Vaikuntha planets, can be achieved only by devotional service. The impersonal Brahman region is
+also called param padam, but unless one is attached to the personality of Godhead one must again fall
+down to the material world from the impersonal param padam situation. It is said, therefore, aruhya
+krcchrena param padam tatah: the impersonalists endeavor very strenuously to achieve the param padam,
+or impersonal brahmajyoti, but unfortunately, being bereft of a relationship with the Supreme personality
+of Godhead, they come down again to the material world. If one flies in outer space, he can go very high
+up, but unless he reaches a planet he must come down again to earth. Similarly, because the
+impersonalists who reach the param padam of the impersonal brahmajyoti do not enter into the
+Vaikuntha planets, they come down again to this material world and are given shelter in one of the
+material planets. Although they may attain Brahmaloka, or Satyaloka, all such planets are situated in the
+material world.
 </p>
 
 </div>
@@ -119,7 +136,7 @@ Krsna, everything will be all right.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

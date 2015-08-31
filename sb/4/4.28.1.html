@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,60 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.1.html">4.28.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-tata utpanna-vijnana
-asv adhoksaja-bhasitam
-smaranta atmaje bharyam
-visrjya pravrajan grhat
-<p></p>
+narada uvaca
+sainika bhaya-namno ye
+barhisman dista-karinah
+prajvara-kala-kanyabhyam
+vicerur avanim imam
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--Maitreya said; tatah--thereafter; utpanna--developed; vijnanah--possessing perfect
-knowledge; asu--very soon; adhoksaja--by the Supreme Personality of Godhead; bhasitam--what was
-enunciated; smarantah--remembering; atma-je--unto their son; bharyam--their wife; visrjya--after giving;
-pravrajan--left; grhat--from home.
-<p></p>
+naradah uvaca--the great sage Narada continued to speak; sainikah--the soldiers; bhaya-namnah--of
+Bhaya (Fear); ye--all of them who; barhisman--O King Pracinabarhisat; dista-karinah--the order carriers of
+death; prajvara--with Prajvara; kala-kanyabhyam--and with Kalakanya; viceruh--traveled; avanim--on
+earth; imam--this.
+<br>
 <h2>Translation</h2>
-The great saint Maitreya continued: After that, the Pracetas lived at home for thousands of years and
-developed perfect knowledge in spiritual consciousness. At last they remembered the blessings of the
-Supreme Personality of Godhead and left home, putting their wife in charge of a perfect son.
-<p></p>
+The great sage Narada continued: My dear King Pracinabarhisat, afterward, the King of the Yavanas,
+whose name is fear itself, as well as Prajvara, Kalakanya, and his soldiers, began to travel all over the
+world.
+<br>
 <h2>Purport</h2>
-After the Pracetas had finished their penances, they were blessed by the Supreme Personality of
-Godhead. The Lord blessed them by telling them that after finishing their family life they would return
-home, back to Godhead, in due course of time. After finishing their family life, which lasted thousands of
-years according to the calculations of the demigods, the Pracetas decided to leave home, putting their wife
-in the charge of a son named Daksa. This is the process of Vedic civilization. In the beginning of life, as a
-brahmacari, one has to undergo severe penances and austerities in order to be educated in spiritual values.
-The brahmacari, or student, is never allowed to mingle with women and learn from the beginning of life
-about sex enjoyment. The basic flaw in modern civilization is that boys and girls are given freedom during
-school and college to enjoy sex life. Most of the children are varna-sankara, meaning "born of undesirable
-fathers and mothers." Consequently, the whole world is in chaos. Actually, human civilization should be
-based on the Vedic principles. This means that in the beginning of life boys and girls should undergo
-penances and austerities. When they are grown, they should get married, live for some time at home and
-beget children. When the children are grown up, the man should leave home and search for Krsna
-consciousness. In this way one can make one's life perfect by going home to the kingdom of God.
-Unless one practices penances and austerities in his student life, he cannot understand the existence of
-God. Without realizing Krsna, one cannot make his life perfect. The conclusion is that when the children
-are grown, the wife should be put in the children's charge. The husband may then leave home to develop
-Krsna consciousness. Everything depends on the development of mature knowledge. King
-Pracinabarhisat, the father of the Pracetas, left home before the arrival of his sons, who were engaged in
-austerity within the water. As soon as the time is ripe, or as soon as one has developed perfect Krsna
-consciousness, he should leave home, even though all his duties may not be fulfilled. Pracinabarhisat was
-waiting for the arrival of his sons, but following the instructions of Narada, as soon as his intelligence was
-properly developed, he simply left instructions for his ministers to impart to his sons. Thus without
-waiting for their arrival, he left home.
-Giving up a comfortable home life is absolutely necessary for human beings and is advised by Prahlada
-Maharaja. Hitvatma-patam grham andha-kupam: to finish the materialistic way of life, one should leave
-his so-called comfortable home life, which is simply a means for killing the soul (atma-patam). The home
-is considered to be a dark well covered by grass, and if one falls within this well, he simply dies without
-anyone's caring. One should therefore not be too much attached to family life, for it will spoil one's
-development of Krsna consciousness.
+The period of life just prior to death is certainly very dangerous because usually at this time people are
+attacked by the weakness of old age as well as many kinds of disease. The diseases that attack the body are
+compared here to soldiers. These soldiers are not ordinary soldiers, for they are guided by the King of the
+Yavanas, who acts as their commander-in-chief. The word dista-karinah indicates that he is their
+commander. When a man is young, he does not care for old age, but enjoys sex to the best of his
+satisfaction, not knowing that at the end of life his sexual indulgence will bring on various diseases, which
+so much disturb the body that one will pray for immediate death. The more one enjoys sex during youth,
+the more he suffers in old age.
 </p>
 
 </div>
@@ -104,7 +121,7 @@ development of Krsna consciousness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

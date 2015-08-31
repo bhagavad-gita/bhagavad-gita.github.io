@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,89 +81,72 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.24.html">4.27.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-namo visuddha-sattvaya
-haraye hari-medhase
-vasudevaya krsnaya
-prabhave sarva-satvatam
-<p></p>
+rsabham yavananam tvam
+vrne virepsitam patim
+sankalpas tvayi bhutanam
+krtah kila na risyati
+<br>
 <h2>Synonyms</h2>
-namah--obeisances; visuddha-sattvaya--unto You, whose existence is free from all material influence;
-haraye--who takes away all miserable conditions of devotees; hari-medhase--whose brain works only for
-the deliverance of the conditioned soul; vasudevaya--the all-pervading Supreme Personality of Godhead;
-krsnaya--unto Krsna; prabhave--who increases the influence; sarva-satvatam--of all kinds of devotees.
-<p></p>
+rsabham--the best; yavananam--of the untouchables; tvam--you; vrne--I accept; vira--O great hero;
+ipsitam--desired; patim--husband; sankalpah--the determination; tvayi--unto you; bhutanam--of all living
+entities; krtah--if done; kila--certainly; na--never; risyati--becomes baffled.
+<br>
 <h2>Translation</h2>
-Dear Lord, we offer our respectful obeisances unto You because Your existence is completely
-independent of all material influences. Your Lordship always takes away the devotee's miserable
-conditions, for Your brain plans how to do so. You live everywhere as Paramatma; therefore You are
-known as Vasudeva. You also accept Vasudeva as Your father, and You are celebrated by the name Krsna.
-You are so kind that You always increase the influence of all kinds of devotees.
-<p></p>
+Approaching the King of the Yavanas, Kalakanya addressed him as a great hero, saying: My dear sir, you
+are the best of the untouchables. I am in love with you, and I want you as my husband. I know that no
+one is baffled if he makes friends with you.
+<br>
 <h2>Purport</h2>
-In the previous verse it has been said (grhita-maya-guna-vigrahaya) that the Lord accepts three kinds of
-bodies (Visnu, Brahma and Siva) for the purposes of creating, maintaining and annihilating the cosmic
-manifestation. The three predominating deities of the material universe (Brahma, Visnu and Siva) are
-called guna-avataras. There are many kinds of incarnations of the Supreme Personality of Godhead, and
-the first incarnations within this material world are Brahma, Visnu and Mahesvara (Siva). Out of these
-three, Lord Brahma and Lord Siva accept material bodies, but Lord Visnu does not accept a material body.
-Lord Visnu is therefore known as visuddha-sattva. His existence is completely free from the
-contamination of the material modes of nature. One should therefore not think that Lord Visnu is in the
-same category with Lord Brahma and Siva. The sastras forbid us to think in this way.
-yas tu narayanam devam
-brahma-rudradi-daivataih
-samatvenaiva vikseta
-sa pasandi bhaved dhruvam
-One who considers Lord Visnu to be in the same category with devas like Lord Brahma or Lord Siva or
-who thinks Lord Brahma and Siva to be equal to Lord Visnu is to be considered as pasandi (a faithless
-nonbeliever). Therefore in this verse Lord Visnu is distinguished in the words namo visuddha-sattvaya.
-Although a living entity like us, Lord Brahma is exalted due to his pious activities; therefore he is given
-the high post of Brahma. Lord Siva is not actually like a living entity, but he is not the Supreme
-Personality of Godhead. His position is somewhere between Visnu, the Supreme Personality of Godhead,
-and Brahma, the living entity. Lord Siva is therefore explained in Brahma-samhita (5.45) in this way:
-ksiram yatha dadhi vikara-visesa-yogat
-sanjayate na hi tatah prthag asti hetoh
-yah sambhutam api tatha samupaiti karyad
-govindam adi-purusam tam aham bhajami
-Lord Siva is considered to be like yogurt (dadhi). Yogurt is nothing but transformed milk; nonetheless,
-yogurt cannot be accepted as milk. Similarly, Lord Siva holds almost all the powers of Lord Visnu, and he
-is also above the qualities of the living entity, but he is not exactly like Visnu, just as yogurt, although
-transformed milk, is not exactly like milk.
-The Supreme personality of Godhead is also described herein as vasudevaya krsnaya. Krsna is the
-original Supreme Personality of Godhead, and all Visnu expansions are His plenary portions or portions
-of His plenary portions (known as svamsa and kala). The svamsa, or direct expansion, is also called amsa.
-All visnu-tattvas are svamsa, direct parts and parcels of the Supreme Personality of Godhead, Krsna. Krsna
-is known as Vasudeva because He appeared in this material world as the son of Vasudeva. Similarly, He is
-known as Devaki-nandana, Yasoda-nandana, Nanda-nandana and so on.
-Again and again the Lord is very much interested in increasing the influence of His devotees. Therefore
-He is described herein as prabhave sarva-satvatam. The satvata community is a community of Vaisnavas,
-pure devotees of the Lord. The Supreme Personality of Godhead has unlimited powers, and He wants to
-see that His devotees are also entrusted with unlimited powers. A devotee of the Lord is always, therefore,
-distinguished from all other living entities.
-The word hari means "one who takes away all miserable conditions," and hari-medhase means that the
-Lord is always planning ways to deliver the conditioned soul from the clutches of maya. The Lord is so
-kind that He personally incarnates to deliver the conditioned souls, and whenever He comes, He makes
-His plans.
-paritranaya sadhunam
-vinasaya ca duskrtam
-dharma-samsthapanarthaya
-sambhavami yuge yuge
-"To deliver the pious and to annihilate the miscreants, as well as to reestablish the principles of religion,
-I advent Myself millennium after millennium." (Bg. 4.8)
-Since the Lord delivers all conditioned souls from the clutches of maya, He is known as hari-medhas. In
-the list of incarnations, Krsna is described as the supreme and original Personality of Godhead.
-ete camsa-kalah pumsah
-krsnas tu bhagavan svayam
-indrari-vyakulam lokam
-mrdayanti yuge yuge
-(Bhag. 1.3.28)
-Krsna, the original Personality of Godhead, appears in this material world when the demigods, who are
-devotees of the Lord, are disturbed by the demons.
+The words yavananam rsabham refer to the King of the Yavanas. The Sanskrit words yavana and
+mleccha apply to those who do not follow the Vedic principles. According to the Vedic principles, one
+should rise early in the morning, take bath, chant Hare Krsna, offer mangala-arati to the Deities, study
+Vedic literature, take prasada and engage in dressing and decorating the Deities. One must also collect
+money for the temple expenditures, or if one is a householder he must go to work in accordance with the
+prescribed duties of a brahmana, ksatriya, vaisya or sudra. In this way one should live a life of spiritual
+understanding, and this is the Vedic way of civilization. One who does not follow all these rules and
+regulations is called a yavana or mleccha. One should not mistakenly think that these words refer to
+certain classes of men in other countries. There is no question of limitation according to nationalism.
+Whether one lives in India or outside of India, he is called a yavana or mleccha if he does not follow the
+Vedic principles. One who does not actually follow the hygienic principles prescribed in the Vedic rules
+and regulations will be subjected to many contagious diseases. Because the students in this Krsna
+consciousness movement are advised to follow the Vedic principles, they naturally become hygienic.
+If a person is Krsna conscious, he can work like a young man even if he is seventy-five or eighty years
+old. Thus the daughter of Kala (Time) cannot overcome a Vaisnava. Srila Krsnadasa Kaviraja Gosvami
+engaged in writing Caitanya-caritamrta when he was very old, yet he presented the most wonderful
+literature about the activities of Lord Caitanya. Srila Rupa Gosvami and Sanatana Gosvami began their
+spiritual lives at a very old age, that is, after they retired from their occupations and family lives. Yet they
+presented many valuable literatures for the advancement of spiritual life. This is confirmed by Srila
+Srinivasa Acarya, who praised the Gosvamis in this way:
+nana-sastra-vicaranaika-nipunau sad-dharma-samsthapakau
+lokanam hita-karinau tri-bhuvane manyau saranyakarau
+radha-krsna-padaravinda-bhajananandena mattalikau
+vande rupa-sanatanau raghu-yugau sri-jiva-gopalakau
+"I offer my respectful obeisances unto the six Gosvamis, namely Sri Sanatana Gosvami, Sri Rupa
+Gosvami, Sri Raghunatha Bhatta Gosvami, Sri Raghunatha dasa Gosvami, Sri Jiva Gosvami and Sri Gopala
+Bhatta Gosvami, who are very expert in scrutinizingly studying all the revealed scriptures with the aim of
+establishing eternal religious principles for the benefit of all human beings. Thus they are honored all over
+the three worlds, and they are worth taking shelter of because they are absorbed in the mood of the gopis
+and are engaged in the transcendental loving service of Radha and Krsna."
+Thus jara, the effect of old age, does not harass a devotee. This is because a devotee follows the
+instructions and the determination of Narada Muni. All devotees are in the disciplic succession stemming
+from Narada Muni because they worship the Deity according to Narada Muni's direction, namely the
+Narada-pancaratra, or the pancaratrika-vidhi. A devotee follows the principles of pancaratrika-vidhi as
+well as bhagavata-vidhi. Bhagavata-vidhi includes preaching work--sravanam kirtanam visnoh--the
+hearing and chanting of the glories of Lord Visnu, the Supreme personality of Godhead. The pancaratrikavidhi
+includes arcanam vandanam dasyam sakhyam atma-nivedanam. Because a devotee rigidly follows
+the instructions of Narada Muni, he has no fear of old age, disease or death. Apparently a devotee may
+grow old, but he is not subjected to the symptoms of defeat experienced by a common man in old age.
+Consequently, old age does not make a devotee fearful of death, as a common man is fearful of death.
+When jara, or old age, takes shelter of a devotee, Kalakanya diminishes the devotee's fear. A devotee
+knows that after death he is going back home, back to Godhead; therefore he has no fear of death. Thus
+instead of depressing a devotee, advanced age helps him become fearless and thus happy.
 </p>
 
 </div>
@@ -133,7 +154,7 @@ devotees of the Lord, are disturbed by the demons.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

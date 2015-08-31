@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.1.html">4.7.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 maitreya uvaca
-sanakadya naradas ca
-rbhur hamso 'runir yatih
-naite grhan brahma-suta
-hy avasann urdhva-retasah
-<p></p>
+ity ajenanunitena
+bhavena paritusyata
+abhyadhayi maha-baho
+prahasya sruyatam iti
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--Maitreya said; sanaka-adyah--those headed by Sanaka; naradah--Narada; ca--and;
-rbhuh--Rbhu; hamsah--Hamsa; arunih--Aruni; yatih--Yati; na--not; ete--all these; grhan--at home;
-brahma-sutah--sons of Brahma; hi--certainly; avasan--did live; urdhva-retasah--unadulterated celibates.
-<p></p>
+maitreyah--Maitreya; uvaca--said; iti--thus; ajena--by Lord Brahma; anunitena--pacified; bhavena--by
+Lord Siva; paritusyata--fully satisfied; abhyadhayi--said; maha-baho--O Vidura; prahasya--smiling;
+sruyatam--listen; iti--thus.
+<br>
 <h2>Translation</h2>
-The great sage Maitreya said: The four great Kumara sages headed by Sanaka, as well as Narada, Rbhu,
-Hamsa, Aruni and Yati, all sons of Brahma did not live at home, but became urdhva-reta, or naisthikabrahmacaris,
-unadulterated celibates.
-<p></p>
-<h2>Purport</h2>
-The system of brahmacarya has been current since the birth of Brahma. A section of the population,
-especially male, did not marry at all. Instead of allowing their semen to be driven downwards, they used
-to lift the semen up to the brain. They are called urdhva-retasah, those who lift up. Semen is so important
-that if, by the yogic process, one can lift the semen up to the brain, he can perform wonderful work--one's
-memory is enabled to act very swiftly, and the duration of life is increased. Yogis can thus perform all
-kinds of austerity with steadiness and be elevated to the highest perfectional stage, even to the spiritual
-world. Vivid examples of brahmacaris who accepted this principle of life are the four sages Sanaka,
-Sanandana, Sanatana and Sanat-kumara, as well as Narada and others.
-Another significant phrase here is naite grhan hy avasan, "they did not live at home." Grha means
-"home" as well as "wife." In fact, "home" means wife; "home" does not mean a room or a house. One who
-lives with a wife lives at home, otherwise a sannyasi or brahmacari, even though he may live in a room or
-in a house, does not live at home. That they did not live at home means that they did not accept a wife,
-and so there was no question of their discharging semen. Semen is meant to be discharged when one has a
-home, a wife and the intention to beget children, otherwise there is no injunction for discharging semen.
-These principles were followed from the beginning of creation, and such brahmacaris never created
-progeny. This narration has dealt with the descendants of Lord Brahma from Manu's daughter Prasuti.
-prasuti's daughter was Daksayani, or Sati, in relation to whom the story of the Daksa yajna was narrated.
-Maitreya is now explaining about the progeny of the sons of Brahma. Out of the many sons of Brahma, the
-brahmacari sons headed by Sanaka and Narada did not marry at all, and therefore there is no question of
-narrating the history of their descendants.
+The sage Maitreya said: O mighty-armed Vidura, Lord Siva, being thus pacified by the words of Lord
+Brahma, spoke as follows in answer to Lord Brahma's request.
 </p>
 
 </div>
@@ -93,7 +109,7 @@ narrating the history of their descendants.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

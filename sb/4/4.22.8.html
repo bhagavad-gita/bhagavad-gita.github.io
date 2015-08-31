@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.8.html">4.22.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-havirdhanad dhavirdhani
-vidurasuta sat sutan
-barhisadam gayam suklam
-krsnam satyam jitavratam
-<p></p>
+kim tasya durlabhataram
+iha loke paratra ca
+yasya viprah prasidanti
+sivo visnus ca sanugah
+<br>
 <h2>Synonyms</h2>
-havirdhanat--from Havirdhana; havirdhani--the name of the wife of Havirdhana; vidura--O Vidura;
-asuta--gave birth; sat--six; sutan--sons; barhisadam--of the name Barhisat; gayam--of the name Gaya;
-suklam--of the name Sukla; krsnam--of the name Krsna; satyam--of the name Satya; jitavratam--of the
-name Jitavrata.
-<p></p>
+kim--what; tasya--his; durlabha-taram--very rare to achieve; iha--in this world; loke--world; paratra--
+after death; ca--or; yasya--one whose; viprah--the brahmanas and Vaisnavas; prasidanti--become pleased;
+sivah--all-auspicious; visnuh--Lord Visnu; ca--as well as; sa-anugah--going along with.
+<br>
 <h2>Translation</h2>
-Havirdhana, the son of Maharaja Antardhana, had a wife named Havirdhani, who gave birth to six sons,
-named Barhisat, Gaya, Sukla, Krsna, Satya and Jitavrata.
+Any person upon whom the brahmanas and Vaisnavas are pleased can achieve anything which is very
+rare to obtain in this world as well as after death. Not only that, but one also receives the favor of the
+auspicious Lord Siva and Lord Visnu, who accompany the brahmanas and Vaisnavas.
+<br>
+<h2>Purport</h2>
+The brahmanas and Vaisnavas are the bearers of Lord Visnu, the all-auspicious. As confirmed in the
+Brahma-samhita (5.38):
+premanjana-cchurita-bhakti-vilocanena
+santah sadaiva hrdayesu vilokayanti
+yam syamasundaram acintya-guna-svarupam
+govindam adi-purusam tam aham bhajami
+The devotees, out of their extreme love for Govinda, the Supreme Personality of Godhead, always carry
+the Lord within their hearts. The Lord is already in the heart of everyone, but the Vaisnavas and the
+brahmanas actually perceive and see Him always in ecstasy. Therefore brahmanas and Vaisnavas are
+carriers of Visnu. Wherever they go, Lord Visnu, Lord Siva or the devotees of Lord Visnu are all carried.
+The four Kumaras are brahmanas, and they visited the place of Maharaja Prthu. Naturally Lord Visnu and
+His devotees were also present. Under the circumstances, the conclusion is that when the brahmanas and
+Vaisnavas are pleased with a person, Lord Visnu is also pleased. This is confirmed by Srila Visvanatha
+Cakravarti Thakura in his eight stanzas on the spiritual master: yasya prasadad bhagavat-prasadah. By
+pleasing the spiritual master, who is both brahmana and Vaisnava, one pleases the Supreme Personality of
+Godhead. If the Supreme Personality of Godhead is pleased, then one has nothing more to achieve either
+in this world or after death.
 </p>
 
 </div>
@@ -70,7 +128,7 @@ named Barhisat, Gaya, Sukla, Krsna, Satya and Jitavrata.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

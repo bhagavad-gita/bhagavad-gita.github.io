@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,63 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.13.html">4.26.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pravrttam ca nivrttam ca
-sastram pancala-samjnitam
-pitr-yanam deva-yanam
-srotrac chruta-dharad vrajet
-<p></p>
+trpto hrstah sudrptas ca
+kandarpakrsta-manasah
+na vyacasta vararoham
+grhinim grha-medhinim
+<br>
 <h2>Synonyms</h2>
-pravrttam--the process of sense enjoyment; ca--also; nivrttam--the process of detachment; ca--also;
-sastram--scripture; pancala--Pancala; samjnitam--is described as; pitr-yanam--going to Pitrloka; devayanam--
-going to Devaloka; srotrat--by hearing; sruta-dharat--by the companion named Srutadhara;
-vrajet--one can be elevated.
-<p></p>
+trptah--satisfied; hrstah--joyful; su-drptah--being very proud; ca--also; kandarpa--by Cupid; akrsta--
+attracted; manasah--his mind; na--did not; vyacasta--try; vara-aroham--higher consciousness; grhinim--
+wife; grha-medhinim--one who keeps her husband in material life.
+<br>
 <h2>Translation</h2>
-Narada Muni continued: The city spoken of as Daksina-pancala represents the scriptures meant for
-directing pravrtti, the process of sense enjoyment in fruitive activities. The other city, named Uttarapancala,
-represents the scriptures meant for decreasing fruitive activities and increasing knowledge. The
-living entity receives different kinds of knowledge by means of two ears, and some living entities are
-promoted to Pitrloka and some to Devaloka. All this is made possible by the two ears.
-<p></p>
+After taking his dinner and having his thirst and hunger satisfied, King Puranjana felt some joy within
+his heart. Instead of being elevated to a higher consciousness, he became captivated by Cupid, and was
+moved by a desire to find his wife, who kept him satisfied in his household life.
+<br>
 <h2>Purport</h2>
-The Vedas are known as sruti, and the knowledge received from them through aural reception is called
-sruta-dhara. As stated in Bhagavad-gita, one can be promoted to the planets of the demigods or to the
-planets of the Pitas (forefathers), or even to the Vaikuntha planets, simply through the process of hearing.
-These things have already been explained in previous chapters.
+This verse is very significant for those desiring to elevate themselves to a higher level of Krsna
+consciousness. When a person is initiated by a spiritual master, he changes his habits and does not eat
+undesirable eatables or engage in the eating of meat, the drinking of liquor, illicit sex or gambling.
+Sattvika-ahara, foodstuffs in the mode of goodness, are described in the sastras as wheat, rice, vegetables,
+fruits, milk, sugar, and milk products. Simple food like rice, dhal, capatis, vegetables, milk and sugar
+constitute a balanced diet, but sometimes it is found that an initiated person, in the name of prasada, eats
+very luxurious foodstuffs. Due to his past sinful life he becomes attracted by Cupid and eats good food
+voraciously. It is clearly visible that when a neophyte in Krsna consciousness eats too much, he falls
+down. Instead of being elevated to pure Krsna consciousness, he becomes attracted by Cupid. The socalled
+brahmacari becomes agitated by women, and the vanaprastha may again become captivated into
+having sex with his wife. Or he may begin to search out another wife. Due to some sentiment, he may give
+up his own wife and come into the association of devotees and a spiritual master, but due to his past
+sinful life he cannot stay. Instead of being elevated to Krsna consciousness, he falls down, being attracted
+by Cupid, and takes to another wife for sex enjoyment. The fall of the neophyte devotee from the path of
+Krsna consciousness down to material life is described in Srimad-Bhagavatam (1.5.17) by Narada Muni.
+tyaktva sva-dharmam caranambujam harer
+bhajann apakvo 'tha patet tato yadi
+yatra kva vabhadram abhud amusya kim
+ko vartha apto 'bhajatam sva-dharmatah
+This indicates that although a neophyte devotee may fall down from the path of Krsna consciousness
+due to his immaturity, his service to Krsna never goes in vain. However, a person who remains steadfast
+in his family duty or so-called social or family obligation but does not take to Krsna consciousness
+receives no profit. One who comes to Krsna consciousness must be very cautious and refrain from
+prohibited activities, as defined by Rupa Gosvami in his Upadesamrta:
+atyaharah prayasas ca
+prajalpo niyamagrahah
+jana-sangas ca laulyam ca
+sadbhir bhaktir vinasyati
+A neophyte devotee should neither eat too much nor collect more money than necessary. Eating too
+much or collecting too much is called atyahara. For such atyahara one must endeavor very much. This is
+called prayasa. Superficially one may show himself to be very much faithful to the rules and regulations,
+but at the same time not be fixed in the regulative principles. This is called niyamagraha. By mixing with
+undesirable persons, or jana-sanga, one becomes tainted with lust and greed and falls down from the path
+of devotional service.
 </p>
 
 </div>
@@ -79,7 +145,7 @@ These things have already been explained in previous chapters.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

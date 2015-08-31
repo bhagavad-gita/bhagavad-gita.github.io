@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.14.html">4.24.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gandharvyas tadrsir asya
-maithunyas ca sitasitah
-parivrttya vilumpanti
-sarva-kama-vinirmitam
-<p></p>
+pitradistah praja-sarge
+tapase 'rnavam avisan
+dasa-varsa-sahasrani
+tapasarcams tapas-patim
+<br>
 <h2>Synonyms</h2>
-gandharvyah--Gandharvis; tadrsih--similarly; asya--of Candavega; maithunyah--companions for sexual
-intercourse; ca--also; sita--white; asitah--black; parivrttya--by surrounding; vilumpanti--they plundered;
-sarva-kama--all kinds of desirable objects; vinirmitam--manufactured.
-<p></p>
+pitra--by the father; adistah--being ordered by; praja-sarge--in the matter of begetting children; tapase--
+for executing austerity; arnavam--in the ocean; avisan--entered; dasa-varsa--ten years; sahasrani--such
+thousands; tapasa--by their austerity; arcan--worshiped; tapah--of austerity; patim--the master.
+<br>
 <h2>Translation</h2>
-Along with Candavega were as many female Gandharvis as there were soldiers, and all of them
-repetitively plundered all the paraphernalia for sense enjoyment.
-<p></p>
+When all these Pracetas were ordered by their father to marry and beget children, they all entered the
+ocean and practiced austerities and penances for ten thousand years. Thus they worshiped the master of
+all austerity, the Supreme Personality of Godhead.
+<br>
 <h2>Purport</h2>
-The days have been compared to the soldiers of Candavega. Night is generally a time for sex enjoyment.
-Days are considered to be white, and nights are considered to be black, or, from another point of view,
-there are two kinds of nights--black nights and white nights. All these days and nights combine to pass
-away our span of life and everything we manufacture for sense gratification. Material activity means
-manufacturing things for sense gratification. Scientists are conducting research to find out how we can
-satisfy our senses more and more elaborately. In this Kali-yuga, the demoniac mentality is employed in
-manufacturing various machines to facilitate the process of sense gratification. There are so many
-machines for ordinary household activities. There are machines for washing dishes, cleansing the floor,
-shaving, clipping hair--today everything is done by machine. All these facilities for sense gratification are
-described in this verse as sarva-kama-vinirmitam. The time factor, however, is so strong that not only is
-our span of life being expended, but all the machines and facilities for sense gratification are deteriorating.
-Therefore in this verse the word vilumpanti ("plundering") is used. Everything is being plundered from
-the very beginning of our lives.
-This plundering of our possessions and life-span begins with the day of our birth. One day will come
-when death will finish everything, and the living entity will have to enter another body to begin another
-chapter of life and again begin the cycle of material sense gratification. Prahlada Maharaja describes this
-process as punah punas carvita-carvananam (Bhag. 7.5.30). Materialistic life means chewing the chewed
-again and again. The central point of material life is sense gratification. In different types of bodies, the
-living entity enjoys various senses, and through creating various types of facilities, he chews the chewed.
-Whether we squeeze sugar out of the sugarcane with our teeth or a machine, the result is the same--
-sugarcane juice. We may discover many ways to squeeze the juice out of the sugarcane, but the result is
-the same.
+Sometimes great sages and ascetics enter the Himalaya Mountains in order to find seclusion from the
+turmoil of the world. It appears, however, that all the Pracetas, the sons of Pracinabarhi, entered the
+depths of the ocean to perform austerity in a secluded place. Since they performed austerities for ten
+thousand years, this incident took place in the Satya-yuga, when people used to live for a hundred
+thousand years. It is also significant that by their austerity they worshiped the master of austerity, Sri
+Krsna, the Supreme Personality of Godhead. If one wants to perform austerities and penances in order to
+attain the supreme goal, one must attain the favor of the Supreme Personality of Godhead. If one achieves
+the favor of the Supreme Lord, it is to be understood that he has finished all kinds of austerities and
+penances and has attained efficiency in their execution. On the other hand, if one does not attain the
+perfect stage of devotional service, all austerities and penances actually have no meaning, for without the
+Supreme Lord no one can attain the highest results derived from performing them. As stated in Bhagavadgita
+(5.29), Lord Sri Krsna is the master of all penances and sacrifices. Bhoktaram yajna-tapasam sarvaloka-
+mahesvaram. Thus the desired result of performing austerities may be derived from Lord Krsna.
+In Srimad-Bhagavatam (3.33.7) it is stated:
+aho bata sva-paco 'to gariyan
+yaj-jihvagre vartate nama tubhyam
+tepus tapas te juhuvuh sasnur arya
+brahmanucur nama grnanti ye te
+Even if a person is born in a family of candalas--the lowest birth one can get in human society--he is
+glorious if he chants the holy names of the Lord, for it is to be understood that by such chanting a devotee
+definitely proves that he underwent all kinds of austerities in his previous life. By the grace of Lord
+Caitanya, one who chants the maha-mantra (Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare
+Rama, Hare Rama, Rama Rama, Hare Hare) attains the highest perfectional stage, which had previously
+been attained by people who entered the ocean and executed austerities for ten thousand years. In this age
+of Kali, if a person does not take advantage of chanting the Hare Krsna mantra, which is offered as a great
+concession to the fallen human beings of this age, it is to be understood that he is very much bewildered
+by the illusory energy of the Lord.
 </p>
 
 </div>
@@ -93,7 +138,7 @@ the same.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

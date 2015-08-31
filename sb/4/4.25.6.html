@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.25.6.html">4.25.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kanyopagudho nasta-srih
-krpano visayatmakah
-nasta-prajno hrtaisvaryo
-gandharva-yavanair balat
-<p></p>
+grhesu kuta-dharmesu
+putra-dara-dhanartha-dhih
+na param vindate mudho
+bhramyan samsara-vartmasu
+<br>
 <h2>Synonyms</h2>
-kanya--by the daughter of Time; upagudhah--being embraced; nasta-srih--bereft of all beauty; krpanah--
-miser; visaya-atmakah--addicted to sense gratification; nasta-prajnah--bereft of intelligence; hrtaaisvaryah--
-bereft of opulence; gandharva--by the Gandharvas; yavanaih--and by the Yavanas; balat--by
-force.
-<p></p>
+grhesu--in family life; kuta-dharmesu--in false occupational duties; putra--sons; dara--wife; dhana--
+wealth; artha--the goal of life; dhih--one who considers; na--not; param--transcendence; vindate--achieves;
+mudhah--rascal; bhramyan--wandering; samsara--of material existence; vartmasu--on the paths.
+<br>
 <h2>Translation</h2>
-When King Puranjana was embraced by Kalakanya, he gradually lost all his beauty. Having been too
-much addicted to sex, he became very poor in intelligence and lost all his opulence. Being bereft of all
-possessions, he was conquered forcibly by the Gandharvas and the Yavanas.
-<p></p>
+Those who are interested only in a so-called beautiful life--namely remaining as a householder
+entangled by sons and a wife and searching after wealth--think that such things are life's ultimate goal.
+Such people simply wander in different types of bodies throughout this material existence without finding
+out the ultimate goal of life.
+<br>
 <h2>Purport</h2>
-When a person is attacked by the invalidity of old age and is still addicted to sense gratification, he
-gradually loses all his personal beauty, intelligence and good possessions. He thus cannot resist the
-forceful attack of the daughter of Time.
+Those who are too much attached to family life--which consists of entanglement with wife, children,
+wealth and home--are engaged in kuta-dharma, pseudo duties. Prahlada Maharaja has likened these
+pseudo occupational duties to a dark well (andha-kupam). Prahlada has purposefully spoken of this dark
+well because if one falls into this well, he will die. He may cry for help, but no one will hear him or come
+to rescue him.
+The words bhramyan samsara-vartmasu are significant. In Caitanya-caritamrta (Madhya 19.151), Sri
+Caitanya Mahaprabhu very clearly explains: brahmanda bhramite kona bhagyavan jiva. All living entities
+are wandering in different types of bodies throughout different planets, and if, in the course of their
+wanderings, they come in contact with a devotee by the direction of the Supreme Personality of Godhead,
+their lives become successful. Even though King Pracinabarhisat was engaged in fruitive activity, the great
+sage Narada appeared before him. The King was very fortunate to be able to associate with Narada, who
+enlightened him in spiritual knowledge. It is the duty of all saintly persons to follow in the footsteps of
+Narada Muni and travel all over the world to every country and village just to instruct illusioned persons
+about the goal of life and to save them from the entanglement of karma-bandha, fruitive activity.
 </p>
 
 </div>
@@ -76,7 +126,7 @@ forceful attack of the daughter of Time.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

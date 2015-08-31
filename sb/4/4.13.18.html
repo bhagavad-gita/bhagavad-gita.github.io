@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,60 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.18.html">4.13.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasya rastre pure caiva
-bhagavan yajna-purusah
-ijyate svena dharmena
-janair varnasramanvitaih
-<p></p>
+sunithangasya ya patni
+susuve venam ulbanam
+yad-dauhsilyat sa rajarsir
+nirvinno niragat purat
+<br>
 <h2>Synonyms</h2>
-yasya--whose; rastre--in the state or kingdom; pure--in the cities; ca--also; eva--certainly; bhagavan--the
-Supreme Personality of Godhead; yajna-purusah--who is the enjoyer of all sacrifices; ijyate--is worshiped;
-svena--their own; dharmena--by occupation; janaih--by the people; varna-asrama--the system of eight
-social orders; anvitaih--who follow.
-<p></p>
+sunitha--Sunitha; angasya--of Anga; ya--she who; patni--the wife; susuve--gave birth to; venam--Vena;
+ulbanam--very crooked; yat--whose; dauhsilyat--on account of bad character; sah--he; raja-rsih--the
+saintly King Anga; nirvinnah--very disappointed; niragat--went out; purat--from home.
+<br>
 <h2>Translation</h2>
-The king is supposed to be pious in whose state and cities the general populace strictly observes the
-system of eight social orders of varna and asrama, and where all citizens engage in worshiping the
-Supreme Personality of Godhead by their particular occupations.
-<p></p>
-<h2>Purport</h2>
-The state's duty and the citizen's duty are very nicely explained in this verse. The activities of the
-government head, or king, as well as the activities of the citizens, should be so directed that ultimately
-everyone engages in devotional service to the Supreme Personality of Godhead. The king, or government
-head, is supposed to be the representative of the Supreme Personality of Godhead and is therefore
-supposed to see that things go on nicely and that the citizens are situated in the scientific social order
-comprised of four varnas and four asramas. In the Visnu Purana it is stated that unless people are
-educated or situated in the scientific social order comprised of four varnas (brahmana, ksatriya, vaisya and
-sudra) and four asramas (brahmacarya, grhastha, vanaprastha and sannyasa), society can never be
-considered real human society, nor can it make any advancement towards the ultimate goal of human life.
-It is the duty of the government to see that things go on in terms of varna and asrama. As stated herein,
-bhagavan yajna-purusah--the Supreme Personality of Godhead, Krsna, is the yajna-purusa. As stated in
-Bhagavad-gita (5.29): bhoktaram yajna-tapasam. Krsna is the ultimate purpose of all sacrifice. He is also
-the enjoyer of all sacrifices; therefore He is known as yajna-purusa. The word yajna-purusa indicates Lord
-Visnu or Lord Krsna, or any Personality of Godhead in the category of visnu-tattva. In perfect human
-society, people are situated in the orders of varna and asrama and are engaged in worshiping Lord Visnu
-by their respective activities. Every citizen engaged in an occupation renders service by the resultant
-actions of his activities. That is the perfection of life. As stated in Bhagavad-gita (18.46):
-yatah pravrttir bhutanam
-yena sarvam idam tatam
-sva-karmana tam abhyarcya
-siddhim vindati manavah
-"By worship of the Lord, who is the source of all beings and who is all-pervading, man can, in the
-performance of his own duty, attain perfection."
-Thus the brahmanas, ksatriyas, sudras and vaisyas must execute their prescribed duties as these duties
-are stated in the sastras. In this way everyone can satisfy the Supreme Personality of Godhead, Visnu. The
-king, or government head, has to see that the citizens are thus engaged. In other words, the state or the
-government must not deviate from its duty by declaring that the state is a secular one, which has no
-interest in whether or not the people advance in varnasrama-dharma. Today people engaged in
-government service and people who rule over the citizens have no respect for the varnasrama-dharma.
-They complacently feel that the state is secular. In such a government, no one can be happy. The people
-must follow the varnasrama-dharma, and the king must see that they are following it nicely.
+The wife of Anga, Sunitha, gave birth to a son named Vena, who was very crooked. The saintly King
+Anga was very disappointed with Vena's bad character, and he left home and kingdom and went out to
+the forest.
 </p>
 
 </div>
@@ -104,7 +109,7 @@ must follow the varnasrama-dharma, and the king must see that they are following
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

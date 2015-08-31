@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,68 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.20.21.html">4.20.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rajovaca
-sabhyah srnuta bhadram vah
-sadhavo ya ihagatah
-satsu jijnasubhir dharmam
-avedyam sva-manisitam
-<p></p>
+sa adi-rajo racitanjalir harim
+vilokitum nasakad asru-locanah
+na kincanovaca sa baspa-viklavo
+hrdopaguhyamum adhad avasthitah
+<br>
 <h2>Synonyms</h2>
-raja uvaca--the King began to speak; sabhyah--addressing the ladies and gentlemen; srnuta--kindly hear;
-bhadram--good fortune; vah--your; sadhavah--all great souls; ye--who; iha--here; agatah--present; satsu--
-unto the noble men; jijnasubhih--one who is inquisitive; dharmam--religious principles; avedyam--must
-be presented; sva-manisitam--concluded by someone.
-<p></p>
+sah--he; adi-rajah--the original king; racita-anjalih--with folded hands; harim--the Supreme personality
+of Godhead; vilokitum--to look upon; na--not; asakat--was able; asru-locanah--his eyes full of tears; na--
+not; kincana--anything; uvaca--spoke; sah--he; baspa-viklavah--his voice being choked up; hrda--with his
+heart; upaguhya--embracing; amum--the Lord; adhat--he remained; avasthitah--standing.
+<br>
 <h2>Translation</h2>
-King Prthu said: O gentle members of the assembly, may all good fortune be upon you! May all of you
-great souls who have come to attend this meeting kindly hear my prayer attentively. A person who is
-actually inquisitive must present his decision before an assembly of noble souls.
-<p></p>
+The original king, Maharaja Prthu, his eyes full of tears and his voice faltering and choked up, could
+neither see the Lord very distinctly nor speak to address the Lord in any way. He simply embraced the
+Lord within his heart and remained standing in that way with folded hands.
+<br>
 <h2>Purport</h2>
-In this verse the word sadhavah ("all great souls") is very significant. When a person is very great and
-famous, many unscrupulous persons become his enemies, for envy is the nature of materialists. In any
-meeting there are different classes of men, and it is to be supposed, therefore, that because Prthu Maharaja
-was very great, he must have had several enemies present in the assembly, although they could not
-express themselves. Maharaja Prthu, however, was concerned with persons who were gentle, and
-therefore he first addressed all the honest persons, not caring for the envious. He did not, however,
-present himself as a royal authority empowered to command everyone, for he wanted to present his
-statement in humble submission before the assembly of great sages and saintly persons. As a great king of
-the entire world, he could have given them orders, but he was so humble, meek and honest that he
-presented his statement for approval in order to clarify his mature decision. Everyone within this material
-world is conditioned by the modes of material nature and therefore has four defects. But although Prthu
-Maharaja was above all these, still, like an ordinary conditioned soul, he presented his statements to the
-great souls, sages and saintly persons present there.
+Just as Krsna is addressed in the Brahma-samhita as adi-purusa, the original personality, so King Prthu,
+being an empowered incarnation of the Lord, is referred to in this verse as adi-rajah, the original or ideal
+king. He was a great devotee and at the same time a great hero who conquered over all undesirable
+elements in his kingdom. He was so powerful that he was equal in fighting to Indra, the King of heaven.
+He gave protection to his citizens, keeping them engaged in pious activities and devotion to the Lord. He
+did not collect a single cent of taxes from the citizens without being able to give them protection from all
+calamities. The greatest calamity in life is to become godless and therefore sinful. If the state head or king
+allows the citizens to become sinful by indulging in illicit sex life, intoxication, meat-eating and gambling,
+then the king is responsible, and he has to suffer the resultant sequence of reactions for the sinful lives of
+the citizens because he levies taxes on them unnecessarily. These are the principles for a ruling power,
+and because Maharaja Prthu observed all the principles for a ruling chief, he is referred to here as adirajah.
+Even a responsible king like Maharaja Prthu can become a pure devotee of the first order. We can
+distinctly see from King Prthu's behavior how he became ecstatic, both externally and internally, in pure
+devotional service.
+Just today we have seen in the newspapers of Bombay that the government is going to repeal its
+prohibition laws. Ever since Gandhi's noncooperation movement, Bombay has been kept dry and has not
+allowed its citizens to drink. But unfortunately the citizens are so clever that they have increased illicit
+distillation of liquor, and although not being sold publicly in shops, liquor is being sold in public
+lavatories and similar abnormal places. Unable to check such illicit smuggling, the government has
+decided to manufacture the liquor at cheaper prices so that people can have their supply of intoxication
+directly from the government instead of purchasing it in public lavatories. The government failed to
+change the hearts of the citizens from indulging in sinful life, so instead of losing the taxes they collect to
+inflate the treasury, they have decided to manufacture liquor to supply to the citizens who hanker after it.
+This kind of government cannot check the resultant actions of sinful life, namely war, pestilence,
+famine, earthquakes and similar other disturbances. Nature's law is that as soon as there are discrepancies
+in regard to the law of God (which are described in Bhagavad-gita as dharmasya glanih, or disobedience to
+the laws of nature or God), at once there will be heavy punishment in the form of sudden outbreaks of
+war. We have recently experienced a war between India and Pakistan. Within fourteen days there have
+been immense losses of men and money, and there have been disturbances to the entire world. These are
+the reactions of sinful life. The Krsna consciousness movement is meant to make people pure and perfect.
+If we become even partially pure, as described in the Bhagavatam (nasta-prayesv abhadresu), by
+development of Krsna consciousness, then lust and greed, the material diseases of the citizens, will be
+reduced. This can be made possible simply by broadcasting the pure message of Srimad-Bhagavatam, or
+Krsna consciousness. Big commercial and industrial firms have contributed many thousands of rupees to
+a defense fund that burns the money in the form of gunpowder, but unfortunately, if they are asked to
+contribute liberally to advance the Krsna consciousness movement, they are reluctant. Under the
+circumstances, the world will periodically suffer from such upsurges and outbreaks of war, which are the
+consequences of not being Krsna conscious.
 </p>
 
 </div>
@@ -87,7 +150,7 @@ great souls, sages and saintly persons present there.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

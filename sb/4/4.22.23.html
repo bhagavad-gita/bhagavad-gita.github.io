@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,80 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.23.html">4.22.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatra gandharvam akarnya
-divya-marga-manoharam
-visismyu raja-putras te
-mrdanga-panavady anu
-<p></p>
+arthendriyarama-sagosthy-atrsnaya
+tat-sammatanam aparigrahena ca
+vivikta-rucya paritosa atmani
+vina harer guna-piyusa-panat
+<br>
 <h2>Synonyms</h2>
-tatra--there; gandharvam--musical sounds; akarnya--hearing; divya--heavenly; marga--symmetrical;
-manah-haram--beautiful; visismyuh--they became amazed; raja-putrah--all the sons of King Barhisat; te--
-all of them; mrdanga--drums; panava--kettledrums; adi--all together; anu--always.
-<p></p>
+artha--riches; indriya--senses; arama--gratification; sa-gosthi--with their companion; atrsnaya--by
+reluctance; tat--that; sammatanam--since approved by them; aparigrahena--by nonacceptance; ca--also;
+vivikta-rucya--disgusted taste; paritose--happiness; atmani--self; vina--without; hareh--of the Supreme
+Personality of Godhead; guna--qualities; piyusa--nectar; panat--drinking.
+<br>
 <h2>Translation</h2>
-The sons of the King became very much amazed when they heard vibrations from various drums and
-kettledrums along with other orderly musical sounds pleasing to the ear.
-<p></p>
+One has to make progress in spiritual life by not associating with persons who are simply interested in
+sense gratification and making money. Not only such persons, but one who associates with such persons
+should be avoided. One should mold his life in such a way that he cannot live in peace without drinking
+the nectar of the glorification of the Supreme Personality of Godhead, Hari. One can be thus elevated by
+being disgusted with the taste for sense enjoyment.
+<br>
 <h2>Purport</h2>
-In addition to the various flowers and living entities about the lake, there were also many musical
-vibrations. The void of the impersonalists, which has no variegatedness, is not at all pleasing compared
-with such a scene. Actually one has to attain the perfection of sac-cid-ananda, eternity, bliss and
-knowledge. Because the impersonalists deny these varieties of creation, they cannot actually enjoy
-transcendental bliss. The place where the Pracetas arrived was the abode of Lord Siva. Impersonalists are
-generally worshipers of Lord Siva, but Lord Siva is never without variety in his abode. Thus wherever one
-goes, whether to the planet of Lord Siva, Lord Visnu or Lord Brahma, there is variety to be enjoyed by
-persons full in knowledge and bliss.
+In the material world everyone is interested in money and sense gratification. The only objective is to
+earn as much money as possible and utilize it for satisfaction of the senses. Srila Sukadeva Gosvami thus
+described the activities of the materialistic persons:
+nidraya hriyate naktam
+vyavayena ca va vayah
+diva carthehaya rajan
+kutumba-bharanena va
+(Bhag. 2.1.3)
+This is a typical example of materialistic persons. At night they waste their time by sleeping more than
+six hours or by wasting time in sex indulgence. This is their occupation at night, and in the morning they
+go to their office or business place just to earn money. As soon as there is some money, they become busy
+in purchasing things for their children and others. Such persons are never interested in understanding the
+values of life--what is God, what is the individual soul, what is its relationship with God, etc. Things are
+degraded to such an extent that those who are supposed to be religious are also at the present moment
+interested only in sense gratification. The number of materialistic persons in this age of Kali has increased
+more than in any other age; therefore persons who are interested in going back home, back to Godhead,
+should not only engage in the service of realized souls but should give up the company of materialistic
+persons, whose only aim is to earn money and employ it in sense gratification. They should also not
+accept the objectives of materialistic persons, namely money and sense gratification. Therefore it is stated:
+bhaktih paresanubhavo viraktir anyatra ca (Bhag. 11.2.42). To advance in devotional service one should
+be uninterested in the materialistic way of life. That which is the subject matter of satisfaction for the
+devotees is of no interest to the nondevotees.
+Simple negation, or giving up the company of materialistic persons, will not do. We must have
+engagements. Sometimes it is found that a person interested in spiritual advancement gives up the
+company of material society and goes to a secluded place as recommended for the yogis especially, but
+that will also not help a person in spiritual advancement, for in many instances such yogis also fall down.
+As far as jnanis are concerned, generally they fall down without taking shelter of the lotus feet of the Lord.
+The impersonalists or the voidists can simply avoid the positive material association; they cannot remain
+fixed in transcendence without being engaged in devotional service. The beginning of devotional service is
+to hear about the glories of the Supreme Personality of Godhead. That is recommended in this verse: vina
+harer guna-piyusa-panat. One must drink the nectar of the glories of the Supreme Personality of Godhead,
+and this means that one must be always engaged in hearing and chanting the glories of the Lord. It is the
+prime method for advancing in spiritual life. Lord Caitanya Mahaprabhu also recommends this in the
+Caitanya-caritamrta. If one wants to make advancement in spiritual life, by great fortune he may meet a
+bona fide spiritual master and from him learn about Krsna. By serving both the spiritual master and Krsna
+he gets the seed of devotional service (bhakti-lata-bija), and if he sows the seed within his heart and
+waters it by hearing and chanting, it grows into a luxuriant bhakti-lata, or bhakti creeper. The creeper is
+so strong that it penetrates the covering of the universe and reaches the spiritual world and continues to
+grow on and on until it reaches and takes shelter of the lotus feet of Krsna, just as an ordinary creeper also
+grows on and on until it takes a solid shelter on a roof; then it very steadily grows and produces the
+required fruit. The real cause of the growing of such fruit, which is here called the nectar of hearing the
+glories of the Supreme Personality of Godhead, is to water the creeper of devotional service by hearing
+and chanting. The purport is that one cannot live outside the society of devotees; one must live in the
+association of devotees, where there is constant chanting and hearing of the glories of the Lord. The Krsna
+consciousness movement is started for this purpose, so that hundreds of ISKCON centers may give people
+a chance to hear and chant, to accept the spiritual master and to disassociate themselves from persons
+who are materially interested, for in this way one can make solid advancement in going back home, back
+to Godhead.
 </p>
 
 </div>
@@ -79,7 +162,7 @@ persons full in knowledge and bliss.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

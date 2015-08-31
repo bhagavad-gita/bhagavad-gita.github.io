@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,58 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.22.56.html">4.22.56</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.56</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/56"><b>56</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatra nirvistam aranam
-krtanto nabhimanyate
-visvam vidhvamsayan viryasaurya-
-visphurjita-bhruva
-<p></p>
+rajety adhan namadheyam
+soma-raja ivaparah
+suryavad visrjan grhnan
+pratapams ca bhuvo vasu
+<br>
 <h2>Synonyms</h2>
-yatra--wherein; nirvistam aranam--a completely surrendered soul; krta-antah--invincible time; na
-abhimanyate--does not go to attack; visvam--the entire universe; vidhvamsayan--by vanquishing; virya--
-prowess; saurya--influence; visphurjita--simply by expansion; bhruva--of the eyebrows.
-<p></p>
+raja--the King; iti--thus; adhat--took up; namadheyam--of the name; soma-rajah--the king of the moon
+planet; iva--like; aparah--on the other hand; surya-vat--like the sun-god; visrjan--distributing; grhnan--
+exacting; pratapan--by strong ruling; ca--also; bhuvah--of the world; vasu--revenue.
+<br>
 <h2>Translation</h2>
-Simply by expansion of His eyebrows, invincible time personified can immediately vanquish the entire
-universe. However, formidable time does not approach the devotee who has taken complete shelter at
-Your lotus feet.
-<p></p>
+Maharaja Prthu became as celebrated a king as Soma-raja, the king of the moon. He was also powerful
+and exacting, just like the sun-god, who distributes heat and light and at the same time exacts all the
+planetary waters.
+<br>
 <h2>Purport</h2>
-In Bhagavad-gita (10.34) it is said that the Lord in the shape and form of death destroys all a person's
-possessions. Mrtyuh sarva-haras caham: "I am all-devouring death." The Lord in the shape of death takes
-away everything that is created by the conditioned soul. Everything in this material world is subject to
-perish in due course of time. However, all the strength of time cannot hamper the activities of a devotee,
-for a devotee takes complete shelter under the lotus feet of the Lord. For this reason only is a devotee free
-from formidable time. All the activities of the karmis and jnanis, which have no touch of devotional
-service, are spoiled in due course of time. The material success of the karmis is destined to be destroyed;
-similarly, the impersonal realization attained by the jnanis is also destroyed in the course of time.
-aruhya krcchrena param padam tatah
-patanty adho 'nadrta-yusmad-anghrayah
-(Bhag. 10.2.32)
-To say nothing of the karmis, the jnanis undergo severe austerities to attain the impersonal brahmajyoti,
-but because they do not find the lotus feet of the Lord, they fall down again into this material existence.
-Unless one is fully situated in unalloyed devotional service, there is no guarantee of liberation, even if one
-is elevated to the heavenly planets or to the impersonal Brahman effulgence. A devotee's achievement,
-however, is never lost by the influence of time. Even if a devotee cannot completely execute devotional
-service, in his next life he begins from the point where he left off. Such an opportunity is not given to the
-karmis and jnanis, whose achievements are destroyed. The bhakta's achievement is never destroyed, for it
-goes on perpetually, be it complete or incomplete. This is the verdict of all Vedic literatures. Sucinam
-srimatam gehe yoga-bhrasto'bhijayate. If one is unable to complete the process of bhakti-yoga, he is given
-a chance in his next life to take birth in a pure family of devotees or in a rich family. In such families a
-person can have a good opportunity to further progress in devotional service.
-When Yamaraja, the superintendent of death, was instructing his assistants, he told them not to
-approach the devotees. "The devotees should be offered respect," he said, "but do not go near them."
-Thus the devotees of the Lord are not under the jurisdiction of Yamaraja. Yamaraja is a representative of
-the Supreme Personality of Godhead, and he controls the death of every living entity. Yet he has nothing
-to do with the devotees. Simply by blinking his eyes, time personified can destroy the entire cosmic
-manifestation, but he has nothing to do with the devotee. In other words, devotional service which is
-rendered by the devotee in this lifetime can never be destroyed by time. Such spiritual assets remain
-unchanged, being beyond the influence of time.
+In this verse Maharaja Prthu is compared to the kings of the moon and sun. The king of the moon and
+the king of the sun serve as examples of how the Lord desires the universe to be ruled. The sun distributes
+heat and light and at the same time exacts water from all planets. The moon is very pleasing at night, and
+when one becomes fatigued after a day's labor in the sun, he can enjoy the moonshine. Like the sun-god,
+Prthu Maharaja distributed his heat and light to give protection to his kingdom, for without heat and light
+no one can exist. Similarly, Prthu Maharaja exacted taxes and gave such strong orders to the citizens and
+government that no one had the power to disobey him. On the other hand, he pleased everyone just like
+the moonshine. Both the sun and the moon have particular influences by which they maintain order in
+the universe, and modern scientists and philosophers should become familiar with the Supreme Lord's
+perfect plan for universal maintenance.
 </p>
 
 </div>
@@ -102,7 +121,7 @@ unchanged, being beyond the influence of time.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

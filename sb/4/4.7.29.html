@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,52 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.7.29.html">4.7.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-paritusyet tatas tata
-tavan-matrena purusah
-daivopasaditam yavad
-viksyesvara-gatim budhah
-<p></p>
+rudra uvaca
+tava varada varanghrav asisehakhilarthe
+hy api munibhir asaktair adarenarhaniye
+yadi racita-dhiyam mavidya-loko 'paviddham
+japati na ganaye tat tvat-paranugrahena
+<br>
 <h2>Synonyms</h2>
-paritusyet--one should be satisfied; tatah--therefore; tata--my dear boy; tavat--up to such; matrena--
-quality; purusah--a person; daiva--destiny; upasaditam--offered by; yavat--as; viksya--seeing; isvaragatim--
-the process of the Supreme; budhah--one who is intelligent.
-<p></p>
+rudrah uvaca--Lord Siva said; tava--Your; vara-da--O supreme benefactor; vara-anghrau--precious lotus
+feet; asisa--by desire; iha--in the material world; akhila-arthe--for fulfillment; hi api--certainly; munibhih--
+by the sages; asaktaih--liberated; adarena--with care; arhaniye--worshipable; yadi--if; racita-dhiyam--mind
+fixed; ma--me; avidya-lokah--the ignorant persons; apaviddham--unpurified activity; japati--utters; na
+ganaye--do not value; tat--it; tvat-para-anugrahena--by compassion like Yours.
+<br>
 <h2>Translation</h2>
-The process of the Supreme Personality of Godhead is very wonderful. One who is intelligent should
-accept that process and be satisfied with whatever comes, favorable or unfavorable, by His supreme will.
-<p></p>
+Lord Siva said: My dear Lord, my mind and consciousness are always fixed on Your lotus feet, which, as
+the source of all benediction and the fulfillment of all desires, are worshiped by all liberated great sages
+because Your lotus feet are worthy of worship. With my mind fixed on Your lotus feet, I am no longer
+disturbed by persons who blaspheme me, claiming that my activities are not purified. I do not mind their
+accusations, and I excuse them out of compassion, just as You exhibit compassion toward all living
+entities.
+<br>
 <h2>Purport</h2>
-The great sage Narada instructed Dhruva Maharaja that one should be satisfied in all circumstances.
-Everyone who is intelligent should know that because of our concept of bodily existence, we are subjected
-to suffering and enjoyment. One who is in the transcendental position, beyond the concept of bodily life,
-is considered to be intelligent. One who is a devotee especially accepts all reverses as gifts of the Supreme
-Lord. When a devotee is put into distress, he accepts this as God's mercy and offers Him repeated
-obeisances with his body, mind and intellect. An intelligent person, therefore, should be always satisfied,
-depending on the mercy of the Lord.
+Lord Siva expresses herein his regret at having been angry and having disturbed the sacrificial activities
+of Daksa. King Daksa had insulted him in many ways, and thus he had become angry and had frustrated
+the entire sacrificial ceremony. Later, when he was pleased, the yajna performances were reinstituted, and
+therefore he regretted his activities. Now he says that because his mind is fixed on the lotus feet of the
+Supreme Lord, Visnu, he is no longer disturbed by the ordinary critics of his way of life. From this
+statement by Lord Siva it is understood that as long as one is on the material platform one is affected by
+the three modes of material nature. As soon as one is in Krsna consciousness, however, one is no longer
+affected by such material activities. One should therefore always be fixed in Krsna consciousness, busy in
+the transcendental loving service of the Lord. It is guaranteed that such a devotee will never be affected by
+the actions and reactions of the three modes of material nature. This fact is also corroborated in Bhagavadgita:
+anyone who is fixed in the transcendental service of the Lord has surpassed all the material qualities
+and is situated in the status of Brahman realization, in which one is not afflicted by hankering for material
+objects. The recommendation of the Srimad-Bhagavatam is that one should always be Krsna conscious
+and should never forget his transcendental relationship with the Lord. This program has to be followed
+strictly by everyone. From the statement of Lord Siva it is understood that he was always in Krsna
+consciousness, and thus he remained free from material affliction. The only remedy, therefore, is to
+continue Krsna consciousness rigidly, in order to get out of the contamination of the material modes.
 </p>
 
 </div>
@@ -78,7 +134,7 @@ depending on the mercy of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

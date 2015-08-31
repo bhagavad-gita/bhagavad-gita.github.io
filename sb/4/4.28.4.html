@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.4.html">4.28.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam agatam ta utthaya
-pranipatyabhinandya ca
-pujayitva yathadesam
-sukhasinam athabruvan
-<p></p>
+tayopabhujyamanam vai
+yavanah sarvato-disam
+dvarbhih pravisya subhrsam
+prardayan sakalam purim
+<br>
 <h2>Synonyms</h2>
-tam--to him; agatam--appeared; te--all the Pracetas; utthaya--after getting up; pranipatya--offering
-obeisances; abhinandya--offering welcome; ca--also; pujayitva--worshiping; yatha adesam--according to
-regulative principles; sukha-asinam--comfortably situated; atha--thus; abruvan--they said.
-<p></p>
+taya--by Kalakanya; upabhujyamanam--being taken possession of; vai--certainly; yavanah--the Yavanas;
+sarvatah-disam--from all sides; dvarbhih--through the gates; pravisya--having entered; su-bhrsam--greatly;
+prardayan--giving trouble; sakalam--all over; purim--the city.
+<br>
 <h2>Translation</h2>
-As soon as the Pracetas saw that the great sage Narada had appeared, they immediately got up even from
-their asanas. As required, they immediately offered obeisances and worshiped him, and when they saw
-that Narada Muni was properly seated, they began to ask him questions.
-<p></p>
+When Kalakanya, daughter of Time, attacked the body, the dangerous soldiers of the King of the
+Yavanas entered the city through different gates. They then began to give severe trouble to all the citizens.
+<br>
 <h2>Purport</h2>
-It is significant that all the Pracetas were engaged in practicing yoga to concentrate their minds on the
-Supreme Personality of Godhead.
+The body has nine gates--the two eyes, two nostrils, two ears, mouth, rectum and genitals. When one is
+harassed by the invalidity of old age, various diseases manifest at the gates of the body. For example, the
+eyes become so dim that one requires spectacles, and the ears become too weak to hear directly, and
+therefore one requires hearing aids. The nostrils are blocked by mucus, and one has to always sniff a
+medicinal bottle containing ammonia. Similarly, the mouth, too weak to chew, requires false teeth. The
+rectum also gives one trouble, and the evacuation process becomes difficult. Sometimes one has to take
+enemas and sometimes use a surgical nozzle to accelerate the passing of urine. In this way the city of
+Puranjana was attacked at various gates by the soldiers. Thus in old age all the gates of the body are
+blocked by so many diseases, and one has to take help from so many medicines and surgical appliances.
 </p>
 
 </div>
@@ -74,7 +119,7 @@ Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

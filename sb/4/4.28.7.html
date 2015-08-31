@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.7.html">4.28.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tan nah pradyotayadhyatmajnanam
-tattvartha-darsanam
-yenanjasa tarisyamo
-dustaram bhava-sagaram
-<p></p>
+visirnam sva-purim viksya
+pratikulan anadrtan
+putran pautranugamatyan
+jayam ca gata-sauhrdam
+<br>
 <h2>Synonyms</h2>
-tat--therefore; nah--for us; pradyotaya--kindly awaken; adhyatma--transcendental; jnanam--knowledge;
-tattva--Absolute Truth; artha--for the purpose of; darsanam--philosophy; yena--by which; anjasa--easily;
-tarisyamah--we can cross over; dustaram--formidable; bhava-sagaram--the ocean of nescience.
-<p></p>
+visirnam--scattered; sva-purim--his own town; viksya--seeing; pratikulan--opposing elements;
+anadrtan--being disrespectful; putran--sons; pautra--grandsons; anuga--servants; amatyan--ministers;
+jayam--wife; ca--and; gata-sauhrdam--indifferent.
+<br>
 <h2>Translation</h2>
-Dear master, kindly enlighten us in transcendental knowledge, which may act as a torchlight by which
-we may cross the dark nescience of material existence.
-<p></p>
+King Puranjana then saw that everything in his town was scattered and that his sons, grandsons,
+servants and ministers were all gradually opposing him. He also noted that his wife was becoming cold
+and indifferent.
+<br>
 <h2>Purport</h2>
-The Pracetas requested Narada to enlighten them in transcendental knowledge. Generally when a
-common man meets a saintly person, he wishes to get some material benediction. However, the Pracetas
-were not interested in material benefit, for they had enjoyed all this sufficiently. Nor did they want the
-fulfillment of their material desires. They were simply interested in crossing the ocean of nescience.
-Everyone should be interested in getting out of these material clutches. Everyone should approach a
-saintly person in order to be enlightened in this connection. One should not bother a saintly person to get
-blessings for material enjoyment. Generally, householders receive saintly persons to get their blessings,
-but their real aim is to become happy in the material world. Asking such material benedictions is not
-recommended in the sastras.
+When one becomes an invalid, his senses and organs are weakened. In other words, they are no longer
+under one's control. The senses and sense objects then begin to oppose him. When a person is in a
+distressed condition, even his family members--his sons, grandsons and wife--become disrespectful. They
+no longer are under the command of the master of the house. Just as we wish to use our senses for sense
+gratification, the senses also require strength from the body in reciprocation. A man keeps a family for
+enjoyment, and similarly family members demand enjoyment from the head of the family. When they do
+not receive sufficient money from him, they grow disinterested and ignore his commands or desires. This
+is all due to one's being a krpana (miser). This word krpana, used in the sixth verse, is in opposition to
+the word brahmana. In the human form of life one should become a brahmana, which means that one
+should understand the constitutional position of the Absolute Truth, Brahman, and then engage in His
+service as a Vaisnava. We get this facility in the human form of life, but if we do not properly utilize this
+opportunity, we become a krpana, miser. A miser is one who gets money but does not spend it properly.
+This human form of life is especially meant for understanding Brahman, for becoming a brahmana, and if
+we do not utilize it properly, we remain a krpana. We can actually see that when one has money but does
+not spend it, he remains a miser and is never happy. Similarly, when one's intelligence is spoiled due to
+sense gratification, he remains a miser throughout his life.
 </p>
 
 </div>
@@ -80,7 +127,7 @@ recommended in the sastras.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

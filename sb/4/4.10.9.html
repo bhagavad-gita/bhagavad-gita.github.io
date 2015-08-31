@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.10.9.html">4.10.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nanv ekasyaparadhena
-prasangad bahavo hatah
-bhratur vadhabhitaptena
-tvayanga bhratr-vatsala
-<p></p>
+te vai lalata-lagnais tair
+isubhih sarva eva hi
+matva nirastam atmanam
+asamsan karma tasya tat
+<br>
 <h2>Synonyms</h2>
-nanu--certainly; ekasya--of one (Yaksa); aparadhena--with the offense; prasangat--because of their
-association; bahavah--many; hatah--have been killed; bhratuh--of your brother; vadha--by the death;
-abhitaptena--being aggrieved; tvaya--by you; anga--my dear son; bhratr-vatsala--affectionate to your
-brother.
-<p></p>
+te--they; vai--certainly; lalata-lagnaih--intent upon their heads; taih--by those; isubhih--arrows; sarve--
+all of them; eva--certainly; hi--without fail; matva--thinking; nirastam--defeated; atmanam--themselves;
+asamsan--praised; karma--action; tasya--of him; tat--that.
+<br>
 <h2>Translation</h2>
-My dear son, it has been proved that you are very much affectionate towards your brother and are
-greatly aggrieved at his being killed by the Yaksas, but just consider--for one Yaksa's offense, you have
-killed many others, who are innocent.
+When the heroes of the Yaksas saw that all their heads were being thus threatened by Dhruva Maharaja,
+they could very easily understand their awkward position, and they concluded that they would certainly
+be defeated. But, as heroes, they lauded the action of Dhruva.
+<br>
+<h2>Purport</h2>
+This spirit of fighting in a sporting attitude is very significant in this verse. The Yaksas were severely
+attacked. Dhruva Maharaja was their enemy, but still, upon witnessing the wonderful, heroic acts of
+Maharaja Dhruva, they were very pleased with him. This straightforward appreciation of an enemy's
+prowess is a characteristic of real ksatriya spirit.
 </p>
 
 </div>
@@ -71,7 +115,7 @@ killed many others, who are innocent.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

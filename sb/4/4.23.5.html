@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.23.5.html">4.23.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-asurim vrttim asritya
-ghoratma niranugrahah
-nyahanan nisitair banair
-vanesu vana-gocaran
-<p></p>
+kanda-mula-phalaharah
+suska-parnasanah kvacit
+ab-bhaksah katicit paksan
+vayu-bhaksas tatah param
+<br>
 <h2>Synonyms</h2>
-asurim--demoniac; vrttim--occupation; asritya--taken shelter of; ghora--horrible; atma--consciousness,
-heart; niranugrahah--without mercy; nyahanat--killed; nisitaih--by sharp; banaih--arrows; vanesu--in the
-forests; vana-gocaran--the forest animals.
-<p></p>
+kanda--trunk; mula--roots; phala--fruits; aharah--eating; suska--dry; parna--leaves; asanah--eating;
+kvacit--sometimes; ap-bhaksah--drinking water; katicit--for several; paksan--fortnights; vayu--the air;
+bhaksah--breathing; tatah param--thereafter.
+<br>
 <h2>Translation</h2>
-At that time King Puranjana was very much influenced by demoniac propensities. Because of this, his
-heart became very hard and merciless, and with sharp arrows he killed many innocent animals in the
-forest, taking no consideration.
-<p></p>
+In the tapo-vana, Maharaja Prthu sometimes ate the trunks and roots of trees, and sometimes he ate
+fruit and dried leaves, and for some weeks he drank only water. Finally he lived simply by breathing air.
+<br>
 <h2>Purport</h2>
-When a man becomes too proud of his material position, he tries to enjoy his senses in an unrestricted
-way, being influenced by the modes of passion and ignorance. He is thus described as asuric, or demoniac.
-When people are demoniac in spirit, they are not merciful toward the poor animals. Consequently, they
-maintain various animal slaughterhouses. This is technically called suna, or himsa, which means the
-killing of living beings. In Kali-yuga, due to the increase of the modes of passion and ignorance, almost all
-men are asuric, or demoniac; therefore they are very much fond of eating flesh, and for this end they
-maintain various kinds of animal slaughterhouses.
-In this age of Kali the propensity for mercy is almost nil. Consequently there is always fighting and wars
-between men and nations. Men do not understand that because they unrestrictedly kill so many animals,
-they also must be slaughtered like animals in big wars. This is very much evident in the Western
-countries. In the West, slaughterhouses are maintained without restriction, and therefore every fifth or
-tenth year there is a big war in which countless people are slaughtered even more cruelly than the
-animals. Sometimes during war, soldiers keep their enemies in concentration camps and kill them in very
-cruel ways. These are reactions brought about by unrestricted animal-killing in the slaughterhouse and by
-hunters in the forest. Proud, demoniac persons do not know the laws of nature, or the laws of God.
-Consequently, they unrestrictedly kill poor animals, not caring for them at all. In the Krsna consciousness
-movement, animal-killing is completely prohibited. One is not accepted as a bona fide student in this
-movement unless he promises to follow the four regulative principles: no animal-killing, no intoxication,
-no illicit sex and no gambling. This Krsna consciousness movement is the only means by which the sinful
-activities of men in this Kali-yuga can be counteracted.
+In Bhagavad-gita, yogis are advised to go to a secluded place in the forest and live alone in a sanctified
+spot there. By Prthu Maharaja's behavior we can understand that when he went to the forest he did not eat
+any cooked food sent from the city by some devotees or disciples. As soon as one takes a vow to live in the
+forest, he must simply eat roots, tree trunks, fruits, dried leaves or whatever nature provides in that way.
+Prthu Maharaja strictly adopted these principles for living in the forest, and sometimes he ate nothing but
+dried leaves and drank nothing but a little water. Sometimes he lived on nothing but air, and sometimes
+he ate some fruit from the trees. In this way he lived in the forest and underwent severe austerity,
+especially in regards to eating. In other words, overeating is not at all recommended for one who wants to
+progress in spiritual life. Sri Rupa Gosvami also warns that too much eating and too much endeavor
+(atyaharah prayasas ca) are against the principles by which one can advance in spiritual life.
+It is also notable that according to Vedic injunction, to live in the forest is to live in the mode of
+complete goodness, whereas to live in the city is to live in the mode of passion, and to live in a brothel or
+drinking house is to live in the mode of ignorance. However, to live in a temple is to live in Vaikuntha,
+which is transcendental to all the modes of material nature. This Krsna consciousness movement affords
+one the opportunity to live in the temple of the Lord, which is as good as Vaikuntha. Consequently a
+Krsna conscious person does not need to go to the forest and artificially try to imitate Maharaja Prthu or
+the great sages and munis who used to live in the forest.
+Srila Rupa Gosvami, after retiring from his minister's seat in the government, went to Vrndavana and
+lived beneath a tree, like Maharaja Prthu. Since then, many people have gone to Vrndavana to imitate
+Rupa Gosvami's behavior. Instead of advancing in spiritual life, many have fallen into material habits and
+even in Vrndavana have become victims of illicit sex, gambling and intoxication. The Krsna consciousness
+movement has been introduced in the Western countries, but it is not possible for Westerners to go to the
+forest and practice the severe austerities which were ideally practiced by Prthu Maharaja or Rupa
+Gosvami. However, Westerners or anyone else can follow in the footsteps of Srila Bhaktisiddhanta
+Sarasvati Thakura by living in a temple, which is transcendental to residence in a forest, and to vow to
+accept krsna-prasada and nothing else, follow the regulative principles and chant sixteen rounds daily of
+the Hare Krsna mantra. In this way, one's spiritual life will never be disturbed.
 </p>
 
 </div>
@@ -92,7 +137,7 @@ activities of men in this Kali-yuga can be counteracted.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

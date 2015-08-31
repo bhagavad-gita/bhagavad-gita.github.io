@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.19.38.html">4.19.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-adrstaya namaskrtya
-nrpah sandarsitatmane
-avyaktaya ca devanam
-devaya sva-puram yayau
-<p></p>
+sa tvam vimrsyasya bhavam prajapate
+sankalpanam visva-srjam pipiprhi
+aindrim ca mayam upadharma-mataram
+pracanda-pakhanda-patham prabho jahi
+<br>
 <h2>Synonyms</h2>
-adrstaya--unto one who is beyond the purview of material vision; namah-krtya--offering obeisances;
-nrpah--the King; sandarsita--revealed; atmane--unto the Supreme Soul; avyaktaya--who is beyond the
-manifestation of the material world; ca--also; devanam--of the demigods; devaya--unto the Supreme Lord;
-sva-puram--to his own house; yayau--returned.
-<p></p>
+sah--the aforesaid; tvam--you; vimrsya--considering; asya--of the world; bhavam--existence; praja-pate--
+O protector of the people; sankalpanam--the determination; visva-srjam--of the progenitors of the world;
+pipiprhi--just fulfill; aindrim--created by the King of heaven; ca--also; mayam--illusion; upadharma--of the
+irreligious system of so-called sannyasa; mataram--the mother; pracanda--furious, dangerous; pakhandapatham--
+the path of sinful activities; prabho--O Lord; jahi--please conquer.
+<br>
 <h2>Translation</h2>
-King Prthu then offered his respectful obeisances unto the Supreme Personality of Godhead, who is the
-Supreme Lord of all demigods. Although not an object of material vision, the Lord revealed Himself to the
-sight of Maharaja Prthu. After offering obeisances to the Lord, the King returned to his home.
-<p></p>
+O protector of the people in general, please consider the purpose of your being incarnated by Lord
+Visnu. The irreligious principles created by Indra are but mothers of so many unwanted religions. Please
+therefore stop these imitations immediately.
+<br>
 <h2>Purport</h2>
-The Supreme Lord is not visible to material eyes, but when the material senses are inclined to the
-transcendental loving service of the Lord and are thus purified, the Lord reveals Himself to the vision of
-the devotee. Avyakta means "unmanifested." Although the material world is the creation of the Supreme
-Personality of Godhead, He is unmanifested to material eyes. Maharaja Prthu, however, developed
-spiritual eyes by his pure devotional service. Here, therefore, the Lord is described as sandarsitatma, for
-He reveals Himself to the vision of the devotee, although He is not visible to ordinary eyes.
-Thus end the Bhaktivedanta purports of the Fourth Canto, Twentieth Chapter, of the Srimad-Bhagavatam,
-entitled "Lord Visnu's Appearance in the Sacrificial Arena of Maharaja Prthu."
-Chapter Twenty-one
-Instructions by Maharaja Prthu
+Lord Brahma addresses King Prthu as prajapate just to remind him of his great responsibility in
+maintaining the peace and prosperity of the citizens. Maharaja Prthu was empowered by the Supreme
+Personality of Godhead for this purpose only. It is the duty of the ideal king to see that people are
+properly executing religious principles. Lord Brahma especially requested King Prthu to conquer the
+pseudoreligious principles produced by King Indra. In other words, it is the duty of the state or king to
+put a stop to pseudoreligious systems produced by unscrupulous persons. Originally a religious principle
+is one, given by the Supreme personality of Godhead, and it comes through the channel of disciplic
+succession in two forms. Lord Brahma requested Prthu Maharaja to desist from his unnecessary
+competition with Indra, who was determined to stop Prthu Maharaja from completing one hundred
+yajnas. Instead of creating adverse reactions, it was better for Maharaja Prthu to stop the yajnas in the
+interest of his original purpose as an incarnation. This purpose was to establish good government and set
+things in the right order.
 </p>
 
 </div>
@@ -83,7 +125,7 @@ Instructions by Maharaja Prthu
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

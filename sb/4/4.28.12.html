@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.28.12.html">4.28.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kim va yogena sankhyena
-nyasa-svadhyayayor api
-kim va sreyobhir anyais ca
-na yatratma-prado harih
-<p></p>
+tasyam sandahyamanayam
+sapaurah saparicchadah
+kautumbikah kutumbinya
+upatapyata sanvayah
+<br>
 <h2>Synonyms</h2>
-kim--what is the use; va--or; yogena--by mystic yoga practice; sankhyena--by the study of Sankhya
-philosophy; nyasa--by accepting sannyasa; svadhyayayoh--and by study of Vedic literature; api--even;
-kim--what is the use; va--or; sreyobhih--by auspicious activities; anyaih--other; ca--and; na--never; yatra--
-where; atma-pradah--full satisfaction of self; harih--the Supreme Personality of Godhead.
-<p></p>
+tasyam--when that city; sandahyamanayam--was ablaze; sa-paurah--along with all the citizens; saparicchadah--
+along with all servants and followers; kautumbikah--the King, having so many relatives;
+kutumbinya--along with his wife; upatapyata--began to suffer the heat of the fire; sa-anvayah--along with
+descendants.
+<br>
 <h2>Translation</h2>
-Transcendental practices that do not ultimately help one realize the Supreme Personality of Godhead
-are useless, be they mystic yoga practices, the analytical study of matter, severe austerity, the acceptance
-of sannyasa, or the study of Vedic literature. All these may be very important aspects of spiritual
-advancement, but unless one understands the Supreme Personality of Godhead, Hari, all these processes
-are useless.
-<p></p>
+When the city was set ablaze, all the citizens and servants of the King, as well as all family members,
+sons, grandsons, wives and other relatives, were within the fire. King Puranjana thus became very
+unhappy.
+<br>
 <h2>Purport</h2>
-In Caitanya-caritamrta (Madhya 24.109) it is said:
-bhakti vina kevala jnane 'mukti' nahi haya
-bhakti sadhana kare yei 'prapta-brahma-laya'
-Impersonalists do not take to devotional service, but take to other practices, such as the analytical study
-of the material elements, the discrimination between matter and spirit, and the mystic yoga system. These
-are beneficial only insofar as they are complementary to devotional service. Caitanya Mahaprabhu
-therefore told Sanatana Gosvami that without a touch of devotional service, jnana, yoga and Sankhya
-philosophy cannot give one the desired results. The impersonalists wish to merge into the Supreme
-Brahman; however, merging into the Supreme Brahman also requires a touch of devotional service. The
-Absolute Truth is realized in three phases--impersonal Brahman, Paramatma and the Supreme Personality
-of Godhead. All these require a touch of devotional service. Sometimes it is actually seen that these
-Mayavadis also chant the Hare Krsna maha-mantra, although their motive is to merge into the Brahman
-effulgence of the Absolute. The yogis also at times take to chanting the Hare Krsna maha-mantra, but their
-purpose is different from that of the bhaktas. In all processes--karma, jnana or yoga--bhakti is required.
-That is the purport of this verse.
+There are many parts of the body--the senses, the limbs, the skin, the muscles, blood, marrow, etc.--and
+all these are considered here figuratively as sons, grandsons, citizens and dependents. When the body is
+attacked by the visnu-jvara, the fiery condition becomes so acute that sometimes one remains in a coma.
+This means that the body is in such severe pain that one becomes unconscious and cannot feel the
+miseries taking place within the body. Indeed, the living entity becomes so helpless at the time of death
+that, although unwilling, he is forced to give up the body and enter another. In Bhagavad-gita it is stated
+that man may, by scientific advancement, improve the temporary living conditions, but that he cannot
+avoid the pangs of birth, old age, disease and death. These are under the control of the Supreme
+Personality of Godhead through the agency of material nature. A foolish person cannot understand this
+simple fact. Now people are very busy trying to find petroleum in the midst of the ocean. They are very
+anxious to make provisions for the future petroleum supply, but they do not make any attempts to
+ameliorate the conditions of birth, old age, disease and death. Thus a person in ignorance, not knowing
+anything about his own future life, is certainly defeated in all his activities.
 </p>
 
 </div>
@@ -90,7 +125,7 @@ That is the purport of this verse.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

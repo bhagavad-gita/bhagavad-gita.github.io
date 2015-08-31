@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.4.1.html">4.4.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 maitreya uvaca
 etavad uktva virarama sankarah
 patny-anga-nasam hy ubhayatra cintayan
 suhrd-didrksuh parisankita bhavan
 niskramati nirvisati dvidhasa sa
-<p></p>
+<br>
 <h2>Synonyms</h2>
 maitreyah uvaca--Maitreya said; etavat--so much; uktva--after speaking; virarama--was silent; sankarah--
 Lord Siva; patni-anga-nasam--the destruction of the body of his wife; hi--since; ubhayatra--in both cases;
 cintayan--understanding; suhrt-didrksuh--being anxious to see her relatives; parisankita--being afraid;
 bhavat--of Siva; niskramati--moving out; nirvisati--moving in; dvidha--divided; asa--was; sa--she (Sati).
-<p></p>
+<br>
 <h2>Translation</h2>
 The sage Maitreya said: Lord Siva was silent after speaking to Sati, seeing her between decisions. Sati
 was very much anxious to see her relatives at her father's house, but at the same time she was afraid of
 Lord Siva's warning. Her mind unsettled, she moved in and out of the room as a swing moves this way
 and that.
-<p></p>
+<br>
 <h2>Purport</h2>
 Sati's mind was divided about whether to go to her father's house or obey the orders of Lord Siva. The
 struggle between the two decisions was so strong that she was pushed from one side of the room to
@@ -78,7 +117,7 @@ another, and she began to move just like the pendulum of a clock.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

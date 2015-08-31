@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.4.9.html">4.4.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 arudra-bhagam tam aveksya cadhvaram
 pitra ca deve krta-helanam vibhau
 anadrta yajna-sadasy adhisvari
 cukopa lokan iva dhaksyati rusa
-<p></p>
+<br>
 <h2>Synonyms</h2>
 arudra-bhagam--having no oblations for Lord Siva; tam--that; aveksya--seeing; ca--and; adhvaram--place
 of sacrifice; pitra--by her father; ca--and; deve--to Lord Siva; krta-helanam--contempt having been shown;
 vibhau--to the lord; anadrta--not being received; yajna-sadasi--in the assembly of the sacrifice; adhisvari--
 Sati; cukopa--became greatly angry; lokan--the fourteen worlds; iva--as if; dhaksyati--burning; rusa--with
 anger.
-<p></p>
+<br>
 <h2>Translation</h2>
 Present in the arena of sacrifice, Sati saw that there were no oblations for her husband, Lord Siva. Next
 she realized that not only had her father failed to invite Lord Siva, but when he saw Lord Siva's exalted
 wife, Daksa did not receive her either. Thus she became greatly angry, so much so that she looked at her
 father as if she were going to burn him with her eyes.
-<p></p>
+<br>
 <h2>Purport</h2>
 By offering oblations in the fire while chanting the Vedic mantra svaha, one offers respect to all the
 demigods, great sages and Pitas, including Lord Brahma, Lord Siva and Lord Visnu. It is customary that
@@ -84,7 +123,7 @@ greatly angry, and she looked at her father so angrily that Daksa appeared to bu
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,104 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.24.11.html">4.24.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ije ca kratubhir ghorair
-diksitah pasu-marakaih
-devan pitrn bhuta-patin
-nana-kamo yatha bhavan
-<p></p>
+samudrim devadevoktam
+upayeme satadrutim
+yam viksya caru-sarvangim
+kisorim susthv-alankrtam
+parikramantim udvahe
+cakame 'gnih sukim iva
+<br>
 <h2>Synonyms</h2>
-ije--he worshiped; ca--also; kratubhih--by sacrifices; ghoraih--ghastly; diksitah--inspired; pasumarakaih--
-wherein poor animals are killed; devan--the demigods; pitrn--forefathers; bhuta-patin--great
-leaders of human society; nana--various; kamah--having desires; yatha--like; bhavan--you.
-<p></p>
+samudrim--unto the daughter of the ocean; deva-deva-uktam--being advised by the supreme demigod,
+Lord Brahma; upayeme--married; satadrutim--of the name Satadruti; yam--whom; viksya--seeing; caru--
+very attractive; sarva-angim--all the features of the body; kisorim--youthful; susthu--sufficiently;
+alankrtam--decorated with ornaments; parikramantim--circumambulating; udvahe--in the marriage
+ceremony; cakame--being attracted; agnih--the fire-god; sukim--unto Suki; iva--like.
+<br>
 <h2>Translation</h2>
-The great sage Narada continued: My dear King Pracinabarhisat, like you King Puranjana also became
-implicated in so many desires. Thus he worshiped demigods, forefathers and social leaders with various
-sacrifices which were all very ghastly because they were inspired by the desire to kill animals.
-<p></p>
+Maharaja Barhisat--henceforward known as Pracinabarhi--was ordered by the supreme demigod Lord
+Brahma to marry the daughter of the ocean named Satadruti. Her bodily features were completely
+beautiful, and she was very young. She was decorated with the proper garments, and when she came into
+the marriage arena and began circumambulating it, the fire-god Agni became so attracted to her that he
+desired her company, exactly as he had formerly desired to enjoy Suki.
+<br>
 <h2>Purport</h2>
-In this verse the great sage Narada discloses that the character of Puranjana was being described to give
-lessons to King Pracinabarhisat. Actually the entire description was figuratively describing the activities of
-King Pracinabarhisat. In this verse Narada frankly says "like you" (yatha bhavan), which indicates that
-King Puranjana is none other than King Pracinabarhisat himself. Being a great Vaisnava, Narada Muni
-wanted to stop animal-killing in sacrifices. He knew that if he tried to stop the King from performing
-sacrifices, the King would not hear him. Therefore he is describing the life of Puranjana. But in this verse
-he first discloses the intention, although not fully, by saying "like you." Generally the karmis, who are
-attached to increasing descendants, have to perform so many sacrifices and worship so many demigods for
-future generations, as well as to satisfy so many leaders, politicians, philosophers and scientists to make
-things go on properly for future generations. The so-called scientists are very eager to see that future
-generations will live very comfortably, and as such they are trying to find different means of generating
-energy to drive locomotives, cars, airplanes and so on. Now they are exhausting the petroleum supply.
-These activities are described in the Bhagavad-gita (2.41):
-vyavasayatmika buddhir
-ekeha kuru-nandana
-bahu-sakha hy anantas ca
-buddhayo 'vyavasayinam
-"Those who are on the spiritual path are resolute in purpose, and their aim is one. O beloved child of
-the Kurus, the intelligence of those who are irresolute is many-branched."
-Actually, those who are in knowledge of everything are determined to execute Krsna consciousness, but
-those who are rascals (mudhah), sinners (duskrtinah) and the lowest of mankind (naradhamah), who are
-bereft of all intelligence (mayayapahrta jnanah) and who take shelter of the demoniac way of life (asuram
-bhavam asritah), are disinterested in Krsna consciousness. As such they become implicated and take on so
-many activities. Most of these activities center around the killing of animals. Modern civilization is
-centered around animal-killing. Karmis are advertising that without eating meat, their vitamin value or
-vitality will be reduced; so to keep oneself fit to work hard, one must eat meat, and to digest meat, one
-must drink liquor, and to keep the balance of drinking wine and eating meat, one must have sufficient
-sexual intercourse to keep fit to work very hard like an ass.
-There are two ways of animal-killing. One way is in the name of religious sacrifices. All the religions of
-the world--except the Buddhists--have a program for killing animals in places of worship. According to
-Vedic civilization, the animal-eaters are recommended to sacrifice a goat in the temple of Kali under
-certain restrictive rules and regulations and eat the flesh. Similarly, they are recommended to drink wine
-by worshiping the goddess Candika. The purpose is restriction. People have given up all this restriction.
-Now they are regularly opening wine distilleries and slaughterhouses and indulging in drinking alcohol
-and eating flesh. A Vaisnava acarya like Narada Muni knows very well that persons engaged in such
-animal-killing in the name of religion are certainly becoming involved in the cycle of birth and death,
-forgetting the real aim of life: to go home, back to Godhead.
-Thus the great sage Narada, while instructing Srimad-Bhagavatam to Vyasa Muni, condemned the
-karma-kanda (fruitive) activities mentioned in the Vedas. Narada told Vyasa:
-jugupsitam dharma-krte 'nusasatah
-svabhava-raktasya mahan vyatikramah
-yad vakyato dharma ititarah sthito
-na manyate tasya nivaranam janah
-"The people in general are naturally inclined to enjoy, and you have encouraged them in that way in the
-name of religion. This is verily condemned and is quite unreasonable. Because they are guided under your
-instructions, they will accept such activities in the name of religion and will hardly care for prohibitions."
-(Bhag. 1.5.15)
-Srila Narada Muni chastised Vyasadeva for compiling so many Vedic supplementary scriptures, which
-are all intended for guiding the people in general. Narada Muni condemned these scriptures because they
-do not mention direct devotional service. Under Narada's instructions, direct worship of the Supreme
-Personality of Godhead, as described in the Srimad-Bhagavatam, was set forth by Vyasadeva. The
-conclusion is that neither the Supreme Personality of Godhead, Visnu, nor His devotee ever sanctions
-animal-killing in the name of religion. Indeed, Krsna incarnated Himself as Lord Buddha to put an end to
-animal-killing in the name of religion. Animal sacrifice under the name of religion is conducted by the
-influence of tamo-guna (the mode of ignorance), as indicated in the Eighteenth Chapter of Bhagavad-gita
-(18.31-32):
-yaya dharmam adharmam ca
-karyam cakaryam eva ca
-ayathavat prajanati
-buddhih sa partha rajasi
-adharmam dharmam iti ya
-manyate tamasavrta
-sarvarthan viparitams ca
-buddhih sa partha tamasi
-"That understanding which cannot distinguish between the religious way of life and the irreligious,
-between action that should be done and action that should not be done--that imperfect understanding, O
-son of Prtha, is in the mode of passion. That understanding which considers irreligion to be religion and
-religion to be irreligion, under the spell of illusion and darkness, and strives always in the wrong
-direction, O Partha, is in the mode of ignorance."
-Those who are involved in the mode of ignorance manufacture religious systems for killing animals.
-Actually dharma is transcendental. As Lord Sri Krsna teaches, we must give up all other systems of
-religion and simply surrender unto Him (sarva-dharman parityajya). Thus the Lord and His devotees and
-representatives teach the transcendental dharma, which does not allow animal-killing at all. At the present
-moment it is the greatest misfortune that in India many so-called missionary workers are spreading
-irreligion in the name of religion. They claim an ordinary human being to be God and recommend meateating
-for everyone, including so-called sannyasis.
+In this verse the word susthv-alankrtam is significant. According to the Vedic system, when a girl is
+married, she is very profusely and gorgeously decorated with costly saris and jewelry, and during the
+marriage ceremony the bride circumambulates the bridegroom seven times. After this, the bridegroom
+and bride look at one another and become attracted for life. When the bridegroom finds the bride very
+beautiful, the attraction between them immediately becomes very strongly fixed. As stated in Srimad-
+Bhagavatam, men and women are naturally attracted to one another, and when they are united by
+marriage that attraction becomes very strong. Being so strongly attracted, the bridegroom attempts to set
+up a nice homestead and eventually a good field for producing grains. Then children come, then friends
+and then wealth. In this way the male becomes more and more entangled in the material conceptions of
+life, and he begins to think, "This is mine," and"it is I who am acting." In this way the illusion of material
+existence is perpetuated.
+The words sukim iva are also significant, for the fire-god Agni became attracted by the beauty of
+Satadruti while she was circumambulating the bridegroom Pracinabarhi, just as he had previously been
+attracted to the beauty of Suki, the wife of Saptarsi. When the fire-god had been present long ago at the
+assembly of Saptarsi, he was attracted by the beauty of Suki when she was circumambulating in the same
+way. Agni's wife, named Svaha, took the form of Suki and enjoyed sex life with Agni. Not only the firegod
+Agni but the heavenly god Indra and sometimes even Lord Brahma and Lord Siva--all very highly
+situated demigods--are subject to being attracted by sex at any time. The sex drive is so strong in the
+living entities that the whole material world is running on sex attraction only, and it is due to sex
+attraction that one remains in the material world and is obliged to accept different types of bodies. The
+attraction of sex life is more clearly explained in the next verse.
 </p>
 
 </div>
@@ -148,7 +138,7 @@ for everyone, including so-called sannyasis.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

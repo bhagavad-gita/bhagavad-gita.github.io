@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.9.7.html">4.9.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato niskramya balina
-upadeva-maha-bhatah
-asahantas tan-ninadam
-abhipetur udayudhah
-<p></p>
+ekas tvam eva bhagavann idam atma-saktya
+mayakhyayoru-gunaya mahad-ady-asesam
+srstvanuvisya purusas tad-asad-gunesu
+naneva darusu vibhavasuvad vibhasi
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; niskramya--coming out; balinah--very powerful; upadeva--of Kuvera; maha-bhatah--
-great soldiers; asahantah--unable to tolerate; tat--of the conchshell; ninadam--sound; abhipetuh--attacked;
-udayudhah--equipped with various weapons.
-<p></p>
+ekah--one; tvam--you; eva--certainly; bhagavan--O my Lord; idam--this material world; atma-saktya--by
+Your own potency; maya-akhyaya--of the name maya; uru--greatly powerful; gunaya--consisting of the
+modes of nature; mahat-adi--the mahat-tattva, etc.; asesam--unlimited; srstva--after creating; anuvisya--
+then after entering; purusah--the Supersoul; tat--of maya; asat-gunesu--into the temporarily manifested
+qualities; nana--variously; iva--as if; darusu--into pieces of wood; vibhavasu-vat--just like fire; vibhasi--
+You appear.
+<br>
 <h2>Translation</h2>
-O hero Vidura, the greatly powerful heroes of the Yaksas, unable to tolerate the resounding vibration of
-the conchshell of Dhruva Maharaja, came forth from their city with weapons and attacked Dhruva.
+My Lord, You are the supreme one, but by Your different energies You appear differently in the spiritual
+and material worlds. You create the total energy of the material world by Your external potency, and after
+creation You enter within the material world as the Supersoul. You are the Supreme Person, and through
+the temporary modes of material nature You create varieties of manifestation, just as fire, entering into
+wood of different shapes, burns brilliantly in different varieties.
+<br>
+<h2>Purport</h2>
+Dhruva Maharaja realized that the Supreme Absolute Truth, the Personality of Godhead, acts through
+His different energies, not that He becomes void or impersonal and thus becomes all-pervading. The
+Mayavadi philosopher thinks that the Absolute Truth, being spread throughout the cosmic manifestation,
+has no personal form. But here Dhruva Maharaja, upon realization of the Vedic conclusion, says, "You are
+spread all over the cosmic manifestation by Your energy." This energy is basically spiritual, but because it
+acts in the material world temporarily, it is called maya, or illusory energy. In other words, for everyone
+but the devotees the Lord's energy acts as external energy. Dhruva Maharaja could understand this fact
+very nicely, and he could understand also that the energy and the energetic are one and the same. The
+energy cannot be separated from the energetic.
+The identity of the Supreme Personality of Godhead in the feature of Paramatma, or Supersoul, is
+admitted herein. His original, spiritual energy enlivens the material energy, and thus the dead body
+appears to have life force. Voidist philosophers think that under certain material conditions the symptoms
+of life occur in the material body, but the fact is that the material body cannot act on its own. Even a
+machine needs separate energy (electricity, steam, etc.). It is stated in this verse that the material energy
+acts in varieties of material bodies, just as fire burns differently in different wood according to the size and
+quality of the wood. In the case of devotees the same energy is transformed into spiritual energy; this is
+possible because the energy is originally spiritual, not material. As it is said, visnu-saktih para prokta. The
+original energy inspires a devotee, and thus he engages all his bodily limbs in the service of the Lord. The
+same energy, as external potency, engages the ordinary nondevotees in material activities for sense
+enjoyment. We should mark the difference between maya and sva-dhama--for devotees the sva-dhama
+acts, whereas in the case of nondevotees the maya energy acts.
 </p>
 
 </div>
@@ -69,7 +137,7 @@ the conchshell of Dhruva Maharaja, came forth from their city with weapons and a
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.26.14.html">4.26.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-asuri medhram arvag-dvar
-vyavayo graminam ratih
-upastho durmadah prokto
-nirrtir guda ucyate
-<p></p>
+antahpura-striyo 'prcchad
+vimana iva vedisat
+api vah kusalam ramah
+sesvarinam yatha pura
+<br>
 <h2>Synonyms</h2>
-asuri--called Asuri; medhram--the genital; arvak--of the fools and rascals; dvah--gate; vyavayah--
-performing sexual affairs; graminam--of common men; ratih--attraction; upasthah--the faculty of
-procreation; durmadah--Durmada; proktah--is called; nirrtih--Nirrti; gudah--rectum; ucyate--is called.
-<p></p>
+antah-pura--household; striyah--women; aprcchat--he asked; vimanah--being very much anxious; iva--
+like; vedisat--O King Pracinabarhi; api--whether; vah--your; kusalam--good fortune; ramah--O you
+beautiful women; sa-isvarinam--with your mistress; yatha--as; pura--before.
+<br>
 <h2>Translation</h2>
-The city called Gramaka, which is approached through the lower gate of Asuri [the genital], is meant for
-sex, which is very pleasing to common men who are simply fools and rascals. The faculty of procreation is
-called Durmada, and the rectum is called Nirrti.
-<p></p>
+At that time King Puranjana was a little anxious, and he inquired from the household women: My dear
+beautiful women, are you and your mistress all very happy like before, or not?
+<br>
 <h2>Purport</h2>
-When the world becomes degraded, civilization becomes demoniac, and for the common man the
-rectum and the genital are taken very seriously as the centers of all activity. Even in such a sacred place as
-Vrndavana, India, unintelligent men pass off this rectal and genital business as spiritual activity. Such
-people are called sahajiya. According to their philosophy, through sexual indulgence one can elevate
-oneself to the spiritual platform. From these verses of Srimad-Bhagavatam, however, we understand that
-the desires for sexual satisfaction are meant for the arvak, the lowest among men. To rectify these rascals
-and fools is very difficult. After all, the sex desires of the common man are condemned in these verses.
-The word durmada means "wrongly directed," and nirrti means "sinful activity." Although this clearly
-indicates that sex indulgence is abominable and misdirected even from the ordinary point of view, the
-sahajiyas nonetheless pass themselves off as devotees conducting spiritual activities. For this reason,
-Vrndavana is no longer visited by intelligent men. Sometimes we are often asked why we have made our
-center in Vrndavana. From the external point of view, it can be concluded that Vrndavana has become
-degenerate due to these sahajiya activities, yet from the spiritual point of view, Vrndavana is the only
-place where all these sinful persons can be rectified by means of taking birth in the forms of dogs, hogs
-and monkeys. By living in Vrndavana as a dog, hog or monkey, the living entity can be elevated to the
-spiritual platform in the next life.
+In this verse the word vedisat indicates King Pracinabarhi. When a man becomes refreshed by
+association with devotees and awakes to Krsna consciousness, he consults the activities of his mind--
+namely thinking, feeling and willing--and decides whether he should return to his material activities or
+stay steady in spiritual consciousness. The word kusalam refers to that which is auspicious. One can make
+his home perfectly auspicious when he engages in devotional service to Lord Visnu. When one is engaged
+in activities other than visnu-bhakti, or in other words when one is engaged in material activities, he is
+always filled with anxieties. A sane man should consult his mind, its thinking, feeling and willing
+processes, and decide how these processes should be utilized. If one always thinks of Krsna, feels how to
+serve Him and wills to execute the order of Krsna, it should be known that he has taken good instruction
+from his intelligence, which is called the mother. Although the King was refreshed, he nonetheless
+inquired about his wife. Thus he was consulting, thinking and willing how he could return to his steady
+good consciousness. The mind may suggest that by visaya-bhoga, or sense enjoyment, one can become
+happy, but when one becomes advanced in Krsna consciousness, he does not derive happiness from
+material activities. This is explained in Bhagavad-gita (2.59):
+visaya vinivartante
+niraharasya dehinah
+rasa-varjam raso 'py asya
+param drstva nivartate
+"The embodied soul may be restricted from sense enjoyment, though the taste for sense objects remains.
+But, ceasing such engagements by experiencing a higher taste, he is fixed in consciousness." One cannot
+be unattached to the sense objects unless he finds better engagement in devotional service. param drstva
+nivartate. One can cease from material activities only when one actually engages in devotional service.
 </p>
 
 </div>
@@ -88,7 +132,7 @@ spiritual platform in the next life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

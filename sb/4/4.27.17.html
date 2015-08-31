@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.27.17.html">4.27.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/27">27</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-divya-varsa-sahasranam
-sahasram ahataujasah
-bhauman bhoksyatha bhogan vai
-divyams canugrahan mama
-<p></p>
+ksiyamane sva-sambandhe
+ekasmin bahubhir yudha
+cintam param jagamartah
+sa-rastra-pura-bandhavah
+<br>
 <h2>Synonyms</h2>
-divya--of the heavenly planets; varsa--years; sahasranam--of thousands; sahasram--a thousand; ahata--
-without being defeated; ojasah--your power; bhauman--of this world; bhoksyatha--you will enjoy;
-bhogan--enjoyments; vai--certainly; divyan--of the heavenly world; ca--also; anugrahat--by mercy; mama--
-My.
-<p></p>
+ksiyamane--when he became weak; sva-sambandhe--his intimate friend; ekasmin--alone; bahubhih--
+with many warriors; yudha--by battle; cintam--anxiety; param--very great; jagama--obtained; artah--being
+aggrieved; sa--along with; rastra--of the kingdom; pura--of the city; bandhavah--friends and relatives.
+<br>
 <h2>Translation</h2>
-The Lord then blessed all the Pracetas, saying: My dear princes, by My mercy, you can enjoy all the
-facilities of this world as well as the heavenly world. Indeed, you can enjoy all of them without hindrance
-and with full strength for one million celestial years.
-<p></p>
+Because he had to fight alone with so many soldiers, all of whom were great warriors, the serpent with
+five hoods became very weak. Seeing that his most intimate friend was weakening, King Puranjana and his
+friends and citizens living within the city all became very anxious.
+<br>
 <h2>Purport</h2>
-The duration of life prescribed for the Pracetas by the Supreme Personality of Godhead is calculated by
-the time measurements of higher planetary systems. Our six earth months are said to equal twelve hours
-in the higher planetary systems. Thirty days equal one month, and twelve months equal one year. In this
-way, for one million years according to the calculations of the higher planetary system the Pracetas were
-allowed to enjoy all kinds of material facilities. Although this life-span was so long, the Pracetas were
-given full bodily strength by the grace of the Lord. In the material world, if one wants to live for many
-years, he must endure the difficulties of old age, invalidity and many other miserable conditions. The
-Pracetas, however, were given full bodily strength to enjoy material facilities. This special facility was
-given to the Pracetas so that they could continue rendering full devotional service. This will be explained
-in the following verse.
+The living entity resides within the body and struggles for existence with the limbs of the body, which
+are referred to here as citizens and friends. One can struggle alone with many soldiers for some time, but
+not for all time. The living entity within the body can struggle up to the limit of a hundred years with
+good luck, but after that it is not possible to prolong the struggle. Thus the living entity submits and falls
+victim. In this regard, Srila Bhaktivinoda Thakura has sung: vrddha kala aola saba sukha bhagala. When
+one becomes old, it becomes impossible to enjoy material happiness. Generally people think that religion
+and piety come at the end of life, and at this time one generally becomes meditative and takes to some socalled
+yogic process to relax in the name of meditation. Meditation, however, is simply a farce for those
+who have enjoyed life in sense gratification. As described in the Sixth Chapter of Bhagavad-gita,
+meditation (dhyana, dharana) is a difficult subject matter that one has to learn from his very youth. To
+meditate, one must restrain himself from all kinds of sense gratification. Unfortunately, meditation has
+now become a fashion for those who are overly addicted to sensual things. Such meditation is defeated by
+the struggle for existence. Sometimes such meditative processes pass for transcendental meditation. King
+Puranjana, the living entity, being thus victimized by the hard struggle for existence, took to
+transcendental meditation with his friends and relatives.
 </p>
 
 </div>
@@ -83,7 +126,7 @@ in the following verse.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

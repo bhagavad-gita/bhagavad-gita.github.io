@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.13.22.html">4.13.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yajnena yusmad-visaye dvijatibhir
-vitayamanena surah kala hareh
-svistah sutustah pradisanti vanchitam
-tad-dhelanam narhasi vira cestitum
-<p></p>
+kim vamho vena uddisya
+brahma-dandam ayuyujan
+danda-vrata-dhare rajni
+munayo dharma-kovidah
+<br>
 <h2>Synonyms</h2>
-yajnena--by sacrifice; yusmat--your; visaye--in the kingdom; dvijatibhih--by the brahmanas;
-vitayamanena--being performed; surah--all the demigods; kalah--expansions; hareh--of the Personality of
-Godhead; su-istah--being properly worshiped; su-tustah--very much satisfied; pradisanti--will give;
-vanchitam--desired result; tat-helanam--disrespect to them; na--not; arhasi--you ought; vira--O hero;
-cestitum--to do.
-<p></p>
+kim--why; va--also; amhah--sinful activities; vene--unto Vena; uddisya--seeing; brahma-dandam--the
+curse of a brahmana; ayuyujan--they desired to award; danda-vrata-dhare--who carries the rod of
+punishment; rajni--unto the king; munayah--the great sages; dharma-kovidah--completely conversant
+with religious principles.
+<br>
 <h2>Translation</h2>
-When all the brahmanas engage in performing sacrifices in your kingdom, all the demigods, who are
-plenary expansions of the Lord, will be very much satisfied by their activities and will give you your
-desired result. Therefore, O hero, do not stop the sacrificial performances. If you stop them, you will
-disrespect the demigods.
+Vidura also inquired: How is it that the great sages, who were completely conversant with religious
+principles, desired to curse King Vena, who himself carried the rod of punishment, and thus awarded him
+the greatest punishment [brahma-sapa]?
+<br>
+<h2>Purport</h2>
+It is understood that the king is able to give punishment to everyone, but in this case it appears that the
+great sages punished him. The king must have done something very serious, otherwise how could the
+great sages, who were supposed to be the greatest and most tolerant, still punish him in spite of their
+elevated religious consciousness? It appears also that the king was not independent of the brahminical
+culture. Above the king was the control of the brahmanas, and if needed the brahmanas would dethrone
+the king or kill him, not with any weapon, but with the mantra of a brahma-sapa. The brahmanas were so
+powerful that simply by their cursing one would immediately die.
 </p>
 
 </div>
@@ -73,7 +119,7 @@ disrespect the demigods.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

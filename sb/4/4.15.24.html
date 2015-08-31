@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/4/4.15.24.html">4.15.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-eso 'svamedhan satam ajahara
-sarasvati pradurabhavi yatra
-aharsid yasya hayam purandarah
-sata-kratus carame vartamane
-<p></p>
+mahad-gunan atmani kartum isah
+kah stavakaih stavayate 'sato 'pi
+te 'syabhavisyann iti vipralabdho
+janavahasam kumatir na veda
+<br>
 <h2>Synonyms</h2>
-esah--this King; asvamedhan--sacrifices known as asvamedha; satam--one hundred; ajahara--will
-perform; sarasvati--the river of the name Sarasvati; pradurabhavi--became manifest; yatra--where; aharsit--
-will steal; yasya--whose; hayam--horse; purandarah--the Lord Indra; sata-kratuh--who performed one
-hundred sacrifices; carame--while the last sacrifice; vartamane--is occurring.
-<p></p>
+mahat--exalted; gunan--the qualities; atmani--in himself; kartum--to manifest; isah--competent; kah--
+who; stavakaih--by followers; stavayate--causes to be praised; asatah--not existing; api--although; te--they;
+asya--of him; abhavisyan--might have been; iti--thus; vipralabdhah--cheated; jana--of people; avahasam--
+insult; kumatih--a fool; na--does not; veda--know.
+<br>
 <h2>Translation</h2>
-At the source of the River Sarasvati, this King will perform one hundred sacrifices known as asvamedha.
-In the course of the last sacrifice, the heavenly King Indra will steal the sacrificial horse.
+How could an intelligent man competent enough to possess such exalted qualities allow his followers to
+praise him if he did not actually have them? Praising a man by saying that if he were educated he might
+have become a great scholar or great personality is nothing but a process of cheating. A foolish person
+who agrees to accept such praise does not know that such words simply insult him.
+<br>
+<h2>Purport</h2>
+Prthu Maharaja was an incarnation of the Supreme Personality of Godhead, as Lord Brahma and other
+demigods had already testified when they had presented the King with many heavenly gifts. Because he
+had just been coronated, however, he could not manifest his godly qualities in action. Therefore he was
+not willing to accept the praise of the devotees. So-called incarnations of Godhead should therefore take
+lessons from the behavior of King Prthu. Demons without godly qualities should not accept false praise
+from their followers.
 </p>
 
 </div>
@@ -70,7 +119,7 @@ In the course of the last sacrifice, the heavenly King Indra will steal the sacr
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
