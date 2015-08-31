@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.30.32.html">3.30.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/30">30</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yady asadbhih pathi punah
-sisnodara-krtodyamaih
-asthito ramate jantus
-tamo visati purvavat
-<p></p>
+daivenasaditam tasya
+samalam niraye puman
+bhunkte kutumba-posasya
+hrta-vitta ivaturah
+<br>
 <h2>Synonyms</h2>
-yadi--if; asadbhih--with the unrighteous; pathi--on the path; punah--again; sisna--for the genitals;
-udara--for the stomach; krta--done; udyamaih--whose endeavors; asthitah--associating; ramate--enjoys;
-jantuh--the living entity; tamah--darkness; visati--enters; purva-vat--as before.
-<p></p>
+daivena--by the arrangement of the Supreme Personality of Godhead; asaditam--obtained; tasya--his;
+samalam--sinful reaction; niraye--in a hellish condition; puman--the man; bhunkte--undergoes; kutumbaposasya--
+of maintaining a family; hrta-vittah--one whose wealth is lost; iva--like; aturah--suffering.
+<br>
 <h2>Translation</h2>
-If, therefore, the living entity again associates with the path of unrighteousness, influenced by sensually
-minded people engaged in the pursuit of sexual enjoyment and the gratification of the palate, he again
-goes to hell as before.
-<p></p>
+Thus, by the arrangement of the Supreme Personality of Godhead, the maintainer of kinsmen is put into
+a hellish condition to suffer for his sinful activities, like a man who has lost his wealth.
+<br>
 <h2>Purport</h2>
-It has been explained that the conditioned soul is put into the Andha-tamisra and Tamisra hellish
-conditions, and after suffering there he gets a hellish body like the dog's or hog's. After several such
-births, he again comes into the form of a human being. How the human being is born is also described by
-Kapiladeva. The human being develops in the mother's abdomen and suffers there and comes out again.
-After all these sufferings, if he gets another chance in a human body and wastes his valuable time in the
-association of persons who are concerned with sexual life and palatable dishes, then naturally he again
-glides down to the same Andha-tamisra and Tamisra hells.
-Generally, people are concerned with the satisfaction of the tongue and the satisfaction of the genitals.
-That is material life. Material life means eat, drink, be merry and enjoy, with no concern for
-understanding one's spiritual identity and the process of spiritual advancement. Since materialistic people
-are concerned with the tongue, belly and genitals, if anyone wants to advance in spiritual life he must be
-very careful about associating with such people. To associate with such materialistic men is to commit
-purposeful suicide in the human form of life. It is said, therefore, that an intelligent man should give up
-such undesirable association and should always mix with saintly persons. When he is in association with
-saintly persons, all his doubts about the spiritual expansion of life are eradicated, and he makes tangible
-progress on the path of spiritual understanding. It is also sometimes found that people are very much
-addicted to a particular type of religious faith. Hindus, Muslims and Christians are faithful in their
-particular type of religion, and they go to the church, temple or mosque, but unfortunately they cannot
-give up the association of persons who are too much addicted to sex life and satisfaction of the palate.
-Here it is clearly said that one may officially be a very religious man, but if he associates with such
-persons, then he is sure to slide down to the darkest region of hell.
+The example set herein is that the sinful person suffers just like a man who has lost his wealth. The
+human form of body is achieved by the conditioned soul after many, many births and is a very valuable
+asset. Instead of utilizing this life to get liberation, if one uses it simply for the purpose of maintaining his
+so-called family and therefore performs foolish and unauthorized action, he is compared to a man who
+has lost his wealth and who, upon losing it, laments. When wealth is lost, there is no use lamenting, but
+as long as there is wealth, one has to utilize it properly and thereby gain eternal profit. It may be argued
+that when a man leaves his money earned by sinful activities, he also leaves his sinful activities here with
+his money. But it is especially mentioned herein that by superior arrangement (daivenasaditam), although
+the man leaves behind him his sinfully earned money, he carries the effect of it. When a man steals some
+money, if he is caught and agrees to return it, he is not freed from the criminal punishment. By the law of
+the state, even though he returns the money, he has to undergo the punishment. Similarly, the money
+earned by a criminal process may be left by the man when dying, but by superior arrangement he carries
+with him the effect, and therefore he has to suffer hellish life.
 </p>
 
 </div>
@@ -93,7 +123,7 @@ persons, then he is sure to slide down to the darkest region of hell.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

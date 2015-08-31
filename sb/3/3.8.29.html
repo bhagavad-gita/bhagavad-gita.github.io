@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.8.29.html">3.8.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 parardhya-keyura-mani-pravekaparyasta-
 dordanda-sahasra-sakham
 avyakta-mulam bhuvananghripendram
 ahindra-bhogair adhivita-valsam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 parardhya--very valuable; keyura--ornaments; mani-praveka--highly valuable jewels; paryasta--
 disseminating; dordanda--arms; sahasra-sakham--with thousands of branches; avyakta-mulam--selfsituated;
 bhuvana--universal; anghripa--trees; indram--the Lord; ahi-indra--Anantadeva; bhogaih--by
 hoods; adhivita--surrounded; valsam--shoulders.
-<p></p>
+<br>
 <h2>Translation</h2>
 As a sandalwood tree is decorated with fragrant flowers and branches, the Lord's body was decorated
 with valuable jewels and pearls. He was the self-situated tree, the Lord of all others in the universe. And as
 a sandalwood tree is covered with many snakes, so the Lord's body was also covered by the hoods of
 Ananta.
-<p></p>
+<br>
 <h2>Purport</h2>
 The word avyakta-mulam is significant here. Generally, no one can see the roots of a tree. But as far as
 the Lord is concerned, He is the root of Himself because there is no other separate cause of His standing
@@ -78,7 +117,7 @@ no other support for Him. Therefore, avyakta means the Supreme Lord Himself and 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

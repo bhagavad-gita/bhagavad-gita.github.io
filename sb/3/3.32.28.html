@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,78 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.28.html">3.32.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad-dehah paratah poso
-'py akrsas cadhy-asambhavat
-babhau malair avacchannah
-sadhuma iva pavakah
-<p></p>
+jnanam ekam paracinair
+indriyair brahma nirgunam
+avabhaty artha-rupena
+bhrantya sabdadi-dharmina
+<br>
 <h2>Synonyms</h2>
-tat-dehah--her body; paratah--by others (the damsels created by Kardama); posah--maintained; api--
-although; akrsah--not thin; ca--and; adhi--anxiety; asambhavat--from not occurring; babhau--shone;
-malaih--by dust; avacchannah--covered; sa-dhumah--surrounded with smoke; iva--like; pavakah--a fire.
-<p></p>
+jnanam--knowledge; ekam--one; paracinaih--averse; indriyaih--by the senses; brahma--the Supreme
+Absolute Truth; nirgunam--beyond the material modes; avabhati--appears; artha-rupena--in the form of
+various objects; bhrantya--mistakenly; sabda-adi--sound and so on; dharmina--endowed with.
+<br>
 <h2>Translation</h2>
-Her body was being taken care of by the spiritual damsels created by her husband, Kardama, and since
-she had no mental anxiety at that time, her body did not become thin. She appeared just like a fire
-surrounded by smoke.
-<p></p>
+Those who are averse to the Transcendence realize the Supreme Absolute Truth differently through
+speculative sense perception, and therefore, because of mistaken speculation, everything appears to them
+to be relative.
+<br>
 <h2>Purport</h2>
-Because she was always in trance in transcendental bliss, the thought of the Personality of Godhead was
-always carefully fixed in her mind. She did not become thin, for she was taken care of by the celestial
-maidservants created by her husband. It is said, according to the Ayur-vedic medical science, that if one is
-free from anxieties he generally becomes fat. Devahuti, being situated in Krsna consciousness, had no
-mental anxieties, and therefore her body did not become thin. It is customary in the renounced order of
-life that one should not take any service from a servant or maid, but Devahuti was being served by the
-celestial maidservants. This may appear to be against the spiritual concept of life, but just as fire is still
-beautiful even when surrounded by smoke, she looked completely pure although it seemed that she was
-living in a luxurious way.
+The Supreme Absolute Truth, the personality of Godhead, is one, and He is spread everywhere by His
+impersonal feature. This is clearly expressed in Bhagavad-gita. Lord Krsna says, "Everything that is
+experienced is but an expansion of My energy." Everything is sustained by Him, but that does not mean
+that He is in everything. Sense perceptions, such as aural perception of the sound of a drum, visual
+perception of a beautiful woman, or perception of the delicious taste of a milk preparation by the tongue,
+all come through different senses and are therefore differently understood. Therefore sensory knowledge
+is divided in different categories, although actually everything is one as a manifestation of the energy of
+the Supreme Lord. Similarly, the energies of fire are heat and illumination, and by these two energies fire
+can display itself in many varieties, or in diversified sense perception. Mayavadi philosophers declare this
+diversity to be false. But Vaisnava philosophers do not accept the different manifestations as false; they
+accept them as nondifferent from the Supreme Personality of Godhead because they are a display of His
+diverse energies.
+The philosophy that the Absolute is true and this creation is false (brahma satyam jagan mithya) is not
+accepted by Vaisnava philosophers. The example is given that although all that glitters is not gold, this
+does not mean that a glittering object is false. For example, an oyster shell appears to be golden. This
+appearance of golden hue is due only to the perception of the eyes, but that does not mean that the oyster
+shell is false. Similarly, by seeing the form of Lord Krsna one cannot understand what He actually is, but
+this does not mean that He is false. The form of Krsna has to be understood as it is described in the books
+of knowledge such as Brahma-samhita. Isvarah paramah krsnah sac-cid-ananda-vigrahah: Krsna, the
+Supreme personality of Godhead, has an eternal, blissful spiritual body. By our imperfect sense perception
+we cannot understand the form of the Lord. We have to acquire knowledge about Him. Therefore it is said
+here, jnanam ekam. Bhagavad-gita confirms that they are fools who, simply upon seeing Krsna, consider
+Him a common man. They do not know the unlimited knowledge, power and opulence of the Supreme
+Personality of Godhead. Material sense speculation leads to the conclusion that the Supreme is formless.
+It is because of such mental speculation that the conditioned soul remains in ignorance under the spell of
+illusory energy. The Supreme Person has to be understood by the transcendental sound vibrated by Him
+in Bhagavad-gita, wherein He says that there is nothing superior to Himself; the impersonal Brahman
+effulgence is resting on His personality. The purified, absolute vision of Bhagavad-gita is compared to the
+River Ganges. Ganges water is so pure that it can purify even the asses and cows. But anyone who,
+disregarding the pure Ganges, wishes to be purified instead by the filthy water flowing in a drain, cannot
+be successful. Similarly, one can successfully attain pure knowledge of the Absolute only by hearing from
+the pure Absolute Himself.
+In this verse it is clearly said that those who are averse to the Supreme Personality of Godhead speculate
+with their imperfect senses about the nature of the Absolute Truth. The formless Brahman conception,
+however, can be received only by aural reception and not by personal experience. Knowledge is therefore
+acquired by aural reception. It is confirmed in the Vedanta-sutra, sastra-yonitvat: one has to acquire pure
+knowledge from the authorized scriptures. So-called speculative arguments about the Absolute Truth are
+therefore useless. The actual identity of the living entity is his consciousness, which is always present
+while the living entity is awake, dreaming or in deep sleep. Even in deep sleep, he can perceive by
+consciousness whether he is happy or distressed. Thus when consciousness is displayed through the
+medium of the subtle and gross material bodies, it is covered, but when the consciousness is purified, in
+Krsna consciousness, one becomes free from the entanglement of repeated birth and death.
+When uncontaminated pure knowledge is uncovered from the modes of material nature, the actual
+identity of the living entity is discovered: he is eternally a servitor of the Supreme personality of Godhead.
+The process of uncovering is like this: the rays of sunshine are luminous, and the sun itself is also
+luminous. In the presence of the sun, the rays illuminate just like the sun, but when the sunshine is
+covered by the spell of a cloud, or by maya, then darkness, the imperfection of perception, begins.
+Therefore, to get out of the entanglement of the spell of nescience, one has to awaken his spiritual
+consciousness, or Krsna consciousness, in terms of the authorized scriptures.
 </p>
 
 </div>
@@ -81,7 +160,7 @@ living in a luxurious way.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

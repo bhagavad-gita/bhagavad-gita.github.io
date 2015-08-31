@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.3.13.html">3.3.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa karna-duhsasana-saubalanam
 kumantra-pakena hata-sriyayusam
 suyodhanam sanucaram sayanam
 bhagnorum urvyam na nananda pasyan
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--He (the Lord); karna--Karna; duhsasana--Duhsasana; saubalanam--Saubala; kumantra-pakena--by
 the intricacy of ill advice; hata-sriya--bereft of fortune; ayusam--duration of life; suyodhanam--
 Duryodhana; sa-anucaram--with followers; sayanam--lying down; bhagna--broken; urum--thighs;
 urvyam--very powerful; na--did not; nananda--take pleasure; pasyan--seeing like that.
-<p></p>
+<br>
 <h2>Translation</h2>
 Duryodhana was bereft of his fortune and duration of life because of the intricacy of ill advice given by
 Karna, Duhsasana and Saubala. When he lay on the ground with his followers, his thighs broken although
 he was powerful, the Lord was not happy to see the scene.
-<p></p>
+<br>
 <h2>Purport</h2>
 The fall of Duryodhana, the leading son of Dhrtarastra, was not pleasing to the Lord, although He was
 on the side of Arjuna and it was He who advised Bhima how to break the thighs of Duryodhana while the
@@ -82,7 +121,7 @@ for the forgetful living entities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.40.html">3.28.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yad-bhayad vati vato 'yam
-suryas tapati yad-bhayat
-yad-bhayad varsate devo
-bha-gano bhati yad-bhayat
-<p></p>
+yatholmukad visphulingad
+dhumad vapi sva-sambhavat
+apy atmatvenabhimatad
+yathagnih prthag ulmukat
+<br>
 <h2>Synonyms</h2>
-yat--of whom (the Supreme Personality of Godhead); bhayat--out of fear; vati--blows; vatah--the wind;
-ayam--this; suryah--sun; tapati--shines; yat--of whom; bhayat--out of fear; yat--of whom; bhayat--out of
-fear; varsate--sends rains; devah--the god of rain; bha-ganah--the host of heavenly bodies; bhati--shine;
-yat--of whom; bhayat--out of fear.
-<p></p>
+yatha--as; ulmukat--from the flames; visphulingat--from the sparks; dhumat--from the smoke; va--or;
+api--even; sva-sambhavat--produced from itself; api--although; atmatvena--by nature; abhimatat--
+intimately connected; yatha--as; agnih--the fire; prthak--different; ulmukat--from the flames.
+<br>
 <h2>Translation</h2>
-Out of fear of the Supreme Personality of Godhead the wind blows, out of fear of Him the sun shines,
-out of fear of Him the rain pours forth showers, and out of fear of Him the host of heavenly bodies shed
-their luster.
-<p></p>
+The blazing fire is different from the flames, from the sparks and from the smoke, although all are
+intimately connected because they are born from the same blazing wood.
+<br>
 <h2>Purport</h2>
-The Lord states in Bhagavad-gita, mayadhyaksena prakrtih suyate: "Nature is working under My
-direction." The foolish person thinks that nature is working automatically, but such an atheistic theory is
-not supported in the Vedic literature. Nature is working under the superintendence of the Supreme
-Personality of Godhead. That is confirmed in Bhagavad-gita, and we also find here that the sun shines
-under the direction of the Lord, and the cloud pours forth showers of rain under the direction of the Lord.
-All natural phenomena are under superintendence of the Supreme Personality of Godhead, Visnu.
+Although the blazing firewood, the sparks, the smoke and the flame cannot stay apart because each of
+them is part and parcel of the fire, still they are different from one another. A less intelligent person
+accepts the smoke as fire, although fire and smoke are completely different. The heat and light of the fire
+are separate, although one cannot differentiate fire from heat and light.
 </p>
 
 </div>
@@ -79,7 +114,7 @@ All natural phenomena are under superintendence of the Supreme Personality of Go
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

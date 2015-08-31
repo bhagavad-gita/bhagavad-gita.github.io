@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.16.21.html">3.16.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yas tam vivikta-caritair anuvartamanam
 natyadriyat parama-bhagavata-prasangah
 sa tvam dvijanupatha-punya-rajah-punitah
 srivatsa-laksma kim aga bhaga-bhajanas tvam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yah--who; tam--Laksmi; vivikta--completely pure; caritaih--devotional services; anuvartamanam--
 serving; na--not; atyadriyat--attached; parama--the highest; bhagavata--devotees; prasangah--attached;
 sah--the Supreme Lord; tvam--You; dvija--of the brahmanas; anupatha--on the path; punya--sanctified;
 rajah--dust; punitah--purified; srivatsa--of Srivatsa; laksma--the mark; kim--what; agah--You obtained;
 bhaga--all opulences or all good qualities; bhajanah--the reservoir; tvam--You.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Lord, You are exceedingly attached to the activities of Your pure devotees, yet You are never attached
 to the goddesses of fortune who constantly engage in Your transcendental loving service. How can You be
 purified, therefore, by the dust of the path traversed by the brahmanas, and how can You be glorified or
 made fortunate by the marks of Srivatsa on Your chest?
-<p></p>
+<br>
 <h2>Purport</h2>
 It is said in the Brahma-samhita that the Lord is always served by many hundreds of thousands of
 goddesses of fortune in His Vaikuntha planet, yet because of His attitude of renunciation of all opulences,
@@ -92,7 +131,7 @@ devotees of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

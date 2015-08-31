@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.34.html">3.15.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tad vam amusya paramasya vikuntha-bhartuh
 kartum prakrstam iha dhimahi manda-dhibhyam
 lokan ito vrajatam antara-bhava-drstya
 papiyasas traya ime ripavo 'sya yatra
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tat--therefore; vam--unto these two; amusya--of Him; paramasya--the Supreme; vikuntha-bhartuh--the
 Lord of Vaikuntha; kartum--to bestow; prakrstam--benefit; iha--in the matter of this offense; dhimahi--let
 us consider; manda-dhibhyam--those whose intelligence is not very nice; lokan--to the material world;
 itah--from this place (Vaikuntha); vrajatam--go; antara-bhava--duality; drstya--on account of seeing;
 papiyasah--sinful; trayah--three; ime--these; ripavah--enemies; asya--of a living entity; yatra--where.
-<p></p>
+<br>
 <h2>Translation</h2>
 Therefore let us consider how these two contaminated persons should be punished. The punishment
 should be apt, for thus benefit can eventually be bestowed upon them. Since they find duality in the
 existence of Vaikuntha life, they are contaminated and should be removed from this place to the material
 world, where the living entities have three kinds of enemies.
-<p></p>
+<br>
 <h2>Purport</h2>
 The reason why pure souls come into the existential circumstances of the material world, which is
 considered to be the criminal department of the Supreme Lord, is stated in Bhagavad-gita, Seventh
@@ -90,7 +129,7 @@ be promoted to Vaikuntha.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

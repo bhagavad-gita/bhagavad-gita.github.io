@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.25.36.html">3.25.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tair darsaniyavayavair udaravilasa-
 haseksita-vama-suktaih
 hrtatmano hrta-pranams ca bhaktir
 anicchato me gatim anvim prayunkte
-<p></p>
+<br>
 <h2>Synonyms</h2>
 taih--by those forms; darsaniya--charming; avayavaih--whose limbs; udara--exalted; vilasa--pastimes;
 hasa--smiling; iksita--glances; vama--pleasing; suktaih--whose delightful words; hrta--captivated;
 atmanah--their minds; hrta--captivated; pranan--their senses; ca--and; bhaktih--devotional service;
 anicchatah--unwilling; me--My; gatim--abode; anvim--subtle; prayunkte--secures.
-<p></p>
+<br>
 <h2>Translation</h2>
 Upon seeing the charming forms of the Lord, smiling and attractive, and hearing His very pleasing
 words, the pure devotee almost loses all other consciousness. His senses are freed from all other
 engagements, and he becomes absorbed in devotional service. Thus in spite of his unwillingness, he
 attains liberation without separate endeavor.
-<p></p>
+<br>
 <h2>Purport</h2>
 There are three divisions of devotees--first-class, second-class and third-class. Even the third-class
 devotees are liberated souls. It is explained in this verse that although they do not have knowledge, simply
@@ -113,7 +152,7 @@ can also imperceptibly achieve liberation is accepted in all Vedic literatures.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

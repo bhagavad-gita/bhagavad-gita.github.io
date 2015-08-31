@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.28.html">3.15.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 matta-dvirepha-vanamalikaya nivitau
 vinyastayasita-catustaya-bahu-madhye
 vaktram bhruva kutilaya sphuta-nirgamabhyam
 rakteksanena ca manag rabhasam dadhanau
-<p></p>
+<br>
 <h2>Synonyms</h2>
 matta--intoxicated; dvi-repha--bees; vana-malikaya--with a garland of fresh flowers; nivitau--hanging on
 the neck; vinyastaya--placed around; asita--blue; catustaya--four; bahu--hands; madhye--between;
 vaktram--face; bhruva--with their eyebrows; kutilaya--arched; sphuta--snorting; nirgamabhyam--
 breathing; rakta--reddish; iksanena--with eyes; ca--and; manak--somewhat; rabhasam--agitated;
 dadhanau--glanced over.
-<p></p>
+<br>
 <h2>Translation</h2>
 The two doormen were garlanded with fresh flowers which attracted intoxicated bees and which were
 placed around their necks and between their four blue arms. From their arched eyebrows, discontented
 nostrils and reddish eyes, they appeared somewhat agitated.
-<p></p>
+<br>
 <h2>Purport</h2>
 Their garlands attracted swarms of bees because they were garlands of fresh flowers. In the Vaikuntha
 world everything is fresh, new and transcendental. The inhabitants of Vaikuntha have bodies of bluish
@@ -77,7 +116,7 @@ color and four hands like Narayana.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.30.html">3.31.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-etad vai sraddhaya bhaktya
-yogabhyasena nityasah
-samahitatma nihsango
-viraktya paripasyati
-<p></p>
+bhutaih pancabhir arabdhe
+dehe dehy abudho 'sakrt
+aham mamety asad-grahah
+karoti kumatir matim
+<br>
 <h2>Synonyms</h2>
-etat--this; vai--certainly; sraddhaya--with faith; bhaktya--by devotional service; yoga-abhyasena--by
-practice of yoga; nityasah--always; samahita-atma--he whose mind is fixed; nihsangah--aloof from material
-association; viraktya--by detachment; paripasyati--understands.
-<p></p>
+bhutaih--by material elements; pancabhih--five; arabdhe--made; dehe--in the body; dehi--the living
+entity; abudhah--ignorant; asakrt--constantly; aham--I; mama--mine; iti--thus; asat--nonpermanent things;
+grahah--accepting; karoti--he does; ku-matih--being foolish; matim--thought.
+<br>
 <h2>Translation</h2>
-This perfect knowledge can be achieved by a person who is already engaged in devotional service with
-faith, steadiness and full detachment, and who is always absorbed in thought of the Supreme. He is aloof
-from material association.
-<p></p>
+By such ignorance the living entity accepts the material body, which is made of five elements, as
+himself. With this misunderstanding, he accepts nonpermanent things as his own and increases his
+ignorance in the darkest region.
+<br>
 <h2>Purport</h2>
-The atheistic mystic practitioner of yoga cannot understand this perfect knowledge. Only persons who
-engage in the practical activities of devotional service in full Krsna consciousness can become absorbed in
-full samadhi. It is possible for them to see and understand the actual fact of the entire cosmic
-manifestation and its cause. It is clearly stated here that this is not possible to understand for one who has
-not developed devotional service in full faith. The words samahitatma and samadhi are synonymous.
+The expansion of ignorance is explained in this verse. The first ignorance is to identify one's material
+body, which is made of five elements, as the self, and the second is to accept something as one's own due
+to a bodily connection. In this way, ignorance expands. The living entity is eternal, but because of his
+accepting nonpermanent things, misidentifying his interest, he is put into ignorance, and therefore he
+suffers material pangs.
 </p>
 
 </div>
@@ -77,7 +116,7 @@ not developed devotional service in full faith. The words samahitatma and samadh
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

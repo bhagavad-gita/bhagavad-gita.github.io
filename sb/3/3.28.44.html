@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,59 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.44.html">3.28.44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/44"><b>44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gunabhimanino devah
-sargadisv asya yad-bhayat
-vartante 'nuyugam yesam
-vasa etac caracaram
-<p></p>
+tasmad imam svam prakrtim
+daivim sad-asad-atmikam
+durvibhavyam parabhavya
+svarupenavatisthate
+<br>
 <h2>Synonyms</h2>
-guna--the modes of material nature; abhimaninah--in charge of; devah--the demigods; sarga-adisu--in
-the matter of creation and so on; asya--of this world; yat-bhayat--out of fear of whom; vartante--carry out
-functions; anuyugam--according to the yugas; yesam--of whom; vase--under the control; etat--this; caraacaram--
-everything animate and inanimate.
-<p></p>
+tasmat--thus; imam--this; svam--own; prakrtim--material energy; daivim--divine; sat-asat-atmikam--
+consisting of cause and effect; durvibhavyam--difficult to understand; parabhavya--after conquering; svarupena--
+in the self-realized position; avatisthate--he remains.
+<br>
 <h2>Translation</h2>
-Out of fear of the Supreme Personality of Godhead, the directing demigods in charge of the modes of
-material nature carry out the functions of creation, maintenance and destruction; everything animate and
-inanimate within this material world is under their control.
-<p></p>
+Thus the yogi can be in the self-realized position after conquering the insurmountable spell of maya,
+who presents herself as both the cause and effect of this material manifestation and is therefore very
+difficult to understand.
+<br>
 <h2>Purport</h2>
-The three modes of material nature, namely goodness, passion and ignorance, are under the control of
-three deities--Brahma, Visnu and Lord Siva. Lord Visnu is in charge of the mode of goodness, Lord
-Brahma is in charge of the mode of passion, and Lord Siva is in charge of the mode of ignorance.
-Similarly, there are many other demigods in charge of the air department, the water department, the cloud
-department, etc. Just as the government has many different departments, so, within this material world,
-the government of the Supreme Lord has many departments, and all these departments function in proper
-order out of fear of the Supreme Personality of Godhead. Demigods are undoubtedly controlling all
-matter, animate and inanimate, within the universe, but above them the supreme controller is the
-Personality of Godhead. Therefore in the Brahma-samhita it is said, isvarah paramah krsnah. Undoubtedly
-there are many controllers in the departmental management of this universe, but the supreme controller is
-Krsna.
-There are two kinds of dissolutions. One kind of dissolution takes place when Brahma goes to sleep
-during his night, and the final dissolution takes place when Brahma dies. As long as Brahma does not die,
-creation, maintenance and destruction are actuated by different demigods under the superintendence of
-the Supreme Lord.
+It is stated in Bhagavad-gita that the spell of maya, which covers the knowledge of the living entity, is
+insurmountable. However, one who surrenders unto Krsna, the Supreme Personality of Godhead, can
+conquer this seemingly insurmountable spell of maya. Here also it is stated that the daivi prakrti, or the
+external energy of the Supreme Lord, is durvibhavya, very difficult to understand and very difficult to
+conquer. One must, however, conquer this insurmountable spell of maya, and this is possible, by the
+grace of the Lord, when God reveals Himself to the surrendered soul. It is also stated here,
+svarupenavatisthate. Svarupa means that one has to know that he is not the Supreme Soul, but rather, part
+and parcel of the Supreme Soul; that is self-realization. To think falsely that one is the Supreme Soul and
+that one is all-pervading is not svarupa. This is not realization of his actual position. The real position is
+that one is part and parcel. It is recommended here that one remain in that position of actual selfrealization.
+In Bhagavad-gita this understanding is defined as Brahman realization.
+After Brahman realization, one can engage in the activities of Brahman. As long as one is not selfrealized,
+he engages in activities based on false identification with the body. When one is situated in his
+real self, then the activities of Brahman realization begin. The Mayavadi philosophers say that after
+Brahman realization, all activities stop, but that is not actually so. If the soul is so active in its abnormal
+condition, existing under the covering of matter, how can one deny its activity when free? An example
+may be cited here. If a man in a diseased condition is very active, how can one imagine that when he is
+free from the disease he will be inactive? Naturally the conclusion is that when one is free from all disease
+his activities are pure. It may be said that the activities of Brahman realization are different from those of
+conditional life, but that does not stop activity. This is indicated in Bhagavad-gita (18.54): after one
+realizes oneself to be Brahman, devotional service begins. Mad-bhaktim labhate param: after Brahman
+realization, one can engage in the devotional service of the Lord. Therefore devotional service of the Lord
+is activity in Brahman realization.
+For those who engage in devotional service there is no spell of ma-ya-, and their situation is all-perfect.
+The duty of the living entity, as a part and parcel of the whole, is to render devotional service to the
+whole. That is the ultimate perfection of life.
+Thus end the Bhaktivedanta purports of the Third Canto, Twenty-eighth Chapter, of the Srimad-
+Bhagavatam, entitled "Lord Kapila's Instructions on the Execution of Devotional Service."
+Chapter Twenty-nine
+Explanation of Devotional Service by Lord Kapila
 </p>
 
 </div>
@@ -88,7 +141,7 @@ the Supreme Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

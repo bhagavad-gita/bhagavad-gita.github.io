@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.26.71.html">3.26.71</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.71</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/71"><b>71</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yatha prasuptam purusam
 pranendriya-mano-dhiyah
 prabhavanti vina yena
 notthapayitum ojasa
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yatha--just as; prasuptam--sleeping; purusam--a man; prana--the vital air; indriya--the senses for
 working and recording knowledge; manah--the mind; dhiyah--the intelligence; prabhavanti--are able;
 vina--without; yena--whom (the Supersoul); na--not; utthapayitum--to arouse; ojasa--by their own power.
-<p></p>
+<br>
 <h2>Translation</h2>
 When a man is sleeping, all his material assets--namely the vital energy, the senses for recording
 knowledge, the senses for working, the mind and the intelligence--cannot arouse him. He can be aroused
 only when the Supersoul helps him.
-<p></p>
+<br>
 <h2>Purport</h2>
 The explanation of Sankhya philosophy is described here in detail in the sense that the virat-purusa, or
 the universal form of the Supreme Personality of Godhead, is the original source of all the various sense
@@ -79,7 +118,7 @@ and detachment can one perform the process of linking with the Absolute.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

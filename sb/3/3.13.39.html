@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.13.39.html">3.13.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 namo namas te 'khila-mantra-devatadravyaya
 sarva-kratave kriyatmane
 vairagya-bhaktyatmajayanubhavitajnanaya
 vidya-gurave namo namah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 namah namah--obeisances unto You; te--unto You, who are worshipable; akhila--all-inclusive; mantra--
 hymns; devata--the Supreme Lord; dravyaya--unto all ingredients for performing sacrifices; sarva-kratave--
@@ -61,13 +100,13 @@ unto all kinds of sacrifices; kriya-atmane--unto You, the supreme form of all sa
 renunciation; bhaktya--by devotional service; atma-jaya-anubhavita--perceivable by conquering the mind;
 jnanaya--such knowledge; vidya-gurave--the supreme spiritual master of all knowledge; namah namah--
 again I offer my respectful obeisances.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Lord, You are the Supreme Personality of Godhead and are worshipable by universal prayers, Vedic
 hymns and sacrificial ingredients. We offer our obeisances unto You. You can be realized by the pure
 mind freed from all visible and invisible material contamination. We offer our respectful obeisances to
 You as the supreme spiritual master of knowledge in devotional service.
-<p></p>
+<br>
 <h2>Purport</h2>
 The qualification of bhakti, or devotional service to the Lord, is that the devotee should be free from all
 material contaminations and desires. This freedom is called vairagya, or renouncement of material desires.
@@ -94,7 +133,7 @@ by all the Vedic rituals and sacrificial performances.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

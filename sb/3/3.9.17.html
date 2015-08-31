@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.9.17.html">3.9.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 loko vikarma-niratah kusale pramattah
 karmany ayam tvad-udite bhavad-arcane sve
 yas tavad asya balavan iha jivitasam
 sadyas chinatty animisaya namo 'stu tasmai
-<p></p>
+<br>
 <h2>Synonyms</h2>
 lokah--people in general; vikarma--work without sense; niratah--engaged in; kusale--in beneficial
 activity; pramattah--negligent; karmani--in activity; ayam--this; tvat--by You; udite--enunciated; bhavat--
 of You; arcane--in worship; sve--their own; yah--who; tavat--as long as; asya--of the people in general;
 balavan--very strong; iha--this; jivita-asam--struggle for existence; sadyah--directly; chinatti--is cut to
 pieces; animisaya--by the eternal time; namah--my obeisances; astu--let there be; tasmai--unto Him.
-<p></p>
+<br>
 <h2>Translation</h2>
 People in general all engage in foolish acts, not in the really beneficial activities enunciated directly by
 You for their guidance. As long as their tendency for foolish work remains powerful, all their plans in the
 struggle for existence will be cut to pieces. I therefore offer my obeisances unto Him who acts as eternal
 time.
-<p></p>
+<br>
 <h2>Purport</h2>
 People in general are all engaged in senseless work. They are systematically unmindful of the real
 beneficial work, which is the devotional service of the Lord, technically called the arcana regulations. The
@@ -113,7 +152,7 @@ without any actual benefit.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

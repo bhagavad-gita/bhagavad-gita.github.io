@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.30.31.html">3.30.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/30">30</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad-artham kurute karma
-yad-baddho yati samsrtim
-yo 'nuyati dadat klesam
-avidya-karma-bandhanah
-<p></p>
+ekah prapadyate dhvantam
+hitvedam sva-kalevaram
+kusaletara-patheyo
+bhuta-drohena yad bhrtam
+<br>
 <h2>Synonyms</h2>
-tat-artham--for the sake of the body; kurute--he performs; karma--actions; yat-baddhah--bound by
-which; yati--he goes; samsrtim--to repeated birth and death; yah--which body; anuyati--follows; dadat--
-giving; klesam--misery; avidya--by ignorance; karma--by fruitive activities; bandhanah--the cause of
-bondage.
-<p></p>
+ekah--alone; prapadyate--he enters; dhvantam--darkness; hitva--after quitting; idam--this; sva--his;
+kalevaram--body; kusala-itara--sin; patheyah--his passage money; bhuta--to other living entities;
+drohena--by injury; yat--which body; bhrtam--was maintained.
+<br>
 <h2>Translation</h2>
-For the sake of the body, which is a source of constant trouble to him and which follows him because
-he is bound by ties of ignorance and fruitive activities, he performs various actions which cause him to be
-subjected to repeated birth and death.
-<p></p>
+He goes alone to the darkest regions of hell after quitting the present body, and the money he acquired
+by envying other living entities is the passage money with which he leaves this world.
+<br>
 <h2>Purport</h2>
-In Bhagavad-gita it is said that one has to work to satisfy Yajna, or Visnu, for any work done without the
-purpose of satisfying the Supreme Personality of Godhead is a cause of bondage. In the conditioned state a
-living entity, accepting his body as himself, forgets his eternal relationship with the Supreme personality
-of Godhead and acts on the interest of his body. He takes the body as himself, his bodily expansions as his
-kinsmen, and the land from which his body is born as worshipable. In this way he performs all sorts of
-misconceived activities, which lead to his perpetual bondage in repetition of birth and death in various
-species.
-In modern civilization, the so-called social, national and government leaders mislead people more and
-more, under the bodily conception of life, with the result that all the leaders, with their followers, are
-gliding down to hellish conditions birth after birth. An example is given in Srimad-Bhagavatam. Andha
-yathandhair upaniyamanah: when a blind man leads several other blind men, the result is that all of them
-fall down in a ditch. This is actually happening. There are many leaders to lead the ignorant public, but
-because every one of them is bewildered by the bodily conception of life, there is no peace and prosperity
-in human society. So-called yogis who perform various bodily feats are also in the same category as such
-ignorant people because the hatha-yoga system is especially recommended for persons who are grossly
-implicated in the bodily conception. The conclusion is that as long as one is fixed in the bodily
-conception, he has to suffer birth and death.
+When a man earns money by unfair means and maintains his family and himself with that money, the
+money is enjoyed by many members of the family, but he alone goes to hell. A person who enjoys life by
+earning money or by envying another's life, and who enjoys with family and friends, will have to enjoy
+alone the resultant sinful reactions accrued from such violent and illicit life. For example, if a man secures
+some money by killing someone and with that money maintains his family, those who enjoy the black
+money earned by him are also partially responsible and are also sent to hell, but he who is the leader is
+especially punished. The result of material enjoyment is that one takes with him the sinful reaction only,
+and not the money. The money he earned is left in this world, and he takes only the reaction.
+In this world also, if a person acquires some money by murdering someone, the family is not hanged,
+although its members are sinfully contaminated. But the man who commits the murder and maintains his
+family is himself hanged as a murderer. The direct offender is more responsible for sinful activities than
+the indirect enjoyer. The great learned scholar Canakya Pandita says, therefore, that whatever one has in
+his possession had better be spent for the cause of sat, or the Supreme Personality of Godhead, because
+one cannot take his possessions with him. They remain here, and they will be lost. Either we leave the
+money or the money leaves us, but we will be separated. The best use of money as long as it is within our
+possession is to spend it to acquire Krsna consciousness.
 </p>
 
 </div>
@@ -90,7 +126,7 @@ conception, he has to suffer birth and death.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

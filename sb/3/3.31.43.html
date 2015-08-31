@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.43.html">3.31.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ya idam srnuyad amba
-sraddhaya purusah sakrt
-yo vabhidhatte mac-cittah
-sa hy eti padavim ca me
-<p></p>
+dehena jiva-bhutena
+lokal lokam anuvrajan
+bhunjana eva karmani
+karoty aviratam puman
+<br>
 <h2>Synonyms</h2>
-yah--he who; idam--this; srnuyat--may hear; amba--O mother; sraddhaya--with faith; purusah--a person;
-sakrt--once; yah--he who; va--or; abhidhatte--repeats; mat-cittah--his mind fixed on Me; sah--he; hi--
-certainly; eti--attains; padavim--abode; ca--and; me--My.
-<p></p>
+dehena--on account of the body; jiva-bhutena--possessed by the living entity; lokat--from one planet;
+lokam--to another planet; anuvrajan--wandering; bhunjanah--enjoying; eva--so; karmani--fruitive
+activities; karoti--he does; aviratam--incessantly; puman--the living entity.
+<br>
 <h2>Translation</h2>
-Anyone who once meditates upon Me with faith and affection, who hears and chants about Me, surely
-goes back home, back to Godhead.
-Thus end the Bhaktivedanta purports of the Third Canto, Thirty-second Chapter, of the Srimad-
-Bhagavatam, entitled "Entanglement in Fruitive Activities."
-Chapter Thirty-three
-Activities of Kapila
+Due to his particular type of body, the materialistic living entity wanders from one planet to another,
+following fruitive activities. In this way, he involves himself in fruitive activities and enjoys the result
+incessantly.
+<br>
+<h2>Purport</h2>
+When the living entity is encaged in the material body, he is called jiva-bhuta, and when he is free from
+the material body he is called brahma-bhuta. By changing his material body birth after birth, he travels
+not only in the different species of life, but also from one planet to another. Lord Caitanya says that the
+living entities, bound up by fruitive activities, are wandering in this way throughout the whole universe,
+and if by some chance or by pious activities they get in touch with a bona fide spiritual master, by the
+grace of Krsna, then they get the seed of devotional service. After getting this seed, if one sows it within
+his heart and pours water on it by hearing and chanting, the seed grows into a big plant, and there are
+fruits and flowers which the living entity can enjoy, even in this material world. That is called the
+brahma-bhuta stage. In his designated condition, a living entity is called materialistic, and upon being
+freed from all designations, when he is fully Krsna conscious, engaged in devotional service, he is called
+liberated. Unless one gets the opportunity to associate with a bona fide spiritual master by the grace of the
+Lord, there is no possibility of one's liberation from the cycle of birth and death in the different species of
+life and through the different grades of planets.
 </p>
 
 </div>
@@ -73,7 +124,7 @@ Activities of Kapila
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

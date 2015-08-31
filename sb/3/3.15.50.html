@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.50.html">3.15.50</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.50</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/50"><b>50</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 praduscakartha yad idam puruhuta rupam
 tenesa nirvrtim avapur alam drso nah
 tasma idam bhagavate nama id vidhema
 yo 'natmanam durudayo bhagavan pratitah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 praduscakartha--You have manifested; yat--which; idam--this; puruhuta--O greatly worshiped; rupam--
 eternal form; tena--by that form; isa--O Lord; nirvrtim--satisfaction; avapuh--obtained; alam--so much;
@@ -61,12 +100,12 @@ drsah--vision; nah--our; tasmai--unto Him; idam--this; bhagavate--unto the Supre
 Godhead; namah--obeisances; it--only; vidhema--let us offer; yah--who; anatmanam--of those who are less
 intelligent; durudayah--cannot be seen; bhagavan--the Supreme Personality of Godhead; pratitah--has
 been seen by us.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Lord, we therefore offer our respectful obeisances unto Your eternal form as the Personality of
 Godhead, which You have so kindly manifested before us. Your supreme, eternal form cannot be seen by
 unfortunate, less intelligent persons, but we are so much satisfied in our mind and vision to see it.
-<p></p>
+<br>
 <h2>Purport</h2>
 The four sages were impersonalists in the beginning of their spiritual life, but afterwards, by the grace of
 their father and spiritual master, Brahma, they understood the eternal, spiritual form of the Lord and felt
@@ -98,7 +137,7 @@ The Two Doorkeepers of Vaikuntha, Jaya and Vijaya, Cursed by the Sages
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

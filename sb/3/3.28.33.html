@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.33.html">3.28.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasman mayy arpitasesakriyarthatma
-nirantarah
-mayy arpitatmanah pumso
-mayi sannyasta-karmanah
-na pasyami param bhutam
-akartuh sama-darsanat
-<p></p>
+dhyanayanam prahasitam bahuladharosthabhasarunayita-
+tanu-dvija-kunda-pankti
+dhyayet svadeha-kuhare 'vasitasya visnor
+bhaktyardrayarpita-mana na prthag didrkset
+<br>
 <h2>Synonyms</h2>
-tasmat--than him; mayi--unto Me; arpita--offered; asesa--all; kriya--actions; artha--wealth; atma--life,
-soul; nirantarah--without cessation; mayi--unto Me; arpita--offered; atmanah--whose mind; pumsah--than
-a person; mayi--unto Me; sannyasta--dedicated; karmanah--whose activities; na--not; pasyami--I see;
-param--greater; bhutam--living entity; akartuh--without proprietorship; sama--same; darsanat--whose
-vision.
-<p></p>
+dhyana-ayanam--easily meditated upon; prahasitam--the laughter; bahula--abundant; adhara-ostha--of
+His lips; bhasa--by the splendor; arunayita--rendered rosy; tanu--small; dvija--teeth; kunda-pankti--like a
+row of jasmine buds; dhyayet--he should meditate upon; sva-deha-kuhare--in the core of his heart;
+avasitasya--who resides; visnoh--of Visnu; bhaktya--with devotion; ardraya--steeped in love; arpitamanah--
+his mind being fixed; na--not; prthak--anything else; didrkset--he should desire to see.
+<br>
 <h2>Translation</h2>
-Therefore I do not find a greater person than he who has no interest outside of Mine and who therefore
-engages and dedicates all his activities and all his life--everything--unto Me without cessation.
-<p></p>
+With devotion steeped in love and affection, the yogi should meditate within the core of his heart upon
+the laughter of Lord Visnu. The laughter of Visnu is so captivating that it can be easily meditated upon.
+When the Supreme Lord is laughing, one can see His small teeth, which resemble jasmine buds rendered
+rosy by the splendor of His lips. Once devoting his mind to this, the yogi should no longer desire to see
+anything else.
+<br>
 <h2>Purport</h2>
-In this verse the word sama-darsanat means that he no longer has any separate interest; the devotee's
-interest and the Supreme Personality of Godhead's interest are one. For example, Lord Caitanya, in the
-role of a devotee, also preached the same philosophy. He preached that Krsna is the worshipful Lord, the
-Supreme Personality of Godhead, and that the interest of His pure devotees is the same as His own.
-Sometimes Mayavadi philosophers, due to a poor fund of knowledge, define the word sama-darsanat to
-mean that a devotee should see himself as one with the Supreme Personality of Godhead. This is
-foolishness. When one thinks himself one with the Supreme Personality of Godhead, there is no question
-of serving Him. When there is service, there must be a master. Three things must be present for there to
-be service: the master, the servant and the service. Here it is clearly stated that he who has dedicated his
-life, all his activities, his mind and his soul--everything--for the satisfaction of the Supreme Lord, is
-considered to be the greatest person.
-The word akartuh means "without any sense of proprietorship." Everyone wants to act as the proprietor
-of his actions so that he can enjoy the result. A devotee, however, has no such desire; he acts because the
-Personality of Godhead wants him to act in a particular way. He has no personal motive. When Lord
-Caitanya preached Krsna consciousness, it was not with the purpose that people would call Him Krsna,
-the Supreme Personality of Godhead; rather, He preached that Krsna is the Supreme Personality of
-Godhead and should be worshiped as such. A devotee who is a most confidential servant of the Lord
-never does anything for his personal account, but does everything for the satisfaction of the Supreme
-Lord. It is clearly stated, therefore, mayi sannyasta-karmanah: the devotee works, but he works for the
-Supreme. It is also stated, mayy arpitatmanah: "He gives his mind unto Me." These are the qualifications
-of a devotee, who, according to this verse, is accepted as the highest of all human beings.
+It is recommended that the yogi visualize the laughter of the Lord after studying His smile very
+carefully. These particular descriptions of meditation on the smile, laughter, face, lips and teeth all
+indicate conclusively that God is not impersonal. It is described herein that one should meditate on the
+laughter or smiling of Visnu. There is no other activity that can completely cleanse the heart of the
+devotee. The exceptional beauty of the laughter of Lord Visnu is that when He smiles His small teeth,
+which resemble the buds of jasmine flowers, at once become reddish, reflecting His rosy lips. If the yogi is
+able to place the beautiful face of the Lord in the core of his heart, he will be completely satisfied. In other
+words, when one is absorbed in seeing the beauty of the Lord within himself, the material attraction can
+no longer disturb him.
 </p>
 
 </div>
@@ -96,7 +124,7 @@ of a devotee, who, according to this verse, is accepted as the highest of all hu
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

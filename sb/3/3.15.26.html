@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.26.html">3.15.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tad visva-gurv-adhikrtam bhuvanaika-vandyam
 divyam vicitra-vibudhagrya-vimana-socih
 apuh param mudam apurvam upetya yogamaya-
 balena munayas tad atho vikuntham
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tat--then; visva-guru--by the teacher of the universe, the Supreme Personality of Godhead; adhikrtam--
 predominated; bhuvana--of the planets; eka--alone; vandyam--worthy to be worshiped; divyam--spiritual;
@@ -61,13 +100,13 @@ vicitra--highly decorated; vibudha-agrya--of the devotees (who are the best of t
 airplanes; socih--illuminated; apuh--attained; param--the highest; mudam--happiness; apurvam--
 unprecedented; upetya--having attained; yoga-maya--by spiritual potency; balena--by the influence;
 munayah--the sages; tat--Vaikuntha; atho--that; vikuntham--Visnu.
-<p></p>
+<br>
 <h2>Translation</h2>
 Thus the great sages, Sanaka, Sanatana, Sanandana and Sanat-kumara, upon reaching the abovementioned
 Vaikuntha in the spiritual world by dint of their mystic yoga performance, perceived
 unprecedented happiness. They found that the spiritual sky was illuminated by highly decorated airplanes
 piloted by the best devotees of Vaikuntha and was predominated by the Supreme Personality of Godhead.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Supreme Personality of Godhead is one without a second. He is above everyone. No one is equal to
 Him, nor is anyone greater than Him. Therefore He is described here as visva-guru. He is the prime living
@@ -104,7 +143,7 @@ Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

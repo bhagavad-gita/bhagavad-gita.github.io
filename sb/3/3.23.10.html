@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.23.10.html">3.23.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 devahutir uvaca
 raddham bata dvija-vrsaitad amogha-yogamayadhipe
 tvayi vibho tad avaimi bhartah
 yas te 'bhyadhayi samayah sakrd anga-sango
 bhuyad gariyasi gunah prasavah satinam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 devahutih uvaca--Devahuti said; raddham--it has been achieved; bata--indeed; dvija-vrsa--O best of the
 brahmanas; etat--this; amogha--infallible; yoga-maya--of mystic powers; adhipe--the master; tvayi--in you;
 vibho--O great one; tat--that; avaimi--I know; bhartah--O husband; yah--that which; te--by you;
 abhyadhayi--was given; samayah--promise; sakrt--once; anga-sangah--bodily union; bhuyat--may be;
 gariyasi--when very glorious; gunah--a great quality; prasavah--progeny; satinam--of chaste women.
-<p></p>
+<br>
 <h2>Translation</h2>
 Sri Devahuti said: My dear husband, O best of brahmanas, I know that you have achieved perfection and
 are the master of all the infallible mystic powers because you are under the protection of yogamaya, the
 transcendental nature. But you once made a promise that our bodily union should now fulfill, since
 children are a great quality for a chaste woman who has a glorious husband.
-<p></p>
+<br>
 <h2>Purport</h2>
 Devahuti expressed her happiness by uttering the word bata, for she knew that her husband was in a
 highly elevated, transcendental position and was under the shelter of yogamaya. As stated in Bhagavadgita,
@@ -93,7 +132,7 @@ Kardama Muni as her husband, she also desired to have a child by bodily union.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

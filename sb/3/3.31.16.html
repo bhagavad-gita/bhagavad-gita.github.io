@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,58 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.16.html">3.31.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ye tv ihasakta-manasah
-karmasu sraddhayanvitah
-kurvanty apratisiddhani
-nityany api ca krtsnasah
-<p></p>
+jnanam yad etad adadhat katamah sa devas
+trai-kalikam sthira-caresv anuvartitamsah
+tam jiva-karma-padavim anuvartamanas
+tapa-trayopasamanaya vayam bhajema
+<br>
 <h2>Synonyms</h2>
-ye--those who; tu--but; iha--in this world; asakta--addicted; manasah--whose minds; karmasu--to
-fruitive activities; sraddhaya--with faith; anvitah--endowed; kurvanti--perform; apratisiddhani--with
-attachment to the result; nityani--prescribed duties; api--certainly; ca--and; krtsnasah--repeatedly.
-<p></p>
+jnanam--knowledge; yat--which; etat--this; adadhat--gave; katamah--who other than; sah--that; devah--
+the Personality of Godhead; trai-kalikam--of the three phases of time; sthira-caresu--in the inanimate and
+animate objects; anuvartita--dwelling; amsah--His partial representation; tam--unto Him; jiva--of the jiva
+souls; karma-padavim--the path of fruitive activities; anuvartamanah--who are pursuing; tapa-traya--from
+the threefold miseries; upasamanaya--for getting free; vayam--we; bhajema--must surrender.
+<br>
 <h2>Translation</h2>
-Persons who are too addicted to this material world execute their prescribed duties very nicely and with
-great faith. They daily perform all such prescribed duties with attachment to the fruitive result.
-<p></p>
+No one other than the Supreme Personality of Godhead, as the localized Paramatma, the partial
+representation of the Lord, is directing all inanimate and animate objects. He is present in the three phases
+of time--past, present and future. Therefore, the conditioned soul is engaged in different activities by His
+direction, and in order to get free from the threefold miseries of this conditional life, we have to surrender
+unto Him only.
+<br>
 <h2>Purport</h2>
-In this and the following six verses, the Srimad-Bhagavatam criticizes persons who are too materially
-attached. It is enjoined in the Vedic scriptures that those who are attached to the enjoyment of material
-facilities have to sacrifice and undergo certain ritualistic performances. They have to observe certain rules
-and regulations in their daily lives to be elevated to the heavenly planets. It is stated in this verse that such
-persons cannot be liberated at any time. Those who worship demigods with the consciousness that each
-and every demigod is a separate God cannot be elevated to the spiritual world, what to speak of persons
-who are simply attached to duties for the upliftment of their material condition.
+When a conditioned soul is seriously anxious to get out of the influence of the material clutches, the
+Supreme Personality of Godhead, who is situated within him as Paramatma, gives him this knowledge:
+"Surrender unto Me." As the Lord says in Bhagavad-gita, "Give up all other engagements. Just surrender
+unto Me." It is to be accepted that the source of knowledge is the Supreme Person. This is also confirmed
+in Bhagavad-gita. Mattah smrtir jnanam apohanam ca. The Lord says, "Through Me one gets real
+knowledge and memory, and one also forgets through Me." To one who wants to be materially satisfied or
+who wants to lord it over material nature, the Lord gives the opportunity to forget His service and engage
+in the so-called happiness of material activities. Similarly, when one is frustrated in lording it over
+material nature and is very serious about getting out of this material entanglement, the Lord, from within,
+gives him the knowledge that he has to surrender unto Him; then there is liberation.
+This knowledge cannot be imparted by anyone other than the Supreme Lord or His representative. In
+the Caitanya-caritamrta Lord Caitanya instructs Rupa Gosvami that the living entities wander in life after
+life, undergoing the miserable conditions of material existence. But when one is very anxious to get free
+from the material entanglement, he gets enlightenment through a spiritual master and Krsna. This means
+that Krsna as the Supersoul is seated within the heart of the living entity, and when the living entity is
+serious, the Lord directs him to take shelter of His representative, a bona fide spiritual master. Directed
+from within and guided externally by the spiritual master, one attains the path of Krsna consciousness,
+which is the way out of the material clutches.
+Therefore there is no possibility of one's being situated in his own position unless he is blessed by the
+Supreme Personality of Godhead. Unless he is enlightened with the supreme knowledge, one has to
+undergo the severe penalties of the hard struggle for existence in the material nature. The spiritual master
+is therefore the mercy manifestation of the Supreme Person. The conditioned soul has to take direct
+instruction from the spiritual master, and thus he gradually becomes enlightened to the path of Krsna
+consciousness. The seed of Krsna consciousness is sown within the heart of the conditioned soul, and
+when one hears instruction from the spiritual master, the seed fructifies, and one's life is blessed.
 </p>
 
 </div>
@@ -78,7 +140,7 @@ who are simply attached to duties for the upliftment of their material condition
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

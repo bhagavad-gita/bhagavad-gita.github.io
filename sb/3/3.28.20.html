@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.20.html">3.28.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatha vata-ratho ghranam
-avrnkte gandha asayat
-evam yoga-ratam ceta
-atmanam avikari yat
-<p></p>
+tasmil labdha-padam cittam
+sarvavayava-samsthitam
+vilaksyaikatra samyujyad
+ange bhagavato munih
+<br>
 <h2>Synonyms</h2>
-yatha--as; vata--of air; rathah--the chariot; ghranam--sense of smell; avrnkte--catches; gandhah--aroma;
-asayat--from the source; evam--similarly; yoga-ratam--engaged in devotional service; cetah--
-consciousness; atmanam--the Supreme Soul; avikari--unchanging; yat--which.
-<p></p>
+tasmin--on the form of the Lord; labdha-padam--fixed; cittam--the mind; sarva--all; avayava--limbs;
+samsthitam--fixed upon; vilaksya--having distinguished; ekatra--in one place; samyujyat--should fix the
+mind; ange--on each limb; bhagavatah--of the Lord; munih--the sage.
+<br>
 <h2>Translation</h2>
-As the chariot of air carries an aroma from its source and immediately catches the sense of smell,
-similarly, one who constantly engages in devotional service, in Krsna consciousness, can catch the
-Supreme Soul, who is equally present everywhere.
-<p></p>
+In fixing his mind on the eternal form of the Lord, the yogi should not take a collective view of all His
+limbs, but should fix the mind on each individual limb of the Lord.
+<br>
 <h2>Purport</h2>
-As a breeze carrying a pleasant fragrance from a garden of flowers at once captures the organ of smell, so
-one's consciousness, saturated with devotion, can at once capture the transcendental existence of the
-Supreme Personality of Godhead, who, in His Paramatma feature, is present everywhere, even in the heart
-of every living being. It is stated in Bhagavad-gita that the Supreme Personality of Godhead is ksetra jna,
-present within this body, but He is also simultaneously present in every other body. Since the individual
-soul is present only in a particular body, he is altered when another individual soul does not cooperate
-with him. The Supersoul, however, is equally present everywhere. Individual souls may disagree, but the
-Supersoul, being equally present in every body, is called unchanging, or avikari. The individual soul,
-when fully saturated with Krsna consciousness, can understand the presence of the Supersoul. It is
-confirmed in Bhagavad-gita that (bhaktya mam abhijanati) a person saturated with devotional service in
-full Krsna consciousness can understand the Supreme Personality of Godhead, either as Supersoul or as
-the Supreme Person.
+The word muni is very significant. Muni means one who is very expert in mental speculation or in
+thinking, feeling and willing. He is not mentioned here as a devotee or yogi. Those who try to meditate on
+the form of the Lord are called munis, or less intelligent, whereas those who render actual service to the
+Lord are called bhakti-yogis. The thought process described below is for the education of the muni. In
+order to convince the yogi that the Absolute Truth, or Supreme Personality of Godhead, is never
+impersonal at any time, the following verses prescribe observing the Lord in His personal form, limb after
+limb. To think of the Lord as a whole may sometimes be impersonal; therefore, it is recommended here
+that one first think of His lotus feet, then His ankles, then the thighs, then the waist, then the chest, then
+the neck, then the face and so on. One should begin from the lotus feet and gradually rise to the upper
+limbs of the transcendental body of the Lord.
 </p>
 
 </div>
@@ -84,7 +120,7 @@ the Supreme Person.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

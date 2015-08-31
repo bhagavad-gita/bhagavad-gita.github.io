@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.7.html">3.31.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-surya-dvarena te yanti
-purusam visvato-mukham
-paravaresam prakrtim
-asyotpatty-anta-bhavanam
-<p></p>
+katu-tiksnosna-lavanaruksamladibhir
+ulbanaih
+matr-bhuktair upasprstah
+sarvangotthita-vedanah
+<br>
 <h2>Synonyms</h2>
-surya-dvarena--through the path of illumination; te--they; yanti--approach; purusam--the Personality of
-Godhead; visvatah-mukham--whose face is turned everywhere; para-avara-isam--the proprietor of the
-spiritual and material worlds; prakrtim--the material cause; asya--of the world; utpatti--of manifestation;
-anta--of dissolution; bhavanam--the cause.
-<p></p>
+katu--bitter; tiksna--pungent; usna--hot; lavana--salty; ruksa--dry; amla--sour; adibhih--and so on;
+ulbanaih--excessive; matr-bhuktaih--by foods eaten by the mother; upasprstah--affected; sarva-anga--all
+over the body; utthita--arisen; vedanah--pain.
+<br>
 <h2>Translation</h2>
-Through the path of illumination, such liberated persons approach the complete Personality of
-Godhead, who is the proprietor of the material and spiritual worlds and is the supreme cause of their
-manifestation and dissolution.
-<p></p>
+Owing to the mother's eating bitter, pungent foodstuffs, or food which is too salty or too sour, the body
+of the child incessantly suffers pains which are almost intolerable.
+<br>
 <h2>Purport</h2>
-The word surya-dvarena means "by the illuminated path," or through the sun planet. The illuminated
-path is devotional service. It is advised in the Vedas not to pass through the darkness, but to pass through
-the sun planet. It is also recommended here that by traversing the illuminated path one can be freed from
-the contamination of the material modes of nature; by that path one can enter into the kingdom where the
-completely perfect Personality of Godhead resides. The words purusam visvato-mukham mean the
-Supreme Personality of Godhead, who is all-perfect. All living entities other than the Supreme Personality
-of Godhead are very small, although they may be big by our calculation. Everyone is infinitesimal, and
-therefore in the Vedas the Supreme Lord is called the supreme eternal amongst all eternals. He is the
-proprietor of the material and spiritual worlds and the supreme cause of manifestation. Material nature is
-only the ingredient because actually the manifestation is caused by His energy. The material energy is also
-His energy; just as the combination of father and mother is the cause of childbirth, so the combination of
-the material energy and the glance of the Supreme Personality of Godhead is the cause of the
-manifestation of the material world. The efficient cause, therefore, is not matter, but the Lord Himself.
+All descriptions of the child's bodily situation in the womb of the mother are beyond our conception. It
+is very difficult to remain in such a position, but still the child has to remain. Because his consciousness is
+not very developed, the child can tolerate it, otherwise he would die. That is the benediction of maya, who
+endows the suffering body with the qualifications for tolerating such terrible tortures.
 </p>
 
 </div>
@@ -86,7 +114,7 @@ manifestation of the material world. The efficient cause, therefore, is not matt
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

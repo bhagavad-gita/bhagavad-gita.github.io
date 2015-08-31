@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.40.html">3.31.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na lolupayopadisen
-na grharudha-cetase
-nabhaktaya ca me jatu
-na mad-bhakta-dvisam api
-<p></p>
+yopayati sanair maya
+yosid deva-vinirmita
+tam iksetatmano mrtyum
+trnaih kupam ivavrtam
+<br>
 <h2>Synonyms</h2>
-na--not; lolupaya--to the greedy; upadiset--one should instruct; na--not; grha-arudha-cetase--to one who
-is too attached to family life; na--not; abhaktaya--to the nondevotee; ca--and; me--of Me; jatu--ever; na--
-not; mat--My; bhakta--devotees; dvisam--to those who are envious of; api--also.
-<p></p>
+ya--she who; upayati--approaches; sanaih--slowly; maya--representation of maya; yosit--woman; deva--
+by the Lord; vinirmita--created; tam--her; ikseta--one must regard; atmanah--of the soul; mrtyum--death;
+trnaih--with grass; kupam--a well; iva--like; avrtam--covered.
+<br>
 <h2>Translation</h2>
-It is not to be instructed to persons who are too greedy and too attached to family life, nor to persons
-who are nondevotees and who are envious of the devotees and of the Personality of Godhead.
-<p></p>
+The woman, created by the Lord, is the representation of maya, and one who associates with such maya
+by accepting services must certainly know that this is the way of death, just like a blind well covered with
+grass.
+<br>
 <h2>Purport</h2>
-Persons who are always planning to do harm to other living entities are not eligible to understand Krsna
-consciousness and cannot enter into the realm of transcendental loving service to the Lord. Also, there are
-so-called disciples who become submissive to a spiritual master most artificially, with an ulterior motive.
-They also cannot understand what Krsna consciousness or devotional service is. Persons who, due to
-being initiated by another sect of religious faith, do not find devotional service as the common platform
-for approaching the Supreme Personality of Godhead, also cannot understand Krsna consciousness. We
-have experience that some students come to join us, but because of being biased in some particular type
-of faith, they leave our camp and become lost in the wilderness. Actually, Krsna consciousness is not a
-sectarian religious faith; it is a teaching process for understanding the Supreme Lord and our relationship
-with Him. Anyone can join this movement without prejudice, but unfortunately there are persons who
-feel differently. It is better, therefore, not to instruct the science of Krsna consciousness to such persons.
-Generally, materialistic persons are after some name, fame and material gain, so if someone takes to
-Krsna consciousness for these reasons, he will never be able to understand this philosophy. Such persons
-take to religious principles as a social decoration. They admit themselves into some cultural institution for
-the sake of name only, especially in this age. Such persons also cannot understand the philosophy of
-Krsna consciousness. Even if one is not greedy for material possessions but is too attached to family life,
-he also cannot understand Krsna consciousness. Superficially, such persons are not very greedy for
-material possessions, but they are too attached to wife, children and family improvement. When a person
-is not contaminated by the above-mentioned faults yet at the ultimate issue is not interested in the service
-of the Supreme Personality of Godhead, or if he is a nondevotee, he also cannot understand the
-philosophy of Krsna consciousness.
+Sometimes it happens that a rejected well is covered by grass, and an unwary traveler who does not
+know of the existence of the well falls down, and his death is assured. Similarly, association with a woman
+begins when one accepts service from her, because woman is especially created by the Lord to give service
+to man. By accepting her service, a man is entrapped. If he is not intelligent enough to know that she is
+the gateway to hellish life, he may indulge in her association very liberally. This is restricted for those who
+aspire to ascend to the transcendental platform. Even fifty years ago in Hindu society, such association
+was restricted. A wife could not see her husband during the daytime. Householders even had different
+residential quarters. The internal quarters of a residential house were for the woman, and the external
+quarters were for the man. Acceptance of service rendered by a woman may appear very pleasing, but one
+should be very cautious in accepting such service because it is clearly said that woman is the gateway to
+death, or forgetfulness of one's self. She blocks the path of spiritual realization.
 </p>
 
 </div>
@@ -92,7 +122,7 @@ philosophy of Krsna consciousness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

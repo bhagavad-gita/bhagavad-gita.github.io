@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,65 +81,58 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.35.html">3.28.35</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.35</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/35"><b>35</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhakti-yogas ca yogas ca
-maya manavy udiritah
-yayor ekatarenaiva
-purusah purusam vrajet
-<p></p>
+muktasrayam yarhi nirvisayam viraktam
+nirvanam rcchati manah sahasa yatharcih
+atmanam atra puruso 'vyavadhanam ekam
+anviksate pratinivrtta-guna-pravahah
+<br>
 <h2>Synonyms</h2>
-bhakti-yogah--devotional service; ca--and; yogah--mystic yoga; ca--also; maya--by Me; manavi--O
-daughter of Manu; udiritah--described; yayoh--of which two; ekatarena--by either one; eva--alone;
-purusah--a person; purusam--the Supreme Person; vrajet--can achieve.
-<p></p>
+mukta-asrayam--situated in liberation; yarhi--at which time; nirvisayam--detached from sense objects;
+viraktam--indifferent; nirvanam--extinction; rcchati--obtains; manah--the mind; sahasa--immediately;
+yatha--like; arcih--the flame; atmanam--the mind; atra--at this time; purusah--a person; avyavadhanam--
+without separation; ekam--one; anviksate--experiences; pratinivrtta--freed; guna-pravahah--from the flow
+of material qualities.
+<br>
 <h2>Translation</h2>
-My dear mother, O daughter of Manu, a devotee who applies the science of devotional service and
-mystic yoga in this way can achieve the abode of the Supreme Person simply by that devotional service.
-<p></p>
+When the mind is thus completely freed from all material contamination and detached from material
+objectives, it is just like the flame of a lamp. At that time the mind is actually dovetailed with that of the
+Supreme Lord and is experienced as one with Him because it is freed from the interactive flow of the
+material qualities.
+<br>
 <h2>Purport</h2>
-Herein the Supreme Personality of Godhead Kapiladeva perfectly explains that the mystic yoga system,
-consisting of eight different kinds of yoga activities, has to be performed with the aim of coming to the
-perfectional stage of bhakti-yoga. It is not acceptable for one to be satisfied simply by practicing the sitting
-postures and thinking himself complete. By meditation one must attain the stage of devotional service. As
-previously described, a yogi is advised to meditate on the form of Lord Visnu from point to point, from
-the ankles to the legs to the knees to the thighs to the chest to the neck, and in this way gradually up to
-the face and then to the ornaments. There is no question of impersonal meditation.
-When, by meditation on the Supreme Personality of Godhead in all detail, one comes to the point of
-love of God, that is the point of bhakti-yoga, and at that point he must actually render service to the Lord
-out of transcendental love. Anyone who practices yoga and comes to the point of devotional service can
-attain the Supreme Personality of Godhead in His transcendental abode. Here it is clearly stated, purusah
-purusam vrajet: the purusa, the living entity, goes to the Supreme Person. The Supreme Personality of
-Godhead and the living entity are qualitatively one; both are defined as purusa. The quality of purusa
-exists both in the Supreme Godhead and in the living entity. purusa means "enjoyer," and the spirit of
-enjoyment is present both in the living entity and in the Supreme Lord. The difference is that the quantity
-of enjoyment is not equal. The living entity cannot experience the same quantity of enjoyment as the
-Supreme Personality of Godhead. An analogy may be made with a rich man and a poor man: the
-propensity for enjoyment is present in both, but the poor man cannot enjoy in the same quantity as the
-rich man. When the poor man dovetails his desires with those of the rich man, however, and when there
-is cooperation between the poor man and the rich man, or between the big and the small man, then the
-enjoyment is shared equally. That is like bhakti-yoga. purusah purusam vrajet: when the living entity
-enters into the kingdom of God and cooperates with the Supreme Lord by giving Him enjoyment, he
-enjoys the same facility or the same amount of pleasure as the Supreme Personality of Godhead.
-On the other hand, when the living entity wants to enjoy by imitating the Supreme Personality of
-Godhead, his desire is called maya, and it puts him in the material atmosphere. A living entity who wants
-to enjoy on his personal account and not cooperate with the Supreme Lord is engaged in materialistic life.
-As soon as he dovetails his enjoyment with the Supreme Personality of Godhead, he is engaged in
-spiritual life. An example may be cited here: The different limbs of the body cannot enjoy life
-independently; they must cooperate with the whole body and supply food to the stomach. In so doing, all
-the different parts of the body enjoy equally in cooperation with the whole body. That is the philosophy
-of acintya-bhedabheda, simultaneous oneness and difference. The living entity cannot enjoy life in
-opposition to the Supreme Lord; he has to dovetail his activities with the Lord by practicing bhakti-yoga.
-It is said herein that one can approach the Supreme Personality of Godhead by either the yoga process
-or the bhakti-yoga process. This indicates that factually there is no difference between yoga and bhaktiyoga
-because the target of both is Visnu. In the modern age, however, a yoga process has been
-manufactured which aims at something void and impersonal. Actually, yoga means meditation on the
-form of Lord Visnu. If the yoga practice is actually performed according to the standard direction, there is
-no difference between yoga and bhakti-yoga.
+In the material world the activities of the mind are acceptance and rejection. As long as the mind is in
+material consciousness, it must be forcibly trained to accept meditation on the Supreme Personality of
+Godhead, but when one is actually elevated to loving the Supreme Lord, the mind is automatically
+absorbed in thought of the Lord. In such a position a yogi has no other thought than to serve the Lord.
+This dovetailing of the mind with the desires of the Supreme Personality of Godhead is called nirvana, or
+making the mind one with the Supreme Lord.
+The best example of nirvana is cited in Bhagavad-gita. In the beginning the mind of Arjuna deviated
+from Krsna's. Krsna wanted Arjuna to fight, but Arjuna did not want to, so there was disagreement. But
+after hearing Bhagavad-gita from the Supreme Personality of Godhead, Arjuna dovetailed his mind with
+Krsna's desire. This is called oneness. This oneness, however, did not cause Arjuna and Krsna to lose their
+individualities. The Mayavadi philosophers cannot understand this. They think that oneness necessitates
+loss of individuality. Actually, however, we find in Bhagavad-gita that individuality is not lost. When the
+mind is completely purified in love of Godhead, the mind becomes the mind of the Supreme Personality
+of Godhead. The mind at that time does not act separately, nor does it act without inspiration to fulfill the
+desire of the Lord. The individual liberated soul has no other activity. pratinivrtta-guna-pravahah. In the
+conditioned state the mind is always engaged in activity impelled by the three modes of the material
+world, but in the transcendental stage, the material modes cannot disturb the mind of the devotee. The
+devotee has no other concern than to satisfy the desires of the Lord. That is the highest stage of
+perfection, called nirvana or nirvana-mukti. At this stage the mind becomes completely free from material
+desire.
+Yatharcih. Arcih means "flame." When a lamp is broken or the oil is finished, we see that the flame of
+the lamp goes out. But according to scientific understanding, the flame is not extinguished; it is
+conserved. This is conservation of energy. Similarly, when the mind stops functioning on the material
+platform, it is conserved in the activities of the Supreme Lord. The Mayavadi philosophers' conception of
+cessation of the functions of the mind is explained here: cessation of the mental functions means cessation
+of activities conducted under the influence of the three modes of material nature.
 </p>
 
 </div>
@@ -109,7 +140,7 @@ no difference between yoga and bhakti-yoga.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

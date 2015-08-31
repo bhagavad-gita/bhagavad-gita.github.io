@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.9.html">3.32.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-idito bhagavan evam
-kapilakhyah parah puman
-vacaviklavayety aha
-mataram matr-vatsalah
-<p></p>
+ksmambho-'nalanila-viyan-mana-indriyarthabhutadibhih
+parivrtam pratisanjihirsuh
+avyakrtam visati yarhi guna-trayatma
+kalam parakhyam anubhuya parah svayambhuh
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--Maitreya said; iditah--praised; bhagavan--the Supreme personality of Godhead; evam--
-thus; kapila-akhyah--named Kapila; parah--supreme; puman--person; vaca--with words; aviklavaya--
-grave; iti--thus; aha--replied; mataram--to His mother; matr-vatsalah--very affectionate to His mother.
-<p></p>
+ksma--earth; ambhah--water; anala--fire; anila--air; viyat--ether; manah--mind; indriya--the senses;
+artha--the objects of the senses; bhuta--ego; adibhih--and so on; parivrtam--covered by; pratisanjihirsuh--
+desiring to dissolve; avyakrtam--the changeless spiritual sky; visati--he enters; yarhi--at which time; gunatraya-
+atma--consisting of the three modes; kalam--the time; para-akhyam--two parardhas; anubhuya--after
+experiencing; parah--the chief; svayambhuh--Lord Brahma.
+<br>
 <h2>Translation</h2>
-Thus the Supreme Personality of Godhead Kapila, satisfied by the words of His mother, towards whom
-He was very affectionate, replied with gravity.
-<p></p>
+After experiencing the inhabitable time of the three modes of material nature, known as two parardhas,
+Lord Brahma closes the material universe, which is covered by layers of earth, water, air, fire, ether, mind,
+ego, etc., and goes back to Godhead.
+<br>
 <h2>Purport</h2>
-Since the Lord is all-perfect, His exhibition of affection for His mother was also complete. After hearing
-the words of His mother, He most respectfully, with due gravity and good manners, replied.
+The word avyakrtam is very significant in this verse. The same meaning is stated in Bhagavad-gita, in
+the word sanatana. This material world is vyakrta, or subject to changes, and it finally dissolves. But after
+the dissolution of this material world, the manifestation of the spiritual world, the sanatana-dhama,
+remains. That spiritual sky is called avyakrta, that which does not change, and there the Supreme
+personality of Godhead resides. When, after ruling over the material universe under the influence of the
+time element, Lord Brahma desires to dissolve it and enter into the kingdom of God, others then enter
+with him.
 </p>
 
 </div>
@@ -74,7 +120,7 @@ the words of His mother, He most respectfully, with due gravity and good manners
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

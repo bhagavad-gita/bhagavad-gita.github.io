@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.30.7.html">3.30.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/30">30</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-katu-tiksnosna-lavanaruksamladibhir
-ulbanaih
-matr-bhuktair upasprstah
-sarvangotthita-vedanah
-<p></p>
+sandahyamana-sarvanga
+esam udvahanadhina
+karoty aviratam mudho
+duritani durasayah
+<br>
 <h2>Synonyms</h2>
-katu--bitter; tiksna--pungent; usna--hot; lavana--salty; ruksa--dry; amla--sour; adibhih--and so on;
-ulbanaih--excessive; matr-bhuktaih--by foods eaten by the mother; upasprstah--affected; sarva-anga--all
-over the body; utthita--arisen; vedanah--pain.
-<p></p>
+sandahyamana--burning; sarva--all; angah--his limbs; esam--these family members; udvahana--for
+maintaining; adhina--with anxiety; karoti--he performs; aviratam--always; mudhah--the fool; duritani--
+sinful activities; durasayah--evil-minded.
+<br>
 <h2>Translation</h2>
-Owing to the mother's eating bitter, pungent foodstuffs, or food which is too salty or too sour, the body
-of the child incessantly suffers pains which are almost intolerable.
-<p></p>
+Although he is always burning with anxiety, such a fool always performs all kinds of mischievous
+activities, with a hope which is never to be fulfilled, in order to maintain his so-called family and society.
+<br>
 <h2>Purport</h2>
-All descriptions of the child's bodily situation in the womb of the mother are beyond our conception. It
-is very difficult to remain in such a position, but still the child has to remain. Because his consciousness is
-not very developed, the child can tolerate it, otherwise he would die. That is the benediction of maya, who
-endows the suffering body with the qualifications for tolerating such terrible tortures.
+It is said that it is easier to maintain a great empire than to maintain a small family, especially in these
+days, when the influence of Kali-yuga is so strong that everyone is harassed and full of anxieties because
+of accepting the false presentation of maya's family. The family we maintain is created by maya; it is the
+perverted reflection of the family in Krsnaloka. In Krsnaloka there are also family, friends, society, father
+and mother; everything is there, but they are eternal. Here, as we change bodies, our family relationships
+also change. Sometimes we are in a family of human beings, sometimes in a family of demigods,
+sometimes a family of cats, or sometimes a family of dogs. Family, society and friendship are flickering,
+and so they are called asat. It is said that as long as we are attached to this asat, temporary, nonexisting
+society and family, we are always full of anxieties. The materialists do not know that the family, society
+and friendship here in this material world are only shadows, and thus they become attached. Naturally
+their hearts are always burning, but in spite of all inconvenience, they still work to maintain such false
+families because they have no information of the real family association with Krsna.
 </p>
 
 </div>
@@ -75,7 +122,7 @@ endows the suffering body with the qualifications for tolerating such terrible t
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

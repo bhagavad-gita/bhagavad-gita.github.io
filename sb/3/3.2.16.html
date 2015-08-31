@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.2.16.html">3.2.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 mam khedayaty etad ajasya janmavidambanam
 yad vasudeva-gehe
 vraje ca vaso 'ri-bhayad iva svayam
 purad vyavatsid yad-ananta-viryah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 mam--to me; khedayati--gives me distress; etat--this; ajasya--of the unborn; janma--birth; vidambanam--
 bewildering; yat--that; vasudeva-gehe--in the home of Vasudeva; vraje--in Vrndavana; ca--also; vasah--
 inhabitation; ari--enemy; bhayat--because of fear; iva--as if; svayam--Himself; purat--from Mathura Puri;
 vyavatsit--fled; yat--one who is; ananta-viryah--unlimitedly powerful.
-<p></p>
+<br>
 <h2>Translation</h2>
 When I think of Lord Krsna--how He was born in the prison house of Vasudeva although He is unborn,
 how He went away from His father's protection to Vraja and lived there incognito out of fear of the
 enemy, and how, although unlimitedly powerful, He fled from Mathura in fear--all these bewildering
 incidents give me distress.
-<p></p>
+<br>
 <h2>Purport</h2>
 Because Lord Sri Krsna is the original person from whom everything and everyone has emanated--aham
 sarvasya prabhavah (Bg. 10.8), janmady asya yatah (Vedanta-sutra 1.1.2)--nothing can be equal to or
@@ -88,7 +127,7 @@ is possible when we understand the Lord as the Lord and not as one of us, with a
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

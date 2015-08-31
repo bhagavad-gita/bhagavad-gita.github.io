@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,73 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.33.html">3.31.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yathendriyaih prthag-dvarair
-artho bahu-gunasrayah
-eko naneyate tadvad
-bhagavan sastra-vartmabhih
-<p></p>
+satyam saucam daya maunam
+buddhih srir hrir yasah ksama
+samo damo bhagas ceti
+yat-sangad yati sanksayam
+<br>
 <h2>Synonyms</h2>
-yatha--as; indriyaih--by the senses; prthak-dvaraih--in different ways; arthah--an object; bahu-guna--
-many qualities; asrayah--endowed with; ekah--one; nana--differently; iyate--is perceived; tadvat--similarly;
-bhagavan--the Supreme Personality of Godhead; sastra-vartmabhih--according to different scriptural
-injunctions.
-<p></p>
+satyam--truthfulness; saucam--cleanliness; daya--mercy; maunam--gravity; buddhih--intelligence; srih--
+prosperity; hrih--shyness; yasah--fame; ksama--forgiveness; samah--control of the mind; damah--control
+of the senses; bhagah--fortune; ca--and; iti--thus; yat-sangat--from association with whom; yati
+sanksayam--are destroyed.
+<br>
 <h2>Translation</h2>
-A single object is appreciated differently by different senses due to its having different qualities.
-Similarly, the Supreme Personality of Godhead is one, but according to different scriptural injunctions He
-appears to be different.
-<p></p>
+He becomes devoid of truthfulness, cleanliness, mercy, gravity, spiritual intelligence, shyness, austerity,
+fame, forgiveness, control of the mind, control of the senses, fortune and all such opportunities.
+<br>
 <h2>Purport</h2>
-It appears that by following the path of jnana-yoga, or empiric philosophical speculation, one reaches
-the impersonal Brahman, whereas by executing devotional service in Krsna consciousness one enriches
-his faith in and devotion to the Personality of Godhead. But it is stated here that both bhakti-yoga and
-jnana-yoga are meant for reaching the same destination--the Personality of Godhead. By the process of
-jnana-yoga the same Personality of Godhead appears to be impersonal. As the same object appears to be
-different when perceived by different senses, the same Supreme Lord appears to be impersonal by mental
-speculation. A hill appears cloudy from a distance, and one who does not know may speculate that the
-hill is a cloud. Actually, it is not a cloud; it is a big hill. One has to learn from authority that the sight of a
-cloud is not actually a cloud but a hill. If one makes a little more progress, then instead of a cloud he sees
-the hill and something green. When one actually approaches the hill, he will see many varieties. Another
-example is in perceiving milk. When we see milk, we see that it is white; when we taste it, it appears that
-milk is very palatable. When we touch milk, it appears very cold; when we smell milk, it appears to have a
-very good flavor; and when we hear, we understand that it is called milk. Perceiving milk with different
-senses, we say that it is something white, something very delicious, something very aromatic, and so on.
-Actually, it is milk. Similarly, those who are trying to find the Supreme Godhead by mental speculation
-may approach the bodily effulgence, or the impersonal Brahman, and those who are trying to find the
-Supreme Godhead by yoga practice may find Him as the localized Supersoul, but those who are directly
-trying to approach the Supreme Truth by practice of bhakti-yoga can see Him face to face as the Supreme
-Person.
-Ultimately, the Supreme Person is the destination of all different processes. The fortunate person who,
-by following the principles of scriptures, becomes completely purified of all material contamination,
-surrenders unto the Supreme Lord as everything. Just as one can appreciate the real taste of milk with the
-tongue and not with the eyes, nostrils or ears, one can similarly appreciate the Absolute Truth perfectly
-and with all relishable pleasure only through one path, devotional service. This is also confirmed in
-Bhagavad-gita. Bhaktya mam abhijanati: if one wants to understand the Absolute Truth in perfection, he
-must take to devotional service. Of course, no one can understand the Absolute Truth in all perfection.
-That is not possible for the infinitesimal living entities. But the highest point of understanding by the
-living entity is reached by discharge of devotional service, not otherwise.
-By following various scriptural paths, one may come to the impersonal effulgence of the Supreme
-Personality of Godhead. The transcendental pleasure derived from merging with or understanding the
-impersonal Brahman is very extensive because Brahman is ananta. Tad brahma niskalam anantam:
-brahmananda is unlimited. But that unlimited pleasure can also be surpassed. That is the nature of the
-Transcendence. The unlimited can be surpassed also, and that higher platform is Krsna. When one deals
-directly with Krsna, the mellow and the humor relished by reciprocation of devotional service is
-incomparable, even with the pleasure derived from transcendental Brahman. Prabodhananda Sarasvati
-therefore says that kaivalya, the Brahman pleasure, is undoubtedly very great and is appreciated by many
-philosophers, but to a devotee, who has understood how to derive pleasure from exchanging devotional
-service with the Lord, this unlimited Brahman appears to be hellish. One should try, therefore, to
-transcend even the Brahman pleasure in order to approach the position of dealing with Krsna face to face.
-As the mind is the center of all the activities of the senses, Krsna is called the master of the senses,
-Hrsikesa. The process is to fix the mind on Hrsikesa, or Krsna, as Maharaja Ambarisa did (sa vai manah
-krsna-padaravindayoh). Bhakti is the basic principle of all processes. Without bhakti, neither jnana-yoga
-nor astanga-yoga can be successful, and unless one approaches Krsna, the principles of self-realization
-have no ultimate destination.
+Those who are too addicted to sex life cannot understand the purpose of the Absolute Truth, nor can
+they be clean in their habits, not to mention showing mercy to others. They cannot remain grave, and
+they have no interest in the ultimate goal of life. The ultimate goal of life is Krsna, or Visnu, but those
+who are addicted to sex life cannot understand that their ultimate interest is Krsna consciousness. Such
+people have no sense of decency, and even in public streets or public parks they embrace each other just
+like cats and dogs and pass it off in the name of love-making. Such unfortunate creatures can never
+become materially prosperous. Behavior like that of cats and dogs keeps them in the position of cats and
+dogs. They cannot improve any material condition, not to speak of becoming famous. Such foolish
+persons may even make a show of so-called yoga, but they are unable to control the senses and mind,
+which is the real purpose of yoga practice. Such people can have no opulence in their lives. In a word,
+they are very unfortunate.
 </p>
 
 </div>
@@ -117,7 +122,7 @@ have no ultimate destination.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

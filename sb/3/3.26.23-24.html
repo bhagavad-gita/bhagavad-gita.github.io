@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.26.23-24.html">3.26.23-24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.23-24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23-24"><b>23-24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 mahat-tattvad vikurvanad
 bhagavad-virya-sambhavat
@@ -57,7 +96,7 @@ vaikarikas taijasas ca
 tamasas ca yato bhavah
 manasas cendriyanam ca
 bhutanam mahatam api
-<p></p>
+<br>
 <h2>Synonyms</h2>
 mahat-tattvat--from the mahat-tattva; vikurvanat--undergoing a change; bhagavat-virya-sambhavat--
 evolved from the Lord's own energy; kriya-saktih--endowed with active power; ahankarah--the material
@@ -65,13 +104,13 @@ ego; tri-vidhah--of the three kinds; samapadyata--sprang up; vaikarikah--materia
 goodness; taijasah--material ego in passion; ca--and; tamasah--material ego in ignorance; ca--also; yatah--
 from which; bhavah--the origin; manasah--of the mind; ca--and; indriyanam--of the senses for perception
 and action; ca--and; bhutanam mahatam--of the five gross elements; api--also.
-<p></p>
+<br>
 <h2>Translation</h2>
 The material ego springs up from the mahat-tattva, which evolved from the Lord's own energy. The
 material ego is endowed predominantly with active power of three kinds--good, passionate and ignorant.
 It is from these three types of material ego that the mind, the senses of perception, the organs of action,
 and the gross elements evolve.
-<p></p>
+<br>
 <h2>Purport</h2>
 In the beginning, from clear consciousness, or the pure state of Krsna consciousness, the first
 contamination sprang up. This is called false ego, or identification of the body as self. The living entity
@@ -97,7 +136,7 @@ and from this material mind, the senses and material organs become manifest.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

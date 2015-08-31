@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.30.html">3.28.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rupa-bheda-vidas tatra
-tatas cobhayato-datah
-tesam bahu-padah sresthas
-catus-padas tato dvi-pat
-<p></p>
+yac chri-niketam alibhih parisevyamanam
+bhutya svaya kutila-kuntala-vrnda-justam
+mina-dvayasrayam adhiksipad abja-netram
+dhyayen manomayam atandrita ullasad-bhru
+<br>
 <h2>Synonyms</h2>
-rupa-bheda--distinctions of form; vidah--those who perceive; tatra--than them; tatah--than them; ca--
-and; ubhayatah--in both jaws; datah--those with teeth; tesam--of them; bahu-padah--those who have
-many legs; sresthah--better; catuh-padah--four-legged; tatah--than them; dvi-pat--two-legged.
-<p></p>
+yat--which face of the Lord; sri-niketam--a lotus; alibhih--by bees; parisevyamanam--surrounded;
+bhutya--by elegance; svaya--its; kutila--curly; kuntala--of hair; vrnda--by a multitude; justam--adorned;
+mina--of fish; dvaya--a pair; asrayam--dwelling; adhiksipat--putting to shame; abja--a lotus; netram--
+having eyes; dhyayet--one should meditate on; manah-mayam--formed in the mind; atandritah--attentive;
+ullasat--dancing; bhru--having eyebrows.
+<br>
 <h2>Translation</h2>
-Better than those living entities who can perceive sound are those who can distinguish between one
-form and another. Better than them are those who have developed upper and lower sets of teeth, and
-better still are those who have many legs. Better than them are the quadrupeds, and better still are the
-human beings.
-<p></p>
+The yogi then meditates upon the beautiful face of the Lord, which is adorned with curly hair and
+decorated by lotuslike eyes and dancing eyebrows. A lotus surrounded by swarming bees and a pair of
+swimming fish would be put to shame by its elegance.
+<br>
 <h2>Purport</h2>
-It is said that certain birds, such as crows, can distinguish one form from another. Living entities that
-have many legs, like the wasp, are better than plants and grasses, which have no legs. Four-legged animals
-are better than many-legged living entities, and better than the animals is the human being, who has only
-two legs.
+One important statement here is dhyayen manomayam. Manomayam is not imagination. Impersonalists
+think that the yogi can imagine any form he likes, but, as stated here, the yogi must meditate upon the
+form of the Lord which is experienced by devotees. Devotees never imagine a form of the Lord. They are
+not satisfied by something imaginary. The Lord has different eternal forms; each devotee likes a particular
+form and thus engages himself in the service of the Lord by worshiping that form. The Lord's form is
+depicted in different ways according to scriptures. As already discussed, there are eight kinds of
+representations of the original form of the Lord. These representations can be produced by the use of clay,
+stone, wood, paint, sand, etc., depending upon the resources of the devotee.
+Manomayam is a carving of the form of the Lord within the mind. This is included as one of the eight
+different carvings of the form of the Lord. It is not imagination. Meditation on the actual form of the Lord
+may be manifested in different manners, but one should not conclude that one has to imagine a form.
+There are two comparisons in this verse: first the Lord's face is compared to a lotus, and then His black
+hair is compared to humming bees swarming around the lotus, and His two eyes are compared to two fish
+swimming about. A lotus flower on the water is very beautiful when surrounded by humming bees and
+fish. The Lord's face is self-sufficient and complete. His beauty defies the natural beauty of a lotus.
 </p>
 
 </div>
@@ -77,7 +128,7 @@ two legs.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

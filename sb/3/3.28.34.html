@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,52 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.34.html">3.28.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-manasaitani bhutani
-pranamed bahu-manayan
-isvaro jiva-kalaya
-pravisto bhagavan iti
-<p></p>
+evam harau bhagavati pratilabdha-bhavo
+bhaktya dravad-dhrdaya utpulakah pramodat
+autkanthya-baspa-kalaya muhur ardyamanas
+tac capi citta-badisam sanakair viyunkte
+<br>
 <h2>Synonyms</h2>
-manasa--with the mind; etani--to these; bhutani--living entities; pranamet--he offers respects; bahumanayan--
-showing regard; isvarah--the controller; jiva--of the living entities; kalaya--by His expansion as
-the Supersoul; pravistah--has entered; bhagavan--the Supreme Personality of Godhead; iti--thus.
-<p></p>
+evam--thus; harau--towards Lord Hari; bhagavati--the Personality of Godhead; pratilabdha--developed;
+bhavah--pure love; bhaktya--by devotional service; dravat--melting; hrdayah--his heart; utpulakah--
+experiencing standing of the hairs of the body; pramodat--from excessive joy; autkanthya--occasioned by
+intense love; baspa-kalaya--by a stream of tears; muhuh--constantly; ardyamanah--being afflicted; tat--
+that; ca--and; api--even; citta--the mind; badisam--hook; sanakaih--gradually; viyunkte--withdraws.
+<br>
 <h2>Translation</h2>
-Such a perfect devotee offers respects to every living entity because he is under the firm conviction that
-the Supreme Personality of Godhead has entered the body of every living entity as the Supersoul, or
-controller.
-<p></p>
+By following this course, the yogi gradually develops pure love for the Supreme Personality of Godhead,
+Hari. In the course of his progress in devotional service, the hairs on his body stand erect through
+excessive joy, and he is constantly bathed in a stream of tears occasioned by intense love. Gradually, even
+the mind, which he used as a means to attract the Lord, as one attracts a fish to a hook, withdraws from
+material activity.
+<br>
 <h2>Purport</h2>
-A perfect devotee, as described above, does not make the mistake of thinking that because the Supreme
-Personality of Godhead as Paramatma has entered into the body of every living entity, every living entity
-has become the Supreme Personality of Godhead. This is foolishness. Suppose a person enters into a
-room; that does not mean that the room has become that person. Similarly, that the Supreme Lord has
-entered into each of the 8,400,000 particular types of material bodies does not mean that each of these
-bodies has become the Supreme Lord. Because the Supreme Lord is present, however, a pure devotee
-accepts each body as the temple of the Lord, and since the devotee offers respect to such temples in full
-knowledge, he gives respect to every living entity in relationship with the Lord. Mayavadi philosophers
-wrongly think that because the Supreme Person has entered the body of a poor man, the Supreme Lord
-has become daridra-narayana, or poor Narayana. These are all blasphemous statements of atheists and
-nondevotees.
+Here it is clearly mentioned that meditation, which is an action of the mind, is not the perfect stage of
+samadhi, or absorption. In the beginning the mind is employed in attracting the form of the Supreme
+Personality of Godhead, but in the higher stages there is no question of using the mind. A devotee
+becomes accustomed to serving the Supreme Lord by purification of his senses. In other words, the yoga
+principles of meditation are required as long as one is not situated in pure devotional service. The mind is
+used to purify the senses, but when the senses are purified by meditation, there is no need to sit in a
+particular place and try to meditate upon the form of the Lord. One becomes so habituated that he
+automatically engages in the personal service of the Lord. When the mind forcibly is engaged upon the
+form of the Lord, this is called nirbija-yoga, or lifeless yoga, for the yogi does not automatically engage in
+the personal service of the Lord. But when he is constantly thinking of the Lord, that is called sabija-yoga,
+or living yoga. One has to be promoted to the platform of living yoga.
+One should engage in the service of the Lord twenty-four hours a day, as confirmed in the Brahmasamhita.
+The stage of premanjana-cchurita can be attained by developing complete love. When one's love
+for the Supreme Personality of Godhead in devotional service is fully developed, one always sees the Lord,
+even without artificially meditating on His form. His vision is divine because he has no other engagement.
+At this stage of spiritual realization it is not necessary to engage the mind artificially. Since the meditation
+recommended in the lower stages is a means to come to the platform of devotional service, those already
+engaged in the transcendental loving service of the Lord are above such meditation. This stage of
+perfection is called Krsna consciousness.
 </p>
 
 </div>
@@ -83,7 +134,7 @@ nondevotees.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

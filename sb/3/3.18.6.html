@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.18.6.html">3.18.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa tudyamano 'ri-durukta-tomarair
 damstragra-gam gam upalaksya bhitam
 todam mrsan niragad ambu-madhyad
 grahahatah sa-karenur yathebhah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--He; tudyamanah--being pained; ari--of the enemy; durukta--by the abusive words; tomaraih--by the
 weapons; damstra-agra--on the ends of His tusks; gam--situated; gam--the earth; upalaksya--seeing;
 bhitam--frightened; todam--the pain; mrsan--bearing; niragat--He came out; ambu-madhyat--from the
 midst of the water; graha--by a crocodile; ahatah--attacked; sa-karenuh--along with a she-elephant; yatha--
 as; ibhah--an elephant.
-<p></p>
+<br>
 <h2>Translation</h2>
 Although the Lord was pained by the shaftlike abusive words of the demon, He bore the pain. But seeing
 that the earth on the ends of His tusks was frightened, He rose out of the water just as an elephant
 emerges with its female companion when assailed by an alligator.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Mayavadi philosopher cannot understand that the Lord has feelings. The Lord is satisfied if
 someone offers Him a nice prayer, and similarly, if someone decries His existence or calls Him by ill
@@ -84,7 +123,7 @@ protection to His devotee, He is always ready to tolerate insulting words from t
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

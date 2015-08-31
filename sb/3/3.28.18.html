@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,62 +81,64 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.18.html">3.28.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-adhyatmikanusravanan
-nama-sankirtanac ca me
-arjavenarya-sangena
-nirahankriyaya tatha
-<p></p>
+kirtanya-tirtha-yasasam
+punya-sloka-yasaskaram
+dhyayed devam samagrangam
+yavan na cyavate manah
+<br>
 <h2>Synonyms</h2>
-adhyatmika--spiritual matters; anusravanat--from hearing; nama-sankirtanat--from chanting the holy
-name; ca--and; me--My; arjavena--with straightforward behavior; arya-sangena--with association of saintly
-persons; nirahankriyaya--without false ego; tatha--thus.
-<p></p>
+kirtanya--worth singing; tirtha-yasasam--the glories of the Lord; punya-sloka--of the devotees; yasahkaram--
+enhancing the glory; dhyayet--one should meditate; devam--upon the Lord; samagra-angam--all
+the limbs; yavat--as much as; na--not; cyavate--deviates; manah--the mind.
+<br>
 <h2>Translation</h2>
-A devotee should always try to hear about spiritual matters and should always utilize his time in
-chanting the holy name of the Lord. His behavior should always be straightforward and simple, and
-although he is not envious but friendly to everyone, he should avoid the company of persons who are not
-spiritually advanced.
-<p></p>
+The glory of the Lord is always worth singing, for His glories enhance the glories of His devotees. One
+should therefore meditate upon the Supreme Personality of Godhead and upon His devotees. One should
+meditate on the eternal form of the Lord until the mind becomes fixed.
+<br>
 <h2>Purport</h2>
-In order to advance in spiritual understanding, one has to hear from authentic sources about spiritual
-knowledge. One can understand the reality of spiritual life by following strict regulative principles and by
-controlling the senses. To have control it is necessary that one be nonviolent and truthful, refrain from
-stealing, abstain from sex life and possess only that which is absolutely necessary for keeping the body
-and soul together. One should not eat more than necessary, he should not collect more paraphernalia
-than necessary, he should not talk unnecessarily with common men, and he should not follow the rules
-and regulations without purpose. He should follow the rules and regulations so that he may actually make
-advancement.
-There are eighteen qualifications mentioned in Bhagavad-gita, among which is simplicity. One should
-be without pride; one should not demand unnecessary respect from others, and one should be nonviolent.
-Amanitvam adambhitvam ahimsa. One should be very tolerant and simple, one should accept the spiritual
-master, and one should control the senses. These are mentioned here and in Bhagavad-gita as well. One
-should hear from authentic sources how to advance in spiritual life; such instructions should be taken
-from the acarya and should be assimilated.
-It is especially mentioned here, nama-sankirtanac ca: one should chant the holy names of the Lord--
-Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare--either
-individually or with others. Lord Caitanya has given special stress to chanting of these holy names of the
-Lord as the basic principle of spiritual advancement. Another word used here is arjavena, meaning
-"without diplomacy." A devotee should not make plans out of self-interest. Of course, preachers
-sometimes have to make some plan to execute the mission of the Lord under proper guidance, but
-regarding personal self-interest, a devotee should always be without diplomacy, and he should avoid the
-company of persons who are not advancing in spiritual life. Another word is arya. Aryans are persons who
-are advancing in knowledge of Krsna consciousness as well as in material prosperity. The difference
-between the Aryan and non-Aryan, the sura and asura, is in their standards of spiritual advancement.
-Association with persons who are not spiritually advanced is forbidden. Lord Caitanya advised, asatsanga-
-tyaga: one should avoid persons who are attached to the temporary. Asat is one who is too
-materially attached, who is not a devotee of the Lord and who is too attached to women or enjoyable
-material things. Such a person, according to Vaisnava philosophy, is a persona non grata.
-A devotee should not be proud of his acquisitions. The symptoms of a devotee are meekness and
-humility. Although spiritually very advanced, he will always remain meek and humble, as Kaviraja
-Gosvami and all the other Vaisnavas have taught us by personal example. Caitanya Mahaprabhu taught
-that one should be humbler than the grass on the street and more tolerant than the tree. One should not
-be proud or falsely puffed up. In this way one will surely advance in spiritual life.
+One has to fix his mind on the Supreme Personality of Godhead constantly. When one is accustomed to
+thinking of one of the innumerable forms of the Lord--Krsna, Visnu, Rama, Narayana, etc.--he has
+reached the perfection of yoga. This is confirmed in the Brahma-samhita: a person who has developed
+pure love for the Lord, and whose eyes are smeared with the ointment of transcendental loving exchange,
+always sees within his heart the Supreme Personality of Godhead. The devotees especially see the Lord in
+the beautiful blackish form of Syamasundara. That is the perfection of yoga. This yoga system should be
+continued until the mind does not vacillate for a moment. Om tad visnoh paramam padam sada pasyanti
+surayah: the form of Visnu is the highest individuality and is always visible to sages and saintly persons.
+The same purpose is served when a devotee worships the form of the Lord in the temple. There is no
+difference between devotional service in the temple and meditation on the form of the Lord, since the
+form of the Lord is the same whether He appears within the mind or in some concrete element. There are
+eight kinds of forms recommended for the devotees to see. The forms may be made out of sand, clay,
+wood or stone, they may be contemplated within the mind or made of jewels, metal or painted colors, but
+all the forms are of the same value. It is not that one who meditates on the form within the mind sees
+differently from one who worships the form in the temple. The Supreme Personality of Godhead is
+absolute, and there is therefore no difference between the two. The impersonalists, who desire to
+disregard the eternal form of the Lord, imagine some round figure. They especially prefer the omkara,
+which also has form. In Bhagavad-gita it is stated that omkara is the letter form of the Lord. Similarly,
+there are statue forms and painting forms of the Lord.
+Another significant word in this verse is punya-sloka-yasaskaram. The devotee is called punya-sloka. As
+one becomes purified by chanting the holy name of the Lord, so one can become purified simply by
+chanting the name of a holy devotee. The pure devotee of the Lord and the Lord Himself are nondifferent.
+It is sometimes feasible to chant the name of a holy devotee. This is a very sanctified process. Lord
+Caitanya was once chanting the holy names of the gopis when His students criticized Him: "Why are You
+chanting the names of the gopis? Why not 'Krsna'?" Lord Caitanya was irritated by the criticism, and so
+there was some misunderstanding between Him and His students. He wanted to chastise them for desiring
+to instruct Him on the transcendental process of chanting.
+The beauty of the Lord is that the devotees who are connected with His activities are also glorified.
+Arjuna, Prahlada, Janaka Maharaja, Bali Maharaja and many other devotees were not even in the
+renounced order of life, but were householders. Some of them, such as Prahlada Maharaja and Bali
+Maharaja, were born of demoniac families. Prahlada Maharaja's father was a demon, and Bali Maharaja
+was the grandson of Prahlada Maharaja, but still they have become famous because of their association
+with the Lord. Anyone who is eternally associated with the Lord is glorified with the Lord. The
+conclusion is that a perfect yogi should always be accustomed to seeing the form of the Lord, and unless
+the mind is fixed in that way, he should continue practicing yoga.
 </p>
 
 </div>
@@ -106,7 +146,7 @@ be proud or falsely puffed up. In this way one will surely advance in spiritual 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

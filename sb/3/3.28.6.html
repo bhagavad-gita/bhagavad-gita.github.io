@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.6.html">3.28.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-maitreya uvaca
-iti matur vacah slaksnam
-pratinandya maha-munih
-ababhase kuru-srestha
-pritas tam karunarditah
-<p></p>
+sva-dhisnyanam eka-dese
+manasa prana-dharanam
+vaikuntha-lilabhidhyanam
+samadhanam tathatmanah
+<br>
 <h2>Synonyms</h2>
-maitreyah uvaca--Maitreya said; iti--thus; matuh--of His mother; vacah--the words; slaksnam--gentle;
-pratinandya--welcoming; maha-munih--the great sage Kapila; ababhase--spoke; kuru-srestha--O best
-among the Kurus, Vidura; pritah--pleased; tam--to her; karuna--with compassion; arditah--moved.
-<p></p>
+sva-dhisnyanam--within the vital air circles; eka-dese--in one spot; manasa--with the mind; prana--the
+vital air; dharanam--fixing; vaikuntha-lila--on the pastimes of the Supreme Personality of Godhead;
+abhidhyanam--concentration; samadhanam--samadhi; tatha--thus; atmanah--of the mind.
+<br>
 <h2>Translation</h2>
-Sri Maitreya said: O best amongst the Kurus, the great sage Kapila, moved by great compassion and
-pleased by the words of His glorious mother, spoke as follows.
-<p></p>
+Fixing the vital air and the mind in one of the six circles of vital air circulation within the body, thus
+concentrating one's mind on the transcendental pastimes of the Supreme Personality of Godhead, is called
+samadhi, or samadhana, of the mind.
+<br>
 <h2>Purport</h2>
-Lord Kapila was very satisfied by the request of His glorious mother because she was thinking not only
-in terms of her personal salvation but in terms of all the fallen conditioned souls. The Lord is always
-compassionate towards the fallen souls of this material world, and therefore He comes Himself or sends
-His confidential servants to deliver them. Since He is perpetually compassionate towards them, if some of
-His devotees also become compassionate towards them, He is very pleased with the devotees. In
-Bhagavad-gita it is clearly stated that persons who are trying to elevate the condition of the fallen souls by
-preaching the conclusion of Bhagavad-gita--namely, full surrender unto the Personality of Godhead--are
-very dear to Him. Thus when the Lord saw that His beloved mother was very compassionate towards the
-fallen souls, He was pleased, and He also became compassionate towards her.
+There are six circles of vital air circulation within the body. The first circle is within the belly, the
+second circle is in the area of the heart, the third is in the area of the lungs, the fourth is on the palate, the
+fifth is between the eyebrows, and the highest, the sixth circle, is above the brain. One has to fix his mind
+and the circulation of the vital air and thus think of the transcendental pastimes of the Supreme Lord. It is
+never mentioned that one should concentrate on the impersonal or void. It is clearly stated, vaikunthalila.
+Lila means "pastimes." Unless the Absolute Truth, the personality of Godhead, has transcendental
+activities, where is the scope for thinking of these pastimes? It is through the processes of devotional
+service, chanting and hearing of the pastimes of the Supreme Personality of Godhead, that one can
+achieve this concentration. As described in the Srimad-Bhagavatam, the Lord appears and disappears
+according to His relationships with different devotees. The Vedic literatures contain many narrations of
+the Lord's pastimes, including the Battle of Kuruksetra and historical facts relating to the life and precepts
+of devotees like Prahlada Maharaja, Dhruva Maharaja and Ambarisa Maharaja. One need only concentrate
+his mind on one such narration and become always absorbed in its thought. Then he will be in samadhi.
+Samadhi is not an artificial bodily state; it is the state achieved when the mind is virtually absorbed in
+thoughts of the Supreme Personality of Godhead.
 </p>
 
 </div>
@@ -81,7 +126,7 @@ fallen souls, He was pleased, and He also became compassionate towards her.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

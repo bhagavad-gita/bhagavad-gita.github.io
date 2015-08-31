@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.24.html">3.28.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aham uccavacair dravyaih
-kriyayotpannayanaghe
-naiva tusye 'rcito 'rcayam
-bhuta-gramavamaninah
-<p></p>
+uru suparna-bhujayor adhi sobhamanav
+ojo-nidhi atasika-kusumavabhasau
+vyalambi-pita-vara-vasasi vartamanakanci-
+kalapa-parirambhi nitamba-bimbam
+<br>
 <h2>Synonyms</h2>
-aham--I; ucca-avacaih--with various; dravyaih--paraphernalia; kriyaya--by religious rituals; utpannaya--
-accomplished; anaghe--O sinless mother; na--not; eva--certainly; tusye--am pleased; arcitah--worshiped;
-arcayam--in the Deity form; bhuta-grama--to other living entities; avamaninah--with those who are
-disrespectful.
-<p></p>
+uru--the two thighs; suparna--of Garuda; bhujayoh--the two shoulders; adhi--on; sobhamanau--
+beautiful; ojah-nidhi--the storehouse of all energy; atasika-kusuma--of the linseed flower; avabhasau--like
+the luster; vyalambi--extending down; pita--yellow; vara--exquisite; vasasi--on the cloth; vartamana--
+being; kanci-kalapa--by a girdle; parirambhi--encircled; nitamba-bimbam--His rounded hips.
+<br>
 <h2>Translation</h2>
-My dear Mother, even if he worships with proper rituals and paraphernalia, a person who is ignorant of
-My presence in all living entities never pleases Me by the worship of My Deities in the temple.
-<p></p>
+Next, the yogi should fix his mind in meditation on the Personality of Godhead's thighs, the storehouse
+of all energy. The Lord's thighs are whitish blue, like the luster of the linseed flower, and appear most
+graceful when the Lord is carried on the shoulders of Garuda. Also the yogi should contemplate His
+rounded hips, which are encircled by a girdle that rests on the exquisite yellow silk cloth that extends
+down to His ankles.
+<br>
 <h2>Purport</h2>
-There are sixty-four different prescriptions for worship of the Deity in the temple. There are many items
-offered to the Deity, some valuable and some less valuable. It is prescribed in Bhagavad-gita: "If a devotee
-offers Me a small flower, a leaf, some water or a little fruit, I will accept it." The real purpose is to exhibit
-one's loving devotion to the Lord; the offerings themselves are secondary. If one has not developed loving
-devotion to the Lord and simply offers many kinds of foodstuffs, fruits and flowers without real devotion,
-the offering will not be accepted by the Lord. We cannot bribe the Personality of Godhead. He is so great
-that our bribery has no value. Nor has He any scarcity; since He is full in Himself, what can we offer Him?
-Everything is produced by Him. We simply offer to show our love and gratitude to the Lord.
-This gratitude and love for God is exhibited by a pure devotee, who knows that the Lord lives in every
-living entity. As such, temple worship necessarily includes distribution of prasada. It is not that one
-should create a temple in his private apartment or private room, offer something to the Lord, and then eat.
-Of course, that is better than simply cooking foodstuffs and eating without understanding one's
-relationship with the Supreme Lord; people who act in this manner are just like animals. But the devotee
-who wants to elevate himself to the higher level of understanding must know that the Lord is present in
-every living entity, and, as stated in the previous verse, one should be compassionate to other living
-entities. A devotee should worship the Supreme Lord, be friendly to persons who are on the same level
-and be compassionate to the ignorant. One should exhibit his compassion for ignorant living entities by
-distributing prasada. Distribution of prasada to the ignorant masses of people is essential for persons who
-make offerings to the Personality of Godhead.
-Real love and devotion is accepted by the Lord. Many valuable foodstuffs may be presented to a person,
-but if the person is not hungry, all such offerings are useless for him. Similarly, we may offer many
-valuable items to the Deity, but if we have no real sense of devotion and no real sense of the Lord's
-presence everywhere, then we are lacking in devotional service; in such a state of ignorance, we cannot
-offer anything acceptable to the Lord.
+The Personality of Godhead is the reservoir of all strength, and His strength rests on the thighs of His
+transcendental body. His whole body is full of opulences: all riches, all strength, all fame, all beauty, all
+knowledge and all renunciation. The yogi is advised to meditate upon the transcendental form of the
+Lord, beginning from the soles of the feet and then gradually rising to the knees, to the thighs, and finally
+arriving at the face. The system of meditating on the Supreme Personality of Godhead begins from His
+feet.
+The description of the transcendental form of the Lord is exactly represented in the arca-vigraha, the
+statue in the temples. Generally, the lower part of the body of the statue of the Lord is covered with
+yellow silk. That is the Vaikuntha dress, or the dress the Lord wears in the spiritual sky. This cloth
+extends down to the Lord's ankles. Thus, since the yogi has so many transcendental objectives on which
+to meditate, there is no reason for his meditating on something imaginary, as is the practice of the socalled
+yogis whose objective is impersonal.
 </p>
 
 </div>
@@ -96,7 +126,7 @@ offer anything acceptable to the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

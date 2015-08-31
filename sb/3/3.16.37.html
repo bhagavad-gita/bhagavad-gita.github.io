@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.16.37.html">3.16.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 visvasya yah sthiti-layodbhava-hetur adyo
 yogesvarair api duratyaya-yogamayah
 ksemam vidhasyati sa no bhagavams tryadhisas
 tatrasmadiya-vimrsena kiyan iharthah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 visvasya--of the universe; yah--who; sthiti--maintenance; laya--destruction; udbhava--creation; hetuh--
 the cause; adyah--the most ancient person; yoga-isvaraih--by the masters of yoga; api--even; duratyaya--
@@ -61,13 +100,13 @@ cannot be easily understood; yoga-mayah--His yogamaya potency; ksemam--good; vid
 sah--He; nah--of us; bhagavan--the Supreme Personality of Godhead; tri-adhisah--the controller of the
 three modes of material nature; tatra--there; asmadiya--by our; vimrsena--deliberation; kiyan--what; iha--
 on this subject; arthah--purpose.
-<p></p>
+<br>
 <h2>Translation</h2>
 My dear sons, the Lord is the controller of the three modes of nature and is responsible for the creation,
 preservation and dissolution of the universe. His wonderful creative power, yogamaya, cannot be easily
 understood even by the masters of yoga. That most ancient person, the Personality of Godhead, will alone
 come to our rescue. What purpose can we serve on His behalf by deliberating on the subject?
-<p></p>
+<br>
 <h2>Purport</h2>
 When something is arranged by the Supreme Personality of Godhead, one should not be disturbed by it,
 even if it appears to be a reverse according to one's calculations. For example, sometimes we see that a
@@ -95,7 +134,7 @@ Victory of Hiranyaksa Over All the Directions of the Universe
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

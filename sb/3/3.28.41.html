@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.41.html">3.28.41</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.41</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/41"><b>41</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yad vanaspatayo bhita
-latas causadhibhih saha
-sve sve kale 'bhigrhnanti
-puspani ca phalani ca
-<p></p>
+bhutendriyantah-karanat
+pradhanaj jiva-samjnitat
+atma tatha prthag drasta
+bhagavan brahma-samjnitah
+<br>
 <h2>Synonyms</h2>
-yat--because of whom; vanah-patayah--the trees; bhitah--fearful; latah--creepers; ca--and; osadhibhih--
-herbs; saha--with; sve sve kale--each in its own season; abhigrhnanti--bear; puspani--flowers; ca--and;
-phalani--fruits; ca--also.
-<p></p>
+bhuta--the five elements; indriya--the senses; antah-karanat--from the mind; pradhanat--from the
+pradhana; jiva-samjnitat--from the jiva soul; atma--the Paramatma; tatha--so; prthak--different; drasta--the
+seer; bhagavan--the Personality of Godhead; brahma-samjnitah--called Brahman.
+<br>
 <h2>Translation</h2>
-Out of fear of the Supreme Personality of Godhead the trees, creepers, herbs and seasonal plants and
-flowers blossom and fructify, each in its own season.
-<p></p>
+The Supreme Personality of Godhead, who is known as Parambrahma, is the seer. He is different from
+the jiva soul, or individual living entity, who is combined with the senses, the five elements and
+consciousness.
+<br>
 <h2>Purport</h2>
-As the sun rises and sets and the seasonal changes ensue at their appointed times by the
-superintendence of the Supreme Personality of Godhead, so the seasonal plants, flowers, herbs and trees
-all grow under the direction of the Supreme Lord. It is not that plants grow automatically, without any
-cause, as the atheistic philosophers say. Rather, they grow in pursuance of the supreme order of the
-Supreme Personality of Godhead. It is confirmed in the Vedic literature that the Lord's diverse energies
-are working so nicely that it appears that everything is being done automatically.
+A clear conception of the complete whole is given herewith. The living entity is different from the
+material elements, and the supreme living entity, the Personality of Godhead, who is the creator of the
+material elements, is also different from the individual living entity. This philosophy is propounded by
+Lord Caitanya as acintya-bhedabheda-tattva. Everything is simultaneously one with and different from
+everything else. The cosmic manifestation created by the Supreme Lord by His material energy is also
+simultaneously different and nondifferent from Him. The material energy is nondifferent from the
+Supreme Lord, but at the same time, because that energy is acting in a different way, it is different from
+Him. Similarly, the individual living entity is one with and different from the Supreme Lord. This
+"simultaneously one and different" philosophy is the perfect conclusion of the Bhagavata school, as
+confirmed here by Kapiladeva.
+Living entities are compared to the sparks of a fire. As stated in the previous verse, fire, flame, smoke
+and firewood are combined together. Here the living entity, the material elements and the Supreme
+Personality of Godhead are combined together. The exact position of the living entities is just like that of
+the sparks of a fire; they are part and parcel. The material energy is compared to the smoke. The fire is
+also part and parcel of the Supreme Lord. In the Visnu purana it is said that whatever we can see or
+experience, either in the material or spiritual world, is an expansion of the different energies of the
+Supreme Lord. As fire distributes its light and heat from one place, the Supreme Personality of Godhead
+distributes His different energies all over His creation.
+The four principles of the Vaisnava philosophic doctrine are suddha-advaita (purified oneness), dvaitaadvaita
+(simultaneous oneness and difference), visista-advaita and dvaita. All four principles of Vaisnava
+philosophy are based on the thesis of Srimad-Bhagavatam explained in these two verses.
 </p>
 
 </div>
@@ -77,7 +132,7 @@ are working so nicely that it appears that everything is being done automaticall
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

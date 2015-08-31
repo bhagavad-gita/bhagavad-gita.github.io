@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.3.html">3.28.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-virago yena puruso
-bhagavan sarvato bhavet
-acaksva jiva-lokasya
-vividha mama samsrtih
-<p></p>
+gramya-dharma-nivrttis ca
+moksa-dharma-ratis tatha
+mita-medhyadanam sasvad
+vivikta-ksema-sevanam
+<br>
 <h2>Synonyms</h2>
-viragah--detached; yena--by which; purusah--a person; bhagavan--my dear Lord; sarvatah--completely;
-bhavet--may become; acaksva--please describe; jiva-lokasya--for the people in general; vividhah--
-manifold; mama--for myself; samsrtih--repetition of birth and death.
-<p></p>
+gramya--conventional; dharma--religious practice; nivrttih--ceasing; ca--and; moksa--for salvation;
+dharma--religious practice; ratih--being attracted to; tatha--in that way; mita--little; medhya--pure;
+adanam--eating; sasvat--always; vivikta--secluded; ksema--peaceful; sevanam--dwelling.
+<br>
 <h2>Translation</h2>
-Devahuti continued: My dear Lord, please also describe in detail, both for me and for people in general,
-the continual process of birth and death, for by hearing of such calamities we may become detached from
-the activities of this material world.
-<p></p>
+One should cease performing conventional religious practices and should be attracted to those which
+lead to salvation. One should eat very frugally and should always remain secluded so that he can achieve
+the highest perfection of life.
+<br>
 <h2>Purport</h2>
-In this verse the word samsrtih is very important. Sreyah-srti means the prosperous path of
-advancement towards the Supreme Personality of Godhead, and samsrti means the continued journey on
-the path of birth and death towards the darkest region of material existence. People who have no
-knowledge of this material world, God and their actual intimate relationship with Him are actually going
-to the darkest region of material existence in the name of progress in the material advancement of
-civilization. To enter the darkest region of material existence means to enter into a species of life other
-than the human species. Ignorant men do not know that after this life they are completely under the grip
-of material nature and will be offered a life which may not be very congenial. How a living entity gets
-different kinds of bodies will be explained in the next chapter. This continual change of bodies in birth
-and death is called samsara. Devahuti requests her glorious son, Kapila Muni, to explain about this
-continued journey to impress upon the conditioned souls that they are undergoing a path of degradation
-by not understanding the path of bhakti-yoga, devotional service.
+It is recommended herein that religious practice for economic development or the satisfaction of sense
+desires should be avoided. Religious practices should be executed only to gain freedom from the clutches
+of material nature. It is stated in the beginning of Srimad-Bhagavatam that the topmost religious practice
+is that by which one can attain to the transcendental devotional service of the Lord, without reason or
+cause. Such religious practice is never hampered by any impediments, and by its performance one actually
+becomes satisfied. Here this is recommended as moksa-dharma, religious practice for salvation, or
+transcendence of the clutches of material contamination. Generally people execute religious practices for
+economic development or sense gratification, but that is not recommended for one who wants to advance
+in yoga.
+The next important phrase is mita-medhyadanam, which means that one should eat very frugally. It is
+recommended in the Vedic literatures that a yogi eat only half what he desires according to his hunger. If
+one is so hungry that he could devour one pound of foodstuffs, then instead of eating one pound, he
+should consume only half a pound and supplement this with four ounces of water; one fourth of the
+stomach should be left empty for passage of air in the stomach. If one eats in this manner, he will avoid
+indigestion and disease. The yogi should eat in this way, as recommended in the Srimad-Bhagavatam and
+all other standard scriptures. The yogi should live in a secluded place, where his yoga practice will not be
+disturbed.
 </p>
 
 </div>
@@ -84,7 +128,7 @@ by not understanding the path of bhakti-yoga, devotional service.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.31.html">3.28.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato varnas ca catvaras
-tesam brahmana uttamah
-brahmanesv api veda-jno
-hy artha-jno 'bhyadhikas tatah
-<p></p>
+tasyavalokam adhikam krpayatighoratapa-
+trayopasamanaya nisrstam aksnoh
+snigdha-smitanugunitam vipula-prasadam
+dhyayec ciram vipula-bhavanaya guhayam
+<br>
 <h2>Synonyms</h2>
-tatah--among them; varnah--classes; ca--and; catvarah--four; tesam--of them; brahmanah--a brahmana;
-uttamah--best; brahmanesu--among the brahmanas; api--moreover; veda--the Vedas; jnah--one who
-knows; hi--certainly; artha--the purpose; jnah--one who knows; abhyadhikah--better; tatah--than him.
-<p></p>
+tasya--of the Personality of Godhead; avalokam--glances; adhikam--frequent; krpaya--with compassion;
+atighora--most fearful; tapa-traya--threefold agonies; upasamanaya--soothing; nisrstam--cast; aksnoh--
+from His eyes; snigdha--loving; smita--smiles; anugunitam--accompanied by; vipula--abundant;
+prasadam--full of grace; dhyayet--he should contemplate; ciram--for a long time; vipula--full; bhavanaya--
+with devotion; guhayam--in the heart.
+<br>
 <h2>Translation</h2>
-Among human beings, the society which is divided according to quality and work is best, and in that
-society, the intelligent men, who are designated as brahmanas, are best. Among the brahmanas, one who
-has studied the Vedas is the best, and among the brahmanas who have studied the Vedas, one who knows
-the actual purport of Veda is the best.
-<p></p>
+The yogis should contemplate with full devotion the compassionate glances frequently cast by the
+Lord's eyes, for they soothe the most fearful threefold agonies of His devotees. His glances, accompanied
+by loving smiles, are full of abundant grace.
+<br>
 <h2>Purport</h2>
-The system of four classifications in human society according to quality and work is very scientific. This
-system of brahmanas, ksatriyas, vaisyas and sudras has now become vitiated as the present caste system in
-India, but it appears that this system has been current a very long time, since it is mentioned in SrimadBhagavatam
-and Bhagavad-gita. Unless there is such a division of the social orders in human society,
-including the intelligent class, the martial class, the mercantile class and the laborer class, there is always
-confusion as to who is to work for what purpose. A person trained to the stage of understanding the
-Absolute Truth is a brahmana, and when such a brahmana is veda jna, he understands the purpose of
-Veda. The purpose of Veda is to understand the Absolute. One who understands the Absolute Truth in
-three phases, namely Brahman, Paramatma and Bhagavan, and who understands the term Bhagavan to
-mean the Supreme Personality of Godhead, is considered to be the best of the brahmanas, or a Vaisnava.
+As long as one is in conditional life, in the material body, it is natural that he will suffer from anxieties
+and agonies. One cannot avoid the influence of material energy, even when one is on the transcendental
+plane. Sometimes disturbances come, but the agonies and anxieties of the devotees are at once mitigated
+when they think of the Supreme Personality of Godhead in His beautiful form or the smiling face of the
+Lord. The Lord bestows innumerable favors upon His devotee, and the greatest manifestation of His grace
+is His smiling face, which is full of compassion for His pure devotees.
 </p>
 
 </div>
@@ -83,7 +119,7 @@ mean the Supreme Personality of Godhead, is considered to be the best of the bra
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

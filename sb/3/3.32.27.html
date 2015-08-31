@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.27.html">3.32.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nityarudha-samadhitvat
-paravrtta-guna-bhrama
-na sasmara tadatmanam
-svapne drstam ivotthitah
-<p></p>
+etavan eva yogena
+samagreneha yoginah
+yujyate 'bhimato hy artho
+yad asangas tu krtsnasah
+<br>
 <h2>Synonyms</h2>
-nitya--eternal; arudha--situated in; samadhitvat--from trance; paravrtta--freed from; guna--of the modes
-of material nature; bhrama--illusion; na sasmara--she did not remember; tada--then; atmanam--her
-material body; svapne--in a dream; drstam--seen; iva--just as; utthitah--one who has arisen.
-<p></p>
+etavan--of such a measure; eva--just; yogena--by yoga practice; samagrena--all; iha--in this world;
+yoginah--of the yogi; yujyate--is achieved; abhimatah--desired; hi--certainly; arthah--purpose; yat--which;
+asangah--detachment; tu--indeed; krtsnasah--completely.
+<br>
 <h2>Translation</h2>
-Situated in eternal trance and freed from illusion impelled by the modes of material nature, she forgot
-her material body, just as one forgets his different bodies in a dream.
-<p></p>
+The greatest common understanding for all yogis is complete detachment from matter, which can be
+achieved by different kinds of yoga.
+<br>
 <h2>Purport</h2>
-A great Vaisnava said that he who has no remembrance of his body is not bound to material existence.
-As long as we are conscious of our bodily existence, it is to be understood that we are living conditionally,
-under the three modes of material nature. When one forgets his bodily existence, his conditional, material
-life is over. This forgetfulness is actually possible when we engage our senses in the transcendental loving
-service of the Lord. In the conditional state, one engages his senses as a member of a family or as a
-member of a society or country. But when one forgets all such membership in material circumstances and
-realizes that he is an eternal servant of the Supreme Lord, that is actual forgetfulness of material existence.
-This forgetfulness actually occurs when one renders service unto the Lord. A devotee no longer works
-with the body for sense gratification with family, society, country, humanity and so on. He simply works
-for the Supreme Personality of Godhead, Krsna. That is perfect Krsna consciousness.
-A devotee always merges in transcendental happiness, and therefore he has no experience of material
-distresses. This transcendental happiness is called eternal bliss. According to the opinion of devotees,
-constant remembrance of the Supreme Lord is called samadhi, or trance. If one is constantly in trance,
-there is no possibility of his being attacked or even touched by the modes of material nature. As soon as
-one is freed from the contamination of the three material modes, he no longer has to take birth to
-transmigrate from one form to another in this material world.
+There are three kinds of yoga, namely bhakti-yoga, jnana-yoga and astanga-yoga. Devotees, jnanis and
+yogis all try to get out of the material entanglement. The jnanis try to detach their sensual activities from
+material engagement. The jnana-yogi thinks that matter is false and that Brahman is truth; he tries,
+therefore, by cultivation of knowledge, to detach the senses from material enjoyment. The astanga-yogis
+also try to control the senses. The devotees, however, try to engage the senses in the service of the Lord.
+Therefore it appears that the activities of the bhaktas, devotees, are better than those of the jnanis and
+yogis. The mystic yogis simply try to control the senses by practicing the eight divisions of yoga--yama,
+niyama, asana, pranayama, pratyahara, etc.--and the jnanis try by mental reasoning to understand that
+sense enjoyment is false. But the easiest and most direct process is to engage the senses in the service of
+the Lord.
+The purpose of all yoga is to detach one's sense activities from this material world. The final aims,
+however, are different. Jnanis want to become one with the Brahman effulgence, yogis want to realize
+Paramatma, and devotees want to develop Krsna consciousness and transcendental loving service to the
+Lord. That loving service is the perfect stage of sense control. The senses are actually active symptoms of
+life, and they cannot be stopped. They can be detached only if there is superior engagement. As it is
+confirmed in Bhagavad-gita, param drstva nivartate: the activities of the senses can be stopped if they are
+given superior engagements. The supreme engagement is engagement of the senses in the service of the
+Lord. That is the purpose of all yoga.
 </p>
 
 </div>
@@ -87,7 +128,7 @@ transmigrate from one form to another in this material world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

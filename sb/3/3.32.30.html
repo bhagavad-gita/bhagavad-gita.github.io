@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.30.html">3.32.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam sa kapiloktena
-margenaciratah param
-atmanam brahma-nirvanam
-bhagavantam avapa ha
-<p></p>
+etad vai sraddhaya bhaktya
+yogabhyasena nityasah
+samahitatma nihsango
+viraktya paripasyati
+<br>
 <h2>Synonyms</h2>
-evam--thus; sa--she (Devahuti); kapila--by Kapila; uktena--instructed; margena--by the path; aciratah--
-soon; param--supreme; atmanam--Supersoul; brahma--Brahman; nirvanam--cessation of materialistic
-existence; bhagavantam--the Supreme Personality of Godhead; avapa--she achieved; ha--certainly.
-<p></p>
+etat--this; vai--certainly; sraddhaya--with faith; bhaktya--by devotional service; yoga-abhyasena--by
+practice of yoga; nityasah--always; samahita-atma--he whose mind is fixed; nihsangah--aloof from material
+association; viraktya--by detachment; paripasyati--understands.
+<br>
 <h2>Translation</h2>
-My dear Vidura, by following the principles instructed by Kapila, Devahuti soon became liberated from
-material bondage, and she achieved the Supreme Personality of Godhead, as Supersoul, without difficulty.
-<p></p>
+This perfect knowledge can be achieved by a person who is already engaged in devotional service with
+faith, steadiness and full detachment, and who is always absorbed in thought of the Supreme. He is aloof
+from material association.
+<br>
 <h2>Purport</h2>
-Three words have been used in this connection to describe the achievement of Devahuti: atmanam,
-brahma-nirvanam and bhagavantam. These refer to the gradual process of discovery of the Absolute
-Truth, mentioned herein as the bhagavantam. The Supreme personality of Godhead resides in various
-Vaikuntha planets. Nirvana means to extinguish the pangs of material existence. When one is able to
-enter into the spiritual kingdom or into spiritual realization, one is automatically freed from material
-pangs. That is called brahma-nirvana. According to Vedic scripture, nirvana means cessation of the
-materialistic way of life. Atmanam means realization of the Supersoul within the heart. Ultimately, the
-highest perfection is realization of the Supreme Personality of Godhead. It is to be understood that
-Devahuti entered the planet which is called Kapila Vaikuntha. There are innumerable Vaikuntha planets
-predominated by the expansions of Visnu. All the Vaikuntha planets are known by a particular name of
-Visnu. As we understand from Brahma-samhita, advaitam acyutam anadim ananta-rupam. Ananta means
-"innumerable." The Lord has innumerable expansions of His transcendental form, and according to the
-different positions of the symbolical representations in His four hands, He is known as Narayana,
-Pradyumna, Aniruddha, Vasudeva, etc. There is also a Vaikuntha planet known as Kapila Vaikuntha, to
-which Devahuti was promoted to meet Kapila and reside there eternally, enjoying the company of her
-transcendental son.
+The atheistic mystic practitioner of yoga cannot understand this perfect knowledge. Only persons who
+engage in the practical activities of devotional service in full Krsna consciousness can become absorbed in
+full samadhi. It is possible for them to see and understand the actual fact of the entire cosmic
+manifestation and its cause. It is clearly stated here that this is not possible to understand for one who has
+not developed devotional service in full faith. The words samahitatma and samadhi are synonymous.
 </p>
 
 </div>
@@ -87,7 +116,7 @@ transcendental son.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

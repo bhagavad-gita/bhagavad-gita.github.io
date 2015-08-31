@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.29.22.html">3.29.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/29">29</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ksut-trt-parito 'rka-davanalanilaih
-santapyamanah pathi tapta-valuke
-krcchrena prsthe kasaya ca taditas
-calaty asakto 'pi nirasramodake
-<p></p>
+yo mam sarvesu bhutesu
+santam atmanam isvaram
+hitvarcam bhajate maudhyad
+bhasmany eva juhoti sah
+<br>
 <h2>Synonyms</h2>
-ksut-trt--by hunger and thirst; paritah--afflicted; arka--sun; dava-anala--forest fires; anilaih--by winds;
-santapyamanah--being scorched; pathi--on a road; tapta-valuke--of hot sand; krcchrena--painfully;
-prsthe--on the back; kasaya--with a whip; ca--and; taditah--beaten; calati--he moves; asaktah--unable;
-api--although; nirasrama-udake--without shelter or water.
-<p></p>
+yah--one who; mam--Me; sarvesu--in all; bhutesu--living entities; santam--being present; atmanam--the
+Paramatma; isvaram--the Supreme Lord; hitva--disregarding; arcam--the Deity; bhajate--worships;
+maudhyat--because of ignorance; bhasmani--into ashes; eva--only; juhoti--offers oblations; sah--he.
+<br>
 <h2>Translation</h2>
-Under the scorching sun, the criminal has to pass through roads of hot sand with forest fires on both
-sides. He is whipped on the back by the constables because of his inability to walk, and he is afflicted by
-hunger and thirst, but unfortunately there is no drinking water, no shelter and no place for rest on the
-road.
+One who worships the Deity of Godhead in the temples but does not know that the Supreme Lord, as
+Paramatma, is situated in every living entity's heart, must be in ignorance and is compared to one who
+offers oblations into ashes.
+<br>
+<h2>Purport</h2>
+It is stated clearly herein that the Supreme Personality of Godhead, in His plenary expansion of
+Supersoul, is present in all living entities. The living entities have 8,400,000 different kinds of bodies, and
+the Supreme Personality of Godhead is living in every body both as the individual soul and as the
+Supersoul. Since the individual soul is part and parcel of the Supreme Lord, in that sense the Lord is
+living in every body, and, as Supersoul, the Lord is also present as a witness. In both cases the presence of
+God in every living entity is essential. Therefore persons who profess to belong to some religious sect but
+who do not feel the presence of the Supreme Personality of Godhead in every living entity, and
+everywhere else, are in the mode of ignorance.
+If, without this preliminary knowledge of the Lord's omnipresence, one simply attaches himself to the
+rituals in a temple, church or mosque, it is as if he were offering butter into ashes rather than into the fire.
+One offers sacrifices by pouring clarified butter into a fire and chanting Vedic mantras, but even if there
+are Vedic mantras and all conditions are favorable, if the clarified butter is poured on ashes, then such a
+sacrifice will be useless. In other words, a devotee should not ignore any living entity. The devotee must
+know that in every living entity, however insignificant he may be, even in an ant, God is present, and
+therefore every living entity should be kindly treated and should not be subjected to any violence. In
+modern civilized society, slaughterhouses are regularly maintained and supported by a certain type of
+religious principle. But without knowledge of the presence of God in every living entity, any so-called
+advancement of human civilization, either spiritual or material, is to be understood as being in the mode
+of ignorance.
 </p>
 
 </div>
@@ -72,7 +130,7 @@ road.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

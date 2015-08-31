@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,66 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.13.html">3.28.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-salokya-sarsti-samipyasarupyaikatvam
-apy uta
-diyamanam na grhnanti
-vina mat-sevanam janah
-<p></p>
+prasanna-vadanambhojam
+padma-garbharuneksanam
+nilotpala-dala-syamam
+sankha-cakra-gada-dharam
+<br>
 <h2>Synonyms</h2>
-salokya--living on the same planet; sarsti--having the same opulence; samipya--to be a personal
-associate; sarupya--having the same bodily features; ekatvam--oneness; api--also; uta--even; diyamanam--
-being offered; na--not; grhnanti--do accept; vina--without; mat--My; sevanam--devotional service; janah--
-pure devotees.
-<p></p>
+prasanna--cheerful; vadana--countenance; ambhojam--lotuslike; padma-garbha--the interior of a lotus;
+aruna--ruddy; iksanam--with eyes; nila-utpala--blue lotus; dala--petals; syamam--swarthy; sankha--conch;
+cakra--discus; gada--club; dharam--bearing.
+<br>
 <h2>Translation</h2>
-A pure devotee does not accept any kind of liberation--salokya, sarsti, samipya, sarupya or ekatva--even
-though they are offered by the Supreme Personality of Godhead.
-<p></p>
+The Supreme Personality of Godhead has a cheerful, lotuslike countenance with ruddy eyes like the
+interior of a lotus and a swarthy body like the petals of a blue lotus. He bears a conch, discus and mace in
+three of His hands.
+<br>
 <h2>Purport</h2>
-Lord Caitanya teaches us how to execute pure devotional service out of spontaneous love for the
-Supreme Personality of Godhead. In the Siksastaka, He prays to the Lord: "O Lord, I do not wish to gain
-from You any wealth, nor do I wish to have a beautiful wife, nor do I wish to have many followers. All I
-want from You is that in life after life I may remain a pure devotee at Your lotus feet." There is a similarity
-between the prayers of Lord Caitanya and the statements of Srimad-Bhagavatam. Lord Caitanya prays, "in
-life after life," indicating that a devotee does not even desire the cessation of birth and death. The yogis
-and empiric philosophers desire cessation of the process of birth and death, but a devotee is satisfied to
-remain even in this material world and execute devotional service.
-It is clearly stated herein that a pure devotee does not desire ekatva, oneness with the Supreme Lord, as
-desired by the impersonalists, the mental speculators and the meditators. To become one with the
-Supreme Lord is beyond the dream of a pure devotee. Sometimes he may accept promotion to the
-Vaikuntha planets to serve the Lord there, but he will never accept merging into the Brahman effulgence,
-which he considers worse than hellish. Such ekatva, or merging into the effulgence of the Supreme Lord,
-is called kaivalya, but the happiness derived from kaivalya is considered by the pure devotee to be hellish.
-The devotee is so fond of rendering service to the Supreme Lord that the five kinds of liberation are not
-important to him. If one is engaged in pure transcendental loving service to the Lord, it is understood that
-he has already achieved the five kinds of liberation.
-When a devotee is promoted to the spiritual world, Vaikuntha, he receives four kinds of facilities. One
-of these is salokya, living on the same planet as the Supreme Personality. The Supreme Person, in His
-different plenary expansions, lives on innumerable Vaikuntha planets, and the chief planet is Krsnaloka.
-Just as within the material universe the chief planet is the sun, in the spiritual world the chief planet is
-Krsnaloka. From Krsnaloka, the bodily effulgence of Lord Krsna is distributed not only to the spiritual
-world but to the material world as well; it is covered by matter, however, in the material world. In the
-spiritual world there are innumerable Vaikuntha planets, and on each one the Lord is the predominating
-Deity. A devotee can be promoted to one such Vaikuntha planet to live with the Supreme Personality of
+It is definitely recommended herein that one concentrate his mind upon the form of Visnu. There are
+twelve different forms of Visnu, which are described in Teachings of Lord Caitanya. One cannot
+concentrate his mind on anything void or impersonal; the mind should be fixed on the personal form of
+the Lord, whose attitude is cheerful, as described in this verse. Bhagavad-gita states that meditation on the
+impersonal or void features is very troublesome to the meditator. Those who are attached to the
+impersonal or void features of meditation have to undergo a difficult process because we are not
+accustomed to concentrating our minds upon anything impersonal. Actually such concentration is not
+even possible. Bhagavad-gita also confirms that one should concentrate his mind on the personality of
 Godhead.
-In sarsti liberation the opulence of the devotee is equal to the opulence of the Supreme Lord. Samipya
-means to be a personal associate of the Supreme Lord. In sarupya liberation the bodily features of the
-devotee are exactly like those of the Supreme Person but for two or three symptoms found exclusively on
-the transcendental body of the Lord. Srivatsa, for example, the hair on the chest of the Lord, particularly
-distinguishes Him from His devotees.
-A pure devotee does not accept these five kinds of spiritual existence, even if they are offered, and he
-certainly does not hanker after material benefits, which are all insignificant in comparison with spiritual
-benefits. When Prahlada Maharaja was offered some material benefit, he stated: "My Lord, I have seen that
-my father achieved all kinds of material benefits, and even the demigods were afraid of his opulence, but
-still, in a second, You have finished his life and all his material prosperity." For a devotee there is no
-question of desiring any material or spiritual prosperity. He simply aspires to serve the Lord. That is his
-highest happiness.
+The color of the Personality of Godhead, Krsna, is described here as nilotpala-dala, meaning that it is
+like that of a lotus flower with petals tinted blue and white. People always ask why Krsna is blue. The
+color of the Lord has not been imagined by an artist. It is described in authoritative scripture. In the
+Brahma-samhita also, the color of Krsna's body is compared to that of a bluish cloud. The color of the
+Lord is not poetical imagination. There are authoritative descriptions in the Brahma-samhita, Srimad-
+Bhagavatam, Bhagavad-gita and many of the puranas of the Lord's body, His weapons and all other
+paraphernalia. The Lord's appearance is described here as padma-garbharuneksanam. His eyes resemble
+the inside of a lotus flower, and in His four hands He holds the four symbols: conchshell, discus, mace
+and lotus.
 </p>
 
 </div>
@@ -110,7 +129,7 @@ highest happiness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

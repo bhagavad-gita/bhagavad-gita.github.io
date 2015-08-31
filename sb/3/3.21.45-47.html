@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.21.45-47.html">3.21.45-47</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.45-47</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/45-47"><b>45-47</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 pravisya tat tirtha-varam
 adi-rajah sahatmajah
@@ -63,7 +102,7 @@ pramsum padma-palasaksam
 jatilam cira-vasasam
 upasamsritya malinam
 yatharhanam asamskrtam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 pravisya--entering; tat--that; tirtha-varam--best of sacred places; adi-rajah--the first monarch
 (Svayambhuva Manu); saha-atmajah--along with his daughter; dadarsa--saw; munim--the sage; asinam--
@@ -74,7 +113,7 @@ affectionate; apanga--sidelong; avalokanat--from the glance; tat--of Him; vyahrt
 moonlike; piyusa--the nectar; sravanena--by hearing; ca--and; pramsum--tall; padma--lotus flower;
 palasa--petal; aksam--eyes; jatilam--matted locks; cira-vasasam--having rags for clothes; upasamsritya--
 having approached; malinam--soiled; yatha--like; arhanam--gem; asamskrtam--unpolished.
-<p></p>
+<br>
 <h2>Translation</h2>
 Entering that most sacred spot with his daughter and going near the sage, the first monarch,
 Svayambhuva Manu, saw the sage sitting in his hermitage, having just propitiated the sacred fire by
@@ -83,7 +122,7 @@ long time, he was not emaciated, for the Lord had cast His affectionate sidelong
 had also heard the nectar flowing from the moonlike words of the Lord. The sage was tall, his eyes were
 large, like the petals of a lotus, and he had matted locks on his head. He was clad in rags. Svayambhuva
 Manu approached and saw him to be somewhat soiled, like an unpolished gem.
-<p></p>
+<br>
 <h2>Purport</h2>
 Here are some descriptions of a brahmacari-yogi. In the morning, the first duty of a brahmacari seeking
 spiritual elevation is huta-hutasana, to offer sacrificial oblations to the Supreme Lord. Those engaged in
@@ -116,7 +155,7 @@ appearance was gemlike.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

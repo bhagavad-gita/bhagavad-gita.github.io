@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.39.html">3.28.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na casya kascid dayito
-na dvesyo na ca bandhavah
-avisaty apramatto 'sau
-pramattam janam anta-krt
-<p></p>
+yatha putrac ca vittac ca
+prthan martyah pratiyate
+apy atmatvenabhimatad
+dehadeh purusas tatha
+<br>
 <h2>Synonyms</h2>
-na--not; ca--and; asya--of the Supreme Personality of Godhead; kascit--anyone; dayitah--dear; na--not;
-dvesyah--enemy; na--not; ca--and; bandhavah--friend; avisati--approaches; apramattah--attentive; asau--
-He; pramattam--inattentive; janam--persons; anta-krt--the destroyer.
-<p></p>
+yatha--as; putrat--from a son; ca--and; vittat--from wealth; ca--also; prthak--differently; martyah--a
+mortal man; pratiyate--is understood; api--even; atmatvena--by nature; abhimatat--for which one has
+affection; deha-adeh--from his material body, senses and mind; purusah--the liberated soul; tatha--
+similarly.
+<br>
 <h2>Translation</h2>
-No one is dear to the Supreme Personality of Godhead, nor is anyone His enemy or friend. But He gives
-inspiration to those who have not forgotten Him and destroys those who have.
-<p></p>
+Because of great affection for family and wealth, one accepts a son and some money as his own, and due
+to affection for the material body, one thinks that it is his. But actually, as one can understand that his
+family and wealth are different from him, the liberated soul can understand that he and his body are not
+the same.
+<br>
 <h2>Purport</h2>
-Forgetfulness of one's relationship with Lord Visnu, the Supreme Personality of Godhead, is the cause of
-one's repeated birth and death. A living entity is as eternal as the Supreme Lord, but due to his
-forgetfulness he is put into this material nature and transmigrates from one body to another, and when
-the body is destroyed, he thinks that he is also destroyed. Actually, this forgetfulness of his relationship
-with Lord Visnu is the cause of his destruction. Anyone who revives his consciousness of the original
-relationship receives inspiration from the Lord. This does not mean that the Lord is someone's enemy and
-someone else's friend. He helps everyone; one who is not bewildered by the influence of material energy is
-saved, and one who is bewildered is destroyed. It is said, therefore, harim vina na srtim taranti: no one can
-be saved from the repetition of birth and death without the help of the Supreme Lord. It is therefore the
-duty of all living entities to take shelter of the lotus feet of Visnu and thus save themselves from the cycle
-of birth and death.
+The status of real knowledge is explained in this verse. There are many children, but we accept some
+children as our sons and daughters because of our affection for them, although we know very well that
+these children are different from us. Similarly, because of great affection for money, we accept some
+amount of wealth in the bank as ours. In the same way, we claim that the body is ours because of affection
+for it. I say that it is "my" body. I then extend that possessive concept and say, "It is my hand, my leg,"
+and further, "It is my bank balance, my son, my daughter." But actually I know that the son and the
+money are separate from me. It is the same with the body; I am separate from my body. It is a question of
+understanding, and the proper understanding is called pratibuddha. By obtaining knowledge in devotional
+service, or Krsna consciousness, one can become a liberated soul.
 </p>
 
 </div>
@@ -82,7 +122,7 @@ of birth and death.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

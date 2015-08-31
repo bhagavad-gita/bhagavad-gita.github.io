@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.10.html">3.28.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-karma-nirharam uddisya
-parasmin va tad-arpanam
-yajed yastavyam iti va
-prthag-bhavah sa sattvikah
-<p></p>
+mano 'cirat syad virajam
+jita-svasasya yoginah
+vayv-agnibhyam yatha loham
+dhmatam tyajati vai malam
+<br>
 <h2>Synonyms</h2>
-karma--fruitive activities; nirharam--freeing himself from; uddisya--with the purpose of; parasmin--to
-the Supreme Personality of Godhead; va--or; tat-arpanam--offering the result of activities; yajet--may
-worship; yastavyam--to be worshiped; iti--thus; va--or; prthak-bhavah--separatist; sah--he; sattvikah--in
-the mode of goodness.
-<p></p>
+manah--the mind; acirat--soon; syat--can be; virajam--free from disturbances; jita-svasasya--whose
+breathing is controlled; yoginah--of the yogi; vayu-agnibhyam--by air and fire; yatha--just as; loham--gold;
+dhmatam--fanned; tyajati--becomes freed from; vai--certainly; malam--impurity.
+<br>
 <h2>Translation</h2>
-When a devotee worships the Supreme Personality of Godhead and offers the results of his activities in
-order to free himself from the inebrieties of fruitive activities, his devotion is in the mode of goodness.
-<p></p>
+The yogis who practice such breathing exercises are very soon freed from all mental disturbances, just
+as gold, when put into fire and fanned with air, becomes free from all impurities.
+<br>
 <h2>Purport</h2>
-The brahmanas, ksatriyas, vaisyas and sudras, along with the brahmacaris, grhasthas, vanaprasthas and
-sannyasis, are the members of the eight divisions of varnas and asramas, and they have their respective
-duties to perform for the satisfaction of the Supreme Personality of Godhead. When such activities are
-performed and the results are offered to the Supreme Lord, they are called karmarpanam, duties
-performed for the satisfaction of the Lord. If there is any inebriety or fault, it is atoned for by this offering
-process. But if this offering process is in the mode of goodness rather than in pure devotion, then the
-interest is different. The four asramas and the four varnas act for some benefit in accordance with their
-personal interests. Therefore such activities are in the mode of goodness; they cannot be counted in the
-category of pure devotion. Pure devotional service as described by Rupa Gosvami is free from all material
-desires. Anyabhilasita-sunyam. There can be no excuse for personal or material interest. Devotional
-activities should be transcendental to fruitive activities and empiric philosophical speculation. Pure
-devotional service is transcendental to all material qualities.
-Devotional service in the modes of ignorance, passion and goodness can be divided into eighty-one
-categories. There are different devotional activities, such as hearing, chanting, remembering, worshiping,
-offering prayer, rendering service and surrendering everything, and each of them can be divided into three
-qualitative categories. There is hearing in the mode of passion, in the mode of ignorance and in the mode
-of goodness. Similarly, there is chanting in the mode of ignorance, passion and goodness, etc. Three
-multiplied by nine equals twenty-seven, and when again multiplied by three it becomes eighty-one. One
-has to transcend all such mixed materialistic devotional service in order to reach the standard of pure
-devotional service, as explained in the next verses.
+This process of purifying the mind is also recommended by Lord Caitanya; He says that one should
+chant Hare Krsna. He says further, param vijayate: "All glories to Sri Krsna sankirtana!" All glories are
+given to the chanting of the holy names of Krsna because as soon as one begins this process of chanting,
+the mind becomes purified. Ceto-darpana-marjanam: by chanting the holy name of Krsna one is cleansed
+of the dirt that accumulates in the mind. One can purify the mind either by the breathing process or by
+the chanting process, just as one can purify gold by putting it in a fire and fanning it with a bellows.
 </p>
 
 </div>
@@ -92,7 +116,7 @@ devotional service, as explained in the next verses.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

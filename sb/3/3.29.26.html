@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.29.26.html">3.29.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/29">29</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-jivatas cantrabhyuddharah
-sva-grdhrair yama-sadane
-sarpa-vrscika-damsadyair
-dasadbhis catma-vaisasam
-<p></p>
+atmanas ca parasyapi
+yah karoty antarodaram
+tasya bhinna-drso mrtyur
+vidadhe bhayam ulbanam
+<br>
 <h2>Synonyms</h2>
-jivatah--alive; ca--and; antra--of his entrails; abhyuddharah--pulling out; sva-grdhraih--by dogs and
-vultures; yama-sadane--in the abode of Yamaraja; sarpa--by serpents; vrscika--scorpions; damsa--gnats;
-adyaih--and so on; dasadbhih--biting; ca--and; atma-vaisasam--torment of himself.
-<p></p>
+atmanah--of himself; ca--and; parasya--of another; api--also; yah--one who; karoti--discriminates;
+antara--between; udaram--the body; tasya--of him; bhinna-drsah--having a differential outlook; mrtyuh--
+as death; vidadhe--I cause; bhayam--fear; ulbanam--great.
+<br>
 <h2>Translation</h2>
-His entrails are pulled out by the hounds and vultures of hell, even though he is still alive to see it, and
-he is subjected to torment by serpents, scorpions, gnats and other creatures that bite him.
+As the blazing fire of death, I cause great fear to whoever makes the least discrimination between
+himself and other living entities because of a differential outlook.
+<br>
+<h2>Purport</h2>
+There are bodily differentiations among all varieties of living entities, but a devotee should not
+distinguish between one living entity and another on such a basis; a devotee's outlook should be that both
+the soul and Supersoul are equally present in all varieties of living entities.
 </p>
 
 </div>
@@ -69,7 +113,7 @@ he is subjected to torment by serpents, scorpions, gnats and other creatures tha
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

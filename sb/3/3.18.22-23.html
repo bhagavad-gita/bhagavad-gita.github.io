@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.18.22-23.html">3.18.22-23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.22-23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22-23"><b>22-23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 brahmovaca
 esa te deva devanam
@@ -58,7 +97,7 @@ agas-krd bhaya-krd duskrd
 asmad-raddha-varo 'surah
 anvesann apratiratho
 lokan atati kantakah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 brahma uvaca--Lord Brahma said; esah--this demon; te--Your; deva--O Lord; devanam--to the demigods;
 anghri-mulam--Your feet; upeyusam--to those having obtained; vipranam--to the brahmanas;
@@ -66,14 +105,14 @@ saurabheyinam--to the cows; bhutanam--to ordinary living entities; api--also; an
 an offender; bhaya-krt--a source of fear; duskrt--wrongdoer; asmat--from me; raddha-varah--having
 attained a boon; asurah--a demon; anvesan--searching; apratirathah--having no proper combatant; lokan--
 all over the universe; atati--he wanders; kantakah--being a pinprick for everyone.
-<p></p>
+<br>
 <h2>Translation</h2>
 Lord Brahma said: My dear Lord, this demon has proved to be a constant pinprick to the demigods, the
 brahmanas, the cows and innocent persons who are spotless and always dependent upon worshiping Your
 lotus feet. He has become a source of fear by unnecessarily harassing them. Since he has attained a boon
 from me, he has become a demon, always searching for a proper combatant, wandering all over the
 universe for this infamous purpose.
-<p></p>
+<br>
 <h2>Purport</h2>
 There are two classes of living entities; one is called sura, or the demigods, and the other is called asura,
 or the demons. Demons are generally fond of worshiping the demigods, and there are evidences that by
@@ -93,7 +132,7 @@ refuse it. They are happy simply engaging in the transcendental loving service o
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

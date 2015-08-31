@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.7.html">3.28.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-bhagavan uvaca
-bhakti-yogo bahu-vidho
-margair bhamini bhavyate
-svabhava-guna-margena
-pumsam bhavo vibhidyate
-<p></p>
+etair anyais ca pathibhir
+mano dustam asat-patham
+buddhya yunjita sanakair
+jita-prano hy atandritah
+<br>
 <h2>Synonyms</h2>
-sri-bhagavan uvaca--the Personality of Godhead replied; bhakti-yogah--devotional service; bahuvidhah--
-multifarious; margaih--with paths; bhamini--O noble lady; bhavyate--is manifest; svabhava--
-nature; guna--qualities; margena--in terms of behavior; pumsam--of the executors; bhavah--the
-appearance; vibhidyate--is divided.
-<p></p>
+etaih--by these; anyaih--by other; ca--and; pathibhih--processes; manah--the mind; dustam--
+contaminated; asat-patham--on the path of material enjoyment; buddhya--by the intelligence; yunjita--one
+must control; sanakaih--gradually; jita-pranah--the life air being fixed; hi--indeed; atandritah--alert.
+<br>
 <h2>Translation</h2>
-Lord Kapila, the Personality of Godhead, replied: O noble lady, there are multifarious paths of
-devotional service in terms of the different qualities of the executor.
-<p></p>
+By these processes, or any other true process, one must control the contaminated, unbridled mind,
+which is always attracted by material enjoyment, and thus fix himself in thought of the Supreme
+Personality of Godhead.
+<br>
 <h2>Purport</h2>
-Pure devotional service in Krsna consciousness is one because in pure devotional service there is no
-demand from the devotee to be fulfilled by the Lord. But generally people take to devotional service with a
-purpose. As stated in Bhagavad-gita, people who are not purified take to devotional service with four
-purposes. A person who is distressed because of material conditions becomes a devotee of the Lord and
-approaches the Lord for mitigation of his distress. A person in need of money approaches the Lord to ask
-for some improvement in his monetary condition. Others, who are not in distress or in need of monetary
-assistance but are seeking knowledge in order to understand the Absolute Truth, also take to devotional
-service, and they inquire into the nature of the Supreme Lord. This is very nicely described in Bhagavadgita
-(7.16). Actually the path of devotional service is one without a second, but according to the devotees'
-condition, devotional service appears in multifarious varieties, as will be nicely explained in the following
-verses.
+Etair anyais ca. The general yoga process entails observing the rules and regulations, practicing the
+different sitting postures, concentrating the mind on the vital circulation of the air and then thinking of
+the Supreme Personality of Godhead in His Vaikuntha pastimes. This is the general process of yoga. This
+same concentration can be achieved by other recommended processes, and therefore anyais ca, other
+methods, also can be applied. The essential point is that the mind, which is contaminated by material
+attraction, has to be bridled and concentrated on the Supreme Personality of Godhead. It cannot be fixed
+on something void or impersonal. For this reason, so-called yoga practices of voidism and impersonalism
+are not recommended in any standard yoga-sastra. The real yogi is the devotee because his mind is always
+concentrated on the pastimes of Lord Krsna. Therefore Krsna consciousness is the topmost yoga system.
 </p>
 
 </div>
@@ -84,7 +120,7 @@ verses.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

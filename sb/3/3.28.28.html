@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.28.html">3.28.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-jivah srestha hy ajivanam
-tatah prana-bhrtah subhe
-tatah sa-cittah pravaras
-tatas cendriya-vrttayah
-<p></p>
+kaumodakim bhagavato dayitam smareta
+digdham arati-bhata-sonita-kardamena
+malam madhuvrata-varutha-giropaghustam
+caityasya tattvam amalam manim asya kanthe
+<br>
 <h2>Synonyms</h2>
-jivah--living entities; sresthah--better; hi--indeed; ajivanam--than inanimate objects; tatah--than them;
-prana-bhrtah--entities with life symptoms; subhe--O blessed mother; tatah--than them; sa-cittah--entities
-with developed consciousness; pravarah--better; tatah--than them; ca--and; indriya-vrttayah--those with
-sense perception.
-<p></p>
+kaumodakim--the club named Kaumodaki; bhagavatah--of the Personality of Godhead; dayitam--very
+dear; smareta--one should remember; digdham--smeared; arati--of the enemies; bhata--soldiers; sonitakardamena--
+with the bloodstains; malam--the garland; madhuvrata--of bumblebees; varutha--of a swarm;
+gira--with the sound; upaghustam--surrounded; caityasya--of the living entity; tattvam--principle, truth;
+amalam--pure; manim--the pearl necklace; asya--of the Lord; kanthe--on the neck.
+<br>
 <h2>Translation</h2>
-Living entities are superior to inanimate objects, O blessed mother, and among them, living entities who
-display life symptoms are better. Animals with developed consciousness are better than them, and better
-still are those who have developed sense perception.
-<p></p>
+The yogi should meditate upon His club, which is named Kaumodaki and is very dear to Him. This club
+smashes the demons, who are always inimical soldiers, and is smeared with their blood. One should also
+concentrate on the nice garland on the neck of the Lord, which is always surrounded by bumblebees, with
+their nice buzzing sound, and one should meditate upon the pearl necklace on the Lord's neck, which is
+considered to represent the pure living entities who are always engaged in His service.
+<br>
 <h2>Purport</h2>
-In the previous verse it was explained that living entities should be honored by charitable gifts and
-friendly behavior, and in this verse and in the following verses, the description of different grades of living
-entities is given so that one can know when to behave friendly and when to give charity. For example, a
-tiger is a living entity, part and parcel of the Supreme Personality of Godhead, and the Supreme Lord is
-living in the heart of the tiger as Supersoul. But does this mean that we have to treat the tiger in a friendly
-manner? Certainly not. We have to treat him differently, giving him charity in the form of prasada. The
-many saintly persons in the jungles do not treat the tigers in a friendly way, but they supply prasada
-foodstuffs to them. The tigers come, take the food and go away, just as a dog does. According to the Vedic
-system, a dog is not allowed to enter the house. Because of their uncleanliness, cats and dogs are not
-allowed within the apartment of a gentleman, but are so trained that they stand outside. The
-compassionate householder will supply prasada to the dogs and cats, who eat outside and then go away.
-We must treat the lower living entities compassionately, but this does not mean that we have to treat
-them in the same way we treat other human beings. The feeling of equality must be there, but the
-treatment should be discriminating. Just how discrimination should be maintained is given in the
-following six verses concerning the different grades of living conditions.
-The first division is made between dead, stonelike matter and the living organism. A living organism is
-sometimes manifested even in stone. Experience shows that some hills and mountains grow. This is due
-to the presence of the soul within that stone. Above that, the next manifestation of the living condition is
-development of consciousness, and the next manifestation is the development of sense perception. In the
-Moksa-dharma section of the Mahabharata it is stated that trees have developed sense perception; they
-can see and smell. We know by experience that trees can see. Sometimes in its growth a large tree changes
-its course of development to avoid some hindrances. This means that a tree can see, and according to
-Mahabharata, a tree can also smell. This indicates the development of sense perception.
+The yogi must contemplate the different parts of the transcendental body of the Lord. Here it is stated
+that the constitutional position of the living entities should be understood. There are two kinds of living
+entities mentioned here. One is called the arati. They are averse to understanding the pastimes of the
+Supreme Personality of Godhead. For them, the Lord appears with His hand clutching the terrible mace,
+which is always smeared with bloodstains from His killing of demons. Demons are also sons of the
+Supreme Personality of Godhead. As stated in Bhagavad-gita, all the different species of living entities are
+sons of the Supreme Personality of Godhead. There are, however, two classes of living entities, who act in
+two different ways. The Supreme Lord keeps on His neck those living entities who are pure, as one
+protects the jewels and pearls on the bosom and neck of one's body. Those living entities in pure Krsna
+consciousness are symbolized by the pearls on His neck. Those who are demons and are inimical towards
+the pastimes of the Supreme Personality of Godhead are punished by His mace, which is always smeared
+with the blood of such fallen living entities. The club of the Lord is very dear to Him because He uses this
+instrument to smash the bodies of the demons and mix their blood. As mud is kneaded with water and
+earth, so the earthly bodies of the enemies of the Lord, or the atheists, are smashed by the club of the
+Lord, which becomes muddied with the blood of such demons.
 </p>
 
 </div>
@@ -96,7 +130,7 @@ Mahabharata, a tree can also smell. This indicates the development of sense perc
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

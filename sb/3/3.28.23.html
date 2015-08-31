@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.23.html">3.28.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dvisatah para-kaye mam
-manino bhinna-darsinah
-bhutesu baddha-vairasya
-na manah santim rcchati
-<p></p>
+janu-dvayam jalaja-locanaya jananya
+laksmyakhilasya sura-vanditaya vidhatuh
+urvor nidhaya kara-pallava-rocisa yat
+samlalitam hrdi vibhor abhavasya kuryat
+<br>
 <h2>Synonyms</h2>
-dvisatah--of one who is envious; para-kaye--towards the body of another; mam--unto Me; maninah--
-offering respect; bhinna-darsinah--of a separatist; bhutesu--towards living entities; baddha-vairasya--of
-one who is inimical; na--not; manah--the mind; santim--peace; rcchati--attains.
-<p></p>
+janu-dvayam--up to the knees; jalaja-locanaya--lotus-eyed; jananya--mother; laksmya--by Laksmi;
+akhilasya--of the entire universe; sura-vanditaya--worshiped by the demigods; vidhatuh--of Brahma;
+urvoh--at the thighs; nidhaya--having placed; kara-pallava-rocisa--with her lustrous fingers; yat--which;
+samlalitam--massaged; hrdi--in the heart; vibhoh--of the Lord; abhavasya--transcendental to material
+existence; kuryat--one should meditate.
+<br>
 <h2>Translation</h2>
-One who offers Me respect but is envious of the bodies of others and is therefore a separatist never
-attains peace of mind, because of his inimical behavior towards other living entities.
-<p></p>
+The yogi should fix in his heart the activities of Laksmi, the goddess of fortune, who is worshiped by all
+demigods and is the mother of the supreme person, Brahma. She can always be found massaging the legs
+and thighs of the transcendental Lord, very carefully serving Him in this way.
+<br>
 <h2>Purport</h2>
-In this verse, two phrases, bhutesu baddha-vairasya ("inimical towards others") and dvisatah para-kaye
-("envious of another's body"), are significant. One who is envious of or inimical towards others never
-experiences any happiness. A devotee's vision, therefore, must be perfect. He should ignore bodily
-distinctions and should see only the presence of the part and parcel of the Supreme Lord, and the Lord
-Himself in His plenary expansion as Supersoul. That is the vision of a pure devotee. The bodily expression
-of a particular type of living entity is always ignored by the devotee.
-It is expressed herein that the Lord is always eager to deliver the conditioned souls, who have been
-encaged within material bodies. Devotees are expected to carry the message or desire of the Lord to such
-conditioned souls and enlighten them with Krsna consciousness. Thus they may be elevated to
-transcendental, spiritual life, and the mission of their lives will be successful. Of course this is not possible
-for living entities who are lower than human beings, but in human society it is feasible that all living
-entities can be enlightened with Krsna consciousness. Even living entities who are lower than human can
-be raised to Krsna consciousness by other methods. For example, Sivananda Sena, a great devotee of Lord
-Caitanya, delivered a dog by feeding him prasada. Distribution of prasada, or remnants of foodstuffs
-offered to the Lord, even to the ignorant masses of people and to animals, gives such living entities the
-chance for elevation to Krsna consciousness. Factually it happened that the same dog, when met by Lord
-Caitanya at Puri, was liberated from the material condition.
-It is especially mentioned here that a devotee must be free from all violence (jivahimsa). Lord Caitanya
-has recommended that a devotee not commit violence to any living entity. Sometimes the question is
-raised that since vegetables also have life and devotees take vegetable foodstuffs, isn't that violence?
-Firstly, however, taking some leaves, twigs or fruit from a tree or plant does not kill the plant. Besides
-that, jivahimsa means that since every living entity has to pass through a particular type of body according
-to his past karma, although every living entity is eternal, he should not be disturbed in his gradual
-evolution. A devotee has to execute the principles of devotional service exactly as they are, and he must
-know that however insignificant a living entity may be, the Lord is present within him. A devotee must
-realize this universal presence of the Lord.
+Brahma is the appointed lord of the universe. Because his father is Garbhodakasayi Visnu, Laksmi, the
+goddess of fortune, is automatically his mother. Laksmiji is worshiped by all demigods and by the
+inhabitants of other planets as well. Human beings are also eager to receive favor from the goddess of
+fortune. Laksmi is always engaged in massaging the legs and thighs of the Supreme personality of
+Godhead Narayana, who is lying on the ocean of Garbha within the universe. Brahma is described here as
+the son of the goddess of fortune, but actually he was not born of her womb. Brahma takes his birth from
+the abdomen of the Lord Himself. A lotus flower grows from the abdomen of Garbhodakasayi Visnu, and
+Brahma is born there. Therefore Laksmiji's massaging of the thighs of the Lord should not be taken as the
+behavior of an ordinary wife. The Lord is transcendental to the behavior of the ordinary male and female.
+The word abhavasya is very significant, for it indicates that He could produce Brahma without the
+assistance of the goddess of fortune.
+Since transcendental behavior is different from mundane behavior, it should not be taken that the Lord
+receives service from His wife just as a demigod or human being might receive service from his wife. It is
+advised here that the yogi always keep this picture in his heart. The devotee always thinks of this
+relationship between Laksmi and Narayana; therefore he does not meditate on the mental plane as
+impersonalists and voidists do.
+Bhava means "one who accepts a material body," and abhava means "one who does not accept a material
+body but descends in the original, spiritual body." Lord Narayana is not born of anything material. Matter
+is generated from matter, but He is not born of matter. Brahma is born after the creation, but since the
+Lord existed before the creation, the Lord has no material body.
 </p>
 
 </div>
@@ -97,7 +133,7 @@ realize this universal presence of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

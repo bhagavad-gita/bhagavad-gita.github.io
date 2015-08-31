@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.26.55.html">3.26.55</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/26">26</a>.55</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/55"><b>55</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ghranad vayur abhidyetam
 aksini caksur etayoh
 tasmat suryo nyabhidyetam
 karnau srotram tato disah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ghranat--from the olfactory sense; vayuh--the wind-god; abhidyetam--appeared; aksini--the two eyes;
 caksuh--the sense of sight; etayoh--in them; tasmat--from that; suryah--the sun-god; nyabhidyetam--
 appeared; karnau--the two ears; srotram--the auditory sense; tatah--from that; disah--the deities presiding
 over the directions.
-<p></p>
+<br>
 <h2>Translation</h2>
 In the wake of the olfactory sense came the wind-god, who presides over that sense. Thereafter a pair of
 eyes appeared in the universal form, and in them the sense of sight. In the wake of this sense came the
 sun-god, who presides over it. Next there appeared in Him a pair of ears, and in them the auditory sense
 and in its wake the Dig-devatas, or the deities who preside over the directions.
-<p></p>
+<br>
 <h2>Purport</h2>
 The appearance of different bodily parts of the Lord's universal form and the appearance of the
 presiding deities of those bodily parts is being described. As in the womb of a mother a child gradually
@@ -86,7 +125,7 @@ does material nature create all moving and nonmoving objects in the cosmic creat
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

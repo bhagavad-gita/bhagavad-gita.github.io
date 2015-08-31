@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.42.html">3.15.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 atropasrstam iti cotsmitam indirayah
 svanam dhiya viracitam bahu-sausthavadhyam
 mahyam bhavasya bhavatam ca bhajantam angam
 nemur niriksya na vitrpta-drso muda kaih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 atra--here, in the matter of the beauty; upasrstam--curbed down; iti--thus; ca--and; utsmitam--the pride
 of her beauty; indirayah--of the goddess of fortune; svanam--of His own devotees; dhiya--by intelligence;
 viracitam--meditated on; bahu-sausthava-adhyam--very beautifully decorated; mahyam--of me; bhavasya--
 of Lord Siva; bhavatam--of all of you; ca--and; bhajantam--worshiped; angam--the figure; nemuh--bowed
 down; niriksya--after seeing; na--not; vitrpta--satiated; drsah--eyes; muda--joyously; kaih--by their heads.
-<p></p>
+<br>
 <h2>Translation</h2>
 The exquisite beauty of Narayana, being many times magnified by the intelligence of His devotees, was
 so attractive that it defeated the pride of the goddess of fortune in being the most beautiful. My dear
 demigods, the Lord who thus manifested Himself is worshipable by me, by Lord Siva and by all of you.
 The sages regarded Him with unsated eyes and joyously bowed their heads at His lotus feet.
-<p></p>
+<br>
 <h2>Purport</h2>
 The beauty of the Lord was so enchanting that it could not be sufficiently described. The goddess of
 fortune is supposed to be the most beautiful sight within the spiritual and material creations of the Lord;
@@ -90,7 +129,7 @@ to continue seeing Him more and more.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

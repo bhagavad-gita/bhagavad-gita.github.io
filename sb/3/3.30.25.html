@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.30.25.html">3.30.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/30">30</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-para-cchandam na vidusa
-pusyamano janena sah
-anabhipretam apannah
-pratyakhyatum anisvarah
-<p></p>
+adipanam sva-gatranam
+vestayitvolmukadibhih
+atma-mamsadanam kvapi
+sva-krttam parato 'pi va
+<br>
 <h2>Synonyms</h2>
-para-chandam--the desire of another; na--not; vidusa--understanding; pusyamanah--being maintained;
-janena--by persons; sah--he; anabhipretam--into undesirable circumstances; apannah--fallen;
-pratyakhyatum--to refuse; anisvarah--unable.
-<p></p>
+adipanam--setting on fire; sva-gatranam--of his own limbs; vestayitva--having been surrounded;
+ulmuka-adibhih--by pieces of burning wood and so on; atma-mamsa--of his own flesh; adanam--eating;
+kva api--sometimes; sva-krttam--done by himself; paratah--by others; api--else; va--or.
+<br>
 <h2>Translation</h2>
-After coming out of the abdomen, the child is given to the care of persons who are unable to understand
-what he wants, and thus he is nursed by such persons. Unable to refuse whatever is given to him, he falls
-into undesirable circumstances.
-<p></p>
+He is placed in the midst of burning pieces of wood, and his limbs are set on fire. In some cases he is
+made to eat his own flesh or have it eaten by others.
+<br>
 <h2>Purport</h2>
-Within the abdomen of the mother, the nourishment of the child was being carried on by nature's own
-arrangement. The atmosphere within the abdomen was not at all pleasing, but as far as the child's feeding
-was concerned, it was being properly done by the laws of nature. But upon coming out of the abdomen
-the child falls into a different atmosphere. He wants to eat one thing, but something else is given to him
-because no one knows his actual demand, and he cannot refuse the undesirables given to him. Sometimes
-the child cries for the mother's breast, but because the nurse thinks that it is due to pain within his
-stomach that he is crying, she supplies him some bitter medicine. The child does not want it, but he
-cannot refuse it. He is put in very awkward circumstances, and the suffering continues.
+From this verse through the next three verses the description of punishment will be narrated. The first
+description is that the criminal has to eat his own flesh, burning with fire, or allow others like himself
+who are present there to eat. In the last great war, people in concentration camps sometimes ate their own
+stool, so there is no wonder that in the Yamasadana, the abode of Yamaraja, one who had a very enjoyable
+life eating others' flesh has to eat his own flesh.
 </p>
 
 </div>
@@ -80,7 +115,7 @@ cannot refuse it. He is put in very awkward circumstances, and the suffering con
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

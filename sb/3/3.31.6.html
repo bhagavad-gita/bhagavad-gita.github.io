@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.6.html">3.31.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nivrtti-dharma-nirata
-nirmama nirahankrtah
-sva-dharmaptena sattvena
-parisuddhena cetasa
-<p></p>
+krmibhih ksata-sarvangah
+saukumaryat pratiksanam
+murccham apnoty uru-klesas
+tatratyaih ksudhitair muhuh
+<br>
 <h2>Synonyms</h2>
-nivrtti-dharma--in religious activities for detachment; niratah--constantly engaged; nirmamah--without
-a sense of proprietorship; nirahankrtah--without false egoism; sva-dharma--by one's own occupational
-duties; aptena--executed; sattvena--by goodness; parisuddhena--completely purified; cetasa--by
-consciousness.
-<p></p>
+krmibhih--by worms; ksata--bitten; sarva-angah--all over the body; saukumaryat--because of tenderness;
+prati-ksanam--moment after moment; murccham--unconsciousness; apnoti--he obtains; uru-klesah--
+whose suffering is great; tatratyaih--being there (in the abdomen); ksudhitaih--hungry; muhuh--again and
+again.
+<br>
 <h2>Translation</h2>
-By executing one's occupational duties, acting with detachment and without a sense of proprietorship or
-false egoism, one is posted in one's constitutional position by dint of complete purification of
-consciousness, and by thus executing so-called material duties he can easily enter into the kingdom of
-God.
-<p></p>
+Bitten again and again all over the body by the hungry worms in the abdomen itself, the child suffers
+terrible agony because of his tenderness. He thus becomes unconscious moment after moment because of
+the terrible condition.
+<br>
 <h2>Purport</h2>
-Here the word nivrtti-dharma-niratah means "constantly engaging in executing religious activities for
-detachment." There are two kinds of religious performances. One is called pravrtti-dharma, which means
-the religious activities performed by the grhamedhis for elevation to higher planets or for economic
-prosperity, the final aim of which is sense gratification. Every one of us who has come to this material
-world has the sense of overlordship. This is called pravrtti. But the opposite type of religious performance,
-which is called nivrtti, is to act for the Supreme Personality of Godhead. Engaged in devotional service in
-Krsna consciousness, one has no proprietorship claim, nor is one situated in the false egoism of thinking
-that he is God or the master. He always thinks himself the servant. That is the process of purifying
-consciousness. With pure consciousness only can one enter into the kingdom of God. Materialistic
-persons, in their elevated condition, can enter any one of the planets within this material world, but all
-are subjected to dissolution over and over again.
+The miserable condition of material existence is not only felt when we come out of the womb of the
+mother, but is also present within the womb. Miserable life begins from the moment the living entity
+begins to contact his material body. Unfortunately, we forget this experience and do not take the miseries
+of birth very seriously. In Bhagavad-gita, therefore, it is specifically mentioned that one should be very
+alert to understand the specific difficulties of birth and death. Just as during the formation of this body we
+have to pass through so many difficulties within the womb of the mother, at the time of death there are
+also many difficulties. As described in the previous chapter, one has to transmigrate from one body to
+another, and the transmigration into the bodies of dogs and hogs is especially miserable. But despite such
+miserable conditions, due to the spell of maya we forget everything and become enamored by the present
+so-called happiness, which is described as actually no more than a counteraction to distress.
 </p>
 
 </div>
@@ -85,7 +122,7 @@ are subjected to dissolution over and over again.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

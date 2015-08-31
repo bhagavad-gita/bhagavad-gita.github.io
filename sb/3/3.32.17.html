@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.17.html">3.32.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-svaccha-sphatika-kudyesu
-maha-marakatesu ca
-ratna-pradipa abhanti
-lalana ratna-samyutah
-<p></p>
+rajasa kuntha-manasah
+kamatmano 'jitendriyah
+pitrn yajanty anudinam
+grhesv abhiratasayah
+<br>
 <h2>Synonyms</h2>
-svaccha--pure; sphatika--marble; kudyesu--on the walls; maha-marakatesu--decorated with valuable
-emeralds; ca--and; ratna-pradipah--jewel lamps; abhanti--shine; lalanah--women; ratna--with jewelry;
-samyutah--decorated.
-<p></p>
+rajasa--by the mode of passion; kuntha--full of anxieties; manasah--their minds; kama-atmanah--
+aspiring for sense gratification; ajita--uncontrolled; indriyah--their senses; pitrn--the forefathers; yajanti--
+they worship; anudinam--every day; grhesu--in home life; abhirata--engaged; asayah--their minds.
+<br>
 <h2>Translation</h2>
-The walls of the house were made of first-class marble, decorated with valuable jewels. There was no
-need of light, for the household was illuminated by the rays of these jewels. The female members of the
-household were all amply decorated with jewelry.
-<p></p>
-<h2>Purport</h2>
-It is understood from this statement that the opulences of household life were exhibited in valuable
-jewels, ivory, first-class marble, and furniture made of gold and jewels. The clothes are also mentioned as
-being decorated with golden filigree. Everything actually had some value. It was not like the furniture of
-the present day, which is cast in valueless plastic or base metal. The way of Vedic civilization is that
-whatever was used in household affairs had to be valuable. In case of need, such items of value could be
-exchanged immediately. Thus one's broken and unwanted furniture and paraphernalia would never be
-without value. This system is still followed by Indians in household affairs. They keep metal utensils and
-golden ornaments or silver plates and valuable silk garments with gold embroidery, and in case of need,
-they can have some money in exchange immediately. There are exchanges for the moneylenders and the
-householders.
+Such persons, impelled by the mode of passion, are full of anxieties and always aspire for sense
+gratification due to uncontrolled senses. They worship the forefathers and are busy day and night
+improving the economic condition of their family, social or national life.
 </p>
 
 </div>
@@ -82,7 +109,7 @@ householders.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

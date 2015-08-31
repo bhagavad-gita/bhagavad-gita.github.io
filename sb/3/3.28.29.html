@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.29.html">3.28.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatrapi sparsa-vedibhyah
-pravara rasa-vedinah
-tebhyo gandha-vidah sresthas
-tatah sabda-vido varah
-<p></p>
+bhrtyanukampita-dhiyeha grhita-murteh
+sancintayed bhagavato vadanaravindam
+yad visphuran-makara-kundala-valgitena
+vidyotitamala-kapolam udara-nasam
+<br>
 <h2>Synonyms</h2>
-tatra--among them; api--moreover; sparsa-vedibhyah--than those perceiving touch; pravarah--better;
-rasa-vedinah--those perceiving taste; tebhyah--than them; gandha-vidah--those perceiving smell;
-sresthah--better; tatah--than them; sabda-vidah--those perceiving sound; varah--better.
-<p></p>
+bhrtya--for the devotees; anukampita-dhiya--out of compassion; iha--in this world; grhita-murteh--who
+presents different forms; sancintayet--one should meditate on; bhagavatah--of the Personality of Godhead;
+vadana--countenance; aravindam--lotuslike; yat--which; visphuran--glittering; makara--alligator-shaped;
+kundala--of His earrings; valgitena--by the oscillation; vidyotita--illuminated; amala--crystal clear;
+kapolam--His cheeks; udara--prominent; nasam--His nose.
+<br>
 <h2>Translation</h2>
-Among the living entities who have developed sense perception, those who have developed the sense of
-taste are better than those who have developed only the sense of touch. Better than them are those who
-have developed the sense of smell, and better still are those who have developed the sense of hearing.
-<p></p>
+The yogi should then meditate on the lotuslike countenance of the Lord, who presents His different
+forms in this world out of compassion for the anxious devotees. His nose is prominent, and His crystalclear
+cheeks are illuminated by the oscillation of His glittering alligator-shaped earrings.
+<br>
 <h2>Purport</h2>
-Although Westerners accept that Darwin first expounded the doctrine of evolution, the science of
-anthropology is not new. The development of the evolutionary process was known long before from the
-Bhagavatam, which was written five thousand years ago. There are records of the statements of Kapila
-Muni, who was present almost in the beginning of the creation. This knowledge has existed since the
-Vedic time, and all these sequences are disclosed in Vedic literature; the theory of gradual evolution or
-anthropology is not new to the Vedas.
-It is said here that amongst the trees there are also evolutionary processes; the different kinds of trees
-have touch perception. It is said that better than the trees are the fish because fish have developed the
-sense of taste. Better than the fish are the bees, who have developed the sense of smell, and better than
-them are the serpents because serpents have developed the sense of hearing. In the darkness of night a
-snake can find its eatables simply by hearing the frog's very pleasant cry. The snake can understand,
-"There is the frog," and he captures the frog simply because of its sound vibration. This example is
-sometimes given for persons who vibrate sounds simply for death. One may have a very nice tongue that
-can vibrate sound like the frogs, but that kind of vibration is simply calling death. The best use of the
-tongue and of sound vibration is to chant Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama,
-Hare Rama, Rama Rama, Hare Hare. That will protect one from the hands of cruel death.
+The Lord descends to the material world out of His deep compassion for His devotees. There are two
+reasons for the Lord's appearance or incarnation in the material world. Whenever there is a discrepancy in
+the discharge of religious principles and there is prominence of irreligion, the Lord descends for the
+protection of the devotees and the destruction of the nondevotees. When He appears, His main purpose is
+to give solace to His devotees. He does not have to come Himself to destroy the demons, for He has many
+agents; even the external energy, maya, has sufficient strength to kill them. But when He comes to show
+compassion to His devotees, He kills the nondevotees as a matter of course.
+The Lord appears in the particular form loved by a particular type of devotee. There are millions of
+forms of the Lord, but they are one Absolute. As stated in the Brahma-samhita, advaitam acyutam anadim
+ananta-rupam: all the different forms of the Lord are one, but some devotees want to see Him in the form
+of Radha and Krsna, others prefer Him as Sita and Ramacandra, others would see Him as Laksmi-
+Narayana, and others want to see Him as four-handed Narayana, Vasudeva. The Lord has innumerable
+forms, and He appears in a particular form as preferred by a particular type of devotee. A yogi is advised to
+meditate upon the forms that are approved by devotees. A yogi cannot imagine a form for meditation.
+Those so-called yogis who manufacture a circle or target are engaged in nonsense. Actually, a yogi must
+meditate upon the form of the Supreme personality of Godhead that has been experienced by the Lord's
+pure devotees. Yogi means devotee. Yogis who are not actually pure devotees should follow in the
+footsteps of devotees. It is especially mentioned here that the yogi should meditate upon the form which
+is thus approved; he cannot manufacture a form of the Lord.
 </p>
 
 </div>
@@ -88,7 +132,7 @@ Hare Rama, Rama Rama, Hare Hare. That will protect one from the hands of cruel d
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,98 +81,74 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.26.html">3.32.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-brahmany avasthita-matir
-bhagavaty atma-samsraye
-nivrtta-jivapattitvat
-ksina-klesapta-nirvrtih
-<p></p>
+jnana-matram param brahma
+paramatmesvarah puman
+drsy-adibhih prthag bhavair
+bhagavan eka iyate
+<br>
 <h2>Synonyms</h2>
-brahmani--in Brahman; avasthita--situated; matih--her mind; bhagavati--in the Supreme personality of
-Godhead; atma-samsraye--residing in all living entities; nivrtta--freed; jiva--of the jiva soul; apattitvat--
-from the unfortunate condition; ksina--disappeared; klesa--material pangs; apta--attained; nirvrtih--
-transcendental bliss.
-<p></p>
+jnana--knowledge; matram--only; param--transcendental; brahma--Brahman; parama-atma--Paramatma;
+isvarah--the controller; puman--Supersoul; drsi-adibhih--by philosophical research and other processes;
+prthak bhavaih--according to different processes of understanding; bhagavan--the Supreme personality of
+Godhead; ekah--alone; iyate--is perceived.
+<br>
 <h2>Translation</h2>
-Her mind became completely engaged in the Supreme Lord, and she automatically realized the
-knowledge of the impersonal Brahman. As a Brahman-realized soul, she was freed from the designations
-of the materialistic concept of life. Thus all material pangs disappeared, and she attained transcendental
-bliss.
-<p></p>
+The Supreme Personality of Godhead alone is complete transcendental knowledge, but according to the
+different processes of understanding He appears differently, either as impersonal Brahman, as Paramatma,
+as the Supreme Personality of Godhead or as the purusa-avatara.
+<br>
 <h2>Purport</h2>
-The previous verse states that Devahuti was already conversant with the Absolute Truth. It may be
-questioned why she was meditating. The explanation is that when one theoretically discusses the Absolute
-Truth, he becomes situated in the impersonal concept of the Absolute Truth. Similarly, when one
-seriously discusses the subject matter of the form, qualities, pastimes and entourage of the Supreme
-Personality of Godhead, he becomes situated in meditation on Him. If one has complete knowledge of the
-Supreme Lord, then knowledge of the impersonal Brahman is automatically realized. The Absolute Truth
-is realized by the knower according to three different angles of vision, namely impersonal Brahman,
-localized Supersoul and ultimately the Supreme personality of Godhead. If one is situated, therefore, in
-knowledge of the Supreme Person, this implies that one is already situated in the concept of the Supersoul
-and impersonal Brahman.
-In Bhagavad-gita it is said, brahma-bhutah prasannatma. This means that unless one is freed from the
-material entanglement and situated in Brahman, there is no question of entering into the understanding of
-devotional service or engaging in Krsna consciousness. One who is engaged in devotional service to Krsna
-is understood to be already realized in the Brahman concept of life because transcendental knowledge of
-the Supreme Personality of Godhead includes knowledge of Brahman. This is confirmed in Bhagavad-gita.
-Brahmano hi pratisthaham: the concept of the Personality of Godhead does not depend on Brahman. The
-Visnu purana also confirms that one who has taken shelter of the all-auspicious Supreme Lord is already
-situated in the understanding of Brahman. In other words, one who is a Vaisnava is already a brahmana.
-Another significant point of this verse is that one has to observe the prescribed rules and regulations. As
-confirmed in Bhagavad-gita, yuktahara-viharasya. When one engages in devotional service in Krsna
-consciousness, he still has to eat, sleep, defend and mate because these are necessities of the body. But he
-performs such activities in a regulated way. He has to eat krsna-prasada. He has to sleep according to
-regulated principles. The principle is to reduce the duration of sleep and to reduce eating, taking only
-what is needed to keep the body fit. In short, the goal is spiritual advancement, not sense gratification.
-Similarly, sex life must be reduced. Sex life is meant only for begetting Krsna conscious children.
-Otherwise, there is no necessity for sex life. Nothing is prohibited, but everything is made yukta,
-regulated, with the higher purpose always in mind. By following all these rules and regulations of living,
-one becomes purified, and all misconceptions due to ignorance become nil. It is specifically mentioned
-here that the causes of material entanglement are completely vanquished.
-The Sanskrit statement anartha-nivrtti indicates that this body is unwanted. We are spirit soul, and
-there was never any need of this material body. But because we wanted to enjoy the material body, we
-have this body, through the material energy, under the direction of the Supreme Personality of Godhead.
-As soon as we are reestablished in our original position of servitorship to the Supreme Lord, we begin to
-forget the necessities of the body, and at last we forget the body.
-Sometimes in a dream we get a particular type of body with which to work in the dream. I may dream
-that I am flying in the sky or that I have gone into the forest or some unknown place. But as soon as I am
-awake I forget all these bodies. Similarly, when one is Krsna conscious, fully devoted, he forgets all his
-changes of body. We are always changing bodies, beginning at birth from the womb of our mother. But
-when we are awakened to Krsna consciousness, we forget all these bodies. The bodily necessities become
-secondary, for the primary necessity is the engagement of the soul in real, spiritual life. The activities of
-devotional service in full Krsna consciousness are the cause of our being situated in transcendence. The
-words bhagavaty atma-samsraye denote the Personality of Godhead as the Supreme Soul, or the soul of
-everyone. In Bhagavad-gita Krsna says, bijam mam sarva-bhutanam: "I am the seed of all entities." By
-taking shelter of the Supreme Being by the process of devotional service, one becomes fully situated in the
-concept of the Personality of Godhead. As described by Kapila, mad-guna-sruti-matrena: one who is fully
-Krsna conscious, situated in the personality of Godhead, is immediately saturated with love of God as
-soon as he hears about the transcendental qualities of the Lord.
-Devahuti was fully instructed by her son, Kapiladeva, on how to concentrate her mind on the Visnu
-form in full detail. Following the instructions of her son in the matter of devotional service, she
-contemplated the form of the Lord within herself with great devotional love. That is the perfection of
-Brahman realization or the mystic yoga system or devotional service. At the ultimate issue, when one is
-fully absorbed in thought of the Supreme Lord and meditates on Him constantly, that is the highest
-perfection. Bhagavad-gita confirms that one who is always absorbed in such a way is to be considered the
-topmost yogi.
-The real purpose of all processes of transcendental realization--jnana-yoga, dhyana-yoga or bhaktiyoga--
-is to arrive at the point of devotional service. If one endeavors simply to achieve knowledge of the
-Absolute Truth or the Supersoul but has no devotional service, he labors without gaining the real result.
-This is compared to beating the husks of wheat after the grains have already been removed. Unless one
-understands the Supreme personality of Godhead to be the ultimate goal, it is valueless simply to
-speculate or perform mystic yoga practice. In the astanga-yoga system, the seventh stage of perfection is
-dhyana. This dhyana is the third stage in devotional service. There are nine stages of devotional service.
-The first is hearing, and then comes chanting and then contemplating. By executing devotional service,
-therefore, one automatically becomes an expert jnani and an expert yogi. In other words, jnana and yoga
-are different preliminary stages of devotional service.
-Devahuti was expert in accepting the real substance; she contemplated the form of Visnu in detail as
-advised by her smiling son, Kapiladeva. At the same time, she was thinking of Kapiladeva, who is the
-Supreme Personality of Godhead, and therefore she completely perfected her austerities, penances and
-transcendental realization.
+The word drsy-adibhih is significant. According to Jiva Gosvami, drsi means jnana, philosophical
+research. By different processes of philosophical research under different concepts, such as the process of
+jnana-yoga, the same Bhagavan, or Supreme Personality of Godhead, is understood as impersonal
+Brahman. Similarly, by the eightfold yoga system He appears as the Paramatma. But in pure Krsna
+consciousness, or knowledge in purity, when one tries to understand the Absolute Truth, one realizes
+Him as the Supreme Person. The Transcendence is realized simply on the basis of knowledge. The words
+used here, paramatmesvarah puman, are all transcendental, and they refer to Supersoul. Supersoul is also
+described as purusa, but the word Bhagavan directly refers to the Supreme Personality of Godhead, who is
+full of six opulences: wealth, fame, strength, beauty, knowledge and renunciation. He is the Personality of
+Godhead in different spiritual skies. The various descriptions of paramatma, isvara and puman indicate
+that the expansions of the Supreme Godhead are unlimited.
+Ultimately, to understand the Supreme Personality of Godhead one has to accept bhakti-yoga. By
+executing jnana-yoga or dhyana-yoga one has to eventually approach the bhakti-yoga platform, and then
+Paramatma, isvara, puman, etc., are all clearly understood. It is recommended in the Second Canto of
+Srimad-Bhagavatam that whether one is a devotee or fruitive actor or liberationist, if he is intelligent
+enough he should engage himself with all seriousness in the process of devotional service. It is also
+explained that whatever one desires which is obtainable by fruitive activities, even if one wants to be
+elevated to higher planets, can be achieved simply by execution of devotional service. Since the Supreme
+Lord is full in six opulences, He can bestow any one of them upon the worshiper.
+The one Supreme Personality of Godhead reveals Himself to different thinkers as the Supreme person or
+impersonal Brahman or Paramatma. Impersonalists merge into the impersonal Brahman, but that is not
+achieved by worshiping the impersonal Brahman. If one takes to devotional service and at the same time
+desires to merge into the existence of the Supreme Lord, he can achieve that. If someone desires at all to
+merge into the existence of the Supreme, he has to execute devotional service.
+The devotee can see the Supreme Lord face to face, but the jnani, the empiric philosopher or yogi
+cannot. They cannot be elevated to the positions of associates of the Lord. There is no evidence in the
+scriptures stating that by cultivating knowledge or worshiping the impersonal Brahman one can become a
+personal associate of the Supreme Personality of Godhead. Nor by executing the yogic principles can one
+become an associate of the Supreme Godhead. Impersonal Brahman, being formless, is described as adrsya
+because the impersonal effulgence of brahmajyoti covers the face of the Supreme Lord. Some yogis see the
+four-handed Visnu sitting within the heart, and therefore in their case also the Supreme Lord is invisible.
+Only for the devotees is the Lord visible. Here the statement drsy-adibhih is significant. Since the Supreme
+Personality of Godhead is both invisible and visible, there are different features of the Lord. The
+Paramatma feature and Brahman feature are invisible, but the Bhagavan feature is visible. In the Visnu
+purana this fact is very nicely explained. The universal form of the Lord and the formless Brahman
+effulgence of the Lord, being invisible, are inferior features. The concept of the universal form is material,
+and the concept of impersonal Brahman is spiritual, but the highest spiritual understanding is the
+Personality of Godhead. The Visnu purana states, visnur brahma-svarupena svayam eva vyavasthitah:
+Brahman's real feature is Visnu, or the Supreme Brahman is Visnu. Svayam eva: that is His personal
+feature. The supreme spiritual conception is the Supreme Personality of Godhead. It is also confirmed in
+Bhagavad-gita: yad gatva na nivartante tad dhama paramam mama. That specific abode called paramam
+mama is the place from which, once one attains it, one does not return to this miserable, conditional life.
+Every place, every space and everything belongs to Visnu, but where He personally lives is tad dhama
+paramam, His supreme abode. One has to make one's destination the supreme abode of the Lord.
 </p>
 
 </div>
@@ -142,7 +156,7 @@ transcendental realization.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

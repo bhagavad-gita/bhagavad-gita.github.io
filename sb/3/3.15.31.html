@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.31.html">3.15.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tabhyam misatsv animisesu nisidhyamanah
 svarhattama hy api hareh pratihara-pabhyam
 ucuh suhrttama-didrksita-bhanga isat
 kamanujena sahasa ta upaplutaksah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tabhyam--by those two porters; misatsu--while looking on; animisesu--demigods living in Vaikuntha;
 nisidhyamanah--being forbidden; su-arhattamah--by far the fittest persons; hi api--although; hareh--of
@@ -61,12 +100,12 @@ Hari, the Supreme Personality of Godhead; pratihara-pabhyam--by the two doorkeep
 suhrt-tama--most beloved; didrksita--eagerness to see; bhange--hindrance; isat--slight; kama-anujena--by
 the younger brother of lust (anger); sahasa--suddenly; te--those great sages; upapluta--agitated; aksah--
 eyes.
-<p></p>
+<br>
 <h2>Translation</h2>
 When the Kumaras, although by far the fittest persons, were thus forbidden entrance by the two chief
 doorkeepers of Sri Hari while other divinities looked on, their eyes suddenly turned red because of anger
 due to their great eagerness to see their most beloved master, Sri Hari, the Personality of Godhead.
-<p></p>
+<br>
 <h2>Purport</h2>
 According to the Vedic system, a sannyasi, a person in the renounced order of life, is dressed in saffroncolored
 garments. This saffron dress is practically a passport for the mendicant and sannyasi to go
@@ -112,7 +151,7 @@ gratification.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

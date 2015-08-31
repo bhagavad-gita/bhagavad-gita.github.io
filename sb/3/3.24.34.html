@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.24.34.html">3.24.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 a smabhiprcche 'dya patim prajanam
 tvayavatirnarna utapta-kamah
 parivrajat-padavim asthito 'ham
 carisye tvam hrdi yunjan visokah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 a sma abhiprcche--I am inquiring; adya--now; patim--the Lord; prajanam--of all created beings; tvaya--
 by You; avatirna-rnah--free from debts; uta--and; apta--fulfilled; kamah--desires; parivrajat--of an itinerant
 mendicant; padavim--the path; asthitah--accepting; aham--I; carisye--I shall wander; tvam--You; hrdi--in
 my heart; yunjan--keeping; visokah--free from lamentation.
-<p></p>
+<br>
 <h2>Translation</h2>
 Today I have something to ask from You, who are the Lord of all living entities. Since I have now been
 liberated by You from my debts to my father, and since all my desires are fulfilled, I wish to accept the
 order of an itinerant mendicant. Renouncing this family life, I wish to wander about, free from
 lamentation, thinking always of You in my heart.
-<p></p>
+<br>
 <h2>Purport</h2>
 Actually, sannyasa, or renunciation of material household life, necessitates complete absorption in
 Krsna consciousness and immersion in the self. One does not take sannyasa, freedom from family
@@ -87,7 +126,7 @@ moving because his duty is to move from door to door and enlighten people about 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

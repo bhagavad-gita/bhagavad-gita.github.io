@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.25.25.html">3.25.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/25">25</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 satam prasangan mama virya-samvido
 bhavanti hrt-karna-rasayanah kathah
 taj-josanad asv apavarga-vartmani
 sraddha ratir bhaktir anukramisyati
-<p></p>
+<br>
 <h2>Synonyms</h2>
 satam--of pure devotees; prasangat--through the association; mama--My; virya--wonderful activities;
 samvidah--by discussion of; bhavanti--become; hrt--to the heart; karna--to the ear; rasa-ayanah--pleasing;
 kathah--the stories; tat--of that; josanat--by cultivation; asu--quickly; apavarga--of liberation; vartmani--on
 the path; sraddha--firm faith; ratih--attraction; bhaktih--devotion; anukramisyati--will follow in order.
-<p></p>
+<br>
 <h2>Translation</h2>
 In the association of pure devotees, discussion of the pastimes and activities of the Supreme Personality
 of Godhead is very pleasing and satisfying to the ear and the heart. By cultivating such knowledge one
 gradually becomes advanced on the path of liberation, and thereafter he is freed, and his attraction
 becomes fixed. Then real devotion and devotional service begin.
-<p></p>
+<br>
 <h2>Purport</h2>
 The process of advancing in Krsna consciousness and devotional service is described here. The first
 point is that one must seek the association of persons who are Krsna conscious and who engage in
@@ -94,7 +133,7 @@ service, he gradually becomes perfect.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

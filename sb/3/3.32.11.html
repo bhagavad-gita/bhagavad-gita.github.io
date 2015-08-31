@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.11.html">3.32.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sraddhatsvaitan matam mahyam
-justam yad brahma-vadibhih
-yena mam abhayam yaya
-mrtyum rcchanty atad-vidah
-<p></p>
+atha tam sarva-bhutanam
+hrt-padmesu krtalayam
+srutanubhavam saranam
+vraja bhavena bhamini
+<br>
 <h2>Synonyms</h2>
-sraddhatsva--you may rest assured; etat--about this; matam--instruction; mahyam--My; justam--
-followed; yat--which; brahma-vadibhih--by transcendentalists; yena--by which; mam--unto Me; abhayam--
-without fear; yayah--you shall reach; mrtyum--death; rcchanti--attain; a-tat-vidah--persons who are not
-conversant with this.
-<p></p>
+atha--therefore; tam--the Supreme Personality of Godhead; sarva-bhutanam--of all living entities; hrtpadmesu--
+in the lotus hearts; krta-alayam--residing; sruta-anubhavam--whose glories you have heard;
+saranam--unto the shelter; vraja--go; bhavena--by devotional service; bhamini--My dear mother.
+<br>
 <h2>Translation</h2>
-My dear mother, those who are actually transcendentalists certainly follow My instructions, as I have
-given them to you. You may rest assured that if you traverse this path of self-realization perfectly, surely
-you shall be freed from fearful material contamination and shall ultimately reach Me. Mother, persons
-who are not conversant with this method of devotional service certainly cannot get out of the cycle of
-birth and death.
-<p></p>
+Therefore, My dear mother, by devotional service take direct shelter of the Supreme Personality of
+Godhead, who is seated in everyone's heart.
+<br>
 <h2>Purport</h2>
-Material existence is full of anxiety, and therefore it is fearful. One who gets out of this material
-existence automatically becomes free from all anxieties and fear. One who follows the path of devotional
-service enunciated by Lord Kapila is very easily liberated.
+One can attain direct contact with the Supreme Personality of Godhead in full Krsna consciousness and
+revive one's eternal relationship with Him as lover, as Supreme Soul, as son, as friend or as master. One
+can reestablish the transcendental loving relationship with the Supreme Lord in so many ways, and that
+feeling is true oneness. The oneness of the Mayavadi philosophers and the oneness of Vaisnava
+philosophers are different. The Mayavadi and Vaisnava philosophers both want to merge into the
+Supreme, but the Vaisnavas do not lose their identities. They want to keep the identity of lover, parent,
+friend or servant.
+In the transcendental world, the servant and master are one. That is the absolute platform. Although the
+relationship is servant and master, both the servant and the served stand on the same platform. That is
+oneness. Lord Kapila advised His mother that she did not need any indirect process. She was already
+situated in that direct process because the Supreme Lord had taken birth as her son. Actually, she did not
+need any further instruction because she was already in the perfectional stage. Kapiladeva advised her to
+continue in the same way. He therefore addressed His mother as bhamini to indicate that she was already
+thinking of the Lord as her son. Devahuti is advised by Lord Kapila to take directly to devotional service,
+Krsna consciousness, because without that consciousness one cannot become liberated from the clutches
+of maya.
 </p>
 
 </div>
@@ -78,7 +126,7 @@ service enunciated by Lord Kapila is very easily liberated.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.30.1.html">3.30.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/30">30</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-bhagavan uvaca
-karmana daiva-netrena
-jantur dehopapattaye
-striyah pravista udaram
-pumso retah-kanasrayah
-<p></p>
+kapila uvaca
+tasyaitasya jano nunam
+nayam vedoru-vikramam
+kalyamano 'pi balino
+vayor iva ghanavalih
+<br>
 <h2>Synonyms</h2>
-sri-bhagavan uvaca--the Supreme Personality of Godhead said; karmana--by the result of work; daivanetrena--
-under the supervision of the Lord; jantuh--the living entity; deha--a body; upapattaye--for
-obtaining; striyah--of a woman; pravistah--enters; udaram--the womb; pumsah--of a man; retah--of semen;
-kana--a particle; asrayah--dwelling in.
-<p></p>
+kapilah uvaca--Lord Kapila said; tasya etasya--of this very time factor; janah--person; nunam--certainly;
+na--not; ayam--this; veda--knows; uru-vikramam--the great strength; kalyamanah--being carried off; api--
+although; balinah--powerful; vayoh--of the wind; iva--like; ghana--of clouds; avalih--a mass.
+<br>
 <h2>Translation</h2>
-The Personality of Godhead said: Under the supervision of the Supreme Lord and according to the
-result of his work, the living entity, the soul, is made to enter into the womb of a woman through the
-particle of male semen to assume a particular type of body.
-<p></p>
+The Personality of Godhead said: As a mass of clouds does not know the powerful influence of the
+wind, a person engaged in material consciousness does not know the powerful strength of the time factor,
+by which he is being carried.
+<br>
 <h2>Purport</h2>
-As stated in the last chapter, after suffering different kinds of hellish conditions, a man comes again to
-the human form of body. The same topic is continued in this chapter. In order to give a particular type of
-human form to a person who has already suffered hellish life, the soul is transferred to the semen of a man
-who is just suitable to become his father. During sexual intercourse, the soul is transferred through the
-semen of the father into the mother's womb in order to produce a particular type of body. This process is
-applicable to all embodied living entities, but it is especially mentioned for the man who was transferred
-to the Andha-tamisra hell. After suffering there, when he who has had many types of hellish bodies, like
-those of dogs and hogs, is to come again to the human form, he is given the chance to take his birth in the
-same type of body from which he degraded himself to hell.
-Everything is done by the supervision of the Supreme personality of Godhead. Material nature supplies
-the body, but it does so under the direction of the Supersoul. It is said in Bhagavad-gita that a living entity
-is wandering in this material world on a chariot made by material nature. The Supreme Lord, as
-Supersoul, is always present with the individual soul. He directs material nature to supply a particular
-type of body to the individual soul according to the result of his work, and the material nature supplies it.
-Here one word, retah-kanasrayah, is very significant because it indicates that it is not the semen of the
-man that creates life within the womb of a woman; rather, the living entity, the soul, takes shelter in a
-particle of semen and is then pushed into the womb of a woman. Then the body develops. There is no
-possibility of creating a living entity without the presence of the soul simply by sexual intercourse. The
-materialistic theory that there is no soul and that a child is born simply by material combination of the
-sperm and ovum is not very feasible. It is unacceptable.
+The great politician-pandita named Canakya said that even one moment of time cannot be returned
+even if one is prepared to pay millions of dollars. One cannot calculate the amount of loss there is in
+wasting valuable time. Either materially or spiritually, one should be very alert in utilizing the time which
+he has at his disposal. A conditioned soul lives in a particular body for a fixed measurement of time, and it
+is recommended in the scriptures that within that small measurement of time one has to finish Krsna
+consciousness and thus gain release from the influence of the time factor. But, unfortunately, those who
+are not in Krsna consciousness are carried away by the strong power of time without their knowledge, as
+clouds are carried by the wind.
 </p>
 
 </div>
@@ -94,7 +120,7 @@ sperm and ovum is not very feasible. It is unacceptable.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

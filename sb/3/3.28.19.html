@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.19.html">3.28.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-mad-dharmano gunair etaih
-parisamsuddha asayah
-purusasyanjasabhyeti
-sruta-matra-gunam hi mam
-<p></p>
+sthitam vrajantam asinam
+sayanam va guhasayam
+preksaniyehitam dhyayec
+chuddha-bhavena cetasa
+<br>
 <h2>Synonyms</h2>
-mat-dharmanah--of My devotee; gunaih--with the attributes; etaih--these; parisamsuddhah--completely
-purified; asayah--consciousness; purusasya--of a person; anjasa--instantly; abhyeti--approaches; sruta--by
-hearing; matra--simply; gunam--quality; hi--certainly; mam--Me.
-<p></p>
+sthitam--standing; vrajantam--moving; asinam--sitting; sayanam--lying down; va--or; guha-asayam--the
+Lord dwelling in the heart; preksaniya--beautiful; ihitam--pastimes; dhyayet--he should visualize; suddhabhavena--
+pure; cetasa--by the mind.
+<br>
 <h2>Translation</h2>
-When one is fully qualified with all these transcendental attributes and his consciousness is thus
-completely purified, he is immediately attracted simply by hearing My name or hearing of My
-transcendental quality.
-<p></p>
+Thus always merged in devotional service, the yogi visualizes the Lord standing, moving, lying down or
+sitting within him, for the pastimes of the Supreme Lord are always beautiful and attractive.
+<br>
 <h2>Purport</h2>
-In the beginning of this instruction, the Lord explained to His mother that mad-guna-sruti-matrena,
-simply by hearing of the name, quality, form, etc., of the Supreme Personality of Godhead, one is
-immediately attracted. A person becomes fully qualified with all transcendental qualities by following the
-rules and regulations, as recommended in different scriptures. We have developed certain unnecessary
-qualities by material association, and by following the above process we become free from that
-contamination. To develop transcendental qualities, as explained in the previous verse, one must become
-free from these contaminated qualities.
+The process of meditating on the form of the Supreme Personality of Godhead within oneself and the
+process of chanting the glories and pastimes of the Lord are the same. The only difference is that hearing
+and fixing the mind on the pastimes of the Lord is easier than visualizing the form of the Lord within
+one's heart because as soon as one begins to think of the Lord, especially in this age, the mind becomes
+disturbed, and due to so much agitation, the process of seeing the Lord within the mind is interrupted.
+When there is sound vibrated praising the transcendental pastimes of the Lord, however, one is forced to
+hear. That hearing process enters into the mind, and the practice of yoga is automatically performed. For
+example, even a child can hear and derive the benefit of meditating on the pastimes of the Lord simply by
+listening to a reading from the Bhagavatam that describes the Lord as He is going to the pasturing ground
+with His cows and friends. Hearing includes applying the mind. In this age of Kali-yuga, Lord Caitanya
+has recommended that one should always engage in chanting and hearing Bhagavad-gita. The Lord also
+says that the mahatmas, or great souls, always engage in the process of chanting the glories of the Lord,
+and just by hearing, others derive the same benefit. Yoga necessitates meditation on the transcendental
+pastimes of the Lord, whether He is standing, moving, lying down, etc.
 </p>
 
 </div>
@@ -79,7 +124,7 @@ free from these contaminated qualities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.5.51.html">3.5.51</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.51</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/51"><b>51</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tato vayam mat-pramukha yad-arthe
 babhuvimatman karavama kim te
 tvam nah sva-caksuh paridehi saktya
 deva kriyarthe yad-anugrahanam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tatah--therefore; vayam--all of us; mat-pramukhah--coming from the total cosmos, the mahat-tattva; yatarthe--
 for the purpose of which; babhuvima--created; atman--O Supreme Self; karavama--shall do; kim--
 what; te--Your service; tvam--Yourself; nah--to us; sva-caksuh--personal plan; paridehi--specifically grant
 us; saktya--with potency to work; deva--O Lord; kriya-arthe--for acting; yat--from which; anugrahanam--
 of those who are specifically favored.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Supreme Self, please give us, who are created in the beginning from the mahat-tattva, the total cosmic
 energy, Your kind directions on how we shall act. Kindly award us Your perfect knowledge and potency
 so that we can render You service in the different departments of subsequent creation.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Lord creates this material world and impregnates the material energy with the living entities who
 will act in the material world. All these actions have a divine plan behind them. The plan is to give the
@@ -121,7 +160,7 @@ Creation of the Universal Form
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

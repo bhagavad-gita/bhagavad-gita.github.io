@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.42.html">3.28.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sravanti sarito bhita
-notsarpaty udadhir yatah
-agnir indhe sa-giribhir
-bhur na majjati yad-bhayat
-<p></p>
+sarva-bhutesu catmanam
+sarva-bhutani catmani
+iksetananya-bhavena
+bhutesv iva tad-atmatam
+<br>
 <h2>Synonyms</h2>
-sravanti--flow; saritah--rivers; bhitah--fearful; na--not; utsarpati--overflows; uda-dhih--the ocean;
-yatah--because of whom; agnih--fire; indhe--burns; sa-giribhih--with its mountains; bhuh--the earth; na--
-not; majjati--sinks; yat--of whom; bhayat--out of fear.
-<p></p>
+sarva-bhutesu--in all manifestations; ca--and; atmanam--the soul; sarva-bhutani--all manifestations; ca--
+also; atmani--in the Supreme Spirit; ikseta--he should see; ananya-bhavena--with equal vision; bhutesu--in
+all manifestations; iva--as; tat-atmatam--the nature of itself.
+<br>
 <h2>Translation</h2>
-Out of fear of the Supreme Personality of Godhead the rivers flow, and the ocean never overflows. Out
-of fear of Him only does fire burn and does the earth, with its mountains, not sink in the water of the
-universe.
-<p></p>
+A yogi should see the same soul in all manifestations, for all that exists is a manifestation of different
+energies of the Supreme. In this way the devotee should see all living entities without distinction. That is
+realization of the Supreme Soul.
+<br>
 <h2>Purport</h2>
-We can understand from the Vedic literature that this universe is half filled with water, on which
-Garbhodakasayi Visnu is lying. From His abdomen a lotus flower has grown, and within the stem of that
-lotus flower all the different planets exist. The material scientist explains that all these different planets
-are floating because of the law of gravity or some other law; but the actual lawmaker is the Supreme
-Personality of Godhead. When we speak of law, we must understand that there must be a lawmaker. The
-material scientists can discover laws of nature, but they are unable to recognize the lawmaker. From
-Srimad-Bhagavatam and Bhagavad-gita we can know who the lawmaker is: the lawmaker is the Supreme
-Personality of Godhead.
-It is said here that the planets do not sink. Since they are floating under the order or energy of the
-Supreme Godhead, they do not fall down into the water which covers half the universe. All the planets are
-heavy, with their various mountains, seas, oceans, cities, palaces and buildings, and yet they are floating.
-It is understood from this passage that all the other planets that are floating in the air have oceans and
-mountains similar to those on this planet.
+As stated in the Brahma-samhita, not only does the Supreme Soul enter each and every universe, but He
+enters even the atoms. The Supreme Soul is present everywhere in the dormant stage, and when one can
+see the presence of the Supreme Soul everywhere, one is liberated from material designations.
+The word sarva-bhutesu is to be understood as follows. There are four different divisions of species--
+living entities which sprout from the earth, living entities born of fermentation or germination, living
+entities which come from eggs and living entities which come from the embryo. These four divisions of
+living entities are expanded in 8,400,000 species of life. A person who is freed from material designations
+can see the same quality of spirit present everywhere or in every manifested living entity. Less intelligent
+men think that plants and grass grow out of the earth automatically, but one who is actually intelligent
+and has realized the self can see that this growth is not automatic; the cause is the soul, and the forms
+come out in material bodies under different conditions. By fermentation in the laboratory many germs are
+born, but this is due to the presence of the soul. The material scientist thinks that eggs are lifeless, but
+that is not a fact. From Vedic scripture we can understand that living entities in different forms are
+generated under different conditions. Birds evolve from eggs, and beasts and human beings are born from
+the embryo. The perfect vision of the yogi or devotee is that he sees the presence of the living entity
+everywhere.
 </p>
 
 </div>
@@ -85,7 +127,7 @@ mountains similar to those on this planet.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

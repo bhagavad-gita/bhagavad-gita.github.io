@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.21.html">3.15.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri rupini kvanayati caranaravindam
 lilambujena hari-sadmani mukta-dosa
 samlaksyate sphatika-kudya upeta-hemni
 sammarjativa yad-anugrahane 'nya-yatnah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri--Laksmi, the goddess of fortune; rupini--assuming a beautiful form; kvanayati--tinkling; caranaaravindam--
 lotus feet; lila-ambujena--playing with a lotus flower; hari-sadmani--the house of the Supreme
 Personality; mukta-dosa--freed from all faults; samlaksyate--becomes visible; sphatika--crystal; kudye--
 walls; upeta--mixed; hemni--gold; sammarjati iva--appearing like a sweeper; yat-anugrahane--to receive
 her favor; anya--others'; yatnah--very much careful.
-<p></p>
+<br>
 <h2>Translation</h2>
 The ladies in the Vaikuntha planets are as beautiful as the goddess of fortune herself. Such
 transcendentally beautiful ladies, their hands playing with lotuses and their leg bangles tinkling, are
 sometimes seen sweeping the marble walls, which are bedecked at intervals with golden borders, in order
 to receive the grace of the Supreme Personality of Godhead.
-<p></p>
+<br>
 <h2>Purport</h2>
 In the Brahma-samhita it is stated that the Supreme Lord, Govinda, is always served in His abode by
 many, many millions of goddesses of fortune. Laksmi-sahasra-sata-sambhrama-sevyamanam. These
@@ -95,7 +134,7 @@ Laksmi for happiness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

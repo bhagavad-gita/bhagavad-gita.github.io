@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.1.12.html">3.1.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 parthams tu devo bhagavan mukundo
 grhitavan saksiti-deva-devah
 aste sva-puryam yadu-deva-devo
 vinirjitasesa-nrdeva-devah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 parthan--the sons of Prtha (Kunti); tu--but; devah--the Lord; bhagavan--the Personality of Godhead;
 mukundah--Sri Krsna, who awards liberation; grhitavan--has taken up; sa--with; ksiti-deva-devah--the
 brahmanas and the demigods; aste--is present; sva-puryam--along with His family; yadu-deva-devah--
 worshiped by the royal order of the Yadu dynasty; vinirjita--who have been conquered; asesa--unlimited;
 nrdeva--kings; devah--Lord.
-<p></p>
+<br>
 <h2>Translation</h2>
 Lord Krsna, the Personality of Godhead, has accepted the sons of Prtha as His kinsmen, and all the
 kings of the world are with Lord Sri Krsna. He is present in His home with all His family members, the
 kings and princes of the Yadu dynasty, who have conquered an unlimited number of rulers, and He is
 their Lord.
-<p></p>
+<br>
 <h2>Purport</h2>
 Vidura gave Dhrtarastra very good counsel regarding political alliance with the sons of Prtha, the
 Pandavas. The first thing he said was that Lord Krsna was intimately related with them as their cousin.
@@ -88,7 +127,7 @@ Brahma and Indra. Therefore all universal power was behind the Pandavas.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

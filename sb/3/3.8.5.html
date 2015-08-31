@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.8.5.html">3.8.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 svardhuny-udardraih sva-jata-kalapair
 upasprsantas caranopadhanam
 padmam yad arcanty ahi-raja-kanyah
 sa-prema nana-balibhir vararthah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 svardhuni-uda--by the water of the Ganges; ardraih--being moistened; sva-jata--bunch of hairs;
 kalapaih--situated on the head; upasprsantah--by so touching; carana-upadhanam--the shelter of His feet;
 padmam--the lotus shelter; yat--that which; arcanti--worships; ahi-raja--the serpent-king; kanyah--
 daughters; sa-prema--with great devotion; nana--various; balibhih--paraphernalia; vara-arthah--being
 desirous of husbands.
-<p></p>
+<br>
 <h2>Translation</h2>
 The sages came from the highest planets down to the lower region through the water of the Ganges, and
 therefore the hair on their heads was wet. They touched the lotus feet of the Lord, which are worshiped
 with various paraphernalia by the daughters of the serpent-king when they desire good husbands.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Ganges water flows directly from the lotus feet of Visnu, and its course runs from the highest planet
 of the universe down to the lowest. The sages came down from Satyaloka by taking advantage of the
@@ -86,7 +125,7 @@ his bath in a river but later spoils the whole thing by covering himself with du
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

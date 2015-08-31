@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.37.html">3.28.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rupa-bhedaspadam divyam
-kala ity abhidhiyate
-bhutanam mahad-adinam
-yato bhinna-drsam bhayam
-<p></p>
+deham ca tam na caramah sthitam utthitam va
+siddho vipasyati yato 'dhyagamat svarupam
+daivad upetam atha daiva-vasad apetam
+vaso yatha parikrtam madira-madandhah
+<br>
 <h2>Synonyms</h2>
-rupa-bheda--of the transformation of forms; aspadam--the cause; divyam--divine; kalah--time; iti--thus;
-abhidhiyate--is known; bhutanam--of living entities; mahat-adinam--beginning with Lord Brahma; yatah--
-because of which; bhinna-drsam--with separate vision; bhayam--fear.
-<p></p>
+deham--material body; ca--and; tam--that; na--not; caramah--last; sthitam--sitting; utthitam--rising; va--
+or; siddhah--the realized soul; vipasyati--can conceive; yatah--because; adhyagamat--he has achieved; svarupam--
+his real identity; daivat--according to destiny; upetam--arrived; atha--moreover; daiva-vasat--
+according to destiny; apetam--departed; vasah--clothing; yatha--as; parikrtam--put on; madira-madaandhah--
+one who is blinded by intoxication.
+<br>
 <h2>Translation</h2>
-The time factor, who causes the transformation of the various material manifestations, is another feature
-of the Supreme Personality of Godhead. Anyone who does not know that time is the same Supreme
-Personality is afraid of the time factor.
-<p></p>
+Because he has achieved his real identity, the perfectly realized soul has no conception of how the
+material body is moving or acting, just as an intoxicated person cannot understand whether or not he has
+clothing on his body.
+<br>
 <h2>Purport</h2>
-Everyone is afraid of the activities of time, but a devotee who knows that the time factor is another
-representation or manifestation of the Supreme Personality of Godhead has nothing to fear from the
-influence of time. The phrase rupa-bhedaspadam is very significant. By the influence of time, so many
-forms are changing. For example, when a child is born his form is small, but in the course of time that
-form changes into a larger form, the body of a boy, and then the body of a young man. Similarly,
-everything is changed and transformed by the time factor, or by the indirect control of the Supreme
-Personality of Godhead. Usually, we do not see any difference between the body of a child and the body of
-a boy or young man because we know that these changes are due to the action of the time factor. There is
-cause for fear for a person who does not know how time acts.
+This stage of life is explained by Rupa Gosvami in his Bhakti-rasamrta-sindhu. A person whose mind is
+completely dovetailed with the desire of the Supreme Personality of Godhead, and who engages one
+hundred percent in the service of the Lord, forgets his material bodily demands.
 </p>
 
 </div>
@@ -81,7 +116,7 @@ cause for fear for a person who does not know how time acts.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

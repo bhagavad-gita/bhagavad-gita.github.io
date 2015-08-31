@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.30.13.html">3.30.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/30">30</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yas tv atra baddha iva karmabhir avrtatma
-bhutendriyasayamayim avalambya mayam
-aste visuddham avikaram akhanda-bodham
-atapyamana-hrdaye 'vasitam namami
-<p></p>
+evam sva-bharanakalpam
+tat-kalatradayas tatha
+nadriyante yatha purvam
+kinasa iva go-jaram
+<br>
 <h2>Synonyms</h2>
-yah--who; tu--also; atra--here; baddhah--bound; iva--as if; karmabhih--by activities; avrta--covered;
-atma--the pure soul; bhuta--the gross elements; indriya--the senses; asaya--the mind; mayim--consisting
-of; avalambya--having fallen; mayam--into maya; aste--remains; visuddham--completely pure; avikaram--
-without change; akhanda-bodham--possessed of unlimited knowledge; atapyamana--repentant; hrdaye--in
-the heart; avasitam--residing; namami--I offer my respectful obeisances.
-<p></p>
+evam--thus; sva-bharana--to maintain them; akalpam--unable; tat--his; kalatra--wife; adayah--and so on;
+tatha--so; na--not; adriyante--do respect; yatha--as; purvam--before; kinasah--farmers; iva--like; go-jaram--
+an old ox.
+<br>
 <h2>Translation</h2>
-I, the pure soul, appearing now bound by my activities, am lying in the womb of my mother by the
-arrangement of maya. I offer my respectful obeisances unto Him who is also here with me but who is
-unaffected and changeless. He is unlimited, but He is perceived in the repentant heart. To Him I offer my
-respectful obeisances.
-<p></p>
+Seeing him unable to support them, his wife and others do not treat him with the same respect as
+before, even as miserly farmers do not accord the same treatment to their old and worn-out oxen.
+<br>
 <h2>Purport</h2>
-As stated in the previous verse, the jiva soul says, "I take shelter of the Supreme Lord." Therefore,
-constitutionally, the jiva soul is the subordinate servitor of the Supreme Soul, the Personality of Godhead.
-Both the Supreme Soul and the jiva soul are sitting in the same body, as confirmed in the Upanisads. They
-are sitting as friends, but one is suffering, and the other is aloof from suffering.
-In this verse it is said, visuddham avikaram akhanda-bodham: the Supersoul is always sitting apart from
-all contamination. The living entity is contaminated and suffering because he has a material body, but that
-does not mean that because the Lord is also with him, He also has a I material body. He is avikaram,
-changeless. He is always the same Supreme, but unfortunately the Mayavadi philosophers, because of
-their impure hearts, cannot understand that the Supreme Soul, the Supersoul, is different from the
-individual soul. It is said here, atapyamana-hrdaye 'vasitam: He is in the heart of every living entity, but
-He can be realized only by a soul who is repentant. The individual soul becomes repentant that he forgot
-his constitutional position, wanted to become one with the Supreme Soul and tried his best to lord it over
-material nature. He has been baffled, and therefore he is repentant. At that time, Supersoul, or the
-relationship between the Supersoul and the individual soul, is realized. As it is confirmed in Bhagavadgita,
-after many, many births the knowledge comes to the conditioned soul that Vasudeva is great, He is
-master, and He is Lord. The individual soul is the servant, and therefore he surrenders unto Him. At that
-time he becomes a mahatma, a great soul. Therefore, a fortunate living being who comes to this
-understanding, even within the womb of his mother, has his liberation assured.
+Not only in the present age but from time immemorial, no one has liked an old man who is unable to
+earn in the family. Even in the modern age, in some communities or states, the old men are given poison
+so that they will die as soon as possible. In some cannibalistic communities, the old grandfather is
+sportingly killed, and a feast is held in which his body is eaten. The example is given that a farmer does
+not like an old bull who has ceased to work. Similarly, when an attached person in family life becomes old
+and is unable to earn, he is no longer liked by his wife, sons, daughters and other kinsmen, and he is
+consequently neglected, what to speak of not being given respect. It is judicious, therefore, to give up
+family attachment before one attains old age and take shelter of the Supreme Personality of Godhead. One
+should employ himself in the Lord's service so that the Supreme Lord can take charge of him, and he will
+not be neglected by his so-called kinsmen.
 </p>
 
 </div>
@@ -93,7 +120,7 @@ understanding, even within the womb of his mother, has his liberation assured.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,53 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.29.33.html">3.29.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/29">29</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kevalena hy adharmena
-kutumba-bharanotsukah
-yati jivo 'ndha-tamisram
-caramam tamasah padam
-<p></p>
+tasman mayy arpitasesakriyarthatma
+nirantarah
+mayy arpitatmanah pumso
+mayi sannyasta-karmanah
+na pasyami param bhutam
+akartuh sama-darsanat
+<br>
 <h2>Synonyms</h2>
-kevalena--simply; hi--certainly; adharmena--by irreligious activities; kutumba--family; bharana--to
-maintain; utsukah--eager; yati--goes; jivah--a person; andha-tamisram--to Andha-tamisra; caramam--
-ultimate; tamasah--of darkness; padam--region.
-<p></p>
+tasmat--than him; mayi--unto Me; arpita--offered; asesa--all; kriya--actions; artha--wealth; atma--life,
+soul; nirantarah--without cessation; mayi--unto Me; arpita--offered; atmanah--whose mind; pumsah--than
+a person; mayi--unto Me; sannyasta--dedicated; karmanah--whose activities; na--not; pasyami--I see;
+param--greater; bhutam--living entity; akartuh--without proprietorship; sama--same; darsanat--whose
+vision.
+<br>
 <h2>Translation</h2>
-Therefore a person who is very eager to maintain his family and kinsmen simply by black methods
-certainly goes to the darkest region of hell, which is known as Andha-tamisra.
-<p></p>
+Therefore I do not find a greater person than he who has no interest outside of Mine and who therefore
+engages and dedicates all his activities and all his life--everything--unto Me without cessation.
+<br>
 <h2>Purport</h2>
-Three words in this verse are very significant. Kevalena means "only by black methods," adharmena
-means "unrighteous" or "irreligious," and kutumba-bharana means "family maintenance." Maintaining
-one's family is certainly the duty of a householder, but one should be eager to earn his livelihood by the
-prescribed method, as stated in the scriptures. In Bhagavad-gita it is described that the Lord has divided
-the social system into four classifications of castes, or varnas, according to quality and work. Apart from
-Bhagavad-gita, in every society a man is known according to his quality and work. For example, when a
-man is constructing wooden furniture, he is called a carpenter, and a man who works with an anvil and
-iron is called a blacksmith. Similarly, a man who is engaged in the medical or engineering fields has a
-particular duty and designation. All these human activities have been divided by the Supreme Lord into
-four varnas, namely brahmana, ksatriya, vaisya and sudra. In Bhagavad-gita and in other Vedic literatures,
-the specific duties of the brahmana, ksatriya, vaisya and sudra are mentioned.
-One should work honestly according to his qualification. He should not earn his livelihood unfairly, by
-means for which he is not qualified. If a brahmana who works as a priest so that he may enlighten his
-followers with the spiritual way of life is not qualified as a priest, then he is cheating the public. One
-should not earn by such unfair means. The same is applicable to a ksatriya or to a vaisya. It is especially
-mentioned that the means of livelihood of those who are trying to advance in Krsna consciousness must
-be very fair and uncomplicated. Here it is mentioned that he who earns his livelihood by unfair means
-(kevalena) is sent to the darkest hellish region. Otherwise, if one maintains his family by prescribed
-methods and honest means, there is no objection to one's being a family man.
+In this verse the word sama-darsanat means that he no longer has any separate interest; the devotee's
+interest and the Supreme Personality of Godhead's interest are one. For example, Lord Caitanya, in the
+role of a devotee, also preached the same philosophy. He preached that Krsna is the worshipful Lord, the
+Supreme Personality of Godhead, and that the interest of His pure devotees is the same as His own.
+Sometimes Mayavadi philosophers, due to a poor fund of knowledge, define the word sama-darsanat to
+mean that a devotee should see himself as one with the Supreme Personality of Godhead. This is
+foolishness. When one thinks himself one with the Supreme Personality of Godhead, there is no question
+of serving Him. When there is service, there must be a master. Three things must be present for there to
+be service: the master, the servant and the service. Here it is clearly stated that he who has dedicated his
+life, all his activities, his mind and his soul--everything--for the satisfaction of the Supreme Lord, is
+considered to be the greatest person.
+The word akartuh means "without any sense of proprietorship." Everyone wants to act as the proprietor
+of his actions so that he can enjoy the result. A devotee, however, has no such desire; he acts because the
+Personality of Godhead wants him to act in a particular way. He has no personal motive. When Lord
+Caitanya preached Krsna consciousness, it was not with the purpose that people would call Him Krsna,
+the Supreme Personality of Godhead; rather, He preached that Krsna is the Supreme Personality of
+Godhead and should be worshiped as such. A devotee who is a most confidential servant of the Lord
+never does anything for his personal account, but does everything for the satisfaction of the Supreme
+Lord. It is clearly stated, therefore, mayi sannyasta-karmanah: the devotee works, but he works for the
+Supreme. It is also stated, mayy arpitatmanah: "He gives his mind unto Me." These are the qualifications
+of a devotee, who, according to this verse, is accepted as the highest of all human beings.
 </p>
 
 </div>
@@ -90,7 +135,7 @@ methods and honest means, there is no objection to one's being a family man.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

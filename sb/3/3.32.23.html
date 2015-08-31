@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.23.html">3.32.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dhyayati bhagavad-rupam
-yad aha dhyana-gocaram
-sutah prasanna-vadanam
-samasta-vyasta-cintaya
-<p></p>
+vasudeve bhagavati
+bhakti-yogah prayojitah
+janayaty asu vairagyam
+jnanam yad brahma-darsanam
+<br>
 <h2>Synonyms</h2>
-dhyayati--meditating; bhagavat-rupam--upon the form of the Supreme personality of Godhead; yat--
-which; aha--He instructed; dhyana-gocaram--the object of meditation; sutah--her son; prasannavadanam--
-with a smiling face; samasta--on the whole; vyasta--on the parts; cintaya--with her mind.
-<p></p>
+vasudeve--unto Krsna; bhagavati--the Personality of Godhead; bhakti-yogah--devotional service;
+prayojitah--discharged; janayati--produces; asu--very soon; vairagyam--detachment; jnanam--knowledge;
+yat--which; brahma-darsanam--self-realization.
+<br>
 <h2>Translation</h2>
-Thereafter, having heard with great eagerness and in all detail from her son, Kapiladeva, the eternally
-smiling Personality of Godhead, Devahuti began to meditate constantly upon the Visnu form of the
-Supreme Lord.
+Engagement in Krsna consciousness and application of devotional service unto Krsna make it possible
+to advance in knowledge and detachment, as well as in self-realization.
+<br>
+<h2>Purport</h2>
+It is said by less intelligent men that bhakti-yoga, or devotional service, is meant for persons who are not
+advanced in transcendental knowledge and renunciation. But the fact is that if one engages in the
+devotional service of the Lord in full Krsna consciousness, he does not have to attempt separately to
+practice detachment or to wait for an awakening of transcendental knowledge. It is said that one who
+engages unflinchingly in the devotional service of the Lord actually has all the good qualities of the
+demigods develop in him automatically. One cannot discover how such good qualities develop in the
+body of a devotee, but actually it happens. There is one instance where a hunter was taking pleasure in
+killing animals, but after becoming a devotee he was not prepared to kill even an ant. Such is the quality
+of a devotee.
+Those who are very eager to advance in transcendental knowledge can engage themselves in pure
+devotional service, without wasting time in mental speculation. For arriving at the positive conclusions of
+knowledge in the Absolute Truth, the word brahma-darsanam is significant in this verse. Brahmadarsanam
+means to realize or to understand the Transcendence. One who engages in the service of
+Vasudeva can actually realize what Brahman is. If Brahman is impersonal, then there is no question of
+darsanam, which means "seeing face to face." Darsanam refers to seeing the Supreme personality of
+Godhead, Vasudeva. Unless the seer and the seen are persons, there is no darsanam. Brahma-darsanam
+means that as soon as one sees the Supreme Personality of Godhead, he can at once realize what
+impersonal Brahman is. A devotee does not need to make separate investigations to understand the nature
+of Brahman. Bhagavad-gita also confirms this. Brahma-bhuyaya kalpate: a devotee at once becomes a selfrealized
+soul in the Absolute Truth.
 </p>
 
 </div>
@@ -70,7 +130,7 @@ Supreme Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

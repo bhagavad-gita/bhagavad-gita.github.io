@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.18.html">3.31.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-trai-vargikas te purusa
-vimukha hari-medhasah
-kathayam kathaniyoruvikramasya
-madhudvisah
-<p></p>
+yenedrsim gatim asau dasa-masya isa
+sangrahitah puru-dayena bhavadrsena
+svenaiva tusyatu krtena sa dina-nathah
+ko nama tat-prati vinanjalim asya kuryat
+<br>
 <h2>Synonyms</h2>
-trai-vargikah--interested in the three elevating processes; te--those; purusah--persons; vimukhah--not
-interested; hari-medhasah--of Lord Hari; kathayam--in the pastimes; kathaniya--worth chanting of; uruvikramasya--
-whose excellent prowess; madhu-dvisah--the killer of the Madhu demon.
-<p></p>
+yena--by whom (the Lord); idrsim--such; gatim--a condition; asau--that person (myself); dasa-masyah--
+ten months old; isa--O Lord; sangrahitah--was made to accept; puru-dayena--very merciful; bhavadrsena--
+incomparable; svena--own; eva--alone; tusyatu--may He be pleased; krtena--with His act; sah--that; dinanathah--
+refuge of the fallen souls; kah--who; nama--indeed; tat--that mercy; prati--in return; vina--except
+with; anjalim--folded hands; asya--of the Lord; kuryat--can repay.
+<br>
 <h2>Translation</h2>
-Such persons are called trai-vargika because they are interested in the three elevating processes. They
-are averse to the Supreme Personality of Godhead, who can give relief to the conditioned soul. They are
-not interested in the Supreme Personality's pastimes, which are worth hearing because of His
-transcendental prowess.
-<p></p>
+My dear Lord, by Your causeless mercy I am awakened to consciousness, although I am only ten months
+old. For this causeless mercy of the Supreme Personality of Godhead, the friend of all fallen souls, there is
+no way to express my gratitude but to pray with folded hands.
+<br>
 <h2>Purport</h2>
-According to Vedic thought, there are four elevating principles, namely religiosity, economic
-development, sense gratification and liberation. Persons who are simply interested in material enjoyment
-make plans to execute prescribed duties. They are interested in the three elevating processes of religious
-rituals, economic elevation and sense enjoyment. By developing their economic condition, they can enjoy
-material life. Materialistic persons, therefore, are interested in those elevating processes, which are called
-trai-vargika. Trai means "three"; vargika means "elevating processes." Such materialistic persons are never
-attracted by the Supreme personality of Godhead. Rather, they are antagonistic towards Him.
-The Supreme personality of Godhead is here described as hari-medhah, or "He who can deliver one
-from the cycle of birth and death." Materialistic persons are never interested in hearing about the
-marvelous pastimes of the Lord. They think that they are fictions and stories and that the Supreme
-Godhead is also a man of material nature. They are not fit for advancing in devotional service, or Krsna
-consciousness. Such materialistic persons are interested in newspaper stories, novels and imaginary
-dramas. The factual activities of the Lord, such as Lord Krsna's acting in the Battle of Kuruksetra, or the
-activities of the Pandavas, or the Lord's activities in Vrndavana or Dvaraka, are related in the Bhagavadgita
-and Srimad-Bhagavatam, which are full of the activities of the Lord. But materialistic persons who
-engage in elevating their position in the material world are not interested in such activities of the Lord.
-They may be interested in the activities of a great politician or a great rich man of this world, but they are
-not interested in the transcendental activities of the Supreme Lord.
+As stated in Bhagavad-gita, intelligence and forgetfulness are both supplied by the Supersoul sitting with
+the individual soul within the body. When He sees that a conditioned soul is very serious about getting
+out of the clutches of the material influence, the Supreme Lord gives intelligence internally as Supersoul
+and externally as the spiritual master, or, as an incarnation of the Personality of Godhead Himself, He
+helps by speaking instructions such as Bhagavad-gita. The Lord is always seeking the opportunity to
+reclaim the fallen souls to His abode, the kingdom of God. We should always feel very much obliged to
+the Personality of Godhead, for He is always anxious to bring us into the happy condition of eternal life.
+There is no sufficient means to repay the Personality of Godhead for His act of benediction; therefore, we
+can simply feel gratitude and pray to the Lord with folded hands. This prayer of the child in the womb
+may be questioned by some atheistic people. How can a child pray in such a nice way in the womb of his
+mother? Everything is possible by the grace of the Lord. The child is put into such a precarious condition
+externally, but internally he is the same, and the Lord is there. By the transcendental energy of the Lord,
+everything is possible.
 </p>
 
 </div>
@@ -91,7 +126,7 @@ not interested in the transcendental activities of the Supreme Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

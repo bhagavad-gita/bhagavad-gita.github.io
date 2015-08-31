@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.21.51.html">3.21.51</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.51</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/51"><b>51</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yo 'rkendv-agnindra-vayunam
 yama-dharma-pracetasam
 rupani sthana adhatse
 tasmai suklaya te namah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yah--you who; arka--of the sun; indu--of the moon; agni--of Agni, the fire-god; indra--of Indra, the lord
 of heaven; vayunam--of Vayu, the wind-god; yama--of Yama, the god of punishment; dharma--of Dharma,
 the god of piety; pracetasam--and of Varuna, the god of the waters; rupani--the forms; sthane--when
 necessary; adhatse--you assume; tasmai--unto Him; suklaya--unto Lord Visnu; te--unto you; namah--
 obeisances.
-<p></p>
+<br>
 <h2>Translation</h2>
 You assume, when necessary, the part of the sun-god; the moon-god; Agni, the god of fire; Indra, the
 lord of paradise; Vayu, the wind-god; Yama, the god of punishment; Dharma, the god of piety; and
 Varuna, the god presiding over the waters. All obeisances to you, who are none other than Lord Visnu!
-<p></p>
+<br>
 <h2>Purport</h2>
 Since the sage Kardama was a brahmana and Svayambhuva was a ksatriya, the sage was not supposed to
 offer obeisances to the King because socially his position was greater than the King's. But he offered his
@@ -80,7 +119,7 @@ from everyone.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

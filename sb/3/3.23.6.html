@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.23.6.html">3.23.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 kardama uvaca
 tusto 'ham adya tava manavi manadayah
 susrusaya paramaya paraya ca bhaktya
 yo dehinam ayam ativa suhrt sa deho
 naveksitah samucitah ksapitum mad-arthe
-<p></p>
+<br>
 <h2>Synonyms</h2>
 kardamah uvaca--the great sage Kardama said; tustah--pleased; aham--I am; adya--today; tava--with you;
 manavi--O daughter of Manu; mana-dayah--who are respectful; susrusaya--by the service; paramaya--most
 excellent; paraya--highest; ca--and; bhaktya--by the devotion; yah--that which; dehinam--to the embodied;
 ayam--this; ativa--extremely; suhrt--dear; sah--that; dehah--body; na--not; aveksitah--taken care of;
 samucitah--properly; ksapitum--to expend; mat-arthe--on my account.
-<p></p>
+<br>
 <h2>Translation</h2>
 Kardama Muni said: O respectful daughter of Svayambhuva Manu, today I am very much pleased with
 you for your great devotion and most excellent loving service. Since the body is so dear to embodied
 beings, I am astonished that you have neglected your own body to use it on my behalf.
-<p></p>
+<br>
 <h2>Purport</h2>
 It is indicated here that one's body is very dear, yet Devahuti was so faithful to her husband that not
 only did she serve him with great devotion, service and respect, but she did not even care for her own
@@ -83,7 +122,7 @@ expected by a woman who is the wife of an ordinary person.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

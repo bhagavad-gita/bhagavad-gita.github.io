@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.25.html">3.15.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yac ca vrajanty animisam rsabhanuvrttya
 dure yama hy upari nah sprhaniya-silah
 bhartur mithah suyasasah kathananuragavaiklavya-
 baspa-kalaya pulaki-krtangah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yat--Vaikuntha; ca--and; vrajanti--go; animisam--of the demigods; rsabha--chief; anuvrttya--following in
 the footsteps; dure--keeping at a distance; yamah--regulative principles; hi--certainly; upari--above; nah--
 us; sprhaniya--to be desired; silah--good qualities; bhartuh--of the Supreme Lord; mithah--for one
 another; suyasasah--glories; kathana--by discussions, discourses; anuraga--attraction; vaiklavya--ecstasy;
 baspa-kalaya--tears in the eyes; pulaki-krta--shivering; angah--bodies.
-<p></p>
+<br>
 <h2>Translation</h2>
 Persons whose bodily features change in ecstasy and who breathe heavily and perspire due to hearing
 the glories of the Lord are promoted to the kingdom of God, even though they do not care for meditation
 and other austerities. The kingdom of God is above the material universes, and it is desired by Brahma
 and other demigods.
-<p></p>
+<br>
 <h2>Purport</h2>
 It is clearly stated herein that the kingdom of God is above the material universes. Just as there are many
 hundreds of thousands of higher planets above this earth, so there are many millions and billions of
@@ -141,7 +180,7 @@ offenses.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

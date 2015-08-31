@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.26.html">3.28.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atmanas ca parasyapi
-yah karoty antarodaram
-tasya bhinna-drso mrtyur
-vidadhe bhayam ulbanam
-<p></p>
+vakso 'dhivasam rsabhasya maha-vibhuteh
+pumsam mano-nayana-nirvrtim adadhanam
+kantham ca kaustubha-maner adhibhusanartham
+kuryan manasy akhila-loka-namaskrtasya
+<br>
 <h2>Synonyms</h2>
-atmanah--of himself; ca--and; parasya--of another; api--also; yah--one who; karoti--discriminates;
-antara--between; udaram--the body; tasya--of him; bhinna-drsah--having a differential outlook; mrtyuh--
-as death; vidadhe--I cause; bhayam--fear; ulbanam--great.
-<p></p>
+vaksah--the chest; adhivasam--the abode; rsabhasya--of the Supreme Personality of Godhead; mahavibhuteh--
+of Maha-Laksmi; pumsam--of persons; manah--to the mind; nayana--to the eyes; nirvrtim--
+transcendental pleasure; adadhanam--bestowing; kantham--the neck; ca--also; kaustubha-maneh--of the
+Kaustubha gem; adhibhusana-artham--which enhances the beauty; kuryat--he should meditate on;
+manasi--in the mind; akhila-loka--by the entire universe; namaskrtasya--who is adored.
+<br>
 <h2>Translation</h2>
-As the blazing fire of death, I cause great fear to whoever makes the least discrimination between
-himself and other living entities because of a differential outlook.
-<p></p>
+The yogi should then meditate on the chest of the Supreme Personality of Godhead, the abode of
+goddess Maha-Laksmi. The Lord's chest is the source of all transcendental pleasure for the mind and full
+satisfaction for the eyes. The yogi should then imprint on his mind the neck of the Personality of
+Godhead, who is adored by the entire universe. The neck of the Lord serves to enhance the beauty of the
+Kaustubha gem, which hangs on His chest.
+<br>
 <h2>Purport</h2>
-There are bodily differentiations among all varieties of living entities, but a devotee should not
-distinguish between one living entity and another on such a basis; a devotee's outlook should be that both
-the soul and Supersoul are equally present in all varieties of living entities.
+In the Upanisads it is said that the various energies of the Lord are working to create, destroy and
+maintain. These inconceivable varieties of energy are stored in the bosom of the Lord. As people generally
+say, God is all-powerful. That prowess is represented by Maha-Laksmi, the reservoir of all energies, who is
+situated on the bosom of the transcendental form of the Lord. The yogi who can meditate perfectly on
+that spot on the transcendental form of the Lord can derive many material powers, which comprise the
+eight perfections of the yoga system.
+It is stated herein that the beauty of the neck of the Lord enhances the beauty of the Kaustubha gem
+rather than vice versa. The gem itself becomes more beautiful because it is situated on the neck of the
+Lord. A yogi is therefore recommended to meditate upon the Lord's neck. The Lord's transcendental form
+can either be meditated upon in the mind or placed in a temple in the form of a statue and decorated in
+such a way that everyone can contemplate it. Temple worship, therefore, is meant for persons who are not
+so advanced that they can meditate upon the form of the Lord. There is no difference between constantly
+visiting the temple and directly seeing the transcendental form of the Lord; they are of equal value. The
+advantageous position of the yogi is that he can sit anywhere in a solitary place and meditate upon the
+form of the Lord. A less advanced person, however, has to go to the temple, and as long as he does not go
+to the temple he is unable to see the form of the Lord. Either by hearing, seeing or meditating, the
+objective is the transcendental form of the Lord; there is no question of voidness or impersonalism. The
+Lord can bestow the blessings of transcendental pleasure upon either the visitor of the temple, the
+meditator-yogi or one who hears about the Lord's transcendental form from scriptures like the Srimad-
+Bhagavatam or Bhagavad-gita. There are nine processes for executing devotional service, of which
+smaranam, or meditation, is one. Yogis take advantage of the process of smaranam, whereas bhakti-yogis
+take special advantage of the process of hearing and chanting.
 </p>
 
 </div>
@@ -74,7 +137,7 @@ the soul and Supersoul are equally present in all varieties of living entities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

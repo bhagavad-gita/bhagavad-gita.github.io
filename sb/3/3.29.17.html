@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,61 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.29.17.html">3.29.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/29">29</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sayanah parisocadbhih
-parivitah sva-bandhubhih
-vacyamano 'pi na brute
-kala-pasa-vasam gatah
-<p></p>
+mahatam bahu-manena
+dinanam anukampaya
+maitrya caivatma-tulyesu
+yamena niyamena ca
+<br>
 <h2>Synonyms</h2>
-sayanah--lying down; parisocadbhih--lamenting; parivitah--surrounded; sva-bandhubhih--by his
-relatives and friends; vacyamanah--being urged to speak; api--although; na--not; brute--he speaks; kala--of
-time; pasa--the noose; vasam--under the control of; gatah--gone.
-<p></p>
+mahatam--to the great souls; bahu-manena--with great respect; dinanam--to the poor; anukampaya--
+with compassion; maitrya--with friendship; ca--also; eva--certainly; atma-tulyesu--to persons who are
+equals; yamena--with control of the senses; niyamena--with regulation; ca--and.
+<br>
 <h2>Translation</h2>
-In this way he comes under the clutches of death and lies down, surrounded by lamenting friends and
-relatives, and although he wants to speak with them, he no longer can because he is under the control of
-time.
-<p></p>
+The pure devotee should execute devotional service by giving the greatest respect to the spiritual master
+and the acaryas. He should be compassionate to the poor and make friendship with persons who are his
+equals, but all his activities should be executed under regulation and with control of the senses.
+<br>
 <h2>Purport</h2>
-For formality's sake, when a man is lying on his deathbed, his relatives come to him, and sometimes
-they cry very loudly, addressing the dying man: "Oh, my father!" "Oh, my friend!" or "Oh, my husband!"
-In that pitiable condition the dying man wants to speak with them and instruct them of his desires, but
-because he is fully under the control of the time factor, death, he cannot express himself, and that causes
-him inconceivable pain. He is already in a painful condition because of disease, and his glands and throat
-are choked up with mucus. He is already in a very difficult position, and when he is addressed by his
-relatives in that way, his grief increases.
+In Bhagavad-gita, Thirteenth Chapter, it is clearly stated that one should execute devotional service and
+advance on the path of spiritual knowledge by accepting the acarya. Acaryopasanam: one should worship
+an acarya, a spiritual master who knows things as they are. The spiritual master must be in the disciplic
+succession from Krsna. The predecessors of the spiritual master are his spiritual master, his grand
+spiritual master, his great-grand spiritual master and so on, who form the disciplic succession of acaryas.
+It is recommended herewith that all the acaryas be given the highest respect. It is stated, gurusu naramatih.
+Gurusu means "unto the acaryas," and nara-matih means "thinking like a common man." To think
+of the Vaisnavas, the devotees, as belonging to a particular caste or community, to think of the acaryas as
+ordinary men or to think of the Deity in the temple as being made of stone, wood or metal, is condemned.
+Niyamena: one should offer the greatest respect to the acaryas according to the standard regulations. A
+devotee should also be compassionate to the poor. This does not refer to those who are poverty-stricken
+materially. According to devotional vision, a man is poor if he is not in Krsna consciousness. A man may
+be very rich materially, but if he is not Krsna conscious, he is considered poor. On the other hand, many
+acaryas, such as Rupa Gosvami and Sanatana Gosvami, used to live beneath trees every night. Superficially
+it appeared that they were poverty-stricken, but from their writings we can understand that in spiritual
+life they were the richest personalities.
+A devotee shows compassion to those poor souls who are wanting in spiritual knowledge by
+enlightening them in order to elevate them to Krsna consciousness. That is one of the duties of a devotee.
+He should also make friendship with persons who are on an equal level with himself or who have the
+same understanding that he does. For a devotee, there is no point in making friendships with ordinary
+persons; he should make friendship with other devotees so that by discussing among themselves, they
+may elevate one another on the path of spiritual understanding. This is called ista-gosthi.
+In Bhagavad-gita there is reference to bodhayantah parasparam, "discussing among themselves."
+Generally pure devotees utilize their valuable time in chanting and discussing various activities of Lord
+Krsna or Lord Caitanya amongst themselves. There are innumerable books, such as the puranas,
+Mahabharata, Bhagavatam, Bhagavad-gita and Upanisads, which contain countless subjects for discussion
+among two devotees or more. Friendship should be cemented between persons with mutual interests and
+understanding. Such persons are said to be sva jati, "of the same caste." The devotee should avoid a
+person whose character is not fixed in the standard understanding; even though he may be a Vaisnava, or
+a devotee of Krsna, if his character is not correctly representative, then he should be avoided. One should
+steadily control the senses and the mind and strictly follow the rules and regulations, and he should make
+friendship with persons of the same standard.
 </p>
 
 </div>
@@ -79,7 +143,7 @@ relatives in that way, his grief increases.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.16.24.html">3.16.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tat te 'nabhistam iva sattva-nidher vidhitsoh
 ksemam janaya nija-saktibhir uddhrtareh
 naitavata try-adhipater bata visva-bhartus
 tejah ksatam tv avanatasya sa te vinodah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tat--that destruction of the path of auspiciousness; te--by You; anabhistam--is not liked; iva--as; sattvanidheh--
 the reservoir of all goodness; vidhitsoh--desiring to do; ksemam--good; janaya--for the people in
@@ -61,14 +100,14 @@ general; nija-saktibhih--by Your own potencies; uddhrta--destroyed; areh--the op
 etavata--by this; tri-adhipateh--of the proprietor of the three kinds of creations; bata--O Lord; visvabhartuh--
 the maintainer of the universe; tejah--potency; ksatam--reduced; tu--but; avanatasya--
 submissive; sah--that; te--Your; vinodah--pleasure.
-<p></p>
+<br>
 <h2>Translation</h2>
 Dear Lord, You never want the auspicious path to be destroyed, for You are the reservoir of all
 goodness. Just to benefit people in general, You destroy the evil element by Your mighty potency. You are
 the proprietor of the three creations and the maintainer of the entire universe. Therefore Your potency is
 not reduced by Your submissive behavior. Rather, by submission You exhibit Your transcendental
 pastimes.
-<p></p>
+<br>
 <h2>Purport</h2>
 Lord Krsna was never reduced in His position by becoming a cowherd boy or by offering respect to
 Sudama Brahmana or His other devotees like Nanda Maharaja, Vasudeva, Maharaja Yudhisthira and the
@@ -92,7 +131,7 @@ rascaldom.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

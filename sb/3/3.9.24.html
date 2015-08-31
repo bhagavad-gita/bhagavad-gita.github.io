@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.9.24.html">3.9.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 nabhi-hradad iha sato 'mbhasi yasya pumso
 vijnana-saktir aham asam ananta-sakteh
 rupam vicitram idam asya vivrnvato me
 ma ririsista nigamasya giram visargah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 nabhi-hradat--from the navel lake; iha--in this millennium; satah--lying; ambhasi--in the water; yasya--
 one whose; pumsah--of the Personality of Godhead; vijnana--of the total universe; saktih--energy; aham--
 I; asam--was born; ananta--unlimited; sakteh--of the powerful; rupam--form; vicitram--variegated; idam--
 this; asya--His; vivrnvatah--manifesting; me--unto me; ma--may not; ririsista--vanish; nigamasya--of the
 Vedas; giram--of the sounds; visargah--vibration.
-<p></p>
+<br>
 <h2>Translation</h2>
 The Lord's potencies are innumerable. As He lies down in the water of devastation, I am born as the
 total universal energy from the navel lake in which the lotus sprouts. I am now engaged in manifesting
 His diverse energies in the form of the cosmic manifestation. I therefore pray that in the course of my
 material activities I may not be deviated from the vibration of the Vedic hymns.
-<p></p>
+<br>
 <h2>Purport</h2>
 Every person engaged in the transcendental loving service of the Lord in this material world is prone to
 so many material activities, and if one is not strong enough to protect himself against the onslaught of
@@ -90,7 +129,7 @@ entrusted duties, has no fear of falling into material contamination.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

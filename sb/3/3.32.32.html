@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.32.html">3.32.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasyas tad yoga-vidhutamartyam
-martyam abhut sarit
-srotasam pravara saumya
-siddhida siddha-sevita
-<p></p>
+jnana-yogas ca man-nistho
+nairgunyo bhakti-laksanah
+dvayor apy eka evartho
+bhagavac-chabda-laksanah
+<br>
 <h2>Synonyms</h2>
-tasyah--of Devahuti; tat--that; yoga--by yoga practice; vidhuta--relinquished; martyam--material
-elements; martyam--her mortal body; abhut--became; sarit--a river; srotasam--of all rivers; pravara--the
-foremost; saumya--O gentle Vidura; siddhi-da--conferring perfection; siddha--by persons desiring
-perfection; sevita--resorted to.
-<p></p>
+jnana-yogah--philosophical research; ca--and; mat-nisthah--directed towards Me; nairgunyah--free from
+the material modes of nature; bhakti--devotional service; laksanah--named; dvayoh--of both; api--
+moreover; ekah--one; eva--certainly; arthah--purpose; bhagavat--the Supreme Personality of Godhead;
+sabda--by the word; laksanah--signified.
+<br>
 <h2>Translation</h2>
-Dear Vidura, the material elements of her body have melted into water and are now a flowing river,
-which is the most sacred of all rivers. Anyone who bathes in that river also attains perfection, and
-therefore all persons who desire perfection go bathe there.
+Philosophical research culminates in understanding the Supreme Personality of Godhead. After
+achieving this understanding, when one becomes free from the material modes of nature, he attains the
+stage of devotional service. Either by devotional service directly or by philosophical research, one has to
+find the same destination, which is the Supreme Personality of Godhead.
+<br>
+<h2>Purport</h2>
+It is said in Bhagavad-gita that after many, many lives of philosophical research the wise man ultimately
+comes to the point of knowing that Vasudeva, the Supreme Personality of Godhead, is everything, and
+therefore he surrenders unto Him. Such serious students in philosophical research are rare because they
+are very great souls. If by philosophical research one cannot come to the point of understanding the
+Supreme Person, then his task is not finished. His search in knowledge is still to be continued until he
+comes to the point of understanding the Supreme Lord in devotional service.
+The opportunity for direct touch with the Personality of Godhead is given in Bhagavad-gita, where it is
+also said that those who take to other processes, namely the processes of philosophical speculation and
+mystic yoga practice, have much trouble. After many, many years of much trouble, a yogi or wise
+philosopher may come to Him, but his path is very troublesome, whereas the path of devotional service is
+easy for everyone. One can achieve the result of wise philosophical speculation simply by discharging
+devotional service, and unless one reaches the point of understanding the Personality of Godhead by his
+mental speculation, all his research work is said to be simply a labor of love. The ultimate destination of
+the wise philosopher is to merge in the impersonal Brahman, but that Brahman is the effulgence of the
+Supreme Person. The Lord says in Bhagavad-gita (14.27), brahmano hi pratisthaham amrtasyavyayasya ca:
+"I am the basis of the impersonal Brahman, which is indestructible and is the supreme bliss." The Lord is
+the supreme reservoir of all pleasure, including Brahman pleasure; therefore, one who has unflinching
+faith in the Supreme Personality of Godhead is said to be already realized in impersonal Brahman and
+Paramatma.
 </p>
 
 </div>
@@ -71,7 +132,7 @@ therefore all persons who desire perfection go bathe there.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

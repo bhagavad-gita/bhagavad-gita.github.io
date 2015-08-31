@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.18.11.html">3.18.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ete vayam nyasa-hara rasaukasam
 gata-hriyo gadaya dravitas te
 tisthamahe 'thapi kathancid ajau
 stheyam kva yamo balinotpadya vairam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ete--Ourselves; vayam--We; nyasa--of the charge; harah--thieves; rasa-okasam--of the inhabitants of
 Rasatala; gata-hriyah--shameless; gadaya--by the mace; dravitah--chased; te--your; tisthamahe--We shall
 stay; atha api--nevertheless; kathancit--somehow; ajau--on the battlefield; stheyam--We must stay; kva--
 where; yamah--can We go; balina--with a powerful enemy; utpadya--having created; vairam--enmity.
-<p></p>
+<br>
 <h2>Translation</h2>
 Certainly We have stolen the charge of the inhabitants of Rasatala and have lost all shame. Although
 bitten by your powerful mace, I shall stay here in the water for some time because, having created enmity
 with a powerful enemy, I now have no place to go.
-<p></p>
+<br>
 <h2>Purport</h2>
 The demon should have known that God cannot be driven out of any place, for He is all-pervading.
 Demons think of their possessions as their property, but actually everything belongs to the Supreme
@@ -76,7 +115,7 @@ Personality of Godhead, who can take anything at any time He likes.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

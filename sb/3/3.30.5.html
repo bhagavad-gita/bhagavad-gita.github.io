@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.30.5.html">3.30.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/30">30</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-matur jagdhanna-panadyair
-edhad-dhatur asammate
-sete vin-mutrayor garte
-sa jantur jantu-sambhave
-<p></p>
+naraka-stho 'pi deham vai
+na pumams tyaktum icchati
+narakyam nirvrtau satyam
+deva-maya-vimohitah
+<br>
 <h2>Synonyms</h2>
-matuh--of the mother; jagdha--taken; anna-pana--by the food and drink; adyaih--and so on; edhat--
-increasing; dhatuh--the ingredients of his body; asammate--abominable; sete--remains; vit-mutrayoh--of
-stools and urine; garte--in a hollow; sah--that; jantuh--fetus; jantu--of worms; sambhave--the breeding
-place.
-<p></p>
+naraka--in hell; sthah--situated; api--even; deham--body; vai--indeed; na--not; puman--person;
+tyaktum--to leave; icchati--wishes; narakyam--hellish; nirvrtau--enjoyment; satyam--when existing; devamaya--
+by the illusory energy of Visnu; vimohitah--deluded.
+<br>
 <h2>Translation</h2>
-Deriving its nutrition from the food and drink taken by the mother, the fetus grows and remains in that
-abominable residence of stools and urine, which is the breeding place of all kinds of worms.
-<p></p>
+The conditioned living entity is satisfied in his own particular species of life; while deluded by the
+covering influence of the illusory energy, he feels little inclined to cast off his body, even when in hell, for
+he takes delight in hellish enjoyment.
+<br>
 <h2>Purport</h2>
-In the Markandeya purana it is said that in the intestine of the mother the umbilical cord, which is
-known as apyayani, joins the mother to the abdomen of the child, and through this passage the child
-within the womb accepts the mother's assimilated foodstuff. In this way the child is fed by the mother's
-intestine within the womb and grows from day to day. The statement of the Markandeya purana about the
-child's situation within the womb is exactly corroborated by modern medical science, and thus the
-authority of the puranas cannot be disproved, as is sometimes attempted by the Mayavadi philosophers.
-Since the child depends completely on the assimilated foodstuff of the mother, during pregnancy there
-are restrictions on the food taken by the mother. Too much salt, chili, onion and similar food is forbidden
-for the pregnant mother because the child's body is too delicate and new for him to tolerate such pungent
-food. Restrictions and precautions to be taken by the pregnant mother, as enunciated in the smrti
-scriptures of Vedic literature, are very useful. We can understand from the Vedic literature how much
-care is taken to beget a nice child in society. The garbhadhana ceremony before sexual intercourse was
-compulsory for persons in the higher grades of society, and it is very scientific. Other processes
-recommended in the Vedic literature during pregnancy are also very important. To take care of the child
-is the primary duty of the parents because if such care is taken, society will be filled with good population
-to maintain the peace and prosperity of the society, country and human race.
+It is said that once Indra, the King of heaven, was cursed by his spiritual master, Brhaspati, on account
+of his misbehavior, and he became a hog on this planet. After many days, when Brahma wanted to recall
+him to his heavenly kingdom, Indra, in the form of a hog, forgot everything of his royal position in the
+heavenly kingdom, and he refused to go back. This is the spell of maya. Even Indra forgets his heavenly
+standard of life and is satisfied with the standard of a hog's life. By the influence of maya the conditioned
+soul becomes so affectionate towards his particular type of body that if he is offered, "Give up this body,
+and immediately you will have a king's body," he will not agree. This attachment strongly affects all
+conditioned living entities. Lord Krsna is personally canvassing, "Give up everything in this material
+world. Come to Me, and I shall give you all protection," but we are not agreeable. We think, "We are
+quite all right. Why should we surrender unto Krsna and go back to His kingdom?" This is called illusion,
+or maya. Everyone is satisfied with his standard of living, however abominable it may be.
 </p>
 
 </div>
@@ -88,7 +122,7 @@ to maintain the peace and prosperity of the society, country and human race.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

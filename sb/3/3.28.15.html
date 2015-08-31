@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,73 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.15.html">3.28.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nisevitenanimittena
-sva-dharmena mahiyasa
-kriya-yogena sastena
-natihimsrena nityasah
-<p></p>
+matta-dvirepha-kalaya
+paritam vana-malaya
+parardhya-hara-valayakiritangada-
+nupuram
+<br>
 <h2>Synonyms</h2>
-nisevitena--executed; animittena--without attachment to the result; sva-dharmena--by one's prescribed
-duties; mahiyasa--glorious; kriya-yogena--by devotional activities; sastena--auspicious; na--without;
-atihimsrena--excessive violence; nityasah--regularly.
-<p></p>
+matta--intoxicated; dvi-repha--with bees; kalaya--humming; paritam--garlanded; vana-malaya--with a
+garland of forest flowers; parardhya--priceless; hara--pearl necklace; valaya--bracelets; kirita--a crown;
+angada--armlets; nupuram--anklets.
+<br>
 <h2>Translation</h2>
-A devotee must execute his prescribed duties, which are glorious, without material profit. Without
-excessive violence, one should regularly perform one's devotional activities.
-<p></p>
+He also wears around His neck a garland of attractive sylvan flowers, and a swarm of bees, intoxicated
+by its delicious fragrance, hums about the garland. He is further superbly adorned with a pearl necklace, a
+crown and pairs of armlets, bracelets and anklets.
+<br>
 <h2>Purport</h2>
-One has to execute his prescribed duties according to his social position as a brahmana, ksatriya, vaisya
-or sudra. The prescribed duties of the four classes of men in human society are also described in
-Bhagavad-gita. The activities of brahmanas are to control the senses and to become simple, clean, learned
-devotees. The ksatriyas have the spirit for ruling, they are not afraid on the battlefield, and they are
-charitable. The vaisyas, or the mercantile class of men, trade in commodities, protect cows and develop
-agricultural produce. The sudras, or laborer class, serve the higher classes because they themselves are not
-very intelligent.
-From every position, as confirmed in Bhagavad-gita, sva-karmana tam abhyarcya: one can serve the
-Supreme Lord by performing one's prescribed duty. It is not that only the brahmanas can serve the
-Supreme Lord and not the sudras. Anyone can serve the Supreme Lord by performing his prescribed
-duties under the direction of a spiritual master, or representative of the Supreme Personality of Godhead.
-No one should think that his prescribed duties are inferior. A brahmana can serve the Lord by using his
-intelligence, and the ksatriya can serve the Supreme Lord by using his military arts, just as Arjuna served
-Krsna. Arjuna was a warrior; he had no time to study Vedanta or other highly intellectual books. The
-damsels in Vrajadhama were girls born of the vaisya class, and they engaged in protecting cows and
-producing agriculture. Krsna's foster father, Nanda Maharaja, and his associates were all vaisyas. They
-were not at all educated, but they could serve Krsna by loving Him and by offering everything to Him.
-Similarly, there are many instances in which candalas, or those lower than sudras, have served Krsna.
-Also, the sage Vidura was considered a sudra because his mother happened to be sudra. There are no
-distinctions, for it is declared by the Lord in Bhagavad-gita that anyone engaged specifically in devotional
-service is elevated to the transcendental position without a doubt. Everyone's prescribed duty is glorious if
-it is performed in devotional service of the Lord, without desire for profit. Such loving service must be
-performed without reason, without impediment, and spontaneously. Krsna is lovable, and one has to
-serve Him in whatever capacity one can. That is pure devotional service.
-Another significant phrase in this verse is natihimsrena ("with minimum violence or sacrifice of life").
-Even if a devotee has to commit violence, it should not be done beyond what is necessary. Sometimes the
-question is put before us: "You ask us not to eat meat, but you are eating vegetables. Do you think that is
-not violence?" The answer is that eating vegetables is violence, and vegetarians are also committing
-violence against other living entities because vegetables also have life. Nondevotees are killing cows, goats
-and so many other animals for eating purposes, and a devotee, who is vegetarian, is also killing. But here,
-significantly, it is stated that every living entity has to live by killing another entity; that is the law of
-nature. Jivo jivasya jivanam: one living entity is the life for another living entity. But for a human being,
-that violence should be committed only as much as necessary.
-A human being is not to eat anything which is not offered to the Supreme Personality of Godhead.
-Yajna-sistasinah santah: one becomes freed from all sinful reactions by eating foodstuffs which are offered
-to Yajna, the Supreme Personality of Godhead. A devotee therefore eats only prasada, or foodstuffs offered
-to the Supreme Lord, and Krsna says that when a devotee offers Him foodstuffs from the vegetable
-kingdom, with devotion, He eats that. A devotee is to offer to Krsna foodstuffs prepared from vegetables.
-If the Supreme Lord wanted foodstuffs prepared from animal food, the devotee could offer this, but He
-does not order to do that.
-We have to commit violence; that is a natural law. We should not, however, commit violence
-extravagantly, but only as much as ordered by the Lord. Arjuna engaged in the art of killing, and although
-killing is, of course, violence, he killed the enemy simply on Krsna's order. In the same way, if we commit
-violence as it is necessary, by the order of the Lord, that is called natihimsa. We cannot avoid violence, for
-we are put into a conditional life in which we have to commit violence, but we should not commit more
-violence than necessary or than ordered by the Supreme Personality of Godhead.
+From this description it appears that the flower garland of the Supreme Personality of Godhead is fresh.
+Actually, in Vaikuntha, or the spiritual sky, there is nothing but freshness. Even the flowers picked from
+the trees and plants remain fresh, for everything in the spiritual sky retains its originality and does not
+fade. The fragrance of the flowers picked from the trees and made into garlands does not fade, for both the
+trees and the flowers are spiritual. When the flower is taken from the tree, it remains the same; it does not
+lose its aroma. The bees are equally attracted to the flowers whether they are on the garland or on the
+trees. The significance of spirituality is that everything is eternal and inexhaustible. Everything taken from
+everything remains everything, or, as has been stated, in the spiritual world one minus one equals one,
+and one plus one equals one. The bees hum around the fresh flowers, and their sweet sound is enjoyed by
+the Lord. The Lord's bangles, necklace, crown and anklets are all bedecked with invaluable jewels. Since
+the jewels and pearls are spiritual, there is no material calculation of their value.
 </p>
 
 </div>
@@ -117,7 +122,7 @@ violence than necessary or than ordered by the Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

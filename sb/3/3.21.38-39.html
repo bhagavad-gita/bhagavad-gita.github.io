@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.21.38-39.html">3.21.38-39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.38-39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38-39"><b>38-39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yasmin bhagavato netran
 nyapatann asru-bindavah
@@ -57,20 +96,20 @@ tad vai bindusaro nama
 sarasvatya pariplutam
 punyam sivamrta-jalam
 maharsi-gana-sevitam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yasmin--in which; bhagavatah--of the Lord; netrat--from the eye; nyapatan--fell down; asru-bindavah--
 teardrops; krpaya--by compassion; samparitasya--who was overwhelmed; prapanne--on the surrendered
 soul (Kardama); arpitaya--placed upon; bhrsam--extremely; tat--that; vai--indeed; bindu-sarah--lake of
 tears; nama--called; sarasvatya--by the River Sarasvati; pariplutam--overflowed; punyam--holy; siva--
 auspicious; amrta--nectar; jalam--water; maha-rsi--of great sages; gana--by hosts; sevitam--served.
-<p></p>
+<br>
 <h2>Translation</h2>
 The holy Lake Bindu-sarovara, flooded by the waters of the River Sarasvati, was resorted to by hosts of
 eminent sages. Its holy water was not only auspicious but as sweet as nectar. It was called Bindu-sarovara
 because drops of tears had fallen there from the eyes of the Lord, who was overwhelmed by extreme
 compassion for the sage who had sought His protection.
-<p></p>
+<br>
 <h2>Purport</h2>
 Kardama underwent austerities to gain the causeless mercy of the Lord, and when the Lord arrived there
 He was so compassionate that in pleasure He shed tears, which became Bindu-sarovara. Bindu-sarovara,
@@ -89,7 +128,7 @@ authorities and are still being acted upon even in this fallen age of Kali.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

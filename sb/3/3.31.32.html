@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.31.32.html">3.31.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/31">31</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-jnana-yogas ca man-nistho
-nairgunyo bhakti-laksanah
-dvayor apy eka evartho
-bhagavac-chabda-laksanah
-<p></p>
+yady asadbhih pathi punah
+sisnodara-krtodyamaih
+asthito ramate jantus
+tamo visati purvavat
+<br>
 <h2>Synonyms</h2>
-jnana-yogah--philosophical research; ca--and; mat-nisthah--directed towards Me; nairgunyah--free from
-the material modes of nature; bhakti--devotional service; laksanah--named; dvayoh--of both; api--
-moreover; ekah--one; eva--certainly; arthah--purpose; bhagavat--the Supreme Personality of Godhead;
-sabda--by the word; laksanah--signified.
-<p></p>
+yadi--if; asadbhih--with the unrighteous; pathi--on the path; punah--again; sisna--for the genitals;
+udara--for the stomach; krta--done; udyamaih--whose endeavors; asthitah--associating; ramate--enjoys;
+jantuh--the living entity; tamah--darkness; visati--enters; purva-vat--as before.
+<br>
 <h2>Translation</h2>
-Philosophical research culminates in understanding the Supreme Personality of Godhead. After
-achieving this understanding, when one becomes free from the material modes of nature, he attains the
-stage of devotional service. Either by devotional service directly or by philosophical research, one has to
-find the same destination, which is the Supreme Personality of Godhead.
-<p></p>
+If, therefore, the living entity again associates with the path of unrighteousness, influenced by sensually
+minded people engaged in the pursuit of sexual enjoyment and the gratification of the palate, he again
+goes to hell as before.
+<br>
 <h2>Purport</h2>
-It is said in Bhagavad-gita that after many, many lives of philosophical research the wise man ultimately
-comes to the point of knowing that Vasudeva, the Supreme Personality of Godhead, is everything, and
-therefore he surrenders unto Him. Such serious students in philosophical research are rare because they
-are very great souls. If by philosophical research one cannot come to the point of understanding the
-Supreme Person, then his task is not finished. His search in knowledge is still to be continued until he
-comes to the point of understanding the Supreme Lord in devotional service.
-The opportunity for direct touch with the Personality of Godhead is given in Bhagavad-gita, where it is
-also said that those who take to other processes, namely the processes of philosophical speculation and
-mystic yoga practice, have much trouble. After many, many years of much trouble, a yogi or wise
-philosopher may come to Him, but his path is very troublesome, whereas the path of devotional service is
-easy for everyone. One can achieve the result of wise philosophical speculation simply by discharging
-devotional service, and unless one reaches the point of understanding the Personality of Godhead by his
-mental speculation, all his research work is said to be simply a labor of love. The ultimate destination of
-the wise philosopher is to merge in the impersonal Brahman, but that Brahman is the effulgence of the
-Supreme Person. The Lord says in Bhagavad-gita (14.27), brahmano hi pratisthaham amrtasyavyayasya ca:
-"I am the basis of the impersonal Brahman, which is indestructible and is the supreme bliss." The Lord is
-the supreme reservoir of all pleasure, including Brahman pleasure; therefore, one who has unflinching
-faith in the Supreme Personality of Godhead is said to be already realized in impersonal Brahman and
-Paramatma.
+It has been explained that the conditioned soul is put into the Andha-tamisra and Tamisra hellish
+conditions, and after suffering there he gets a hellish body like the dog's or hog's. After several such
+births, he again comes into the form of a human being. How the human being is born is also described by
+Kapiladeva. The human being develops in the mother's abdomen and suffers there and comes out again.
+After all these sufferings, if he gets another chance in a human body and wastes his valuable time in the
+association of persons who are concerned with sexual life and palatable dishes, then naturally he again
+glides down to the same Andha-tamisra and Tamisra hells.
+Generally, people are concerned with the satisfaction of the tongue and the satisfaction of the genitals.
+That is material life. Material life means eat, drink, be merry and enjoy, with no concern for
+understanding one's spiritual identity and the process of spiritual advancement. Since materialistic people
+are concerned with the tongue, belly and genitals, if anyone wants to advance in spiritual life he must be
+very careful about associating with such people. To associate with such materialistic men is to commit
+purposeful suicide in the human form of life. It is said, therefore, that an intelligent man should give up
+such undesirable association and should always mix with saintly persons. When he is in association with
+saintly persons, all his doubts about the spiritual expansion of life are eradicated, and he makes tangible
+progress on the path of spiritual understanding. It is also sometimes found that people are very much
+addicted to a particular type of religious faith. Hindus, Muslims and Christians are faithful in their
+particular type of religion, and they go to the church, temple or mosque, but unfortunately they cannot
+give up the association of persons who are too much addicted to sex life and satisfaction of the palate.
+Here it is clearly said that one may officially be a very religious man, but if he associates with such
+persons, then he is sure to slide down to the darkest region of hell.
 </p>
 
 </div>
@@ -93,7 +132,7 @@ Paramatma.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

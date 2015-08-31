@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.16.7.html">3.16.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yat-sevaya carana-padma-pavitra-renum
 sadyah ksatakhila-malam pratilabdha-silam
 na srir viraktam api mam vijahati yasyah
 preksa-lavartha itare niyaman vahanti
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yat--of whom; sevaya--by the service; carana--feet; padma--lotus; pavitra--sacred; renum--the dust;
 sadyah--immediately; ksata--wiped out; akhila--all; malam--sins; pratilabdha--acquired; silam--disposition;
 na--not; srih--the goddess of fortune; viraktam--have no attachment; api--even though; mam--Me;
 vijahati--leave; yasyah--of the goddess of fortune; preksa-lava-arthah--for obtaining a slight favor; itare--
 others, like Lord Brahma; niyaman--sacred vows; vahanti--observe.
-<p></p>
+<br>
 <h2>Translation</h2>
 The Lord continued: Because I am the servitor of My devotees, My lotus feet have become so sacred that
 they immediately wipe out all sin, and I have acquired such a disposition that the goddess of fortune does
 not leave Me, even though I have no attachment for her and others praise her beauty and observe sacred
 vows to secure from her even a slight favor.
-<p></p>
+<br>
 <h2>Purport</h2>
 The relationship between the Lord and His devotee is transcendentally beautiful. As the devotee thinks
 that it is due to being a devotee of the Lord that he is elevated in all good qualities, so the Lord also thinks
@@ -86,7 +125,7 @@ of the devotee. He is therefore famous as bhakta-vatsala.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

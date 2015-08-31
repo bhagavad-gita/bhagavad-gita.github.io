@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.24.33.html">3.24.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/24">24</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 param pradhanam purusam mahantam
 kalam kavim tri-vrtam loka-palam
 atmanubhutyanugata-prapancam
 svacchanda-saktim kapilam prapadye
-<p></p>
+<br>
 <h2>Synonyms</h2>
 param--transcendental; pradhanam--supreme; purusam--person; mahantam--who is the origin of the
 material world; kalam--who is time; kavim--fully cognizant; tri-vrtam--three modes of material nature;
 loka-palam--who is the maintainer of all the universes; atma--in Himself; anubhutya--by internal potency;
 anugata--dissolved; prapancam--whose material manifestations; sva-chanda--independently; saktim--who
 is powerful; kapilam--to Lord Kapila; prapadye--I surrender.
-<p></p>
+<br>
 <h2>Translation</h2>
 I surrender unto the Supreme Personality of Godhead, descended in the form of Kapila, who is
 independently powerful and transcendental, who is the Supreme Person and the Lord of the sum total of
 matter and the element of time, who is the fully cognizant maintainer of all the universes under the three
 modes of material nature, and who absorbs the material manifestations after their dissolution.
-<p></p>
+<br>
 <h2>Purport</h2>
 The six opulences--wealth, strength, fame, beauty, knowledge and renunciation--are indicated here by
 Kardama Muni, who addresses Kapila Muni, his son, as param. The word param is used in the beginning
@@ -106,7 +145,7 @@ with the help of the material energy. He manifests His spiritual form as He exis
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

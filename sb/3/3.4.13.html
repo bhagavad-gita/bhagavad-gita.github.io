@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.4.13.html">3.4.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 pura maya proktam ajaya nabhye
 padme nisannaya mamadi-sarge
 jnanam param man-mahimavabhasam
 yat surayo bhagavatam vadanti
-<p></p>
+<br>
 <h2>Synonyms</h2>
 pura--in the days of yore; maya--by Me; proktam--was said; ajaya--unto Brahma; nabhye--out of the
 navel; padme--on the lotus; nisannaya--unto the one situated on; mama--My; adi-sarge--in the beginning
 of creation; jnanam--knowledge; param--sublime; mat-mahima--My transcendental glories; avabhasam--
 that which clarifies; yat--which; surayah--the great learned sages; bhagavatam--Srimad-Bhagavatam;
 vadanti--do say.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Uddhava, in the lotus millennium in the days of yore, at the beginning of the creation, I spoke unto
 Brahma, who is situated on the lotus that grows out of My navel, about My transcendental glories, which
 the great sages describe as Srimad-Bhagavatam.
-<p></p>
+<br>
 <h2>Purport</h2>
 The explanation of the Supreme Self, as given to Brahma and already explained in the Second Canto of
 this great literature, is further clarified herein. The Lord said that the concise form of Srimad-Bhagavatam
@@ -80,7 +119,7 @@ impersonal indulgence.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

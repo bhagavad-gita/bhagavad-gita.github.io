@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.39.html">3.15.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 krtsna-prasada-sumukham sprhaniya-dhama
 snehavaloka-kalaya hrdi samsprsantam
 syame prthav urasi sobhitaya sriya svascudamanim
 subhagayantam ivatma-dhisnyam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 krtsna-prasada--blessing everyone; su-mukham--auspicious face; sprhaniya--desirable; dhama--shelter;
 sneha--affection; avaloka--looking upon; kalaya--by expansion; hrdi--within the heart; samsprsantam--
 touching; syame--unto the Lord with blackish color; prthau--broad; urasi--chest; sobhitaya--being
 decorated; sriya--goddess of fortune; svah--heavenly planets; cuda-manim--summit; subhagayantam--
 spreading good fortune; iva--like; atma--the Supreme Personality of Godhead; dhisnyam--abode.
-<p></p>
+<br>
 <h2>Translation</h2>
 The Lord is the reservoir of all pleasure. His auspicious presence is meant for everyone's benediction,
 and His affectionate smiling and glancing touch the core of the heart. The Lord's beautiful bodily color is
 blackish, and His broad chest is the resting place of the goddess of fortune, who glorifies the entire
 spiritual world, the summit of all heavenly planets. Thus it appeared that the Lord was personally
 spreading the beauty and good fortune of the spiritual world.
-<p></p>
+<br>
 <h2>Purport</h2>
 When the Lord came, He was pleased with everyone; therefore it is stated here, krtsna-prasadasumukham.
 The Lord knew that even the offensive doormen were His pure devotees, although by chance
@@ -108,7 +147,7 @@ that the spiritual world, Vaikunthaloka, is the summit of all planetary systems.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

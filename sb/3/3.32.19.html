@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.19.html">3.32.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatra pravistam atmanam
-vibudhanucara jaguh
-vapyam utpala-gandhinyam
-kardamenopalalitam
-<p></p>
+nunam daivena vihata
+ye cacyuta-katha-sudham
+hitva srnvanty asad-gathah
+purisam iva vid-bhujah
+<br>
 <h2>Synonyms</h2>
-yatra--where; pravistam--entered; atmanam--unto her; vibudha-anucarah--the associates of the denizens
-of heaven; jaguh--sang; vapyam--in the pond; utpala--of lotuses; gandhinyam--with the fragrance;
-kardamena--by Kardama; upalalitam--treated with great care.
-<p></p>
+nunam--certainly; daivena--by the order of the Lord; vihatah--condemned; ye--those who; ca--also;
+acyuta--of the infallible Lord; katha--stories; sudham--nectar; hitva--having given up; srnvanti--they hear;
+asat-gathah--stories about materialistic persons; purisam--stool; iva--like; vit-bhujah--stool-eaters (hogs).
+<br>
 <h2>Translation</h2>
-When Devahuti would enter that lovely garden to take her bath in the pond filled with lotus flowers, the
-associates of the denizens of heaven, the Gandharvas, would sing about Kardama's glorious household
-life. Her great husband, Kardama, gave her all protection at all times.
-<p></p>
+Such persons are condemned by the supreme order of the Lord. Because they are averse to the nectar of
+the activities of the Supreme Personality of Godhead, they are compared to stool-eating hogs. They give
+up hearing the transcendental activities of the Lord and indulge in hearing of the abominable activities of
+materialistic persons.
+<br>
 <h2>Purport</h2>
-The ideal husband-and-wife relationship is very nicely described in this statement. Kardama Muni gave
-Devahuti all sorts of comforts in his duty as a husband, but he was not at all attached to his wife. As soon
-as his son, Kapiladeva, was grown up, Kardama at once left all family connection. Similarly, Devahuti was
-the daughter of a great king, Svayambhuva Manu, and was qualified and beautiful, but she was completely
-dependent on the protection of her husband. According to Manu, women, the fair sex, should not have
-independence at any stage of life. In childhood a woman must be under the protection of the parents, in
-youth she must be under the protection of the husband, and in old age she must be under the protection
-of the grown children. Devahuti demonstrated all these statements of the Manu-samhita in her life: as a
-child she was dependent on her father, later she was dependent on her husband, in spite of her opulence,
-and she was later on dependent on her son, Kapiladeva.
+Everyone is addicted to hearing of the activities of another person, whether a politician or a rich man or
+an imaginary character whose activities are created in a novel. There are so many nonsensical literatures,
+stories and books of speculative philosophy. Materialistic persons are very interested in reading such
+literature, but when they are presented with genuine books of knowledge like Srimad-Bhagavatam,
+Bhagavad-gita, Visnu Purana or other scriptures of the world, such as the Bible and Koran, they are not
+interested. These persons are condemned by the supreme order as much as a hog is condemned. The hog
+is interested in eating stool. If the hog is offered some nice preparation made of condensed milk or ghee,
+he won't like it; he would prefer obnoxious, bad-smelling stool, which he finds very relishable.
+Materialistic persons are considered condemned because they are interested in hellish activities and not in
+transcendental activities. The message of the Lord's activities is nectar, and besides that message, any
+information in which we may be interested is actually hellish.
 </p>
 
 </div>
@@ -82,7 +123,7 @@ and she was later on dependent on her son, Kapiladeva.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

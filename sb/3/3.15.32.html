@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.32.html">3.15.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 munaya ucuh
 ko vam ihaitya bhagavat-paricaryayoccais
 tad-dharminam nivasatam visamah svabhavah
 tasmin prasanta-puruse gata-vigrahe vam
 ko vatmavat kuhakayoh parisankaniyah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 munayah--the great sages; ucuh--said; kah--who; vam--you two; iha--in Vaikuntha; etya--having
 attained; bhagavat--of the Supreme Personality of Godhead; paricaryaya--by the service; uccaih--having
@@ -62,7 +101,7 @@ been developed by past pious actions; tat-dharminam--of the devotees; nivasatam-
 visamah--discordant; svabhavah--mentality; tasmin--in the Supreme Lord; prasanta-puruse--without
 anxieties; gata-vigrahe--without any enemy; vam--of you two; kah--who; va--or; atma-vat--like yourselves;
 kuhakayoh--maintaining duplicity; parisankaniyah--not becoming trustworthy.
-<p></p>
+<br>
 <h2>Translation</h2>
 The sages said: Who are these two persons who have developed such a discordant mentality even
 though they are posted in the service of the Lord in the highest position and are expected to have
@@ -70,7 +109,7 @@ developed the same qualities as the Lord? How are these two persons living in Va
 possibility of an enemy's coming into this kingdom of God? The Supreme Personality of Godhead has no
 enemy. Who could be envious of Him? Probably these two persons are imposters; therefore they suspect
 others to be like themselves.
-<p></p>
+<br>
 <h2>Purport</h2>
 The difference between the inhabitants of a Vaikuntha planet and those of a material planet is that in
 Vaikuntha all the residents engage in the service of the Lord Himself and are equipped with all His good
@@ -94,7 +133,7 @@ them was that the doormen themselves were imposters.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

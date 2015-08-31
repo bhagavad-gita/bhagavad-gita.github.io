@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.5.html">3.28.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-lokasya mithyabhimater acaksusas
-ciram prasuptasya tamasy anasraye
-srantasya karmasv anuviddhaya dhiya
-tvam avirasih kila yoga-bhaskarah
-<p></p>
+maunam sad-asana-jayah
+sthairyam prana-jayah sanaih
+pratyaharas cendriyanam
+visayan manasa hrdi
+<br>
 <h2>Synonyms</h2>
-lokasya--of the living entities; mithya-abhimateh--deluded by false ego; acaksusah--blind; ciram--for a
-very long time; prasuptasya--sleeping; tamasi--in darkness; anasraye--without shelter; srantasya--fatigued;
-karmasu--to material activities; anuviddhaya--attached; dhiya--with the intelligence; tvam--You; avirasih--
-have appeared; kila--indeed; yoga--of the yoga system; bhaskarah--the sun.
-<p></p>
+maunam--silence; sat--good; asana--yogic postures; jayah--controlling; sthairyam--steadiness; pranajayah--
+controlling the vital air; sanaih--gradually; pratyaharah--withdrawal; ca--and; indriyanam--of the
+senses; visayat--from the sense objects; manasa--with the mind; hrdi--on the heart.
+<br>
 <h2>Translation</h2>
-My dear Lord, You are just like the sun, for You illuminate the darkness of the conditional life of the
-living entities. Because their eyes of knowledge are not open, they are sleeping eternally in that darkness
-without Your shelter, and therefore they are falsely engaged by the actions and reactions of their material
-activities, and they appear to be very fatigued.
-<p></p>
+One must observe silence, acquire steadiness by practicing different yogic postures, control the
+breathing of the vital air, withdraw the senses from sense objects and thus concentrate the mind on the
+heart.
+<br>
 <h2>Purport</h2>
-It appears that Srimati Devahuti, the glorious mother of Lord Kapiladeva, is very compassionate for the
-regrettable condition of people in general, who, not knowing the goal of life, are sleeping in the darkness
-of illusion. It is the general feeling of the Vaisnava, or devotee of the Lord, that he should awaken them.
-Similarly, Devahuti is requesting her glorious son to illuminate the lives of the conditioned souls so that
-their most regrettable conditional life may be ended. The Lord is described herein as yoga-bhaskara, the
-sun of the system of all yoga. Devahuti has already requested her glorious son to describe bhakti-yoga,
-and the Lord has described bhakti-yoga as the ultimate yoga system.
-Bhakti-yoga is the sunlike illumination for delivering the conditioned souls, whose general condition is
-described here. They have no eyes to see their own interests. They do not know that the goal of life is not
-to increase the material necessities of existence, because the body will not exist more than a few years.
-The living beings are eternal, and they have their eternal need. If one engages only in caring for the
-necessities of the body, not caring for the eternal necessities of life, then he is part of a civilization whose
-advancement puts the living entities in the darkest region of ignorance. Sleeping in that darkest region,
-one does not get any refreshment, but, rather, gradually becomes fatigued. He invents many processes to
-adjust this fatigued condition, but he fails and thus remains confused. The only path for mitigating his
-fatigue in the struggle for existence is the path of devotional service, or the path of Krsna consciousness.
+The yogic practices in general and hatha-yoga in particular are not ends in themselves; they are means
+to the end of attaining steadiness. First one must be able to sit properly, and then the mind and attention
+will become steady enough for practicing yoga. Gradually, one must control the circulation of vital air,
+and with such control he will be able to withdraw the senses from sense objects. In the previous verse it is
+stated that one must observe celibacy. The most important aspect of sense control is controlling sex life.
+That is called brahmacarya. By practicing the different sitting postures and controlling the vital air, one
+can control and restrain the senses from unrestricted sense enjoyment.
 </p>
 
 </div>
@@ -90,7 +118,7 @@ fatigue in the struggle for existence is the path of devotional service, or the 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

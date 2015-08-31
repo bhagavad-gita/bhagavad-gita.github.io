@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.25.html">3.28.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-arcadav arcayet tavad
-isvaram mam sva-karma-krt
-yavan na veda sva-hrdi
-sarva-bhutesv avasthitam
-<p></p>
+nabhi-hradam bhuvana-kosa-guhodara-stham
+yatratma-yoni-dhisanakhila-loka-padmam
+vyudham harin-mani-vrsa-stanayor amusya
+dhyayed dvayam visada-hara-mayukha-gauram
+<br>
 <h2>Synonyms</h2>
-arca-adau--beginning with worship of the Deity; arcayet--one should worship; tavat--so long; isvaram--
-the Supreme Personality of Godhead; mam--Me; sva--his own; karma--prescribed duties; krt--performing;
-yavat--as long as; na--not; veda--he realizes; sva-hrdi--in his own heart; sarva-bhutesu--in all living
-entities; avasthitam--situated.
-<p></p>
+nabhi-hradam--the navel lake; bhuvana-kosa--of all the worlds; guha--the foundation; udara--on the
+abdomen; stham--situated; yatra--where; atma-yoni--of Brahma; dhisana--residence; akhila-loka--
+containing all planetary systems; padmam--lotus; vyudham--sprang up; harit-mani--like emeralds; vrsa--
+most exquisite; stanayoh--of nipples; amusya--of the Lord; dhyayet--he should meditate on; dvayam--the
+pair; visada--white; hara--of pearl necklaces; mayukha--from the light; gauram--whitish.
+<br>
 <h2>Translation</h2>
-Performing his prescribed duties, one should worship the Deity of the Supreme Personality of Godhead
-until one realizes My presence in his own heart and in the hearts of other living entities as well.
-<p></p>
+The yogi should then meditate on His moonlike navel in the center of His abdomen. From His navel,
+which is the foundation of the entire universe, sprang the lotus stem containing all the different planetary
+systems. The lotus is the residence of Brahma, the first created being. In the same way, the yogi should
+concentrate his mind on the Lord's nipples, which resemble a pair of most exquisite emeralds and which
+appear whitish because of the rays of the milk-white pearl necklaces adorning His chest.
+<br>
 <h2>Purport</h2>
-Worship of the Deity of the Supreme Personality of Godhead is prescribed herewith even for persons
-who are simply discharging their prescribed duties. There are prescribed duties for the different social
-classes of men--the brahmanas, the vaisyas, the ksatriyas and the sudras--and for the different asramas--
-brahmacarya, grhastha, vanaprastha and sannyasa. One should worship the Deity of the Lord until one
-appreciates the presence of the Lord in every living entity. In other words, one should not be satisfied
-simply by discharging his duties properly; he must realize his relationship and the relationship of all other
-living entities with the Supreme Personality of Godhead. If he does not understand this, then even though
-he discharges his prescribed duties properly, it is to be understood that he is simply laboring without
-profit.
-The word sva-karma-krt in this verse is very significant. Sva-karma-krt is one who engages in
-discharging his prescribed duties. It is not that one who has become a devotee of the Lord or who engages
-in devotional service should give up his prescribed duties. No one should be lazy under the plea of
-devotional service. One has to execute devotional service according to his prescribed duties. Sva-karmakrt
-means that one should discharge the duties prescribed for him without neglect.
+The yogi is advised next to meditate upon the navel of the Lord, which is the foundation of all material
+creation. Just as a child is connected to his mother by the umbilical cord, so the first-born living creature,
+Brahma, by the supreme will of the Lord, is connected to the Lord by a lotus stem. In the previous verse it
+was stated that the goddess of fortune, Laksmi, who engages in massaging the legs, ankles and thighs of
+the Lord, is called the mother of Brahma, but actually Brahma is born from the abdomen of the Lord, not
+from the abdomen of his mother. These are inconceivable conceptions of the Lord, and one should not
+think materially, "How can the father give birth to a child?"
+It is explained in the Brahma-samhita that each limb of the Lord has the potency of every other limb;
+because everything is spiritual, His parts are not conditioned. The Lord can see with His ears. The
+material ear can hear but cannot see, but we understand from the Brahma-samhita that the Lord can also
+see with His ears and hear with His eyes. Any organ of His transcendental body can function as any other
+organ. His abdomen is the foundation of all the planetary systems. Brahma holds the post of the creator of
+all planetary systems, but his engineering energy is generated from the abdomen of the Lord. Any creative
+function in the universe always has a direct connecting link with the Lord. The necklace of pearls which
+decorates the upper portion of the Lord's body is also spiritual, and therefore the yogi is advised to gaze at
+the whitish luster of the pearls decorating His chest.
 </p>
 
 </div>
@@ -86,7 +131,7 @@ means that one should discharge the duties prescribed for him without neglect.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

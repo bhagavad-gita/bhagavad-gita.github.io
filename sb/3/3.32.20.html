@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.20.html">3.32.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-hitva tad ipsitatamam
-apy akhandala-yositam
-kincic cakara vadanam
-putra-vislesanatura
-<p></p>
+daksinena patharyamnah
+pitr-lokam vrajanti te
+prajam anu prajayante
+smasananta-kriya-krtah
+<br>
 <h2>Synonyms</h2>
-hitva--having given up; tat--that household; ipsita-tamam--most desirable; api--even; akhandalayositam--
-by the wives of Lord Indra; kincit cakara vadanam--she wore a sorry look on her face; putravislesana--
-by separation from her son; atura--afflicted.
-<p></p>
+daksinena--southern; patha--by the path; aryamnah--of the sun; pitr-lokam--to Pitrloka; vrajanti--go;
+te--they; prajam--their families; anu--along with; prajayante--they take birth; smasana--the crematorium;
+anta--to the end; kriya--fruitive activities; krtah--performing.
+<br>
 <h2>Translation</h2>
-Although her position was unique from all points of view, saintly Devahuti, in spite of all her
-possessions, which were envied even by the ladies of the heavenly planets, gave up all such comforts. She
-was only sorry that her great son was separated from her.
-<p></p>
+Such materialistic persons are allowed to go to the planet called Pitrloka by the southern course of the
+sun, but they again come back to this planet and take birth in their own families, beginning again the
+same fruitive activities from birth to the end of life.
+<br>
 <h2>Purport</h2>
-Devahuti was not at all sorry at giving up her material comforts, but she was very much aggrieved at the
-separation of her son. It may be questioned here that if Devahuti was not at all sorry to give up the
-material comforts of life, then why was she sorry about losing her son? Why was she so attached to her
-son? The answer is explained in the next verse. He was not an ordinary son. Her son was the Supreme
-personality of Godhead. One can give up material attachment, therefore, only when one has attachment
-for the Supreme Person. This is explained in Bhagavad-gita. Param drstva nivartate. Only when one
-actually has some taste for spiritual existence can he be reluctant to follow the materialistic way of life.
+In Bhagavad-gita, Ninth Chapter, verse 21, it is stated that such persons are elevated to the higher
+planetary systems. As soon as their lifetimes of fruitive activity are finished, they return to this planet, and
+thus they go up and come down. Those who are elevated to the higher planets again come back into the
+same family for which they had too much attachment; they are born, and the fruitive activities continue
+again until the end of life. There are different prescribed rituals from birth until the end of life, and they
+are very much attached to such activities.
 </p>
 
 </div>
@@ -79,7 +117,7 @@ actually has some taste for spiritual existence can he be reluctant to follow th
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

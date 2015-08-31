@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.9.18.html">3.9.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yasmad bibhemy aham api dviparardha-dhisnyam
 adhyasitah sakala-loka-namaskrtam yat
 tepe tapo bahu-savo 'varurutsamanas
 tasmai namo bhagavate 'dhimakhaya tubhyam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yasmat--from whom; bibhemi--fear; aham--I; api--also; dvi-para-ardha--up to the limit of 4,300,000,000
 x 2 x 30 x 12 x 100 solar years; dhisnyam--place; adhyasitah--situated in; sakala-loka--all other planets;
@@ -61,13 +100,13 @@ namaskrtam--honored by; yat--that; tepe--underwent; tapah--penances; bahu-savah-
 avarurutsamanah--desiring to obtain You; tasmai--unto Him; namah--I do offer my obeisances;
 bhagavate--unto the Supreme Personality of Godhead; adhimakhaya--unto Him who is the enjoyer of all
 sacrifices; tubhyam--unto Your Lordship.
-<p></p>
+<br>
 <h2>Translation</h2>
 Your Lordship, I offer my respectful obeisances unto You who are indefatigable time and the enjoyer of
 all sacrifices. Although I am situated in an abode which will continue to exist for a time duration of two
 parardhas, although I am the leader of all other planets in the universe, and although I have undergone
 many, many years of penance for self-realization, still I offer my respects unto You.
-<p></p>
+<br>
 <h2>Purport</h2>
 Brahma is the greatest personality in the universe because he has the longest duration of life. He is the
 most respectable personality because of his penance, influence, prestige, etc., and still he has to offer his
@@ -80,7 +119,7 @@ standard of Brahma, to do as he did and offer respects as a matter of duty.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

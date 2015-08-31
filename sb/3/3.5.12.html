@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.5.12.html">3.5.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 munir vivaksur bhagavad-gunanam
 sakhapi te bharatam aha krsnah
 yasmin nrnam gramya-sukhanuvadair
 matir grhita nu hareh kathayam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 munih--the sage; vivaksuh--described; bhagavat--of the Personality of Godhead; gunanam--
 transcendental qualities; sakha--friend; api--also; te--your; bharatam--the Mahabharata; aha--has
 described; krsnah--Krsna-dvaipayana Vyasa; yasmin--in which; nrnam--of the people; gramya--worldly;
 sukha-anuvadaih--pleasure derived from mundane topics; matih--attention; grhita nu--just to draw
 towards; hareh--of the Lord; kathayam--speeches of (Bhagavad-gita).
-<p></p>
+<br>
 <h2>Translation</h2>
 Your friend the great sage Krsna-dvaipayana Vyasa has already described the transcendental qualities of
 the Lord in his great work the Mahabharata. But the whole idea is to draw the attention of the mass of
 people to krsna-katha [Bhagavad-gita] through their strong affinity for hearing mundane topics.
-<p></p>
+<br>
 <h2>Purport</h2>
 The great sage Krsna-dvaipayana Vyasa is the author of all Vedic literature, of which his works Vedantasutra,
 Srimad-Bhagavatam and Mahabharata are very popular readings. As stated in Bhagavatam (1.4.25),
@@ -97,7 +136,7 @@ Vyasadeva, his real father, while he was away from home and was touring the plac
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

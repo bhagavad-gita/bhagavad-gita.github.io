@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.38.html">3.15.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tam tv agatam pratihrtaupayikam sva-pumbhis
 te 'caksataksa-visayam sva-samadhi-bhagyam
 hamsa-sriyor vyajanayoh siva-vayu-lolacchubhratapatra-
 sasi-kesara-sikarambum
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tam--Him; tu--but; agatam--coming forward; pratihrta--carried; aupayikam--the paraphernalia; svapumbhih--
 by His own associates; te--the great sages (the Kumaras); acaksata--saw; aksa-visayam--now a
@@ -61,7 +100,7 @@ subject matter for seeing; sva-samadhi-bhagyam--visible simply by ecstatic tranc
 beautiful as white swans; vyajanayoh--the camaras (bunches of white hair); siva-vayu--favorable winds;
 lolat--moving; subhra-atapatra--the white umbrella; sasi--the moon; kesara--pearls; sikara--drops;
 ambum--water.
-<p></p>
+<br>
 <h2>Translation</h2>
 The sages, headed by Sanaka Rsi, saw that the Supreme Personality of Godhead, Visnu, who was
 formerly visible only within their hearts in ecstatic trance, had now actually become visible to their eyes.
@@ -69,7 +108,7 @@ As He came forward, accompanied by His own associates bearing all paraphernalia,
 and a camara fan, the white bunches of hair moved very gently, like two swans, and due to their favorable
 breeze the pearls garlanding the umbrella also moved, like drops of nectar falling from the white full
 moon or ice melting due to a gust of wind.
-<p></p>
+<br>
 <h2>Purport</h2>
 In this verse we find the word acaksataksa-visayam. The Supreme Lord cannot be seen by ordinary eyes,
 but He now became visible to the eyesight of the Kumaras. Another significant word is samadhi-bhagyam.
@@ -91,7 +130,7 @@ directly, as we see everything else.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

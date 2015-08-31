@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.27.html">3.28.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atha mam sarva-bhutesu
-bhutatmanam krtalayam
-arhayed dana-manabhyam
-maitryabhinnena caksusa
-<p></p>
+bahums ca mandara-gireh parivartanena
+nirnikta-bahu-valayan adhiloka-palan
+sancintayed dasa-sataram asahya-tejah
+sankham ca tat-kara-saroruha-raja-hamsam
+<br>
 <h2>Synonyms</h2>
-atha--therefore; mam--Me; sarva-bhutesu--in all creatures; bhuta-atmanam--the Self in all beings; krtaalayam--
-abiding; arhayet--one should propitiate; dana-manabhyam--through charity and respect;
-maitrya--through friendship; abhinnena--equal; caksusa--by viewing.
-<p></p>
+bahun--the arms; ca--and; mandara-gireh--of Mount Mandara; parivartanena--by the revolving;
+nirnikta--polished; bahu-valayan--the arm ornaments; adhiloka-palan--the source of the controllers of the
+universe; sancintayet--one should meditate on; dasa-sata-aram--the Sudarsana disc (ten hundred spokes);
+asahya-tejah--dazzling luster; sankham--the conch; ca--also; tat-kara--in the hand of the Lord; saroruha--
+lotuslike; raja-hamsam--like a swan.
+<br>
 <h2>Translation</h2>
-Therefore, through charitable gifts and attention, as well as through friendly behavior and by viewing all
-to be alike, one should propitiate Me, who abide in all creatures as their very Self.
-<p></p>
+The yogi should further meditate upon the Lord's four arms, which are the source of all the powers of
+the demigods who control the various functions of material nature. Then the yogi should concentrate on
+the polished ornaments, which were burnished by Mount Mandara as it revolved. He should also duly
+contemplate the Lord's discus, the Sudarsana cakra, which contains one thousand spokes and a dazzling
+luster, as well as the conch, which looks like a swan in His lotuslike palm.
+<br>
 <h2>Purport</h2>
-It should not be misunderstood that because the Supersoul is dwelling within the heart of a living
-entity, the individual soul has become equal to Him. The equality of the Supersoul and the individual soul
-is misconceived by the impersonalist. Here it is distinctly mentioned that the individual soul should be
-recognized in relationship with the Supreme Personality of Godhead. The method of worshiping the
-individual soul is described here as either giving charitable gifts or behaving in a friendly manner, free
-from any separatist outlook. The impersonalist sometimes accepts a poor individual soul as being daridranarayana,
-meaning that Narayana, the Supreme Personality of Godhead, has become poor. This is a
-contradiction. The Supreme Personality of Godhead is full in all opulences. He can agree to live with a
-poor soul or even with an animal, but this does not make Him poor.
-There are two Sanskrit words used here, mana and dana. Mana indicates a superior, and dana indicates
-one who gives charitable gifts or is compassionate towards an inferior. We cannot treat the Supreme
-Personality of Godhead as an inferior who is dependent on our charitable gifts. When we give charity, it is
-to a person who is inferior in his material or economic condition. Charity is not given to a rich man.
-Similarly, it is explicitly stated here that mana, respect, is offered to a superior, and charity is offered to an
-inferior. The living entities, according to different results of fruitive activities, may become rich or poor,
-but the Supreme Personality of Godhead is unchangeable; He is always full in six opulences. Treating a
-living entity equally does not mean treating him as one would treat the Supreme Personality of Godhead.
-Compassion and friendliness do not necessitate falsely elevating someone to the exalted position of the
-Supreme Personality of Godhead. We should not, at the same time, misunderstand that the Supersoul
-situated in the heart of an animal like a hog and the Supersoul situated in the heart of a learned brahmana
-are different. The Supersoul in all living entities is the same Supreme Personality of Godhead. By His
-omnipotency, He can live anywhere, and He can create His Vaikuntha situation everywhere. That is His
-inconceivable potency. Therefore, when Narayana is living in the heart of a hog, He does not become a
-hog-Narayana. He is always Narayana and is unaffected by the body of the hog.
+All departments of law and order emanate from the arms of the Supreme Personality of Godhead. The
+law and order of the universe is directed by different demigods, and it is here said to emanate from the
+Lord's arms. Mandara Hill is mentioned here because when the ocean was churned by the demons on one
+side and the demigods on the other, Mandara Hill was taken as the churning rod. The Lord in His tortoise
+incarnation became the pivot for the churning rod, and thus His ornaments were polished by the turning
+of Mandara Hill. In other words, the ornaments on the arms of the Lord are as brilliant and lustrous as if
+they had been polished very recently. The wheel in the hand of the Lord, called the Sudarsana cakra, has
+one thousand spokes. The yogi is advised to meditate upon each of the spokes. He should meditate upon
+each and every one of the component parts of the transcendental form of the Lord.
 </p>
 
 </div>
@@ -95,7 +124,7 @@ hog-Narayana. He is always Narayana and is unaffected by the body of the hog.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

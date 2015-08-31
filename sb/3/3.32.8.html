@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.32.8.html">3.32.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/32">32</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam tvam aham brahma param pumamsam
-pratyak-srotasy atmani samvibhavyam
-sva-tejasa dhvasta-guna-pravaham
-vande visnum kapilam veda-garbham
-<p></p>
+dvi-parardhavasane yah
+pralayo brahmanas tu te
+tavad adhyasate lokam
+parasya para-cintakah
+<br>
 <h2>Synonyms</h2>
-tam--unto Him; tvam--You; aham--I; brahma--Brahman; param--supreme; pumamsam--the Supreme
-Personality of Godhead; pratyak-srotasi--turned inwards; atmani--in the mind; samvibhavyam--meditated
-upon, perceived; sva-tejasa--by Your own potency; dhvasta--vanished; guna-pravaham--the influence of
-the modes of material nature; vande--I offer obeisances; visnum--unto Lord Visnu; kapilam--named
-Kapila; veda-garbham--the repository of the Vedas.
-<p></p>
+dvi-parardha--two parardhas; avasane--at the end of; yah--which; pralayah--death; brahmanah--of Lord
+Brahma; tu--indeed; te--they; tavat--so long; adhyasate--dwell; lokam--on the planet; parasya--of the
+Supreme; para-cintakah--thinking of the Supreme Personality of Godhead.
+<br>
 <h2>Translation</h2>
-I believe, my Lord, that You are Lord Visnu Himself under the name of Kapila, and You are the Supreme
-Personality of Godhead, the Supreme Brahman! The saints and sages, being freed from all the
-disturbances of the senses and mind, meditate upon You, for by Your mercy only can one become free
-from the clutches of the three modes of material nature. At the time of dissolution, all the Vedas are
-sustained in You only.
-<p></p>
+Worshipers of the Hiranyagarbha expansion of the Personality of Godhead remain within this material
+world until the end of two parardhas, when Lord Brahma also dies.
+<br>
 <h2>Purport</h2>
-Devahuti, the mother of Kapila, instead of prolonging her prayers, summarized that Lord Kapila was
-none other than Visnu and that since she was a woman it was not possible for her to worship Him
-properly simply by prayer. It was her intention that the Lord be satisfied. The word pratyak is significant.
-In yogic practice, the eight divisions are yama, niyama, asana, pranayama, pratyahara, dharana, dhyana
-and samadhi. pratyahara means to wind up the activities of the senses. The level of realization of the
-Supreme Lord evidenced by Devahuti is possible when one is able to withdraw the senses from material
-activities. When one is engaged in devotional service, there is no scope for his senses to be engaged
-otherwise. In such full Krsna consciousness, one can understand the Supreme Lord as He is.
+One dissolution is at the end of Brahma's day, and one is at the end of Brahma's life. Brahma dies at the
+end of two parardhas, at which time the entire material universe is dissolved. Persons who are worshipers
+of Hiranyagarbha, the plenary expansion of the Supreme Personality of Godhead Garbhodakasayi Visnu,
+do not directly approach the Supreme personality of Godhead in Vaikuntha. They remain within this
+universe on Satyaloka or other higher planets until the end of the life of Brahma. Then, with Brahma, they
+are elevated to the spiritual kingdom.
+The words parasya para-cintakah mean "always thinking of the Supreme Personality of Godhead," or
+being always Krsna conscious. When we speak of Krsna, this refers to the complete category of visnutattva.
+Krsna includes the three purusa incarnations, namely Maha-Visnu, Garbhodakasayi Visnu and
+Ksirodakasayi Visnu, as well as all the incarnations taken together. This is confirmed in the Brahmasamhita.
+Ramadi-murtisu kala-niyamena tisthan: Lord Krsna is perpetually situated with His many
+expansions, such as Rama, Nrsimha, Vamana, Madhusudana, Visnu and Narayana. He exists with all His
+plenary portions and the portions of His plenary portions, and each of them is as good as the Supreme
+personality of Godhead. The words parasya para-cintakah mean those who are fully Krsna conscious.
+Such persons enter directly into the kingdom of God, the Vaikuntha planets, or, if they are worshipers of
+the plenary portion Garbhodakasayi Visnu, they remain within this universe until its dissolution, and
+after that they enter.
 </p>
 
 </div>
@@ -84,7 +127,7 @@ otherwise. In such full Krsna consciousness, one can understand the Supreme Lord
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

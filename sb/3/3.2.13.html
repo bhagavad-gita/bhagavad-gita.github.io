@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.2.13.html">3.2.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yad dharma-sunor bata rajasuye
 niriksya drk-svastyayanam tri-lokah
 kartsnyena cadyeha gatam vidhatur
 arvak-srtau kausalam ity amanyata
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yat--the form which; dharma-sunoh--of Maharaja Yudhisthira; bata--certainly; rajasuye--in the arena of
 the rajasuya sacrifice; niriksya--by observing; drk--sight; svastyayanam--pleasing; tri-lokah--the three
 worlds; kartsnyena--in sum total; ca--thus; adya--today; iha--within the universe; gatam--surpassed;
 vidhatuh--of the creator (Brahma); arvak--recent mankind; srtau--in the material world; kausalam--
 dexterity; iti--thus; amanyata--contemplated.
-<p></p>
+<br>
 <h2>Translation</h2>
 All the demigods from the upper, lower and middle universal planetary systems assembled at the altar of
 the rajasuya sacrifice performed by Maharaja Yudhisthira. After seeing the beautiful bodily features of
 Lord Krsna, they all contemplated that He was the ultimate dexterous creation of Brahma, the creator of
 human beings.
-<p></p>
+<br>
 <h2>Purport</h2>
 There was nothing comparable to the bodily features of Lord Krsna when He was present in this world.
 The most beautiful object in the material world may be compared to the blue lotus flower or the full
@@ -83,7 +122,7 @@ everyone. As He says in Bhagavad-gita (10.8), aham sarvasya prabhavo mattah sarv
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

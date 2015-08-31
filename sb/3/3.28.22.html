@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,62 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.22.html">3.28.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yo mam sarvesu bhutesu
-santam atmanam isvaram
-hitvarcam bhajate maudhyad
-bhasmany eva juhoti sah
-<p></p>
+yac-chauca-nihsrta-sarit-pravarodakena
+tirthena murdhny adhikrtena sivah sivo 'bhut
+dhyatur manah-samala-saila-nisrsta-vajram
+dhyayec ciram bhagavatas caranaravindam
+<br>
 <h2>Synonyms</h2>
-yah--one who; mam--Me; sarvesu--in all; bhutesu--living entities; santam--being present; atmanam--the
-Paramatma; isvaram--the Supreme Lord; hitva--disregarding; arcam--the Deity; bhajate--worships;
-maudhyat--because of ignorance; bhasmani--into ashes; eva--only; juhoti--offers oblations; sah--he.
-<p></p>
+yat--the Lord's lotus feet; sauca--washing; nihsrta--gone forth; sarit-pravara--of the Ganges; udakena--by
+the water; tirthena--holy; murdhni--on his head; adhikrtena--borne; sivah--Lord Siva; sivah--auspicious;
+abhut--became; dhyatuh--of the meditator; manah--in the mind; samala-saila--the mountain of sin;
+nisrsta--hurled; vajram--thunderbolt; dhyayet--one should meditate; ciram--for a long time; bhagavatah--
+of the Lord; carana-aravindam--on the lotus feet.
+<br>
 <h2>Translation</h2>
-One who worships the Deity of Godhead in the temples but does not know that the Supreme Lord, as
-Paramatma, is situated in every living entity's heart, must be in ignorance and is compared to one who
-offers oblations into ashes.
-<p></p>
+The blessed Lord Siva becomes all the more blessed by bearing on his head the holy waters of the
+Ganges, which has its source in the water that washed the Lord's lotus feet. The Lord's feet act like
+thunderbolts hurled to shatter the mountain of sin stored in the mind of the meditating devotee. One
+should therefore meditate on the lotus feet of the Lord for a long time.
+<br>
 <h2>Purport</h2>
-It is stated clearly herein that the Supreme Personality of Godhead, in His plenary expansion of
-Supersoul, is present in all living entities. The living entities have 8,400,000 different kinds of bodies, and
-the Supreme Personality of Godhead is living in every body both as the individual soul and as the
-Supersoul. Since the individual soul is part and parcel of the Supreme Lord, in that sense the Lord is
-living in every body, and, as Supersoul, the Lord is also present as a witness. In both cases the presence of
-God in every living entity is essential. Therefore persons who profess to belong to some religious sect but
-who do not feel the presence of the Supreme Personality of Godhead in every living entity, and
-everywhere else, are in the mode of ignorance.
-If, without this preliminary knowledge of the Lord's omnipresence, one simply attaches himself to the
-rituals in a temple, church or mosque, it is as if he were offering butter into ashes rather than into the fire.
-One offers sacrifices by pouring clarified butter into a fire and chanting Vedic mantras, but even if there
-are Vedic mantras and all conditions are favorable, if the clarified butter is poured on ashes, then such a
-sacrifice will be useless. In other words, a devotee should not ignore any living entity. The devotee must
-know that in every living entity, however insignificant he may be, even in an ant, God is present, and
-therefore every living entity should be kindly treated and should not be subjected to any violence. In
-modern civilized society, slaughterhouses are regularly maintained and supported by a certain type of
-religious principle. But without knowledge of the presence of God in every living entity, any so-called
-advancement of human civilization, either spiritual or material, is to be understood as being in the mode
-of ignorance.
+In this verse the position of Lord Siva is specifically mentioned. The impersonalist suggests that the
+Absolute Truth has no form and that one can therefore equally imagine the form of Visnu or Lord Siva or
+the goddess Durga or their son Ganesa. But actually the Supreme Personality of Godhead is the supreme
+master of everyone. In the Caitanya-caritamrta (Adi 5.142) it is said, ekale isvara krsna, ara saba bhrtya:
+the Supreme Lord is Krsna, and everyone else, including Lord Siva and Lord Brahma--not to mention
+other demigods--is a servant of Krsna. The same principle is described here. Lord Siva is important
+because he is holding on his head the holy Ganges water, which has its origin in the foot-wash of Lord
+Visnu. In the Hari-bhakti-vilasa, by Sanatana Gosvami, it is said that anyone who puts the Supreme Lord
+and the demigods, including Lord Siva and Lord Brahma, on the same level, at once becomes a pasandi, or
+atheist. We should never consider that the Supreme Lord Visnu and the demigods are on an equal footing.
+Another significant point of this verse is that the mind of the conditioned soul, on account of its
+association with the material energy from time immemorial, contains heaps of dirt in the form of desires
+to lord it over material nature. This dirt is like a mountain, but a mountain can be shattered when hit by a
+thunderbolt. Meditating on the lotus feet of the Lord acts like a thunderbolt on the mountain of dirt in the
+mind of the yogi. If a yogi wants to shatter the mountain of dirt in his mind, he should concentrate on the
+lotus feet of the Lord and not imagine something void or impersonal. Because the dirt has accumulated
+like a solid mountain, one must meditate on the lotus feet of the Lord for quite a long time. For one who
+is accustomed to thinking of the lotus feet of the Lord constantly, however, it is a different matter. The
+devotees are so fixed on the lotus feet of the Lord that they do not think of anything else. Those who
+practice the yoga system must meditate on the lotus feet of the Lord for a long time after following the
+regulative principles and thereby controlling the senses.
+It is specifically mentioned here, bhagavatas caranaravindam: one has to think of the lotus feet of the
+Lord. The Mayavadis imagine that one can think of the lotus feet of Lord Siva or Lord Brahma or the
+goddess Durga to achieve liberation, but this is not so. Bhagavatah is specifically mentioned. Bhagavatah
+means "of the Supreme personality of Godhead, Visnu," and no one else. Another significant phrase in
+this verse is sivah sivo 'bhut. By his constitutional position, Lord Siva is always great and auspicious, but
+since he has accepted on his head the Ganges water, which emanated from the lotus feet of the Lord, he
+has become even more auspicious and important. The stress is on the lotus feet of the Lord. A relationship
+with the lotus feet of the Lord can even enhance the importance of Lord Siva, what to speak of other,
+ordinary living entities.
 </p>
 
 </div>
@@ -91,7 +144,7 @@ of ignorance.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.28.43.html">3.28.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/28">28</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nabho dadati svasatam
-padam yan-niyamad adah
-lokam sva-deham tanute
-mahan saptabhir avrtam
-<p></p>
+sva-yonisu yatha jyotir
+ekam nana pratiyate
+yoninam guna-vaisamyat
+tathatma prakrtau sthitah
+<br>
 <h2>Synonyms</h2>
-nabhah--the sky; dadati--gives; svasatam--to the living entities; padam--abode; yat--of whom (the
-Supreme Personality of Godhead); niyamat--under the control; adah--that; lokam--the universe; svadeham--
-own body; tanute--expands; mahan--the mahat-tattva; saptabhih--with the seven (layers);
-avrtam--covered.
-<p></p>
+sva-yonisu--in forms of wood; yatha--as; jyotih--fire; ekam--one; nana--differently; pratiyate--is
+exhibited; yoninam--of different wombs; guna-vaisamyat--from the different conditions of the modes;
+tatha--so; atma--the spirit soul; prakrtau--in the material nature; sthitah--situated.
+<br>
 <h2>Translation</h2>
-Subject to the control of the Supreme Personality of Godhead, the sky allows outer space to
-accommodate all the various planets, which hold innumerable living entities. The total universal body
-expands with its seven coverings under His supreme control.
-<p></p>
+As fire is exhibited in different forms of wood, so, under different conditions of the modes of material
+nature, the pure spirit soul manifests itself in different bodies.
+<br>
 <h2>Purport</h2>
-It is understood from this verse that all the planets in outer space are floating, and they all hold living
-entities. The word svasatam means "those who breathe," or the living entities. In order to accommodate
-them, there are innumerable planets. Every planet is a residence for innumerable living entities, and the
-necessary space is provided in the sky by the supreme order of the Lord. It is also stated here that the total
-universal body is increasing. It is covered by seven layers, and as there are five elements within the
-universe, so the total elements, in layers, cover the outside of the universal body. The first layer is of
-earth, and it is ten times greater in size than the space within the universe; the second layer is water, and
-that is ten times greater than the earthly layer; the third covering is fire, which is ten times greater than
-the water covering. In this way each layer is ten times greater than the previous one.
+It is to be understood that the body is designated. prakrti is an interaction by the three modes of
+material nature, and according to these modes, someone has a small body, and someone has a very large
+body. For example, the fire in a big piece of wood appears very big, and in a stick the fire appears small.
+Actually, the quality of fire is the same everywhere, but the manifestation of material nature is such that
+according to the fuel, the fire appears bigger and smaller. Similarly, the soul in the universal body,
+although of the same quality, is different from the soul in the smaller body.
+The small particles of soul are just like sparks of the larger soul. The greatest soul is the Supersoul, but
+the Supersoul is quantitatively different from the small soul. The Supersoul is described in the Vedic
+literature as the supplier of all necessities of the smaller soul (nityo nityanam). One who understands this
+distinction between the Supersoul and the individual soul is above lamentation and is in a peaceful
+position. When the smaller soul thinks himself quantitatively as big as the larger soul, he is under the
+spell of maya, for that is not his constitutional position. No one can become the greater soul simply by
+mental speculation.
+The smallness or greatness of different souls is described in the Varaha Purana as svamsa-vibhinnamsa.
+The svamsa soul is the Supreme personality of Godhead, and the vibhinnamsa souls, or small particles,
+are eternally small particles, as confirmed in Bhagavad-gita (mamaivamso jiva-loke jiva-bhutah
+sanatanah). The small living entities are eternally part and parcel, and therefore it is not possible for them
+to be quantitatively as great as the Supersoul.
 </p>
 
 </div>
@@ -82,7 +128,7 @@ the water covering. In this way each layer is ten times greater than the previou
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

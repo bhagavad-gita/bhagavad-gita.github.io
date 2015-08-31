@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/3/3.15.45.html">3.15.45</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.45</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/45"><b>45</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 pumsam gatim mrgayatam iha yoga-margair
 dhyanaspadam bahu-matam nayanabhiramam
 paumsnam vapur darsayanam ananya-siddhair
 autpattikaih samagrnan yutam asta-bhogaih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 pumsam--of those persons; gatim--liberation; mrgayatam--who are searching; iha--here in this world;
 yoga-margaih--by the process of astanga-yoga; dhyana-aspadam--object of meditation; bahu--by the great
@@ -61,12 +100,12 @@ yogis; matam--approved; nayana--eyes; abhiramam--pleasing; paumsnam--human; vapu
 darsayanam--displaying; ananya--not by others; siddhaih--perfected; autpattikaih--eternally present;
 samagrnan--praised; yutam--the Supreme Personality of Godhead, who is endowed; asta-bhogaih--with
 eight kinds of achievement.
-<p></p>
+<br>
 <h2>Translation</h2>
 This is the form of the Lord which is meditated upon by the followers of the yoga process, and it is
 pleasing to the yogis in meditation. It is not imaginary but factual, as proved by great yogis. The Lord is
 full in eight kinds of achievement, but for others these achievements are not possible in full perfection.
-<p></p>
+<br>
 <h2>Purport</h2>
 The success of the yoga process is very nicely described here. It is specifically mentioned that the form
 of the Lord as four-handed Narayana is the object of meditation for the followers of yoga-marga. In the
@@ -203,7 +242,7 @@ process enjoined in Bhagavad-gita (9.34): man-mana bhava mad-bhakto mad-yaji mam
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
