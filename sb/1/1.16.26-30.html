@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.16.26-30.html">1.16.26-30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.26-30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26-30"><b>26-30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 satyam saucam daya ksantis
 tyagah santosa arjavam
@@ -69,7 +108,7 @@ tenaham guna-patrena
 sri-nivasena sampratam
 socami rahitam lokam
 papmana kalineksitam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 satyam--truthfulness; saucam--cleanliness; daya--intolerance of others' unhappiness; ksantih--selfcontrol
 even if there is cause of anger; tyagah--magnanimity; santosah--self-satisfaction; arjavam--
@@ -89,7 +128,7 @@ greatness; icchadbhih--those who desire so; na--never; viyanti--deteriorates; sm
 time; tena--by Him; aham--myself; guna-patrena--the reservoir of all qualities; sri--the goddess of fortune;
 nivasena--by the resting place; sampratam--very recently; socami--I am thinking of; rahitam--bereft of;
 lokam--planets; papmana--by the store of all sins; kalina--by Kali; iksitam--is seen.
-<p></p>
+<br>
 <h2>Translation</h2>
 In Him reside (1) truthfulness, (2) cleanliness, (3) intolerance of another's unhappiness, (4) the power
 to control anger, (5) self-satisfaction, (6) straightforwardness, (7) steadiness of mind, (8) control of the
@@ -104,7 +143,7 @@ transcendental qualities which are eternally present and never to be separated f
 of Godhead, the reservoir of all goodness and beauty, Lord Sri Krsna, has now closed His transcendental
 pastimes on the face of the earth. In His absence the age of Kali has spread its influence everywhere, so I
 am sorry to see this condition of existence.
-<p></p>
+<br>
 <h2>Purport</h2>
 Even if it were possible to count the atoms after smashing the earth into powder, still it would not be
 possible to estimate the unfathomable transcendental qualities of the Lord. It is said that Lord Anantadeva
@@ -197,7 +236,7 @@ be counted by anyone, however great one may be.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

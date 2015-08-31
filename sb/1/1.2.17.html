@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.2.17.html">1.2.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 srnvatam sva-kathah krsnah
 punya-sravana-kirtanah
 hrdy antah stho hy abhadrani
 vidhunoti suhrt satam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 srnvatam--those who have developed the urge to hear the message of; sva-kathah--His own words;
 krsnah--the Personality of Godhead; punya--virtues; sravana--hearing; kirtanah--chanting; hrdi antah
 sthah--within one's heart; hi--certainly; abhadrani--desire to enjoy matter; vidhunoti--cleanses; suhrt--
 benefactor; satam--of the truthful.
-<p></p>
+<br>
 <h2>Translation</h2>
 Sri Krsna, the Personality of Godhead, who is the Paramatma [Supersoul] in everyone's heart and the
 benefactor of the truthful devotee, cleanses desire for material enjoyment from the heart of the devotee
 who has developed the urge to hear His messages, which are in themselves virtuous when properly heard
 and chanted.
-<p></p>
+<br>
 <h2>Purport</h2>
 Messages of the Personality of Godhead Sri Krsna are nondifferent from Him. Whenever, therefore,
 offenseless hearing and glorification of God are undertaken, it is to be understood that Lord Krsna is
@@ -101,7 +140,7 @@ from the state of disturbances, and gradually all disturbing elements are elimin
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

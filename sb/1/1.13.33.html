@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.13.33.html">1.13.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 amba ca hata-putrarta
 pitrvyah kva gatah suhrt
@@ -55,20 +94,20 @@ api mayy akrta-prajne
 hata-bandhuh sa bharyaya
 asamsamanah samalam
 gangayam duhkhito 'patat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 amba--mother aunt; ca--and; hata-putra--who had lost all her sons; arta--in a sorry plight; pitrvyah--
 uncle Vidura; kva--where; gatah--gone; suhrt--well-wisher; api--whether; mayi--unto me; akrta-prajne--
 ungrateful; hata-bandhuh--one who has lost all his sons; sah--Dhrtarastra; bharyaya--with his wife;
 asamsamanah--in doubtful mind; samalam--offenses; gangayam--in the Ganges water; duhkhitah--in
 distressed mind; apatat--fell down.
-<p></p>
+<br>
 <h2>Translation</h2>
 Where is my well-wisher, uncle Vidura, and mother Gandhari, who is very afflicted due to all her sons'
 demise? My uncle Dhrtarastra was also very mortified due to the death of all his sons and grandsons.
 Undoubtedly I am very ungrateful. Did he, therefore, take my offenses very seriously and, along with his
 wife, drown himself in the Ganges?
-<p></p>
+<br>
 <h2>Purport</h2>
 The Pandavas, especially Maharaja Yudhisthira and Arjuna, anticipated the aftereffects of the Battle of
 Kuruksetra, and therefore Arjuna declined to execute the fighting. The fight was executed by the will of
@@ -91,7 +130,7 @@ rectify them as far as possible.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

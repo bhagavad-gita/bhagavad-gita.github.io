@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.15.12.html">1.15.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yat-tejasatha bhagavan yudhi sula-panir
 vismapitah sagirijo 'stram adan nijam me
 anye 'pi caham amunaiva kalevarena
 prapto mahendra-bhavane mahad-asanardham
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yat--by whose; tejasa--by influence; atha--at one time; bhagavan--the personality of god (Lord Siva);
 yudhi--in the battle; sula-panih--one who has a trident in his hand; vismapitah--astonished; sa-girijah--
@@ -61,13 +100,13 @@ along with the daughter of the Himalaya Mountains; astram--weapon; adat--awarded
 me--unto me; anye api--so also others; ca--and; aham--myself; amuna--by this; eva--definitely;
 kalevarena--by the body; praptah--obtained; maha-indra-bhavane--in the house of Indradeva; mahat--
 great; asana-ardham--half-elevated seat.
-<p></p>
+<br>
 <h2>Translation</h2>
 It was by His influence only that in a fight I was able to astonish the personality of god Lord Siva and his
 wife, the daughter of Mount Himalaya. Thus he [Lord Siva] became pleased with me and awarded me his
 own weapon. Other demigods also delivered their respective weapons to me, and in addition I was able to
 reach the heavenly planets in this present body and was allowed a half-elevated seat.
-<p></p>
+<br>
 <h2>Purport</h2>
 By the grace of the Supreme Personality of Godhead Sri Krsna, all the demigods, including Lord Siva,
 were pleased with Arjuna. The idea is that one who is favored by Lord Siva or any other demigod may not
@@ -109,7 +148,7 @@ possessing the maximum amount of good qualities possible within the material wor
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

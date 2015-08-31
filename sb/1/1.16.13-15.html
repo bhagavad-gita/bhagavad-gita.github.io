@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.16.13-15.html">1.16.13-15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.13-15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13-15"><b>13-15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tatra tatropasrnvanah
 sva-purvesam mahatmanam
@@ -61,7 +100,7 @@ tebhyah parama-santustah
 prity-ujjrmbhita-locanah
 maha-dhanani vasamsi
 dadau haran maha-manah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tatra tatra--everywhere the King visited; upasrnvanah--continuously he heard; sva-purvesam--about his
 own forefathers; maha-atmanam--who were all great devotees of the Lord; pragiyamanam--unto those
@@ -72,7 +111,7 @@ descendants of Vrsni and those of Prtha; tesam--of all of them; bhaktim--devotio
 Lord Krsna; tebhyah--unto them; parama--extremely; santustah--pleased; priti--attraction; ujjrmbhita--
 pleasingly open; locanah--one who has such eyes; maha-dhanani--valuable riches; vasamsi--clothing;
 dadau--gave in charity; haran--necklace; maha-manah--one who has a broader outlook.
-<p></p>
+<br>
 <h2>Translation</h2>
 Wherever the King visited, he continuously heard the glories of his great forefathers, who were all
 devotees of the Lord, and also of the glorious acts of Lord Krsna. He also heard how he himself had been
@@ -80,7 +119,7 @@ protected by the Lord from the powerful heat of the weapon of Asvatthama. People
 great affection between the descendants of Vrsni and Prtha due to the latter's great devotion to Lord
 Kesava. The King, being very pleased with the singers of such glories, opened his eyes in great
 satisfaction. Out of magnanimity he was pleased to award them very valuable necklaces and clothing.
-<p></p>
+<br>
 <h2>Purport</h2>
 Kings and great personalities of the state are presented with welcome addresses. This is a system from
 time immemorial, and Maharaja Pariksit, since he was one of the well-known emperors of the world, was
@@ -113,7 +152,7 @@ the poor receiver.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

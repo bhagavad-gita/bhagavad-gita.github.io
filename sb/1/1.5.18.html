@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.5.18.html">1.5.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tasyaiva hetoh prayateta kovido
 na labhyate yad bhramatam upary adhah
 tal labhyate duhkhavad anyatah sukham
 kalena sarvatra gabhira-ramhasa
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tasya--for that purpose; eva--only; hetoh--reason; prayateta--should endeavor; kovidah--one who is
 philosophically inclined; na--not; labhyate--is not obtained; yat--what; bhramatam--wandering; upari
 adhah--from top to bottom; tat--that; labhyate--can be obtained; duhkhavat--like the miseries; anyatah--as
 a result of previous work; sukham--sense enjoyment; kalena--in course of time; sarvatra--everywhere;
 gabhira--subtle; ramhasa--progress.
-<p></p>
+<br>
 <h2>Translation</h2>
 Persons who are actually intelligent and philosophically inclined should endeavor only for that
 purposeful end which is not obtainable even by wandering from the topmost planet [Brahmaloka] down
 to the lowest planet [Patala]. As far as happiness derived from sense enjoyment is concerned, it can be
 obtained automatically in course of time, just as in course of time we obtain miseries even though we do
 not desire them.
-<p></p>
+<br>
 <h2>Purport</h2>
 Every man everywhere is trying to obtain the greatest amount of sense enjoyment by various endeavors.
 Some men are busy engaged in trade, industry, economic development, political supremacy, etc., and
@@ -100,7 +139,7 @@ should only endeavor to go back to Godhead. That should be the mission of everyo
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

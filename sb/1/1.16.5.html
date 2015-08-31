@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.16.5.html">1.16.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 saunaka uvaca
 kasya hetor nijagraha
@@ -56,19 +95,19 @@ nrdeva-cihna-dhrk sudrako
 'sau gam yah padahanat
 tat kathyatam maha-bhaga
 yadi krsna-kathasrayam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 saunakah uvaca--Saunaka Rsi said; kasya--for what; hetoh--reason; nijagraha--sufficiently punished;
 kalim--the master of the age of Kali; digvijaye--during the time of his world tour; nrpah--the King; nrdeva--
 royal person; cihna-dhrk--decorated like; sudrakah--lowest of the sudras; asau--he; gam--cow; yah--
 one who; pada ahanat--struck on the leg; tat--all that; kathyatam--please describe; maha-bhaga--O greatly
 fortunate one; yadi--if, however; krsna--about Krsna; katha-asrayam--related with His topics.
-<p></p>
+<br>
 <h2>Translation</h2>
 Saunaka Rsi inquired: Why did Maharaja Pariksit simply punish him, since he was the lowest of the
 sudras, having dressed as a king and having struck a cow on the leg? Please describe all these incidents if
 they relate to the topics of Lord Krsna.
-<p></p>
+<br>
 <h2>Purport</h2>
 Saunaka and the rsis were astonished to hear that the pious Maharaja Pariksit simply punished the
 culprit and did not kill him. This suggests that a pious king like Maharaja Pariksit should have at once
@@ -90,7 +129,7 @@ three mundane qualities. The purifying agent, however, is Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

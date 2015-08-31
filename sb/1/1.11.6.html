@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.11.6.html">1.11.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 natah sma te natha sadanghri-pankajam
 virinca-vairincya-surendra-vanditam
 parayanam ksemam ihecchatam param
 na yatra kalah prabhavet parah prabhuh
-<p></p>
+<br>
 <h2>Synonyms</h2>
 natah--bowed down; sma--we had done so; te--unto You; natha--O Lord; sada--always; anghripankajam--
 the lotus feet; virinca--Brahma, the first living being; vairincya--sons of Brahma like Sanaka
@@ -61,12 +100,12 @@ and Sanatana; sura-indra--the King of heaven; vanditam--worshiped by; parayanam-
 ksemam--welfare; iha--in this life; icchatam--one who so desires; param--the highest; na--never; yatra--
 wherein; kalah--inevitable time; prabhavet--can exert its influence; parah--transcendental; prabhuh--the
 Supreme Lord.
-<p></p>
+<br>
 <h2>Translation</h2>
 The citizens said: O Lord, You are worshiped by all demigods like Brahma, the four Sanas and even the
 King of heaven. You are the ultimate rest for those who are really aspiring to achieve the highest benefit of
 life. You are the supreme transcendental Lord, and inevitable time cannot exert its influence upon You.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Supreme Lord is Sri Krsna, as confirmed in Bhagavad-gita, Brahma-samhita and other authorized
 Vedic literatures. No one is equal to or greater than Him, and that is the verdict of all scriptures. The
@@ -82,7 +121,7 @@ living being is God consciousness, in which one bows down unto Him in all circum
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

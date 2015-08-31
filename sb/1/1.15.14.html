@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.15.14.html">1.15.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yad-bandhavah kuru-balabdhim ananta-param
 eko rathena tatare 'ham atirya-sattvam
 pratyahrtam bahu dhanam ca maya paresam
 tejas-padam manimayam ca hrtam sirobhyah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yat-bandhavah--by whose friendship only; kuru-bala-abdhim--the ocean of the military strength of the
 Kurus; ananta-param--which was insurmountable; ekah--alone; rathena--being seated on the chariot;
@@ -61,13 +100,13 @@ tatare--was able to cross over; aham--myself; atirya--invincible; sattvam--exist
 back; bahu--very large quantity; dhanam--wealth; ca--also; maya--by my; paresam--of the enemy; tejahpadam--
 source of brilliance; mani-mayam--bedecked with jewels; ca--also; hrtam--taken by force;
 sirobhyah--from their heads.
-<p></p>
+<br>
 <h2>Translation</h2>
 The military strength of the Kauravas was like an ocean in which there dwelled many invincible
 existences, and thus it was insurmountable. But because of His friendship, I, seated on the chariot, was
 able to cross over it. And only by His grace was I able to regain the cows and also collect by force many
 helmets of the kings which were bedecked with jewels that were sources of all brilliance.
-<p></p>
+<br>
 <h2>Purport</h2>
 On the Kaurava side there were many stalwart commanders like Bhisma, Drona, Krpa and Karna, and
 their military strength was as insurmountable as the great ocean. And yet it was due to Lord Krsna's grace
@@ -86,7 +125,7 @@ grace of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

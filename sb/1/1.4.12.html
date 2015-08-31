@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.4.12.html">1.4.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sivaya lokasya bhavaya bhutaye
 ya uttama-sloka-parayana janah
 jivanti natmartham asau parasrayam
 mumoca nirvidya kutah kalevaram
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sivaya--welfare; lokasya--of all living beings; bhavaya--for flourishing; bhutaye--for economic
 development; ye--one who is; uttama-sloka-parayanah--devoted to the cause of the Personality of
 Godhead; janah--men; jivanti--do live; na--but not; atma-artham--selfish interest; asau--that; paraasrayam--
 shelter for others; mumoca--gave up; nirvidya--being freed from all attachment; kutah--for what
 reason; kalevaram--mortal body.
-<p></p>
+<br>
 <h2>Translation</h2>
 Those who are devoted to the cause of the Personality of Godhead live only for the welfare,
 development and happiness of others. They do not live for any selfish interest. So even though the
 Emperor [Pariksit] was free from all attachment to worldly possessions, how could he give up his mortal
 body, which was shelter for others?
-<p></p>
+<br>
 <h2>Purport</h2>
 Pariksit Maharaja was an ideal king and householder because he was a devotee of the Personality of
 Godhead. A devotee of the Lord automatically has all good qualifications. And the Emperor was a typical
@@ -94,7 +133,7 @@ Emperor Pariksit was a worthy king, and therefore all were happy during his reig
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.9.24.html">1.9.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa deva-devo bhagavan pratiksatam
 kalevaram yavad idam hinomy aham
 prasanna-hasaruna-locanollasanmukhambujo
 dhyana-pathas catur-bhujah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--He; deva-devah--the Supreme Lord of the lords; bhagavan--the Personality of Godhead;
 pratiksatam--may kindly wait; kalevaram--body; yavat--as long as; idam--this (material body); hinomi--
@@ -61,11 +100,11 @@ may quit; aham--I; prasanna--cheerful; hasa--smiling; aruna-locana--eyes red lik
 ullasat--beautifully decorated; mukha-ambujah--the lotus flower of His face; dhyana-pathah--in the path
 of my meditation; catur-bhujah--the four-handed form of Narayana (the worshipable Deity of
 Bhismadeva).
-<p></p>
+<br>
 <h2>Translation</h2>
 May my Lord, who is four-handed and whose beautifully decorated lotus face, with eyes as red as the
 rising sun, is smiling, kindly await me at that moment when I quit this material body.
-<p></p>
+<br>
 <h2>Purport</h2>
 Bhismadeva knew well that Lord Krsna is the original Narayana. His worshipable Deity was four-handed
 Narayana, but he knew that four-handed Narayana is a plenary expansion of Lord Krsna. Indirectly he
@@ -92,7 +131,7 @@ pure devotee.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

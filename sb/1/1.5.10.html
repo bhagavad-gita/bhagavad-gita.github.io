@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.5.10.html">1.5.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 na yad vacas citra-padam harer yaso
 jagat-pavitram pragrnita karhicit
 tad vayasam tirtham usanti manasa
 na yatra hamsa niramanty usik-ksayah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; yat--that; vacah--vocabulary; citra-padam--decorative; hareh--of the Lord; yasah--glories; jagat--
 universe; pavitram--sanctified; pragrnita--described; karhicit--hardly; tat--that; vayasam--crows; tirtham--
 place of pilgrimage; usanti--think; manasah--saintly persons; na--not; yatra--where; hamsah--all-perfect
 beings; niramanti--take pleasure; usik-ksayah--those who reside in the transcendental abode.
-<p></p>
+<br>
 <h2>Translation</h2>
 Those words which do not describe the glories of the Lord, who alone can sanctify the atmosphere of
 the whole universe, are considered by saintly persons to be like unto a place of pilgrimage for crows. Since
 the all-perfect persons are inhabitants of the transcendental abode, they do not derive any pleasure there.
-<p></p>
+<br>
 <h2>Purport</h2>
 Crows and swans are not birds of the same feather because of their different mental attitudes. The
 fruitive workers or passionate men are compared to the crows, whereas the all-perfect saintly persons are
@@ -102,7 +141,7 @@ grasped the essence of human activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

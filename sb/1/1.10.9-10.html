@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.10.9-10.html">1.10.9-10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.9-10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9-10"><b>9-10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 subhadra draupadi kunti
 virata-tanaya tatha
@@ -57,7 +96,7 @@ vrkodaras ca dhaumyas ca
 striyo matsya-sutadayah
 na sehire vimuhyanto
 viraham sarnga-dhanvanah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 subhadra--the sister of Krsna; draupadi--the wife of the Pandavas; kunti--the mother of the Pandavas;
 virata-tanaya--the daughter of Virata (Uttara); tatha--also; gandhari--the mother of Duryodhana;
@@ -66,12 +105,12 @@ gautamah--Krpacarya; yamau--the twin brothers Nakula and Sahadeva; vrkodarah--Bh
 dhaumyah--Dhaumya; ca--and; striyah--also other ladies of the palace; matsya-suta-adayah--the daughter
 of a fisherman (Satyavati, Bhisma's stepmother); na--could not; sehire--tolerate; vimuhyantah--almost
 fainting; viraham--separation; sarnga-dhanvanah--of Sri Krsna, who bears a conch in His hand.
-<p></p>
+<br>
 <h2>Translation</h2>
 At that time Subhadra, Draupadi, Kunti, Uttara, Gandhari, Dhrtarastra, Yuyutsu, Krpacarya, Nakula,
 Sahadeva, Bhimasena, Dhaumya and Satyavati all nearly fainted because it was impossible for them to bear
 separation from Lord Krsna.
-<p></p>
+<br>
 <h2>Purport</h2>
 Lord Sri Krsna is so attractive for the living beings, especially for the devotees, that it is impossible for
 them to tolerate separation. The conditioned soul under the spell of illusory energy forgets the Lord,
@@ -89,7 +128,7 @@ communion or otherwise can leave Him for a moment. That is the attitude of the p
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

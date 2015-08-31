@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.15.16.html">1.15.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yad-dohsu ma pranihitam guru-bhisma-karnanaptr-
 trigarta-salya-saindhava-bahlikadyaih
 astrany amogha-mahimani nirupitani
 nopasprsur nrhari-dasam ivasurani
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yat--under whose; dohsu--protection of arms; ma pranihitam--myself being situated; guru--Dronacarya;
 bhisma--Bhisma; karna--Karna; naptr--Bhurisrava; trigarta--King Susarma; salya--Salya; saindhava--King
 Jayadratha; bahlika--brother of Maharaja Santanu (Bhisma's father); adyaih--etc.; astrani--weapons;
 amogha--invincible; mahimani--very powerful; nirupitani--applied; na--not; upasprsuh--touched; nrharidasam--
 servitor of Nrsimhadeva (Prahlada); iva--like; asurani--weapons employed by the demons.
-<p></p>
+<br>
 <h2>Translation</h2>
 Great generals like Bhisma, Drona, Karna, Bhurisrava, Susarma, Salya, Jayadratha, and Bahlika all
 directed their invincible weapons against me. But by His [Lord Krsna's] grace they could not even touch a
 hair on my head. Similarly, Prahlada Maharaja, the supreme devotee of Lord Nrsimhadeva, was unaffected
 by the weapons the demons used against him.
-<p></p>
+<br>
 <h2>Purport</h2>
 The history of Prahlada Maharaja, the great devotee of Nrsimhadeva, is narrated in the Seventh Canto of
 Srimad-Bhagavatam. Prahlada Maharaja, a small child of only five years, became the object of envy for his
@@ -170,7 +209,7 @@ ground. The father immediately died, his forehead being cracked in seven pieces.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

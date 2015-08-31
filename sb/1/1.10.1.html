@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.10.1.html">1.10.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 saunaka uvaca
 hatva svariktha-sprdha atatayino
 yudhisthiro dharma-bhrtam varisthah
 sahanujaih pratyavaruddha-bhojanah
 katham pravrttah kim akarasit tatah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 saunakah uvaca--Saunaka inquired; hatva--after killing; svariktha--the legal inheritance; sprdhah--
 desiring to usurp; atatayinah--the aggressor; yudhisthirah--King Yudhisthira; dharma-bhrtam--of those
 who strictly follow religious principles; varisthah--greatest; saha-anujaih--with his younger brothers;
 pratyavaruddha--restricted; bhojanah--acceptance of necessities; katham--how; pravrttah--engaged; kim--
 what; akarasit--executed; tatah--thereafter.
-<p></p>
+<br>
 <h2>Translation</h2>
 Saunaka Muni asked: After killing his enemies who desired to usurp his rightful inheritance, how did
 the greatest of all religious men, Maharaja Yudhisthira, assisted by his brothers, rule his subjects? Surely
 he could not freely enjoy his kingdom with unrestricted consciousness.
-<p></p>
+<br>
 <h2>Purport</h2>
 Maharaja Yudhisthira was the greatest of all men of religion. Thus he was not at all inclined to fight with
 his cousins for the sake of enjoying the kingdom: he fought for the right cause because the kingdom of
@@ -82,7 +121,7 @@ to know about the behavior of Maharaja Yudhisthira when he was at ease to enjoy 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

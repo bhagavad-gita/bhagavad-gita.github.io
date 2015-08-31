@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.8.43.html">1.8.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-krsna krsna-sakha vrsny-rsabhavani-dhrugrajanya-
 vamsa-dahananapavarga-virya
 govinda go-dvija-surarti-haravatara
 yogesvarakhila-guro bhagavan namas te
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-krsna--O Sri Krsna; krsna-sakha--O friend of Arjuna; vrsni--of descendants of Vrsni; rsabha--O chief;
 avani--the earth; dhruk--rebellious; rajanya-vamsa--dynasties of the kings; dahana--O annihilator;
@@ -61,14 +100,14 @@ anapavarga--without deterioration of; virya--prowess; govinda--O proprietor of G
 cows; dvija--the brahmanas; sura--the demigods; arti-hara--to relieve distress; avatara--O Lord who
 descends; yoga-isvara--O master of all mystic powers; akhila--universal; guro--O preceptor; bhagavan--O
 possessor of all opulences; namah te--respectful obeisances unto You.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Krsna, O friend of Arjuna, O chief amongst the descendants of Vrsni, You are the destroyer of those
 political parties which are disturbing elements on this earth. Your prowess never deteriorates. You are the
 proprietor of the transcendental abode, and You descend to relieve the distresses of the cows, the
 brahmanas and the devotees. You possess all mystic powers, and You are the preceptor of the entire
 universe. You are the almighty God, and I offer You my respectful obeisances.
-<p></p>
+<br>
 <h2>Purport</h2>
 A summary of the Supreme Lord Sri Krsna is made herein by Srimati Kuntidevi. The almighty Lord has
 His eternal transcendental abode where He is engaged in keeping surabhi cows. He is served by hundreds
@@ -85,7 +124,7 @@ general welfare of living beings.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

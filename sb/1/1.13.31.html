@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.13.31.html">1.13.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ajata-satruh krta-maitro hutagnir
 vipran natva tila-go-bhumi-rukmaih
 grham pravisto guru-vandanaya
 na capasyat pitarau saubalim ca
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ajata--never born; satruh--enemy; krta--having performed; maitrah--worshiping the demigods; hutaagnih--
 and offering fuel in the fire; vipran--the brahmanas; natva--offering obeisances; tila-go-bhumirukmaih--
 along with grains, cows, land and gold; grham--within the palace; pravistah--having entered
 into; guru-vandanaya--for offering respect to the elderly members; na--did not; ca--also; apasyat--see;
 pitarau--his uncles; saubalim--Gandhari; ca--also.
-<p></p>
+<br>
 <h2>Translation</h2>
 Maharaja Yudhisthira, whose enemy was never born, performed his daily morning duties by praying,
 offering fire sacrifice to the sun-god, and offering obeisances, grains, cows, land and gold to the
 brahmanas. He then entered the palace to pay respects to the elderly. However, he could not find his
 uncles or aunt, the daughter of King Subala.
-<p></p>
+<br>
 <h2>Purport</h2>
 Maharaja Yudhisthira was the most pious king because he personally practiced daily the pious duties for
 the householders. The householders are required to rise early in the morning, and after bathing they
@@ -89,7 +128,7 @@ asked Sanjaya, the private secretary of Dhrtarastra.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

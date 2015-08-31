@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.19.25.html">1.19.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tatrabhavad bhagavan vyasa-putro
 yadrcchaya gam atamano 'napeksah
 alaksya-lingo nija-labha-tusto
 vrtas ca balair avadhuta-vesah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tatra--there; abhavat--appeared; bhagavan--powerful; vyasa-putrah--son of Vyasadeva; yadrcchaya--as
 one desires; gam--the earth; atamanah--while traveling; anapeksah--disinterested; alaksya--unmanifested;
 lingah--symptoms; nija-labha--self-realized; tustah--satisfied; vrtah--surrounded; ca--and; balaih--by
 children; avadhuta--neglected by others; vesah--dressed.
-<p></p>
+<br>
 <h2>Translation</h2>
 At that moment there appeared the powerful son of Vyasadeva, who traveled over the earth disinterested
 and satisfied with himself. He did not manifest any symptoms of belonging to any social order or status of
 life. He was surrounded with women and children, and he dressed as if others had neglected him.
-<p></p>
+<br>
 <h2>Purport</h2>
 The word bhagavan is sometimes used in relation with some of the great devotees of the Lord, like
 Sukadeva Gosvami. Such liberated souls are disinterested in the affairs of this material world because they
@@ -89,7 +128,7 @@ things were going on, the great and powerful son of Vyasadeva appeared on the sc
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

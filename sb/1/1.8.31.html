@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.8.31.html">1.8.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 gopy adade tvayi krtagasi dama tavad
 ya te dasasru-kalilanjana-sambhramaksam
 vaktram niniya bhaya-bhavanaya sthitasya
 sa mam vimohayati bhir api yad bibheti
-<p></p>
+<br>
 <h2>Synonyms</h2>
 gopi--the cowherd lady (Yasoda); adade--took up; tvayi--on Your; krtagasi--creating disturbances (by
 breaking the butter pot); dama--rope; tavat--at that time; ya--that which; te--Your; dasa--situation; asrukalila--
 overflooded with tears; anjana--ointment; sambhrama--perturbed; aksam--eyes; vaktram--face;
 niniya--downwards; bhaya-bhavanaya--by thoughts of fear; sthitasya--of the situation; sa--that; mam--me;
 vimohayati--bewilders; bhih api--even fear personified; yat--whom; bibheti--is afraid.
-<p></p>
+<br>
 <h2>Translation</h2>
 My dear Krsna, Yasoda took up a rope to bind You when You committed an offense, and Your perturbed
 eyes overflooded with tears, which washed the mascara from Your eyes. And You were afraid, though fear
 personified is afraid of You. This sight is bewildering to me.
-<p></p>
+<br>
 <h2>Purport</h2>
 Here is another explanation of the bewilderment created by the pastimes of the Supreme Lord. The
 Supreme Lord is the Supreme in all circumstances, as already explained. Here is a specific example of the
@@ -108,7 +147,7 @@ could control even the all-powerful Lord as her beloved child.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

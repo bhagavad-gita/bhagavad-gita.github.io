@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.13.3-4.html">1.13.3-4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.3-4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3-4"><b>3-4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tam bandhum agatam drstva
 dharma-putrah sahanujah
@@ -57,7 +96,7 @@ gandhari draupadi brahman
 subhadra cottara krpi
 anyas ca jamayah pandor
 jnatayah sasutah striyah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tam--him; bandhum--relative; agatam--having arrived there; drstva--by seeing it; dharma-putrah--
 Yudhisthira; saha-anujah--along with his younger brothers; dhrtarastrah--Dhrtarastra; yuyutsuh--Satyaki;
@@ -65,13 +104,13 @@ ca--and; sutah--Sanjaya; saradvatah--Krpacarya; prtha--Kunti; gandhari--Gandhari
 brahman--O brahmanas; subhadra--Subhadra; ca--and; uttara--Uttara; krpi--Krpi; anyah--others; ca--and;
 jamayah--wives of other family members; pandoh--of the Pandavas; jnatayah--family members; sa-sutah--
 along with their sons; striyah--the ladies.
-<p></p>
+<br>
 <h2>Translation</h2>
 When they saw Vidura return to the palace, all the inhabitants--Maharaja Yudhisthira, his younger
 brothers, Dhrtarastra, Satyaki, Sanjaya, Krpacarya, Kunti, Gandhari, Draupadi, Subhadra, Uttara, Krpi,
 many other wives of the Kauravas, and other ladies with children--all hurried to him in great delight. It so
 appeared that they had regained their consciousness after a long period.
-<p></p>
+<br>
 <h2>Purport</h2>
 Gandhari: The ideal chaste lady in the history of the world. She was the daughter of Maharaja Subala,
 the King of Gandhara (now Kandahar in Kabul), and in her maiden state she worshiped Lord Siva. Lord
@@ -179,7 +218,7 @@ of Abhimanyu, Subhadra was very mortified, but on the birth of Pariksit she was 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

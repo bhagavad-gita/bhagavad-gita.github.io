@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.15.25-26.html">1.15.25-26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.25-26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25-26"><b>25-26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 jalaukasam jale yadvan
 mahanto 'danty aniyasah
@@ -57,7 +96,7 @@ evam balisthair yadubhir
 mahadbhir itaran vibhuh
 yadun yadubhir anyonyam
 bhu-bharan sanjahara ha
-<p></p>
+<br>
 <h2>Synonyms</h2>
 jalaukasam--of the aquatics; jale--in the water; yadvat--as it is; mahantah--the larger one; adanti--
 swallows; aniyasah--smaller ones; durbalan--the weak; balinah--the stronger; rajan--O King; mahantah--
@@ -65,12 +104,12 @@ the strongest; balinah--less strong; mithah--in a duel; evam--thus; balisthaih--
 by the descendants of Yadu; mahadbhih--one who has greater strength; itaran--the common ones;
 vibhuh--the Supreme Personality of Godhead; yadun--all the Yadus; yadubhih--by the Yadus; anyonyam--
 among one another; bhu-bharan--the burden of the world; sanjahara--has unloaded; ha--in the past.
-<p></p>
+<br>
 <h2>Translation</h2>
 O King, as in the ocean the bigger and stronger aquatics swallow up the smaller and weaker ones, so
 also the Supreme Personality of Godhead, to lighten the burden of the earth, has engaged the stronger
 Yadu to kill the weaker, and the bigger Yadu to kill the smaller.
-<p></p>
+<br>
 <h2>Purport</h2>
 In the material world the struggle for existence and survival of the fittest are laws because in the
 material world there is disparity between conditioned souls due to everyone's desire to lord it over the
@@ -93,7 +132,7 @@ survival of the fittest.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

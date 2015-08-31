@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.5.13.html">1.5.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 atho maha-bhaga bhavan amogha-drk
 suci-sravah satya-rato dhrta-vratah
 urukramasyakhila-bandha-muktaye
 samadhinanusmara tad-vicestitam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 atho--therefore; maha-bhaga--highly fortunate; bhavan--yourself; amogha-drk--the perfect seer; suci--
 spotless; sravah--famous; satya-ratah--having taken the vow of truthfulness; dhrta-vratah--fixed in
 spiritual qualities; urukramasya--of the one who performs supernatural activities (God); akhila--universal;
 bandha--bondage; muktaye--for liberation from; samadhina--by trance; anusmara--think repeatedly and
 then describe them; tat-vicestitam--various pastimes of the Lord.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Vyasadeva, your vision is completely perfect. Your good fame is spotless. You are firm in vow and
 situated in truthfulness. And thus you can think of the pastimes of the Lord in trance for the liberation of
 the people in general from all material bondage.
-<p></p>
+<br>
 <h2>Purport</h2>
 People in general have a taste for literatures by instinct. They want to hear and read from the authorities
 something about the unknown, but their taste is exploited by unfortunate literatures which are full of
@@ -114,7 +153,7 @@ compiler of the Vedas.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

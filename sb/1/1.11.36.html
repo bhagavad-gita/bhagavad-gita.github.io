@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.11.36.html">1.11.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 uddama-bhava-pisunamala-valgu-hasavridavaloka-
 nihato madano 'pi yasam
 sammuhya capam ajahat pramadottamas ta
 yasyendriyam vimathitum kuhakair na sekuh
-<p></p>
+<br>
 <h2>Synonyms</h2>
 uddama--very grave; bhava--expression; pisuna--exciting; amala--spotless; valgu-hasa--beautiful smiling;
 vrida--corner of the eye; avaloka--looking; nihatah--conquered; madanah--Cupid (or amadana--the greatly
 tolerant Siva); api--also; yasam--whose; sammuhya--being overpowered by; capam--bows; ajahat--gave up;
 pramada--woman, who maddens; uttamah--of high grade; ta--all; yasya--whose; indriyam--senses;
 vimathitum--to perturb; kuhakaih--by magical feats; na--never; sekuh--was able.
-<p></p>
+<br>
 <h2>Translation</h2>
 Although the queens' beautiful smiles and furtive glances were all spotless and exciting, and although
 they could conquer Cupid himself by making him give up his bow in frustration, and although even the
 tolerant Siva could fall victim to them, still, despite all their magical feats and attractions, they could not
 agitate the senses of the Lord.
-<p></p>
+<br>
 <h2>Purport</h2>
 The path of salvation or the path going back to Godhead always forbids the association of women, and
 the complete sanatana-dharma or varnasrama-dharma scheme forbids or restricts association with women.
@@ -113,7 +152,7 @@ wives was transcendental, pure and unconditioned by the modes of material nature
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

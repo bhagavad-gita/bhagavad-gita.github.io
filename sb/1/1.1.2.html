@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.1.2.html">1.1.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 dharmah projjhita-kaitavo 'tra paramo nirmatsaranam satam
 vedyam vastavam atra vastu sivadam tapa-trayonmulanam
 srimad-bhagavate maha-muni-krte kim va parair isvarah
 sadyo hrdy avarudhyate 'tra krtibhih susrusubhis tat-ksanat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 dharmah--religiosity; projjhita--completely rejected; kaitavah--covered by fruitive intention; atra--
 herein; paramah--the highest; nirmatsaranam--of the one-hundred-percent pure in heart; satam--devotees;
@@ -62,7 +101,7 @@ threefold miseries; unmulanam--causing uprooting of; srimat--beautiful; bhagavat
 Purana; maha-muni--the great sage (Vyasadeva); krte--having compiled; kim--what is; va--the need;
 paraih--others; isvarah--the Supreme Lord; sadyah--at once; hrdi--within the heart; avarudhyate--become
 compact; atra--herein; krtibhih--by the pious men; susrusubhih--by culture; tat-ksanat--without delay.
-<p></p>
+<br>
 <h2>Translation</h2>
 Completely rejecting all religious activities which are materially motivated, this Bhagavata Purana
 propounds the highest truth, which is understandable by those devotees who are fully pure in heart. The
@@ -71,7 +110,7 @@ miseries. This beautiful Bhagavatam, compiled by the great sage Vyasadeva [in hi
 in itself for God realization. What is the need of any other scripture? As soon as one attentively and
 submissively hears the message of Bhagavatam, by this culture of knowledge the Supreme Lord is
 established within his heart.
-<p></p>
+<br>
 <h2>Purport</h2>
 Religion includes four primary subjects, namely pious activities, economic development, satisfaction of
 the senses, and finally liberation from material bondage. Irreligious life is a barbarous condition. Indeed,
@@ -169,7 +208,7 @@ position of paramahamsa simply by agreeing to receive this message.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

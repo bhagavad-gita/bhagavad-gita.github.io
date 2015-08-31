@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.19.2.html">1.19.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 dhruvam tato me krta-deva-helanad
 duratyayam vyasanam nati-dirghat
 tad astu kamam hy agha-niskrtaya me
 yatha na kuryam punar evam addha
-<p></p>
+<br>
 <h2>Synonyms</h2>
 dhruvam--sure and certain; tatah--therefore; me--my; krta-deva-helanat--because of disobeying the
 orders of the Lord; duratyayam--very difficult; vyasanam--calamity; na--not; ati--greatly; dirghat--far off;
 tat--that; astu--let it be; kamam--desire without reservations; hi--certainly; agha--sins; niskrtaya--for
 getting free; me--my; yatha--so that; na--never; kuryam--shall I do it; punah--again; evam--as I have done;
 addha--directly.
-<p></p>
+<br>
 <h2>Translation</h2>
 [King Pariksit thought:] Due to my neglecting the injunctions of the Supreme Lord I must certainly
 expect some difficulty to overcome me in the near future. I now desire without reservation that the
 calamity come now, for in this way I may be freed of the sinful action and not commit such an offense
 again.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Supreme Lord enjoins that brahmanas and cows must be given all protection. The Lord is Himself
 very much inclined to do good to brahmanas and cows (go-brahmana-hitaya ca). Maharaja Pariksit knew
@@ -86,7 +125,7 @@ son in the family is the greatest boon or blessing of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

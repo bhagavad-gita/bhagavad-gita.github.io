@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.18.19.html">1.18.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 kutah punar grnato nama tasya
 mahattamaikanta-parayanasya
 yo 'nanta-saktir bhagavan ananto
 mahad-gunatvad yam anantam ahuh
-<p></p>
+<br>
 <h2>Synonyms</h2>
 kutah--what to say; punah--again; grnatah--one who chants; nama--holy name; tasya--His; mahat-tama--
 great devotees; ekanta--exclusive; parayanasya--of one who takes shelter of; yah--He who; ananta--is the
 Unlimited; saktih--potency; bhagavan--the Personality of Godhead; anantah--immeasurable; mahat--great;
 gunatvat--on account of such attributes; yam--whom; anantam--by the name ananta; ahuh--is called.
-<p></p>
+<br>
 <h2>Translation</h2>
 And what to speak of those who are under the direction of the great devotees, chanting the holy name of
 the Unlimited, who has unlimited potency? The Personality of Godhead, unlimited in potency and
 transcendental by attributes, is called the ananta [Unlimited].
-<p></p>
+<br>
 <h2>Purport</h2>
 The dvija-bandhu, or the less intelligent, uncultured men born of higher castes, put forward many
 arguments against the lower-caste men becoming brahmanas in this life. They argue that birth in a family
@@ -95,7 +134,7 @@ the disqualification due to lower birth cannot stand in the way.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

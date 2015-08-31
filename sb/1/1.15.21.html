@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.15.21.html">1.15.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tad vai dhanus ta isavah sa ratho hayas te
 so 'ham rathi nrpatayo yata anamanti
 sarvam ksanena tad abhud asad isa-riktam
 bhasman hutam kuhaka-raddham ivoptam usyam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tat--the same; vai--certainly; dhanuh te--the same bow; isavah--arrows; sah--the very same; rathah--
 chariot; hayah te--the very same horses; sah aham--I am the same Arjuna; rathi--the chariot-fighter;
@@ -61,13 +100,13 @@ nrpatayah--all the kings; yatah--whom; anamanti--offered their respects; sarvam-
 moment's notice; tat--all those; abhut--became; asat--useless; isa--because of the Lord; riktam--being void;
 bhasman--ashes; hutam--offering butter; kuhaka-raddham--money created by magical feats; iva--like that;
 uptam--sown; usyam--in barren land.
-<p></p>
+<br>
 <h2>Translation</h2>
 I have the very same Gandiva bow, the same arrows, the same chariot drawn by the same horses, and I
 use them as the same Arjuna to whom all the kings offered their due respects. But in the absence of Lord
 Krsna, all of them, at a moment's notice, have become null and void. It is exactly like offering clarified
 butter on ashes, accumulating money with a magic wand or sowing seeds on barren land.
-<p></p>
+<br>
 <h2>Purport</h2>
 As we have discussed more than once, one should not be puffed up by borrowed plumes. All energies
 and powers are derived from the supreme source, Lord Krsna, and they act as long as He desires and cease
@@ -87,7 +126,7 @@ land.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

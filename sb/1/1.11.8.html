@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.11.8.html">1.11.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 aho sanatha bhavata sma yad vayam
 traivistapanam api dura-darsanam
 prema-smita-snigdha-niriksanananam
 pasyema rupam tava sarva-saubhagam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 aho--oh, it is our good luck; sa-nathah--to be under the protection of the master; bhavata--by Your good
 self; sma--as we have become; yat vayam--as we are; traivista-panam--of the demigods; api--also; duradarsanam--
 very rarely seen; prema-smita--smiling with love; snigdha--affectionate; niriksana-ananam--
 face looking in that mode; pasyema--let us look; rupam--beauty; tava--Your; sarva--all; saubhagam--
 auspiciousness.
-<p></p>
+<br>
 <h2>Translation</h2>
 Oh, it is our good luck that we have come again today under Your protection by Your presence, for Your
 Lordship rarely visits even the denizens of heaven. Now it is possible for us to look into Your smiling face,
 which is full of affectionate glances. We can now see Your transcendental form, full of all auspiciousness.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Lord in His eternal personal form can be seen only by the pure devotees. The Lord is never
 impersonal, but He is the Supreme Absolute Personality of Godhead, possible to be visited by devotional
@@ -87,7 +126,7 @@ only.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.13.30.html">1.13.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 patim prayantam subalasya putri
 pati-vrata canujagama sadhvi
 himalayam nyasta-danda-praharsam
 manasvinam iva sat sampraharah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 patim--her husband; prayantam--while leaving home; subalasya--of King Subala; putri--the worthy
 daughter; pati-vrata--devoted to her husband; ca--also; anujagama--followed; sadhvi--the chaste;
 himalayam--towards the Himalaya Mountains; nyasta-danda--one who has accepted the rod of the
 renounced order; praharsam--object of delight; manasvinam--of the great fighters; iva--like; sat--
 legitimate; sampraharah--good lashing.
-<p></p>
+<br>
 <h2>Translation</h2>
 The gentle and chaste Gandhari, who was the daughter of King Subala of Kandahar [or Gandhara],
 followed her husband, seeing that he was going to the Himalaya Mountains, which are the delight of those
 who have accepted the staff of the renounced order like fighters who have accepted a good lashing from
 the enemy.
-<p></p>
+<br>
 <h2>Purport</h2>
 Saubalini, or Gandhari, daughter of King Subala and wife of King Dhrtarastra, was ideal as a wife
 devoted to her husband. The Vedic civilization especially prepares chaste and devoted wives, of whom
@@ -98,7 +137,7 @@ narottama.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

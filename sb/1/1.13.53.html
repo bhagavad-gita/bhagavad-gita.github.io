@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.13.53.html">1.13.53</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.53</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/53"><b>53</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 snatvanusavanam tasmin
 hutva cagnin yatha-vidhi
 ab-bhaksa upasantatma
 sa aste vigataisanah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 snatva--by taking bath; anusavanam--regularly three times (morning, noon and evening); tasmin--in
 that Ganges divided into seven; hutva--by performing the Agni-hotra sacrifice; ca--also; agnin--in the fire;
 yatha-vidhi--just according to the tenets of the scripture; ap-bhaksah--fasting by drinking only water;
 upasanta--completely controlled; atma--the gross senses and the subtle mind; sah--Dhrtarastra; aste--
 would be situated; vigata--devoid of; esanah--thoughts in relation with family welfare.
-<p></p>
+<br>
 <h2>Translation</h2>
 On the banks at Saptasrota, Dhrtarastra is now engaged in beginning astanga-yoga by bathing three
 times daily, in the morning, noon and evening, by performing the Agni-hotra sacrifice with fire and by
 drinking only water. This helps one control the mind and the senses and frees one completely from
 thoughts of familial affection.
-<p></p>
+<br>
 <h2>Purport</h2>
 The yoga system is a mechanical way to control the senses and the mind and divert them from matter to
 spirit. The preliminary processes are the sitting posture, meditation, spiritual thoughts, manipulation of
@@ -102,7 +141,7 @@ atmosphere, deeply absorbed in the thoughts of the Lord Hari, the Personality of
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

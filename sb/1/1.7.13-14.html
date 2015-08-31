@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.7.13-14.html">1.7.13-14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.13-14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13-14"><b>13-14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yada mrdhe kaurava-srnjayanam
 viresv atho vira-gatim gatesu
@@ -57,7 +96,7 @@ bhartuh priyam draunir iti sma pasyan
 krsna-sutanam svapatam siramsi
 upaharad vipriyam eva tasya
 jugupsitam karma vigarhayanti
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yada--when; mrdhe--in the battlefield; kaurava--the party of Dhrtarastra; srnjayanam--of the party of the
 Pandavas; viresu--of the warriors; atho--thus; vira-gatim--the destination deserved by the warriors;
@@ -67,7 +106,7 @@ Dhrtarastra; bhartuh--of the master; priyam--pleasing; draunih--the son of Drona
 shall be; pasyan--seeing; krsna--Draupadi; sutanam--of the sons; svapatam--while sleeping; siramsi--heads;
 upaharat--delivered as a prize; vipriyam--pleasing; eva--like; tasya--his; jugupsitam--most heinous;
 karma--act; vigarhayanti--disapproving.
-<p></p>
+<br>
 <h2>Translation</h2>
 When the respective warriors of both camps, namely the Kauravas and the Pandavas, were killed on the
 Battlefield of Kuruksetra and the dead warriors obtained their deserved destinations, and when the son of
@@ -75,7 +114,7 @@ Dhrtarastra fell down lamenting, his spine broken, being beaten by the club of B
 Dronacarya [Asvatthama] beheaded the five sleeping sons of Draupadi and delivered them as a prize to his
 master, foolishly thinking that he would be pleased. Duryodhana, however, disapproved of the heinous
 act, and he was not pleased in the least.
-<p></p>
+<br>
 <h2>Purport</h2>
 Transcendental topics of the activities of Lord Sri Krsna in the Srimad-Bhagavatam begin from the end
 of the battle at Kuruksetra, where the Lord Himself spoke about Himself in the Bhagavad-gita. Therefore,
@@ -94,7 +133,7 @@ the desired peace and prosperity of the stricken world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

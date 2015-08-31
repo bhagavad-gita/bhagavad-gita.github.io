@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.17.43-44.html">1.17.43-44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.43-44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43-44"><b>43-44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa esa etarhy adhyasta
 asanam parthivocitam
@@ -57,7 +96,7 @@ aste 'dhuna sa rajarsih
 kauravendra-sriyollasan
 gajahvaye maha-bhagas
 cakravarti brhac-chravah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--he; esah--this; etarhi--at the present; adhyaste--is ruling over; asanam--the throne; parthivaucitam--
 just befitting a king; pitamahena--by the grandfather; upanyastam--being handed over; rajna--by
@@ -65,12 +104,12 @@ the King; aranyam--forest; viviksata--desiring; aste--is there; adhuna--at prese
 sage amongst the kings; kaurava-indra--the chief amongst the Kuru kings; sriya--glories; ullasan--
 spreading; gajahvaye--in Hastinapura; maha-bhagah--the most fortunate; cakravarti--the Emperor; brhatsravah--
 highly famous.
-<p></p>
+<br>
 <h2>Translation</h2>
 The most fortunate Emperor Maharaja Pariksit, who was entrusted with the kingdom of Hastinapura by
 Maharaja Yudhisthira when he desired to retire to the forest, is now ruling the world with great success
 due to his being glorified by the deeds of the kings of the Kuru dynasty.
-<p></p>
+<br>
 <h2>Purport</h2>
 The prolonged sacrificial ceremonies undertaken by the sages of Naimisaranya were begun shortly after
 the demise of Maharaja Pariksit. The sacrifice was to continue for one thousand years, and it is
@@ -99,7 +138,7 @@ pages of Srimad-Bhagavatam.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

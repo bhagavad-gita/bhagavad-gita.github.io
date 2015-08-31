@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.8.23.html">1.8.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yatha hrsikesa khalena devaki
 kamsena ruddhaticiram sucarpita
 vimocitaham ca sahatmaja vibho
 tvayaiva nathena muhur vipad-ganat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yatha--as it were; hrsikesa--the master of the senses; khalena--by the envious; devaki--Devaki (the
 mother of Sri Krsna); kamsena--by King Kamsa; ruddha--imprisoned; ati-ciram--for a long time; sucaarpita--
 distressed; vimocita--released; aham ca--also myself; saha-atma-ja--along with my children; vibho--
 O great one; tvaya eva--by Your Lordship; nathena--as the protector; muhuh--constantly; vipat-ganat--
 from a series of dangers.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Hrsikesa, master of the senses and Lord of lords, You have released Your mother, Devaki, who was
 long imprisoned and distressed by the envious King Kamsa, and me and my children from a series of
 constant dangers.
-<p></p>
+<br>
 <h2>Purport</h2>
 Devaki, the mother of Krsna and sister of King Kamsa, was put into prison along with her husband,
 Vasudeva, because the envious King was afraid of being killed by Devaki's eighth son (Krsna). He killed
@@ -85,7 +124,7 @@ there for the Lord, the more success is there for the devotee.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.18.47.html">1.18.47</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.47</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/47"><b>47</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 apapesu sva-bhrtyesu
 balenapakva-buddhina
 papam krtam tad bhagavan
 sarvatma ksantum arhati
-<p></p>
+<br>
 <h2>Synonyms</h2>
 apapesu--unto one who is completely free from all sins; sva-bhrtyesu--unto one who is subordinate and
 deserves to be protected; balena--by a child; apakva--who is immature; buddhina--by intelligence;
 papam--sinful act; krtam--has been done; tat bhagavan--therefore the Personality of Godhead; sarvaatma--
 who is all-pervading; ksantum--just to pardon; arhati--deserve.
-<p></p>
+<br>
 <h2>Translation</h2>
 Then the rsi prayed to the all-pervading Personality of Godhead to pardon his immature boy, who had
 no intelligence and who committed the great sin of cursing a person who was completely free from all
 sins, who was subordinate and who deserved to be protected.
-<p></p>
+<br>
 <h2>Purport</h2>
 Everyone is responsible for his own action, either pious or sinful. Rsi Samika could foresee that his son
 had committed a great sin by cursing Maharaja Pariksit, who deserved to be protected by the brahmanas,
@@ -102,7 +141,7 @@ difficulty if they misuse the advantages obtained by birth in a brahmana family.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

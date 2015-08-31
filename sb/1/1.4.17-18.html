@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/1/1.4.17-18.html">1.4.17-18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.17-18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17-18"><b>17-18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 bhautikanam ca bhavanam
 sakti-hrasam ca tat-krtam
@@ -57,7 +96,7 @@ durbhagams ca janan viksya
 munir divyena caksusa
 sarva-varnasramanam yad
 dadhyau hitam amogha-drk
-<p></p>
+<br>
 <h2>Synonyms</h2>
 bhautikanam ca--also of everything that is made of matter; bhavanam--actions; sakti-hrasam ca--and
 deterioration of natural power; tat-krtam--rendered by that; asraddadhanan--of the faithless; nihsattvan--
@@ -66,13 +105,13 @@ duration of life; durbhagan ca--also the unlucky; janan--people in general; viks
 muni; divyena--by transcendental; caksusa--vision; sarva--all; varna-asramanam--of all the statuses and
 orders of life; yat--what; dadhyau--contemplated; hitam--welfare; amogha-drk--one who is fully equipped
 in knowledge.
-<p></p>
+<br>
 <h2>Translation</h2>
 The great sage, who was fully equipped in knowledge, could see, through his transcendental vision, the
 deterioration of everything material, due to the influence of the age. He could also see that the faithless
 people in general would be reduced in duration of life and would be impatient due to lack of goodness.
 Thus he contemplated for the welfare of men in all statuses and orders of life.
-<p></p>
+<br>
 <h2>Purport</h2>
 The unmanifested forces of time are so powerful that they reduce all matter to oblivion in due course. In
 Kali-yuga, the last millennium of a round of four millenniums, the power of all material objects
@@ -106,7 +145,7 @@ and the same, namely, to deliver the fallen souls back home, back to Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
