@@ -65,9 +65,15 @@ for line in raw:
 
 	if line == "TEXT 1":
 		if debug:
-			print("NEW CHAPTER BEGINS")
+			print("NEW CHAPTER BEGINS (TEXT 1)")
 		chapter = str(1 + int(chapter))
-	if "TEXT " in line:
+
+	if line == "TEXTS 1-":
+		if debug:
+			print("NEW CHAPTER BEGINS (TEXTS 1.. multiplesloka)")
+		chapter = str(1 + int(chapter))
+
+	if "TEXT " in line or "TEXTS " in line:
 		if id == "":
 			beginhtml = True
 		if id != "":
@@ -86,6 +92,20 @@ for line in raw:
 		if debug:
 			print("DEBUG: id to split is", id)
 		verse = str(id)
+		if "-" in verse:
+			print("VERSE: DEBUG: canto", canto)
+			print("VERSE: DEBUG: chapter", chapter)
+			print("VERSE: DEBUG: id", str(id))
+			print("VERSE: DEBUG: verse", verse)
+			vids = verse.split("-")
+			startvid = str(vids[0])
+			stopvid = str(vids[1])
+			print("VERSE: DEBUG: start verse id", startvid)
+			print("VERSE: DEBUG: stop  verse id", stopvid)
+		else:
+			startvid = verse
+			stopvid = ""
+
 		if debug:
 			print("canto", canto)
 			print("chapter", chapter)
