@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.18.2.html">9.18.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-srnu bhargavy amum gatham
-mad-vidhacaritam bhuvi
-dhira yasyanusocanti
-vane grama-nivasinah
-<p></p>
+rajyam naicchad yatih pitra
+dattam tat-parinamavit
+yatra pravistah purusa
+atmanam navabudhyate
+<br>
 <h2>Synonyms</h2>
-srnu--please hear; bhargavi--O daughter of Sukracarya; amum--this; gatham--history; mat-vidha--exactly
-resembling my behavior; acaritam--behavior; bhuvi--within this world; dhirah--those who are sober and
-intelligent; yasya--of whom; anusocanti--lament very much; vane--in the forest; grama-nivasinah--very
-much attached to materialistic enjoyment.
-<p></p>
+rajyam--the kingdom; na aicchat--did not accept; yatih--the eldest son, Yati; pitra--by his father;
+dattam--offered; tat-parinama-vit--knowing the result of becoming powerful as a king; yatra--wherein;
+pravistah--having entered; purusah--such a person; atmanam--self-realization; na--not; avabudhyate--will
+take seriously and understand.
+<br>
 <h2>Translation</h2>
-My dearly beloved wife, daughter of Sukracarya, in this world there was someone exactly like me. Please
-listen as I narrate the history of his life. By hearing about the life of such a householder, those who have
-retired from householder life always lament.
-<p></p>
+When one enters the post of king or head of the government, one cannot understand the meaning of
+self-realization. Knowing this, Yati, the eldest son of Nahusa, did not accept the power to rule, although it
+was offered by his father.
+<br>
 <h2>Purport</h2>
-Persons who live in the village or town are called grama-nivasi, and those who live in the forest are
-called vana-vasi or vanaprastha. The vanaprasthas, who have retired from family life, generally lament
-about their past family life because it engaged them in trying to fulfill lusty desires. Prahlada Maharaja
-said that one should retire from family life as soon as possible, and he described family life as the darkest
-well (hitvatma-patam grham andha-kupam). If one continuously or permanently concentrates on living
-with his family, he should be understood to be killing himself. In the Vedic civilization, therefore, it is
-recommended that one retire from family life at the end of his fiftieth year and go to vana, the forest.
-When he becomes expert or accustomed to forest life, or retired life as a vanaprastha, he should accept
-sannyasa. Vanam gato yad dharim asrayeta. Sannyasa means accepting unalloyed engagement in the
-service of the Lord. Vedic civilization therefore recommends four different stages of life--brahmacarya,
-grhastha, vanaprastha and sannyasa. One should be very much ashamed of remaining a householder and
-not promoting oneself to the two higher stages, namely vanaprastha and sannyasa.
+Self-realization is the prime objective of human civilization, and it is regarded seriously by those who
+are situated in the mode of goodness and have developed the brahminical qualities. Ksatriyas are generally
+endowed with material qualities conducive to gaining material wealth and enjoying sense gratification,
+but those who are spiritually advanced are not interested in material opulence. Indeed, they accept only
+the bare necessities for a life of spiritual advancement in self-realization. It is specifically mentioned here
+that if one enters political life, especially in the modern day, one looses the chance for human perfection.
+Nonetheless, one can attain the highest perfection if one hears Srimad-Bhagavatam. This hearing is
+described as nityam bhagavata-sevaya. Maharaja Pariksit was involved in politics, but because at the end
+of his life he heard Srimad-Bhagavatam from Sukadeva Gosvami, he attained perfection very easily. Sri
+Caitanya Mahaprabhu has therefore suggested:
+sthane sthitah sruti-gatam tanu-van-manobhir
+ye prayaso 'jita jito 'py asi tais tri-lokyam
+(Bhag. 10.14.3)
+Regardless of whether one is in the mode of passion, ignorance or goodness, if one regularly hears
+Srimad-Bhagavatam from the self-realized soul, one is freed from the bondage of material involvement.
 </p>
 
 </div>
@@ -85,7 +127,7 @@ not promoting oneself to the two higher stages, namely vanaprastha and sannyasa.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

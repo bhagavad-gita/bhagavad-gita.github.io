@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.16.13.html">9.16.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-devair abhyarthito daityan
-hatvendrayadadad divam
-indras tasmai punar dattva
-grhitva caranau rajeh
-atmanam arpayam asa
-prahradady-ari-sankitah
-<p></p>
+renuka duhkha-sokarta
+nighnanty atmanam atmana
+rama rameti tateti
+vicukrosoccakaih sati
+<br>
 <h2>Synonyms</h2>
-devaih--by the demigods; abhyarthitah--being requested; daityan--the demons; hatva--killing; indraya--
-to Indra, the King of heaven; adadat--delivered; divam--the kingdom of heaven; indrah--the King of
-heaven; tasmai--unto him, Raji; punah--again; dattva--returning; grhitva--capturing; caranau--the feet;
-rajeh--of Raji; atmanam--the self; arpayam asa--surrendered; prahrada-adi--Prahlada and others; arisankitah--
-being afraid of such enemies.
-<p></p>
+renuka--Renuka, the wife of Jamadagni; duhkha-soka-arta--being very much aggrieved in lamentation
+(over her husband's death); nighnanti--striking; atmanam--her own body; atmana--by herself; rama--O
+Parasurama; rama--O Parasurama; iti--thus; tata--O my dear son; iti--thus; vicukrosa--began to cry;
+uccakaih--very loudly; sati--the most chaste woman.
+<br>
 <h2>Translation</h2>
-On the request of the demigods, Raji killed the demons and thus returned the kingdom of heaven to
-Lord Indra. But Indra, fearing such demons as Prahlada, returned the kingdom of heaven to Raji and
-surrendered himself at Raji's lotus feet.
+Lamenting in grief for the death of her husband, the most chaste Renuka struck her own body with her
+hands and cried very loudly, "O Rama, my dear son Rama!"
 </p>
 
 </div>
@@ -74,7 +109,7 @@ surrendered himself at Raji's lotus feet.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

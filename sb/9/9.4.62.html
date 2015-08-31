@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,24 +81,25 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.4.62.html">9.4.62</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.62</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/62"><b>62</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ajanata te paramanubhavam
 krtam mayagham bhavatah priyanam
 vidhehi tasyapacitim vidhatar
 mucyeta yan-namny udite narako 'pi
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ajanata--without knowledge; te--of Your Lordship; parama-anubhavam--the inconceivable prowess;
 krtam--has been committed; maya--by me; agham--a great offense; bhavatah--of Your Lordship;
 priyanam--at the feet of the devotees; vidhehi--now kindly do the needful; tasya--of such an offense;
 apacitim--counteraction; vidhatah--O supreme controller; mucyeta--can be delivered; yat--of whose;
 namni--when the name; udite--is awakened; narakah api--even a person fit for going to hell.
-<p></p>
+<br>
 <h2>Translation</h2>
 O my Lord, O supreme controller, without knowledge of Your unlimited prowess I have offended Your
 most dear devotee. Very kindly save me from the reaction of this offense. You can do everything, for even
@@ -73,7 +112,7 @@ name of Your Lordship.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

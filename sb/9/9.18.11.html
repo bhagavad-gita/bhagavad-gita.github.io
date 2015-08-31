@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.18.11.html">9.18.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sambaddha-vrsanah so 'pi
-hy ajaya kupa-labdhaya
-kalam bahu-titham bhadre
-kamair nadyapi tusyati
-<p></p>
+aho niriksyatam asya
+dasyah karma hy asampratam
+asmad-dharyam dhrtavati
+suniva havir adhvare
+<br>
 <h2>Synonyms</h2>
-sambaddha-vrsanah--rejoined with his testicles; sah--he; api--also; hi--indeed; ajaya--with the she-goat;
-kupa-labdhaya--whom he got from the well; kalam--for a time; bahu-titham--of a long, long duration;
-bhadre--O my dear wife; kamaih--with such lusty desires; na--not; adya api--even until now; tusyati--is
-satisfied.
-<p></p>
+aho--alas; niriksyatam--just see; asyah--of her (Sarmistha); dasyah--just like our servant; karma--
+activities; hi--indeed; asampratam--without any etiquette; asmat-dharyam--the garment meant for me;
+dhrtavati--she has put on; suni iva--like a dog; havih--clarified butter; adhvare--meant for offering in the
+sacrifice.
+<br>
 <h2>Translation</h2>
-My dear wife, when the he-goat had his testicles restored, he enjoyed the she-goat he had gotten from
-the well, but although he continued to enjoy for many, many years, even now he has not been fully
-satisfied.
-<p></p>
-<h2>Purport</h2>
-When one is bound by affection for one's wife, one is attached to sexual desires that are very difficult to
-overcome. Therefore, according to Vedic civilization, one must voluntarily leave his so-called home and
-go to the forest. Pancasordhvam vanam vrajet. Human life is meant for such tapasya, or austerity. By the
-austerity of voluntarily stopping sex life at home and going to the forest to engage in spiritual activities in
-the association of devotees, one achieves the actual purpose of human life.
+Oh, just see the activities of this servant-maid Sarmistha! Disregarding all etiquette, she has put on my
+dress, just like a dog snatching clarified butter meant for use in a sacrifice.
 </p>
 
 </div>
@@ -78,7 +109,7 @@ the association of devotees, one achieves the actual purpose of human life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

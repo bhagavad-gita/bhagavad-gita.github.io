@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.1.38-39.html">9.1.38-39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.38-39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38-39"><b>38-39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tustas tasmai sa bhagavan
 rsaye priyam avahan
@@ -57,7 +96,7 @@ masam puman sa bhavita
 masam stri tava gotrajah
 ittham vyavasthaya kamam
 sudyumno 'vatu medinim
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tustah--being pleased; tasmai--unto Vasistha; sah--he (Lord Siva); bhagavan--the most powerful; rsaye--
 unto the great sage; priyam avahan--just to please him; svam ca--his own; vacam--word; rtam--true;
@@ -65,12 +104,12 @@ kurvan--and keeping; idam--this; aha--said; visampate--O King Pariksit; masam--o
 male; sah--Sudyumna; bhavita--will become; masam--an other month; stri--female; tava--your; gotra-jah--
 disciple born in your disciplic succession; ittham--in this way; vyavasthaya--by settlement; kamam--
 according to desire; sudyumnah--King Sudyumna; avatu--may rule; medinim--the world.
-<p></p>
+<br>
 <h2>Translation</h2>
 O King Pariksit, Lord Siva was pleased with Vasistha. Therefore, to satisfy him and to keep his own
 word to Parvati, Lord Siva said to that saintly person, "Your disciple Sudyumna may remain a male for
 one month and a female for the next. In this way he may rule the world as he likes."
-<p></p>
+<br>
 <h2>Purport</h2>
 The word gotrajah is significant in this connection. Brahmanas generally act as spiritual masters of two
 dynasties. One is their disciplic succession, and the other is the dynasty born of their semen. Both
@@ -87,7 +126,7 @@ members of the family.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

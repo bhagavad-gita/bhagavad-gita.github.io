@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.10.53.html">9.10.53</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.53</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/53"><b>53</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 nadhi-vyadhi-jara-glaniduhkha-
 soka-bhaya-klamah
 mrtyus canicchatam nasid
 rame rajany adhoksaje
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; adhi--adhyatmika, adhibhautika and adhidaivika sufferings (that is, sufferings from the body
 and mind, from other living entities and from nature); vyadhi--diseases; jara--old age; glani--bereavement;
@@ -61,12 +100,12 @@ duhkha--grief; soka--lamentation; bhaya--fear; klamah--and fatigue; mrtyuh--deat
 of those who did not like it; na asit--there was not; rame--during the rule of Lord Ramacandra; rajani--
 because of His being the king; adhoksaje--the Supreme Personality of Godhead, who is beyond this
 material world.
-<p></p>
+<br>
 <h2>Translation</h2>
 When Lord Ramacandra, the Supreme Personality of Godhead, was the King of this world, all bodily
 and mental suffering, disease, old age, bereavement, lamentation, distress, fear and fatigue were
 completely absent. There was even no death for those who did not want it.
-<p></p>
+<br>
 <h2>Purport</h2>
 All these facilities existed because of Lord Ramacandra's presence as the King of the entire world. A
 similar situation could be introduced immediately, even in this age called Kali, the worst of all ages. It is
@@ -81,7 +120,7 @@ can immediately introduce a similar situation, even in this Kali-yuga.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

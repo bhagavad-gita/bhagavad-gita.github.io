@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.22.30-31.html">9.22.30-31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.30-31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30-31"><b>30-31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-madhava vrsnayo rajan
-yadavas ceti samjnitah
-yadu-putrasya ca krostoh
-putro vrjinavams tatah
-svahito 'to visadgur vai
-tasya citrarathas tatah
-sasabindur maha-yogi
-maha-bhago mahan abhut
-caturdasa-maharatnas
-cakravarty aparajitah
-<p></p>
+sahadeva-suto rajan
+chrutakarma tathapare
+yudhisthirat tu pauravyam
+devako 'tha ghatotkacah
+bhimasenad dhidimbayam
+kalyam sarvagatas tatah
+sahadevat suhotram tu
+vijayasuta parvati
+<br>
 <h2>Synonyms</h2>
-madhavah--the dynasty beginning from Madhu; vrsnayah--the dynasty beginning from Vrsni; rajan--O
-King (Maharaja Pariksit); yadavah--the dynasty beginning from Yadu; ca--and; iti--thus; samjnitah--are socalled
-because of those different persons; yadu-putrasya--of the son of Yadu; ca--also; krostoh--of Krosta;
-putrah--the son; vrjinavan--his name was Vrjinavan; tatah--from him (Vrjinavan); svahitah--Svahita;
-atah--thereafter; visadguh--a son named Visadgu; vai--indeed; tasya--of him; citrarathah--Citraratha;
-tatah--from him; sasabinduh--Sasabindu; maha-yogi--a great mystic; maha-bhagah--most fortunate;
-mahan--a great personality; abhut--he became; caturdasa-maharatnah--fourteen kinds of great opulences;
-cakravarti--he possessed as the emperor; aparajitah--not defeated by anyone else.
-<p></p>
+sahadeva-sutah--the son of Sahadeva; rajan--O King; srutakarma--Srutakarma; tatha--as well as; apare--
+others; yudhisthirat--from Yudhisthira; tu--indeed; pauravyam--in the womb of Pauravi; devakah--a son
+named Devaka; atha--as well as; ghatotkacah--Ghatotkaca; bhimasenat--from Bhimasena; hidimbayam--in
+the womb of Hidimba; kalyam--in the womb of Kali; sarvagatah--Sarvagata; tatah--thereafter; sahadevat--
+from Sahadeva; suhotram--Suhotra; tu--indeed; vijaya--Vijaya; asuta--gave birth to; parvati--the daughter
+of the Himalayan king.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, because Yadu, Madhu and Vrsni each inaugurated a dynasty, their dynasties are
-known as Yadava, Madhava and Vrsni. The son of Yadu named Krosta had a son named Vrjinavan. The
-son of Vrjinavan was Svahita; the son of Svahita, Visadgu; the son of Visadgu, Citraratha; and the son of
-Citraratha, Sasabindu. The greatly fortunate Sasabindu, who was a great mystic, possessed fourteen
-opulences and was the owner of fourteen great jewels. Thus he became the emperor of the world.
-<p></p>
-<h2>Purport</h2>
-In the Markandeya Purana the fourteen kinds of great jewels are described as follows: (1) an elephant,
-(2) a horse, (3) a chariot, (4) a wife, (5) arrows, (6) a reservoir of wealth, (7) a garland, (8) valuable
-costumes, (9) trees, (10) a spear, (11) a noose, (12) jewels, (13) an umbrella, and (14) regulative
-principles. To be the emperor, one must possess all fourteen of these opulences. Sasabindu possessed
-them all.
+O King, the son of Sahadeva was Srutakarma. Furthermore, Yudhisthira and his brothers begot other
+sons in other wives. Yudhisthira begot a son named Devaka through the womb of Pauravi, and Bhimasena
+begot a son named Ghatotkaca through his wife Hidimba and a son named Sarvagata through his wife
+Kali. Similarly, Sahadeva had a son named Suhotra through his wife named Vijaya, who was the daughter
+of the king of the mountains.
 </p>
 
 </div>
@@ -90,7 +118,7 @@ them all.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.20.17.html">9.20.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-isvaralambanam cittam
-kurvato 'nanya-radhasah
-maya guna-mayi rajan
-svapnavat pratyaliyata
-<p></p>
+amogha-viryo rajarsir
+mahisyam viryam adadhe
+svo-bhute sva-puram yatah
+kalenasuta sa sutam
+<br>
 <h2>Synonyms</h2>
-isvara-alambanam--completely taking shelter at the lotus feet of the Supreme Lord; cittam--his
-consciousness; kurvatah--fixing; ananya-radhasah--for Rantideva, who was undeviating and desired
-nothing other than to serve the Supreme Lord; maya--the illusory energy; guna-mayi--consisting of the
-three modes of nature; rajan--O Maharaja Pariksit; svapna-vat--like a dream; pratyaliyata--merged.
-<p></p>
+amogha-viryah--a person who discharges semen without being baffled, or, in other words, who must
+beget a child; raja-rsih--the saintly King Dusmanta; mahisyam--into the Queen, Sakuntala (after her
+marriage, Sakuntala became the Queen); viryam--semen; adadhe--placed; svah-bhute--in the morning;
+sva-puram--to his own place; yatah--returned; kalena--in due course of time; asuta--gave birth; sa--she
+(Sakuntala); sutam--to a son.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, because King Rantideva was a pure devotee, always Krsna conscious and free from
-all material desires, the Lord's illusory energy, maya, could not exhibit herself before him. On the
-contrary, for him maya entirely vanished, exactly like a dream.
-<p></p>
-<h2>Purport</h2>
-As it is said:
-krsna----surya-sama; maya haya andhakara
-yahan krsna, tahan nahi mayara adhikara
-Just as there is no chance that darkness can exist in the sunshine, in a pure Krsna conscious person
-there can be no existence of maya. The Lord Himself says in Bhagavad-gita (7.14):
-daivi hy esa guna-mayi
-mama maya duratyaya
-mam eva ye prapadyante
-mayam etam taranti te
-"This divine energy of Mine, consisting of the three modes of material nature, is difficult to overcome.
-But those who have surrendered unto Me can easily cross beyond it." If one wants to be free from the
-influence of maya, the illusory energy, one must become Krsna conscious and always keep Krsna
-prominent within the core of his heart. In Bhagavad-gita (9.34) the Lord advises that one always think of
-Him (man-mana bhava mad-bhakto mad-yaji mam namaskuru). In this way, by always being Krsnaminded
-or Krsna conscious, one can surpass the influence of maya (mayam etam taranti te). Because
-Rantideva was Krsna conscious, he was not under the influence of the illusory energy. The word
-svapnavat is significant in this connection. Because in the material world the mind is absorbed in
-materialistic activities, when one is asleep many contradictory activities appear in one's dreams. When
-one awakens, however, these activities automatically merge into the mind. Similarly, as long as one is
-under the influence of the material energy he makes many plans and schemes, but when one is Krsna
-conscious such dreamlike plans automatically disappear.
+King Dusmanta, who never discharged semen without a result, placed his semen at night in the womb
+of his Queen, Sakuntala, and in the morning he returned to his palace. Thereafter, in due course of time,
+Sakuntala gave birth to a son.
 </p>
 
 </div>
@@ -94,7 +111,7 @@ conscious such dreamlike plans automatically disappear.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.21.26.html">9.21.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gandharyam dhrtarastrasya
-jajne putra-satam nrpa
-tatra duryodhano jyestho
-duhsala capi kanyaka
-<p></p>
+jaigisavyopadesena
+yoga-tantram cakara ha
+udaksenas tatas tasmad
+bhallato barhadisavah
+<br>
 <h2>Synonyms</h2>
-gandharyam--in the womb of Gandhari; dhrtarastrasya--of Dhrtarastra; jajne--were born; putra-satam--
-one hundred sons; nrpa--O King Pariksit; tatra--among the sons; duryodhanah--the son named
-Duryodhana; jyesthah--the eldest; duhsala--Duhsala; ca api--also; kanyaka--one daughter.
-<p></p>
+jaigisavya--of the great rsi named Jaigisavya; upadesena--by the instruction; yoga-tantram--an elaborate
+description of the mystic yoga system; cakara--compiled; ha--in the past; udaksenah--Udaksena; tatah--
+from him (Visvaksena); tasmat--from him (Udaksena); bhallatah--a son named Bhallata; barhadisavah--
+(all of these are known as) descendants of Brhadisu.
+<br>
 <h2>Translation</h2>
-Dhrtarastra's wife, Gandhari, gave birth to one hundred sons and one daughter, O King. The oldest of
-the sons was Duryodhana, and the daughter's name was Duhsala.
+Following the instructions of the great sage Jaigisavya, Visvaksena compiled an elaborate description of
+the mystic yoga system. From Visvaksena, Udaksena was born, and from Udaksena, Bhallata. All these
+sons are known as descendants of Brhadisu.
 </p>
 
 </div>
@@ -69,7 +110,7 @@ the sons was Duryodhana, and the daughter's name was Duhsala.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

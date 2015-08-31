@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.20.12.html">9.20.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na kamaye 'ham gatim isvarat param
-astarddhi-yuktam apunar-bhavam va
-artim prapadye 'khila-deha-bhajam
-antah-sthito yena bhavanty aduhkhah
-<p></p>
+vyaktam rajanya-tanayam
+vedmy aham tvam sumadhyame
+na hi cetah pauravanam
+adharme ramate kvacit
+<br>
 <h2>Synonyms</h2>
-na--not; kamaye--desire; aham--I; gatim--destination; isvarat--from the Supreme Personality of
-Godhead; param--great; asta-rddhi-yuktam--composed of the eight kinds of mystic perfection; apunahbhavam--
-cessation of repeated birth (liberation, salvation); va--either; artim--sufferings; prapadye--I
-accept; akhila-deha-bhajam--of all living entities; antah-sthitah--staying among them; yena--by which;
-bhavanti--they become; aduhkhah--without distress.
-<p></p>
+vyaktam--it appears; rajanya-tanayam--the daughter of a ksatriya; vedmi--can realize; aham--I; tvam--
+your good self; su-madhyame--O most beautiful; na--not; hi--indeed; cetah--the mind; pauravanam--of
+persons who have taken birth in the Puru dynasty; adharme--in irreligion; ramate--enjoys; kvacit--at any
+time.
+<br>
 <h2>Translation</h2>
-I do not pray to the Supreme Personality of Godhead for the eight perfections of mystic yoga, nor for
-salvation from repeated birth and death. I want only to stay among all the living entities and suffer all
-distresses on their behalf, so that they may be freed from suffering.
-<p></p>
+O most beautiful one, it appears to my mind that you must be the daughter of a ksatriya. Because I
+belong to the Puru dynasty, my mind never endeavors to enjoy anything irreligiously.
+<br>
 <h2>Purport</h2>
-Vasudeva Datta made a similar statement to Sri Caitanya Mahaprabhu, requesting the Lord to liberate all
-living entities in His presence. Vasudeva Datta submitted that if they were unfit to be liberated, he himself
-would take all their sinful reactions and suffer personally so that the Lord might deliver them. A Vaisnava
-is therefore described as being para-duhkha-duhkhi, very much aggrieved by the sufferings of others. As
-such, a Vaisnava engages in activities for the real welfare of human society.
+Maharaja Dusmanta indirectly expressed his desire to marry Sakuntala, for she appeared to his mind to
+be the daughter of some ksatriya king.
 </p>
 
 </div>
@@ -79,7 +113,7 @@ such, a Vaisnava engages in activities for the real welfare of human society.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

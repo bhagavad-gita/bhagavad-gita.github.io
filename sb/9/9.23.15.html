@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.23.15.html">9.23.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-svaphalkas citrarathas ca
-gandinyam ca svaphalkatah
-akrura-pramukha asan
-putra dvadasa visrutah
-<p></p>
+arabdhas tasya gandharas
+tasya dharmas tato dhrtah
+dhrtasya durmadas tasmat
+pracetah pracetasah satam
+<br>
 <h2>Synonyms</h2>
-svaphalkah--Svaphalka; citrarathah ca--and Citraratha; gandinyam--through the wife named Gandini;
-ca--and; svaphalkatah--from Svaphalka; akrura--Akrura; pramukhah--headed by; asan--there were;
-putrah--sons; dvadasa--twelve; visrutah--most celebrated.
-<p></p>
+arabdhah--Arabdha (was the son of Setu); tasya--of him (Arabdha); gandharah--a son named Gandhara;
+tasya--of him (Gandhara); dharmah--a son known as Dharma; tatah--from him (Dharma); dhrtah--a son
+named Dhrta; dhrtasya--of Dhrta; durmadah--a son named Durmada; tasmat--from him (Durmada);
+pracetah--a son named Praceta; pracetasah--of Praceta; satam--there were one hundred sons.
+<br>
 <h2>Translation</h2>
-From Vrsni came the sons named Svaphalka and Citraratha. From Svaphalka by his wife Gandini came
-Akrura. Akrura was the eldest, but there were twelve other sons, all of whom were most celebrated.
+The son of Setu was Arabdha, Arabdha's son was Gandhara, and Gandhara's son was Dharma. Dharma's
+son was Dhrta, Dhrta's son was Durmada, and Durmada's son was Praceta, who had one hundred sons.
 </p>
 
 </div>
@@ -69,7 +109,7 @@ Akrura. Akrura was the eldest, but there were twelve other sons, all of whom wer
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.18.26.html">9.18.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-srutva gatham devayani
-mene prastobham atmanah
-stri-pumsoh sneha-vaiklavyat
-parihasam iveritam
-<p></p>
+vrsaparva tam ajnaya
+pratyanika-vivaksitam
+gurum prasadayan murdhna
+padayoh patitah pathi
+<br>
 <h2>Synonyms</h2>
-srutva--hearing; gatham--the narration; devayani--Queen Devayani, the wife of Maharaja Yayati; mene--
-understood; prastobham atmanah--when instructed for her self-realization; stri-pumsoh--between the
-husband and wife; sneha-vaiklavyat--from an exchange of love and affection; parihasam--a funny joke or
-story; iva--like; iritam--spoken (by Maharaja Yayati).
-<p></p>
+vrsaparva--the King of the demons; tam ajnaya--understanding the motive of Sukracarya; pratyanika--
+some curse; vivaksitam--desiring to speak; gurum--his spiritual master, Sukracarya; prasadayat--he
+satisfied immediately; murdhna--with his head; padayoh--at the feet; patitah--fell down; pathi--on the
+road.
+<br>
 <h2>Translation</h2>
-When Devayani heard Maharaja Yayati's story of the he-goat and she-goat, she understood that this
-story, which was presented as if a funny joke for entertainment between husband and wife, was intended
-to awaken her to her constitutional position.
-<p></p>
-<h2>Purport</h2>
-When one actually awakens from material life, one understands his real position as an eternal servant of
-Krsna. This is called liberation. Muktir hitvanyatha rupam svarupena vyavasthitih (Bhag. 2.10.6). Under
-the influence of maya, everyone living in this material world thinks that he is the master of everything
-(ahankara-vimudhatma kartaham iti manyate). One thinks that there is no God or controller and that one
-is independent and can do anything. This is the material condition, and when one awakens from this
-ignorance, he is called liberated. Maharaja Yayati had delivered Devayani from the well, and finally, as a
-dutiful husband, he instructed her with the story about the he-goat and she-goat and thus delivered her
-from the misconception of material happiness. Devayani was quite competent to understand her liberated
-husband, and therefore she decided to follow him as his faithful wife.
+King Vrsaparva understood that Sukracarya was coming to chastise or curse him. Consequently, before
+Sukracarya came to his house, Vrsaparva went out and fell down in the street at the feet of his guru and
+satisfied him, checking his wrath.
 </p>
 
 </div>
@@ -82,7 +110,7 @@ husband, and therefore she decided to follow him as his faithful wife.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

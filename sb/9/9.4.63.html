@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.4.63.html">9.4.63</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.63</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/63"><b>63</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-bhagavan uvaca
 aham bhakta-paradhino
 hy asvatantra iva dvija
 sadhubhir grasta-hrdayo
 bhaktair bhakta-jana-priyah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-bhagavan uvaca--the Supreme Personality of Godhead said; aham--I; bhakta-paradhinah--am
 dependent on the will of My devotees; hi--indeed; asvatantrah--am not independent; iva--exactly like that;
@@ -62,13 +101,13 @@ dvija--O brahmana; sadhubhih--by pure devotees, completely free from all materia
 My heart is controlled; bhaktaih--because they are devotees; bhakta-jana-priyah--I am
 dependent not only on My devotee but also on My devotee's devotee (the devotee's devotee is extremely
 dear to Me).
-<p></p>
+<br>
 <h2>Translation</h2>
 The Supreme Personality of Godhead said to the brahmana: I am completely under the control of My
 devotees. Indeed, I am not at all independent. Because My devotees are completely devoid of material
 desires, I sit only within the cores of their hearts. What to speak of My devotee, even those who are
 devotees of My devotee are very dear to Me.
-<p></p>
+<br>
 <h2>Purport</h2>
 All the great stalwart personalities in the universe, including Lord Brahma and Lord Siva, are fully under
 the control of the Supreme Personality of Godhead, but the Supreme Personality of Godhead is fully
@@ -92,7 +131,7 @@ more valuable than following the instructions of the Supreme Personality of Godh
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

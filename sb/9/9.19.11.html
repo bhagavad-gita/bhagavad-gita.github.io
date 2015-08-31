@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.19.11.html">9.19.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ka tvam kamala-patraksi
-kasyasi hrdayan-game
-kim svic cikirsitam tatra
-bhavatya nirjane vane
-<p></p>
+sambaddha-vrsanah so 'pi
+hy ajaya kupa-labdhaya
+kalam bahu-titham bhadre
+kamair nadyapi tusyati
+<br>
 <h2>Synonyms</h2>
-ka--who; tvam--are you; kamala-patra-aksi--O beautiful woman with eyes like the petals of a lotus;
-kasya asi--with whom are you related; hrdayam-game--O most beautiful one, pleasing to the heart; kim
-svit--what kind of business; cikirsitam--is being thought of; tatra--there; bhavatyah--by you; nirjane--
-solitary; vane--in the forest.
-<p></p>
+sambaddha-vrsanah--rejoined with his testicles; sah--he; api--also; hi--indeed; ajaya--with the she-goat;
+kupa-labdhaya--whom he got from the well; kalam--for a time; bahu-titham--of a long, long duration;
+bhadre--O my dear wife; kamaih--with such lusty desires; na--not; adya api--even until now; tusyati--is
+satisfied.
+<br>
 <h2>Translation</h2>
-O beautiful lotus-eyed woman, who are you? Whose daughter are you? What purpose do you have in
-this solitary forest? Why are you staying here?
+My dear wife, when the he-goat had his testicles restored, he enjoyed the she-goat he had gotten from
+the well, but although he continued to enjoy for many, many years, even now he has not been fully
+satisfied.
+<br>
+<h2>Purport</h2>
+When one is bound by affection for one's wife, one is attached to sexual desires that are very difficult to
+overcome. Therefore, according to Vedic civilization, one must voluntarily leave his so-called home and
+go to the forest. Pancasordhvam vanam vrajet. Human life is meant for such tapasya, or austerity. By the
+austerity of voluntarily stopping sex life at home and going to the forest to engage in spiritual activities in
+the association of devotees, one achieves the actual purpose of human life.
 </p>
 
 </div>
@@ -70,7 +117,7 @@ this solitary forest? Why are you staying here?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

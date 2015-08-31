@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.22.33.html">9.22.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tesam tu sat pradhananam
-prthusravasa atmajah
-dharmo namosana tasya
-hayamedha-satasya yat
-<p></p>
+tava tatah subhadrayam
+abhimanyur ajayata
+sarvatirathajid vira
+uttarayam tato bhavan
+<br>
 <h2>Synonyms</h2>
-tesam--out of so many sons; tu--but; sat pradhananam--of whom there were six foremost sons;
-prthusravasah--of Prthusrava; atmajah--the son; dharmah--Dharma; nama--by the name; usana--Usana;
-tasya--his; hayamedha-satasya--of one hundred asvamedha sacrifices; yat--he was the performer.
-<p></p>
+tava--your; tatah--father; subhadrayam--in the womb of Subhadra; abhimanyuh--Abhimanyu; ajayata--
+was born; sarva-atiratha-jit--a great fighter who could defeat the atirathas; virah--a great hero; uttarayam--
+in the womb of Uttara; tatah--from Abhimanyu; bhavan--your good self.
+<br>
 <h2>Translation</h2>
-Among these many sons, six were the foremost, such as Prthusrava and Prthukirti. The son of
-Prthusrava was known as Dharma, and his son was known as Usana. Usana was the performer of one
-hundred horse sacrifices.
+My dear King Pariksit, your father, Abhimanyu, was born from the womb of Subhadra as the son of
+Arjuna. He was the conqueror of all atirathas [those who could fight with one thousand charioteers].
+From him, by the womb of Uttara, the daughter of Viradraja, you were born.
 </p>
 
 </div>
@@ -70,7 +109,7 @@ hundred horse sacrifices.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

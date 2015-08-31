@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.20.7.html">9.20.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-athanyo bhoksyamanasya
-vibhaktasya mahipateh
-vibhaktam vyabhajat tasmai
-vrsalaya harim smaran
-<p></p>
+tasya medhatithis tasmat
+praskannadya dvijatayah
+putro 'bhut sumate rebhir
+dusmantas tat-suto matah
+<br>
 <h2>Synonyms</h2>
-atha--thereafter; anyah--another guest; bhoksyamanasya--who was just about to eat; vibhaktasya--after
-setting aside the share for the family; mahipateh--of the King; vibhaktam--the food allotted for the family;
-vyabhajat--he divided and distributed; tasmai--unto him; vrsalaya--unto a sudra; harim--the Supreme
-Personality of Godhead; smaran--remembering.
-<p></p>
+tasya--of him (Kanva); medhatithih--a son named Medhatithi; tasmat--from him (Medhatithi);
+praskanna-adyah--sons headed by Praskanna; dvijatayah--all brahmanas; putrah--a son; abhut--there was;
+sumateh--from Sumati; rebhih--Rebhi; dusmantah--Maharaja Dusmanta; tat-sutah--the son of Rebhi;
+matah--is well-known.
+<br>
 <h2>Translation</h2>
-Thereafter, having divided the remaining food with his relatives, Rantideva was just about to eat his own
-share when a sudra guest arrived. Seeing the sudra in relationship with the Supreme Personality of
-Godhead, King Rantideva gave him also a share of the food.
-<p></p>
-<h2>Purport</h2>
-Because King Rantideva saw everyone as part of the Supreme Personality of Godhead, he never
-distinguished between the brahmana and the sudra, the poor and the rich. Such equal vision is called
-sama-darsinah (panditah sama-darsinah). One who has actually realized that the Supreme Personality of
-Godhead is situated in everyone's heart and that every living being is part of the Lord does not make any
-distinction between the brahmana and the sudra, the poor (daridra) and the rich (dhani). Such a person
-sees all living beings equally and treats them equally, without discrimination.
+The son of Kanva was Medhatithi, whose sons, all brahmanas, were headed by Praskanna. The son of
+Rantinava named Sumati had a son named Rebhi. Maharaja Dusmanta is well known as the son of Rebhi.
 </p>
 
 </div>
@@ -79,7 +109,7 @@ sees all living beings equally and treats them equally, without discrimination.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

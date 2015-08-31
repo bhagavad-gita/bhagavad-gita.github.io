@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.17.16.html">9.17.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atma-vrttam avijnaya
-katthase bahu bhiksuki
-kim na pratiksase 'smakam
-grhan balibhujo yatha
-<p></p>
+kusat pratih ksatravrddhat
+sanjayas tat-suto jayah
+tatah krtah krtasyapi
+jajne haryabalo nrpah
+<br>
 <h2>Synonyms</h2>
-atma-vrttam--one's own position; avijnaya--without understanding; katthase--you are talking madly;
-bahu--so much; bhiksuki--beggar; kim--whether; na--not; pratiksase--you wait; asmakam--our; grhan--at
-the house; balibhujah--crows; yatha--like.
-<p></p>
+kusat--from Kusa; pratih--a son named Prati; ksatravrddhat--the grandson of Ksatravrddha; sanjayah--a
+son named Sanjaya; tat-sutah--his son; jayah--Jaya; tatah--from him; krtah--Krta; krtasya--from Krta; api--
+as well as; jajne--was born; haryabalah--Haryabala; nrpah--the king.
+<br>
 <h2>Translation</h2>
-You beggar, since you don't understand your position, why should you unnecessarily talk so much?
-Don't all of you wait at our house, depending on us for your livelihood like crows?
-<p></p>
-<h2>Purport</h2>
-Crows have no independent life; they fully depend on the remnants of foodstuffs thrown by
-householders into the garbage tank. Therefore, because a brahmana depends on his disciples, when
-Sarmistha was heavily rebuked by Devayani she charged Devayani with belonging to a family of crowlike
-beggars. It is the nature of women to fight verbally at even a slight provocation. As we see from this
-incident, this has been their nature for a long, long time.
+From Kusa, the grandson of Ksatravrddha, was born a son named Prati. The son of Prati was Sanjaya,
+and the son of Sanjaya was Jaya. From Jaya, Krta was born, and from Krta, King Haryabala.
 </p>
 
 </div>
@@ -76,7 +108,7 @@ incident, this has been their nature for a long, long time.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

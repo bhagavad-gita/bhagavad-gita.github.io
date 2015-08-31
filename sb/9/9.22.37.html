@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.22.37.html">9.22.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/22">22</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aham bandhyasapatni ca
-snusa me yujyate katham
-janayisyasi yam rajni
-tasyeyam upayujyate
-<p></p>
+kalaseyam purodhaya
+turam turaga-medhasat
+samantat prthivim sarvam
+jitva yaksyati cadhvaraih
+<br>
 <h2>Synonyms</h2>
-aham--I am; bandhya--sterile; asa-patni--I have no co-wife; ca--also; snusa--daughter-in-law; me--my;
-yujyate--could be; katham--how; janayisyasi--you will give birth to; yam--which son; rajni--O my dear
-Queen; tasya--for him; iyam--this girl; upayujyate--will be very suitable.
-<p></p>
+kalaseyam--the son of Kalasa; purodhaya--accepting as the priest; turam--Tura; turaga-medhasat--he will
+be known as Turaga-medhasat (a performer of many horse sacrifices); samantat--including all parts;
+prthivim--the world; sarvam--everywhere; jitva--conquering; yaksyati--will execute sacrifices; ca--and;
+adhvaraih--by performing asvamedha-yajnas.
+<br>
 <h2>Translation</h2>
-Saibya said, "I am sterile and have no co-wife. How can this girl be my daughter-in-law? Please tell me."
-Jyamagha replied, "My dear Queen, I shall see that you indeed have a son and that this girl will be your
-daughter-in-law."
+After conquering throughout the world and after accepting Tura, the son of Kalasa, as his priest,
+Janamejaya will perform asvamedha-yajnas, for which he will be known as Turaga-medhasat.
 </p>
 
 </div>
@@ -70,7 +109,7 @@ daughter-in-law."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.18.4.html">9.18.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasya uddharanopayam
-bastah kami vicintayan
-vyadhatta tirtham uddhrtya
-visanagrena rodhasi
-<p></p>
+catasrsv adisad diksu
+bhratrn bhrata yaviyasah
+krta-daro jugoporvim
+kavyasya vrsaparvanah
+<br>
 <h2>Synonyms</h2>
-tasyah--of the she-goat; uddharana-upayam--the means of deliverance (from the well); bastah--the hegoat;
-kami--having lusty desires; vicintayan--planning; vyadhatta--executed; tirtham--a way to come out;
-uddhrtya--digging the earth; visana-agrena--by the point of the horns; rodhasi--at the edge of the well.
-<p></p>
+catasrsu--over the four; adisat--allowed to rule; diksu--directions; bhratrn--four brothers; bhrata--Yayati;
+yaviyasah--young; krta-darah--married; jugopa--ruled; urvim--the world; kavyasya--the daughter of
+Sukracarya; vrsaparvanah--the daughter of Vrsaparva.
+<br>
 <h2>Translation</h2>
-After planning how to get the she-goat out of the well, the lusty he-goat dug up the earth on the well's
-edge with the point of his horns in such a way that she was able to come out very easily.
-<p></p>
-<h2>Purport</h2>
-Attraction for woman is the impetus for economic development, housing and many other things meant
-for living comfortably in this material world. Digging up the earth to make a way out for the she-goat was
-a laborious task, but before accepting the she-goat, the he-goat underwent this labor. Aho grha-ksetrasutapta-
-vittair janasya moho 'yam aham mameti. The union between male and female provides the
-impetus for gaining a nice apartment, a good income, children and friends. Thus one becomes entangled
-in this material world.
+King Yayati had four younger brothers, whom he allowed to rule the four directions. Yayati himself
+married Devayani, the daughter of Sukracarya, and Sarmistha, the daughter of Vrsaparva, and ruled the
+entire earth.
 </p>
 
 </div>
@@ -77,7 +109,7 @@ in this material world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

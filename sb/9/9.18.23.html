@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.18.23.html">9.18.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhu-mandalasya sarvasya
-purum arhattamam visam
-abhisicyagrajams tasya
-vase sthapya vanam yayau
-<p></p>
+yayatir anabhipretam
+daivopahrtam atmanah
+manas tu tad-gatam buddhva
+pratijagraha tad-vacah
+<br>
 <h2>Synonyms</h2>
-bhu-mandalasya--of the entire planet earth; sarvasya--of all wealth and riches; purum--his youngest son,
-Puru; arhat-tamam--the most worshipable person, the king; visam--of the citizens or the subjects of the
-world; abhisicya--crowning on the throne of the emperor; agrajan--all his elder brothers, beginning from
-Yadu; tasya--of Puru; vase--under the control; sthapya--establishing; vanam--in the forest; yayau--he went
-away.
-<p></p>
+yayatih--King Yayati; anabhipretam--not liked; daiva-upahrtam--brought about by providential
+arrangements; atmanah--his personal interest; manah--mind; tu--however; tat-gatam--being attracted to
+her; buddhva--by such intelligence; pratijagraha--accepted; tat-vacah--the words of Devayani.
+<br>
 <h2>Translation</h2>
-Yayati enthroned his youngest son, Puru, as the emperor of the entire world and the proprietor of all its
-riches, and he placed all the other sons, who were older than Puru, under Puru's control.
+Sukadeva Gosvami continued: Because such a marriage is not sanctioned by regular scriptures, King
+Yayati did not like it, but because it was arranged by providence and because he was attracted by
+Devayani's beauty, he accepted her request.
+<br>
+<h2>Purport</h2>
+According to the Vedic system, the parents would consider the horoscopes of the boy and girl who were
+to be married. If according to astrological calculations the boy and girl were compatible in every respect,
+the match was called yotaka and the marriage would be accepted. Even fifty years ago, this system was
+current in Hindu society. Regardless of the affluence of the boy or the personal beauty of the girl, without
+this astrological compatibility the marriage would not take place. A person is born in one of three
+categories, known as deva-gana, manusya-gana and raksasa-gana. In different parts of the universe there
+are demigods and demons, and in human society also some people resemble demigods whereas others
+resemble demons. If according to astrological calculations there was conflict between a godly and a
+demoniac nature, the marriage would not take place. Similarly, there were calculations of pratiloma and
+anuloma. The central idea is that if the boy and girl were on an equal level the marriage would be happy,
+whereas inequality would lead to unhappiness. Because care is no longer taken in marriage, we now find
+many divorces. Indeed, divorce has now become a common affair, although formerly one's marriage
+would continue lifelong, and the affection between husband and wife was so great that the wife would
+voluntarily die when her husband died or would remain a faithful widow throughout her entire life. Now,
+of course, this is no longer possible, for human society has fallen to the level of animal society. Marriage
+now takes place simply by agreement. Dampatye 'bhirucir hetuh (Bhag. 12.2.3). The word abhiruci means
+"agreement." If the boy and girl simply agree to marry, the marriage takes place. But when the Vedic
+system is not rigidly observed, marriage frequently ends in divorce.
 </p>
 
 </div>
@@ -71,7 +129,7 @@ riches, and he placed all the other sons, who were older than Puru, under Puru's
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

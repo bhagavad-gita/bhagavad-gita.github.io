@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.9.26-27.html">9.9.26-27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.26-27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26-27"><b>26-27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ksudharto jagrhe vipram
 tat-patny ahakrtarthavat
@@ -57,7 +96,7 @@ madayantyah patir vira
 nadharmam kartum arhasi
 dehi me 'patya-kamaya
 akrtartham patim dvijam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ksudha-artah--being aggrieved by hunger; jagrhe--caught; vipram--the brahmana; tat-patni--his wife;
 aha--said; akrta-artha-vat--being unsatisfied, poor and hungry; na--not; bhavan--yourself; raksasah--a
@@ -66,7 +105,7 @@ a great fighter; madayantyah--of Madayanti; patih--the husband; vira--O hero; na
 adharmam--irreligious act; kartum--to do; arhasi--you deserve; dehi--please deliver; me--my; apatyakamayah--
 desiring to get a son; akrta-artham--whose desire has not been fulfilled; patim--husband;
 dvijam--who is a brahmana.
-<p></p>
+<br>
 <h2>Translation</h2>
 Being influenced by the propensity of a Raksasa and being very hungry, King Saudasa seized the
 brahmana. Then the poor woman, the brahmana's wife, said to the King: O hero, you are not actually a
@@ -80,7 +119,7 @@ therefore, return my husband, who has not yet impregnated me.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

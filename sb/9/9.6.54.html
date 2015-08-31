@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.6.54.html">9.6.54</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.54</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/54"><b>54</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tatra taptva tapas tiksnam
 atma-darsanam atmavan
 sahaivagnibhir atmanam
 yuyoja paramatmani
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tatra--in the forest; taptva--executing austerity; tapah--the regulative principles of austerity; tiksnam--
 very severely; atma-darsanam--which helps self-realization; atmavan--conversant with the self; saha--with;
 eva--certainly; agnibhih--fires; atmanam--the personal self; yuyoja--he engaged; parama-atmani--dealing
 with the Supreme Soul.
-<p></p>
+<br>
 <h2>Translation</h2>
 When Saubhari Muni, who was quite conversant with the self, went to the forest, he performed severe
 penances. In this way, in the fire at the time of death, he ultimately engaged himself in the service of the
 Supreme Personality of Godhead.
-<p></p>
+<br>
 <h2>Purport</h2>
 At the time of death, fire burns the gross body, and if there is no more desire for material enjoyment the
 subtle body is also ended, and in this way a pure soul remains. This is confirmed in Bhagavad-gita
@@ -79,7 +118,7 @@ that Saubhari Muni attained that perfect stage.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

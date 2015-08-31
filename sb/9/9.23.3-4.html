@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.23.3-4.html">9.23.3-4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/23">23</a>.3-4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3-4"><b>3-4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-krathasya kuntih putro 'bhud
-vrsnis tasyatha nirvrtih
-tato dasarho namnabhut
-tasya vyomah sutas tatah
-jimuto vikrtis tasya
-yasya bhimarathah sutah
-tato navarathah putro
-jato dasarathas tatah
-<p></p>
+sibir varah krmir daksas
+catvarosinaratmajah
+vrsadarbhah sudhiras ca
+madrah kekaya atmavan
+sibes catvara evasams
+titiksos ca rusadrathah
+tato homo 'tha sutapa
+balih sutapaso 'bhavat
+<br>
 <h2>Synonyms</h2>
-krathasya--of Kratha; kuntih--Kunti; putrah--a son; abhut--was born; vrsnih--Vrsni; tasya--his; atha--
-then; nirvrtih--Nirvrti; tatah--from him; dasarhah--Dasarha; namna--by name; abhut--was born; tasya--of
-him; vyomah--Vyoma; sutah--a son; tatah--from him; jimutah--Jimuta; vikrtih--Vikrti; tasya--his (Jimuta's
-son); yasya--of whom (Vikrti); bhimarathah--Bhimaratha; sutah--a son; tatah--from him (Bhimaratha);
-navarathah--Navaratha; putrah--a son; jatah--was born; dasarathah--Dasaratha; tatah--from him.
-<p></p>
+sibih--Sibi; varah--Vara; krmih--Krmi; daksah--Daksa; catvarah--four; usinara-atmajah--the sons of
+Usinara; vrsadarbhah--Vrsadarbha; sudhirah ca--as well as Sudhira; madrah--Madra; kekayah--Kekaya;
+atmavan--self-realized; sibeh--of Sibi; catvarah--four; eva--indeed; asan--there were; titiksoh--of Titiksu;
+ca--also; rusadrathah--a son named Rusadratha; tatah--from him (Rusadratha); homah--Homa; atha--from
+him (Homa); sutapah--Sutapa; balih--Bali; sutapasah--of Sutapa; abhavat--there was.
+<br>
 <h2>Translation</h2>
-The son of Kratha was Kunti; the son of Kunti, Vrsni; the son of Vrsni, Nirvrti; and the son of Nirvrti,
-Dasarha. From Dasarha came Vyoma; from Vyoma came Jimuta; from Jimuta, Vikrti; from Vikrti,
-Bhimaratha; from Bhimaratha, Navaratha; and from Navaratha, Dasaratha.
+The four sons of Usinara were Sibi, Vara, Krmi and Daksa, and from Sibi again came four sons, named
+Vrsadarbha, Sudhira, Madra and atma-tattva-vit Kekaya. The son of Titiksu was Rusadratha. From
+Rusadratha came Homa; from Homa, Sutapa; and from Sutapa, Bali.
 </p>
 
 </div>
@@ -76,7 +115,7 @@ Bhimaratha; from Bhimaratha, Navaratha; and from Navaratha, Dasaratha.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

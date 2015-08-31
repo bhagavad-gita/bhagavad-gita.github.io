@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,74 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.18.29.html">9.18.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-namas tubhyam bhagavate
-vasudevaya vedhase
-sarva-bhutadhivasaya
-santaya brhate namah
-<p></p>
+pitra datta devayanyai
+sarmistha sanuga tada
+svanam tat sankatam viksya
+tad-arthasya ca gauravam
+devayanim paryacarat
+stri-sahasrena dasavat
+<br>
 <h2>Synonyms</h2>
-namah--I offer my respectful obeisances; tubhyam--unto You; bhagavate--the Supreme Personality of
-Godhead; vasudevaya--Lord Vasudeva; vedhase--the creator of everything; sarva-bhuta-adhivasaya--
-present everywhere (within the heart of every living entity and within the atom also); santaya--peaceful,
-as if completely inactive; brhate--the greatest of all; namah--I offer my respectful obeisances.
-<p></p>
+pitra--by the father; datta--given; devayanyai--unto Devayani, the daughter of Sukracarya; sarmistha--the
+daughter of Vrsaparva; sa-anuga--with her friends; tada--at that time; svanam--of his own; tat--that;
+sankatam--dangerous position; viksya--observing; tat--from him; arthasya--of the benefit; ca--also;
+gauravam--the greatness; devayanim--unto Devayani; paryacarat--served; stri-sahasrena--with thousands
+of other women; dasa-vat--acting as a slave.
+<br>
 <h2>Translation</h2>
-O Lord Vasudeva, O Supreme Personality of Godhead, You are the creator of the entire cosmic
-manifestation. You live as the Supersoul in everyone's heart and are smaller than the smallest, yet You are
-greater than the greatest and are all-pervading. You appear completely silent, having nothing to do, but
-this is due to Your all-pervading nature and Your fullness in all opulences. I therefore offer my respectful
-obeisances unto You.
-<p></p>
+Vrsaparva wisely thought that Sukracarya's displeasure would bring danger and that his pleasure would
+bring material gain. Therefore he carried out Sukracarya's order and served him like a slave. He gave his
+daughter Sarmistha to Devayani, and Sarmistha served Devayani like a slave, along with thousands of
+other women.
+<br>
 <h2>Purport</h2>
-How Devayani became self-realized by the grace of her great husband, Maharaja Yayati, is described
-here. Describing such realization is another way of performing the bhakti process.
-sravanam kirtanam visnoh
-smaranam pada-sevanam
-arcanam vandanam dasyam
-sakhyam atma-nivedanam
-"Hearing and chanting about the transcendental holy name, form, qualities, paraphernalia and pastimes
-of Lord Visnu, remembering them, serving the lotus feet of the Lord, offering the Lord respectful worship,
-offering prayers to the Lord, becoming His servant, considering the Lord one's best friend, and
-surrendering everything unto Him--these nine processes are accepted as pure devotional service." (Bhag.
-7.5.23) sravanam kirtanam, hearing and chanting, are especially important. By hearing from her husband
-about the greatness of Lord Vasudeva, Devayani certainly became convinced and surrendered herself unto
-the lotus feet of the Lord (om namo bhagavate vasudevaya). This is knowledge. Bahunam janmanam ante
-jnanavan mam prapadyate. Surrender to Vasudeva is the result of hearing about Him for many, many
-births. As soon as one surrenders unto Vasudeva, one is liberated immediately. Because of her association
-with her great husband, Maharaja Yayati, Devayani became purified, adopted the means of bhakti-yoga,
-and thus became liberated.
-Thus end the Bhaktivedanta purports of the Ninth Canto, Nineteenth Chapter, of the Srimad-Bhagavatam,
-entitled "King Yayati Achieves Liberation."
-Chapter Twenty
-The Dynasty of Puru
-This chapter describes the history of Puru and his descendant Dusmanta. The son of Puru was
-Janamejaya, and his son was Pracinvan. The sons and grandsons in the line of Pracinvan, one after
-another, were Pravira, Manusyu, Carupada, Sudyu, Bahugava, Samyati, Ahamyati and Raudrasva.
-Raudrasva had ten sons--Rteyu, Kakseyu, Sthandileyu, Krteyuka, Jaleyu, Sannateyu, Dharmeyu, Satyeyu,
-Vrateyu and Vaneyu. The son of Rteyu was Rantinava, who had three sons--Sumati, Dhruva and
-Apratiratha. The son of Apratiratha was Kanva, and Kanva's son was Medhatithi. The sons of Medhatithi,
-headed by Praskanna, were all brahmanas. The son of Rantinava named Sumati had a son named Rebhi,
-and his son was Dusmanta.
-While hunting in the forest, Dusmanta once approached the asrama of Maharsi Kanva, where he saw an
-extremely beautiful woman and became attracted to her. That woman was the daughter of Visvamitra, and
-her name was Sakuntala. Her mother was Menaka, who had left her in the forest, where Kanva Muni
-found her. Kanva Muni brought her to his asrama, where he raised and maintained her. When Sakuntala
-accepted Maharaja Dusmanta as her husband, he married her according to the gandharva-vidhi. Sakuntala
-later became pregnant by her husband, who left her in the asrama of Kanva Muni and returned to his
-kingdom.
-In due course of time, Sakuntala gave birth to a Vaisnava son, but Dusmanta, having returned to the
-capital, forgot what had taken place. Therefore, when Sakuntala approached him with her newly born
-child, Maharaja Dusmanta refused to accept them as his wife and son. Later, however, after a mysterious
-omen, the King accepted them. After Maharaja Dusmanta's death, Bharata, the son of Sakuntala, was
-enthroned. He performed many great sacrifices, in which he gave great riches in charity to the brahmanas.
-This chapter ends by describing the birth of Bharadvaja and how Maharaja Bharata accepted Bharadvaja as
-his son.
+In the beginning of these affairs concerning Sarmistha and Devayani, we saw that Sarmistha had many
+friends. Now these friends became maidservants of Devayani. When a girl married a ksatriya king, it was
+customary for all her girl friends to go with her to her husband's house. For instance, when Vasudeva
+married Devaki, the mother of Krsna, he married all six of her sisters, and she also had many friends who
+accompanied her. A king would maintain not only his wife but also the many friends and maidservants of
+his wife. Some of these maidservants would become pregnant and give birth to children. Such children
+were accepted as dasi-putra, the sons of the maidservants, and the king would maintain them. The female
+population is always greater than the male, but since a woman needs to be protected by a man, the king
+would maintain many girls, who acted either as friends or as maidservants of the queen. In the history of
+Krsna's household life we find that Krsna married 16,108 wives. These were not maidservants but direct
+queens, and Krsna expanded Himself into 16,108 forms to maintain different establishments for each and
+every wife. This is not possible for ordinary men. Therefore although the kings had to maintain many,
+many servants and wives, not all of them had different establishments.
 </p>
 
 </div>
@@ -118,7 +129,7 @@ his son.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

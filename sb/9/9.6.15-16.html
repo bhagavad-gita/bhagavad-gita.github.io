@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.6.15-16.html">9.6.15-16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.15-16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15-16"><b>15-16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa sannaddho dhanur divyam
 adaya visikhan chitan
@@ -57,7 +96,7 @@ tejasapyayito visnoh
 purusasya mahatmanah
 praticyam disi daityanam
 nyarunat tridasaih puram
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--he, Puranjaya; sannaddhah--being well equipped; dhanuh divyam--a first-class or transcendental
 bow; adaya--taking; visikhan--arrows; sitan--very sharp; stuyamanah--being praised very much; tam--him
@@ -65,7 +104,7 @@ bow; adaya--taking; visikhan--arrows; sitan--very sharp; stuyamanah--being prais
 being situated; tejasa--by the power; apyayitah--being favored; visnoh--of Lord Visnu; purusasya--the
 Supreme Person; maha-atmanah--the Supersoul; praticyam--on the western; disi--direction; daityanam--of
 the demons; nyarunat--captured; tridasaih--surrounded by the demigods; puram--the residence.
-<p></p>
+<br>
 <h2>Translation</h2>
 Well protected by armor and desiring to fight, Puranjaya took up a transcendental bow and very sharp
 arrows, and, while being highly praised by the demigods, he got up on the back of the bull [Indra] and sat
@@ -79,7 +118,7 @@ the demigods, he attacked the residence of the demons in the west.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

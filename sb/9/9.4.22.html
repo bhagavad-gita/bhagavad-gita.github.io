@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.4.22.html">9.4.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ije 'svamedhair adhiyajnam isvaram
 maha-vibhutyopacitanga-daksinaih
 tatair vasisthasita-gautamadibhir
 dhanvany abhisrotam asau sarasvatim
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ije--worshiped; asvamedhaih--by performing the horse sacrifice yajnas; adhiyajnam--to satisfy the
 master of all yajnas; isvaram--the Supreme Personality of Godhead; maha-vibhutya--with great opulence;
@@ -61,14 +100,14 @@ upacita-anga-daksinaih--with all prescribed paraphernalia and contributions of d
 tataih--executed; vasistha-asita-gautama-adibhih--by such brahmanas as Vasistha, Asita and Gautama;
 dhanvani--in the desert; abhisrotam--inundated by the water of the river; asau--Maharaja Ambarisa;
 sarasvatim--on the bank of the Sarasvati.
-<p></p>
+<br>
 <h2>Translation</h2>
 In desert countries where there flowed the River Sarasvati, Maharaja Ambarisa performed great sacrifices
 like the asvamedha-yajna and thus satisfied the master of all yajnas, the Supreme Personality of Godhead.
 Such sacrifices were performed with great opulence and suitable paraphernalia and with contributions of
 daksina to the brahmanas, who were supervised by great personalities like Vasistha, Asita and Gautama,
 representing the king, the performer of the sacrifices.
-<p></p>
+<br>
 <h2>Purport</h2>
 When one performs ritualistic sacrifices as prescribed in the Vedas, one needs expert brahmanas known
 as yajnika-brahmanas. In Kali-yuga, however, there is a scarcity of such brahmanas. Therefore in Kaliyuga
@@ -95,7 +134,7 @@ grains are produced even in desert countries, what to speak of elsewhere.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

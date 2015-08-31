@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.5.20.html">9.5.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 prito 'smy anugrhito 'smi
 tava bhagavatasya vai
 darsana-sparsanalapair
 atithyenatma-medhasa
-<p></p>
+<br>
 <h2>Synonyms</h2>
 pritah--very much satisfied; asmi--I am; anugrhitah--very much favored; asmi--I am; tava--your;
 bhagavatasya--because of your being a pure devotee; vai--indeed; darsana--by seeing you; sparsana--and
 touching your feet; alapaih--by talking with you; atithyena--by your hospitality; atma-medhasa--by my
 own intelligence.
-<p></p>
+<br>
 <h2>Translation</h2>
 Durvasa Muni said: I am very pleased with you, my dear King. At first I thought of you as an ordinary
 human being and accepted your hospitality, but later I could understand, by my own intelligence, that
 you are the most exalted devotee of the Lord. Therefore, simply by seeing you, touching your feet and
 talking with you, I have been pleased and have become obliged to you.
-<p></p>
+<br>
 <h2>Purport</h2>
 It is said, vaisnavera kriya mudra vijneha na bujhaya: even a very intelligent man cannot understand the
 activities of a pure Vaisnava. Therefore, because Durvasa Muni was a great mystic yogi, he first mistook
@@ -89,7 +128,7 @@ Supreme Personality of Godhead in terms of his inconceivable activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

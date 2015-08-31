@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.20.27.html">9.20.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yavinaro dvimidhasya
-krtimams tat-sutah smrtah
-namna satyadhrtis tasya
-drdhanemih suparsvakrt
-<p></p>
+trayas-trimsac-chatam hy asvan
+baddhva vismapayan nrpan
+dausmantir atyagan mayam
+devanam gurum ayayau
+<br>
 <h2>Synonyms</h2>
-yavinarah--Yavinara; dvimidhasya--the son of Dvimidha; krtiman--Krtiman; tat-sutah--the son of
-Yavinara; smrtah--is well known; namna--by name; satyadhrtih--Satyadhrti; tasya--of him (Satyadhrti);
-drdhanemih--Drdhanemi; suparsva-krt--the father of Suparsva.
-<p></p>
+trayah--three; trimsat--thirty; satam--hundred; hi--indeed; asvan--horses; baddhva--arresting in the
+yajna; vismapayan--astonishing; nrpan--all other kings; dausmantih--the son of Maharaja Dusmanta;
+atyagat--surpassed; mayam--material opulences; devanam--of the demigods; gurum--the supreme spiritual
+master; ayayau--achieved.
+<br>
 <h2>Translation</h2>
-The son of Dvimidha was Yavinara, whose son was Krtiman. The son of Krtiman was well known as
-Satyadhrti. From Satyadhrti came a son named Drdhanemi, who became the father of Suparsva.
+Bharata, the son of Maharaja Dusmanta, bound thirty-three hundred horses for those sacrifices, and thus
+he astonished all other kings. He surpassed even the opulence of the demigods, for he achieved the
+supreme spiritual master, Hari.
+<br>
+<h2>Purport</h2>
+One who achieves the lotus feet of the Supreme Personality of Godhead certainly surpasses all material
+wealth, even that of the demigods in the heavenly planets. Yam labdhva caparam labham manyate
+nadhikam tatah. The achievement of the lotus feet of the Supreme Personality of Godhead is the most
+exalted achievement in life.
 </p>
 
 </div>
@@ -69,7 +116,7 @@ Satyadhrti. From Satyadhrti came a son named Drdhanemi, who became the father of
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

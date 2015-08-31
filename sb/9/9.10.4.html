@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.10.4.html">9.10.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 gurv-arthe tyakta-rajyo vyacarad anuvanam padma-padbhyam priyayah
 pani-sparsaksamabhyam mrjita-patha-rujo yo harindranujabhyam
 vairupyac churpanakhyah priya-viraha-rusaropita-bhru-vijrmbhatrastabdhir
 baddha-setuh khala-dava-dahanah kosalendro 'vatan nah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 guru-arthe--for the sake of keeping the promise of His father; tyakta-rajyah--giving up the position of
 king; vyacarat--wandered; anuvanam--from one forest to another; padma-padbhyam--by His two lotus
@@ -66,7 +105,7 @@ by separation from His very dear wife; rusa aropita-bhru-vijrmbha--by flickering
 anger; trasta--fearing; abdhih--the ocean; baddha-setuh--one who constructed a bridge over the ocean;
 khala-dava-dahanah--killer of envious persons like Ravana, like a fire devouring a forest; kosala-indrah--
 the King of Ayodhya; avatat--be pleased to protect; nah--us.
-<p></p>
+<br>
 <h2>Translation</h2>
 To keep the promise of His father intact, Lord Ramacandra immediately gave up the position of king
 and, accompanied by His wife, mother Sita, wandered from one forest to another on His lotus feet, which
@@ -85,7 +124,7 @@ protection.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.19.23.html">9.19.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pitary uparate so 'pi
-cakravarti maha-yasah
-mahima giyate tasya
-harer amsa-bhuvo bhuvi
-<p></p>
+bhu-mandalasya sarvasya
+purum arhattamam visam
+abhisicyagrajams tasya
+vase sthapya vanam yayau
+<br>
 <h2>Synonyms</h2>
-pitari--after his father; uparate--passed away; sah--the King's son; api--also; cakravarti--the emperor;
-maha-yasah--very famous; mahima--glories; giyate--are glorified; tasya--his; hareh--of the Supreme
-Personality of Godhead; amsa-bhuvah--a partial representation; bhuvi--upon this earth.
-<p></p>
+bhu-mandalasya--of the entire planet earth; sarvasya--of all wealth and riches; purum--his youngest son,
+Puru; arhat-tamam--the most worshipable person, the king; visam--of the citizens or the subjects of the
+world; abhisicya--crowning on the throne of the emperor; agrajan--all his elder brothers, beginning from
+Yadu; tasya--of Puru; vase--under the control; sthapya--establishing; vanam--in the forest; yayau--he went
+away.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: When Maharaja Dusmanta passed away from this earth, his son became the
-emperor of the world, the proprietor of the seven islands. He is referred to as a partial representation of
-the Supreme Personality of Godhead in this world.
-<p></p>
-<h2>Purport</h2>
-In Bhagavad-gita (10.41) it is said:
-yad yad vibhutimat sattvam
-srimad urjitam eva va
-tat tad evavagaccha tvam
-mama tejo 'msa-sambhavam
-Anyone extraordinarily powerful must be considered a partial representation of the opulence of the
-Supreme Godhead. Therefore when the son of Maharaja Dusmanta became the emperor of the entire
-world, he was celebrated in this way.
+Yayati enthroned his youngest son, Puru, as the emperor of the entire world and the proprietor of all its
+riches, and he placed all the other sons, who were older than Puru, under Puru's control.
 </p>
 
 </div>
@@ -80,7 +110,7 @@ world, he was celebrated in this way.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

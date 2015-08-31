@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.10.6-7.html">9.10.6-7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.6-7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6-7"><b>6-7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yo loka-vira-samitau dhanur aisam ugram
 sita-svayamvara-grhe trisatopanitam
@@ -57,7 +96,7 @@ jitvanurupa-guna-sila-vayo 'nga-rupam
 sitabhidham sriyam urasy abhilabdhamanam
 marge vrajan bhrgupater vyanayat prarudham
 darpam mahim akrta yas trir araja-bijam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yah--Lord Ramacandra who; loka-vira-samitau--in the society or in the midst of many heroes of this
 world; dhanuh--the bow; aisam--of Lord Siva; ugram--very fierce; sita-svayamvara-grhe--in the hall where
@@ -70,7 +109,7 @@ the girl named Sita; sriyam--the goddess of fortune; urasi--on the chest; abhila
 had gotten her previously; marge--on the way; vrajan--while walking; bhrgupateh--of Bhrgupati;
 vyanayat--destroyed; prarudham--rooted very deep; darpam--pride; mahim--the earth; akrta--finished;
 yah--one who; trih--three times (seven); araja--without a royal dynasty; bijam--seed.
-<p></p>
+<br>
 <h2>Translation</h2>
 O King, the pastimes of Lord Ramacandra were wonderful, like those of a baby elephant. In the
 assembly where mother Sita was to choose her husband, in the midst of the heroes of this world, He broke
@@ -89,7 +128,7 @@ a ksatriya of the royal order.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

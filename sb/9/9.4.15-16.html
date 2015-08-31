@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.4.15-16.html">9.4.15-16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.15-16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15-16"><b>15-16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-suka uvaca
 ambariso maha-bhagah
@@ -58,7 +97,7 @@ mene 'tidurlabham pumsam
 sarvam tat svapna-samstutam
 vidvan vibhava-nirvanam
 tamo visati yat puman
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-sukah uvaca--Sri Sukadeva Gosvami said; ambarisah--King Ambarisa; maha-bhagah--the greatly
 fortunate king; sapta-dvipavatim--consisting of seven islands; mahim--the whole world; avyayam ca--and
@@ -67,7 +106,7 @@ bhuvi--in this earth; mene--he decided; ati-durlabham--which is rarely obtained;
 persons; sarvam--everything (he had obtained); tat--that which; svapna-samstutam--as if imagined in a
 dream; vidvan--completely understanding; vibhava-nirvanam--the annihilation of that opulence; tamah--
 ignorance; visati--fallen into; yat--because of which; puman--a person.
-<p></p>
+<br>
 <h2>Translation</h2>
 Sukadeva Gosvami said: Maharaja Ambarisa, the most fortunate personality, achieved the rule of the
 entire world, consisting of seven islands, and achieved inexhaustible, unlimited opulence and prosperity
@@ -75,7 +114,7 @@ on earth. Although such a position is rarely obtained, Maharaja Ambarisa did not
 knew very well that all such opulence is material. Like that which is imagined in a dream, such opulence
 will ultimately be destroyed. The King knew that any nondevotee who attains such opulence merges
 increasingly into material nature's mode of darkness.
-<p></p>
+<br>
 <h2>Purport</h2>
 For a devotee material opulence is insignificant, whereas for a nondevotee material opulence is the
 cause of increasing bondage, for a devotee knows that anything material is temporary, whereas a
@@ -88,7 +127,7 @@ Thus for the nondevotee material opulence is a disqualification for spiritual ad
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

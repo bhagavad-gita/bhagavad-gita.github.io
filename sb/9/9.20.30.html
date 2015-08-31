@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.20.30.html">9.20.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato bahuratho nama
-purumidho 'prajo 'bhavat
-nalinyam ajamidhasya
-nilah santis tu tat-sutah
-<p></p>
+kirata-hunan yavanan
+paundran kankan khasan chakan
+abrahmanya-nrpams cahan
+mlecchan dig-vijaye 'khilan
+<br>
 <h2>Synonyms</h2>
-tatah--from him (Ripunjaya); bahurathah--Bahuratha; nama--named; purumidhah--Purumidha, the
-younger brother of Dvimidha; aprajah--sonless; abhavat--became; nalinyam--through Nalini;
-ajamidhasya--of Ajamidha; nilah--Nila; santih--Santi; tu--then; tat-sutah--the son of Nila.
-<p></p>
+kirata--the black people called Kiratas (mostly the Africans); hunan--the Huns, the tribes from the far
+north; yavanan--the meat-eaters; paundran--the Paundras; kankan--the Kankas; khasan--the Mongolians;
+sakan--the Sakas; abrahmanya--against the brahminical culture; nrpan--kings; ca--and; ahan--he killed;
+mlecchan--such atheists, who had no respect for Vedic civilization; dik-vijaye--while conquering all
+directions; akhilan--all of them.
+<br>
 <h2>Translation</h2>
-From Ripunjaya came a son named Bahuratha. Purumidha was sonless. Ajamidha had a son named Nila
-by his wife known as Nalini, and the son of Nila was Santi.
+When Maharaja Bharata was on tour, he defeated or killed all the Kiratas, Hunas, Yavanas, Paundras,
+Kankas, Khasas, Sakas and the kings who were opposed to the Vedic principles of brahminical culture.
 </p>
 
 </div>
@@ -69,7 +110,7 @@ by his wife known as Nalini, and the son of Nila was Santi.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

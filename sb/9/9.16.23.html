@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.16.23.html">9.16.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tatas cavabhrtha-snanavidhutasesa-
 kilbisah
 sarasvatyam maha-nadyam
 reje vyabbhra ivamsuman
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tatah--thereafter; ca--also; avabhrtha-snana--by bathing after finishing the sacrifice; vidhuta--cleansed;
 asesa--unlimited; kilbisah--whose reactions of sinful activities; sarasvatyam--on the bank of the great river
 Sarasvati; maha-nadyam--one of the biggest rivers in India; reje--Lord Parasurama appeared; vyabbhrah--
 cloudless; iva amsuman--like the sun.
-<p></p>
+<br>
 <h2>Translation</h2>
 Thereafter, having completed the ritualistic sacrificial ceremonies, Lord Parasurama took the bath
 known as the avabhrtha-snana. Standing on the bank of the great river Sarasvati, cleared of all sins, Lord
 Parasurama appeared like the sun in a clear, cloudless sky.
-<p></p>
+<br>
 <h2>Purport</h2>
 As stated in Bhagavad-gita (3.9), yajnarthat karmano 'nyatra loko 'yam karma-bandhanah: "Work done
 as a sacrifice for Visnu has to be performed, otherwise work binds one to this material world." Karmabandhanah
@@ -89,7 +128,7 @@ compulsory that one take to Krsna consciousness and chant the Hare Krsna maha-ma
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

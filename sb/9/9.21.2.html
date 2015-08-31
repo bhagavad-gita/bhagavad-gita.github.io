@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.21.2.html">9.21.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tasya putra-satam tesam
-yaviyan prsatah sutah
-sa tasmad drupado jajne
-sarva-sampat-samanvitah
-<p></p>
+gurus ca rantidevas ca
+sankrteh pandu-nandana
+rantidevasya mahima
+ihamutra ca giyate
+<br>
 <h2>Synonyms</h2>
-tasya--of him (Somaka); putra-satam--one hundred sons; tesam--of all of them; yaviyan--the youngest;
-prsatah--Prsata; sutah--the son; sah--he; tasmat--from him (Prsata); drupadah--Drupada; jajne--was born;
-sarva-sampat--with all opulences; samanvitah--decorated.
-<p></p>
+guruh--a son named Guru; ca--and; rantidevah ca--and a son named Rantideva; sankrteh--from Sankrti;
+pandu-nandana--O Maharaja Pariksit, descendant of Pandu; rantidevasya--of Rantideva; mahima--the
+glories; iha--in this world; amutra--and in the next world; ca--also; giyate--are glorified.
+<br>
 <h2>Translation</h2>
-Somaka had one hundred sons, of whom the youngest was Prsata. From Prsata was born King Drupada,
-who was opulent in all supremacy.
+O Maharaja Pariksit, descendant of Pandu, Sankrti had two sons, named Guru and Rantideva. Rantideva
+is famous in both this world and the next, for he is glorified not only in human society but also in the
+society of the demigods.
 </p>
 
 </div>
@@ -69,7 +109,7 @@ who was opulent in all supremacy.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

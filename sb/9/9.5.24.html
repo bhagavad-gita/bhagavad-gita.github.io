@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.5.24.html">9.5.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 gate 'tha durvasasi so 'mbariso
 dvijopayogatipavitram aharat
 rser vimoksam vyasanam ca viksya
 mene sva-viryam ca paranubhavam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 gate--on his return; atha--then; durvasasi--the great mystic yogi Durvasa; sah--he, the King; ambarisah--
 Maharaja Ambarisa; dvija-upayoga--most suitable for a pure brahmana; ati-pavitram--very pure food;
@@ -61,13 +100,13 @@ aharat--gave him to eat and he also ate; rseh--of the great sage; vimoksam--rele
 great danger of being burned by the Sudarsana cakra; ca--and; viksya--seeing; mene--considered; svaviryam--
 about his own power; ca--also; para-anubhavam--because of his pure devotion to the Supreme
 Lord.
-<p></p>
+<br>
 <h2>Translation</h2>
 After one year, when Durvasa Muni had returned, King Ambarisa sumptuously fed him all varieties of
 pure food, and then he himself also ate. When the King saw that the brahmana Durvasa had been released
 from the great danger of being burned, he could understand that by the grace of the Lord he himself was
 also powerful, but he did not take any credit, for everything had been done by the Lord.
-<p></p>
+<br>
 <h2>Purport</h2>
 A devotee like Maharaja Ambarisa is certainly always busy in many activities. Of course, this material
 world is full of dangers that one has to meet, but a devotee, because of his full dependence on the
@@ -94,7 +133,7 @@ is the topmost yogi, as proved in the dealings of Maharaja Ambarisa with Durvasa
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

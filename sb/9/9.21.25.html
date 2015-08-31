@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.21.25.html">9.21.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/21">21</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ksetre 'prajasya vai bhratur
-matrokto badarayanah
-dhrtarastram ca pandum ca
-viduram capy ajijanat
-<p></p>
+sa krtvyam suka-kanyayam
+brahmadattam ajijanat
+yogi sa gavi bharyayam
+visvaksenam adhat sutam
+<br>
 <h2>Synonyms</h2>
-ksetre--in the wives and maidservant; aprajasya--of Vicitravirya, who had no progeny; vai--indeed;
-bhratuh--of the brother; matra uktah--being ordered by the mother; badarayanah--Vedavyasa;
-dhrtarastram--a son named Dhrtarastra; ca--and; pandum--a son named Pandu; ca--also; viduram--a son
-named Vidura; ca--also; api--indeed; ajijanat--begot.
-<p></p>
+sah--he (King Nipa); krtvyam--in his wife, Krtvi; suka-kanyayam--who was the daughter of Suka;
+brahmadattam--a son named Brahmadatta; ajijanat--begot; yogi--a mystic yogi; sah--that Brahmadatta;
+gavi--by the name Gau or Sarasvati; bharyayam--in the womb of his wife; visvaksenam--Visvaksena;
+adhat--begot; sutam--a son.
+<br>
 <h2>Translation</h2>
-Badarayana, Sri Vyasadeva, following the order of his mother, Satyavati, begot three sons, two by the
-womb of Ambika and Ambalika, the two wives of his brother Vicitravirya, and the third by Vicitravirya's
-maidservant. These sons were Dhrtarastra, Pandu and Vidura.
-<p></p>
+King Nipa begot a son named Brahmadatta through the womb of his wife, Krtvi, who was the daughter
+of Suka. And Brahmadatta, who was a great yogi, begot a son named Visvaksena through the womb of his
+wife, Sarasvati.
+<br>
 <h2>Purport</h2>
-Vicitravirya died of tuberculosis, and his wives, Ambika and Ambalika, had no issue. Therefore, after
-Vicitravirya's death, his mother, Satyavati, who was also the mother of Vyasadeva, asked Vyasadeva to
-beget children through the wives of Vicitravirya. In those days, the brother of the husband could beget
-children through the womb of his sister-in-law. This was known as devarena sutotpatti. If the husband
-was somehow unable to beget children, his brother could do so through the womb of his sister-in-law.
-This devarena sutotpatti and the sacrifices of asvamedha and gomedha are forbidden in the age of Kali.
-asvamedham gavalambham
-sannyasam pala-paitrkam
-devarena sutotpattim
-kalau panca vivarjayet
-"In this age of Kali, five acts are forbidden: the offering of a horse in sacrifice, the offering of a cow in
-sacrifice, the acceptance of the order of sannyasa, the offering of oblations of flesh to the forefathers, and a
-man's begetting children in his brother's wife." (Brahma-vaivarta Purana).
+The Suka mentioned here is different from the Sukadeva Gosvami who spoke Srimad-Bhagavatam.
+Sukadeva Gosvami, the son of Vyasadeva, is described in great detail in the Brahma-vaivarta purana.
+There it is said that Vyasadeva maintained the daughter of Jabali as his wife and that after they performed
+penances together for many years, he placed his seed in her womb. The child remained in the womb of his
+mother for twelve years, and when the father asked the son to come out, the son replied that he would not
+come out unless he were completely liberated from the influence of maya. Vyasadeva then assured the
+child that he would not be influenced by maya, but the child did not believe his father, for the father was
+still attached to his wife and children. Vyasadeva then went to Dvaraka and informed the Personality of
+Godhead about his problem, and the Personality of Godhead, at Vyasadeva's request, went to Vyasadeva's
+cottage, where He assured the child in the womb that he would not be influenced by maya. Thus assured,
+the child came out, but he immediately went away as a parivrajakacarya. When the father, very much
+aggrieved, began to follow his saintly boy, Sukadeva Gosvami, the boy created a duplicate Sukadeva, who
+later entered family life. Therefore, the suka-kanya, or daughter of Sukadeva, mentioned in this verse is
+the daughter of the duplicate or imitation Sukadeva. The original Sukadeva was a lifelong brahmacari.
 </p>
 
 </div>
@@ -86,7 +126,7 @@ man's begetting children in his brother's wife." (Brahma-vaivarta Purana).
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

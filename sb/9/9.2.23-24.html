@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.2.23-24.html">9.2.23-24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.23-24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23-24"><b>23-24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 nabhago dista-putro 'nyah
 karmana vaisyatam gatah
@@ -57,7 +96,7 @@ vatsapriteh sutah pramsus
 tat-sutam pramatim viduh
 khanitrah pramates tasmac
 caksuso 'tha vivimsatih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 nabhagah--by the name Nabhaga; dista-putrah--the son of Dista; anyah--another; karmana--by
 occupation; vaisyatam--the order of the vaisyas; gatah--achieved; bhalandanah--by the name Bhalandana;
@@ -66,13 +105,13 @@ vatsapriteh--from Vatsapriti; sutah--the son; pramsuh--was named Pramsu; tat-sut
 (Pramsu); pramatim--was named Pramati; viduh--you should understand; khanitrah--was named
 Khanitra; pramateh--from Pramati; tasmat--from him (Khanitra); caksusah--was named Caksusa; atha--
 thus (from Caksusa); vivimsatih--the son named Vivimsati.
-<p></p>
+<br>
 <h2>Translation</h2>
 Dista had a son by the name Nabhaga. This Nabhaga, who was different from the Nabhaga described
 later, became a vaisya by occupational duty. The son of Nabhaga was known as Bhalandana, the son of
 Bhalandana was Vatsapriti, and his son was Pramsu. Pramsu's son was Pramati, Pramati's son was
 Khanitra, Khanitra's son was Caksusa, and his son was Vivimsati.
-<p></p>
+<br>
 <h2>Purport</h2>
 From Manu, one son became a ksatriya, another a brahmana, and another a vaisya. This confirms the
 statement by Narada Muni, yasya yal laksanam proktam pumso varnabhivyanjakam (Bhag. 7.11.35). One
@@ -92,7 +131,7 @@ achieve perfection in life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

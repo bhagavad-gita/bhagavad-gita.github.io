@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.20.21.html">9.20.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/20">20</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ajamidho dvimidhas ca
-purumidhas ca hastinah
-ajamidhasya vamsyah syuh
-priyamedhadayo dvijah
-<p></p>
+mata bhastra pituh putro
+yena jatah sa eva sah
+bharasva putram dusmanta
+mavamamsthah sakuntalam
+<br>
 <h2>Synonyms</h2>
-ajamidhah--Ajamidha; dvimidhah--Dvimidha; ca--also; purumidhah--Purumidha; ca--also; hastinah--
-became the sons of Hasti; ajamidhasya--of Ajamidha; vamsyah--descendants; syuh--are; priyamedhaadayah--
-headed by Priyamedha; dvijah--brahmanas.
-<p></p>
+mata--the mother; bhastra--just like the skin of a bellows containing air; pituh--of the father; putrah--
+the son; yena--by whom; jatah--one is born; sah--the father; eva--indeed; sah--the son; bharasva--just
+maintain; putram--your son; dusmanta--O Maharaja Dusmanta; ma--do not; avamamsthah--insult;
+sakuntalam--Sakuntala.
+<br>
 <h2>Translation</h2>
-From King Hasti came three sons, named Ajamidha, Dvimidha and Purumidha. The descendants of
-Ajamidha, headed by Priyamedha, all achieved the position of brahmanas.
-<p></p>
+The voice said: O Maharaja Dusmanta, a son actually belongs to his father, whereas the mother is only a
+container, like the skin of a bellows. According to Vedic injunctions, the father is born as the son.
+Therefore, maintain your own son and do not insult Sakuntala.
+<br>
 <h2>Purport</h2>
-This verse gives evidence confirming the statement of Bhagavad-gita that the orders of society--
-brahmana, ksatriya, vaisya and sudra--are calculated in terms of qualities and activities (guna-karmavibhagasah).
-All the descendants of Ajamidha, who was a ksatriya, became brahmanas. This was certainly
-because of their qualities and activities. Similarly, sometimes the sons of brahmanas or ksatriyas become
-vaisyas (brahmana-vaisyatam gatah). When a ksatriya or brahmana adopts the occupation or duty of a
-vaisya (krsi-go-raksya-vanijyam), he is certainly counted as a vaisya. On the other hand, if one is born a
-vaisya, by his activities he can become a brahmana. This is confirmed by Narada Muni. Yasya yallaksanam
-proktam. The members of the varnas, or social orders--brahmana, ksatriya, vaisya and sudra--
-must be ascertained by their symptoms, not by birth. Birth is immaterial; quality is essential.
+According to the Vedic injunction atma vai putra-namasi, the father becomes the son. The mother is
+simply like a storekeeper, because the seed of the child is placed in her womb, but it is the father who is
+responsible for maintaining the son. In Bhagavad-gita the Lord says that He is the seed-giving father of all
+living entities (aham bija-pradah pita), and therefore He is responsible for maintaining them. This is also
+confirmed in the Vedas. Eko bahunam yo vidadhati kaman: although God is one, He maintains all living
+entities with their necessities for life. The living entities in different forms are sons of the Lord, and
+therefore the father, the Supreme Lord, supplies them food according to their different bodies. The small
+ant is supplied a grain of sugar, and the elephant is supplied tons of food, but everyone is able to eat.
+Therefore there is no question of overpopulation. Because the father, Krsna, is fully opulent, there is no
+scarcity of food, and because there is no scarcity, the propaganda of overpopulation is only a myth.
+Actually one suffers for want of food when material nature, under the order of the father, refuses to
+supply him food. It is the living entity's position that determines whether food will be supplied or not.
+When a diseased person is forbidden to eat, this does not mean that there is a scarcity of food; rather, the
+diseased person requires the treatment of not being supplied with food. In Bhagavad-gita (7.10) the Lord
+also says, bijam mam sama-bhutanam: "I am the seed of all living entities." A particular type of seed is
+sown within the earth, and then a particular type of tree or plant comes out. The mother resembles the
+earth, and when a particular type of seed is sown by the father, a particular type of body takes birth.
 </p>
 
 </div>
@@ -80,7 +129,7 @@ must be ascertained by their symptoms, not by birth. Birth is immaterial; qualit
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

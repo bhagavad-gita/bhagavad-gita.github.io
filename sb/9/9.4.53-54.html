@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.4.53-54.html">9.4.53-54</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.53-54</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/53-54"><b>53-54</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-brahmovaca
 sthanam madiyam saha-visvam etat
@@ -58,7 +97,7 @@ aham bhavo daksa-bhrgu-pradhanah
 prajesa-bhutesa-suresa-mukhyah
 sarve vayam yan-niyamam prapanna
 murdhnyarpitam loka-hitam vahamah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-brahma uvaca--Lord Brahma said; sthanam--the place where I am; madiyam--my residence,
 Brahmaloka; saha--with; visvam--the whole universe; etat--this; krida-avasane--at the end of the period for
@@ -71,7 +110,7 @@ the controllers of the prajas; bhuta-isa--the controllers of the living entities
 demigods; mukhyah--headed by them; sarve--all of them; vayam--we also; yat-niyamam--whose regulative
 principle; prapannah--are surrendered; murdhnya arpitam--bowing our heads; loka-hitam--for the benefit
 of all living entities; vahamah--carry out the orders ruling over the living entities.
-<p></p>
+<br>
 <h2>Translation</h2>
 Lord Brahma said: At the end of the dvi-parardha, when the pastimes of the Lord come to an end, Lord
 Visnu, by a flick of His eyebrows, vanquishes the entire universe, including our places of residence. Such
@@ -79,7 +118,7 @@ personalities as me and Lord Siva, as well as Daksa, Bhrgu and similar great sai
 head, and also the rulers of the living entities, the rulers of human society and the rulers of the
 demigods--all of us surrender to that Supreme Personality of Godhead, Lord Visnu, bowing our heads, to
 carry out His orders for the benefit of all living entities.
-<p></p>
+<br>
 <h2>Purport</h2>
 In Bhagavad-gita (10.34) it is said, mrtyuh sama-haras caham: when the Supreme Personality of
 Godhead approaches as death, or the supreme controller of time, He takes everything away. In other
@@ -94,7 +133,7 @@ Sudarsana cakra sent by the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

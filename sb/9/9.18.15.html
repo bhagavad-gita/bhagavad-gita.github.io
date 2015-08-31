@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.18.15.html">9.18.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/18">18</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yada na kurute bhavam
-sarva-bhutesv amangalam
-sama-drstes tada pumsah
-sarvah sukhamaya disah
-<p></p>
+evam ksipantim sarmistha
+guru-putrim abhasata
+rusa svasanty urangiva
+dharsita dasta-dacchada
+<br>
 <h2>Synonyms</h2>
-yada--when; na--not; kurute--does; bhavam--a different attitude of attachment or envy; sarva-bhutesu--
-to all living entities; amangalam--inauspicious; sama-drsteh--because of being equipoised; tada--at that
-time; pumsah--of the person; sarvah--all; sukha-mayah--in a happy condition; disah--directions.
-<p></p>
+evam--thus; ksipantim--chastising; sarmistha--the daughter of Vrsaparva; guru-putrim--unto the
+daughter of the guru, Sukracarya; abhasata--said; rusa--being very angry; svasanti--breathing very heavily;
+urangi iva--like a serpent; dharsita--offended, trampled; dasta-dat-chada--biting her lip with her teeth.
+<br>
 <h2>Translation</h2>
-When a man is nonenvious and does not desire ill fortune for anyone, he is equipoised. For such a
-person, all directions appear happy.
-<p></p>
-<h2>Purport</h2>
-Prabodhananda Sarasvati said, visvam purna-sukhayate: when one becomes Krsna conscious by the
-mercy of Lord Caitanya, for him the entire world appears happy, and he has nothing for which to hanker.
-On the brahma-bhuta stage, or the platform of spiritual realization, there is no lamentation and no
-material hankering (na socati na kanksati). As long as one lives in the material world, actions and
-reactions will continue, but when one is unaffected by such material actions and reactions, he is to be
-considered free from the danger of being victimized by material desires. The symptoms of those who are
-satiated with lusty desires are described in this verse. As explained by Srila Visvanatha Cakravarti
-Thakura, when one is not envious even of his enemy, does not expect honor from anyone, but instead
-desires all well-being even for his enemy, he is understood to be a paramahamsa, one who has fully
-subdued the lusty desires for sense gratification.
+Sukadeva Gosvami said: When thus rebuked in cruel words, Sarmistha was very angry. Breathing
+heavily like a serpent and biting her lower lip with her teeth, she spoke to the daughter of Sukracarya as
+follows.
 </p>
 
 </div>
@@ -81,7 +109,7 @@ subdued the lusty desires for sense gratification.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.19.18.html">9.19.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kanvah kumarasya vane
-cakre samucitah kriyah
-baddhva mrgendram tarasa
-kridati sma sa balakah
-<p></p>
+purnam varsa-sahasram me
+visayan sevato 'sakrt
+tathapi canusavanam
+trsna tesupajayate
+<br>
 <h2>Synonyms</h2>
-kanvah--Kanva Muni; kumarasya--of the son born of Sakuntala; vane--in the forest; cakre--executed;
-samucitah--prescribed; kriyah--ritualistic ceremonies; baddhva--capturing; mrga-indram--a lion; tarasa--
-by force; kridati--playing; sma--in the past; sah--he; balakah--the child.
-<p></p>
+purnam--completely; varsa-sahasram--one thousand years; me--my; visayan--sense gratification;
+sevatah--enjoying; asakrt--without cessation, continuously; tatha api--still; ca--indeed; anusavanam--more
+and more; trsna--lusty desires; tesu--in sense gratification; upajayate--are increased.
+<br>
 <h2>Translation</h2>
-In the forest, Kanva Muni performed all the ritualistic ceremonies concerning the newborn child. Later,
-the boy became so powerful that he would capture a lion and play with it.
+I have spent a full one thousand years enjoying sense gratification, yet my desire to enjoy such pleasure
+increases daily.
+<br>
+<h2>Purport</h2>
+Maharaja Yayati is explaining, in terms of his actual experience, how strong are sexual desires, even in
+old age.
 </p>
 
 </div>
@@ -69,7 +112,7 @@ the boy became so powerful that he would capture a lion and play with it.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

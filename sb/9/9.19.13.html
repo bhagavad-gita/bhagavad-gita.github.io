@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.19.13.html">9.19.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-sakuntalovaca
-visvamitratmajaivaham
-tyakta menakaya vane
-vedaitad bhagavan kanvo
-vira kim karavama te
-<p></p>
+yat prthivyam vrihi-yavam
+hiranyam pasavah striyah
+na duhyanti manah-pritim
+pumsah kama-hatasya te
+<br>
 <h2>Synonyms</h2>
-sri-sakuntala uvaca--Sri Sakuntala replied; visvamitra-atmaja--the daughter of Visvamitra; eva--indeed;
-aham--I (am); tyakta--left; menakaya--by Menaka; vane--in the forest; veda--knows; etat--all these
-incidents; bhagavan--the most powerful saintly person; kanvah--Kanva Muni; vira--O hero; kim--what;
-karavama--can I do; te--for you.
-<p></p>
+yat--what; prthivyam--within this world; vrihi--food grains, rice; yavam--barley; hiranyam--gold;
+pasavah--animals; striyah--wives or other women; na duhyanti--do not give; manah-pritim--satisfaction of
+the mind; pumsah--to a person; kama-hatasya--because of being victimized by lusty desires; te--they.
+<br>
 <h2>Translation</h2>
-Sakuntala said: I am the daughter of Visvamitra. My mother, Menaka, left me in the forest. O hero, the
-most powerful saint Kanva Muni knows all about this. Now let me know, how may I serve you?
-<p></p>
+A person who is lusty cannot satisfy his mind even if he has enough of everything in this world,
+including rice, barley and other food grains, gold, animals and women. Nothing can satisfy him.
+<br>
 <h2>Purport</h2>
-Sakuntala informed Maharaja Dusmanta that although she never saw or knew her father or mother,
-Kanva Muni knew everything about her, and she had heard from him that she was the daughter of
-Visvamitra and that her mother was Menaka, who had left her in the forest.
+Improvement of one's economic condition is the aim and object of a materialist, but there is no end to
+this material advancement, for if one cannot control his lusty desires, he will never be pleased, even if he
+gets all the material wealth of the world. In this age we see much material improvement, but still people
+are struggling to get more and more material opulence. Manah sasthanindriyani prakrti-sthani karsati.
+Although every living entity is a part of the Supreme Being, because of lusty desires one continuously
+struggles for so-called betterment of one's economic condition. To have a satisfied mind, one must give up
+his heart disease of lusty desires. This can be done only when one is Krsna conscious.
+bhaktim param bhagavati pratilabhya kamam
+hrd-rogam asv apahinoty acirena dhirah
+(Bhag. 10.33.39)
+If one becomes Krsna conscious, then he can give up this heart disease; otherwise this disease of lusty
+desires will continue, and one cannot have peace in his mind.
 </p>
 
 </div>
@@ -76,7 +122,7 @@ Visvamitra and that her mother was Menaka, who had left her in the forest.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

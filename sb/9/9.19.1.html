@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/9/9.19.1.html">9.19.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/19">19</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-badarayanir uvaca
-puror vamsam pravaksyami
-yatra jato 'si bharata
-yatra rajarsayo vamsya
-brahma-vamsyas ca jajnire
-<p></p>
+sri-suka uvaca
+sa ittham acaran kaman
+straino 'pahnavam atmanah
+buddhva priyayai nirvinno
+gatham etam agayata
+<br>
 <h2>Synonyms</h2>
-sri-badarayanih uvaca--Sri Sukadeva Gosvami said; puroh vamsam--the dynasty of Maharaja Puru;
-pravaksyami--now I shall narrate; yatra--in which dynasty; jatah asi--you were born; bharata--O Maharaja
-Pariksit, descendant of Maharaja Bharata; yatra--in which dynasty; raja-rsayah--all the kings were saintly;
-vamsyah--one after another; brahma-vamsyah--many brahmana dynasties; ca--also; jajnire--grew up.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; sah--Maharaja Yayati; ittham--in this way; acaran--
+behaving; kaman--in regard to lusty desires; strainah--very much attached to woman; apahnavam--
+counteraction; atmanah--of his own welfare; buddhva--understanding with intelligence; priyayai--unto his
+beloved wife, Devayani; nirvinnah--disgusted; gatham--story; etam--this (as follows); agayata--narrated.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: O Maharaja Pariksit, descendant of Maharaja Bharata, I shall now describe the
-dynasty of Puru, in which you were born, in which many saintly kings appeared, and from which many
-dynasties of brahmanas began.
-<p></p>
-<h2>Purport</h2>
-There are many historical instances by which we can understand that from ksatriyas many brahmanas
-have been born and that from brahmanas many ksatriyas have been born. The Lord Himself says in
-Bhagavad-gita (4.13), catur-varnyam maya srstam guna-karma-vibhagasah: "According to the three modes
-of material nature and the work ascribed to them, the four divisions of human society were created by
-Me." Therefore, regardless of the family in which one takes birth, when one is qualified with the
-symptoms of a particular section, he is to be described accordingly. Yal-laksanam proktam. One's place in
-the varna divisions of society is determined according to one's symptoms or qualities. This is maintained
-everywhere in the sastra. Birth is a secondary consideration; the first consideration is one's qualities and
-activities.
+Sukadeva Gosvami said: O Maharaja Pariksit, Yayati was very much attached to woman. In due course
+of time, however, when disgusted with sexual enjoyment and its bad effects, he renounced this way of life
+and narrated the following story to his beloved wife.
 </p>
 
 </div>
@@ -83,7 +111,7 @@ activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
