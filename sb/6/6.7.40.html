@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,71 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.40.html">6.7.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tri-bhuvanatma-bhavana trivikrama tri-nayana tri-loka-manoharanubhava tavaiva vibhutayo ditijadanujadayas
-capi tesam upakrama-samayo 'yam iti svatma-mayaya sura-nara-mrga-misrita-jalacarakrtibhir
-yathaparadham dandam danda-dhara dadhartha evam enam api bhagavan jahi tvastram uta yadi manyase.
-<p></p>
+yaya guptah sahasrakso
+jigye 'sura-camur vibhuh
+tam praha sa mahendraya
+visvarupa udara-dhih
+<br>
 <h2>Synonyms</h2>
-tri-bhuvana-atma-bhavana--O Lord, You are the shelter of the three worlds because You are the
-Supersoul of the three worlds; tri-vikrama--O Lord, who assumes the form of Vamana, Your power and
-opulence are distributed throughout the three worlds; tri-nayana--O maintainer and seer of the three
-worlds; tri-loka-manohara-anubhava--O You who are perceived as the most beautiful within the three
-worlds; tava--of You; eva--certainly; vibhutayah--the expansions of energy; diti-ja-danu-ja-adayah--the
-demoniac sons of Diti, and the Danavas, another type of demon; ca--and; api--also (the human beings);
-tesam--of all of them; upakrama-samayah--the time of enterprise; ayam--this; iti--thus; sva-atma-mayaya--
-by Your own energy; sura-nara-mrga-misrita-jalacara-akrtibhih--with different forms like those of the
-demigods, human beings, animals, mixtures and aquatics (the incarnations Vamana, Lord Ramacandra,
-Krsna, Varaha, Hayagriva, Nrsimha, Matsya and Kurma); yatha-aparadham--according to their offenses;
-dandam--punishment; danda-dhara--O supreme chastiser; dadhartha--You awarded; evam--thus; enam--
-this one (Vrtrasura); api--also; bhagavan--O Supreme Personality of Godhead; jahi--kill; tvastram--the son
-of Tvasta; uta--indeed; yadi manyase--if You think it proper.
-<p></p>
+yaya--by which; guptah--protected; sahasra-aksah--the thousand-eyed demigod, Indra; jigye--conquered;
+asura--of the demons; camuh--military power; vibhuh--becoming very powerful; tam--that; praha--spoke;
+sah--he; mahendraya--unto the King of heaven, Mahendra; visvarupah--Visvarupa; udara-dhih--very
+broad-minded.
+<br>
 <h2>Translation</h2>
-O Lord, O personified three worlds, father of the three worlds! O strength of the three worlds, in the
-form of the Vamana incarnation! O three-eyed form of Nrsimhadeva! O most beautiful person within the
-three worlds! Everything and everyone, including human beings and even the Daitya demons and the
-Danavas, is but an expansion of Your energy. O supremely powerful one, You have always appeared in
-Your forms as the various incarnations to punish the demons as soon as they become very powerful. You
-appear as Lord Vamanadeva, Lord Rama and Lord Krsna. You appear sometimes as an animal like Lord
-Boar, sometimes a mixed incarnation like Lord Nrsimhadeva and Lord Hayagriva, and sometimes an
-aquatic like Lord Fish and Lord Tortoise. Assuming such various forms, You have always punished the
-demons and Danavas. We therefore pray that Your Lordship appear today as another incarnation, if You
-so desire, to kill the great demon Vrtrasura.
-<p></p>
-<h2>Purport</h2>
-There are two kinds of devotees, known as sakama and akama. Pure devotees are akama, whereas
-devotees in the upper planetary systems, such as the demigods, are called sakama because they still want
-to enjoy material opulence. Because of their pious activities, the sakama devotees are promoted to the
-higher planetary systems, but at heart they still desire to lord it over the material resources. The sakama
-devotees are sometimes disturbed by the demons and Raksasas, but the Lord is so kind that He always
-saves them by appearing as an incarnation. The Lord's incarnations are so powerful that Lord Vamanadeva
-covered the entire universe with two steps and therefore had no place for His third step. The Lord is
-called Trivikrama because He showed His strength by delivering the entire universe with merely three
-steps.
-The difference between sakama and akama devotees is that when sakama devotees, like the demigods,
-fall into difficulty, they approach the Supreme Personality of Godhead for relief, whereas akama devotees,
-even in the greatest danger, never disturb the Lord for material benefits. Even if an akama devotee is
-suffering, he thinks this is due to his past impious activities and agrees to suffer the consequences. He
-never disturbs the Lord. Sakama devotees immediately pray to the Lord as soon as they are in difficulty,
-but they are regarded as pious because they consider themselves fully dependent on the mercy of the
-Lord. As stated in Srimad-Bhagavatam (10.14.8):
-tat te 'nukampam susamiksamano
-bhunjana evatma-krtam vipakam
-hrd-vag-vapurbhir vidadhan namas te
-jiveta yo mukti-pade sa daya-bhak
-Even while suffering in the midst of difficulties, devotees simply offer their prayers and service more
-enthusiastically. In this way they become firmly fixed in devotional service and eligible to return home,
-back to Godhead, without a doubt. Sakama devotees, of course, achieve from the Lord the results they
-desire from their prayers, but they do not immediately become fit to return to Godhead. It is to be noted
-herein that Lord Visnu, in His various incarnations, is always the protector of His devotees. Srila
-Madhvacarya says: vividham bhava-patratvat sarve visnor vibhutayah. Krsna is the original Personality of
-Godhead (krsnas tu bhagavan svayam). All the other incarnations proceed from Lord Visnu.
+Visvarupa, who was most liberal, spoke to King Indra [Sahasraksa] the secret hymn that protected Indra
+and conquered the military power of the demons.
+Thus end the Bhaktivedanta purports to the Sixth Canto, Seventh Chapter, of the Srimad-Bhagavatam,
+entitled "Indra Offends His Spiritual Master, Brhaspati."
+Chapter Eight
+The Narayana-kavaca Shield
+This chapter describes how Indra, the King of heaven, was victorious over the soldiers of the demons,
+and it also describes the shield of the Visnu mantra.
+To take protection from this shield, one must first touch kusa grass and wash one's mouth with
+acamana-mantras. One should observe silence and then place the eight-syllable Visnu mantra on the parts
+of his body and place the twelve-syllable mantra on his hands. The eight-syllable mantra is om namo
+narayanaya. This mantra should be distributed all over the front and back of the body. The twelve-syllable
+mantra, which begins with the pranava, omkara, is om namo bhagavate vasudevaya. One syllable should
+be placed on each of the fingers and should be preceded by the pranava, omkara. Thereafter, one must
+chant om visnave namah, which is a six-syllable mantra. One must progressively place the syllables of the
+mantra on the heart, the head, between the two eyebrows, on the sikha and between the eyes, and then
+one should chant mah astraya phat and with this mantra protect himself from all directions. Nadevo
+devam arcayet: one who has not risen to the level of a deva cannot chant this mantra. According to this
+direction of the sastra, one must think himself qualitatively nondifferent from the Supreme.
+After finishing this dedication, one must offer a prayer to the eight-armed Lord Visnu, who sits on the
+shoulders of Garudadeva. One also has to think of the fish incarnation, Vamana, Kurma, Nrsimha,
+Varaha. Parasurama, Ramacandra (the elder brother of Laksmana). Nara-Narayana, Dattatreya (an
+empowered incarnation), Kapila, Sanat-kumara, Hayagriva, Naradadeva (the incarnation of a devotee).
+Dhanvantari, Rsabhadeva, Yajna, Balarama, Vyasadeva, Buddhadeva and Kesava. One should also think of
+Govinda, the master of Vrndavana. and one should think of Narayana, the master of the spiritual sky. One
+should think of Madhusudana, Tridhama, Madhava, Hrsikesa, Padmanabha, Janardana, Damodara and
+Visvesvara, as well as the Supreme Personality of Godhead Krsna Himself. After offering prayers to the
+Lord's personal expansions known as the svamsa and saktyavesa-avataras, one should pray to the weapons
+of Lord Narayana, such as the Sudarsana, gada, sankha, khadga and bow.
+After explaining this process, Sukadeva Gosvami told Maharaja Pariksit how Visvarupa, the brother of
+Vrtrasura, described the glories of the Narayana-kavaca to Indra.
 </p>
 
 </div>
@@ -115,7 +138,7 @@ Godhead (krsnas tu bhagavan svayam). All the other incarnations proceed from Lor
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

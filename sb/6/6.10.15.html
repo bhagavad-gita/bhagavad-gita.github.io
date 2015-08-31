@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.15.html">6.10.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sattvam rajas tama iti
-prakrter natmano gunah
-tatra saksinam atmanam
-yo veda sa na badhyate
-<p></p>
+vrtram abhyadravac chatrum
+asuranika-yuthapaih
+paryastam ojasa rajan
+kruddho rudra ivantakam
+<br>
 <h2>Synonyms</h2>
-sattvam--the mode of goodness; rajah--the mode of passion; tamah--the mode of ignorance; iti--thus;
-prakrteh--of the material nature; na--not; atmanah--of the spirit soul; gunah--the qualities; tatra--in such a
-position; saksinam--an observer; atmanam--the self; yah--anyone who; veda--knows; sah--he; na--not;
-badhyate--is bound.
-<p></p>
+vrtram--Vrtrasura; abhyadravat--attacked; satrum--the enemy; asura-anika-yuthapaih--by the
+commanders or captains of the soldiers of the asuras; paryastam--surrounded; ojasa--with great force;
+rajan--O King; kruddhah--being angry; rudrah--an incarnation of Lord Siva; iva--like; antakam--Antaka,
+or Yamaraja.
+<br>
 <h2>Translation</h2>
-One who knows that the three qualities--goodness, passion and ignorance--are not qualities of the soul
-but qualities of material nature, and who knows that the pure soul is simply an observer of the actions
-and reactions of these qualities, should be understood to be a liberated person. He is not bound by these
-qualities.
-<p></p>
-<h2>Purport</h2>
-As the Lord explains in Bhagavad-gita (18.54):
-brahma-bhutah prasannatma
-na socati na kanksati
-samah sarvesu bhutesu
-mad-bhaktim labhate param
-"One who is transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful.
-He never laments or desires to have anything; he is equally disposed to every living entity. In that state he
-attains pure devotional service unto Me." When one attains self-realization, the brahma-bhuta stage, one
-knows that whatever happens during his life is due to the contamination of the modes of material nature.
-The living being, the pure soul, has nothing to do with these modes. In the midst of the hurricane of the
-material world, everything changes very quickly, but if one remains silent and simply observes the actions
-and reactions of the hurricane, he is understood to be liberated. The real qualification of the liberated soul
-is that he remains Krsna conscious, undisturbed by the actions and reactions of the material energy. Such
-a liberated person is always jubilant. He never laments or aspires for anything. Since everything is
-supplied by the Supreme Lord, the living entity, being fully dependent on Him, should not protest or
-accept anything in terms of his personal sense gratification; rather, he should receive everything as the
-mercy of the Lord and remain steady in all circumstances.
+My dear King Pariksit, as Rudra, being very angry at Antaka [Yamaraja] had formerly run toward
+Antaka to kill him, Indra angrily and with great force attacked Vrtrasura, who was surrounded by the
+leaders of the demoniac armies.
 </p>
 
 </div>
@@ -91,7 +110,7 @@ mercy of the Lord and remain steady in all circumstances.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

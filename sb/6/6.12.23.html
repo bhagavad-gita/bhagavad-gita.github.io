@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.23.html">6.12.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-citraketur uvaca
-bhagavan kim na viditam
-tapo-jnana-samadhibhih
-yoginam dhvasta-papanam
-bahir antah saririsu
-<p></p>
+sri-suka uvaca
+iti bruvanav anyonyam
+dharma-jijnasaya nrpa
+yuyudhate maha-viryav
+indra-vrtrau yudham pati
+<br>
 <h2>Synonyms</h2>
-citraketuh uvaca--King Citraketu replied; bhagavan--O most powerful sage; kim--what; na--not;
-viditam--is understood; tapah--by austerity; jnana--knowledge; samadhibhih--and by samadhi (trance,
-transcendental meditation); yoginam--by the great yogis or devotees; dhvasta-papanam--who are fully
-freed from all sinful reactions; bahih--externally; antah--internally; saririsu--in conditioned souls, who
-have material bodies.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; bruvanau--speaking; anyonyam--to one another;
+dharma-jijnasaya--with a desire to know the supreme, ultimate religious principle (devotional service);
+nrpa--O King; yuyudhate--fought; maha-viryau--both very powerful; indra--King Indra; vrtrau--and
+Vrtrasura; yudham pati--both great military commanders.
+<br>
 <h2>Translation</h2>
-King Citraketu said: O great lord Angira, because of austerity, knowledge and transcendental samadhi,
-you are freed from all the reactions of sinful life. Therefore, as a perfect yogi, you can understand
-everything external and internal regarding embodied, conditioned souls like us.
+Sri Sukadeva Gosvami said: Vrtrasura and King Indra spoke about devotional service even on the
+battlefield, and then as a matter of duty they again began fighting. My dear King, both of them were great
+fighters and were equally powerful.
 </p>
 
 </div>
@@ -73,7 +111,7 @@ everything external and internal regarding embodied, conditioned souls like us.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

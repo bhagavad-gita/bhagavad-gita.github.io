@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.21.html">6.16.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ime sraddadhate brahmann
-rsayo hi maya saha
-parijnanaya bhagavams
-tan no vyakhyatum arhasi
-<p></p>
+vacasy uparate 'prapya
+ya eko manasa saha
+anama-rupas cin-matrah
+so 'vyan nah sad-asat-parah
+<br>
 <h2>Synonyms</h2>
-ime--these; sraddadhate--are eager; brahman--O brahmana; rsayah--sages; hi--indeed; maya saha--with
-me; parijnanaya--to know; bhagavan--O great soul; tat--therefore; nah--to us; vyakhyatum arhasi--please
-explain.
-<p></p>
+vacasi--when the words; uparate--cease; aprapya--not achieving the goal; yah--He who; ekah--one
+without a second; manasa--the mind; saha--with; anama--with no material name; rupah--or material form;
+cit-matrah--totally spiritual; sah--He; avyat--may kindly protect; nah--us; sat-asat-parah--who is the cause
+of all causes (the supreme cause).
+<br>
 <h2>Translation</h2>
-My dear brahmana, I and all the sages present with me are eager to know about this. Therefore, O great
-soul, kindly explain to us the reason.
+The words and mind of the conditioned soul cannot approach the Supreme Personality of Godhead, for
+material names and forms are not applicable to the Lord, who is entirely spiritual, beyond the conception
+of gross and subtle forms. The impersonal Brahman is another of His forms. May He, by His pleasure,
+protect us.
+<br>
+<h2>Purport</h2>
+The impersonal Brahman, which is the effulgence of the Lord, is described in this verse.
 </p>
 
 </div>
@@ -69,7 +114,7 @@ soul, kindly explain to us the reason.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

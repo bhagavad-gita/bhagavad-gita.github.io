@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.6.37.html">6.6.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na kutascid bhayam tasya
-vidyam dharayato bhavet
-raja-dasyu-grahadibhyo
-vyadhy-adibhyas ca karhicit
-<p></p>
+vipracittih simhikayam
+satam caikam ajijanat
+rahu-jyestham ketu-satam
+grahatvam ya upagatah
+<br>
 <h2>Synonyms</h2>
-na--not; kutascit--from anywhere; bhayam--fear; tasya--of him; vidyam--this mystical prayer;
-dharayatah--employing; bhavet--may appear; raja--from the government; dasyu--from rogues and thieves;
-graha-adibhyah--from demons and so on; vyadhi-adibhyah--from diseases and so on; ca--also; karhicit--at
-any time.
-<p></p>
+vipracittih--Vipracitti; simhikayam--in the womb of his wife Simhika; satam--to one hundred; ca--and;
+ekam--one; ajijanat--gave birth; rahu-jyestham--among whom Rahu is the oldest; ketu-satam--one
+hundred Ketus; grahatvam--planethood; ye--all of whom; upagatah--obtained.
+<br>
 <h2>Translation</h2>
-This prayer, Narayana-kavaca, constitutes subtle knowledge transcendentally connected with Narayana.
-One who employs this prayer is never disturbed or put in danger by the government, by plunderers, by
-evil demons or by any type of disease.
+In his wife Simhika, Vipracitti begot one hundred and one sons, of whom the eldest is Rahu and the
+others are the one hundred Ketus. All of them attained positions in the influential planets.
 </p>
 
 </div>
@@ -71,7 +108,7 @@ evil demons or by any type of disease.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

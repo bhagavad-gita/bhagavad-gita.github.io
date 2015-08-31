@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.13.html">6.12.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na tasya sampadah sarva
-mahisyo vama-locanah
-sarvabhaumasya bhus ceyam
-abhavan priti-hetavah
-<p></p>
+ayuh srih kirtir aisvaryam
+asisah purusasya yah
+bhavanty eva hi tat-kale
+yathanicchor viparyayah
+<br>
 <h2>Synonyms</h2>
-na--not; tasya--of him (Citraketu); sampadah--the great opulences; sarvah--all; mahisyah--the queens;
-vama-locanah--having very attractive eyes; sarva-bhaumasya--of the emperor; bhuh--land; ca--also; iyam--
-this; abhavan--were; priti-hetavah--sources of pleasure.
-<p></p>
+ayuh--longevity; srih--opulence; kirtih--fame; aisvaryam--power; asisah--benedictions; purusasya--of the
+living entity; yah--which; bhavanti--arise; eva--indeed; hi--certainly; tat-kale--at that proper time; yatha--
+just as; anicchoh--of one not desiring; viparyayah--reverse conditions.
+<br>
 <h2>Translation</h2>
-His queens all had beautiful faces and attractive eyes, yet neither his opulences, his hundreds and
-thousands of queens, nor the lands of which he was the supreme proprietor were sources of happiness for
-him.
+Just as a person not inclined to die must nonetheless give up his longevity, opulence, fame and
+everything else at the time of death, so, at the appointed time of victory, one can gain all these when the
+Supreme Lord awards them by His mercy.
+<br>
+<h2>Purport</h2>
+It is not good to be falsely puffed up, saying that by one's own effort one has become opulent, learned,
+beautiful and so on. All such good fortune is achieved through the mercy of the Lord. From another point
+of view, no one wants to die, and no one wants to be poor or ugly. Therefore, why does the living entity,
+against his will, receive such unwanted troubles? It is due to the mercy or chastisement of the Supreme
+Personality of Godhead that one gains or loses everything material. No one is independent; everyone is
+dependent on the mercy or chastisement of the Supreme Lord. There is a common saying in Bengal that
+the Lord has ten hands. This means that He has control everywhere--in the eight directions and up and
+down. If He wants to take everything away from us with His ten hands, we cannot protect anything with
+our two hands. Similarly, if He wants to bestow benedictions upon us with His ten hands, we cannot
+factually receive them all with our two hands; in other words, the benedictions exceed our ambitions. The
+conclusion is that even though we do not wish to be separated from our possessions, sometimes the Lord
+forcibly takes them from us; and sometimes He showers such benedictions upon us that we are unable to
+receive them all. Therefore either in opulence or in distress we are not independent; everything is
+dependent on the sweet will of the Supreme Personality of Godhead.
 </p>
 
 </div>
@@ -70,7 +125,7 @@ him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

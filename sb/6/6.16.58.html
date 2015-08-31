@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.58.html">6.16.58</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.58</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/58"><b>58</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam tasya vrata-sthaya
-vrata-cchidram harir nrpa
-prepsuh paryacaraj jihmo
-mrga-heva mrgakrtih
-<p></p>
+labdhveha manusim yonim
+jnana-vijnana-sambhavam
+atmanam yo na buddhyeta
+na kvacit ksemam apnuyat
+<br>
 <h2>Synonyms</h2>
-evam--thus; tasyah--of her; vrata-sthayah--who was faithfully discharging her vow; vrata-chidram--a
-fault in the execution of the vow; harih--Indra; nrpa--O King; prepsuh--desiring to find; paryacarat--
-served; jihmah--deceitful; mrga-ha--a hunter; iva--like; mrga-akrtih--in the form of a deer.
-<p></p>
+labdhva--achieving; iha--in this material world (especially in this pious land of Bharata-varsa, India);
+manusim--the human; yonim--species; jnana--of knowledge through Vedic scriptures; vijnana--and
+practical application of that knowledge in life; sambhavam--wherein there is a possibility; atmanam--one's
+real identity; yah--anyone who; na--not; buddhyeta--understands; na--never; kvacit--at any time;
+ksemam--success in life; apnuyat--can obtain.
+<br>
 <h2>Translation</h2>
-O King Pariksit, as the hunter of a deer becomes like a deer by covering his body with deerskin and
-serving the deer, so Indra, although at heart the enemy of the sons of Diti, became outwardly friendly and
-served Diti in a faithful way. Indra's purpose was to cheat Diti as soon as he could find some fault in the
-way she discharged the vows of the ritualistic ceremony. However, he wanted to be undetected, and
-therefore he served her very carefully.
+A human being can attain perfection in life by self-realization through the Vedic literature and its
+practical application. This is possible especially for a human being born in India, the land of piety. A man
+who obtains birth in such a convenient position but does not understand his self is unable to achieve the
+highest perfection, even if he is exalted to life in the higher planetary systems.
+<br>
+<h2>Purport</h2>
+This statement is confirmed in Caitanya-caritamrta (Adi 9.41). Lord Caitanya said:
+bharata-bhumite haila manusya-janma yara
+janma sarthaka kari' kara para-upakara
+Everyone born in India, especially as a human being, can achieve the supreme success through the
+Vedic literature and its practical application in life. When one is perfect, he can render a service for the
+self-realization of the entire human society. This is the best way to perform humanitarian work.
 </p>
 
 </div>
@@ -72,7 +120,7 @@ therefore he served her very carefully.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

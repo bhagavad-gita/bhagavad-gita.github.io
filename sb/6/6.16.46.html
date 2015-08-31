@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.46.html">6.16.46</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.46</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/46"><b>46</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ditir uvaca
-dharayisye vratam brahman
-bruhi karyani yani me
-yani ceha nisiddhani
-na vratam ghnanti yany uta
-<p></p>
+viditam ananta samastam
+tava jagad-atmano janair ihacaritam
+vijnapyam parama-guroh
+kiyad iva savitur iva khadyotaih
+<br>
 <h2>Synonyms</h2>
-ditih uvaca--Diti said; dharayisye--I shall accept; vratam--vow; brahman--my dear brahmana; bruhi--
-please state; karyani--must be done; yani--what; me--to me; yani--what; ca--and; iha--here; nisiddhani--is
-forbidden; na--not; vratam--the vow; ghnanti--break; yani--what; uta--also.
-<p></p>
+viditam--well known; ananta--O unlimited; samastam--everything; tava--to You; jagat-atmanah--who are
+the Supersoul of all living entities; janaih--by the mass of people, or all living entities; iha--within this
+material world; acaritam--performed; vijnapyam--to be informed; parama-guroh--to the Supreme
+Personality of Godhead, the supreme master; kiyat--how much; iva--certainly; savituh--to the sun; iva--
+like; khadyotaih--by the fireflies.
+<br>
 <h2>Translation</h2>
-Diti replied: My dear brahmana, I must accept your advice and follow the vow. Now let me understand
-what I have to do, what is forbidden and what will not break the vow. Please clearly state all this to me.
-<p></p>
-<h2>Purport</h2>
-As stated above, a woman is generally inclined to serve her own purposes. Kasyapa Muni proposed to
-train Diti to fulfill her desires within one year, and since she was eager to kill Indra, she immediately
-agreed, saying, "Please let me know what the vow is and how I have to follow it. I promise that I shall do
-the needful and not break the vow." This is another side of a woman's psychology. Even though a woman
-is very fond of fulfilling her own plans, when someone instructs her, especially her husband, she
-innocently follows, and thus she can be trained for better purposes. By nature a woman wants to be a
-follower of a man; therefore if the man is good the woman can be trained for a good purpose.
+O unlimited Supreme Personality of Godhead, whatever a living entity does in this material world is
+well known to You because You are the Supersoul. In the presence of the sun there is nothing to be
+revealed by the light of a glowworm. Similarly, because You know everything, in Your presence there is
+nothing for me to make known.
 </p>
 
 </div>
@@ -79,7 +112,7 @@ follower of a man; therefore if the man is good the woman can be trained for a g
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

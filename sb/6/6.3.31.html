@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,92 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.31.html">6.3.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yac-chaktayo vadatam vadinam vai
-vivada-samvada-bhuvo bhavanti
-kurvanti caisam muhur atma-moham
-tasmai namo 'nanta-gunaya bhumne
-<p></p>
+tasmat sankirtanam visnor
+jagan-mangalam amhasam
+mahatam api kauravya
+viddhy aikantika-niskrtam
+<br>
 <h2>Synonyms</h2>
-yat-saktayah--whose multifarious potencies; vadatam--speaking different philosophies; vadinam--of the
-speakers; vai--indeed; vivada--of argument; samvada--and agreement; bhuvah--the causes; bhavanti--are;
-kurvanti--create; ca--and; esam--of them (the theorists); muhuh--continuously; atma-moham--
-bewilderment regarding the existence of the soul; tasmai--unto Him; namah--my respectful obeisances;
-ananta--unlimited; gunaya--possessing transcendental attributes; bhumne--the all-pervading Godhead.
-<p></p>
+tasmat--therefore; sankirtanam--the congregational chanting of the holy name; visnoh--of Lord Visnu;
+jagat-mangalam--the most auspicious performance within this material world; amhasam--for sinful
+activities; mahatam api--even though very great; kauravya--O descendant of the Kuru family; viddhi--
+understand; aikantika--the ultimate; niskrtam--atonement.
+<br>
 <h2>Translation</h2>
-Let me offer my respectful obeisances unto the all-pervading Supreme Personality of Godhead, who
-possesses unlimited transcendental qualities. Acting from within the cores of the hearts of all
-philosophers, who propagate various views, He causes them to forget their own souls while sometimes
-agreeing and sometimes disagreeing among themselves. Thus He creates within this material world a
-situation in which they are unable to come to a conclusion. I offer my obeisances unto Him.
-<p></p>
+Sukadeva Gosvami continued: My dear King, the chanting of the holy name of the Lord is able to uproot
+even the reactions of the greatest sins. Therefore the chanting of the sankirtana movement is the most
+auspicious activity in the entire universe. Please try to understand this so that others will take it seriously.
+<br>
 <h2>Purport</h2>
-Since time immemorial or since the creation of the cosmic manifestation, the conditioned souls have
-formed various parties of philosophical speculation, but this is not true of the devotees. Nondevotees have
-different ideas of creation, maintenance and annihilation, and therefore they are called vadis and
-prativadis--proponents and counterproponents. It is understood from the statement of Mahabharata that
-there are many munis, or speculators:
-tarko 'pratisthah srutayo vibhinna
-nasav rsir yasya matam na bhinnam
-All speculators must disagree with other speculators; otherwise, why should there be so many opposing
-parties concerned with ascertaining the supreme cause?
-Philosophy means finding the ultimate cause. As Vedanta-sutra very reasonably says, athato brahma
-jijnasa: human life is meant for understanding the ultimate cause. Devotees accept that the ultimate cause
-is Krsna because this conclusion is supported by all Vedic literature and also by Krsna Himself, who says,
-aham sarvasya prabhavah: "I am the source of everything." Devotees have no problem understanding the
-ultimate cause of everything, but nondevotees must face many opposing elements because everyone who
-wants to be a prominent philosopher invents his own way. In India there are many parties of
-philosophers, such as the dvaita-vadis, advaita-vadis, vaisesikas, mimamsakas, Mayavadis and svabhavavadis,
-and each of them opposes the others. Similarly, in the Western countries there are also many
-philosophers with different views of creation, life, maintenance and annihilation. Thus it is undoubtedly a
-fact that there are countless philosophers throughout the world, each of them contradicting the others.
-Now, one might ask why there are so many philosophers if the ultimate goal of philosophy is one.
-Undoubtedly the ultimate cause is one--the Supreme Brahman. As Arjuna told Krsna in Bhagavad-gita
-(10.12):
-param brahma param dhama
-pavitram paramam bhavan
-purusam sasvatam divyam
-adi-devam ajam vibhum
-"You are the Supreme Brahman, the ultimate, the supreme abode and purifier, the Absolute Truth and
-the eternal divine person. You are the primal God, transcendental and original, and You are the unborn
-and all-pervading beauty." Nondevotee speculators, however, do not accept an ultimate cause (sarvakarana-
-karanam). Because they are ignorant and bewildered concerning the soul and its activities, even
-though some of them have a vague idea of the soul, many controversies arise, and the philosophical
-speculators can never reach a conclusion. All of these speculators are envious of the Supreme Personality
-of Godhead, and as Krsna says in Bhagavad-gita (16.19-20):
-tan aham dvisatah kruran
-samsaresu naradhaman
-ksipamy ajasram asubhan
-asurisv eva yonisu
-asurim yonim apanna
-mudha janmani janmani
-mam aprapyaiva kaunteya
-tato yanty adhamam gatim
-"Those who are envious and mischievous, who are the lowest among men, are cast by Me into the ocean
-of material existence, into various demoniac species of life. Attaining repeated birth among the species of
-demoniac life, such persons can never approach Me. Gradually they sink down to the most abominable
-type of existence." Because of their envy of the Supreme Personality of Godhead, nondevotees are born in
-demoniac families life after life. They are great offenders, and because of their offenses the Supreme Lord
-keeps them always bewildered. Kurvanti caisam muhur atma-moham: the Lord, the Supreme Personality
-of Godhead, purposely keeps them in darkness (atma-moham).
-The great authority Parasara, the father of Vyasadeva, explains the Supreme Personality of Godhead
-thus:
-jnana-sakti-balaisvaryavirya-
-tejamsy asesatah
-bhagavac-chabda-vacyani
-vina heyair gunadibhih
-The demoniac speculators cannot understand the transcendental qualities, form, pastimes, strength,
-knowledge and opulence of the Supreme Personality of Godhead, which are all free from material
-contamination (vina heyair gunadibhih). These speculators are envious of the existence of the Lord. Jagad
-ahur anisvaram: their conclusion is that the entire cosmic manifestation has no controller, but is just
-working naturally. Thus they are kept in constant darkness, birth after birth, and cannot understand the
-real cause of all causes. This is the reason why there are so many schools of philosophical speculation.
+We should note that although Ajamila chanted the name of Narayana imperfectly, he was delivered
+from all sinful reactions. The chanting of the holy name is so auspicious that it can free everyone from the
+reactions of sinful activities. One should not conclude that one may continue to sin with the intention of
+chanting Hare Krsna to neutralize the reactions. Rather, one should be very careful to be free from all sins
+and never think of counteracting sinful activities by chanting the Hare Krsna mantra, for this is another
+offense. If by chance a devotee accidentally performs some sinful activity, the Lord will excuse him, but
+one should not intentionally perform sinful acts.
 </p>
 
 </div>
@@ -136,7 +119,7 @@ real cause of all causes. This is the reason why there are so many schools of ph
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

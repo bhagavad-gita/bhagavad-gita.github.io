@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.4.43.html">6.4.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tantu-krntana yan nas tvam
-abhadram acarah punah
-tasmal lokesu te mudha
-na bhaved bhramatah padam
-<p></p>
+sri-bhagavan uvaca
+pracetasa maha-bhaga
+samsiddhas tapasa bhavan
+yac chraddhaya mat-paraya
+mayi bhavam param gatah
+<br>
 <h2>Synonyms</h2>
-tantu-krntana--O mischief-monger who have mercilessly separated my sons from me; yat--which; nah--
-unto us; tvam--you; abhadram--an inauspicious thing; acarah--have done; punah--again; tasmat--
-therefore; lokesu--in all the planetary systems within the universe; te--of you; mudha--O rascal not
-knowing how to act; na--not; bhavet--there may be; bhramatah--who are wandering; padam--an abode.
-<p></p>
+sri-bhagavan uvaca--the Supreme Personality of Godhead said; pracetasa--O My dear Pracetasa; mahabhaga--
+O you who are so fortunate; samsiddhah--perfected; tapasa--by your austerities; bhavan--your
+good self; yat--because; sraddhaya--by great faith; mat-paraya--whose object is Me; mayi--in Me; bhavam--
+ecstasy; param--supreme; gatah--attained.
+<br>
 <h2>Translation</h2>
-You have made me lose my sons once, and now you have again done the same inauspicious thing.
-Therefore you are a rascal who does not know how to behave toward others. You may travel all over the
-universe, but I curse you to have no residence anywhere.
-<p></p>
+The Supreme Personality of Godhead said: O most fortunate Pracetasa, because of your great faith in
+Me, you have attained the supreme devotional ecstasy. Indeed, because of your austerities, combined with
+exalted devotion, your life is now successful. You have achieved complete perfection.
+<br>
 <h2>Purport</h2>
-Because Prajapati Daksa was a grhamedhi who wanted to remain in household life, he thought that if
-Narada Muni could not remain in one place, but had to travel all over the world, that would be a great
-punishment for him. Actually, however, such a punishment is a boon for a preacher. A preacher is known
-as parivrajakacarya--an acarya, or teacher, who always travels for the benefit of human society. Prajapati
-Daksa cursed Narada Muni by saying that although he had the facility to travel all over the universe, he
-would never be able to stay in one place. In the parampara system from Narada Muni, I have also been
-cursed. Although I have many centers that would be suitable places of residence, I cannot stay anywhere,
-for I have been cursed by the parents of my young disciples. Since the Krsna consciousness movement
-was started, I have traveled all over the world two or three times a year, and although I am provided
-comfortable places to stay wherever I go, I cannot stay anywhere for more than three days or a week. I do
-not mind this curse by the parents of my disciples, but now it is necessary that I stay in one place to finish
-another task--this translation of Srimad-Bhagavatam. If my young disciples, especially those who have
-taken sannyasa, take charge of traveling all over the world, it may be possible for me to transfer the curse
-of the parents to these young preachers. Then I may sit down conveniently in one place for the work of
-translation.
+As the Lord Himself confirms in Bhagavad-gita (8.15), one reaches the highest perfection when he
+attains the fortune of realizing the Supreme Personality of Godhead:
+mam upetya punar janma
+duhkhalayam asasvatam
+napnuvanti mahatmanah
+samsiddhim paramam gatah
+"After attaining Me, the great souls, who are yogis in devotion, never return to this temporary world,
+which is full of miseries, because they have attained the highest perfection." Therefore the Krsna
+consciousness movement teaches one to follow the path toward the topmost perfection simply by
+performing devotional service.
 </p>
 
 </div>
@@ -88,7 +123,7 @@ translation.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

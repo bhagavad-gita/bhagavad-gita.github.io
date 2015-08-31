@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,62 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.15.28.html">6.15.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-narayana-parah sarve
-na kutascana bibhyati
-svargapavarga-narakesv
-api tulyartha-darsinah
-<p></p>
+yat-pada-mulam upasrtya narendra purve
+sarvadayo bhramam imam dvitayam visrjya
+sadyas tadiyam atulanadhikam mahitvam
+prapur bhavan api param na cirad upaiti
+<br>
 <h2>Synonyms</h2>
-narayana-parah--pure devotees, who are interested only in the service of Narayana, the Supreme
-Personality of Godhead; sarve--all; na--not; kutascana--anywhere; bibhyati--are afraid; svarga--in the
-higher planetary systems; apavarga--in liberation; narakesu--and in hell; api--even; tulya--equal; artha--
-value; darsinah--who see.
-<p></p>
+yat-pada-mulam--the lotus feet of whom (Lord Sankarsana); upasrtya--obtaining shelter at; nara-indra--
+O King; purve--formerly; sarva-adayah--great demigods like Lord Mahadeva; bhramam--illusion; imam--
+this; dvitayam--consisting of duality; visrjya--giving up; sadyah--immediately; tadiyam--His; atula--
+unequaled; anadhikam--unsurpassed; mahitvam--glories; prapuh--achieved; bhavan--yourself; api--also;
+param--the supreme abode; na--not; cirat--after a long time; upaiti--will obtain.
+<br>
 <h2>Translation</h2>
-Devotees solely engaged in the devotional service of the Supreme Personality of Godhead, Narayana,
-never fear any condition of life. For them the heavenly planets, liberation and the hellish planets are all
-the same, for such devotees are interested only in the service of the Lord.
-<p></p>
-<h2>Purport</h2>
-Parvati might naturally have inquired how devotees become so exalted. Therefore this verse explains
-that they are narayana-para, simply dependent on Narayana. They do not mind reverses in life because in
-the service of Narayana they have learned to tolerate whatever hardships there may be. They do not care
-whether they are in heaven or in hell: they simply engage in the service of the Lord. This is their
-excellence. Anukulyena krsnanusilanam: they are liberally engaged in the service of the Lord, and
-therefore they are excellent. By using the word bhrtya-bhrtyanam, Lord Siva pointed out that although
-Citraketu provided one example of tolerance and excellence, all the devotees who have taken shelter of
-the Lord as eternal servants are glorious. They have no eagerness to be happy by being placed in the
-heavenly planets, becoming liberated or becoming one with Brahman, the supreme effulgence. These
-benefits do not appeal to their minds. They are simply interested in giving direct service to the Lord.
+My dear King, in former days Lord Siva and other demigods took shelter of the lotus feet of Sankarsana.
+Thus they immediately got free from the illusion of duality and achieved unequaled and unsurpassed
+glories in spiritual life. You will very soon attain that very same position.
+Thus end the Bhaktivedanta purports of the Sixth Canto, Fifteenth Chapter, of the Srimad-Bhagavatam,
+entitled "The Saints Narada and Angira Instruct King Citraketu."
+Chapter Sixteen
+King Citraketu Meets the Supreme Lord
+As related in this chapter, Citraketu was able to talk with his dead son and hear from him the truth of
+life. When Citraketu was appeased, the great sage Narada gave him a mantra, and by chanting this mantra
+Citraketu found shelter at the lotus feet of Sankarsana.
+The living entity is eternal. Thus he has neither birth nor death (na hanyate hanyamane sarire).
+According to the reactions of one's fruitive activities, one takes birth in various species of life among the
+birds, beasts, trees, human beings, demigods and so on, thus rotating through various bodies. For a
+certain period of time, one receives a particular type of body as a son or father in a false relationship. All
+our relationships in this material world with friends, relatives or enemies consist of duality, in which one
+feels happy and distressed on the basis of illusion. The living entity is actually a spiritual soul who is part
+and parcel of God and has nothing to do with relationships in the world of duality. Therefore Narada
+Muni advised Citraketu not to lament for his so-called dead son.
+After hearing instructions from their dead child, Citraketu and his wife could understand that all
+relationships in this material world are causes of misery. The queens who had administered poison to the
+son of Krtadyuti were very much ashamed. They atoned for the sinful act of killing a child and gave up
+their aspiration to have sons. Thereafter. Narada Muni chanted prayers to Narayana, who exists as caturvyuha,
+and instructed Citraketu about the Supreme Lord, who creates, maintains and annihilates
+everything and who is the master of the material nature. After instructing King Citraketu in this way, he
+returned to Brahmaloka. These instructions about the Absolute Truth are called the maha-vidya. After
+being initiated by Narada Muni, King Citraketu chanted the maha-vidya, and after one week he attained
+the presence of Lord Sankarsana, who was surrounded by the four Kumaras. The Lord was nicely dressed
+in bluish garments, with a helmet and ornaments of gold. His face appeared very happy. In the presence of
+Lord Sankarsana, Citraketu offered his obeisances and began to offer prayers.
+In his prayers, Citraketu said that millions of universes rest in the pores of Sankarsana, who is limitless,
+having no beginning and end. The Lord is well known to the devotees for His eternity. The difference
+between worshiping the Lord and worshiping the demigods is that the worshiper of the Lord also
+becomes eternal, whereas whatever benedictions one can get from the demigods are impermanent. Unless
+one becomes a devotee, one cannot understand the Supreme Personality of Godhead.
+After Citraketu finished his prayers, the unlimited Supreme Lord explained knowledge of Himself to
+Citraketu.
 </p>
 
 </div>
@@ -83,7 +144,7 @@ benefits do not appeal to their minds. They are simply interested in giving dire
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

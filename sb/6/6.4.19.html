@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.4.19.html">6.4.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kala-cakram bhrami tiksnam
-sarvam niskarsayaj jagat
-svatantram abudhasyeha
-kim asat-karmabhir bhavet
-<p></p>
+manasaivasrjat purvam
+prajapatir imah prajah
+devasura-manusyadin
+nabhah-sthala-jalaukasah
+<br>
 <h2>Synonyms</h2>
-kala-cakram--the wheel of eternal time; bhrami--revolving automatically; tiksnam--very sharp; sarvam--
-all; niskarsayat--driving; jagat--the world; sva-tantram--independent, not caring for the so-called scientists
-and philosophers; abudhasya--of one who does not know (this principle of time); iha--in this material
-world; kim asat-karmabhih bhavet--what is the use of engaging in temporary fruitive activities.
-<p></p>
+manasa--by the mind; eva--indeed; asrjat--created; purvam--in the beginning; prajapatih--the prajapati
+(Daksa); imah--these; prajah--living entities; deva--the demigods; asura--the demons; manusya-adin--and
+other living entities, headed by the human beings; nabhah--in the skies; sthala--on the land; jala--or
+within the water; okasah--who have their abodes.
+<br>
 <h2>Translation</h2>
-[Narada Muni had spoken of a physical object made of sharp blades and thunderbolts. The Haryasvas
-understood this allegory as follows.] Eternal time moves very sharply, as if made of razors and
-thunderbolts. Uninterrupted and fully independent, it drives the activities of the entire world. If one does
-not try to study the eternal element of time, what benefit can he derive from performing temporary
-material activities?
-<p></p>
-<h2>Purport</h2>
-This verse explains the words ksaura-pavyam svayam bhrami, which especially refer to the orbit of
-eternal time. It is said that time and tide wait for no man. According to the moral instructions of the great
-politician Canakya Pandita:
-ayusah ksana eko 'pi
-na labhyah svarna-kotibhih
-na cen nirarthakam nitih
-ka ca hanis tato 'dhika
-Even a moment of one's lifetime could not be returned in exchange for millions of dollars. Therefore
-one should consider how much loss one suffers if he wastes even a moment of his life for nothing. Living
-like an animal, not understanding the goal of life, one foolishly thinks that there is no eternity and that his
-life span of fifty, sixty, or, at the most, one hundred years, is everything. This is the greatest foolishness.
-Time is eternal, and in the material world one passes through different phases of his eternal life. Time is
-compared herein to a sharp razor. A razor is meant to shave the hair from one's face, but if not carefully
-handled, the razor will cause disaster. One is advised not to create a disaster by misusing his lifetime. One
-should be extremely careful to utilize the span of his life for spiritual realization, or Krsna consciousness.
+With his mind, Prajapati Daksa first created all kinds of demigods, demons, human beings, birds, beasts,
+aquatics and so on.
 </p>
 
 </div>
@@ -90,7 +109,7 @@ should be extremely careful to utilize the span of his life for spiritual realiz
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

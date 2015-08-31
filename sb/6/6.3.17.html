@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.17.html">6.3.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tebhyas tasyam samabhavad
-daksah pracetasah kila
-yasya praja-visargena
-loka apuritas trayah
-<p></p>
+tasyatma-tantrasya harer adhisituh
+parasya mayadhipater mahatmanah
+prayena duta iha vai manoharas
+caranti tad-rupa-guna-svabhavah
+<br>
 <h2>Synonyms</h2>
-tebhyah--from all the Pracetas; tasyam--in her; samabhavat--was generated; daksah--Daksa, the expert in
-begetting children; pracetasah--the son of the Pracetas; kila--indeed; yasya--of whom; praja-visargena--by
-the generation of living entities; lokah--the worlds; apuritah--filled; trayah--three.
-<p></p>
+tasya--of Him; atma-tantrasya--being self-sufficient, not dependent on any other person; hareh--the
+Supreme Personality of Godhead; adhisituh--who is the master of everything; parasya--the Transcendence;
+maya-adhipateh--the master of the illusory energy; maha-atmanah--of the Supreme Soul; prayena--almost;
+dutah--the order carriers; iha--in this world; vai--indeed; manoharah--pleasing in their dealings and bodily
+features; caranti--they move; tat--of Him; rupa--possessing the bodily features; guna--the transcendental
+qualities; svabhavah--and nature.
+<br>
 <h2>Translation</h2>
-In the womb of that girl the Pracetas all begot a son named Daksa, who filled the three worlds with
-living entities.
-<p></p>
+The Supreme Personality of Godhead is self-sufficient and fully independent. He is the master of
+everyone and everything, including the illusory energy. He has His form, qualities and features; and
+similarly His order carriers, the Vaisnavas, who are very beautiful, possess bodily features, transcendental
+qualities and a transcendental nature almost like His. They always wander within this world with full
+independence.
+<br>
 <h2>Purport</h2>
-Daksa was first born during the reign of Svayambhuva Manu, but because of offending Lord Siva he was
-punished by having the head of a goat substituted for his own head. Thus insulted, he had to give up that
-body, and in the sixth manvantara, called the Caksusa manvantara, he was born of the womb of Marisa as
-Daksa. In this connection Srila Visvanatha Cakravarti Thakura quotes this verse:
-caksuse tv antare prapte
-prak-sarge kala-vidrute
-yah sasarja praja istah
-sa dakso daiva-coditah
-"His previous body had been destroyed, but he, the same Daksa, inspired by the supreme will, created
-all the desired living entities in the Caksusa manvantara." (Bhag. 4.30.49) Thus Daksa regained his
-previous opulence and again begot thousands and millions of children to fill the three worlds.
+Yamaraja was describing the Supreme Personality of Godhead, the supreme controller, but the order
+carriers of Yamaraja were very eager to know about the Visnudutas, who had defeated them in their
+encounter with Ajamila. Yamaraja therefore stated that the Visnudutas resemble the Supreme Personality
+of Godhead in their bodily features, transcendental qualities and nature. In other words, the Visnudutas,
+or Vaisnavas, are almost as qualified as the Supreme Lord. Yamaraja informed the Yamadutas that the
+Visnudutas are no less powerful than Lord Visnu. Since Visnu is above Yamaraja, the Visnudutas are
+above the Yamadutas. Persons protected by the Visnudutas, therefore, cannot be touched by the
+Yamadutas.
 </p>
 
 </div>
@@ -82,7 +124,7 @@ previous opulence and again begot thousands and millions of children to fill the
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.33.html">6.14.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatah samadhaya mano manisaya
-babhasa etat pratilabdha-vag asau
-niyamya sarvendriya-bahya-vartanam
-jagad-gurum satvata-sastra-vigraham
-<p></p>
+hrsto raja kumarasya
+snatah sucir alankrtah
+vacayitvasiso vipraih
+karayam asa jatakam
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; samadhaya--controlling; manah--the mind; manisaya--by his intelligence; babhasa--
-spoke; etat--this; pratilabdha--recovering; vak--speech; asau--that one (King Citraketu); niyamya--
-controlling; sarva-indriya--of all the senses; bahya--external; vartanam--the wandering; jagat-gurum--who
-is the spiritual master of everyone; satvata--of devotional service; sastra--of the holy scriptures; vigraham--
-the personified form.
-<p></p>
+hrstah--very happy; raja--the King; kumarasya--of his newly born son; snatah--having bathed; sucih--
+being purified; alankrtah--being decorated with ornaments; vacayitva--having caused to be spoken;
+asisah--words of benediction; vipraih--by learned brahmanas; karayam asa--caused to be performed;
+jatakam--the birth ceremony.
+<br>
 <h2>Translation</h2>
-Thereafter, by controlling his mind with his intelligence and thus restricting his senses from external
-engagements, he recovered suitable words with which to express his feelings. Thus he began offering
-prayers to the Lord, who is the personification of the holy scriptures [the satvata-samhitas like the
-Brahma-samhita and the Narada-pancaratra] and who is the spiritual master of all. He offered his prayers
-as follows.
-<p></p>
-<h2>Purport</h2>
-One cannot offer prayers to the Lord with mundane words. One must become spiritually advanced by
-controlling the mind and senses. Then he can find suitable words to offer in prayers to the Lord. Quoting
-the following verse from the Padma Purana, Srila Sanatana Gosvami forbids us to sing any song not sung
-by authorized devotees.
-avaisnava-mukhodgirnam
-putam hari-kathamrtam
-sravanam naiva kartavyam
-sarpocchistam yatha payah
-The words or songs of a person not fixed in Vaisnava behavior, not strictly following the rules and
-regulations and chanting the Hare Krsna mantra should not be accepted by pure devotees. The words
-satvata-sastra-vigraham indicate that the sac-cid-ananda body of the Lord can never be accepted to be
-made of maya. Devotees do not offer prayers to the Lord in an imaginary form. The existence of the Lord's
-form is supported by all Vedic literature.
+King Citraketu was especially pleased. After purifying himself by bathing and by decorating himself
+with ornaments, he engaged learned brahmanas in offering benedictions to the child and performing the
+birth ceremony.
 </p>
 
 </div>
@@ -89,7 +110,7 @@ form is supported by all Vedic literature.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

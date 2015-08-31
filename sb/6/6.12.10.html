@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.10.html">6.12.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-asid raja sarvabhaumah
-surasenesu vai nrpa
-citraketur iti khyato
-yasyasit kamadhun mahi
-<p></p>
+yatha darumayi nari
+yatha patramayo mrgah
+evam bhutani maghavann
+isa-tantrani viddhi bhoh
+<br>
 <h2>Synonyms</h2>
-asit--there was; raja--one king; sarva-bhaumah--an emperor of the entire surface of the globe;
-surasenesu--in the country known as Surasena; vai--indeed; nrpa--O King; citraketuh--Citraketu; iti--thus;
-khyatah--celebrated; yasya--of whom; asit--was; kama-dhuk--supplying all the necessities; mahi--the
-earth.
-<p></p>
+yatha--just as; daru-mayi--made of wood; nari--a woman; yatha--just as; patra-mayah--made of leaves;
+mrgah--an animal; evam--thus; bhutani--all things; maghavan--O King Indra; isa--the Supreme Personality
+of Godhead; tantrani--depending upon; viddhi--please know; bhoh--O sir.
+<br>
 <h2>Translation</h2>
-O King Pariksit, in the province of Surasena there was a king named Citraketu, who ruled the entire
-earth. During his reign, the earth produced all the necessities for life.
-<p></p>
+O King Indra, as a wooden doll that looks like a woman or as an animal made of grass and leaves cannot
+move or dance independently, but depends fully on the person who handles it, all of us dance according
+to the desire of the supreme controller, the Personality of Godhead. No one is independent.
+<br>
 <h2>Purport</h2>
-Here the most significant statement is that the earth completely produced all the necessities of life
-during the time of King Citraketu. As stated in the Isopanisad (Mantra 1):
-isavasyam idam sarvam
-yat kinca jagatyam jagat
-tena tyaktena bhunjitha
-ma grdhah kasya svid dhanam
-"Everything animate or inanimate that is within the universe is controlled and owned by the Lord. One
-should therefore accept only those things necessary for himself, which are set aside as his quota, and one
-should not accept other things, knowing well to whom they belong." Krsna, the supreme controller, has
-created the material world, which is completely perfect and free from scarcity. The Lord supplies the
-necessities of all living entities. These necessities come from the earth, and thus the earth is the source of
-supply. When there is a good ruler, that source produces the necessities of life abundantly. However,
-when there is not such a good ruler, there will be scarcity. This is the significance of the word kamadhuk.
-Elsewhere in Srimad-Bhagavatam (1.10.4) it is said, kamam vavarsa parjanyah sarva-kama-dugha mahi:
-"During the reign of Maharaja Yudhisthira, the clouds showered all the water that people needed, and the
-earth produced all the necessities of men in profusion." We have experience that in some seasons the
-rains produce abundance and in other seasons there is scarcity. We have no control over the earth's
-productiveness, for it is naturally under the full control of the Supreme Personality of Godhead. By His
-order, the Lord can make the earth produce sufficiently or insufficiently. If a pious king rules the earth
-according to the sastric injunctions, there will naturally be regular rainfall and sufficient produce to
-provide for all men. There will be no question of exploitation, for everyone will have enough. Blackmarketeering
-and other corrupt dealings will then automatically stop. Simply ruling the land cannot solve
-man's problems unless the leader has spiritual capabilities. He must be like Maharaja Yudhisthira, Pariksit
-Maharaja or Ramacandra. Then all the inhabitants of the land will be extremely happy.
+This is confirmed in Caitanya-caritamrta (Adi 5.142):
+ekale isvara krsna, ara saba bhrtya
+yare yaiche nacaya, se taiche kare nrtya
+"Lord Krsna alone is the supreme controller, and all others are His servants. They dance as He makes
+them do so." We are all servants of Krsna; we have no independence. We are dancing according to the
+desire of the Supreme Personality of Godhead, but out of ignorance and illusion we think we are
+independent of the supreme will. Therefore it is said:
+isvarah paramah krsnah
+sac-cid-ananda-vigrahah
+anadir adir govindah
+sarva-karana-karanam
+"Krsna, who is known as Govinda, is the supreme controller. He has an eternal, blissful, spiritual body.
+He is the origin of all. He has no other origin, for He is the prime cause of all causes." (Brahma-samhita
+5.1)
 </p>
 
 </div>
@@ -96,7 +125,7 @@ Maharaja or Ramacandra. Then all the inhabitants of the land will be extremely h
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

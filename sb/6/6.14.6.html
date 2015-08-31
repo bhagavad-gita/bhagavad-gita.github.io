@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,61 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.6.html">6.14.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatha vastuni panyani
-hemadini tatas tatah
-paryatanti naresv evam
-jivo yonisu kartrsu
-<p></p>
+vrtras tu sa katham papah
+sarva-lokopatapanah
+ittham drdha-matih krsna
+asit sangrama ulbane
+<br>
 <h2>Synonyms</h2>
-yatha--just as; vastuni--commodities; panyani--meant for trading; hema-adini--such as gold; tatah tatah--
-from here to there; paryatanti--move about; naresu--among men; evam--in this way; jivah--the living
-entity; yonisu--in different species of life; kartrsu--in different material fathers.
-<p></p>
+vrtrah--Vrtrasura; tu--but; sah--he; katham--how; papah--although sinful (getting the body of a demon);
+sarva-loka--of all the three worlds; upatapanah--the cause of suffering; ittham--such; drdha-matih--firmly
+fixed intelligence; krsne--in Krsna; asit--there was; sangrame ulbane--in the great blazing fire of battle.
+<br>
 <h2>Translation</h2>
-Just as gold and other commodities are continually transferred from one place to another in due course
-of purchase and sale, so the living entity, as a result of his fruitive activities, wanders throughout the
-entire universe, being injected into various bodies in different species of life by one kind of father after
-another.
-<p></p>
+Vrtrasura was situated in the blazing fire of battle and was an infamous, sinful demon, always engaged
+in giving troubles and anxieties to others. How could such a demon become so greatly Krsna conscious?
+<br>
 <h2>Purport</h2>
-It has already been explained that Citraketu's son was his enemy in a past life and had now appeared as
-his son just to give him more severe pain. Indeed, the untimely death of the son caused severe
-lamentation for the father. One may put forward the argument, "If the King's son was his enemy, how
-could the King have so much affection for him?" In answer, the example is given that when someone's
-wealth falls into the bands of his enemy, the money becomes the enemy's friend. Then the enemy can use
-it for his own purposes. Indeed, he can even use it to harm its previous owner. Therefore the money
-belongs neither to the one party nor to the other. The money is always money, but in different situations
-it can be used as an enemy or a friend.
-As explained in Bhagavad-gita, it is not by any father or mother that the living entity is given his birth.
-The living entity is a completely separate identity from the so-called father and mother. By the laws of
-nature, the living entity is forced to enter the semen of a father and be injected into the womb of the
-mother. He is not in control of selecting what kind of father he will accept. prakrteh kriyamanani: the
-laws of nature force him to go to different fathers and mothers, just like a consumer commodity that is
-purchased and sold. Therefore the so-called relationship of father and son is an arrangement of prakrti, or
-nature. It has no meaning, and therefore it is called illusion.
-The same living entity sometimes takes shelter of an animal father and mother and sometimes a human
-father and mother. Sometimes he accepts a father and mother among the birds, and sometimes he accepts
-a demigod father and mother. Sri Caitanya Mahaprabhu therefore says:
-brahmanda bhramite kona bhagyavan jiva
-guru-krsna-prasade paya bhakti-lata-bija
-Harassed life after life by the laws of nature, the living entity wanders throughout the entire universe in
-different planets and different species of life. Somehow or other, if he is fortunate enough, he comes in
-touch with a devotee who reforms his entire life. Then the living entity goes back home, back to Godhead.
-Therefore it is said:
-janame janame sabe pita mata paya
-krsna
-guru nahi mile baja hari ei
-In the transmigration of the soul through different bodies, everyone, in every form of life--be it human,
-animal, tree or demigod--gets a father and mother. This is not very difficult. The difficulty is to obtain a
-bona fide spiritual master and Krsna. Therefore the duty of a human being is to capture the opportunity to
-come in touch with Krsna's representative, the bona fide spiritual master. Under the guidance of the
-spiritual master, the spiritual father, one can return home, back to Godhead.
+It has been described that a narayana-parayana, a pure devotee, is rarely found even among millions and
+millions of persons. Therefore Pariksit Maharaja was surprised that Vrtrasura, whose purpose was to give
+trouble and anxiety to others, was one of these devotees, even on a battlefield. What was the reason for
+Vrtrasura's advancement?
 </p>
 
 </div>
@@ -105,7 +114,7 @@ spiritual master, the spiritual father, one can return home, back to Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

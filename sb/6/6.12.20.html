@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.20.html">6.12.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasyatmanuvasas cet syat
-sarve tad-vasaga ime
-lokah sapala yacchanti
-sarve balim atandritah
-<p></p>
+bhavan atarsin mayam vai
+vaisnavim jana-mohinim
+yad vihayasuram bhavam
+maha-purusatam gatah
+<br>
 <h2>Synonyms</h2>
-yasya--of whom; atma--mind; anuvasah--under control; cet--if; syat--may be; sarve--all; tat-vasa-gah--
-under the control of him; ime--these; lokah--the worlds; sa-palah--with their governors; yacchanti--offer;
-sarve--all; balim--contribution; atandritah--becoming free from laziness.
-<p></p>
+bhavan--your good self; atarsit--has surmounted; mayam--the illusory energy; vai--indeed; vaisnavim--of
+Lord Visnu; jana-mohinim--which deludes the mass of people; yat--since; vihaya--giving up; asuram--of
+the demons; bhavam--the mentality; maha-purusatam--the position of an exalted devotee; gatah--
+obtained.
+<br>
 <h2>Translation</h2>
-If the king's mind is fully controlled, all his family members and governmental officers are subordinate
-to him. His provincial governors present taxes on time, without resistance, and what to speak of lesser
-servants?
-<p></p>
+You have surmounted the illusory energy of Lord Visnu, and because of this liberation, you have given
+up the demoniac mentality and have attained the position of an exalted devotee.
+<br>
 <h2>Purport</h2>
-Angira Rsi asked the King whether his mind was also under control. This is most essential for
-happiness.
+Lord Visnu is the maha-purusa. Therefore one who becomes a Vaisnava attains the position of a mahapaurusya.
+This position was attained by Maharaja Pariksit. It is said in the Padma Purana that the
+distinction between a demigod and a demon is that a demigod is a devotee of Lord Visnu whereas a
+demon is just the opposite: visnu-bhaktah smrto daiva asuras tad-viparyayah. Vrtrasura was considered a
+demon, but actually he was more than qualified as a devotee, or maha-paurusya. If one somehow becomes
+a devotee of the Supreme Lord, whatever his position, he can be brought to the position of a perfect
+person. This is possible if an unalloyed devotee tries to serve the Lord by delivering him in this way.
+Therefore Sukadeva Gosvami says in Srimad-Bhagavatam (2.4.18):
+kirata-hunandhra-pulinda-pulkasa
+abhira-sumbha yavanah khasadayah
+ye 'nye ca papa yad-apasrayasrayah
+sudhyanti tasmai prabhavisnave namah
+"Kiratas, Hunas, Andhras, Pulindas, Pulkasas, Abhiras, Sumbhas, Yavanas and members of the Khasa
+races, and even others addicted to sinful acts can be purified by taking shelter of the devotees of the Lord,
+for He is the supreme power. I beg to offer my respectful obeisances unto Him." Anyone can be purified if
+he takes shelter of a pure devotee and molds his character according to the pure devotee's direction. Then,
+even if one is a Kirata, Andhra, Pulinda or whatever, he can be purified and elevated to the position of a
+maha-paurusya.
 </p>
 
 </div>
@@ -74,7 +129,7 @@ happiness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

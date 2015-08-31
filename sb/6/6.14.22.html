@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.22.html">6.14.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasminn idam yatas cedam
-tisthaty apyeti jayate
-mrnmayesv iva mrj-jatis
-tasmai te brahmane namah
-<p></p>
+evam vikalpito rajan
+vidusa muninapi sah
+prasrayavanato 'bhyaha
+praja-kamas tato munim
+<br>
 <h2>Synonyms</h2>
-yasmin--in whom; idam--this (cosmic manifestation); yatah--from whom; ca--also; idam--this (cosmic
-manifestation); tisthati--stands; apyeti--dissolves; jayate--is born; mrt-mayesu--in things made of earth;
-iva--like; mrt-jatih--birth from earth; tasmai--unto Him; te--You; brahmane--the supreme cause; namah--
-respectful obeisances.
-<p></p>
+evam--thus; vikalpitah--questioned; rajan--O King Pariksit; vidusa--greatly learned; munina--by the
+philosopher; api--although; sah--he (King Citraketu); prasraya-avanatah--being bent low due to humility;
+abhyaha--replied; praja-kamah--desiring offspring; tatah--thereafter; munim--to the great sage.
+<br>
 <h2>Translation</h2>
-As pots made completely of earth are situated on earth after being created and are transformed into
-earth again when broken, this cosmic manifestation is caused by the Supreme Brahman, situated in the
-Supreme Brahman, and annihilated in the same Supreme Brahman. Therefore, since the Supreme Lord is
-the cause of Brahman, let us offer Him our respectful obeisances.
-<p></p>
+Sukadeva Gosvami said: O King Pariksit, although the great sage Angira knew everything, he inquired
+from the King in this way. Thus King Citraketu, desiring a son, bent low in great humility and spoke to
+the great sage as follows.
+<br>
 <h2>Purport</h2>
-The Supreme Lord is the cause of the cosmic manifestation, He maintains it after creation, and after
-annihilation the Lord is the reservoir of everything.
+Since the face is the index to the mind, a saintly person can study the condition of one's mind by seeing
+his face. When Angira Rsi remarked about the King's discolored face, King Citraketu explained the cause
+of his anxiety as follows.
 </p>
 
 </div>
@@ -76,7 +114,7 @@ annihilation the Lord is the reservoir of everything.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

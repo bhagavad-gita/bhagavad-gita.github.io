@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.4.html">6.10.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-chinnaika-bahuh parighena vrtrah
-samrabdha asadya grhita-vajram
-hanau tatadendram athamarebham
-vajram ca hastan nyapatan maghonah
-<p></p>
+jijivisunam jivanam
+atma prestha ihepsitah
+ka utsaheta tam datum
+bhiksamanaya visnave
+<br>
 <h2>Synonyms</h2>
-chinna--cut off; eka--one; bahuh--whose arm; parighena--with a mace of iron; vrtrah--Vrtrasura;
-samrabdhah--being very angry; asadya--reaching; grhita--taking up; vajram--the thunderbolt; hanau--on
-the jaw; tatada--struck; indram--Lord Indra; atha--also; amara-ibham--his elephant; vajram--the
-thunderbolt; ca--and; hastat--from the hand; nyapatat--fell; maghonah--of King Indra.
-<p></p>
+jijivisunam--aspiring to remain alive; jivanam--of all living entities; atma--the body; presthah--very dear;
+iha--here; ipsitah--desired; kah--who; utsaheta--can bear; tam--that body; datum--to deliver;
+bhiksamanaya--begging; visnave--even to Lord Visnu.
+<br>
 <h2>Translation</h2>
-Although one of his arms was severed from his body, Vrtrasura angrily approached King Indra and
-struck him on the jaw with an iron mace. He also struck the elephant that carried Indra. Thus Indra
-dropped the thunderbolt from his hand.
+In this material world, every living entity is very much addicted to his material body. Struggling to keep
+his body forever, everyone tries to protect it by all means, even at the sacrifice of all his possessions.
+Therefore, who would be prepared to deliver his body to anyone, even if it were demanded by Lord
+Visnu?
+<br>
+<h2>Purport</h2>
+It is said, atmanam sarvato rakset tato dharmam tato dhanam: one must protect his body by all means;
+then he may protect his religious principles and thereafter his possessions. This is the natural desire of all
+living entities. No one wants to give up his body unless it is forcibly given away. Even though the
+demigods said that they were demanding Dadhici's body for their benefit in accordance with the order of
+Lord Visnu, Dadhici superficially refused to give them his body.
 </p>
 
 </div>
@@ -71,7 +117,7 @@ dropped the thunderbolt from his hand.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

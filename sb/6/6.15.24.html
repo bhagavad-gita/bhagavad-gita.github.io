@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.15.24.html">6.15.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atha prasadaye na tvam
-sapa-moksaya bhamini
-yan manyase hy asadhuktam
-mama tat ksamyatam sati
-<p></p>
+drsyamana vinarthena
+na drsyante manobhavah
+karmabhir dhyayato nanakarmani
+manaso 'bhavan
+<br>
 <h2>Synonyms</h2>
-atha--therefore; prasadaye--I am trying to please; na--not; tvam--you; sapa-moksaya--for being released
-from your curse; bhamini--O most angry one; yat--which; manyase--you consider; hi--indeed; asadhuuktam--
-improper speech; mama--my; tat--that; ksamyatam--let it be excused; sati--O most chaste one.
-<p></p>
+drsyamanah--being perceived; vina--without; arthena--substance or reality; na--not; drsyante--are seen;
+manobhavah--creations of mental concoction; karmabhih--by fruitive activities; dhyayatah--meditating
+upon; nana--various; karmani--fruitive activities; manasah--from the mind; abhavan--appear.
+<br>
 <h2>Translation</h2>
-O mother, you are now unnecessarily angry, but since all my happiness and distress are destined by my
-past activities, I do not plead to be excused or relieved from your curse. Although what I have said is not
-wrong, please let whatever you think is wrong be pardoned.
-<p></p>
+These visible objects like wife, children and property are like dreams and mental concoctions. Actually
+what we see has no permanent existence. It is sometimes seen and sometimes not. Only because of our
+past actions do we create such mental concoctions, and because of these concoctions, we perform further
+activities.
+<br>
 <h2>Purport</h2>
-Being fully aware of how the results of one's karma accrue by the laws of nature, Citraketu did not want
-to be released from Parvati's curse. Nonetheless, he wanted to satisfy her because although his verdict was
-natural, she was displeased with him. As a matter of course, Maharaja Citraketu begged pardon from
-Parvati.
+Everything material is a mental concoction because it is sometimes visible and sometimes not. At night
+when we dream of tigers and snakes, they are not actually present, but we are afraid because we are
+affected by what we envision in our dreams. Everything material is like a dream because it actually has no
+permanent existence.
+Srila Visvanatha Cakravarti Thakura writes as follows in his commentary: arthena vyaghra-sarpadina
+vinaiva drsyamanah svapnadi-bhange sati na drsyante tad evam daradayo 'vastava-vastu-bhutah
+svapnadayo 'vastu-bhutas ca sarve manobhavah mano-vasana janyatvan manobhavah. At night one
+dreams of tigers and snakes, and while dreaming he actually sees them, but as soon as the dream is broken
+they no longer exist. Similarly, the material world is a creation of our mental concoctions. We have come
+to this material world to enjoy material resources, and by mental concoction we discover many, many
+objects of enjoyment because our minds are absorbed in material things. This is why we receive various
+bodies. According to our mental concoctions we work in various ways, desiring various achievements,
+and by nature and the order of the Supreme Personality of Godhead (karmana-daiva-netrena) we get the
+advantages we desire. Thus we become more and more involved with material concoctions. This is the
+reason for our suffering in the material world. By one kind of activity we create another, and they are all
+products of our mental concoctions.
 </p>
 
 </div>
@@ -76,7 +128,7 @@ Parvati.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

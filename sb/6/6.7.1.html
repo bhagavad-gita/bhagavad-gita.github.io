@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.1.html">6.7.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-tasyasan visvarupasya
-siramsi trini bharata
-soma-pitham sura-pitham
-annadam iti susruma
-<p></p>
+sri-rajovaca
+kasya hetoh parityakta
+acaryenatmanah surah
+etad acaksva bhagavan
+chisyanam akramam gurau
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; tasya--of him; asan--there were; visvarupasya--of
-Visvarupa, the priest of the demigods; siramsi--heads; trini--three; bharata--O Maharaja Pariksit; somapitham--
-used for drinking the beverage soma; sura-pitham--used for drinking wine; anna-adam--used for
-eating; iti--thus; susruma--I have heard by the parampara system.
-<p></p>
+sri-raja uvaca--the King inquired; kasya hetoh--for what reason; parityaktah--rejected; acaryena--by the
+spiritual master, Brhaspati; atmanah--of himself; surah--all the demigods; etat--this; acaksva--kindly
+describe; bhagavan--O great sage (Sukadeva Gosvami); sisyanam--of the disciples; akramam--the offense;
+gurau--unto the spiritual master.
+<br>
 <h2>Translation</h2>
-Sri Sukadeva Gosvami continued: Visvarupa, who was engaged as the priest of the demigods, had three
-heads. He used one to drink the beverage soma-rasa, another to drink wine and the third to eat food. O
-King Pariksit, thus I have heard from authorities.
-<p></p>
+Maharaja Pariksit inquired from Sukadeva Gosvami: O great sage, why did the spiritual master of the
+demigods, Brhaspati, reject the demigods, who were his own disciples? What offense did the demigods
+commit against their spiritual master? Please describe to me this incident.
+<br>
 <h2>Purport</h2>
-One cannot directly perceive the kingdom of heaven, its king and other inhabitants, or how they
-perform their various engagements, for no one can go to the heavenly planets. Although modern scientists
-have invented many powerful space vehicles, they cannot even go to the moon, not to speak of other
-planets. By direct experience one cannot learn anything beyond the range of human perception. One must
-hear from authorities. Therefore Sukadeva Gosvami, a great personality, says, "What I am describing to
-you, O King, is what I have heard from authoritative sources." This is the Vedic system. The Vedic
-knowledge is called sruti because it must be received by being heard from authorities. It is beyond the
-realm of our false experimental knowledge.
+Srila Visvanatha Cakravarti Thakura comments:
+saptame guruna tyaktair
+devair daitya-parajitaih
+visvarupo gurutvena
+vrto brahmopadesatah
+"This Seventh Chapter describes how Brhaspati was offended by the demigods, how he left them and the
+demigods were defeated, and how the demigods, following the instructions of Lord Brahma, accepted
+Visvarupa as the priest to perform their sacrifice."
 </p>
 
 </div>
@@ -82,7 +121,7 @@ realm of our false experimental knowledge.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

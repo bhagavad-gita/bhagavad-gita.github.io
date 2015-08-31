@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.37.html">6.16.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ditir uvaca
-varado yadi me brahman
-putram indra-hanam vrne
-amrtyum mrta-putraham
-yena me ghatitau sutau
-<p></p>
+ksity-adibhir esa kilavrtah
+saptabhir dasa-gunottarair anda-kosah
+yatra pataty anu-kalpah
+sahanda-koti-kotibhis tad anantah
+<br>
 <h2>Synonyms</h2>
-ditih uvaca--Diti said; vara-dah--the giver of benedictions; yadi--if; me--to me; brahman--O great soul;
-putram--a son; indra-hanam--who can kill Indra; vrne--I am asking for; amrtyum--immortal; mrta-putra--
-whose sons are dead; aham--I; yena--by whom; me--my; ghatitau--were caused to be killed; sutau--two
-sons.
-<p></p>
+ksiti-adibhih--by the ingredients of the material world, headed by earth; esah--this; kila--indeed;
+avrtah--covered; saptabhih--seven; dasa-guna-uttaraih--each ten times more than the previous one; andakosah--
+egg-shaped universe; yatra--in whom; patati--falls; anu-kalpah--like a minute atom; saha--with;
+anda-koti-kotibhih--millions of such universes; tat--therefore; anantah--(You are called) unlimited.
+<br>
 <h2>Translation</h2>
-Diti replied: O my husband, O great soul, I have now lost my sons. If you want to give me a benediction,
-I ask you for an immortal son who can kill Indra. I pray for this because Indra, with the help of Visnu, has
-killed my two sons Hiranyaksa and Hiranyakasipu.
-<p></p>
+Every universe is covered by seven layers--earth, water, fire, air, sky, the total energy and false ego--each
+ten times greater than the previous one. There are innumerable universes besides this one, and although
+they are unlimitedly large, they move about like atoms in You. Therefore You are called unlimited
+[ananta].
+<br>
 <h2>Purport</h2>
-The word indra-hanam means "one who can kill Indra," but it also means "one who follows Indra." The
-word amrtyum refers to the demigods, who do not die like ordinary human beings because they have
-extremely long durations of life. For example, the duration of Lord Brahma's life is stated in Bhagavadgita:
-sahasra-yuga-paryantam ahar yad brahmano viduh. Even the duration of one day, or twelve hours, of
-Brahma is 4,300,000 years multiplied by one thousand. Thus the duration of his life is inconceivable for
-an ordinary human being. The demigods are therefore sometimes called amara, which means "one who
-has no death." In this material world, however, everyone has to die. Therefore the word amrtyum
-indicates that Diti wanted a son who would be equal in status to the demigods.
+The Brahma-samhita (5.48) says:
+yasyaika-nisvasita-kalam athavalambya
+jivanti loma-vilaja jagad-anda-nathah
+visnur mahan sa iha yasya kala-viseso
+govindam adi-purusam tam aham bhajami
+The origin of the material creation is Maha-Visnu, who lies in the Causal Ocean. While He sleeps in that
+ocean, millions of universes are generated as He exhales, and they are all annihilated when He inhales.
+This Maha-Visnu is a plenary portion of a portion of Visnu, Govinda (yasya kala-visesah). The word kala
+refers to a plenary portion of a plenary portion. From Krsna, or Govinda, comes Balarama; from Balarama
+comes Sankarsana; from Sankarsana, Narayana; from Narayana, the second Sankarsana; from the second
+Sankarsana, Maha-Visnu; from Maha-Visnu, Garbhodakasayi Visnu; and from Garbhodakasayi Visnu,
+Ksirodakasayi Visnu. Ksirodakasayi Visnu controls every universe. This gives an idea of the meaning of
+ananta, unlimited. What is to be said of the unlimited potency and existence of the Lord? This verse
+describes the coverings of the universe (saptabhir dasa-gunottarair anda-kosah). The first covering is
+earth, the second is water, the third is fire, the fourth is air, the fifth is sky, the sixth is the total material
+energy, and the seventh is the false ego. Beginning with the covering of earth, each covering is ten times
+greater than the previous one. Thus we can only imagine how great each universe is, and there are many
+millions of universes. As confirmed by the Lord Himself in Bhagavad-gita (10.42):
+athava bahunaitena
+kim jnatena tavarjuna
+vistabhyaham idam krtsnam
+ekamsena sthito jagat
+"But what need is there, Arjuna, for all this detailed knowledge? With a single fragment of Myself I
+pervade and support this entire universe." The entire material world manifests only one fourth of the
+Supreme Lord's energy. Therefore He is called ananta.
 </p>
 
 </div>
@@ -82,7 +138,7 @@ indicates that Diti wanted a son who would be equal in status to the demigods.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

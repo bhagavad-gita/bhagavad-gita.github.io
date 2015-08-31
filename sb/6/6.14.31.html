@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.31.html">6.14.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad-darsana-dhvasta-samasta-kilbisah
-svasthamalantahkarano 'bhyayan munih
-pravrddha-bhaktya pranayasru-locanah
-prahrsta-romanamad adi-purusam
-<p></p>
+tasya anudinam garbhah
+sukla-paksa ivodupah
+vavrdhe surasenesatejasa
+sanakair nrpa
+<br>
 <h2>Synonyms</h2>
-tat-darsana--by the sight of the Supreme Personality of Godhead; dhvasta--destroyed; samasta-kilbisah--
-having all sins; svastha--healthy; amala--and pure; antahkaranah--the core of whose heart; abhyayat--
-approached face to face; munih--the King, who was silent due to full mental satisfaction; pravrddhabhaktya--
-with an attitude of increased devotional service; pranaya-asru-locanah--with tears in his eyes
-because of love; prahrsta-roma--his hairs standing on end due to jubilation; anamat--offered respectful
-obeisances; adi-purusam--unto the expansion of the original personality.
-<p></p>
+tasyah--her; anudinam--day after day; garbhah--embryo; sukla-pakse--during the fortnight of the waxing
+moon; iva--like; udupah--the moon; vavrdhe--gradually developed; surasena-isa--of the King of Surasena;
+tejasa--by the semen; sanakaih--little by little; nrpa--O King Pariksit.
+<br>
 <h2>Translation</h2>
-As soon as Maharaja Citraketu saw the Supreme Lord, he was cleansed of all material contamination and
-situated in his original Krsna consciousness, being completely purified. He became silent and grave, and
-because of love for the Lord, tears fell from his eyes, and his hairs stood on end. With great devotion and
-love, he offered his respectful obeisances unto the original Personality of Godhead.
-<p></p>
-<h2>Purport</h2>
-The word tad-darsana-dhvasta-samasta-kilbisah is very important in this verse. If one regularly sees the
-Supreme Personality of Godhead in the temple, one will gradually be disinfected of all material desires
-simply by visiting the temple and seeing the Deity. When one is freed from all the results of sinful
-activities, one will be purified, and with a healthy mind, completely cleansed, he will increasingly make
-progress in Krsna consciousness.
+After receiving semen from Maharaja Citraketu, the King of Surasena, Queen Krtadyuti gradually
+developed in her pregnancy, O King Pariksit, just as the moon develops during the bright fortnight.
 </p>
 
 </div>
@@ -81,7 +108,7 @@ progress in Krsna consciousness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

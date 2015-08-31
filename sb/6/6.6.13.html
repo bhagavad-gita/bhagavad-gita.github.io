@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.6.13.html">6.6.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-jalesu mam raksatu matsya-murtir
-yado-ganebhyo varunasya pasat
-sthalesu mayavatu-vamano 'vyat
-trivikramah khe 'vatu visvarupah
-<p></p>
+arkasya vasana bharya
+putras tarsadayah smrtah
+agner bharya vasor dhara
+putra dravinakadayah
+<br>
 <h2>Synonyms</h2>
-jalesu--in the water; mam--me; raksatu--protect; matsya-murtih--the Supreme Lord in the form of a
-great fish; yadah-ganebhyah--from fierce aquatic animals; varunasya--of the demigod known as Varuna;
-pasat--from the arresting rope; sthalesu--on the land; maya-vatu--the merciful form of the Lord as a dwarf;
-vamanah--named Vamanadeva; avyat--may He protect; trivikramah--Trivikrama, whose three gigantic
-steps took the three worlds from Bali; khe--in the sky; avatu--may the Lord protect; visvarupah--the
-gigantic universal form.
-<p></p>
+arkasya--of Arka; vasana--Vasana; bharya--the wife; putrah--the sons; tarsa-adayah--named Tarsa and so
+on; smrtah--celebrated; agneh--of Agni; bharya--wife; vasoh--the Vasu; dhara--Dhara; putrah--the sons;
+dravinaka-adayah--known as Dravinaka and so on.
+<br>
 <h2>Translation</h2>
-May the Lord, who assumes the body of a great fish, protect me in the water from the fierce animals that
-are associates of the demigod Varuna. By expanding His illusory energy, the Lord assumed the form of the
-dwarf Vamana. May Vamana protect me on the land. Since the gigantic form of the Lord, Visvarupa,
-conquers the three worlds, may He protect me in the sky.
-<p></p>
-<h2>Purport</h2>
-This mantra seeks the protection of the Supreme Personality of Godhead in the water, land and sky in
-His incarnations as the fish, Vamanadeva and the Visvarupa.
+From the womb of Vasana, the wife of Arka, came many sons, headed by Tarsa. Dhara, the wife of the
+Vasu named Agni, gave birth to many sons, headed by Dravinaka.
 </p>
 
 </div>
@@ -78,7 +108,7 @@ His incarnations as the fish, Vamanadeva and the Visvarupa.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

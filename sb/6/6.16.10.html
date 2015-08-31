@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.10.html">6.16.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atha kasyapa-dayadan
-daiteyan kirtayami te
-yatra bhagavatah sriman
-prahrado balir eva ca
-<p></p>
+na hy asyasti priyah kascin
+napriyah svah paro 'pi va
+ekah sarva-dhiyam drasta
+kartrnam guna-dosayoh
+<br>
 <h2>Synonyms</h2>
-atha--now; kasyapa-dayadan--the sons of Kasyapa; daiteyan--born of Diti; kirtayami--I shall describe;
-te--to you; yatra--where; bhagavatah--the great devotee; sri-man--glorious; prahradah--Prahlada; balih--
-Bali; eva--certainly; ca--also.
-<p></p>
+na--not; hi--indeed; asya--to the living entity; asti--there is; priyah--dear; kascit--someone; na--not;
+apriyah--not dear; svah--own; parah--other; api--also; va--or; ekah--the one; sarva-dhiyam--of the varieties
+of intelligence; drasta--the seer; kartrnam--of the performers; guna-dosayoh--of right and wrong activities.
+<br>
 <h2>Translation</h2>
-Now let me describe the sons of Diti, who were begotten by Kasyapa but who became demons. In this
-demoniac family the great devotee Prahlada Maharaja appeared, and Bali Maharaja also appeared in that
-family. The demons are technically known as Daityas because they proceeded from the womb of Diti.
+For this living entity, no one is dear, nor is anyone unfavorable. He makes no distinction between that
+which is his own and that which belongs to anyone else. He is one without a second; in other words, he is
+not affected by friends and enemies, well-wishers or mischief-mongers. He is only an observer, a witness,
+of the different qualities of men.
+<br>
+<h2>Purport</h2>
+As explained in the previous verse, the living entity has the same qualities as the Supreme Personality of
+Godhead, but he has them in minute quantities because he is a small particle (suksma) whereas the
+Supreme Lord is all-pervading and great. For the Supreme Lord there are no friends, enemies or relatives,
+for He is completely free from all the disqualifications of ignorance that characterize the conditioned
+souls. On the other hand, He is extremely kind and favorable to His devotees, and He is not at all satisfied
+with persons who are envious of His devotees. As the Lord Himself confirms in Bhagavad-gita (9.29):
+samo 'ham sarva-bhutesu
+na me dvesyo 'sti na priyah
+ye bhajanti tu mam bhaktya
+mayi te tesu capy aham
+"I envy no one, nor am I partial to anyone. I am equal to all. But whoever renders service unto Me in
+devotion is a friend, is in Me, and I am also a friend to him." The Supreme Lord has no enemy or friend,
+but He is inclined toward a devotee who always engages in His devotional service. Similarly, elsewhere in
+the Gita (16.19) the Lord says:
+tan aham dvisatah kruran
+samsaresu naradhaman
+ksipamy ajasram asubhan
+asurisv eva yonisu
+"Those who are envious and mischievous, who are the lowest among men, are cast by Me into the ocean
+of material existence, into various demoniac species of life." The Lord is extremely antagonistic toward
+those who are envious of His devotees. To protect His devotees, the Lord sometimes has to kill their
+enemies. For example, to protect Prahlada Maharaja, the Lord had to kill his enemy Hiranyakasipu,
+although Hiranyakasipu attained salvation because of being killed by the Lord. Since the Lord is the
+witness of everyone's activities, He witnesses the actions of the enemies of His devotees, and He is inclined
+to punish them. In other cases, however, He simply witnesses what the living entities do and gives the
+results of one's sinful or pious actions.
 </p>
 
 </div>
@@ -70,7 +138,7 @@ family. The demons are technically known as Daityas because they proceeded from 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

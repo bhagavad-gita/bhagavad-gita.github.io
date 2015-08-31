@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,78 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.5.44.html">6.5.44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/44"><b>44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvastur daityatmaja bharya
-racana nama kanyaka
-sannivesas tayor jajne
-visvarupas ca viryavan
-<p></p>
+sri-suka uvaca
+pratijagraha tad badham
+naradah sadhu-sammatah
+etavan sadhu-vado hi
+titiksetesvarah svayam
+<br>
 <h2>Synonyms</h2>
-tvastuh--of Tvasta; daitya-atma-ja--the daughter of a demon; bharya--wife; racana--Racana; nama--
-named; kanyaka--a maiden; sannivesah--Sannivesa; tayoh--of those two; jajne--was born; visvarupah--
-Visvarupa; ca--and; viryavan--very powerful in bodily strength.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; pratijagraha--accepted; tat--that; badham--so be it;
+naradah--Narada Muni; sadhu-sammatah--who is an approved sadhu; etavan--this much; sadhu-vadah--
+appropriate for a saintly person; hi--indeed; titikseta--he may tolerate; isvarah--although able to curse
+Prajapati Daksa; svayam--himself.
+<br>
 <h2>Translation</h2>
-Racana, the daughter of the Daityas, became the wife of Prajapati Tvasta. By his semina he begot in her
-womb two very powerful sons named Sannivesa and Visvarupa.
+Sri Sukadeva Gosvami continued: My dear King, since Narada Muni is an approved saintly person, when
+cursed by Prajapati Daksa he replied, "tad badham: Yes, what you have said is good. I accept this curse."
+He could have cursed Prajapati Daksa in return, but because he is a tolerant and merciful sadhu, he took
+no action.
+<br>
+<h2>Purport</h2>
+As stated in Srimad-Bhagavatam (3.25.21):
+titiksavah karunikah
+suhrdah sarva-dehinam
+ajata-satravah santah
+sadhavah sadhu-bhusanah
+"The symptoms of a sadhu are that he is tolerant, merciful and friendly to all living entities. He has no
+enemies, he is peaceful, he abides by the scriptures, and all his characteristics are sublime." Because
+Narada Muni is the most elevated of sadhus, devotees, to deliver Prajapati Daksa he silently tolerated the
+curse. Sri Caitanya Mahaprabhu has taught this principle to all His devotees:
+trnad api sunicena
+taror api sahisnuna
+amanina manadena
+kirtaniyah sada harih
+"One should chant the holy name of the Lord in a humble state of mind, thinking oneself lower than the
+straw in the street; one should be more tolerant than a tree, devoid of all sense of false prestige and should
+be ready to offer all respects to others. In such a state of mind one can chant the holy name of the Lord
+constantly." Following the orders of Sri Caitanya Mahaprabhu, one who preaches the glories of the Lord
+all over the world or all over the universe should be humbler than grass and more tolerant than a tree
+because a preacher cannot live an easygoing life. Indeed, a preacher must face many impediments. Not
+only is he sometimes cursed, but sometimes he must also suffer personal injury. For example, when
+Nityananda Prabhu went to preach Krsna consciousness to the two roguish brothers Jagai and Madhai,
+they injured Him and made His head bleed, but nevertheless, He tolerantly delivered the two rogues, who
+became perfect Vaisnavas. This is the duty of a preacher. Lord Jesus Christ even tolerated crucifixion.
+Therefore the curse against Narada was not very astonishing, and he tolerated it.
+Now, it may be asked why Narada Muni stayed in the presence of Prajapati Daksa and tolerated all his
+accusations and curses. Was that for Daksa's deliverance? The answer is yes. Srila Visvanatha Cakravarti
+Thakura says that after being insulted by Prajapati Daksa, Narada Muni should have left immediately, but
+he purposely stayed to hear all Daksa's strong words so that Daksa might be relieved of his anger.
+Prajapati Daksa was not an ordinary man; he had accumulated the results of many pious activities.
+Therefore Narada Muni expected that after delivering his curse, Daksa, satisfied and freed from anger,
+would repent his misbehavior and thus get a chance to become a Vaisnava and be delivered. When Jagai
+and Madhai offended Lord Nityananda, Lord Nityananda stood tolerantly, and therefore both brothers fell
+at His lotus feet and repented. Consequently they later became perfect Vaisnavas.
+Thus end the Bhaktivedanta purports of the Sixth Canto, Fifth Chapter, of the Srimad-Bhagavatam.
+entitled "Narada Muni Cursed by Prajapati Daksa."
+Chapter Six
+The Progeny of the Daughters of Daksa
+As described in this chapter, Prajapati Daksa begot sixty daughters in the womb of his wife Asikni.
+These daughters were given in charity to various persons to increase the population. Since these offspring
+of Daksa were women, Narada Muni did not try to lead them toward the renounced order of life. Thus the
+daughters were saved from Narada Muni. Ten of the daughters were given in marriage to Dharmaraja,
+thirteen to Kasyapa Muni, and twenty-seven to the moon-god, Candra. In this way fifty daughters were
+distributed, and of the other ten daughters, four were given to Kasyapa and two each to Bhuta, Angira and
+Krsasva. One should know that it is because of the union of these sixty daughters with various exalted
+personalities that the entire universe was filled with various kinds of living entities, such as human
+beings, demigods, demons, beasts, birds and serpents.
 </p>
 
 </div>
@@ -69,7 +160,7 @@ womb two very powerful sons named Sannivesa and Visvarupa.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.24.html">6.7.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pura svayambhur api samyamambhasy
-udirna-vatormi-ravaih karale
-eko 'ravindat patitas tatara
-tasmad bhayad yena sa no 'stu parah
-<p></p>
+tripistapam kim ganayanty abhedyamantra
+bhrgunam anusiksitarthah
+na vipra-govinda-gav-isvaranam
+bhavanty abhadrani naresvaranam
+<br>
 <h2>Synonyms</h2>
-pura--formerly (during the time of creation); svayambhuh--Lord Brahma; api--also; samyama-ambhasi--
-in the water of inundation; udirna--very high; vata--of wind; urmi--and of waves; ravaih--by the sounds;
-karale--very fearful; ekah--alone; aravindat--from the lotus seat; patitah--almost fallen; tatara--escaped;
-tasmat--from that; bhayat--fearful situation; yena--by whom (the Lord); sah--He; nah--of us; astu--let
-there be; parah--deliverance.
-<p></p>
+tri-pista-pam--all the demigods, including Lord Brahma; kim--what; ganayanti--they care for; abhedyamantrah--
+whose determination to carry out the orders of the spiritual master is unbreakable; bhrgunam--
+of the disciples of Bhrgu Muni like Sukracarya; anusiksita-arthah--deciding to follow the instructions; na--
+not; vipra--the brahmanas; govinda--the Supreme Personality of Godhead, Krsna; go--the cows;
+isvaranam--of persons favoring or considering worshipable; bhavanti--are; abhadrani--any misfortunes;
+nara-isvaranam--or of kings who follow this principle.
+<br>
 <h2>Translation</h2>
-In the beginning of creation, a tremendous wind caused fierce waves of inundating water. The great
-waves made such a horrible sound that Lord Brahma almost fell from his seat on the lotus into the water
-of devastation, but he was saved with the help of the Lord. Thus we also expect the Lord to protect us
-from this dangerous condition.
+Because of their firm determination to follow the instructions of Sukracarya, his disciples, the demons,
+are now unconcerned about the demigods. In fact, kings or others who have determined faith in the
+mercy of brahmanas, cows and the Supreme Personality of Godhead, Krsna, and who always worship
+these three are always strong in their position.
+<br>
+<h2>Purport</h2>
+From the instructions of Lord Brahma it is understood that everyone should very faithfully worship the
+brahmanas, the Supreme personality of Godhead and the cows. The Supreme Personality of Godhead is
+go-brahmana-hitaya ca: He is always very kind to cows and brahmanas. Therefore one who worships
+Govinda must satisfy Him by worshiping the brahmanas and cows. If a government worships the
+brahmanas, the cows and Krsna, Govinda, it is never defeated anywhere; otherwise it must always be
+defeated and condemned everywhere. At the present moment, all over the world, governments have no
+respect for brahmanas, cows and Govinda, and consequently there are chaotic conditions all over the
+world. In summary, although the demigods were very powerful in material opulence, the demons defeated
+them in battle because the demigods had behaved disrespectfully toward a brahmana, Brhaspati, who was
+their spiritual master.
 </p>
 
 </div>
@@ -73,7 +125,7 @@ from this dangerous condition.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.56.html">6.16.56</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.56</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/56"><b>56</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-matr-svasur abhiprayam
-indra ajnaya manada
-susrusanenasrama-stham
-ditim paryacarat kavih
-<p></p>
+ubhayam smaratah pumsah
+prasvapa-pratibodhayoh
+anveti vyatiricyeta
+taj jnanam brahma tat param
+<br>
 <h2>Synonyms</h2>
-matr-svasuh--of his mother's sister; abhiprayam--the intention; indrah--Indra; ajnaya--understanding;
-mana-da--O King Pariksit, who give respect to everyone; susrusanena--with service; asrama-stham--
-residing in an asrama; ditim--Diti; paryacarat--attended upon; kavih--seeing his own interest.
-<p></p>
+ubhayam--both types of consciousness (sleep and wakefulness); smaratah--remembering; pumsah--of
+the person; prasvapa--of consciousness during sleep; pratibodhayoh--and of consciousness while awake;
+anveti--extends through; vyatiricyeta--may reach beyond; tat--that; jnanam--knowledge; brahma--the
+Supreme Brahman; tat--that; param--transcendental.
+<br>
 <h2>Translation</h2>
-O King, who are respectful to everyone, Indra understood Diti's purpose, and thus he contrived to fulfill
-his own interests. Following the logic that self-preservation is the first law of nature, he wanted to break
-Diti's promise. Thus he engaged himself in the service of Diti, his aunt, who was residing in an asrama.
+If one's dreams during sleep are merely subject matters witnessed by the Supersoul, how can the living
+entity, who is different from the Supersoul, remember the activities of dreams? The experiences of one
+person cannot be understood by another. Therefore the knower of the facts, the living entity who inquires
+into the incidents manifested in dreams and wakefulness, is different from the circumstantial activities.
+That knowing factor is Brahman. In other words, the quality of knowing belongs to the living entities and
+to the Supreme Soul. Thus the living entity can also experience the activities of dreams and wakefulness.
+In both stages the knower is unchanged, but is qualitatively one with the Supreme Brahman.
+<br>
+<h2>Purport</h2>
+In knowledge the living entity is qualitatively one with the Supreme Brahman, but the quantity of the
+Supreme Brahman is not the same as that of the living entity, who is part of Brahman. Because the living
+entity is Brahman in quality, he can remember the past activities of dreams and also know the present
+activities of wakefulness.
 </p>
 
 </div>
@@ -70,7 +120,7 @@ Diti's promise. Thus he engaged himself in the service of Diti, his aunt, who wa
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

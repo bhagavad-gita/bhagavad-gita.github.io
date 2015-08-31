@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.8.html">6.3.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aho prajapati-patir
-bhagavan harir avyayah
-vanaspatin osadhis ca
-sasarjorjam isam vibhuh
-<p></p>
+tasya te vihito dando
+na loke vartate 'dhuna
+caturbhir adbhutaih siddhair
+ajna te vipralambhita
+<br>
 <h2>Synonyms</h2>
-aho--alas; prajapati-patih--the Lord of all the lords of created beings; bhagavan harih--the Supreme
-Personality of Godhead, Hari; avyayah--indestructible; vanaspatin--the trees and plants; osadhih--the
-herbs; ca--and; sasarja--created; urjam--invigorating; isam--food; vibhuh--the Supreme Being.
-<p></p>
+tasya--of the influence; te--of you; vihitah--ordained; dandah--punishment; na--not; loke--within this
+world; vartate--exists; adhuna--now; caturbhih--by four; adbhutaih--very wonderful; siddhaih--perfected
+persons; ajna--the order; te--your; vipralambhita--surpassed.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead, Sri Hari, is the master of all living entities, including all the
-prajapatis, such as Lord Brahma. Because He is the all-pervading and indestructible master, He has created
-all these trees and vegetables as eatables for other living entities.
-<p></p>
+But now we see that the punishment ordained under your authority is no longer effective, since your
+order has been transgressed by four wonderful and perfect persons.
+<br>
 <h2>Purport</h2>
-Soma, the predominating deity of the moon, reminded the Pracetas that this vegetation had been created
-by the Lord of lords to provide food for everyone. If the Pracetas tried to kill them off, their own subjects
-would also suffer, for trees are also required for food.
+The Yamadutas had been under the impression that Yamaraja was the only person in charge of
+administering justice. They were fully confident that no one could counteract his judgments, but now, to
+their surprise, his order had been violated by the four wonderful persons from Siddhaloka.
 </p>
 
 </div>
@@ -75,7 +113,7 @@ would also suffer, for trees are also required for food.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

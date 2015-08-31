@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.20.html">6.7.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatas te vismitah sarve
-visanna grasta-tejasah
-pratyancam adi-purusam
-upatasthuh samahitah
-<p></p>
+tams tathabhyarditan viksya
+bhagavan atmabhur ajah
+krpaya paraya deva
+uvaca parisantvayan
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; te--they (the demigods); vismitah--being struck with wonder; sarve--all; visannah--
-being very morose; grasta-tejasah--having lost all their personal strength; pratyancam--to the Supersoul;
-adi-purusam--the original person; upatasthuh--prayed; samahitah--all gathered together.
-<p></p>
+tan--them (the demigods); tatha--in that way; abhyarditan--afflicted by the weapons of the demons;
+viksya--seeing; bhagavan--the most powerful; atma-bhuh--Lord Brahma; ajah--who was not born like an
+ordinary human being; krpaya--out of causeless mercy; paraya--great; devah--Lord Brahma; uvaca--said;
+parisantvayan--pacifying them.
+<br>
 <h2>Translation</h2>
-Struck with wonder and disappointment upon seeing the strength of the demon, the demigods lost their
-own strength. Therefore they all met together to try to please the Supersoul, the Supreme Personality of
-Godhead, Narayana, by worshiping Him.
+When the most powerful Lord Brahma saw the demigods coming toward him, their bodies gravely
+injured by the arrows of the demons, he pacified them by his great causeless mercy and spoke as follows.
 </p>
 
 </div>
@@ -70,7 +109,7 @@ Godhead, Narayana, by worshiping Him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

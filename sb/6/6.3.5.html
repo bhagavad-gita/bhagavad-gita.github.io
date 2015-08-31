@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.5.html">6.3.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-drumebhyah krudhyamanas te
-tapo-dipita-manyavah
-mukhato vayum agnim ca
-sasrjus tad-didhaksaya
-<p></p>
+yadi syur bahavo loke
+sastaro danda-dharinah
+kasya syatam na va kasya
+mrtyus camrtam eva va
+<br>
 <h2>Synonyms</h2>
-drumebhyah--unto the trees; krudhyamanah--being very angry; te--they (the ten sons of Pracinabarhi);
-tapah-dipita-manyavah--whose anger was inflamed because of long austerities; mukhatah--from the
-mouth; vayum--wind; agnim--fire; ca--and; sasrjuh--they created; tat--those forests; didhaksaya--with the
-desire to burn.
-<p></p>
+yadi--if; syuh--there are; bahavah--many; loke--in this world; sastarah--rulers or controllers; dandadharinah--
+who punish the sinful men; kasya--of whom; syatam--there may be; na--not; va--or; kasya--of
+whom; mrtyuh--distress or unhappiness; ca--and; amrtam--happiness; eva--certainly; va--or.
+<br>
 <h2>Translation</h2>
-Because of having undergone long austerities in the water, the Pracetas were very angry at the trees.
-Desiring to burn them to ashes, they generated wind and fire from their mouths.
-<p></p>
+If in this universe there are many rulers and justices who disagree about punishment and reward, their
+contradictory actions will neutralize each other, and no one will be punished or rewarded. Otherwise, if
+their contradictory acts fail to neutralize each other, everyone will have to be both punished and
+rewarded.
+<br>
 <h2>Purport</h2>
-Here the word tapo-dipita-manyavah indicates that persons who have undergone severe austerity
-(tapasya) are endowed with great mystic power, as evinced by the Pracetas, who created fire and wind
-from their mouths. Although devotees undergo severe tapasya, however, they are vimanyavah, sadhavah,
-which means that they are never angry. They are always decorated with good qualities. Bhagavatam
-(3.25.21) states:
-titiksavah karunikah
-suhrdah sarva-dehinam
-ajata-satravah santah
-sadhavah sadhu-bhusanah
-A sadhu, a devotee, is never angry. Actually the real feature of devotees who undergo tapasya, austerity,
-is forgiveness. Although a Vaisnava has sufficient power in tapasya, he does not become angry when put
-into difficulty. If one undergoes tapasya but does not become a Vaisnava, however, one does not develop
-good qualities. For example, Hiranyakasipu and Ravana also performed great austerities, but they did so
-to demonstrate their demoniac tendencies. Vaisnavas must meet many opponents while preaching the
-glories of the Lord, but Sri Caitanya Mahaprabhu recommends that they not become angry while
-preaching. Lord Caitanya Mahaprabhu has given this formula: trnad api sunicena taror api sahisnuna.
-amanina manadena kirtaniyah sada harih. "One should chant the holy name of the Lord in a humble state
-of mind, thinking oneself lower than the straw in the street; one should be more tolerant than a tree,
-devoid of all sense of false prestige and should be ready to offer all respect to others. In such a state of
-mind one can chant the holy name of the Lord constantly." Those engaged in preaching the glories of the
-Lord should be humbler than grass and more tolerant than a tree; then they can preach the glories of the
-Lord without difficulty.
+Because the Yamadutas had been unsuccessful in carrying out the order of Yamaraja, they doubted
+whether Yamaraja actually had the power to punish the sinful. Although they had gone to arrest Ajamila,
+following Yamaraja's order, they found themselves unsuccessful because of the order of some higher
+authority. Therefore they were unsure of whether there were many authorities or only one. If there were
+many authorities who gave different judgments, which could be contradictory, a person might be wrongly
+punished or wrongly rewarded, or he might be neither punished nor rewarded. According to our
+experience in the material world, a person punished in one court may appeal to another. Thus the same
+man may be either punished or rewarded according to different judgments. However, in the law of nature
+or the court of the Supreme Personality of Godhead there cannot be such contradictory judgments. The
+judges and their judgments must be perfect and free from contradictions. Actually the position of
+Yamaraja was very awkward in the case of Ajamila because the Yamadutas were right in attempting to
+arrest Ajamila, but the Visnudutas had baffled them. Although Yamaraja, under these circumstances, was
+accused by both the Visnudutas and the Yamadutas, he is perfect in administering justice because he is
+empowered by the Supreme Personality of Godhead. Therefore he will explain what his real position is
+and how everyone is controlled by the supreme controller, the Personality of Godhead.
 </p>
 
 </div>
@@ -94,7 +127,7 @@ Lord without difficulty.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

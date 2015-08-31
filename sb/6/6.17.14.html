@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.17.14.html">6.17.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatha yuvam tri-lokasya
-varadau paramesthinau
-tatha ma uttamasloka
-santu satya mahasisah
-<p></p>
+nayam arhati vaikunthapada-
+mulopasarpanam
+sambhavita-matih stabdhah
+sadhubhih paryupasitam
+<br>
 <h2>Synonyms</h2>
-yatha--since; yuvam--both of you; tri-lokasya--of the three worlds; vara-dau--givers of benedictions;
-parame-sthinau--the supreme rulers; tatha--therefore; me--my; uttama-sloka--O Lord, who are praised
-with excellent verses; santu--may become; satyah--fulfilled; maha-asisah--great ambitions.
-<p></p>
+na--not; ayam--this person; arhati--deserves; vaikuntha-pada-mula-upasarpanam--the approaching of
+the shelter of Lord Visnu's lotus feet; sambhavita-matih--considering himself highly esteemed; stabdhah--
+impudent; sadhubhih--by great saintly persons; paryupasitam--worshiped.
+<br>
 <h2>Translation</h2>
-You are both the supreme rulers and benedictors of the three worlds. Therefore, my Lord, Uttamasloka,
-may my ambitions be fulfilled by Your grace.
+This person is puffed up because of his achievements, thinking, "I am the best." He does not deserve to
+approach the shelter of Lord Visnu's lotus feet, which are worshiped by all saintly persons, for he is
+impudent, thinking himself greatly important.
+<br>
+<h2>Purport</h2>
+If a devotee thinks that he is very much advanced in devotional service, he is considered puffed up and
+unfit to sit beneath the shelter of the Lord's lotus feet. Again, this instruction by Lord Caitanya is
+applicable:
+trnad api sunicena
+taror api sahisnuna
+amanina manadena
+kirtaniyah sada harih
+"One should chant the holy name of the Lord in a humble state of mind, thinking oneself lower than the
+straw in the street; one should be more tolerant than a tree, devoid of all sense of false prestige and ready
+to offer all respect to others. In such a state of mind one can chant the holy name of the Lord constantly."
+Unless one is humble and meek, one cannot qualify to sit at the lotus feet of the Lord.
 </p>
 
 </div>
@@ -69,7 +122,7 @@ may my ambitions be fulfilled by Your grace.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

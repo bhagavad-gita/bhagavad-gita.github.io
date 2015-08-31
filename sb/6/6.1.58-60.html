@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.1.58-60.html">6.1.58-60</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.58-60</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/58-60"><b>58-60</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ekadasau vanam yatah
 pitr-sandesa-krd dvijah
@@ -61,7 +100,7 @@ mattaya vislathan-nivya
 vyapetam nirapatrapam
 kridantam anugayantam
 hasantam anayantike
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ekada--once upon a time; asau--this Ajamila; vanam yatah--went to the forest; pitr--of his father;
 sandesa--the order; krt--carrying out; dvijah--the brahmana; adaya--collecting; tatah--from the forest;
@@ -72,7 +111,7 @@ nectar; maireyam--made of the soma flower; mada--by intoxication; aghurnita--mov
 mattaya--intoxicated; vislathat-nivya--whose dress was slackened; vyapetam--fallen from proper behavior;
 nirapatrapam--without fear of public opinion; kridantam--engaged in enjoyment; anugayantam--singing;
 hasantam--smiling; anaya--with her; antike--close by.
-<p></p>
+<br>
 <h2>Translation</h2>
 Once this brahmana Ajamila, following the order of his father, went to the forest to collect fruit, flowers
 and two kinds of grass, called samit and kusa. On the way home, he came upon a sudra, a very lusty,
@@ -80,7 +119,7 @@ fourth-class man, who was shamelessly embracing and kissing a prostitute. The su
 singing and enjoying as if this were proper behavior. Both the sudra and the prostitute were drunk. The
 prostitute's eyes were rolling in intoxication, and her dress had become loose. Such was the condition in
 which Ajamila saw them.
-<p></p>
+<br>
 <h2>Purport</h2>
 While traveling along the public way, Ajamila came upon a fourth-class man and a prostitute, who are
 vividly described here. Drunkenness was sometimes manifest even in bygone ages, although not very
@@ -106,7 +145,7 @@ this Kali-yuga.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

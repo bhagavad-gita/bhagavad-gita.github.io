@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.6.html">6.12.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vrtras tu sa katham papah
-sarva-lokopatapanah
-ittham drdha-matih krsna
-asit sangrama ulbane
-<p></p>
+indro na vajram jagrhe vilajjitas
+cyutam sva-hastad ari-sannidhau punah
+tam aha vrtro hara atta-vajro
+jahi sva-satrum na visada-kalah
+<br>
 <h2>Synonyms</h2>
-vrtrah--Vrtrasura; tu--but; sah--he; katham--how; papah--although sinful (getting the body of a demon);
-sarva-loka--of all the three worlds; upatapanah--the cause of suffering; ittham--such; drdha-matih--firmly
-fixed intelligence; krsne--in Krsna; asit--there was; sangrame ulbane--in the great blazing fire of battle.
-<p></p>
+indrah--King Indra; na--not; vajram--the thunderbolt; jagrhe--took up; vilajjitah--being ashamed;
+cyutam--fallen; sva-hastat--from his own hand; ari-sannidhau--in front of his enemy; punah--again; tam--
+unto him; aha--said; vrtrah--Vrtrasura; hare--O Indra; atta-vajrah--taking up your thunderbolt; jahi--kill;
+sva-satrum--your enemy; na--not; visada-kalah--the time for lamentation.
+<br>
 <h2>Translation</h2>
-Vrtrasura was situated in the blazing fire of battle and was an infamous, sinful demon, always engaged
-in giving troubles and anxieties to others. How could such a demon become so greatly Krsna conscious?
-<p></p>
-<h2>Purport</h2>
-It has been described that a narayana-parayana, a pure devotee, is rarely found even among millions and
-millions of persons. Therefore Pariksit Maharaja was surprised that Vrtrasura, whose purpose was to give
-trouble and anxiety to others, was one of these devotees, even on a battlefield. What was the reason for
-Vrtrasura's advancement?
+Having dropped the thunderbolt from his hand in the presence of his enemy, Indra was practically
+defeated and was very much ashamed. He dared not pick up his weapon again. Vrtrasura, however,
+encouraged him, saying, "Take up your thunderbolt and kill your enemy. This is not the time to lament
+your fate."
 </p>
 
 </div>
@@ -75,7 +111,7 @@ Vrtrasura's advancement?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.1.62.html">6.1.62</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.62</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/62"><b>62</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 stambhayann atmanatmanam
 yavat sattvam yatha-srutam
 na sasaka samadhatum
 mano madana-vepitam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 stambhayan--trying to control; atmana--by the intelligence; atmanam--the mind; yavat sattvam--as far as
 possible for him; yatha-srutam--by remembering the instruction (of celibacy, brahmacarya, not even to see
 a woman); na--not; sasaka--was able; samadhatum--to restrain; manah--the mind; madana-vepitam--
 agitated by Cupid or lusty desire.
-<p></p>
+<br>
 <h2>Translation</h2>
 As far as possible he patiently tried to remember the instructions of the sastras not even to see a woman.
 With the help of this knowledge and his intellect, he tried to control his lusty desires, but because of the
 force of Cupid within his heart, he failed to control his mind.
-<p></p>
+<br>
 <h2>Purport</h2>
 Unless one is very strong in knowledge, patience and proper bodily, mental and intellectual behavior,
 controlling one's lusty desires is extremely difficult. Thus after seeing a man embracing a young woman
@@ -79,7 +118,7 @@ protection of the Supreme Personality of Godhead through devotional service.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

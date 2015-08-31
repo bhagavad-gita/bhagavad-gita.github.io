@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.17.7.html">6.17.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-om namo bhagavate maha-purusaya mahanubhavaya mahavibhuti-pataye saha maha-vibhutibhir balim
-upaharamiti; anenahar-ahar mantrena visnor avahanarghya-padyopasparsana-snana-vasa-upavitavibhusana-
-gandha-puspa-dhupa-dipopaharady-upacaran susama-hitopaharet.
-<p></p>
+jata-dharas tivra-tapa
+brahmavadi-sabha-patih
+ankikrtya striyam caste
+gata-hrih prakrto yatha
+<br>
 <h2>Synonyms</h2>
-om--O my Lord; namah--obeisances; bhagavate--unto the Supreme Personality of Godhead, full with six
-opulences; maha-purusaya--the best of enjoyers; maha-anubhavaya--the most powerful; maha-vibhuti--of
-the goddess of fortune; pataye--the husband; saha--with; maha-vibhutibhih--associates; balim--
-presentation s; upaharami--I am offering; iti--thus; anena--by this; ahah-ahah--every day; mantrena--
-mantra; visnoh--of Lord Visnu; avahana--invocations; arghya-padya-upasparsana--water for washing the
-hands, feet and mouth; snana--water for bathing; vasa--garments; upavita--a sacred thread; vibhusana--
-ornaments; gandha--scents; puspa--flowers; dhupa--incense; dipa--lamps; upahara--gifts; adi--and so on;
-upacaran--presentations; su-samahita--with great attention; upaharet--she must offer.
-<p></p>
+jata-dharah--keeping matted locks of hair; tivra-tapah--highly elevated due to undergoing fierce
+austerities and penances; brahma-vadi--of strict followers of the Vedic principles; sabha-patih--the
+president of an assembly; ankikrtya--embracing; striyam--a woman; ca--and; aste--sits; gata-hrih--without
+shame; prakrtah--a person conditioned by material nature; yatha--just as.
+<br>
 <h2>Translation</h2>
-"My Lord Visnu, full in six opulences, You are the best of all enjoyers and the most powerful. O
-husband of mother Laksmi, I offer my respectful obeisances unto You, who are accompanied by many
-associates, such as Visvaksena. I offer all the paraphernalia for worshiping You." One should chant this
-mantra every day with great attention while worshiping Lord Visnu with all paraphernalia, such as water
-for washing His feet, hands and mouth and water for His bath. One must offer Him various presentations
-for His worship, such as garments, a sacred thread, ornaments, scents, flowers, incense and lamps.
-<p></p>
+Lord Siva, whose hair is matted on his head, has certainly undergone great austerities and penances.
+Indeed, he is the president in the assembly of strict followers of Vedic principles. Nonetheless, he is seated
+with his wife on his lap in the midst of saintly persons and is embracing her as if he were a shameless,
+ordinary human being.
+<br>
 <h2>Purport</h2>
-This mantra is very important. Anyone engaged in Deity worship should chant this mantra, as quoted
-above, beginning with om namo bhagavate maha-purusaya.
+Citraketu appreciated the exalted position of Lord Siva, and therefore he remarked at how wonderful it
+was that Lord Siva was acting like an ordinary human being. He appreciated Lord Siva's position, but
+when he saw Lord Siva sitting in the midst of saintly persons and acting like a shameless, ordinary man,
+he was astonished. Srila Visvanatha Cakravarti Thakura remarks that although Citraketu criticized Lord
+Siva, he did not offend Lord Siva like Daksa. Daksa considered Lord Siva insignificant, but Citraketu
+expressed his wonder at Lord Siva's being situated in that way.
 </p>
 
 </div>
@@ -81,7 +119,7 @@ above, beginning with om namo bhagavate maha-purusaya.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

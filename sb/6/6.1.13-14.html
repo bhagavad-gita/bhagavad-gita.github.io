@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.1.13-14.html">6.1.13-14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.13-14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13-14"><b>13-14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tapasa brahmacaryena
 samena ca damena ca
@@ -57,7 +96,7 @@ deha-vag-buddhijam dhira
 dharmajnah sraddhayanvitah
 ksipanty agham mahad api
 venu-gulmam ivanalah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tapasa--by austerity or voluntary rejection of material enjoyment; brahmacaryena--by celibacy (the first
 austerity); samena--by controlling the mind; ca--and; damena--by fully controlling the senses; ca--also;
@@ -68,7 +107,7 @@ jam--performed by the body, words and intelligence; dhirah--those who are sober;
 fully imbued with knowledge of religious principles; sraddhaya anvitah--endowed with faith; ksipanti--
 destroy; agham--all kinds of sinful activities; mahat api--although very great and abominable; venugulmam--
 the dried creepers beneath a bamboo tree; iva--like; analah--fire.
-<p></p>
+<br>
 <h2>Translation</h2>
 To concentrate the mind, one must observe a life of celibacy and not fall down. One must undergo the
 austerity of voluntarily giving up sense enjoyment. One must then control the mind and senses, give
@@ -77,7 +116,7 @@ name of the Lord. Thus a sober and faithful person who knows the religious princ
 purified of all sins performed with his body, words and mind. These sins are like the dried leaves of
 creepers beneath a bamboo tree, which may be burned by fire although their roots remain to grow again
 at the first opportunity.
-<p></p>
+<br>
 <h2>Purport</h2>
 Tapah is explained in the smrti-sastra as follows: manasas cendriyanam ca aikagryam paramam tapah.
 "Complete control of the mind and senses and their complete concentration on one kind of activity is
@@ -125,7 +164,7 @@ learned to tolerate these disturbances under all circumstances is called dhira.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

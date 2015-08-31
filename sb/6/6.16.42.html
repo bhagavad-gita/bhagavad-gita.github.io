@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,89 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.42.html">6.16.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na hi kascit priyah strinam
-anjasa svasisatmanam
-patim putram bhrataram va
-ghnanty arthe ghatayanti ca
-<p></p>
+kah ksemo nija-parayoh
+kiyan varthah sva-para-druha dharmena
+sva-drohat tava kopah
+para-sampidaya ca tathadharmah
+<br>
 <h2>Synonyms</h2>
-na--not; hi--certainly; kascit--anyone; priyah--dear; strinam--to women; anjasa--actually; sva-asisa--for
-their own interests; atmanam--most dear; patim--husband; putram--son; bhrataram--brother; va--or;
-ghnanti--they kill; arthe--for their own interests; ghatayanti--cause to be killed; ca--also.
-<p></p>
+kah--what; ksemah--benefit; nija--to oneself; parayoh--and to others; kiyan--how much; va--or; arthah--
+purpose; sva-para-druha--which is envious of the performer and of others; dharmena--with the religious
+system; sva-drohat--from being envious of one's own self; tava--of You; kopah--anger; para-sampidaya--by
+giving pain to others; ca--also; tatha--as well as; adharmah--irreligion.
+<br>
 <h2>Translation</h2>
-To satisfy their own interests, women deal with men as if the men were most dear to them, but no one is
-actually dear to them. Women are supposed to be very saintly, but for their own interests they can kill
-even their husbands, sons or brothers, or cause them to be killed by others.
-<p></p>
+How can a religious system that produces envy of one's self and of others be beneficial for oneself and
+for them? What is auspicious about following such a system? What is actually to be gained? By causing
+pain to one's own self due to self-envy and by causing pain to others, one arouses Your anger and
+practices irreligion.
+<br>
 <h2>Purport</h2>
-A woman's nature has been particularly well studied by Kasyapa Muni. Women are self-interested by
-nature, and therefore they should be protected by all means so that their natural inclination to be too selfinterested
-will not be manifested. Women need to be protected by men. A woman should be cared for by
-her father in her childhood, by her husband in her youth and by her grown sons in her old age. This is the
-injunction of Manu, who says that a woman should not be given independence at any stage. Women must
-be cared for so that they will not be free to manifest their natural tendency for gross selfishness. There
-have been many cases, even in the present day, in which women have killed their husbands to take
-advantage of their insurance policies. This is not a criticism of women but a practical study of their
-nature. Such natural instincts of a woman or a man are manifested only in the bodily conception of life.
-When either a man or a woman is advanced in spiritual consciousness, the bodily conception of life
-practically vanishes. We should see all women as spiritual units (aham brahmasmi), whose only duty is to
-satisfy Krsna. Then the influences of the different modes of material nature, which result from one's
-possessing a material body, will not act.
-The Krsna consciousness movement is so beneficial that it can very easily counteract the contamination
-of material nature, which results from one's possessing a material body. Bhagavad-gita therefore teaches,
-in the very beginning, that whether one is a man or a woman, one must know that he or she is not the
-body but a spiritual soul. Everyone should be interested in the activities of the spirit soul, not the body.
-As long as one is activated by the bodily conception of life, there is always the danger of being misled,
-whether one is a man or a woman. The soul is sometimes described as purusa because whether one is
-dressed as a man or a woman, one is inclined to enjoy this material world. One who has this spirit of
-enjoyment is described as purusa. Whether one is a man or a woman, he is not interested in serving
-others; everyone is interested in satisfying his or her own senses. Krsna consciousness, however, provides
-first-class training for a man or a woman. A man should be trained to be a first-class devotee of Lord
-Krsna, and a woman should be trained to be a very chaste follower of her husband. That will make the
-lives of both of them happy.
+Any religious system but the process of bhagavata-dharma--service as an eternal servant of the Supreme
+Personality of Godhead--is a system of envy of one's own self and of others. For example, there are many
+systems of religion in which animal sacrifices are recommended. Such animal sacrifices are inauspicious
+both for the performer and for the animal. Although one is sometimes permitted to sacrifice an animal
+before the goddess Kali and eat it instead of purchasing meat from a slaughterhouse, permission to eat
+meat after a sacrifice in the presence of the goddess Kali is not the order of the Supreme Personality of
+Godhead. It is simply a concession for the miserable person who will not give up eating meat. It is meant
+to restrict his desire for unrestricted meat-eating. Such a religious system is condemned. Therefore Krsna
+says, sarva-dharman parityajya mam ekam saranam vraja: "Give up all other duties and surrender unto
+Me." That is the last word in religion.
+One may argue that the sacrifice of animals is recommended in the Vedas. This recommendation,
+however, is a restriction. Without Vedic restrictions on the purchase of meat, people will purchase meat
+from the market, which will be overflooded with meat shops, and slaughterhouses will increase. To
+restrict this, sometimes the Vedas say that one may eat meat after sacrificing an insignificant animal like a
+goat before the goddess Kali. In any case, a system of religion in which animal sacrifices are recommended
+is inauspicious for those who perform the sacrifices and for the animals. Envious persons who perform
+ostentatious animal sacrifices are condemned in Bhagavad-gita (16.17) as follows:
+atma-sambhavitah stabdha
+dhana-mana-madanvitah
+yajante nama-yajnais te
+dambhenavidhi-purvakam
+"Self-complacent and always impudent, deluded by wealth and false prestige, they sometimes perform
+sacrifices in name only without following any rules or regulations." Sometimes animal sacrifices are
+performed very gorgeously with grand arrangements for worshiping the goddess Kali, but such festivals,
+although performed in the name of yajna, are not actually yajna, for yajna means to satisfy the Supreme
+Personality of Godhead. Therefore it is recommended that in this age specifically, yajnaih sankirtanaprayair
+yajanti hi sumedhasah: those who have good intelligence satisfy the yajna-purusa, Visnu, by
+chanting the Hare Krsna mantra. Envious persons, however, are condemned by the Supreme Personality
+of Godhead as follows:
+ahankaram balam darpam
+kamam krodham ca samsritah
+mam atma-para-dehesu
+pradvisanto 'bhyasuyakah
+tan aham dvisatah kruran
+samsaresu naradhaman
+ksipamy ajasram asubhan
+asurisv eva yonisu
+"Bewildered by false ego, strength, pride, lust and anger, the demon becomes envious of the Supreme
+Personality of Godhead, who is situated in his own body and in the bodies of others, and blasphemes
+against the real religion. Those who are envious and mischievous, who are the lowest among men, are cast
+by Me into the ocean of material existence, into various demoniac species of life." (Bg. 16.18-19) These
+persons are condemned by the Supreme Personality of Godhead, as indicated by the words tava kopah. A
+person who commits murder is envious of himself and also the person he has killed, for the result of
+committing murder is that he will be arrested and hanged. If one transgresses the laws of a man-made
+government, he may escape being killed by the state, but one cannot escape the laws of God. A killer of
+any animal must be killed in his next life by the same animal. This is the law of nature. One must follow
+the instructions of the Supreme Lord: sarva-dharman parityajya mam ekam saranam vraja. If one follows
+any other system of religion, he is subject to punishment by the Supreme Personality of Godhead in many
+different ways. Therefore if one follows a concocted system of religion, he is envious not only of others
+but also of himself. Consequently his system of religion is useless.
+Srimad-Bhagavatam (1.2.8) says:
+dharmah svanusthitah pumsam
+visvaksena-kathasu yah
+notpadayed yadi ratim
+srama eva hi kevalam
+"Duties (dharma) executed by men, regardless of occupation, are only so much useless labor if they do
+not provoke attraction for the message of the Supreme Lord." Following a system of religion that does not
+awaken one's Krsna consciousness, or God consciousness, is merely a waste of time and labor.
 </p>
 
 </div>
@@ -97,7 +171,7 @@ lives of both of them happy.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

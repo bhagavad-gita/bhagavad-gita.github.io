@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.1.html">6.3.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-rajovaca
 nisamya devah sva-bhatopavarnitam
 pratyaha kim tan api dharmarajah
 evam hatajno vihatan murarer
 naidesikair yasya vase jano 'yam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-raja uvaca--the King said; nisamya--after hearing; devah--Lord Yamaraja; sva-bhata--of his own
 servants; upavarnitam--the statements; pratyaha--replied; kim--what; tan--unto them; api--also; dharmarajah--
@@ -62,13 +101,13 @@ Yamaraja, the superintendent of death and the judge of religious and irreligious
 thus; hata-ajnah--whose order was foiled; vihatan--who were defeated; murareh naidesikaih--by the order
 carriers of Murari, Krsna; yasya--of whom; vase--under the subjugation; janah ayam--all the people of the
 world.
-<p></p>
+<br>
 <h2>Translation</h2>
 King Pariksit said: O my lord, O Sukadeva Gosvami, Yamaraja is the controller of all living entities in
 terms of their religious and irreligious activities, but his order had been foiled. When his servants, the
 Yamadutas, informed him of their defeat by the Visnudutas, who had stopped them from arresting
 Ajamila, what did he reply?
-<p></p>
+<br>
 <h2>Purport</h2>
 Srila Visvanatha Cakravarti Thakura says that although the statements of the Yamadutas were fully
 upheld by Vedic principles, the statements of the Visnudutas were triumphant. This was confirmed by
@@ -80,7 +119,7 @@ Yamaraja himself.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

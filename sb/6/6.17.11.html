@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.17.11.html">6.17.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yuvam tu visvasya vibhu
-jagatah karanam param
-iyam hi prakrtih suksma
-maya-saktir duratyaya
-<p></p>
+sri-parvaty uvaca
+ayam kim adhuna loke
+sasta danda-dharah prabhuh
+asmad-vidhanam dustanam
+nirlajjanam ca viprakrt
+<br>
 <h2>Synonyms</h2>
-yuvam--both of you; tu--indeed; visvasya--of the universe; vibhu--the proprietors; jagatah--of the
-universe; karanam--the cause; param--supreme; iyam--this; hi--certainly; prakrtih--energy; suksma--
-difficult to understand; maya-saktih--the internal energy; duratyaya--difficult to overcome.
-<p></p>
+sri-parvati uvaca--the goddess Parvati said; ayam--this; kim--whether; adhuna--now; loke--in the world;
+sasta--the supreme controller; danda-dharah--the carrier of the rod of punishment; prabhuh--the master;
+asmat-vidhanam--of persons like us; dustanam--criminals; nirlajjanam--who have no shame; ca--and;
+viprakrt--the restrainer.
+<br>
 <h2>Translation</h2>
-My Lord Visnu and mother Laksmi, goddess of fortune, you are the proprietors of the entire creation.
-Indeed, you are the cause of the creation. Mother Laksmi is extremely difficult to understand because she
-is so powerful that the jurisdiction of her power is difficult to overcome. Mother Laksmi is represented in
-the material world as the external energy, but actually she is always the internal energy of the Lord.
+The goddess Parvati said: Alas, has this upstart now received a post from which to punish shameless
+persons like us? Has he been appointed ruler, carrier of the rod of punishment? Is he now the only master
+of everything?
 </p>
 
 </div>
@@ -71,7 +111,7 @@ the material world as the external energy, but actually she is always the intern
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

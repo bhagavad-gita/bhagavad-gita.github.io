@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.9.12.html">6.9.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na sanna-vahaya visanna-cetase
-prayunkta bhuyah sa gadam mahatma
-indro 'mrta-syandi-karabhimarsavita-
-vyatha-ksata-vaho 'vatasthe
-<p></p>
+athanvaharya-pacanad
+utthito ghora-darsanah
+krtanta iva lokanam
+yuganta-samaye yatha
+<br>
 <h2>Synonyms</h2>
-na--not; sanna--fatigued; vahaya--upon him whose carrier; visanna-cetase--morose in the core of his
-heart; prayunkta--used; bhuyah--again; sah--he (Vrtrasura); gadam--the club; maha-atma--the great soul
-(who refrained from striking Indra with the club when he saw Indra morose and aggrieved); indrah--
-Indra; amrta-syandi-kara--of his hand, which produces nectar; abhimarsa--by the touch; vita--was
-relieved; vyatha--from pains; ksata--and cuts; vahah--whose carrier elephant; avatasthe--stood there.
-<p></p>
+atha--thereafter; anvaharya-pacanat--from the fire known as Anvaharya; utthitah--arisen; ghoradarsanah--
+appearing very fearful; krtantah--personified annihilation; iva--like; lokanam--of all the planets;
+yuga-anta--of the end of the millennium; samaye--at the time; yatha--just as.
+<br>
 <h2>Translation</h2>
-When he saw Indra's carrier elephant thus fatigued and injured and when he saw Indra morose because
-his carrier had been harmed in that way, the great soul Vrtrasura, following religious principles, refrained
-from again striking Indra with the club. Taking this opportunity, Indra touched the elephant with his
-nectar-producing hand, thus relieving the animal's pain and curing its injuries. Then the elephant and
-Indra both stood silently.
+Thereafter, from the southern side of the sacrificial fire known as Anvaharya came a fearful personality
+who looked like the destroyer of the entire creation at the end of the millennium.
 </p>
 
 </div>
@@ -74,7 +108,7 @@ Indra both stood silently.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

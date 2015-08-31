@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.10.html">6.3.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yuyam ca pitranvadista
-deva-devena canaghah
-praja-sargaya hi katham
-vrksan nirdagdhum arhatha
-<p></p>
+tams te veditum icchamo
+yadi no manyase ksamam
+narayanety abhihite
+ma bhair ity ayayur drutam
+<br>
 <h2>Synonyms</h2>
-yuyam--you; ca--also; pitra--by your father; anvadistah--ordered; deva-devena--by the Personality of
-Godhead, the master of the masters; ca--also; anaghah--O sinless ones; praja-sargaya--for generating the
-population; hi--indeed; katham--how; vrksan--the trees; nirdagdhum--to burn to ashes; arhatha--are able.
-<p></p>
+tan--about them; te--from you; veditum--to know; icchamah--we wish; yadi--if; nah--for us; manyase--
+you think; ksamam--suitable; narayana--Narayana; iti--thus; abhihite--being uttered; ma--do not; bhaih--
+fear; iti--thus; ayayuh--they arrived; drutam--very soon.
+<br>
 <h2>Translation</h2>
-O pure-hearted ones, your father, Pracinabarhi, and the Supreme Personality of Godhead have ordered
-you to generate population. Therefore how can you burn to ashes these trees and herbs, which are needed
-for the maintenance of your subjects and descendants?
+As soon as the sinful Ajamila uttered the name Narayana, these four beautiful men immediately arrived
+and reassured him, saying, "Do not fear. Do not fear." We wish to know about them from Your Lordship.
+If you think we are able to understand them, kindly describe who they are.
+<br>
+<h2>Purport</h2>
+The order carriers of Yamaraja, being very much aggrieved because of their defeat by the four
+Visnudutas, wanted to bring them before Yamaraja and, if possible, punish them. Otherwise they desired
+to commit suicide. Before pursuing either course, however, they wanted to know about the Visnudutas
+from Yamaraja, who is also omniscient.
 </p>
 
 </div>
@@ -70,7 +115,7 @@ for the maintenance of your subjects and descendants?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

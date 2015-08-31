@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,54 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.19.html">6.3.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-manasaivasrjat purvam
-prajapatir imah prajah
-devasura-manusyadin
-nabhah-sthala-jalaukasah
-<p></p>
+dharmam tu saksad bhagavat-pranitam
+na vai vidur rsayo napi devah
+na siddha-mukhya asura manusyah
+kuto nu vidyadhara-caranadayah
+<br>
 <h2>Synonyms</h2>
-manasa--by the mind; eva--indeed; asrjat--created; purvam--in the beginning; prajapatih--the prajapati
-(Daksa); imah--these; prajah--living entities; deva--the demigods; asura--the demons; manusya-adin--and
-other living entities, headed by the human beings; nabhah--in the skies; sthala--on the land; jala--or
-within the water; okasah--who have their abodes.
-<p></p>
+dharmam--real religious principles, or bona fide laws of religion; tu--but; saksat--directly; bhagavat--by
+the Supreme Personality of Godhead; pranitam--enacted; na--not; vai--indeed; viduh--they know; rsayah--
+the great rsis such as Bhrgu; na--not; api--also; devah--the demigods; na--nor; siddha-mukhyah--the chief
+leaders of Siddhaloka; asurah--the demons; manusyah--the inhabitants of Bhurloka, the human beings;
+kutah--where; nu--indeed; vidyadhara--the lesser demigods known as Vidyadharas; carana--the residents
+of the planets where people are by nature great musicians and singers; adayah--and so on.
+<br>
 <h2>Translation</h2>
-With his mind, Prajapati Daksa first created all kinds of demigods, demons, human beings, birds, beasts,
-aquatics and so on.
+Real religious principles are enacted by the Supreme Personality of Godhead. Although fully situated in
+the mode of goodness, even the great rsis who occupy the topmost planets cannot ascertain the real
+religious principles, nor can the demigods or the leaders of Siddhaloka, to say nothing of the asuras,
+ordinary human beings, Vidyadharas and Caranas.
+<br>
+<h2>Purport</h2>
+When challenged by the Visnudutas to describe the principles of religion, the Yamadutas said, vedapranihito
+dharmah: the religious principles are the principles enacted in the Vedic literature. They did not
+know, however, that the Vedic literature contains ritualistic ceremonies that are not transcendental, but
+are meant to keep peace and order among materialistic persons in the material world. Real religious
+principles are nistraigunya, above the three modes of material nature, or transcendental. The Yamadutas
+did not know these transcendental religious principles, and therefore when prevented from arresting
+Ajamila they were surprised. Materialistic persons who attach all their faith to the Vedic rituals are
+described in Bhagavad-gita (2.42), wherein Krsna says, veda-vada-ratah partha nanyad astiti vadinah: the
+supposed followers of the Vedas say that there is nothing beyond the Vedic ceremonies. Indeed, there is a
+group of men in India who are very fond of the Vedic rituals, not understanding the meaning of these
+rituals, which are intended to elevate one gradually to the transcendental platform of knowing Krsna
+(vedais ca sarvair aham eva vedyah). Those who do not know this principle but who simply attach their
+faith to the Vedic rituals are called veda-vada-ratah.
+Herein it is stated that the real religious principle is that which is given by the Supreme Personality of
+Godhead. That principle is stated in Bhagavad-gita. Sarva-dharman parityajya mam ekam saranam vraja:
+one should give up all other duties and surrender unto the lotus feet of Krsna. That is the real religious
+principle everyone should follow. Even though one follows Vedic scriptures, one may not know this
+transcendental principle, for it is not known to everyone. To say nothing of human beings, even the
+demigods in the upper planetary systems are unaware of it. This transcendental religious principle must
+be understood from the Supreme Personality of Godhead directly or from His special representative, as
+stated in the next verses.
 </p>
 
 </div>
@@ -70,7 +136,7 @@ aquatics and so on.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

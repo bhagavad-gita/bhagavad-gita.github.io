@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.30.html">6.16.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vilokyaikanta-bhutani
-bhutany adau prajapatih
-striyam cakre sva-dehardham
-yaya pumsam matir hrta
-<p></p>
+mrnala-gauram siti-vasasam sphuratkirita-
+keyura-katitra-kankanam
+prasanna-vaktraruna-locanam vrtam
+dadarsa siddhesvara-mandalaih prabhum
+<br>
 <h2>Synonyms</h2>
-vilokya--seeing; ekanta-bhutani--detached; bhutani--the living entities; adau--in the beginning;
-prajapatih--Lord Brahma; striyam--the woman; cakre--created; sva-deha--of his body; ardham--half; yaya--
-by whom; pumsam--of men; matih--the mind; hrta--carried away.
-<p></p>
+mrnala-gauram--white like the fibers of a lotus; siti-vasasam--wearing garments of blue silk; sphurat--
+glittering; kirita--helmet; keyura--armlets; katitra--belt; kankanam--whose bangles; prasanna-vaktra--
+smiling face; aruna-locanam--having reddish eyes; vrtam--surrounded; dadarsa--he saw; siddha-isvaramandalaih--
+by the most perfect devotees; prabhum--the Supreme Personality of Godhead.
+<br>
 <h2>Translation</h2>
-In the beginning of creation, Lord Brahma, the father of the living entities of the universe, saw that all
-the living entities were unattached. To increase population, he then created woman from the better half of
-man's body, for woman's behavior carries away a man's mind.
-<p></p>
-<h2>Purport</h2>
-This entire universe is going on under the spell of sexual attachment, which was created by Lord
-Brahma to increase the population of the entire universe, not only in human society but also in other
-species. As stated by Rsabhadeva in the Fifth Canto, pumsah striya mithuni-bhavam etam: the entire
-world is going on under the spell of sexual attraction and desire between man and woman. When man
-and woman unite, the hard knot of this attraction becomes increasingly tight, and thus a man is
-implicated in the materialistic way of life. This is the illusion of the material world. This illusion acted
-upon Kasyapa Muni, although he was very learned and advanced in spiritual knowledge. As stated in the
-Manu-samhita (2.215) and Srimad-Bhagavatam (9.19.17) :
-matra svasra duhitra va
-naviviktasano bhavet
-balavan indriya-gramo
-vidvamsam api karsati
-"A man should not associate with a woman in a solitary place, not even with his mother, sister or
-daughter, for the senses are so strong that they lead astray even a person advanced in knowledge." When a
-man remains in a solitary place with a woman, his sexual desires undoubtedly increase. Therefore the
-words ekanta-bhutani, which are used here, indicate that to avoid sexual desires one should avoid the
-company of women as far as possible. Sexual desire is so powerful that one is saturated with it if he stays
-in a solitary place with any woman, even his mother, sister or daughter.
+Upon reaching the shelter of Lord Sesa, the Supreme Personality of Godhead, Citraketu saw that He was
+as white as the white fibers of a lotus flower. He was dressed in bluish garments and adorned with a
+brilliantly glittering helmet, armlets, belt and bangles. His face was smiling, and His eyes were reddish. He
+was surrounded by such exalted liberated persons as Sanat-kumara.
 </p>
 
 </div>
@@ -90,7 +111,7 @@ in a solitary place with any woman, even his mother, sister or daughter.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.8.30.html">6.8.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vrtro 'surams tan anugan manasvi
-pradhavatah preksya babhasa etat
-palayitam preksya balam ca bhagnam
-bhayena tivrena vihasya virah
-<p></p>
+sarvapadbhyo harer namarupa-
+yanayudhani nah
+buddhindriya-manah-pranan
+pantu parsada-bhusanah
+<br>
 <h2>Synonyms</h2>
-vrtrah--Vrtrasura, the commander of the demons; asuran--all the demons; tan--them; anugan--his
-followers; manasvi--the great-minded; pradhavatah--fleeing; preksya--observing; babhasa--spoke; etat--
-this; palayitam--fleeing; preksya--seeing; balam--army; ca--and; bhagnam--broken; bhayena--out of fear;
-tivrena--intense; vihasya--smiling; virah--the great hero.
-<p></p>
+sarva-apadbhyah--from all kinds of danger; hareh--of the Supreme Personality of Godhead; nama--the
+holy name; rupa--the transcendental form; yana--the carriers; ayudhani--and all the weapons; nah--our;
+buddhi--intelligence; indriya--senses; manah--mind; pranan--life air; pantu--may they protect and
+maintain; parsada-bhusanah--the decorations who are personal associates.
+<br>
 <h2>Translation</h2>
-Seeing his army broken and all the asuras, even those known as great heroes, fleeing the battlefield out
-of intense fear, Vrtrasura, who was truly a great-minded hero, smiled and spoke the following words.
+May the Supreme Personality of Godhead's holy names, His transcendental forms, His carriers and all
+the weapons decorating Him as personal associates protect our intelligence, senses, mind and life air from
+all dangers.
+<br>
+<h2>Purport</h2>
+There are various associates of the transcendental Personality of Godhead, and His weapons and carrier
+are among them. In the spiritual world, nothing is material. The sword, bow, club, disc and everything
+decorating the personal body of the Lord are spiritual living force. Therefore the Lord is called advaya
+jnana, indicating that there is no difference between Him and His names, forms, qualities, weapons and so
+on. Anything pertaining to Him is in the same category of spiritual existence. They are all engaged in the
+service of the Lord in varieties of spiritual forms.
 </p>
 
 </div>
@@ -70,7 +118,7 @@ of intense fear, Vrtrasura, who was truly a great-minded hero, smiled and spoke 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

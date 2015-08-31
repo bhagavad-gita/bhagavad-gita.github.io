@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,79 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.6.42.html">6.6.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-etam vidyam adhigato
-visvarupac chatakratuh
-trailokya-laksmim bubhuje
-vinirjitya mrdhe 'suran
-<p></p>
+aryamno matrka patni
+tayos carsanayah sutah
+yatra vai manusi jatir
+brahmana copakalpita
+<br>
 <h2>Synonyms</h2>
-etam--this; vidyam--prayer; adhigatah--received; visvarupat--from the brahmana Visvarupa; satakratuh--
-Indra, the King of heaven; trailokya-laksmim--all the opulence of the three worlds; bubhuje--
-enjoyed; vinirjitya--conquering; mrdhe--in battle; asuran--all the demons.
-<p></p>
+aryamnah--of Aryama; matrka--Matrka; patni--the wife; tayoh--by their union; carsanayah sutah--many
+sons who were learned scholars; yatra--wherein; vai--indeed; manusi--human; jatih--species; brahmana--
+by Lord Brahma; ca--and; upakalpita--was created.
+<br>
 <h2>Translation</h2>
-King Indra, who performed one hundred sacrifices, received this prayer of protection from Visvarupa.
-After conquering the demons, he enjoyed all the opulences of the three worlds.
-<p></p>
-<h2>Purport</h2>
-This mystical mantric armor given by Visvarupa to Indra, the King of heaven, acted powerfully, with the
-effect that Indra was able to conquer the asuras and enjoy the opulence of the three worlds without
-impediments. In this regard, Madhvacarya points out:
-vidyah karmani ca sada
-guroh praptah phala-pradah
-anyatha naiva phaladah
-prasannoktah phala-pradah
-One must receive all kinds of mantras from a bona fide spiritual master; otherwise the mantras will not
-be fruitful. This is also indicated in Bhagavad-gita (4.34):
-tad viddhi pranipatena
-pariprasnena sevaya
-upadeksyanti te jnanam
-jnaninas tattva-darsinah
-"Just try to learn the truth by approaching a spiritual master. Inquire from him submissively and render
-service unto him. The self-realized soul can impart knowledge unto you because he has seen the truth."
-All mantras should be received through the authorized guru, and the disciple must satisfy the guru in all
-respects, after surrendering at his lotus feet. In the Padma Purana it is also said, sampradaya-vihina ye
-mantras te nisphala matah. There are four sampradayas, or disciplic successions, namely the Brahmasampradaya,
-the Rudra-sampradaya, the Sri sampradaya and the Kumara-sampradaya. If one wants to
-advance in spiritual power, one must receive his mantras from one of these bona fide sampradayas;
-otherwise he will never successfully advance in spiritual life.
-Thus end the Bhaktivedanta purports of the Sixth Canto, Eighth Chapter, of the Srimad-Bhagavatam,
-entitled "The Narayana-kavaca Shield."
-Chapter Nine
-Appearance of the Demon Vrtrasura
-As described in this chapter, Indra, the King of heaven, killed Visvarupa, and therefore Visvarupa's
-father performed a yajna to kill Indra. When Vrtrasura appeared from that yajna, the demigods, in fear,
-sought shelter of the Supreme Personality of Godhead and glorified Him.
-Because of affection for the demons, Visvarupa secretly supplied them the remnants of yajna. When
-Indra learned about this, he beheaded Visvarupa, but he later regretted killing Visvarupa because
-Visvarupa was a brahmana. Although competent to neutralize the sinful reactions for killing a brahmana,
-Indra did not do so. Instead he accepted the reactions. Later, he distributed these reactions among the
-land, water, trees and women in general. Since the land accepted one fourth of the sinful reactions, a
-portion of the land turned into desert. The trees were also given one fourth of the sinful reactions, and
-therefore they drip sap, which is prohibited for drinking. Because women accepted one fourth of the
-sinful reactions, they are untouchable during their menstrual period. Since water was also infested with
-sinful reactions, when bubbles appear in water it cannot be used for any purpose.
-After Visvarupa was killed, his father, Tvasta, performed a sacrifice to kill King Indra. Unfortunately, if
-mantras are chanted irregularly, they yield an opposite result. This happened when Tvasta performed this
-yajna. While performing the sacrifice to kill Indra. Tvasta chanted a mantra to increase Indra's enemies,
-but because he chanted the mantra wrong, the sacrifice produced an asura named Vrtrasura, of whom
-Indra was the enemy. When Vrtrasura was generated from the sacrifice, his fierce features made the whole
-world afraid, and his personal effulgence diminished even the power of the demigods. Finding no other
-means of protection, the demigods began to worship the Supreme Personality of Godhead, the enjoyer of
-all the results of sacrifice, who is supreme throughout the entire universe. The demigods all worshiped
-Him because ultimately no one but Him can protect a living entity from fear and danger. Seeking shelter
-of a demigod instead of worshiping the Supreme Personality of Godhead is compared to trying to cross
-the ocean by grasping the tail of a dog. A dog can swim, but that does not mean that one can cross the
-ocean by grasping a dog's tail.
-Being pleased with the demigods, the Supreme Personality of Godhead advised them to approach
-Dadhici to beg him for the bones of his own body. Dadhici would comply with the request of the
-demigods, and with the help of his bones Vrtrasura could be killed.
+From the womb of Matrka, the wife of Aryama, were born many learned scholars. Among them Lord
+Brahma created the human species, which are endowed with an aptitude for self-examination.
 </p>
 
 </div>
@@ -123,7 +108,7 @@ demigods, and with the help of his bones Vrtrasura could be killed.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

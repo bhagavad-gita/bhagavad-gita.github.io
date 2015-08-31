@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.4.42.html">6.4.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yan nas tvam karma-sandhanam
-sadhunam grhamedhinam
-krtavan asi durmarsam
-vipriyam tava marsitam
-<p></p>
+tam tathavanatam bhaktam
+praja-kamam prajapatim
+citta-jnah sarva-bhutanam
+idam aha janardanah
+<br>
 <h2>Synonyms</h2>
-yat--which; nah--unto us; tvam--you; karma-sandhanam--who strictly follow the fruitive ritualistic
-ceremonies according to Vedic injunctions; sadhunam--who are honest (because we honestly seek
-elevated social standards and bodily comfort); grha-medhinam--although situated with a wife and
-children; krtavan asi--have created; durmarsam--unbearable; vipriyam--wrong; tava--your; marsitam--
-forgiven.
-<p></p>
+tam--him (Prajapati Daksa); tatha--in that way; avanatam--prostrated before Him; bhaktam--a great
+devotee; praja-kamam--desiring to increase the population; prajapatim--unto the prajapati (Daksa); cittajnah--
+who can understand the hearts; sarva-bhutanam--of all living entities; idam--this; aha--said;
+janardanah--the Supreme Personality of Godhead, who can appease everyone's desires.
+<br>
 <h2>Translation</h2>
-Although I live in household life with my wife and children, I honestly follow the Vedic injunctions by
-engaging in fruitive activities to enjoy life without sinful reactions. I have performed all kinds of yajnas,
-including the deva-yajna, rsi-yajna, pitr-yajna and nr-yajna. Because these yajnas are called vratas [vows],
-I am known as a grhavrata. Unfortunately, you have given me great displeasure by misguiding my sons,
-for no reason, to the path of renunciation. This can be tolerated once.
-<p></p>
-<h2>Purport</h2>
-Prajapati Daksa wanted to prove that he had been most tolerant in not having said anything when
-Narada Muni, for no reason, induced his ten thousand innocent sons to adopt the path of renunciation.
-Sometimes householders are accused of being grhamedhis, for grhamedhis are satisfied with family life
-without spiritual advancement. Grhasthas, however, are different because although grhasthas live in
-householder life with their wives and children, they are eager for spiritual advancement. Wanting to prove
-that he had been magnanimous to Narada Muni, Prajapati Daksa stressed that when Narada had misled
-his first sons, Daksa had taken no action; he had been kind and tolerant. He was aggrieved, however,
-because Narada Muni had misled his sons for a second time. Therefore he wanted to prove that Narada
-Muni, although dressed like a sadhu, was not actually a sadhu; he himself, although a householder, was a
-greater sadhu than Narada Muni.
+Although Prajapati Daksa could not say anything, when the Lord, who knows everyone's heart, saw His
+devotee prostrate in that manner and desiring to increase the population, He addressed him as follows.
 </p>
 
 </div>
@@ -86,7 +109,7 @@ greater sadhu than Narada Muni.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

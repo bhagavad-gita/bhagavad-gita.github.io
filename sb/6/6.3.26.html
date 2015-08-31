@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,57 +81,54 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.26.html">6.3.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yadoparamo manaso nama-ruparupasya
-drsta-smrti-sampramosat
-ya iyate kevalaya sva-samsthaya
-hamsaya tasmai suci-sadmane namah
-<p></p>
+evam vimrsya sudhiyo bhagavaty anante
+sarvatmana vidadhate khalu bhava-yogam
+te me na dandam arhanty atha yady amisam
+syat patakam tad api hanty urugaya-vadah
+<br>
 <h2>Synonyms</h2>
-yada--when in trance; uparamah--complete cessation; manasah--of the mind; nama-rupa--material
-names and forms; rupasya--of that by which they appear; drsta--of material vision; smrti--and of
-remembrance; sampramosat--due to the destruction; yah--who (the Supreme Personality of Godhead);
-iyate--is perceived; kevalaya--with spiritual; sva-samsthaya--His own original form; hamsaya--unto the
-supreme pure; tasmai--unto Him; suci-sadmane--who is realized only in the pure state of spiritual
-existence; namah--I offer my respectful obeisances.
-<p></p>
+evam--thus; vimrsya--considering; su-dhiyah--those whose intelligence is sharp; bhagavati--unto the
+Supreme Personality of Godhead; anante--the unlimited; sarva-atmana--with all their heart and soul;
+vidadhate--take to; khalu--indeed; bhava-yogam--the process of devotional service; te--such persons; me--
+my; na--not; dandam--punishment; arhanti--deserve; atha--therefore; yadi--if; amisam--of them; syat--
+there is; patakam--some sinful activity; tat--that; api--also; hanti--destroys; urugaya-vadah--the chanting of
+the holy name of the Supreme Lord.
+<br>
 <h2>Translation</h2>
-When one's consciousness is completely purified of the contamination of material existence, gross and
-subtle, without being agitated as in the working and dreaming states, and when the mind is not dissolved
-as in susupti, deep sleep, one comes to the platform of trance. Then one's material vision and the
-memories of the mind, which manifests names and forms, are vanquished. Only in such a trance is the
-Supreme Personality of Godhead revealed. Thus let us offer our respectful obeisances unto the Supreme
-Personality of Godhead, who is seen in that uncontaminated, transcendental state.
-<p></p>
+Considering all these points, therefore, intelligent men decide to solve all problems by adopting the
+devotional service of chanting the holy name of the Lord, who is situated in everyone's heart and who is a
+mine of all auspicious qualities. Such persons are not within my jurisdiction for punishment. Generally
+they never commit sinful activities, but even if by mistake or because of bewilderment or illusion they
+sometimes commit sinful acts, they are protected from sinful reactions because they always chant the Hare
+Krsna mantra.
+<br>
 <h2>Purport</h2>
-There are two stages of God realization. One is called sujneyam, or very easily understood (generally by
-mental speculation), and the other is called durjneyam, understood only with difficulty. Paramatma
-realization and Brahman realization are considered sujneyam, but realization of the Supreme Personality
-of Godhead is durjneyam. As described here, one attains the ultimate realization of the Personality of
-Godhead when one gives up the activities of the mind--thinking, feeling and willing--or, in other words,
-when mental speculation stops. This transcendental realization is above susupti, deep sleep. In our gross
-conditional stage we perceive things through material experience and remembrance, and in the subtle
-stage we perceive the world in dreams. The process of vision also involves remembrance and also exists in
-a subtle form. Above gross experience and dreams is susupti, deep sleep, and when one comes to the
-completely spiritual platform, transcending deep sleep, he attains trance, visuddha-sattva, or vasudevasattva,
-in which the Personality of Godhead is revealed.
-Atah sri-krsna-namadi na bhaved grahyam indriyaih: as long as one is situated in duality, on the sensual
-platform, gross or subtle, realization of the original Personality of Godhead is impossible. Sevonmukhe hi
-jihvadau svayam eva sphuraty adah: but when one engages his senses in the service of the Lord--
-specifically, when one engages the tongue in chanting the Hare Krsna mantra and tasting only Krsna
-prasada with a spirit of service--the Supreme Personality of Godhead is revealed. This is indicated in this
-verse by the word suci-sadmane. Suci means purified. By the spirit of rendering service with one's senses,
-one's entire existence becomes suci-sadma, the platform of uncontaminated purity. Daksa therefore offers
-his respectful obeisances unto the Supreme Personality of Godhead, who is revealed on the platform of
-suci-sadma. In this regard Srila Visvanatha Cakravarti Thakura quotes the following prayer by Lord
-Brahma from the Srimad-Bhagavatam (10.14.6): tathapi bhuman mahimagunasya te viboddhum arhaty
-amalantar-atmabhih. "One whose heart has become completely purified, my Lord, can understand the
-transcendental qualities of Your Lordship and can understand the greatness of Your activities."
+In this regard Srila Visvanatha Cakravarti Thakura quotes the following verse from the prayers of Lord
+Brahma (Bhag. 10.14.29):
+athapi te deva padambuja-dvayaprasada-
+lesanugrhita eva hi
+janati tattvam bhagavan-mahimno
+na canya eko 'pi ciram vicinvan
+The purport is that even though one is a very learned scholar of the Vedic sastras, he may be completely
+unaware of the existence of the Supreme Personality of Godhead and His name, fame, qualities and so
+forth, whereas one who is not a great scholar can understand the position of the Supreme Personality of
+Godhead if he somehow or other becomes a pure devotee of the Lord by engaging in devotional service.
+Therefore this verse spoken by Yamaraja says, evam vimrsya sudhiyo bhagavati: those who engage in the
+loving service of the Lord become sudhiyah, intelligent, but this is not so of a Vedic scholar who does not
+understand Krsna's name, fame and qualities. A pure devotee is one whose intelligence is clear; he is truly
+thoughtful because he engages in the service of the Lord--not as a matter of show, but with love, with his
+mind, words and body. Nondevotees may make a show of religion, but it is not very effective because
+although they ostentatiously attend a temple or church, they are thinking of something else. Such persons
+are neglecting their religious duty and are punishable by Yamaraja. But a devotee who commits sinful acts,
+which he may do unwillingly or accidentally because of his former habits, is excused. That is the value of
+the sankirtana movement.
 </p>
 
 </div>
@@ -101,7 +136,7 @@ transcendental qualities of Your Lordship and can understand the greatness of Yo
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

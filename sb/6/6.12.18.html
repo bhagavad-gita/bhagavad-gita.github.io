@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.18.html">6.12.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atmanam prakrtisv addha
-nidhaya sreya apnuyat
-rajna tatha prakrtayo
-naradevahitadhayah
-<p></p>
+sri-suka uvaca
+indro vrtra-vacah srutva
+gatalikam apujayat
+grhita-vajrah prahasams
+tam aha gata-vismayah
+<br>
 <h2>Synonyms</h2>
-atmanam--himself; prakrtisu--under these seven royal elements; addha--directly; nidhaya--placing;
-sreyah--ultimate happiness; apnuyat--may obtain; rajna--by the king; tatha--so also; prakrtayah--the
-dependent royal elements; nara-deva--O King; ahita-adhayah--offering wealth and other items.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; indrah--King Indra; vrtra-vacah--the words of Vrtrasura;
+srutva--hearing; gata-alikam--without duplicity; apujayat--worshiped; grhita-vajrah--taking up the
+thunderbolt; prahasan--smiling; tam--unto Vrtrasura; aha--said; gata-vismayah--giving up his wonder.
+<br>
 <h2>Translation</h2>
-O King, O lord of humanity, when a king directly depends upon his associates and follows their
-instructions, he is happy. Similarly, when his associates offer their gifts and activities to the king and
-follow his orders, they are also happy.
-<p></p>
+Sukadeva Gosvami said: Hearing the straightforward, instructive words of Vrtrasura, King Indra praised
+him and again took the thunderbolt in his hand. Without bewilderment or duplicity, he then smiled and
+spoke to Vrtrasura as follows.
+<br>
 <h2>Purport</h2>
-The actual happiness of a king and his dependents is described in this verse. A king should not simply
-give orders to his dependents because he is supreme; sometimes he must follow their instructions.
-Similarly, the dependents should depend on the king. This mutual dependence will make everyone happy.
+King Indra, the greatest of the demigods, was astonished to hear the instructions of Vrtrasura, who was
+supposed to be a demon. He was struck with wonder that a demon could speak so intelligently. Then he
+remembered great devotees like Prahlada Maharaja and Bali Maharaja, who had been born in the families
+of demons, and thus he came to his senses. Even so-called demons sometimes have exalted devotion for
+the Supreme Personality of Godhead. Therefore Indra smiled reassuringly at Vrtrasura.
 </p>
 
 </div>
@@ -75,7 +117,7 @@ Similarly, the dependents should depend on the king. This mutual dependence will
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.8.12.html">6.8.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yataksasu-mano-buddhis
-tattva-drg dhvasta-bandhanah
-asthitah paramam yogam
-na deham bubudhe gatam
-<p></p>
+om harir vidadhyan mama sarva-raksam
+nyastanghri-padmah patagendra-prsthe
+darari-carmasi-gadesu-capapasan
+dadhano 'sta-guno 'sta-bahuh
+<br>
 <h2>Synonyms</h2>
-yata--controlled; aksa--senses; asu--the life air; manah--the mind; buddhih--intelligence; tattva-drk--one
-who knows the tattvas, the material and spiritual energies; dhvasta-bandhanah--liberated from bondage;
-asthitah--being situated in; paramam--the supreme; yogam--absorption, trance; na--not; deham--the
-material body; bubudhe--perceived; gatam--left.
-<p></p>
+om--O Lord; harih--the Supreme Personality of Godhead; vidadhyat--may He bestow; mama--my; sarvaraksam--
+protection from all sides; nyasta--placed; anghri-padmah--whose lotus feet; patagendra-prsthe--
+on the back of Garuda, the king of all birds; dara--conchshell; ari--disc; carma--shield; asi--sword; gada--
+club; isu--arrows; capa--bow; pasan--ropes; dadhanah--holding; asta--possessing eight; gunah--
+perfections; asta--eight; bahuh--arms.
+<br>
 <h2>Translation</h2>
-Dadhici Muni controlled his senses, life force, mind and intelligence and became absorbed in trance.
-Thus he cut all his material bonds. He could not perceive how his material body became separated from
-his self.
-<p></p>
+The Supreme Lord, who sits on the back of the bird Garuda, touching him with His lotus feet, holds
+eight weapons--the conchshell, disc, shield, sword, club, arrows, bow and ropes. May that Supreme
+Personality of Godhead protect me at all times with His eight arms. He is all-powerful because He fully
+possesses the eight mystic powers [anima, laghima, etc.].
+<br>
 <h2>Purport</h2>
-The Lord says in Bhagavad-gita (8.5):
-anta-kale ca mam eva
-smaran muktva kalevaram
-yah prayati sa mad-bhavam
-yati nasty atra samsayah
-"Whoever, at the time of death, quits his body remembering Me alone, at once attains My nature. Of this
-there is no doubt." Of course, one must practice before one is overcome by death, but the perfect yogi,
-namely the devotee, dies in trance, thinking of Krsna. He does not feel his material body being separated
-from his soul; the soul is immediately transferred to the spiritual world. Tyaktva deham punar janma naiti
-mam eti: the soul does not enter the womb of a material mother again. but is transferred back home, back
-to Godhead. This yoga, bhakti-yoga, is the highest yoga system, as explained by the Lord Himself in
-Bhagavad-gita (6.47):
-yoginam api sarvesam
-mad-gatenantaratmana
-sraddhavan bhajate yo mam
-sa me yuktatamo matah
-"Of all yogis, he who always abides in Me with great faith. worshiping Me in transcendental loving
-service, is most intimately united with Me in yoga and is the highest of all." The bhakti-yogi always thinks
-of Krsna, and therefore at the time of death he can very easily transfer himself to Krsnaloka, without even
-perceiving the pains of death.
+Thinking oneself one with the Supreme is called ahangrahopasana. Through ahangrahopasana one does
+not become God, but he thinks of himself as qualitatively one with the Supreme. Understanding that as a
+spirit soul he is equal in quality to the supreme soul the way the water of a river is of the same nature as
+the water of the sea, one should meditate upon the Supreme Lord, as described in this verse, and seek His
+protection. The living entities are always subordinate to the Supreme. Consequently their duty is to
+always seek the mercy of the Lord in order to be protected by Him in all circumstances.
 </p>
 
 </div>
@@ -93,7 +120,7 @@ perceiving the pains of death.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,52 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.38.html">6.16.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nisamya tad-vaco vipro
-vimanah paryatapyata
-aho adharmah sumahan
-adya me samupasthitah
-<p></p>
+visaya-trso nara-pasavo
+ya upasate vibhutir na param tvam
+tesam asisa isa
+tad anu vinasyanti yatha raja-kulam
+<br>
 <h2>Synonyms</h2>
-nisamya--hearing; tat-vacah--her words; viprah--the brahmana; vimanah--aggrieved; paryatapyata--
-lamented; aho--alas; adharmah--impiety; su-mahan--very great; adya--today; me--upon me;
-samupasthitah--has come.
-<p></p>
+visaya-trsah--eager to enjoy sense gratification; nara-pasavah--manlike animals; ye--who; upasate--
+worship very gorgeously; vibhutih--small particles of the Supreme Lord (the demigods); na--not; param--
+the Supreme; tvam--You; tesam--of them; asisah--the benedictions; isa--O supreme controller; tat--them
+(the demigods); anu--after; vinasyanti--will be vanquished; yatha--just as; raja-kulam--those who are
+supported by the government (when the government is finished).
+<br>
 <h2>Translation</h2>
-Upon hearing Diti's request, Kasyapa Muni was very much aggrieved. "Alas," he lamented, "now I face
-the danger of the impious act of killing Indra."
-<p></p>
+O Lord, O Supreme, unintelligent persons who thirst for sense enjoyment and who worship various
+demigods are no better than animals in the human form of life. Because of their animalistic propensities,
+they fail to worship Your Lordship, and instead they worship the insignificant demigods, who are but
+small sparks of Your glory. With the destruction of the entire universe, including the demigods, the
+benedictions received from the demigods also vanish, just like the nobility when a king is no longer in
+power.
+<br>
 <h2>Purport</h2>
-Although Kasyapa Muni was eager to fulfill the desire of his wife Diti, when he heard that she wanted a
-son to kill Indra his jubilation was immediately reduced to nothing because he was averse to the idea.
+Bhagavad-gita (7.20) says, kamais tais tair hrta jnanah prapadyante 'nya-devatah: "Those whose minds
+are distorted by material desires surrender unto the demigods." Similarly, this verse condemns worship of
+the demigods. We may show our respect to the demigods, but the demigods are not worshipable. The
+intelligence of those who worship the demigods is lost (hrta jnanah) because these worshipers do not
+know that when the entire material cosmic manifestation is annihilated, the demigods, who are the
+departmental heads of that manifestation, will be vanquished. When the demigods are vanquished, the
+benedictions given by the demigods to unintelligent men will also be vanquished. Therefore a devotee
+should not hanker to obtain material opulence by worshiping the demigods, but should engage in the
+service of the Lord, who will satisfy all his desires.
+akamah sarva-kamo va
+moksa-kama udara-dhih
+tivrena bhakti-yogena
+yajeta purusam param
+"Whether full of all material desires, free from material desires or desiring liberation, a person who has
+broader intelligence must by all means worship the supreme whole, the Personality of Godhead." (Bhag.
+2.3.10) This is the duty of a perfect human being. One who has the shape of a human being but whose
+actions are nothing but those of an animal is called nara-pasu or dvipada-pasu, a two-legged animal. A
+human being who is not interested in Krsna consciousness is condemned herewith as a nara-pasu.
 </p>
 
 </div>
@@ -73,7 +134,7 @@ son to kill Indra his jubilation was immediately reduced to nothing because he w
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

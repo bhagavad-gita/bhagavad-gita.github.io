@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.13.10.html">6.13.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-rajovaca
-kau yuvam jnana-sampannau
-mahisthau ca mahiyasam
-avadhutena vesena
-gudhav iha samagatau
-<p></p>
+sri-suka uvaca
+evam sancodito viprair
+marutvan ahanad ripum
+brahma-hatya hate tasminn
+asasada vrsakapim
+<br>
 <h2>Synonyms</h2>
-sri-raja uvaca--King Citraketu said; kau--who; yuvam--you two; jnana-sampannau--fully developed in
-knowledge; mahisthau--the greatest; ca--also; mahiyasam--among other great personalities; avadhutena--
-of the liberated wandering mendicants; vesena--by the dress; gudhau--disguised; iha--in this place;
-samagatau--arrived.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; evam--thus; sancoditah--being encouraged; vipraih--by the
+brahmanas; marutvan--Indra; ahanat--killed; ripum--his enemy, Vrtrasura; brahma-hatya--the sinful
+reaction for killing a brahmana; hate--was killed; tasmin--when he (Vrtrasura); asasada--approached;
+vrsakapim--Indra, who is also named Vrsakapi.
+<br>
 <h2>Translation</h2>
-King Citraketu said: You have both come here dressed like avadhutas, liberated persons, just to cover
-your identities, but I see that of all men, you are the most elevated in awareness. You know everything as
-it is. Therefore you are the greatest of all great personalities.
+Sri Sukadeva Gosvami said: Encouraged by the words of the sages, Indra killed Vrtrasura, and when he
+was killed the sinful reaction for killing a brahmana [brahma-hatya] certainly took shelter of Indra.
+<br>
+<h2>Purport</h2>
+After killing Vrtrasura, Indra could not surpass the brahma-hatya, the sinful reactions for killing a
+brahmana. Formerly he had killed one brahmana, Visvarupa, out of circumstantial anger, but this time,
+following the advice of the sages, he killed another brahmana purposely. Therefore the sinful reaction was
+greater than before. Indra could not be relieved from the reaction simply by performing sacrifices for
+atonement. He had to undergo a severe series of sinful reactions, and when he was freed by such suffering,
+the brahmanas allowed him to perform the horse sacrifice. The planned execution of sinful deeds on the
+strength of chanting the holy name of the Lord or undergoing prayascitta, atonement, cannot give relief to
+anyone, even to Indra or Nahusa. Nahusa was officiating for Indra while Indra, absent from heaven, was
+going here and there to gain release from his sinful reactions.
 </p>
 
 </div>
@@ -72,7 +121,7 @@ it is. Therefore you are the greatest of all great personalities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

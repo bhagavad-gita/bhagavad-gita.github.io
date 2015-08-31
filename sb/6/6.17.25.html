@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.17.25.html">6.17.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-etac caritva vidhivad vratam vibhor
-abhipsitartham labhate puman iha
-stri caitad asthaya labheta saubhagam
-sriyam prajam jiva-patim yaso grham
-<p></p>
+sri-suka uvaca
+iti prasadya girisau
+citraketur arindama
+jagama sva-vimanena
+pasyatoh smayatos tayoh
+<br>
 <h2>Synonyms</h2>
-etat--this; caritva--performing; vidhi-vat--according to the injunctions of sastra; vratam--vow; vibhoh--
-from the Lord; abhipsita--desired; artham--object; labhate--gets; puman--a man; iha--in this life; stri--a
-woman; ca--and; etat--this; asthaya--performing; labheta--can get; saubhagam--good fortune; sriyam--
-opulence; prajam--progeny; jiva-patim--a husband with a long duration of life; yasah--good reputation;
-grham--home.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; prasadya--after satisfying; girisau--Lord Siva and
+his wife, Parvati; citraketuh--King Citraketu; arim-dama--O King Pariksit, who are always able to subdue
+the enemy; jagama--went away; sva-vimanena--by his own airplane; pasyatoh--were watching; smayatoh--
+were smiling; tayoh--while Lord Siva and Parvati.
+<br>
 <h2>Translation</h2>
-If this vow or ritualistic ceremony is observed according to the description of sastra, even in this life a
-man will be able to achieve all the benedictions he desires from the Lord. A wife who performs this
-ritualistic ceremony will surely receive good fortune, opulence, sons, a long-living husband, a good
-reputation and a good home.
-<p></p>
-<h2>Purport</h2>
-In Bengal even today if a woman lives for a long time with her husband, she is considered very
-fortunate. A woman generally desires a good husband, good children, a good home, prosperity, opulence
-and so on. As recommended in this verse, a woman will receive all these desirable benedictions, and a
-man will also be able to receive all benedictions, from the Supreme Personality of Godhead. Thus by
-performing this particular type of vrata, a man and a woman in Krsna consciousness will be happy in this
-material world, and because of being Krsna conscious they will be promoted to the spiritual world.
+Sri Sukadeva Gosvami continued: O King Pariksit, subduer of the enemy, after Citraketu satisfied Lord
+Siva and his wife, Parvati, he boarded his airplane and left as they looked on. When Lord Siva and Parvati
+saw that Citraketu, although informed of the curse, was unafraid, they smiled, being fully astonished by
+his behavior.
 </p>
 
 </div>
@@ -81,7 +112,7 @@ material world, and because of being Krsna conscious they will be promoted to th
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.6.27.html">6.6.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-deva ucuh
-vayam te 'tithayah prapta
-asramam bhadram astu te
-kamah sampadyatam tata
-pitrnam samayocitah
-<p></p>
+surabher mahisa gavo
+ye canye dvisapha nrpa
+tamrayah syena-grdhradya
+muner apsarasam ganah
+<br>
 <h2>Synonyms</h2>
-sri-devah ucuh--the demigods said; vayam--we; te--your; atithayah--guests; praptah--arrived at;
-asramam--your abode; bhadram--good fortune; astu--let there be; te--unto you; kamah--the desire;
-sampadyatam--let it be executed; tata--O darling; pitrnam--of us, who are just like your fathers;
-samayocitah--suitable to the present time.
-<p></p>
+surabheh--from the womb of Surabhi; mahisah--buffalo; gavah--cows; ye--who; ca--also; anye--others;
+dvi-saphah--having cloven hooves; nrpa--O King; tamrayah--from Tamra; syena--eagles; grdhra-adyah--
+vultures and so on; muneh--from Muni; apsarasam--of angels; ganah--the groups.
+<br>
 <h2>Translation</h2>
-The demigods said: Beloved Visvarupa, may there be all good fortune for you. We, the demigods, have
-come to your asrama as your guests. Please try to fulfill our desires according to the time, since we are on
-the level of your parents.
+My dear King Pariksit, from the womb of Surabhi the buffalo, cow and other animals with cloven
+hooves took birth, from the womb of Tamra the eagles, vultures and other large birds of prey took birth,
+and from the womb of Muni the angels took birth.
 </p>
 
 </div>
@@ -72,7 +109,7 @@ the level of your parents.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

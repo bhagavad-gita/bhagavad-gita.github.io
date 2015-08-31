@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,59 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.26.html">6.14.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-bhaktayaitam prapannaya
-vidyam adisya naradah
-yayav angirasa sakam
-dhama svayambhuvam prabho
-<p></p>
+tatah pahi maha-bhaga
+purvaih saha gatam tamah
+yatha tarema dusparam
+prajaya tad vidhehi nah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; bhaktaya--unto the devotee; etam--this; prapannaya--unto
-one who fully surrendered; vidyam--transcendental knowledge; adisya--instructing; naradah--the great
-sage Narada; yayau--left; angirasa--the great saint Angira; sakam--with; dhama--for the topmost planet;
-svayambhuvam--belonging to Lord Brahma; prabho--O King.
-<p></p>
+tatah--therefore, because of this; pahi--kindly save; maha-bhaga--O great sage; purvaih saha--along with
+my forefathers; gatam--gone; tamah--to darkness; yatha--so that; tarema--we can cross; dusparam--very
+difficult to cross; prajaya--by getting a son; tat--that; vidhehi--kindly do; nah--for us.
+<br>
 <h2>Translation</h2>
-Sri Sukadeva Gosvami continued: Narada, having become the spiritual master of Citraketu, instructed
-him fully in this prayer because Citraketu was fully surrendered. O King Pariksit, Narada then left with
-the great sage Angira for the topmost planet, known as Brahmaloka.
-<p></p>
+Therefore, O great sage, please save me and my forefathers, who are descending to the darkness of hell
+because I have no progeny. Kindly do something so that I may have a son to deliver us from hellish
+conditions.
+<br>
 <h2>Purport</h2>
-When Angira had first come to visit King Citraketu, he did not bring Narada with him. However, after
-the death of Citraketu's son, Angira brought Narada to instruct King Citraketu about bhakti-yoga. The
-difference was that in the beginning Citraketu was not in a temperament of renunciation, but after the
-death of his son, when he was overwhelmed by his great plight, he was awakened to the platform of
-renunciation by instructions regarding the falsity of this material world and material possessions. It is
-only at this stage that bhakti-yoga can be instructed. As long as one is attached to material enjoyment,
-bhakti-yoga cannot be understood. This is confirmed in Bhagavad-gita (2.44):
-bhogaisvarya-prasaktanam
-tayapahrta-cetasam
-vyavasayatmika buddhih
-samadhau na vidhiyate
-"In the minds of those who are too attached to sense enjoyment and material opulence, and who are
-bewildered by such things, the resolute determination of devotional service to the Supreme Lord does not
-take place." As long as one is very much attached to material enjoyment, one cannot concentrate his mind
-on the subject matter of devotional service.
-The Krsna consciousness movement is progressing successfully in the Western countries at the present
-moment because the youth in the West have reached the stage of vairagya, or renunciation. They are
-practically disgusted with material pleasure from material sources, and this has resulted in a population of
-hippies throughout the Western countries. Now if these young people are instructed about bhakti-yoga,
-Krsna consciousness, the instructions will certainly be effective.
-As soon as Citraketu understood the philosophy of vairagya-vidya, the knowledge of renunciation, he
-could understand the process of bhakti-yoga. In this regard Srila Sarvabhauma Bhattacarya has said,
-vairagya-vidya-nija-bhakti-yoga. Vairagya-vidya and bhakti-yoga are parallel lines. One is essential for
-understanding the other. It is also said, bhaktih paresanubhavo viraktir anyatra ca (Bhag. 11.2.42).
-Advancement in devotional service, or Krsna consciousness, is characterized by increasing renunciation of
-material enjoyment. Narada Muni is the father of devotional service, and therefore, just to bestow
-causeless mercy upon King Citraketu, Angira brought Narada Muni to instruct the King. These
-instructions were extremely effective. Anyone who follows in the footsteps of Narada Muni is certainly a
-pure devotee.
+According to Vedic civilization, one gets married simply to have a son, who is needed to offer oblations
+to his forefathers. King Citraketu responsibly desired to beget a child so that he and his forefathers might
+be delivered from the darkest regions. He was concerned with how to get pinda, oblations, in the next life,
+not only for himself but also for his forefathers. Therefore he requested Angira Rsi to favor him by doing
+something that could help him get a son.
 </p>
 
 </div>
@@ -103,7 +116,7 @@ pure devotee.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

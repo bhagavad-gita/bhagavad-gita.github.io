@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.19.html">6.12.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-api darah prajamatya
-bhrtyah srenyo 'tha mantrinah
-paura janapada bhupa
-atmaja vasa-vartinah
-<p></p>
+indra uvaca
+aho danava siddho 'si
+yasya te matir idrsi
+bhaktah sarvatmanatmanam
+suhrdam jagad-isvaram
+<br>
 <h2>Synonyms</h2>
-api--whether; darah--wives; praja--citizens; amatyah--and secretaries; bhrtyah--servants; srenyah--
-merchants; atha--as well as; mantrinah--ministers; paurah--inmates of the palace; janapadah--the
-provincial governors; bhupah--landholders; atma-jah--sons; vasa-vartinah--under your full control.
-<p></p>
+indrah uvaca--Indra said; aho--hello; danava--O demon; siddhah asi--you are now perfect; yasya--whose;
+te--your; matih--consciousness; idrsi--such as this; bhaktah--a great devotee; sarva-atmana--without
+diversion; atmanam--to the Supersoul; suhrdam--the greatest friend; jagat-isvaram--to the Supreme
+Personality of Godhead.
+<br>
 <h2>Translation</h2>
-O King, are your wives, citizens, secretaries and servants and the merchants who sell spices and oil
-under your control? Are you also in full control of ministers, the inhabitants of your palace, your
-provincial governors, your sons and your other dependents?
-<p></p>
+Indra said: O great demon, I see by your discrimination and endurance in devotional service, despite
+your dangerous position, that you are a perfect devotee of the Supreme Personality of Godhead, the
+Supersoul and friend of everyone.
+<br>
 <h2>Purport</h2>
-The master or king and his subordinates should be interdependent. Through cooperation, both of them
-can be happy.
+As stated in Bhagavad-gita (6.22):
+yam labdhva caparam labham
+manyate nadhikam tatah
+yasmin sthito na duhkhena
+gurunapi vicalyate
+"Established in Krsna consciousness, one never departs from the truth, and upon gaining this he thinks
+there is no greater gain. Being situated in such a position, one is never shaken, even in the midst of the
+greatest difficulty." An unalloyed devotee is never disturbed by any kind of trying circumstance. Indra was
+surprised to see that Vrtrasura, undisturbed, was fixed in devotional service to the Lord, for such a
+mentality is impossible for a demon. However, by the grace of the Supreme Personality of Godhead,
+anyone can become an exalted devotee (striyo vaisyas tatha sudras te 'pi yanti param gatim). An unalloyed
+devotee is sure to return home, back to Godhead.
 </p>
 
 </div>
@@ -74,7 +125,7 @@ can be happy.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

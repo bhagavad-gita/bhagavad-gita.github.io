@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,71 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.9.html">6.10.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ojah saho balam pranam
-amrtam mrtyum eva ca
-tam ajnaya jano hetum
-atmanam manyate jadam
-<p></p>
+etavan avyayo dharmah
+punya-slokair upasitah
+yo bhuta-soka-harsabhyam
+atma socati hrsyati
+<br>
 <h2>Synonyms</h2>
-ojah--the strength of the senses; sahah--the strength of the mind; balam--the strength of the body;
-pranam--the living condition; amrtam--immortality; mrtyum--death; eva--indeed; ca--also; tam--Him (the
-Supreme Lord); ajnaya--without knowing; janah--a foolish person; hetum--the cause; atmanam--the body;
-manyate--considers; jadam--although as good as stone.
-<p></p>
+etavan--this much; avyayah--imperishable; dharmah--religious principle; punya-slokaih--by famous
+persons who are celebrated as pious; upasitah--recognized; yah--which; bhuta--of the living beings; soka--
+by the distress; harsabhyam--and by the happiness; atma--the mind; socati--laments; hrsyati--feels
+happiness.
+<br>
 <h2>Translation</h2>
-Our sensory prowess, mental power, bodily strength, living force, immortality and mortality are all
-subject to the superintendence of the Supreme Personality of Godhead. Not knowing this, foolish people
-think the dull material body to be the cause of their activities.
+If one is unhappy to see the distress of other living beings and happy to see their happiness, his religious
+principles are appreciated as imperishable by exalted persons who are considered pious and benevolent.
+<br>
+<h2>Purport</h2>
+One generally follows different types of religious principles or performs various occupational duties
+according to the body given to him by the modes of material nature. In this verse, however, real religious
+principles are explained. Everyone should be unhappy to see others in distress and happy to see others
+happy. Atmavat sarva-bhutesu: one should feel the happiness and distress of others as his own. It is on
+this basis that the Buddhist religious principle of nonviolence--ahimsah parama-dharmah--is established.
+We feel pain when someone disturbs us, and therefore we should not inflict pain upon other living
+beings. Lord Buddha's mission was to stop unnecessary animal killing, and therefore he preached that the
+greatest religious principle is nonviolence.
+One cannot continue killing animals and at the same time be a religious man. That is the greatest
+hypocrisy. Jesus Christ said, "Do not kill," but hypocrites nevertheless maintain thousands of
+slaughterhouses while posing as Christians. Such hypocrisy is condemned in this verse. One should be
+happy to see others happy, and one should be unhappy to see others unhappy. This is the principle to be
+followed. Unfortunately, at the present moment so-called philanthropists and humanitarians advocate the
+happiness of humanity at the cost of the lives of poor animals. That is not recommended herein. This
+verse clearly says that one should be compassionate to all living entities. Regardless of whether human.
+animal, tree or plant, all living entities are sons of the Supreme Personality of Godhead. Lord Krsna says
+in Bhagavad-gita (14.4):
+sarva-yonisu kaunteya
+murtayah sambhavanti yah
+tasam brahma mahad yonir
+aham bija-pradah pita
+"It should be understood that all species of life, O son of Kunti, are made possible by birth in this
+material nature, and that I am the seed-giving father." The different forms of these living entities are only
+their external dresses. Every living being is actually a spirit soul, a part and parcel of God. Therefore one
+should not favor only one kind of living being. A Vaisnava sees all living entities as part and parcel of
+God. As the Lord says in Bhagavad-gita (5.18 and 18.54):
+vidya-vinaya-sampanne
+brahmane gavi hastini
+suni caiva svapake ca
+panditah sama-darsinah
+"The humble sage, by virtue of true knowledge, sees with equal vision a learned and gentle brahmana, a
+cow, an elephant, a dog and a dog-eater [outcaste]."
+brahma-bhutah prasannatma
+na socati na kanksati
+samah sarvesu bhutesu
+mad-bhaktim labhate param
+"One who is transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful.
+He never laments nor desires to have anything; he is equally disposed to every living entity. In that state
+he attains pure devotional service unto Me." A Vaisnava, therefore, is truly a perfect person because he
+laments to see others unhappy and feels joy at seeing others happy. A Vaisnava is para-duhkha-duhkhi; he
+is always unhappy to see the conditioned souls in an unhappy state of materialism. Therefore a Vaisnava
+is always busy preaching Krsna consciousness throughout the world.
 </p>
 
 </div>
@@ -71,7 +153,7 @@ think the dull material body to be the cause of their activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

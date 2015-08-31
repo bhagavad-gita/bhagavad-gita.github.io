@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.16.html">6.3.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ity amantrya vararoham
-kanyam apsarasim nrpa
-somo raja yayau dattva
-te dharmenopayemire
-<p></p>
+yam vai na gobhir manasasubhir va
+hrda gira vasu-bhrto vicaksate
+atmanam antar-hrdi santam atmanam
+caksur yathaivakrtayas tatah param
+<br>
 <h2>Synonyms</h2>
-iti--thus; amantrya--addressing; vara-aroham--possessing high, beautiful hips; kanyam--the girl;
-apsarasim--born of an Apsara; nrpa--O King; somah--Soma, the predominating deity of the moon; raja--
-the king; yayau--returned; dattva--delivering; te--they; dharmena--according to religious principles;
-upayemire--married.
-<p></p>
+yam--whom; vai--indeed; na--not; gobhih--by the senses; manasa--by the mind; asubhih--by the life
+breath; va--or; hrda--by thoughts; gira--by words; va--or; asu-bhrtah--the living entities; vicaksate--see or
+know; atmanam--the Supersoul; antah-hrdi--within the core of the heart; santam--existing; atmanam--of
+the living entities; caksuh--the eyes; yatha--just like; eva--indeed; akrtayah--the different parts or limbs of
+the body; tatah--than them; param--higher.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami continued: My dear King, after thus pacifying the Pracetas, Soma, the king of the
-moon, gave them the beautiful girl born of Pramloca Apsara. The Pracetas all received Pramloca's
-daughter, who had high, very beautiful hips, and married her according to the religious system.
+As the different limbs of the body cannot see the eyes, the living entities cannot see the Supreme Lord,
+who is situated as the Supersoul in everyone's heart. Not by the senses, by the mind, by the life air, by
+thoughts within the heart, or by the vibration of words can the living entities ascertain the real situation
+of the Supreme Lord.
+<br>
+<h2>Purport</h2>
+Although the different parts of the body do not have the power to see the eyes, the eyes direct the
+movements of the body's different parts. The legs move forward because the eyes see what is in front of
+them, and the hand touches because the eyes see touchable entities. Similarly, every living being acts
+according to the direction of the Supersoul, who is situated within the heart. As the Lord Himself
+confirms in Bhagavad-gita (15.15), sarvasya caham hrdi sannivisto mattah smrtir jnanam apohanam ca: "I
+am sitting in everyone's heart and giving directions for remembrance, knowledge and forgetfulness."
+Elsewhere in Bhagavad-gita it is stated, isvarah sarva-bhutanam hrd-dese 'rjuna tisthati: "The Supreme
+Lord, as the Supersoul, is situated within the heart." The living entity cannot do anything without the
+sanction of the Supersoul. The Supersoul is acting at every moment, but the living entity cannot
+understand the form and activities of the Supersoul by manipulating his senses. The example of the eyes
+and the bodily limbs is very appropriate. If the limbs could see, they could walk forward without the help
+of the eyes, but that is impossible. Although one cannot see the Supersoul in one's heart through sensual
+activities, His direction is necessary.
 </p>
 
 </div>
@@ -71,7 +127,7 @@ daughter, who had high, very beautiful hips, and married her according to the re
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

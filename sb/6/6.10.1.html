@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.1.html">6.10.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-rsir uvaca
-evam jihasur nrpa deham ajau
-mrtyum varam vijayan manyamanah
-sulam pragrhyabhyapatat surendram
-yatha maha-purusam kaitabho 'psu
-<p></p>
+sri-badarayanir uvaca
+indram evam samadisya
+bhagavan visva-bhavanah
+pasyatam animesanam
+tatraivantardadhe harih
+<br>
 <h2>Synonyms</h2>
-sri-rsih uvaca--Sri Sukadeva Gosvami said; evam--thus; jihasuh--very eager to give up; nrpa--O King
-Pariksit; deham--the body; ajau--in battle; mrtyum--death; varam--better; vijayat--than victory;
-manyamanah--thinking; sulam--trident; pragrhya--taking up; abhyapatat--attacked; sura-indram--the King
-of heaven, Indra; yatha--just as; maha-purusam--the Supreme Personality of Godhead; kaitabhah--the
-demon Kaitabha; apsu--when the whole universe was inundated.
-<p></p>
+sri-badarayanih uvaca--Sri Sukadeva Gosvami said; indram--Indra, the heavenly King; evam--thus;
+samadisya--after instructing; bhagavan--the Supreme Personality of Godhead; visva-bhavanah--the
+original cause of all cosmic manifestations; pasyatam animesanam--while the demigods were looking on;
+tatra--then and there; eva--indeed; antardadhe--disappeared; harih--the Lord.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: Desiring to give up his body, Vrtrasura considered death in the battle preferable
-to victory. O King Pariksit, he vigorously took up his trident and with great force attacked Lord Indra, the
-King of heaven, just as Kaitabha had forcefully attacked the Supreme Personality of Godhead when the
-universe was inundated.
-<p></p>
-<h2>Purport</h2>
-Although Vrtrasura repeatedly encouraged Indra to kill him with the thunderbolt, King Indra was
-morose at having to kill such a great devotee and was hesitant to throw it. Vrtrasura, disappointed that
-King Indra was reluctant despite his encouragement, took the initiative very forcefully by throwing his
-trident at Indra. Vrtrasura was not at all interested in victory; he was interested in being killed so that he
-could immediately return home, back to Godhead. As confirmed in Bhagavad-gita (4.9), tyaktva deham
-punar janma naiti: after giving up his body, a devotee immediately returns to Lord Krsna and never
-returns to accept another body. This was Vrtrasura's interest.
+Sri Sukadeva Gosvami said: After instructing Indra in this way, the Supreme Personality of Godhead,
+Hari, the cause of the cosmic manifestation, then and there disappeared from the presence of the
+onlooking demigods.
 </p>
 
 </div>
@@ -83,7 +111,7 @@ returns to accept another body. This was Vrtrasura's interest.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

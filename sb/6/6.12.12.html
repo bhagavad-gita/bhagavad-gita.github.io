@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.12.html">6.12.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rupaudarya-vayo-janmavidyaisvarya-
-sriyadibhih
-sampannasya gunaih sarvais
-cinta bandhya-pater abhut
-<p></p>
+avidvan evam atmanam
+manyate 'nisam isvaram
+bhutaih srjati bhutani
+grasate tani taih svayam
+<br>
 <h2>Synonyms</h2>
-rupa--with beauty; audarya--magnanimity; vayah--youth; janma--aristocratic birth; vidya--education;
-aisvarya--opulence; sriya-adibhih--wealth and so on; sampannasya--endowed; gunaih--with good qualities;
-sarvaih--all; cinta--anxiety; bandhya-pateh--of Citraketu, the husband of so many sterile wives; abhut--
-there was.
-<p></p>
+avidvan--one who is foolish, without knowledge; evam--thus; atmanam--himself; manyate--considers;
+anisam--although totally dependent on others; isvaram--as the supreme controller, independent; bhutaih--
+by the living entities; srjati--He (the Lord) creates; bhutani--other living entities; grasate--He devours;
+tani--them; taih--by other living beings; svayam--Himself.
+<br>
 <h2>Translation</h2>
-Citraketu, the husband of these millions of wives, was endowed with a beautiful form, magnanimity and
-youth. He was born in a high family, he had a complete education, and he was wealthy and opulent.
-Nevertheless, in spite of being endowed with all these assets, he was full of anxiety because he did not
-have a son.
-<p></p>
+A foolish, senseless person cannot understand the Supreme Personality of Godhead. Although always
+dependent, he falsely thinks himself the Supreme. If one thinks, "According to one's previous fruitive
+actions, one's material body is created by the father and mother, and the same body is annihilated by
+another agent, as another animal is devoured by a tiger," this is not proper understanding. The Supreme
+Personality of Godhead Himself creates and devours the living beings through other living beings.
+<br>
 <h2>Purport</h2>
-It appears that the King first married one wife, but she could not bear a child. Then he married a
-second, a third, a fourth and so on, but none of the wives could bear children. In spite of the material
-assets of janmaisvarya-sruta-sri--birth in an aristocratic family with full opulence, wealth, education and
-beauty--he was very much aggrieved because in spite of having so many wives, he had no son. Certainly
-his grief was natural. Grhastha life does not mean having a wife and no children. Canakya Pandita says,
-putra-hinam grham sunyam: if a family man has no son, his home is no better than a desert. The King was
-certainly most unhappy that he could not get a son, and this is why he had married so many times.
-Ksatriyas especially are allowed to marry more than one wife, and this King did so. Nonetheless, he had
-no issue.
+According to the conclusion of the philosophy known as karma-mimamsa, one's karma, or previous
+fruitive activity, is the cause of everything, and therefore there is no need to work. Those who arrive at
+this conclusion are foolish. When a father creates a child, he does not do so independently; he is induced
+to do so by the Supreme Lord. As the Lord Himself says in Bhagavad-gita (15.15), sarvasya caham hrdi
+sannivisto mattah smrtir jnanam apohanam ca: "I am in everyone's heart, and from Me come
+remembrance, knowledge and forgetfulness." Unless one receives dictation from the Supreme Personality
+of Godhead, who sits within everyone's heart, one cannot be induced to create anything. Therefore the
+father and mother are not the creators of the living entity. According to the living entity's karma, fruitive
+activities, he is put into the semen of the father, who injects the living entity into the womb of the mother.
+Then according to the body of the mother and father (yatha-yoni yatha-bijam), the living entity accepts a
+body and takes birth to suffer or enjoy. Therefore the Supreme Lord is the original cause of one's birth.
+Similarly, the Supreme Lord is the cause of one's being killed. No one is independent; everyone is
+dependent. The true conclusion is that the only independent person is the Supreme Personality of
+Godhead.
 </p>
 
 </div>
@@ -83,7 +128,7 @@ no issue.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

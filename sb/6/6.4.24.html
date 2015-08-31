@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.4.24.html">6.4.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa bhuyah pancajanyayam
-ajena parisantvitah
-putran ajanayad daksah
-savalasvan sahasrinah
-<p></p>
+na yasya sakhyam puruso 'vaiti sakhyuh
+sakha vasan samvasatah pure 'smin
+guno yatha gunino vyakta-drstes
+tasmai mahesaya namaskaromi
+<br>
 <h2>Synonyms</h2>
-sah--Prajapati Daksa; bhuyah--again; pancajanyayam--in the womb of his wife Asikni, or Pancajani;
-ajena--by Lord Brahma; parisantvitah--being pacified; putran--sons; ajanayat--begot; daksah--Prajapati
-Daksa; savalasvan--named the Savalasvas; sahasrinah--numbering one thousand.
-<p></p>
+na--not; yasya--whose; sakhyam--fraternity; purusah--the living entity; avaiti--knows; sakhyuh--of the
+supreme friend; sakha--the friend; vasan--living; samvasatah--of the one living with; pure--in the body;
+asmin--this; gunah--the object of sense perception; yatha--just like; guninah--of its respective sense organ;
+vyakta-drsteh--who oversees the material manifestation; tasmai--unto Him; maha-isaya--unto the supreme
+controller; namaskaromi--I offer my obeisances.
+<br>
 <h2>Translation</h2>
-When Prajapati Daksa was lamenting for his lost children, Lord Brahma pacified him with instructions,
-and thereafter Daksa begot one thousand more children in the womb of his wife, Pancajani. This time his
-sons were known as the Savalasvas.
-<p></p>
+As the sense objects [form, taste, touch, smell and sound] cannot understand how the senses perceive
+them, so the conditioned soul, although residing in his body along with the Supersoul, cannot understand
+how the supreme spiritual person, the master of the material creation, directs his senses. Let me offer my
+respectful obeisances unto that Supreme Person, who is the supreme controller.
+<br>
 <h2>Purport</h2>
-Prajapati Daksa was so named because he was very expert in begetting children. (The word daksa means
-"expert.") First he begot ten thousand children in the womb of his wife, and when the children were lost--
-when they returned home, back to Godhead--he begot another set of children, known as the Savalasvas.
-Prajapati Daksa is very expert in begetting children, and Narada Muni is very expert in delivering all the
-conditioned souls back home, back to Godhead. Therefore the materialistic experts do not agree with the
-spiritual expert Narada Muni. but this does not mean that Narada Muni will give up his engagement of
-chanting the Hare Krsna mantra.
+The individual soul and the Supreme Soul live together within the body. This is confirmed in the
+Upanisads by the analogy that two friendly birds live in one tree--one bird eating the fruit of the tree and
+the other simply witnessing and directing. Although the individual living being, who is compared to the
+bird that is eating, is sitting with his friend the Supreme Soul, the individual living being cannot see Him.
+Actually the Supersoul is directing the workings of his senses in the enjoyment of sense objects, but as
+these sense objects cannot see the senses, the conditioned soul cannot see the directing soul. The
+conditioned soul has desires, and the Supreme Soul fulfills them, but the conditioned soul is unable to see
+the Supreme Soul. Thus Prajapati Daksa offers his obeisances to the Supreme Soul, the Supersoul, even
+though unable to see Him. Another example given is that although ordinary citizens work under the
+direction of the government, they cannot understand how they are being governed or what the
+government is. In this regard, Madhvacarya quotes the following verse from the Skanda Purana:
+yatha rajnah priyatvam tu
+bhrtya vedena catmanah
+tatha jivo na yat-sakhyam
+vetti tasmai namo 'stu te
+"As the various servants in the different departments of big establishments cannot see the supreme
+managing director under whom they are working, the conditioned souls cannot see the supreme friend
+sitting within their bodies. Let us therefore offer our respectful obeisances unto the Supreme, who is
+invisible to our material eyes."
 </p>
 
 </div>
@@ -79,7 +133,7 @@ chanting the Hare Krsna mantra.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

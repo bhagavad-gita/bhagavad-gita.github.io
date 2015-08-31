@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,110 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.5.html">6.14.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bandhu-jnaty-ari-madhyasthamitrodasina-
-vidvisah
-sarva eva hi sarvesam
-bhavanti kramaso mithah
-<p></p>
+muktanam api siddhanam
+narayana-parayanah
+sudurlabhah prasantatma
+kotisv api maha-mune
+<br>
 <h2>Synonyms</h2>
-bandhu--friends; jnati--family members; ari--enemies; madhyastha--neutrals; mitra--well-wishers;
-udasina--indifferent; vidvisah--or envious persons; sarve--all; eva--indeed; hi--certainly; sarvesam--of all;
-bhavanti--become; kramasah--gradually; mithah--of one another.
-<p></p>
+muktanam--of those who are liberated during this life (who are unattached to the bodily comforts of
+society, friendship and love); api--even; siddhanam--who are perfect (because they understand the
+insignificance of bodily comforts); narayana-parayanah--a person who has concluded that Narayana is the
+Supreme; su-durlabhah--very rarely found; prasanta--fully pacified; atma--whose mind; kotisu--out of
+millions and trillions; api--even; maha-mune--O great sage.
+<br>
 <h2>Translation</h2>
-In this material world, which advances like a river that carries away the living entity, all people become
-friends, relatives and enemies in due course of time. They also act neutrally, they mediate, they despise
-one another, and they act in many other relationships. Nonetheless, despite these various transactions, no
-one is permanently related.
-<p></p>
+O great sage, among many millions who are liberated and perfect in knowledge of liberation, one may
+be a devotee of Lord Narayana, or Krsna. Such devotees, who are fully peaceful, are extremely rare.
+<br>
 <h2>Purport</h2>
-It is our practical experience in this material world that the same person who is one's friend today
-becomes one's enemy tomorrow. Our relationships as friends or enemies, family men or outsiders, are
-actually the results of our different dealings. Citraketu Maharaja was lamenting for his son, who was now
-dead, but he could have considered the situation otherwise. "This living entity," he could have thought,
-"was my enemy in my last life, and now, having appeared as my son, he is prematurely leaving just to give
-me pain and agony." Why should he not consider his dead son his former enemy and instead of lamenting
-be jubilant because of an enemy's death? As stated in Bhagavad-gita (3.27), prakrteh kriyamanani gunaih
-karmani sarvasah: factually everything is happening because of our association with the modes of material
-nature. Therefore one who is my friend today in association with the mode of goodness may be my enemy
-tomorrow in association with the modes of passion and ignorance. As the modes of material nature work,
-in illusion we accept others as friends, enemies, sons or fathers in terms of the reactions of different
-dealings under different conditions.
+Srila Visvanatha Cakravarti Thakura gives the following purport to this verse. Simply desiring mukti, or
+liberation, is insufficient; one must become factually liberated. When one understands the futility of the
+materialistic way of life, one becomes advanced in knowledge, and therefore he situates himself in the
+vanaprastha order, unattached to family, wife and children. One should then further progress to the
+platform of sannyasa, the actual renounced order, never to fall again and be afflicted by materialistic life.
+Even though one desires to be liberated, this does not mean he is liberated. Only rarely is someone
+liberated. Indeed, although many men take sannyasa to become liberated, because of their imperfections
+they again become attached to women, material activities, social welfare work and so on.
+Jnanis, yogis and karmis devoid of devotional service are called offenders. Sri Caitanya Mahaprabhu
+says, mayavadi krsne aparadhi: one who thinks that everything is maya instead of thinking that everything
+is Krsna is called an aparadhi, or offender. Although the Mayavadis, impersonalists, are offenders at the
+lotus feet of Krsna, they may nonetheless be counted among the siddhas, those who have realized the self.
+They may be considered nearer to spiritual perfection because at least they have realized what spiritual life
+is. If such a person becomes narayana-parayana, a devotee of Lord Narayana, he is better than a jivanmukta,
+one who is liberated or perfect. This requires higher intelligence.
+There are two kinds of jnanis. One is inclined to devotional service and the other to impersonal
+realization. Impersonalists generally undergo great endeavor for no tangible benefit, and therefore it is
+said that they are husking paddy that has no grain (sthula-tusavaghatinah). The other class of jnanis,
+whose jnana is mixed with bhakti, are also of two kinds--those who are devoted to the so-called false form
+of the Supreme Personality of Godhead and those who understand the Supreme Personality of Godhead as
+sac-cid-ananda-vigraha, the actual spiritual form. The Mayavadi devotees worship Narayana or Visnu with
+the idea that Visnu has accepted a form of maya and that the ultimate truth is actually impersonal. The
+pure devotee, however, never thinks that Visnu has accepted a body of maya; instead, he knows perfectly
+well that the original Absolute Truth is the Supreme Person. Such a devotee is actually situated in
+knowledge. He never merges in the Brahman effulgence. As stated in Srimad-Bhagavatam (10.2.32):
+ye 'nye 'ravindaksa vimukta-maninas
+tvayy asta-bhavad avisuddha-buddhayah
+aruhya krcchrena param padam tatah
+patanty adho 'nadrta-yusmad-anghrayah
+"O Lord, the intelligence of those who think themselves liberated but who have no devotion is impure.
+Even though they rise to the highest point of liberation by dint of severe penances and austerities, they are
+sure to fall down again into material existence, for they do not take shelter at Your lotus feet." Evidence of
+this same point is also given in Bhagavad-gita (9.11), wherein the Lord says:
+avajananti mam mudha
+manusim tanum asritam
+param bhavam ajananto
+mama bhuta-mahesvaram
+"Fools deride Me when I descend in the human form. They do not know My transcendental nature and
+My supreme dominion over all that be." When rascals (mudhas) see that Krsna acts exactly like a human
+being, they deride the transcendental form of the Lord because they do not know the param bhavam, His
+transcendental form and activities. Such persons are further described in Bhagavad-gita (9.12) as follows:
+moghasa mogha-karmano
+mogha-jnana vicetasah
+raksasim asurim caiva
+prakrtim mohinim sritah
+"Those who are thus bewildered are attracted by demoniac and atheistic views. In that deluded
+condition, their hopes for liberation, their fruitive activities and their culture of knowledge are all
+defeated." Such persons do not know that Krsna's body is not material. There is no distinction between
+Krsna's body and His soul, but because less intelligent men see Krsna as a human being, they deride Him.
+They cannot imagine how a person like Krsna could be the origin of everything (govindam adi-purusam
+tam aham bhajami). Such persons are described as moghasah, baffled in their hopes. Whatever they desire
+for the future will be baffled. Even if they apparently engage in devotional service, they are described as
+moghasah because they ultimately desire to merge into the Brahman effulgence.
+Those who aspire to be elevated to the heavenly planets by devotional service will also be frustrated,
+because this is not the result of devotional service. However, they are also given a chance to engage in
+devotional service and be purified. As stated in Srimad-Bhagavatam (1.2.17):
+srnvatam sva-kathah krsnah
+punya-sravana-kirtanah
+hrdy antah-stho hy abhadrani
+vidhunoti suhrt satam
+"Sri Krsna, the Personality of Godhead, who is the Paramatma [Supersoul] in everyone's heart and the
+benefactor of the truthful devotee, cleanses desire for material enjoyment from the heart of the devotee
+who relishes His messages, which are in themselves virtuous when properly heard and chanted."
+Unless the dirt within the core of one's heart is cleansed away, one cannot become a pure devotee.
+Therefore the word sudurlabhah ("very rarely found") is used in this verse. Not only among hundreds and
+thousands, but among millions of perfectly liberated souls, a pure devotee is hardly ever found. Therefore
+the words kotisv api are used herein. Srila Madhvacarya gives the following quotations from the Tantra
+Bhagavata:
+nava-kotyas tu devanam
+rsayah sapta-kotayah
+narayanayanah sarve
+ye kecit tat-parayanah
+"There are ninety million demigods and seventy million sages, who are all called narayanayana, devotees
+of Lord Narayana. Among them, only a few are called narayana-parayana."
+narayanayana deva
+rsy-adyas tat-parayanah
+brahmadyah kecanaiva syuh
+siddho yogya-sukham labhan
+The difference between the siddhas and narayana-parayanas is that direct devotees are called narayanaparayanas
+whereas those who perform various types of mystic yoga are called siddhas.
 </p>
 
 </div>
@@ -85,7 +192,7 @@ dealings under different conditions.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

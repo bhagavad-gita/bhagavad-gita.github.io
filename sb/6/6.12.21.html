@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.21.html">6.12.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atmanah priyate natma
-paratah svata eva va
-laksaye 'labdha-kamam tvam
-cintaya sabalam mukham
-<p></p>
+khalv idam mahad ascaryam
+yad rajah-prakrtes tava
+vasudeve bhagavati
+sattvatmani drdha matih
+<br>
 <h2>Synonyms</h2>
-atmanah--of you; priyate--is pleased; na--not; atma--the mind; paratah--due to other causes; svatah--due
-to yourself; eva--indeed; va--or; laksaye--I can see; alabdha-kamam--not achieving your desired goals;
-tvam--you; cintaya--by anxiety; sabalam--pale; mukham--face.
-<p></p>
+khalu--indeed; idam--this; mahat ascaryam--great wonder; yat--which; rajah--influenced by the mode of
+passion; prakrteh--whose nature; tava--of you; vasudeve--in Lord Krsna; bhagavati--the Supreme
+Personality of Godhead; sattva-atmani--who is situated in pure goodness; drdha--firm; matih--
+consciousness.
+<br>
 <h2>Translation</h2>
-O King Citraketu, I can observe that your mind is not pleased. You seem not to have achieved your
-desired goal. Is this because of you yourself, or has it been caused by others? Your pale face reflects your
-deep anxiety.
+O Vrtrasura, demons are generally conducted by the mode of passion. Therefore, what a great wonder it
+is that although you are a demon, you have adopted the mentality of a devotee and have fixed your mind
+on the Supreme Personality of Godhead, Vasudeva, who is always situated in pure goodness.
+<br>
+<h2>Purport</h2>
+King Indra wondered how Vrtrasura could have been elevated to the position of an exalted devotee. As
+for Prahlada Maharaja, he was initiated by Narada Muni, and therefore it was possible for him to become a
+great devotee, although he was born in a family of demons. For Vrtrasura, however, Indra could not
+detect such causes. Therefore he was struck with wonder that Vrtrasura was such an exalted devotee that
+he could fix his mind without deviation upon the lotus feet of Lord Krsna, Vasudeva.
 </p>
 
 </div>
@@ -70,7 +117,7 @@ deep anxiety.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.8.31.html">6.8.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kalopapannam ruciram manasvinam
-jagada vacam purusa-pravirah
-he vipracitte namuce puloman
-mayanarvan chambara me srnudhvam
-<p></p>
+yatha hi bhagavan eva
+vastutah sad asac ca yat
+satyenanena nah sarve
+yantu nasam upadravah
+<br>
 <h2>Synonyms</h2>
-kala-upapannam--suitable to the time and circumstances; ruciram--very beautiful; manasvinam--to the
-great, deep-minded personalities; jagada--spoke; vacam--words; purusa-pravirah--the hero among heroes,
-Vrtrasura; he--O; vipracitte--Vipracitti; namuce--O Namuci; puloman--O Puloma; maya--O Maya;
-anarvan--O Anarva; sambara--O Sambara; me--from me; srnudhvam--please hear.
-<p></p>
+yatha--just as; hi--indeed; bhagavan--the Supreme Personality of Godhead; eva--undoubtedly; vastutah--
+at the ultimate issue; sat--manifested; asat--unmanifested; ca--and; yat--whatever; satyena--by the truth;
+anena--this; nah--our; sarve--all; yantu--let them go; nasam--to annihilation; upadravah--disturbances.
+<br>
 <h2>Translation</h2>
-According to his position and the time and circumstances, Vrtrasura, the hero among heroes, spoke
-words that were much to be appreciated by thoughtful men. He called to the heroes of the demons, "O
-Vipracitti! O Namuci! O Puloma! O Maya, Anarva and Sambara! Please hear me and do not flee."
+The subtle and gross cosmic manifestation is material, but nevertheless it is nondifferent from the
+Supreme Personality of Godhead because He is ultimately the cause of all causes. Cause and effect are
+factually one because the cause is present in the effect. Therefore the Absolute Truth, the Supreme
+Personality of Godhead, can destroy all our dangers by any of His potent parts.
 </p>
 
 </div>
@@ -71,7 +110,7 @@ Vipracitti! O Namuci! O Puloma! O Maya, Anarva and Sambara! Please hear me and d
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

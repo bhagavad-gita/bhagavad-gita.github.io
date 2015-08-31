@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.25.html">6.7.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ya eka iso nija-mayaya nah
-sasarja yenanusrjama visvam
-vayam na yasyapi purah samihatah
-pasyama lingam prthag isa-maninah
-<p></p>
+tad visvarupam bhajatasu vipram
+tapasvinam tvastram athatmavantam
+sabhajito 'rthan sa vidhasyate vo
+yadi ksamisyadhvam utasya karma
+<br>
 <h2>Synonyms</h2>
-yah--He who; ekah--one; isah--controller; nija-mayaya--by His transcendental potency; nah--us; sasarja--
-created; yena--by whom (through whose mercy); anusrjama--we also create; visvam--the universe;
-vayam--we; na--not; yasya--of whom; api--although; purah--in front of us; samihatah--of Him who is
-acting; pasyama--see; lingam--the form; prthak--separate; isa--as controllers; maninah--thinking of
-ourselves.
-<p></p>
+tat--therefore; visvarupam--Visvarupa; bhajata--just worship as guru; asu--immediately; vipram--who is
+a perfect brahmana; tapasvinam--undergoing great austerities and penances; tvastram--the son of Tvasta;
+atha--as well as; atma-vantam--very independent; sabhajitah--being worshiped; arthan--the interests; sah--
+he; vidhasyate--will execute; vah--of all of you; yadi--if; ksamisyadhvam--you tolerate; uta--indeed; asya--
+his; karma--activities (to support the Daityas).
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead, who created us by His external potency and by whose mercy we
-expand the creation of the universe, is always situated before us as the Supersoul, but we cannot see His
-form. We are unable to see Him because all of us think that we are separate and independent gods.
-<p></p>
+O demigods, I instruct you to approach Visvarupa, the son of Tvasta, and accept him as your guru. He is
+a pure and very powerful brahmana undergoing austerity and penances. Pleased by your worship, he will
+fulfill your desires, provided that you tolerate his being inclined to side with the demons.
+<br>
 <h2>Purport</h2>
-Here is an explanation of why the conditioned soul cannot see the Supreme Personality of Godhead face
-to face. Even though the Lord appears before us as Lord Krsna or Lord Ramacandra and lives in human
-society as a leader or king, the conditioned soul cannot understand Him. Avajananti mam mudha
-manusim tanum asritam: rascals (mudhas) deride the Supreme Personality of Godhead, thinking Him an
-ordinary human being. However insignificant we are, we think that we are also God, that we can create a
-universe or that we can create another God. This is why we cannot see or understand the Supreme
-Personality of Godhead. In this regard, Srila Madhvacarya says:
-lingam eva pasyamah
-kadacid abhimanas tu
-devanam api sann iva
-prayah kalesu nasty eva
-taratamyena so 'pi tu
-We are all conditioned to various degrees, but we think that we are God. This is why we cannot
-understand who God is or see Him face to face.
+Lord Brahma advised the demigods to accept the son of Tvasta as their spiritual master although he was
+always inclined toward the benefit of the asuras.
 </p>
 
 </div>
@@ -88,7 +115,7 @@ understand who God is or see Him face to face.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

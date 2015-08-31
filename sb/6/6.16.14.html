@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.14.html">6.16.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-siro 'harad yasya haris
-cakrena pibato 'mrtam
-samhradasya krtir bharyasuta
-pancajanam tatah
-<p></p>
+bala-ghnyo vriditas tatra
+bala-hatya-hata-prabhah
+bala-hatya-vratam cerur
+brahmanair yan nirupitam
+yamunayam maharaja
+smarantyo dvija-bhasitam
+<br>
 <h2>Synonyms</h2>
-sirah--the head; aharat--cut off; yasya--of whom; harih--Hari; cakrena--with the disc; pibatah--drinking;
-amrtam--nectar; samhradasya--of Samhlada; krtih--Krti; bharya--the wife; asuta--gave birth to;
-pancajanam--Pancajana; tatah--from him.
-<p></p>
+bala-ghnyah--the killers of the child; vriditah--being very much ashamed; tatra--there; bala-hatya--
+because of killing the child; hata--having lost; prabhah--all bodily luster; bala-hatya-vratam--the
+atonement fur killing the child; ceruh--executed; brahmanaih--by the priests; yat--which; nirupitam--
+described; yamunayam--at the River Yamuna; maha-raja--O King Pariksit; smarantyah--remembering;
+dvija-bhasitam--the statement given by the brahmana.
+<br>
 <h2>Translation</h2>
-While Rahu, in disguise, was drinking nectar among the demigods, the Supreme Personality of Godhead
-severed his head. The wife of Samhlada was named Krti. By union with Samhlada, Krti gave birth to a son
-named Pancajana.
+Queen Krtyadyuti's co-wives, who had poisoned the child, were very much ashamed, and they lost all
+their bodily luster. While lamenting, O King, they remembered the instructions of Angira and gave up
+their ambition to bear children. Following the directions of the brahmanas, they went to the bank of the
+Yamuna, where they bathed and atoned for their sinful activities.
+<br>
+<h2>Purport</h2>
+In this verse the word bala-hatya-hata-prabhah is to be particularly noted. The practice of killing
+children has existed in human society for a long time--since time immemorial--but in the days of yore it
+was very rarely performed. At the present moment, however, in this age of Kali, abortion--killing of the
+child within the womb--has become very common, and sometimes a child is even killed after birth. If a
+woman performs such an abominable act, she gradually loses all her bodily luster (bala-hatya-hataprabhah).
+It is also to be noted that the ladies who had committed the sinful act of administering poison
+to the child were very much ashamed, and according to the directions of the brahmanas, they had to
+undergo atonement for killing the child. Any woman who has ever performed such an infamously sinful
+act must atone for it, but no one now is doing that. Under the circumstances, the women responsible
+must suffer in this life and the next. Those who are sincere souls, after hearing this incident, should
+refrain from such child-killing and should atone for their sinful activities by taking to Krsna
+consciousness very seriously. If one chants the Hare Krsna maha-mantra without offenses, all of one's
+sinful actions are surely atoned for immediately, but one should not commit such deeds again, for that is
+an offense.
 </p>
 
 </div>
@@ -70,7 +130,7 @@ named Pancajana.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,110 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.24.html">6.3.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na yasya sakhyam puruso 'vaiti sakhyuh
-sakha vasan samvasatah pure 'smin
-guno yatha gunino vyakta-drstes
-tasmai mahesaya namaskaromi
-<p></p>
+etavatalam agha-nirharanaya pumsam
+sankirtanam bhagavato guna-karma-namnam
+vikrusya putram aghavan yad ajamilo 'pi
+narayaneti mriyamana iyaya muktim
+<br>
 <h2>Synonyms</h2>
-na--not; yasya--whose; sakhyam--fraternity; purusah--the living entity; avaiti--knows; sakhyuh--of the
-supreme friend; sakha--the friend; vasan--living; samvasatah--of the one living with; pure--in the body;
-asmin--this; gunah--the object of sense perception; yatha--just like; guninah--of its respective sense organ;
-vyakta-drsteh--who oversees the material manifestation; tasmai--unto Him; maha-isaya--unto the supreme
-controller; namaskaromi--I offer my obeisances.
-<p></p>
+etavata--with this much; alam--sufficient; agha-nirharanaya--for taking away the reactions of sinful
+activities; pumsam--of human beings; sankirtanam--the congregational chanting; bhagavatah--of the
+Supreme Personality of Godhead; guna--of the transcendental qualities; karma-namnam--and of His
+names according to His activities and pastimes; vikrusya--crying to without offense; putram--his son;
+aghavan--the sinful; yat--since; ajamilah api--even Ajamila; narayana--the Lord's name, Narayana; iti--
+thus; mriyamanah--dying; iyaya--achieved; muktim--liberation.
+<br>
 <h2>Translation</h2>
-As the sense objects [form, taste, touch, smell and sound] cannot understand how the senses perceive
-them, so the conditioned soul, although residing in his body along with the Supersoul, cannot understand
-how the supreme spiritual person, the master of the material creation, directs his senses. Let me offer my
-respectful obeisances unto that Supreme Person, who is the supreme controller.
-<p></p>
+Therefore it should be understood that one is easily relieved from all sinful reactions by chanting the
+holy name of the Lord and chanting of His qualities and activities. This is the only process recommended
+for relief from sinful reactions. Even if one chants the holy name of the Lord with improper
+pronunciation, he will achieve relief from material bondage if he chants without offenses. Ajamila, for
+example, was extremely sinful, but while dying he merely chanted the holy name, and although calling his
+son, he achieved complete liberation because he remembered the name of Narayana.
+<br>
 <h2>Purport</h2>
-The individual soul and the Supreme Soul live together within the body. This is confirmed in the
-Upanisads by the analogy that two friendly birds live in one tree--one bird eating the fruit of the tree and
-the other simply witnessing and directing. Although the individual living being, who is compared to the
-bird that is eating, is sitting with his friend the Supreme Soul, the individual living being cannot see Him.
-Actually the Supersoul is directing the workings of his senses in the enjoyment of sense objects, but as
-these sense objects cannot see the senses, the conditioned soul cannot see the directing soul. The
-conditioned soul has desires, and the Supreme Soul fulfills them, but the conditioned soul is unable to see
-the Supreme Soul. Thus Prajapati Daksa offers his obeisances to the Supreme Soul, the Supersoul, even
-though unable to see Him. Another example given is that although ordinary citizens work under the
-direction of the government, they cannot understand how they are being governed or what the
-government is. In this regard, Madhvacarya quotes the following verse from the Skanda Purana:
-yatha rajnah priyatvam tu
-bhrtya vedena catmanah
-tatha jivo na yat-sakhyam
-vetti tasmai namo 'stu te
-"As the various servants in the different departments of big establishments cannot see the supreme
-managing director under whom they are working, the conditioned souls cannot see the supreme friend
-sitting within their bodies. Let us therefore offer our respectful obeisances unto the Supreme, who is
-invisible to our material eyes."
+In the assembly of Raghunatha dasa Gosvami's father, Haridasa Thakura confirmed that simply by
+chanting the holy name of the Lord one is liberated, even if he does not chant completely inoffensively.
+Smarta-brahmanas and Mayavadis do not believe that one can achieve liberation in this way, but the truth
+of Haridasa Thakura's statement is supported by many quotations from Srimad-Bhagavatam.
+In his commentary on this verse, for example, Sridhara Svami gives the following quotation:
+sayam pratar grnan bhaktya
+duhkha-gramad vimucyate
+"If one always chants the holy name of the Lord with great devotion in the evening and in the morning,
+one can become free from all material miseries." Another quotation confirms that one can achieve
+liberation if one hears the holy name of the Lord constantly, every day with great respect (anudinam idam
+adarena srnvan). Another quotation says:
+sravanam kirtanam dhyanam
+harer adbhuta-karmanah
+janma-karma-gunanam ca
+tad-arthe 'khila-cestitam
+"One should always chant and hear about the extraordinarily wonderful activities of the Lord, one
+should meditate upon these activities, and one should endeavor to please the Lord." (Bhag. 11.3.27)
+Sridhara Svami also quotes from the Puranas, papa-ksayas ca bhavati smaratam tam ahar-nisam: "One
+can become free from all sinful reactions simply by remembering the lotus feet of the Lord day and night
+[ahar-nisam]." Furthermore, he quotes from Bhagavatam (6.3.31):
+tasmat sankirtanam visnor
+jagan-mangalam amhasam
+mahatam api kauravya
+viddhy aikantika-niskrtam
+All these quotations prove that one who constantly engages in chanting and hearing of the holy
+activities, name, fame and form of the Lord is liberated. As stated wonderfully in this verse, etavatalam
+agha-nirharanaya pumsam: simply by uttering the name of the Lord, one is freed from all sinful reactions.
+The word alam, which is used in this verse, indicates that simply uttering the holy name of the Lord is
+sufficient. This word is used with different imports. As stated in the Amara-kosa, the most authorized
+dictionary in the Sanskrit language, alam bhusana-paryapti-sakti-varana-vacakam: the word alam is used
+to mean "ornament," "sufficiency," "power" and "restraint." Here the word alam is used to indicate that
+there is no need of any other process, for the chanting of the holy name of the Lord is sufficient. Even if
+one chants imperfectly, one becomes free from all sinful reactions by chanting.
+This power of chanting the holy name was proved by the liberation of Ajamila. When Ajamila chanted
+the holy name of Narayana, he did not precisely remember the Supreme Lord; instead, he remembered his
+own son. At the time of death, Ajamila certainly was not very clean; indeed, he was famous as a great
+sinner. Furthermore, one's physiological condition is completely disturbed at the time of death, and in
+such an awkward condition it would certainly have been very difficult for Ajamila to have chanted clearly.
+Nevertheless, Ajamila achieved liberation simply by chanting the holy name of the Lord. Therefore, what
+is to be said of those who are not sinful like Ajamila? It is to be concluded that with a strong vow one
+should chant the holy name of the Lord--Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama,
+Hare Rama, Rama Rama, Hare Hare--for thus one will certainly be delivered from the clutches of maya by
+the grace of Krsna.
+The chanting of the Hare Krsna mantra is recommended even for persons who commit offenses, because
+if they continue chanting they will gradually chant offenselessly. By chanting the Hare Krsna mantra
+without offenses, one increases his love for Krsna. As stated by Sri Caitanya Mahaprabhu, prema pumartho
+mahan: one's main concern should be to increase one's attachment to the Supreme Personality of
+Godhead and to increase one's love for Him.
+In this regard Srila Visvanatha Cakravarti Thakura quotes the following verse from Srimad-Bhagavatam
+(11.19.24):
+evam dharmair manusyanam
+uddhavatmani vedinam
+mayi sanjayate bhaktih
+ko 'nyo 'rtho 'syavasisyate
+"My dear Uddhava, the supreme religious system for human society is that by which one can awaken his
+dormant love for Me." Commenting on this verse, Srila Visvanatha Cakravarti Thakura describes the word
+bhakti by saying premaivoktah. Kah anyah arthah asya: in the presence of bhakti, what is the necessity of
+liberation?
+Srila Visvanatha Cakravarti Thakura also quotes this verse from the Padma Purana:
+namaparadha-yuktanam
+namany eva haranty agham
+avisranti-prayuktani
+tany evartha-karani ca
+Even if in the beginning one chants the Hare Krsna mantra with offenses, one will become free from
+such offenses by chanting again and again. Papa-ksayas ca bhavati smaratam tam ahar-nisam: one
+becomes free from all sinful reactions if one chants day and night, following the recommendation of Sri
+Caitanya Mahaprabhu. It was Sri Caitanya Mahaprabhu who quoted the following verse:
+harer nama harer nama
+harer namaiva kevalam
+kalau nasty eva nasty eva
+nasty eva gatir anyatha
+"In this age of quarrel and hypocrisy the only means of deliverance is chanting the holy name of the
+Lord. There is no other way. There is no other way. There is no other way." If the members of the Krsna
+consciousness movement strictly follow this recommendation of Sri Caitanya Mahaprabhu, their position
+will always be secure.
 </p>
 
 </div>
@@ -94,7 +192,7 @@ invisible to our material eyes."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

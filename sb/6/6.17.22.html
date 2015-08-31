@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.17.22.html">6.17.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-svo-bhute 'pa upasprsya
-krsnam abhyarcya purvavat
-payah-srtena juhuyac
-caruna saha sarpisa
-paka-yajna-vidhanena
-dvadasaivahutih patih
-<p></p>
+na tasya kascid dayitah pratipo
+na jnati-bandhur na paro na ca svah
+samasya sarvatra niranjanasya
+sukhe na ragah kuta eva rosah
+<br>
 <h2>Synonyms</h2>
-svah-bhute--on the following morning; apah--water; upasprsya--contacting; krsnam--Lord Krsna;
-abhyarcya--worshiping; purva-vat--as previously; payah-srtena--with boiled milk; juhuyat--one should
-offer; caruna--with an offering of sweet rice; saha--with; sarpisa--ghee; paka-yajna-vidhanena--according
-to the injunctions of the Grhya-sutras; dvadasa--twelve; eva--indeed; ahutih--oblations; patih--the
-husband.
-<p></p>
+na--not; tasya--of Him (the Supreme Lord); kascit--anyone; dayitah--dear; pratipah--not dear; na--nor;
+jnati--kinsman; bandhuh--friend; na--nor; parah--other; na--nor; ca--also; svah--own; samasya--who is
+equal; sarvatra--everywhere; niranjanasya--without being affected by material nature; sukhe--in happiness;
+na--not; ragah--attachment; kutah--from where; eva--indeed; rosah--anger.
+<br>
 <h2>Translation</h2>
-On the morning of the next day, one should wash oneself, and after worshiping Lord Krsna as before,
-one should cook as one cooks for festivals as stated in the Grhya-sutras. Sweet rice should be cooked with
-ghee, and with this preparation the husband should offer oblations to the fire twelve times.
+The Supreme Personality of Godhead is equally disposed toward all living entities. Therefore no one is
+very dear to Him, and no one is a great enemy for Him; no one is His friend, and no one is His relative.
+Being unattached to the material world, He has no affection for so-called happiness or hatred for so-called
+distress. The two terms happiness and distress are relative. Since the Lord is always happy, for Him there
+is no question of distress.
 </p>
 
 </div>
@@ -74,7 +112,7 @@ ghee, and with this preparation the husband should offer oblations to the fire t
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

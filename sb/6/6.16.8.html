@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.8.html">6.16.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-urukramasya devasya
-maya-vamana-rupinah
-kirtau patnyam brhacchlokas
-tasyasan saubhagadayah
-<p></p>
+evam yoni-gato jivah
+sa nityo nirahankrtah
+yavad yatropalabhyeta
+tavat svatvam hi tasya tat
+<br>
 <h2>Synonyms</h2>
-urukramasya--of Urukrama; devasya--the Lord; maya--by His internal potency; vamana-rupinah--having
-the form of a dwarf; kirtau--in Kirti; patnyam--His wife; brhacchlokah--Brhatsloka; tasya--of him; asan--
-were; saubhaga-adayah--sons beginning with Saubhaga.
-<p></p>
+evam--thus; yoni-gatah--being within a specific species of life; jivah--the living entity; sah--he; nityah--
+eternal; nirahankrtah--without identification with the body; yavat--as long as; yatra--where; upalabhyeta--
+he may be found; tavat--that long; svatvam--the concept of self; hi--indeed; tasya--of him; tat--that.
+<br>
 <h2>Translation</h2>
-By His own potency, the Supreme Personality of Godhead, who has multifarious potencies, appeared in
-the form of a dwarf as Urukrama, the twelfth son of Aditi. In the womb of His wife, whose name was Kirti,
-He begot one son, named Brhatsloka, who had many sons, headed by Saubhaga.
-<p></p>
+Even though one living entity becomes connected with another because of a relationship based on
+bodies that are perishable, the living entity is eternal. Actually it is the body that is born or lost, not the
+living entity. One should not accept that the living entity takes birth or dies. The living being actually has
+no relationship with so-called fathers and mothers. As long as he appears as the son of a certain father and
+mother as a result of his past fruitive activities, he has a connection with the body given by that father and
+mother. Thus he falsely accepts himself as their son and acts affectionately. After he dies, however, the
+relationship is finished. Under these circumstances, one should not be falsely involved with jubilation and
+lamentation.
+<br>
 <h2>Purport</h2>
-As the Lord says in Bhagavad-gita (4.6):
-ajo 'pi sann avyayatma
-bhutanam isvaro 'pi san
-prakrtim svam adhisthaya
-sambhavamy atma-mayaya
-"Although I am unborn and My transcendental body never deteriorates, and although I am the Lord of
-all sentient beings, I still appear in every millennium in My original transcendental form." When the
-Supreme Personality of Godhead incarnates, He does not need any help from the external energy, for He
-appears as He is by His own potency. The spiritual potency is also called maya. It is said, ato mayamayam
-visnum pravadanti manisinah: the body accepted by the Supreme Personality of Godhead is called
-mayamaya. This does not mean that He is formed of the external energy; this maya refers to His internal
-potency.
+When the living entity lives within the material body, he falsely thinks that he is the body, although
+actually he is not. His relationship with his body and his so-called father and mother are false, illusory
+conceptions. These illusions continue as long as one is not enlightened about the situation of the living
+entity.
 </p>
 
 </div>
@@ -84,7 +120,7 @@ potency.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

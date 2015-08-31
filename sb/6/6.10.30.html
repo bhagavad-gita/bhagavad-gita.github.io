@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.30.html">6.10.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vrtra-grastam tam alokya
-saprajapatayah surah
-ha kastam iti nirvinnas
-cukrusuh samaharsayah
-<p></p>
+vrtro 'surams tan anugan manasvi
+pradhavatah preksya babhasa etat
+palayitam preksya balam ca bhagnam
+bhayena tivrena vihasya virah
+<br>
 <h2>Synonyms</h2>
-vrtra-grastam--swallowed by Vrtrasura; tam--him (Indra); alokya--seeing; sa-prajapatayah--with Lord
-Brahma and other prajapatis; surah--all the demigods; ha--alas; kastam--what a tribulation; iti--thus;
-nirvinnah--being very morose; cukrusuh--lamented; sa-maha-rsayah--with the great sages.
-<p></p>
+vrtrah--Vrtrasura, the commander of the demons; asuran--all the demons; tan--them; anugan--his
+followers; manasvi--the great-minded; pradhavatah--fleeing; preksya--observing; babhasa--spoke; etat--
+this; palayitam--fleeing; preksya--seeing; balam--army; ca--and; bhagnam--broken; bhayena--out of fear;
+tivrena--intense; vihasya--smiling; virah--the great hero.
+<br>
 <h2>Translation</h2>
-When the demigods, along with Brahma, other prajapatis and other great saintly persons, saw that Indra
-had been swallowed by the demon, they became very morose. "Alas," they lamented. "What a calamity !
-What a calamity !"
+Seeing his army broken and all the asuras, even those known as great heroes, fleeing the battlefield out
+of intense fear, Vrtrasura, who was truly a great-minded hero, smiled and spoke the following words.
 </p>
 
 </div>
@@ -70,7 +109,7 @@ What a calamity !"
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

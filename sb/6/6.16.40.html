@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,70 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.40.html">6.16.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ko 'tikramo 'nuvartantyah
-svabhavam iha yositah
-dhin mam batabudham svarthe
-yad aham tv ajitendriyah
-<p></p>
+jitam ajita tada bhavata
+yadaha bhagavatam dharmam anavadyam
+niskincana ye munaya
+atmarama yam upasate 'pavargaya
+<br>
 <h2>Synonyms</h2>
-kah--what; atikramah--offense; anuvartantyah--following; sva-bhavam--her nature; iha--here; yositah--of
-the woman; dhik--condemnation; mam--unto me; bata--alas; abudham--not conversant; sva-arthe--in
-what is good for me; yat--because; aham--I; tu--indeed; ajita-indriyah--unable to control my senses.
-<p></p>
+jitam--conquered; ajita--O unconquerable one; tada--then; bhavata--by Your Lordship; yada--when;
+aha--spoke; bhagavatam--which helps the devotee approach the Supreme Personality of Godhead;
+dharmam--the religious process; anavadyam--faultless (free from contamination); niskincanah--who have
+no desire to be happy with material opulences; ye--those who; munayah--great philosophers and exalted
+sages; atma-aramah--who are self-satisfied (being completely aware of their constitutional position as
+eternal servants of the Lord); yam--whom; upasate--worship; apavargaya--for achieving liberation from
+material bondage.
+<br>
 <h2>Translation</h2>
-This woman, my wife, has adopted a means that follows her nature, and therefore she is not to be
-blamed. But I am a man. Therefore, all condemnation upon me! I am not at all conversant with what is
-good for me, since I could not control my senses.
-<p></p>
+O unconquerable one, when You spoke about bhagavata-dharma, which is the uncontaminated religious
+system for achieving the shelter of Your lotus feet, that was Your victory. Persons who have no material
+desires, like the Kumaras, who are self-satisfied sages, worship You to be liberated from material
+contamination. In other words, they accept the process of bhagavata-dharma to achieve shelter at Your
+lotus feet.
+<br>
 <h2>Purport</h2>
-The natural instinct of a woman is to enjoy the material world. She induces her husband to enjoy this
-world by satisfying his tongue, belly and genitals, which are called jihva, udara and upastha. A woman is
-expert in cooking palatable dishes so that she can easily satisfy her husband in eating. When one eats
-nicely, his belly is satisfied, and as soon as the belly is satisfied the genitals become strong. Especially
-when a man is accustomed to eating meat and drinking wine and similar passionate things, he certainly
-becomes sexually inclined. It should be understood that sexual inclinations are meant not for spiritual
-progress but for gliding down to hell. Thus Kasyapa Muni considered his situation and lamented. In other
-words, to be a householder is very risky unless one is trained and the wife is a follower of her husband. A
-husband should be trained at the very beginning of his life. Kaumara acaret prajno dharman bhagavatan
-iha (Bhag. 7.6.1). During the time of brahmacarya, or student life, a brahmacari should be taught to be
-expert in bhagavata-dharma, devotional service. Then when he marries, if his wife is faithful to her
-husband and follows him in such life, the relationship between husband and wife is very desirable.
-However, a relationship between husband and wife without spiritual consciousness but strictly for sense
-gratification is not at all good. It is said in Srimad-Bhagavatam (12.2.3) that especially in this age, Kaliyuga,
-dam-patye 'bhirucir hetuh: the relationship between husband and wife will be based on sexual
-power. Therefore householder life in this Kali-yuga is extremely dangerous unless both the wife and
-husband take to Krsna consciousness.
+As stated by Srila Rupa Gosvami in Bhakti-rasamrta-sindhu:
+anyabhilasita-sunyam
+jnana-karmady-anavrtam
+anukulyena krsnanusilanam
+bhaktir uttama
+"One should render transcendental loving service to the Supreme Lord Krsna favorably and without
+desires for material profit or gain through fruitive activities or philosophical speculation. That is called
+pure devotional service."
+The Narada-pancaratra also says:
+sarvopadhi-vinirmuktam
+tat-paratvena nirmalam
+hrsikena hrsikesasevanam
+bhaktir ucyate
+"One should be free from all material designations and cleansed of all material contamination. He
+should be restored to his pure identity, in which he engages his senses in the service of the proprietor of
+the senses. That is called devotional service." This is also called bhagavata-dharma. Without material
+aspirations, one should simply serve Krsna, as advised in Bhagavad-gita, Narada-pancaratra and Srimad-
+Bhagavatam. Bhagavata-dharma is the process of religion enunciated by pure devotees, direct
+representatives of the Supreme Personality of Godhead like Narada, Sukadeva Gosvami and their humble
+servants in the disciplic succession. By understanding bhagavata-dharma, one immediately becomes free
+from material contamination. Living entities, who are part and parcel of the Supreme Personality of
+Godhead, are loitering in this material world suffering. When they are instructed by the Lord Himself
+about bhagavata-dharma and they adopt it, that is victory for the Lord, for He then reclaims these fallen
+souls. A devotee following the principles of bhagavata-dharma feels very much obligated to the Supreme
+Personality of Godhead. He can understand the difference between life without bhagavata-dharma and life
+with bhagavata-dharma and thus he ever remains obliged to the Lord. Taking to Krsna consciousness and
+bringing fallen souls to Krsna consciousness is victory for Lord Krsna.
+sa vai pumsam paro dharmo
+yato bhaktir adhoksaje
+ahaituky apratihata
+yayatma suprasidati
+"The supreme occupation [dharma] for all humanity is that by which men can attain to loving
+devotional service unto the transcendent Lord. Such devotional service must be unmotivated and
+uninterrupted in order to completely satisfy the self." (Bhag. 1.2.6) Therefore Srimad-Bhagavatam is the
+pure transcendental process of religion.
 </p>
 
 </div>
@@ -89,7 +152,7 @@ husband take to Krsna consciousness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

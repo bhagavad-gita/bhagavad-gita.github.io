@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.7.html">6.14.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nityasyarthasya sambandho
-hy anityo drsyate nrsu
-yavad yasya hi sambandho
-mamatvam tavad eva hi
-<p></p>
+atra nah samsayo bhuyan
+chrotum kautuhalam prabho
+yah paurusena samare
+sahasraksam atosayat
+<br>
 <h2>Synonyms</h2>
-nityasya--of the eternal; arthasya--thing; sambandhah--relationship; hi--indeed; anityah--temporary;
-drsyate--is seen; nrsu--in human society; yavat--as long as; yasya--of whom; hi--indeed; sambandhah--
-relationship; mamatvam--ownership; tavat--that long; eva--indeed; hi--certainly.
-<p></p>
+atra--in this connection; nah--our; samsayah--doubt; bhuyan--great; srotum--to hear; kautuhalam--
+eagerness; prabho--O my lord; yah--he who; paurusena--by bravery and strength; samare--in battle;
+sahasra-aksam--Lord Indra, who has one thousand eyes; atosayat--pleased.
+<br>
 <h2>Translation</h2>
-A few living entities are born in the human species, and others are born as animals. Although both are
-living entities, their relationships are impermanent. An animal may remain in the custody of a human
-being for some time, and then the same animal may be transferred to the possession of other human
-beings. As soon as the animal goes away, the former proprietor no longer has a sense of ownership. As
-long as the animal is in his possession he certainly has an affinity for it, but as soon as the animal is sold,
-the affinity is lost.
-<p></p>
-<h2>Purport</h2>
-Aside from the fact that the soul transmigrates from one body to another, even in this life the
-relationships between living entities are impermanent, as exemplified in this verse. The son of Citraketu
-was named Harsasoka, or "jubilation and lamentation." The living entity is certainly eternal, but because
-he is covered by a temporary dress, the body, his eternity is not observed. Dehino 'smin yatha dehe
-kaumaram yauvanam jara: "The embodied soul continually passes, in this body, from boyhood to youth to
-old age." Thus the bodily dress is impermanent. The living entity, however, is permanent. As an animal is
-transferred from one owner to another, the living entity who was the son of Citraketu lived as his son for
-some time, but as soon as he was transferred to another body, the affectionate relationship was broken. As
-stated in the example given in the previous verse, when one has a commodity in his hands he considers it
-his, but as soon as it is transferred it becomes someone else's commodity. Then one no longer has a
-relationship with it; he has no affection for it, nor does he lament for it.
+My dear lord, Sukadeva Gosvami, although Vrtrasura was a sinful demon, he showed the prowess of a
+most exalted ksatriya and satisfied Lord Indra in battle. How could such a demon be a great devotee of
+Lord Krsna? These contradictions have caused me great doubt, and they have made me eager to hear of
+this from you.
 </p>
 
 </div>
@@ -86,7 +110,7 @@ relationship with it; he has no affection for it, nor does he lament for it.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

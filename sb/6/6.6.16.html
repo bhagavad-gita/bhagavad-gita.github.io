@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.6.16.html">6.6.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-mam ugra-dharmad akhilat pramadan
-narayanah patu naras ca hasat
-dattas tv ayogad atha yoga-nathah
-payad gunesah kapilah karma-bandhat
-<p></p>
+vibhavasor asutosa
+vyustam rocisam atapam
+pancayamo 'tha bhutani
+yena jagrati karmasu
+<br>
 <h2>Synonyms</h2>
-mam--me; ugra-dharmat--from unnecessary religious principles; akhilat--from all kinds of activities;
-pramadat--which are enacted in madness; narayanah--Lord Narayana; patu--may He protect; narah ca--
-and Nara; hasat--from unnecessary pride; dattah--Dattatreya; tu--of course; ayogat--from the path of false
-yoga; atha--indeed; yoga-nathah--the master of all mystic powers; payat--may He protect; guna-isah--the
-master of all spiritual qualities; kapilah--Lord Kapila; karma-bandhat--from the bondage of fruitive
-activities.
-<p></p>
+vibhavasoh--of Vibhavasu; asuta--gave birth to; usa--named Usa; vyustam--Vyusta; rocisam--Rocisa;
+atapam--Atapa; pancayamah--Pancayama; atha--thereafter; bhutani--the living entities; yena--by whom;
+jagrati--are awakened; karmasu--in material activities.
+<br>
 <h2>Translation</h2>
-May Lord Narayana protect me from unnecessarily following false religious systems and falling from my
-duties due to madness. May the Lord in His appearance as Nara protect me from unnecessary pride. May
-Lord Dattatreya, the master of all mystic power, protect me from falling while performing bhakti-yoga,
-and may Lord Kapila, the master of all good qualities, protect me from the material bondage of fruitive
-activities.
+Usa, the wife of Vibhavasu, gave birth to three sons--Vyusta, Rocisa and Atapa. From Atapa came
+Pancayama, the span of day, who awakens all living entities to material activities.
 </p>
 
 </div>
@@ -75,7 +108,7 @@ activities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.18.html">6.3.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatha sasarja bhutani
-dakso duhitr-vatsalah
-retasa manasa caiva
-tan mamavahitah srnu
-<p></p>
+bhutani visnoh sura-pujitani
+durdarsa-lingani mahadbhutani
+raksanti tad-bhaktimatah parebhyo
+mattas ca martyan atha sarvatas ca
+<br>
 <h2>Synonyms</h2>
-yatha--as; sasarja--created; bhutani--the living entities; daksah--Daksa; duhitr-vatsalah--who is very
-affectionate to his daughters; retasa--by semen; manasa--by the mind; ca--also; eva--indeed; tat--that;
-mama--from me; avahitah--being attentive; srnu--please hear.
-<p></p>
+bhutani--living entities or servants; visnoh--of Lord Visnu; sura-pujitani--who are worshiped by the
+demigods; durdarsa-lingani--possessing forms not easily seen; maha-adbhutani--greatly wonderful;
+raksanti--they protect; tat-bhakti-matah--the devotees of the Lord; parebhyah--from others who are
+inimical; mattah--from me (Yamaraja) and my order carriers; ca--and; martyan--the human beings; atha--
+thus; sarvatah--from everything; ca--and.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami continued: Please hear from me with great attention how Prajapati Daksa, who was
-very affectionate to his daughters, created different types of living entities through his semen and through
-his mind.
-<p></p>
+The order carriers of Lord Visnu, who are worshiped even by the demigods, possess wonderful bodily
+features exactly like those of Visnu and are very rarely seen. The Visnudutas protect the devotees of the
+Lord from the hands of enemies, from envious persons and even from my jurisdiction, as well as from
+natural disturbances.
+<br>
 <h2>Purport</h2>
-The word duhitr-vatsalah indicates that all the prajas were born from Daksa's daughters. Srila
-Visvanatha Cakravarti Thakura says that apparently Daksa had no son.
+Yamaraja has specifically described the qualities of the Visnudutas to convince his own servants not to
+be envious of them. Yamaraja warned the Yamadutas that the Visnudutas are worshiped with respectful
+obeisances by the demigods and are always very alert to protect the devotees of the Lord from the hands
+of enemies, from natural disturbances and from all dangerous conditions in this material world.
+Sometimes the members of the Krsna Consciousness Society are afraid of the impending danger of world
+war and ask what would happen to them if a war should occur. In all kinds of danger, they should be
+confident of their protection by the Visnudutas or the Supreme Personality of Godhead, as confirmed in
+Bhagavad-gita (kaunteya pratijanihi na me bhaktah pranasyati). Material danger is not meant for devotees.
+This is also confirmed in Srimad-Bhagavatam. Padam padam yad vipadam na tesam: in this material world
+there are dangers at every step, but they are not meant for devotees who have fully surrendered unto the
+lotus feet of the Lord. The pure devotees of Lord Visnu may rest assured of the Lord's protection, and as
+long as they are in this material world they should fully engage in devotional service by preaching the cult
+of Sri Caitanya Mahaprabhu and Lord Krsna, namely the Hare Krsna movement of Krsna consciousness.
 </p>
 
 </div>
@@ -74,7 +127,7 @@ Visvanatha Cakravarti Thakura says that apparently Daksa had no son.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

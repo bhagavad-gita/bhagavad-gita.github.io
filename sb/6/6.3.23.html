@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,41 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.23.html">6.3.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-prajapatir uvaca
-namah parayavitathanubhutaye
-guna-trayabhasa-nimitta-bandhave
-adrsta-dhamne guna-tattva-buddhibhir
-nivrtta-manaya dadhe svayambhuve
-<p></p>
+namoccarana-mahatmyam
+hareh pasyata putrakah
+ajamilo 'pi yenaiva
+mrtyu-pasad amucyata
+<br>
 <h2>Synonyms</h2>
-sri-prajapatih uvaca--the prajapati Daksa said; namah--all respectful obeisances; paraya--unto the
-Transcendence; avitatha--correct; anubhutaye--unto Him whose spiritual potency brings about realization
-of Him; guna-traya--of the three material modes of nature; abhasa--of the living entities who have the
-appearance; nimitta--and of the material energy; bandhave--unto the controller; adrsta-dhamne--who is
-not perceived in His abode; guna-tattva-buddhibhih--by the conditioned souls whose poor intelligence
-dictates that real truth is found in the manifestations of the three modes of material nature; nivrttamanaya--
-who has surpassed all material measurements and calculations; dadhe--I offer; svayambhuve--
-unto the Supreme Lord, who is manifest with no cause.
-<p></p>
+nama--of the holy name; uccarana--of the pronouncing; mahatmyam--the exalted position; hareh--of the
+Supreme Lord; pasyata--just see; putrakah--O my dear servants, who are like my sons; ajamilah api--even
+Ajamila (who was considered greatly sinful); yena--by the chanting of which; eva--certainly; mrtyu-pasat--
+from the ropes of death; amucyata--was delivered.
+<br>
 <h2>Translation</h2>
-Prajapati Daksa said: The Supreme Personality of Godhead is transcendental to the illusory energy and
-the physical categories it produces. He possesses the potency for unfailing knowledge and supreme
-willpower, and He is the controller of the living entities and the illusory energy. The conditioned souls
-who have accepted this material manifestation as everything cannot see Him, for He is above the evidence
-of experimental knowledge. Self-evident and self-sufficient, He is not caused by any superior cause. Let
-me offer my respectful obeisances unto Him.
-<p></p>
+My dear servants, who are as good as my sons, just see how glorious is the chanting of the holy name of
+the Lord. The greatly sinful Ajamila chanted only to call his son, not knowing that he was chanting the
+Lord's holy name. Nevertheless, by chanting the holy name of the Lord, he remembered Narayana, and
+thus he was immediately saved from the ropes of death.
+<br>
 <h2>Purport</h2>
-The transcendental position of the Supreme Personality of Godhead is explained herewith. He is not
-perceivable by the conditioned souls, who are accustomed to material vision and cannot understand that
-the Supreme Personality of Godhead exists in His abode, which is beyond that vision. Even if a
-materialistic person could count all the atoms in the universe, he would still be unable to understand the
-Supreme Personality of Godhead. As confirmed in Brahma-samhita (5.34):
-panthas tu koti-sata-vatsara-sampragamyo
-vayor athapi manaso muni-pungavanam
-so 'py asti yat-prapada-simny avicintya-tattve
-govindam adi-purusam tam aham bhajami
-The conditioned souls may try to understand the Supreme Personality of Godhead for many billions of
-years through their mental speculative processes, traveling at the speed of the mind or the wind, but still
-the Absolute Truth will remain inconceivable to them because a materialistic person cannot measure the
-length and breadth of the Supreme Personality of Godhead's unlimited existence. If the Absolute Truth is
-beyond measurement, one may ask, how can one realize Him? The answer is given here by the word
-svayambhuve: one may understand Him or not, but nevertheless He is existing in His own spiritual
-potency.
+There is no need to conduct research into the significance of the chanting of the Hare Krsna mantra.
+The history of Ajamila is sufficient proof of the power of the Lord's holy name and the exalted position of
+a person who chants the holy name incessantly. Therefore Sri Caitanya Mahaprabhu advised:
+harer nama harer nama
+harer namaiva kevalam
+kalau nasty eva nasty eva
+nasty eva gatir anyatha
+In this age of Kali, no one can perform all the ritualistic ceremonies for becoming liberated; that is
+extremely difficult. Therefore all the sastras and all the acaryas have recommended that in this age one
+chant the holy name.
 </p>
 
 </div>
@@ -97,7 +123,7 @@ potency.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

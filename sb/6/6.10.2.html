@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.2.html">6.10.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato yugantagni-kathora-jihvam
-avidhya sulam tarasasurendrah
-ksiptva mahendraya vinadya viro
-hato 'si papeti rusa jagada
-<p></p>
+tathabhiyacito devair
+rsir atharvano mahan
+modamana uvacedam
+prahasann iva bharata
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; yuga-anta-agni--like the fire at the end of every millennium; kathora--sharp; jihvam--
-possessing points; avidhya--twirling; sulam--the trident; tarasa--with great force; asura-indrah--the great
-hero of the demons, Vrtrasura; ksiptva--throwing; maha-indraya--unto King Indra; vinadya--roaring;
-virah--the great hero (Vrtrasura); hatah--killed; asi--you are; papa--O sinful one; iti--thus; rusa--with great
-anger; jagada--be cried out.
-<p></p>
+tatha--in that manner; abhiyacitah--being begged; devaih--by the demigods; rsih--the great saintly
+person; atharvanah--Dadhici, the son of Atharva; mahan--the great personality; modamanah--being merry;
+uvaca--said; idam--this; prahasan--smiling; iva--somewhat; bharata--O Maharaja Pariksit.
+<br>
 <h2>Translation</h2>
-Then Vrtrasura, the great hero of the demons, whirled his trident, which had points like the flames of
-the blazing fire at the end of the millennium. With great force and anger he threw it at Indra, roaring and
-exclaiming loudly, "O sinful one, thus shall I kill you!"
+O King Pariksit, following the Lord's instructions, the demigods approached Dadhici, the son of
+Atharva. He was very liberal, and when they begged him to give them his body, he at once partially
+agreed. However, just to hear religious instructions from them, he smiled and jokingly spoke as follows.
 </p>
 
 </div>
@@ -72,7 +109,7 @@ exclaiming loudly, "O sinful one, thus shall I kill you!"
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

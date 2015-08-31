@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.48.html">6.16.48</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.48</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/48"><b>48</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-napsu snayan na kupyeta
-na sambhaseta durjanaih
-na vasitadhauta-vasah
-srajam ca vidhrtam kvacit
-<p></p>
+yam vai svasantam anu visva-srjah svasanti
+yam cekitanam anu cittaya uccakanti
+bhu-mandalam sarsapayati yasya murdhni
+tasmai namo bhagavate 'stu sahasra-murdhne
+<br>
 <h2>Synonyms</h2>
-na--not; apsu--in water; snayat--must bathe; na kupyeta--must not become angry; na sambhaseta--must
-not speak; durjanaih--with wicked persons; na vasita--must not wear; adhauta-vasah--unwashed clothes;
-srajam--flower garland; ca--and; vidhrtam--which was already worn; kvacit--ever.
-<p></p>
+yam--whom; vai--indeed; svasantam--endeavoring; anu--after; visva-srjah--the directors of the cosmic
+creation; svasanti--also endeavor; yam--whom; cekitanam--perceiving; anu--after; cittayah--all the
+knowledge-gathering senses; uccakanti--perceive; bhu-mandalam--the huge universe; sarsapayati--become
+like seeds of mustard; yasya--of whom; murdhni--on the head; tasmai--unto Him; namah--obeisances;
+bhagavate--the Supreme Personality of Godhead, full with six opulences; astu--may there be; sahasramurdhne--
+who has thousands of hoods.
+<br>
 <h2>Translation</h2>
-Kasyapa Muni continued: My dear gentle wife, never enter the water while bathing, never be angry, and
-do not even speak or associate with wicked people. Never wear clothes that have not been properly
-washed, and do not put on a garland that has already been worn.
+My dear Lord, it is after You endeavor that Lord Brahma, Indra and the other directors of the cosmic
+manifestation become occupied with their activities. It is after You perceive the material energy, My Lord,
+that the senses begin to perceive. The Supreme Personality of Godhead holds all the universes on His
+heads like seeds of mustard. I offer my respectful obeisances unto You, that Supreme Personality, who has
+thousands of hoods.
 </p>
 
 </div>
@@ -70,7 +114,7 @@ washed, and do not put on a garland that has already been worn.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

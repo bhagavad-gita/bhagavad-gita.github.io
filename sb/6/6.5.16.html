@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.5.16.html">6.5.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vibhavasor asutosa
-vyustam rocisam atapam
-pancayamo 'tha bhutani
-yena jagrati karmasu
-<p></p>
+srsty-apyaya-karim mayam
+vela-kulanta-vegitam
+mattasya tam avijnasya
+kim asat-karmabhir bhavet
+<br>
 <h2>Synonyms</h2>
-vibhavasoh--of Vibhavasu; asuta--gave birth to; usa--named Usa; vyustam--Vyusta; rocisam--Rocisa;
-atapam--Atapa; pancayamah--Pancayama; atha--thereafter; bhutani--the living entities; yena--by whom;
-jagrati--are awakened; karmasu--in material activities.
-<p></p>
+srsti--creation; apyaya--dissolution; karim--one who causes; mayam--the illusory energy; vela-kulaanta--
+near the banks; vegitam--being very rapid; mattasya--of one who is mad; tam--that material nature;
+avijnasya--who does not know; kim asat-karmabhih bhavet--what benefit can there be by performing
+temporary fruitive activities.
+<br>
 <h2>Translation</h2>
-Usa, the wife of Vibhavasu, gave birth to three sons--Vyusta, Rocisa and Atapa. From Atapa came
-Pancayama, the span of day, who awakens all living entities to material activities.
+[Narada Muni had said that there is a river flowing in both directions. The Haryasvas understood the
+purport of this statement.] Material nature functions in two ways--by creation and dissolution. Thus the
+river of material nature flows both ways. A living entity who unknowingly falls in this river is submerged
+in its waves, and since the current is swifter near the banks of the river, he is unable to get out. What will
+be the benefit of performing fruitive activities in that river of maya?
+<br>
+<h2>Purport</h2>
+One may be submerged in the waves of the river of maya, but one may also get free from the waves by
+coming to the banks of knowledge and austerity. Near these banks, however, the waves are very strong. If
+one does not understand how he is being tossed by the waves, but simply engages in temporary fruitive
+activities, what benefit will he derive?
+In the Brahma-samhita (5.44) there is this statement:
+srsti-sthiti-pralaya-sadhana-saktir eka
+chayeva yasya bhuvanani bibharti durga
+The maya-sakti, Durga, is in charge of srsti-sthiti-pralaya, creation and dissolution, and she acts under
+the direction of the Supreme Lord (mayadhyaksena prakrtih suyate sa-caracaram). When one falls in the
+river of nescience, he is always tossed here and there by the waves, but the same maya can also save him
+when be surrenders to Krsna, or becomes Krsna conscious. Krsna consciousness is knowledge and
+austerity. A Krsna conscious person takes knowledge from the Vedic literature, and at the same time he
+must practice austerities.
+To attain freedom from material life, one must take to Krsna consciousness. Otherwise, if one very
+busily engages in the so-called advancement of science, what benefit will he derive? If one is carried away
+by the waves of nature, what is the meaning of being a great scientist or philosopher? Mundane science
+and philosophy are also material creations. One must understand how maya works and how one can be
+released from the tossing waves of the river of nescience. That is one's first duty.
 </p>
 
 </div>
@@ -69,7 +132,7 @@ Pancayama, the span of day, who awakens all living entities to material activiti
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

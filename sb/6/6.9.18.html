@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.9.18.html">6.9.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atho hare me kulisena vira
-harta pramathyaiva siro yadiha
-tatranrno bhuta-balim vidhaya
-manasvinam pada-rajah prapatsye
-<p></p>
+yenavrta ime lokas
+tapasa tvastra-murtina
+sa vai vrtra iti proktah
+papah parama-darunah
+<br>
 <h2>Synonyms</h2>
-atho--otherwise; hare--O King Indra; me--of me; kulisena--by your thunderbolt; vira--O great hero;
-harta--you cut off; pramathya--destroying my army; eva--certainly; sirah--head; yadi--if; iha--in this battle;
-tatra--in that case; anrnah--relieved of all debts in this material world; bhuta-balim--a presentation for all
-living entities; vidhaya--arranging; manasvinam--of great sages like Narada Muni; pada-rajah--the dust of
-the lotus feet; prapatsye--I shall achieve.
-<p></p>
+yena--by whom; avrtah--covered; ime--all these; lokah--planets; tapasa--by the austerity; tvastramurtina--
+in the form of the son of Tvasta; sah--he; vai--indeed; vrtrah--Vrtra; iti--thus; proktah--called;
+papah--personified sin; parama-darunah--very fearful.
+<br>
 <h2>Translation</h2>
-But if in this battle you cut off my head with your thunderbolt and kill my soldiers, O Indra, O great
-hero, I shall take great pleasure in offering my body to other living entities [such as jackals and vultures].
-I shall thus be relieved of my obligations to the reactions of my karma, and my fortune will be to receive
-the dust from the lotus feet of great devotees like Narada Muni.
-<p></p>
+That very fearful demon, who was actually the son of Tvasta, covered all the planetary systems by dint
+of austerity. Therefore he was named Vrtra, or one who covers everything.
+<br>
 <h2>Purport</h2>
-Sri Narottama dasa Thakura sings:
-ei chaya gosani yara, mui tara dasa
-tan' sabara pada-renu mora panca-grasa
-"I am the servant of the six Gosvamis, and the dust of their lotus feet provides my five kinds of food." A
-Vaisnava always desires the dust of the lotus feet of previous acaryas and Vaisnavas. Vrtrasura was certain
-that he would be killed in the battle with Indra, because this was the desire of Lord Visnu. He was
-prepared for death because he knew that after his death he was destined to return home, back to
-Godhead. This is a great destination, and it is achieved by the grace of a Vaisnava. Chadiya vaisnava-seva
-nistara payeche keba: no one has ever gone back to Godhead without being favored by a Vaisnava. In this
-verse, therefore, we find the words manasvinam pada-rajah prapatsye: "I shall receive the dust of the lotus
-feet of great devotees." The word manasvinam refers to great devotees who always think of Krsna. They
-are always peaceful, thinking of Krsna, and therefore they are called dhira. The best example of such a
-devotee is Narada Muni. If one receives the dust of the lotus feet of a manasvi, a great devotee, he
-certainly returns home, back to Godhead.
+In the Vedas it is said, sa imal lokan avrnot tad vrtrasya vrtratvam: because the demon covered all the
+planetary systems, his name was Vrtrasura.
 </p>
 
 </div>
@@ -89,7 +112,7 @@ certainly returns home, back to Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.23.html">6.7.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasyoru-srnge jagatim sva-navam
-manur yathabadhya tatara durgam
-sa eva nas tvastra-bhayad durantat
-tratasritan varicaro 'pi nunam
-<p></p>
+maghavan dvisatah pasya
+praksinan gurv-atikramat
+sampraty upacitan bhuyah
+kavyam aradhya bhaktitah
+adadiran nilayanam
+mamapi bhrgu-devatah
+<br>
 <h2>Synonyms</h2>
-yasya--of whom; uru--very strong and high; srnge--on the born; jagatim--in the form of the world; svanavam--
-his own boat; manuh--Manu, King Satyavrata; yatha--just as; abadhya--binding; tatara--crossed;
-durgam--the very difficult to cross (inundation); sah--He (the Supreme Personality of Godhead); eva--
-certainly; nah--us; tvastra-bhayat--from fear of the son of Tvasta; durantat--endless; trata--deliverer;
-asritan--dependents (like us); vari-carah api--although taking the form of a fish; nunam--indeed.
-<p></p>
+maghavan--O Indra; dvisatah--your enemies; pasya--just see; praksinan--being very weak (formerly);
+guru-atikramat--because of disrespecting their guru, Sukracarya; samprati--at the present moment;
+upacitan--powerful; bhuyah--again; kavyam--their spiritual master, Sukracarya; aradhya--worshiping;
+bhaktitah--with great devotion; adadiran--may take away; nilayanam--the abode, Satyaloka; mama--my;
+api--even; bhrgu-devatah--who are now strong devotees of Sukracarya, the disciple of Bhrgu.
+<br>
 <h2>Translation</h2>
-The Manu named King Satyavrata formerly saved himself by tying the small boat of the entire world to
-the horn of the Matsya avatara, the fish incarnation. By the grace of the Matsya avatara, Manu saved
-himself from the great danger of the flood. May that same fish incarnation save us from the great and
-fearful danger caused by the son of Tvasta.
+O Indra, your enemies, the demons, were extremely weak because of their disrespect toward Sukracarya,
+but since they have now worshiped Sukracarya with great devotion, they have again become powerful. By
+their devotion to Sukracarya, they have increased their strength so much that now they are even able to
+easily seize my abode from me.
+<br>
+<h2>Purport</h2>
+Lord Brahma wanted to point out to the demigods that by the strength of the guru one can become most
+powerful within this world, and by the displeasure of the guru one can lose everything. This is confirmed
+by the song of Visvanatha Cakravarti Thakura:
+yasya prasadad bhagavat-prasado
+yasyaprasadan na gatih kuto 'pi
+"By the mercy of the spiritual master one is benedicted by the mercy of Krsna. Without the grace of the
+spiritual master, one cannot make any advancement." Although the demons are insignificant in
+comparison to Lord Brahma, because of the strength of their guru they were so powerful that they could
+even seize Brahmaloka from Lord Brahma. We therefore pray to the spiritual master:
+mukam karoti vacalam
+pangum langhayate girim
+yat-krpa tam aham vande
+sri-gurum dina-taranam
+By the mercy of the guru, even a dumb man can become the greatest orator, and even a lame man can
+cross mountains. As advised by Lord Brahma, one should remember this sastric injunction if one desires
+success in his life.
 </p>
 
 </div>
@@ -73,7 +132,7 @@ fearful danger caused by the son of Tvasta.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

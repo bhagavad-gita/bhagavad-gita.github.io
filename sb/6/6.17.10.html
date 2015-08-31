@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.17.10.html">6.17.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pranamed dandavad bhumau
-bhakti-prahvena cetasa
-dasa-varam japen mantram
-tatah stotram udirayet
-<p></p>
+ity atad-virya-vidusi
+bruvane bahv-asobhanam
+rusaha devi dhrstaya
+nirjitatmabhimanine
+<br>
 <h2>Synonyms</h2>
-pranamet--should offer obeisances; danda-vat--like a stick; bhumau--on the ground; bhakti--through
-devotion; prahvena--humble; cetasa--with a mind; dasa-varam--ten times; japet--should utter; mantram--
-the mantra; tatah--then; stotram--prayer; udirayet--should chant.
-<p></p>
+iti--thus; a-tat-virya-vidusi--when Citraketu, who did not know the prowess of Lord Siva; bruvane--
+spoke; bahu-asobhanam--that which is not up to the standard of etiquette (the criticism of the exalted
+Lord Siva); rusa--with anger; aha--said; devi--the goddess Parvati; dhrstaya--unto Citraketu, who was
+quite shameless; nirjita-atma--as one who has controlled his senses; abhimanine--thinking of himself.
+<br>
 <h2>Translation</h2>
-One should offer obeisances unto the Lord with a mind humbled through devotion. While offering
-dandavats by falling on the ground like a rod, one should chant the above mantra ten times. Then one
-should chant the following prayer.
+Not knowing the prowess of Lord Siva and Parvati, Citraketu strongly criticized them. His statements
+were not at all pleasing, and therefore the goddess Parvati, being very angry, spoke as follows to
+Citraketu, who thought himself better than Lord Siva in controlling the senses.
+<br>
+<h2>Purport</h2>
+Although Citraketu never meant to insult Lord Siva, he should not have criticized the lord, even though
+the lord was transgressing social customs. It is said, tejiyasam na dosaya: one who is very powerful should
+be understood to be faultless. For example, one should not find faults with the sun, although it evaporates
+urine from the street. The most powerful cannot be criticized by an ordinary man, or even by a great
+personality. Citraketu should have known that Lord Siva, although sitting in that way, was not to be
+criticized. The difficulty was that Citraketu, having become a great devotee of Lord Visnu, Sankarsana,
+was somewhat proud at having achieved Lord Sankarsana's favor and therefore thought that he could now
+criticize anyone, even Lord Siva. This kind of pride in a devotee is never tolerated. A Vaisnava should
+always remain very humble and meek and offer respect to others.
+trnad api sunicena
+taror api sahisnuna
+amanina manadena
+kirtaniyah sada harih
+"One should chant the holy name of the Lord in a humble state of mind, thinking oneself lower than the
+straw in the street; one should be more tolerant than a tree, devoid of all sense of false prestige and ready
+to offer all respect to others. In such a state of mind one can chant the holy name of the Lord constantly."
+A Vaisnava should not try to minimize anyone else's position. It is better to remain humble and meek and
+chant the Hare Krsna mantra. The word nirjitatmabhimanine indicates that Citraketu thought himself a
+better controller of the senses than Lord Siva, although actually he was not. Because of all these
+considerations, mother Parvati was somewhat angry at Citraketu.
 </p>
 
 </div>
@@ -70,7 +132,7 @@ should chant the following prayer.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

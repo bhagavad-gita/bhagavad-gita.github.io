@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.28.html">6.14.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatah sa sapta-ratrante
-vidyaya dharyamanaya
-vidyadharadhipatyam ca
-lebhe 'pratihatam nrpa
-<p></p>
+jyestha srestha ca ya rajno
+mahisinam ca bharata
+namna krtadyutis tasyai
+yajnocchistam adad dvijah
+<br>
 <h2>Synonyms</h2>
-tatah--from this; sah--he; sapta-ratra-ante--at the end of seven nights; vidyaya--by the prayers;
-dharyamanaya--being carefully practiced; vidyadhara-adhipatyam--mastership of the Vidyadharas (as an
-intermediate result); ca--also; lebhe--achieved; apratihatam--undeviated from the instructions of the
-spiritual master; nrpa--O King Pariksit.
-<p></p>
+jyestha--the senior; srestha--the most perfect; ca--and; ya--she who; rajnah--of the King; mahisinam--
+among all the queens; ca--also; bharata--O Maharaja Pariksit, the best of the Bharatas; namna--by name;
+krtadyutih--Krtadyuti; tasyai--unto her; yajna--of the sacrifice; ucchistam--the remnants of food; adat--
+delivered; dvijah--the great sage (Angira).
+<br>
 <h2>Translation</h2>
-O King Pariksit, after only one week of repeatedly practicing the mantra received from the spiritual
-master, Citraketu achieved the rule of the planet of the Vidyadharas as an intermediate product of his
-spiritual advancement in knowledge.
-<p></p>
-<h2>Purport</h2>
-If a devotee, after being initiated, adheres rigidly to the instructions of the spiritual master, he is
-naturally endowed with the material opulences of vidyadhara-adhipatyam and similar posts as byproducts.
-A devotee need not practice yoga, karma or jnana to achieve a successful result. Devotional
-service alone is competent to award a devotee all material power. A pure devotee, however, is never
-attached to material power, although he gets it very easily without personal endeavor. Citraketu received
-this side benefit of his devotional service, which he rigidly performed in accordance with the instructions
-of Narada.
+O Pariksit Maharaja, best of the Bharatas, the remnants of the food offered in the yajna were given by
+the great sage Angira to the first and most perfect among Citraketu's millions of queens, whose name was
+Krtadyuti.
 </p>
 
 </div>
@@ -80,7 +110,7 @@ of Narada.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

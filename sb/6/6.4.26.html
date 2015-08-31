@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,58 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.4.26.html">6.4.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad-upasparsanad eva
-vinirdhuta-malasayah
-japanto brahma paramam
-tepus tatra mahat tapah
-<p></p>
+yadoparamo manaso nama-ruparupasya
+drsta-smrti-sampramosat
+ya iyate kevalaya sva-samsthaya
+hamsaya tasmai suci-sadmane namah
+<br>
 <h2>Synonyms</h2>
-tat--of that holy place; upasparsanat--by bathing regularly in the water; eva--indeed; vinirdhuta--
-completely purified; mala-asayah--of all the dirt within the heart; japantah--chanting or murmuring;
-brahma--mantras beginning with om (such as om tad visnoh paramam padam sada pasyanti surayah);
-paramam--the ultimate goal; tepuh--performed; tatra--there; mahat--great; tapah--penances.
-<p></p>
+yada--when in trance; uparamah--complete cessation; manasah--of the mind; nama-rupa--material
+names and forms; rupasya--of that by which they appear; drsta--of material vision; smrti--and of
+remembrance; sampramosat--due to the destruction; yah--who (the Supreme Personality of Godhead);
+iyate--is perceived; kevalaya--with spiritual; sva-samsthaya--His own original form; hamsaya--unto the
+supreme pure; tasmai--unto Him; suci-sadmane--who is realized only in the pure state of spiritual
+existence; namah--I offer my respectful obeisances.
+<br>
 <h2>Translation</h2>
-At Narayana-saras, the second group of sons performed penances in the same way as the first. They
-bathed in the holy water, and by its touch all the dirty material desires in their hearts were cleansed away.
-They murmured mantras beginning with omkara and underwent a severe course of austerities.
-<p></p>
+When one's consciousness is completely purified of the contamination of material existence, gross and
+subtle, without being agitated as in the working and dreaming states, and when the mind is not dissolved
+as in susupti, deep sleep, one comes to the platform of trance. Then one's material vision and the
+memories of the mind, which manifests names and forms, are vanquished. Only in such a trance is the
+Supreme Personality of Godhead revealed. Thus let us offer our respectful obeisances unto the Supreme
+Personality of Godhead, who is seen in that uncontaminated, transcendental state.
+<br>
 <h2>Purport</h2>
-Every Vedic mantra is called brahma because each mantra is preceded by the brahmaksara (aum or
-omkara). For example, om namo bhagavate vasudevaya. Lord Krsna says in Bhagavad-gita (7. 8),
-pranavah sarva-vedesu: "In all the Vedic mantras, I am represented by pranava, or omkara." Thus
-chanting of the Vedic mantras beginning with omkara is directly chanting of Krsna's name. There is no
-difference. Whether one chants omkara or addresses the Lord as "Krsna," the meaning is the same, but Sri
-Caitanya Mahaprabhu has recommended that in this age one chant the Hare Krsna mantra (harer nama
-eva kevalam). Although there is no difference between Hare Krsna and the Vedic mantras beginning with
-omkara, Sri Caitanya Mahaprabhu, the leader of the spiritual movement for this age, has recommended
-that one chant Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama,
-Hare Hare.
+There are two stages of God realization. One is called sujneyam, or very easily understood (generally by
+mental speculation), and the other is called durjneyam, understood only with difficulty. Paramatma
+realization and Brahman realization are considered sujneyam, but realization of the Supreme Personality
+of Godhead is durjneyam. As described here, one attains the ultimate realization of the Personality of
+Godhead when one gives up the activities of the mind--thinking, feeling and willing--or, in other words,
+when mental speculation stops. This transcendental realization is above susupti, deep sleep. In our gross
+conditional stage we perceive things through material experience and remembrance, and in the subtle
+stage we perceive the world in dreams. The process of vision also involves remembrance and also exists in
+a subtle form. Above gross experience and dreams is susupti, deep sleep, and when one comes to the
+completely spiritual platform, transcending deep sleep, he attains trance, visuddha-sattva, or vasudevasattva,
+in which the Personality of Godhead is revealed.
+Atah sri-krsna-namadi na bhaved grahyam indriyaih: as long as one is situated in duality, on the sensual
+platform, gross or subtle, realization of the original Personality of Godhead is impossible. Sevonmukhe hi
+jihvadau svayam eva sphuraty adah: but when one engages his senses in the service of the Lord--
+specifically, when one engages the tongue in chanting the Hare Krsna mantra and tasting only Krsna
+prasada with a spirit of service--the Supreme Personality of Godhead is revealed. This is indicated in this
+verse by the word suci-sadmane. Suci means purified. By the spirit of rendering service with one's senses,
+one's entire existence becomes suci-sadma, the platform of uncontaminated purity. Daksa therefore offers
+his respectful obeisances unto the Supreme Personality of Godhead, who is revealed on the platform of
+suci-sadma. In this regard Srila Visvanatha Cakravarti Thakura quotes the following prayer by Lord
+Brahma from the Srimad-Bhagavatam (10.14.6): tathapi bhuman mahimagunasya te viboddhum arhaty
+amalantar-atmabhih. "One whose heart has become completely purified, my Lord, can understand the
+transcendental qualities of Your Lordship and can understand the greatness of Your activities."
 </p>
 
 </div>
@@ -83,7 +140,7 @@ Hare Hare.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

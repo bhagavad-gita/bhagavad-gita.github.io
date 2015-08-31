@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.23.html">6.14.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yan na sprsanti na vidur
-mano-buddhindriyasavah
-antar bahis ca vitatam
-vyomavat tan nato 'smy aham
-<p></p>
+citraketur uvaca
+bhagavan kim na viditam
+tapo-jnana-samadhibhih
+yoginam dhvasta-papanam
+bahir antah saririsu
+<br>
 <h2>Synonyms</h2>
-yat--whom; na--not; sprsanti--can touch; na--nor; viduh--can know; manah--the mind; buddhi--the
-intelligence; indriya--the senses; asavah--the life airs; antah--within; bahih--outside; ca--also; vitatam--
-expanded; vyoma-vat--like the sky; tat--unto Him; natah--bowed; asmi--am; aham--I.
-<p></p>
+citraketuh uvaca--King Citraketu replied; bhagavan--O most powerful sage; kim--what; na--not;
+viditam--is understood; tapah--by austerity; jnana--knowledge; samadhibhih--and by samadhi (trance,
+transcendental meditation); yoginam--by the great yogis or devotees; dhvasta-papanam--who are fully
+freed from all sinful reactions; bahih--externally; antah--internally; saririsu--in conditioned souls, who
+have material bodies.
+<br>
 <h2>Translation</h2>
-The Supreme Brahman emanates from the Supreme Personality of Godhead and expands like the sky.
-Although untouched by anything material, it exists within and without. Nonetheless, the mind,
-intelligence, senses and living force can neither touch Him nor know Him. I offer unto Him my respectful
-obeisances.
+King Citraketu said: O great lord Angira, because of austerity, knowledge and transcendental samadhi,
+you are freed from all the reactions of sinful life. Therefore, as a perfect yogi, you can understand
+everything external and internal regarding embodied, conditioned souls like us.
 </p>
 
 </div>
@@ -71,7 +112,7 @@ obeisances.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

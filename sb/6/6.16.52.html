@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.52.html">6.16.52</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.52</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/52"><b>52</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dhauta-vasa sucir nityam
-sarva-mangala-samyuta
-pujayet pratarasat prag
-go-vipran sriyam acyutam
-<p></p>
+loke vitatam atmanam
+lokam catmani santatam
+ubhayam ca maya vyaptam
+mayi caivobhayam krtam
+<br>
 <h2>Synonyms</h2>
-dhauta-vasa--wearing washed cloth; sucih--being purified; nityam--always; sarva-mangala--with all
-auspicious items; samyuta--adorned; pujayet--one should worship; pratah-asat prak--before breakfast; govipran--
-the cows and brahmanas; sriyam--the goddess of fortune; acyutam--the Supreme Personality of
-Godhead.
-<p></p>
+loke--in this material world; vitatam--expanded (in the spirit of material enjoyment); atmanam--the
+living entity; lokam--the material world; ca--also; atmani--in the living entity; santatam--spread;
+ubhayam--both (the material world of material elements and the living entity); ca--and; maya--by Me;
+vyaptam--pervaded; mayi--in Me; ca--also; eva--indeed; ubhayam--both of them; krtam--created.
+<br>
 <h2>Translation</h2>
-Putting on washed clothing, being always pure and being adorned with turmeric, sandalwood pulp and
-other auspicious items, before breakfast one should worship the cows, the brahmanas, the goddess of
-fortune and the Supreme Personality of Godhead.
-<p></p>
+In this world of matter, which the conditioned soul accepts as consisting of enjoyable resources, the
+conditioned soul expands, thinking that he is the enjoyer of the material world. Similarly, the material
+world expands in the living entity as a source of enjoyment. In this way they both expand, but because
+they are My energies, they are both pervaded by Me. As the Supreme Lord, I am the cause of these effects,
+and one should know that both of them rest in Me.
+<br>
 <h2>Purport</h2>
-If one is trained to honor and worship the cows and brahmanas, he is actually civilized. The worship of
-the Supreme Lord is recommended, and the Lord is very fond of the cows and brahmanas (namo
-brahmanya-devaya go-brahmana-hitaya ca). In other words, a civilization in which there is no respect for
-the cows and brahmanas is condemned. One cannot become spiritually advanced without acquiring the
-brahminical qualifications and giving protection to cows. Cow protection insures sufficient food prepared
-with milk, which is needed for an advanced civilization. One should not pollute civilization by eating the
-flesh of cows. A civilization must do something progressive, and then it is an Aryan civilization. Instead of
-killing the cow to eat flesh, civilized men must prepare various milk products that will enhance the
-condition of society. If one follows the brahminical culture, he will become competent in Krsna
-consciousness.
+The Mayavada philosophy sees everything as being equal in quality with the Supreme Personality of
+Godhead, or the Supreme Brahman, and therefore sees everything as worshipable. This dangerous theory
+of the Mayavada school has turned people in general toward atheism. On the strength of this theory, one
+thinks that he is God, but this is not a fact. As stated in Bhagavad-gita (maya tatam idam sarvam jagad
+avyakta-murtina), the fact is that the entire cosmic manifestation is an expansion of the Supreme Lord's
+energies, which are manifested in the physical elements and the living entities. The living entities wrongly
+consider the physical elements to be resources meant for their enjoyment, and they think themselves to be
+the enjoyers. However, neither of them is independent; they are both energies of the Lord. The original
+cause for the material energy and spiritual energy is the Supreme Personality of Godhead. However,
+although the expansion of the Lord's energies is the original cause, one should not think that the Lord
+Himself has expanded in different ways. To condemn the theories of the Mayavadis, the Lord clearly says
+in Bhagavad-gita, mat-sthani sarva-bhutani na caham tesv avasthitah: "All beings are in Me, but I am not
+in them." Everything rests upon Him, and everything is but an expansion of His energies, but this does
+not mean that everything is as worshipable as the Lord Himself. The material expansion is temporary, but
+the Lord is not temporary. The living entities are parts of the Lord, but they are not the Lord Himself. The
+living entities in this material world are not inconceivable, but the Lord is. The theory that the Lord's
+energies, being expansions of the Lord, are as good as the Lord is mistaken.
 </p>
 
 </div>
@@ -83,7 +131,7 @@ consciousness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

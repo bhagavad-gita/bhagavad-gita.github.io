@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,52 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.39.html">6.7.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atha ha vava tava mahimamrta-rasa-samudra-viprusa sakrd avalidhaya sva-manasi nisyandamananavaratasukhena
-vismarita-drsta-sruta-visaya-sukha-lesabhasah parama-bhagavata ekantino bhagavati sarva-bhutapriya-
-suhrdi sarvatmani nitaram nirantaram nirvrta-manasah katham u ha va ete madhumathana punah
-svartha-kusala hy atma-priya-suhrdah sadhavas tvac-caranambujanusevam visrjanti na yatra punar ayam
-samsara-paryavartah.
-<p></p>
+sura-dvisam sriyam guptam
+ausanasyapi vidyaya
+acchidyadan mahendraya
+vaisnavya vidyaya vibhuh
+<br>
 <h2>Synonyms</h2>
-atha ha--therefore; vava--indeed; tava--Your; mahima--of glories; amrta--of the nectar; rasa--of the
-mellow; samudra--of the ocean; viprusa--by a drop; sakrt--only once; avalidhaya--tasted; sva-manasi--in
-his mind; nisyandamana--flowing; anavarata--continuously; sukhena--by the transcendental bliss;
-vismarita--forgotten; drsta--from material sight; sruta--and sound; visaya-sukha--of the material
-happiness; lesa-abhasah--the dim reflection of a tiny portion; parama-bhagavatah--great, exalted devotees;
-ekantinah--who have faith only in the Supreme Lord and nothing else; bhagavati--in the Supreme
-Personality of Godhead; sarva-bhuta--to all living entities; priya--who is dearmost; suhrdi--the friend;
-sarva-atmani--the Supersoul of all; nitaram--completely; nirantaram--continuously; nirvrta--with
-happiness; manasah--those whose minds; katham--how; u ha--then; va--or; ete--these; madhu-mathana--O
-killer of the Madhu demon; punah--again; sva-artha-kusalah--who are expert in the interest of life; hi--
-indeed; atma-priya-suhrdah--who have accepted You as the Supersoul, dearmost lover and friend;
-sadhavah--the devotees; tvat-carana-ambuja-anusevam--service to the lotus feet of Your Lordship;
-visrjanti--can give up; na--not; yatra--wherein; punah--again; ayam--this; samsara-paryavartah--repetition
-of birth and death within the material world.
-<p></p>
+sura-dvisam--of the enemies of the demigods; sriyam--the opulence; guptam--protected; ausanasya--of
+Sukracarya; api--although; vidyaya--by the talents; acchidya--collecting; adat--delivered; maha-indraya--
+unto King Indra; vaisnavya--of Lord Visnu; vidyaya--by a prayer; vibhuh--the most powerful Visvarupa.
+<br>
 <h2>Translation</h2>
-Therefore, O killer of the Madhu demon, incessant transcendental bliss flows in the minds of those who
-have even once tasted but a drop of the nectar from the ocean of Your glories. Such exalted devotees
-forget the tiny reflection of so-called material happiness produced from the material senses of sight and
-sound. Free from all desires, such devotees are the real friends of all living entities. Offering their minds
-unto You and enjoying transcendental bliss, they are expert in achieving the real goal of life. O Lord, You
-are the soul and dear friend of such devotees, who never need return to this material world. How could
-they give up engagement in Your devotional service?
-<p></p>
+The opulence of the demons, who are generally known as the enemies of the demigods, was protected
+by the talents and tactics of Sukracarya, but Visvarupa, who was most powerful, composed a protective
+prayer known as the Narayana-kavaca. By this intelligent mantra, he took away the opulence of the
+demons and gave it to Mahendra, the King of heaven.
+<br>
 <h2>Purport</h2>
-Although nondevotees, because of their meager knowledge and speculative habits, cannot understand
-the real nature of the Lord, a devotee who has once tasted the nectar from the Lord's lotus feet can realize
-what transcendental pleasure there is in the Lord's devotional service. A devotee knows that simply by
-rendering service to the Lord, he serves everyone. Therefore devotees are real friends to all living entities.
-Only a pure devotee can preach the glories of the Lord for the benefit of all conditioned souls.
+The distinction between the demigods (devas) and demons (asuras) is that the demigods are all devotees
+of Lord Visnu whereas the demons are devotees of demigods like Lord Siva, Goddess Kali and Goddess
+Durga. Sometimes the demons are also devotees of Lord Brahma. For example, Hiranyakasipu was a
+devotee of Lord Brahma, Ravana was a devotee of Lord Siva, and Mahisasura was a devotee of Goddess
+Durga. The demigods are devotees of Lord Visnu (visnu-bhaktah smrto daiva), whereas the demons
+(asuras tad-viparyayah) are always against the visnu-bhaktas, or Vaisnavas. To oppose the Vaisnavas, the
+demons become devotees of Lord Siva, Lord Brahma, Kali, Durga, and so on. In the days of yore, many
+long years ago, there was animosity between the devas and the asuras, and the same spirit still continues,
+for the devotees of Lord Siva and Goddess Durga are always envious of Vaisnavas, who are devotees of
+Lord Visnu. This strain between the devotees of Lord Siva and Lord Visnu has always existed. In the
+higher planetary systems, fights between the demons and the demigods continue for a long, long time.
+Herein we see that Visvarupa made for the demigods a protective covering, saturated with a Visnu
+mantra. Sometimes the Visnu mantra is called Visnu-jvara, and the Siva mantra is called Siva-jvara. We
+find in the sastras that sometimes the Siva-jvara and Visnu-jvara are employed in the fights between the
+demons and the demigods.
+The word sura-dvisam, which in this verse means "of the enemies of the demigods," also refers to the
+atheists. Srimad-Bhagavatam elsewhere says that Lord Buddha appeared for the purpose of bewildering
+the demons or atheists. The Supreme Personality of Godhead always awards His benediction to devotees.
+The Lord Himself confirms this in Bhagavad-gita (9.31):
+kaunteya pratijanihi
+na me bhaktah pranasyati
+"O son of Kunti, declare it boldly that My devotee never perishes."
 </p>
 
 </div>
@@ -93,7 +134,7 @@ Only a pure devotee can preach the glories of the Lord for the benefit of all co
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

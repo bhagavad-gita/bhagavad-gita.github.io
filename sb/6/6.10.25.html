@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.25.html">6.10.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa tu vrtrasya parigham
-karam ca karabhopamam
-ciccheda yugapad devo
-vajrena sata-parvana
-<p></p>
+na te sastrastra-varsaugha
+hy aseduh sura-sainikan
+chinnah siddha-pathe devair
+laghu-hastaih sahasradha
+<br>
 <h2>Synonyms</h2>
-sah--he (King Indra); tu--however; vrtrasya--of Vrtrasura; parigham--the iron club; karam--his hand;
-ca--and; karabha-upamam--as strong as the trunk of an elephant; ciccheda--cut to pieces; yugapat--
-simultaneously; devah--Lord Indra; vajrena--with the thunderbolt; sata-parvana--having one hundred
-joints.
-<p></p>
+na--not; te--those; sastra-astra-varsa-oghah--showers of arrows and other weapons; hi--indeed; aseduh--
+reached; sura-sainikan--the armies of the demigods; chinnah--cut; siddha-pathe--in the sky; devaih--by
+the demigods; laghu-hastaih--quick-handed; sahasradha--into thousands of pieces.
+<br>
 <h2>Translation</h2>
-With his thunderbolt named Sataparvan, Indra simultaneously cut to pieces Vrtrasura's club and his
-remaining hand.
+The showers of various weapons and arrows released to kill the soldiers of the demigods did not reach
+them because the demigods, acting quickly, cut the weapons into thousands of pieces in the sky.
 </p>
 
 </div>
@@ -70,7 +108,7 @@ remaining hand.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

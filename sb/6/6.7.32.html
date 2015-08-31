@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.32.html">6.7.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yat te gatinam tisrnam
-isituh paramam padam
-narvacino visargasya
-dhatar veditum arhati
-<p></p>
+vrnimahe tvopadhyayam
+brahmistham brahmanam gurum
+yathanjasa vijesyamah
+sapatnams tava tejasa
+<br>
 <h2>Synonyms</h2>
-yat--which; te--of You; gatinam tisrnam--of the three destinations (the heavenly planets, the earthly
-planets and hell); isituh--who are the controller; paramam padam--the supreme abode, Vaikunthaloka;
-na--not; arvacinah--a person appearing after; visargasya--the creation; dhatah--O supreme controller;
-veditum--to understand; arhati--is able.
-<p></p>
+vrnimahe--we choose; tva--you; upadhyayam--as teacher and spiritual master; brahmistham--being
+perfectly aware of the Supreme Brahman; brahmanam--a qualified brahmana; gurum--the perfect spiritual
+master; yatha--so that; anjasa--very easily; vijesyamah--we shall defeat; sapatnan--our rivals; tava--your;
+tejasa--by the power of austerity.
+<br>
 <h2>Translation</h2>
-O supreme controller, You control the three destinations [promotion to the heavenly planets, birth as a
-human being, and condemnation in hell], yet Your supreme abode is Vaikuntha-dhama. Since we
-appeared after You created this cosmic manifestation, Your activities are impossible for us to understand.
-We therefore have nothing to offer You but our humble obeisances.
-<p></p>
+Since you are completely aware of the Supreme Brahman, you are a perfect brahmana, and therefore you
+are the spiritual master of all orders of life. We accept you as our spiritual master and director so that by
+the power of your austerity we may easily defeat the enemies who have conquered us.
+<br>
 <h2>Purport</h2>
-An inexperienced man generally does not know what to beg from the Supreme Personality of Godhead.
-Everyone is under the jurisdiction of the created material world, and no one knows what benediction to
-ask when praying to the Supreme Lord. People generally pray to be promoted to the heavenly planets
-because they have no information of Vaikunthaloka. Srila Madhvacarya quotes the following verse:
-deva-lokat pitr-lokat
-nirayac capi yat param
-tisrbhyah paramam sthanam
-vaisnavam vidusam gatih
-There are different planetary systems, known as Devaloka (the planets of the demigods), Pitrloka (the
-planet of the Pitas) and Niraya (the hellish planets). When one transcends these various planetary systems
-and enters Vaikunthaloka, he achieves the ultimate resort of the Vaisnavas. Vaisnavas have nothing to do
-with the other planetary systems.
+One must approach a particular type of guru to execute a particular type of duty. Therefore although
+Visvarupa was inferior to the demigods, the demigods accepted him as their guru to conquer the demons.
 </p>
 
 </div>
@@ -86,7 +114,7 @@ with the other planetary systems.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

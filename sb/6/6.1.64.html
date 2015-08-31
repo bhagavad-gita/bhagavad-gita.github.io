@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.1.64.html">6.1.64</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.64</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/64"><b>64</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tam eva tosayam asa
 pitryenarthena yavata
 gramyair manoramaih kamaih
 prasideta yatha tatha
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tam--her (the prostitute); eva--indeed; tosayam asa--he tried to please; pitryena--he got from his father's
 hard labor; arthena--by the money; yavata--as long as possible; gramyaih--material; manah-ramaih--
 pleasing to her mind; kamaih--by presentations for sense enjoyment; prasideta--she would be satisfied;
 yatha--so that; tatha--in that way.
-<p></p>
+<br>
 <h2>Translation</h2>
 Thus Ajamila began spending whatever money he had inherited from his father to satisfy the prostitute
 with various material presentations so that she would remain pleased with him. He gave up all his
 brahminical activities to satisfy the prostitute.
-<p></p>
+<br>
 <h2>Purport</h2>
 There are many instances throughout the world in which even a purified person, being attracted by a
 prostitute, spends all the money he has inherited. Prostitute hunting is so abominable that the desire for
@@ -80,7 +119,7 @@ moment he may fall down from his good position, as exemplified in the case of Aj
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.20.html">6.16.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-rajovaca
-katham ta asuram bhavam
-apohyautpattikam guro
-indrena prapitah satmyam
-kim tat sadhu krtam hi taih
-<p></p>
+atmanandanubhutyaiva
+nyasta-sakty-urmaye namah
+hrsikesaya mahate
+namas te 'nanta-murtaye
+<br>
 <h2>Synonyms</h2>
-sri-raja uvaca--King Pariksit said; katham--why; te--they; asuram--demoniac; bhavam--mentality;
-apohya--giving up; autpattikam--due to birth; guro--my dear lord; indrena--by Indra; prapitah--were
-converted; sa-atmyam--to demigods; kim--whether; tat--therefore; sadhu--pious activities; krtam--
-performed; hi--indeed; taih--by them.
-<p></p>
+atma-ananda--of Your personal bliss; anubhutya--by perception; eva--certainly; nyasta--given up; saktiurmaye--
+the waves of material nature; namah--respectful obeisances; hrsikesaya--unto the supreme
+controller of the senses; mahate--unto the Supreme; namah--respectful obeisances; te--unto You; ananta--
+unlimited; murtaye--whose expansions.
+<br>
 <h2>Translation</h2>
-King Pariksit inquired: My dear lord, due to their birth, the forty-nine Maruts must have been obsessed
-with a demoniac mentality. Why did Indra, the King of heaven, convert them into demigods? Did they
-perform any rituals or pious activities?
+Perceiving Your personal bliss, You are always transcendental to the waves of material nature.
+Therefore, my Lord, I offer my respectful obeisances unto You. You are the supreme controller of the
+senses, and Your expansions of form are unlimited. You are the greatest, and therefore I offer my
+respectful obeisances unto You.
+<br>
+<h2>Purport</h2>
+This verse analytically differentiates the living entity from the Supreme Lord. The form of the Lord and
+the form of the conditioned soul are different because the Lord is always blissful whereas the conditioned
+soul is always under the threefold miseries of the material world. The Supreme Lord is sac-cid-anandavigraha.
+He derives ananda, bliss, from His own self. The Lord's body is transcendental, spiritual, but
+because the conditioned soul has a material body, he has many bodily and mental troubles. The
+conditioned soul is always perturbed by attachment and detachment, whereas the Supreme Lord is always
+free from such dualities. The Lord is the supreme master of all the senses, whereas the conditioned soul is
+controlled by the senses. The Lord is the greatest, whereas the living entity is the smallest. The living
+entity is conditioned by the waves of material nature, but the Supreme Lord is transcendental to all
+actions and reactions. The expansions of the Supreme Lord's body are innumerable (advaitam acyutam
+anadim ananta-rupam), but the conditioned soul is limited to only one form. From history we learn that a
+conditioned soul, by mystic power, can sometimes expand into eight forms, but the Lord's bodily
+expansions are unlimited. This means that the bodies of the Supreme Personality of Godhead have no
+beginning and no end, unlike the bodies of the living entities.
 </p>
 
 </div>
@@ -72,7 +127,7 @@ perform any rituals or pious activities?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

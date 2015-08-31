@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.22.html">6.16.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suta uvaca
-tad visnuratasya sa badarayanir
-vaco nisamyadrtam alpam arthavat
-sabhajayan san nibhrtena cetasa
-jagada satrayana sarva-darsanah
-<p></p>
+yasminn idam yatas cedam
+tisthaty apyeti jayate
+mrnmayesv iva mrj-jatis
+tasmai te brahmane namah
+<br>
 <h2>Synonyms</h2>
-sri-sutah uvaca--Sri Suta Gosvami said; tat--those; visnuratasya--of Maharaja Pariksit; sah--he;
-badarayanih--Sukadeva Gosvami; vacah--words; nisamya--hearing; adrtam--respectful; alpam--brief; arthavat--
-meaningful; sabhajayan san--praising; nibhrtena cetasa--with great pleasure; jagada--replied;
-satrayana--O Saunaka; sarva-darsanah--who is aware of everything.
-<p></p>
+yasmin--in whom; idam--this (cosmic manifestation); yatah--from whom; ca--also; idam--this (cosmic
+manifestation); tisthati--stands; apyeti--dissolves; jayate--is born; mrt-mayesu--in things made of earth;
+iva--like; mrt-jatih--birth from earth; tasmai--unto Him; te--You; brahmane--the supreme cause; namah--
+respectful obeisances.
+<br>
 <h2>Translation</h2>
-Sri Suta Gosvami said: O great sage Saunaka, after hearing Maharaja Pariksit speak respectfully and
-briefly on topics essential to hear, Sukadeva Gosvami, who was well aware of everything, praised his
-endeavor with great pleasure and replied.
-<p></p>
+As pots made completely of earth are situated on earth after being created and are transformed into
+earth again when broken, this cosmic manifestation is caused by the Supreme Brahman, situated in the
+Supreme Brahman, and annihilated in the same Supreme Brahman. Therefore, since the Supreme Lord is
+the cause of Brahman, let us offer Him our respectful obeisances.
+<br>
 <h2>Purport</h2>
-Maharaja Pariksit's question was very much appreciated by Sukadeva Gosvami because although it was
-composed of a small number of words, it contained meaningful inquiries about how the sons of Diti,
-although born as demons, became demigods. Srila Visvanatha Cakravarti Thakura stresses that even
-though Diti was very envious, her heart was purified because of a devotional attitude. Another significant
-topic is that although Kasyapa Muni was a learned scholar and was advanced in spiritual consciousness,
-he nonetheless fell a victim to the inducement of his beautiful wife. All these questions were posed in a
-small number of words, and therefore Sukadeva Gosvami very much appreciated Maharaja Pariksit's
-inquiry.
+The Supreme Lord is the cause of the cosmic manifestation, He maintains it after creation, and after
+annihilation the Lord is the reservoir of everything.
 </p>
 
 </div>
@@ -82,7 +115,7 @@ inquiry.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

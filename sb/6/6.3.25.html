@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,66 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.25.html">6.3.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-deho 'savo 'ksa manavo bhuta-matram
-atmanam anyam ca viduh param yat
-sarvam puman veda gunams ca taj-jno
-na veda sarva-jnam anantam ide
-<p></p>
+prayena veda tad idam na mahajano 'yam
+devya vimohita-matir bata mayayalam
+trayyam jadi-krta-matir madhu-puspitayam
+vaitanike mahati karmani yujyamanah
+<br>
 <h2>Synonyms</h2>
-dehah--this body; asavah--the life airs; aksah--the different senses; manavah--the mind, understanding,
-intellect and ego; bhuta-matram--the five gross material elements and the sense objects (form, taste,
-sound and so on); atmanam--themselves; anyam--any other; ca--and; viduh--know; param--beyond; yat--
-that which; sarvam--everything; puman--the living being; veda--knows; gunan--the qualities of the
-material nature; ca--and; tat-jnah--knowing those things; na--not; veda--knows; sarva-jnam--unto the
-omniscient; anantam--the unlimited; ide--I offer my respectful obeisances.
-<p></p>
+prayena--almost always; veda--know; tat--that; idam--this; na--not; mahajanah--great personalities
+besides Svayambhu, Sambhu and the other ten; ayam--this; devya--by the energy of the Supreme
+Personality of Godhead; vimohita-matih--whose intelligence is bewildered; bata--indeed; mayaya--by the
+illusory energy; alam--greatly; trayyam--in the three Vedas; jadi-krta-matih--whose intelligence has been
+dulled; madhu-puspitayam--in the flowery Vedic language describing the results of ritualistic
+performances; vaitanike--in the performances mentioned in the Vedas; mahati--very great; karmani--
+fruitive activities; yujyamanah--being engaged.
+<br>
 <h2>Translation</h2>
-Because they are only matter, the body, the life airs, the external and internal senses, the five gross
-elements and the subtle sense objects [form, taste, smell, sound and touch] cannot know their own
-nature, the nature of the other senses or the nature of their controllers. But the living being, because of his
-spiritual nature, can know his body, the life airs, the senses, the elements and the sense objects, and he
-can also know the three qualities that form their roots. Nevertheless, although the living being is
-completely aware of them, he is unable to see the Supreme Being, who is omniscient and unlimited. I
-therefore offer my respectful obeisances unto Him.
-<p></p>
+Because they are bewildered by the illusory energy of the Supreme Personality of Godhead, Yajnavalkya
+and Jaimini and other compilers of the religious scriptures cannot know the secret, confidential religious
+system of the twelve mahajanas. They cannot understand the transcendental value of performing
+devotional service or chanting the Hare Krsna mantra. Because their minds are attracted to the ritualistic
+ceremonies mentioned in the Vedas--especially the Yajur Veda, Sama Veda and Rg Veda--their intelligence
+has become dull. Thus they are busy collecting the ingredients for ritualistic ceremonies that yield only
+temporary benefits, such as elevation to Svargaloka for material happiness. They are not attracted to the
+sankirtana movement; instead, they are interested in dharma, artha, kama and moksa.
+<br>
 <h2>Purport</h2>
-Material scientists can make an analytical study of the physical elements, the body, the senses, the sense
-objects and even the air that controls the vital force, but still they cannot understand that above all these
-is the real spirit soul. In other words, the living entity, because of his being a spirit soul, can understand
-all the material objects, or, when self-realized, he can understand the Paramatma, upon whom yogis
-meditate. Nevertheless, the living being, even if advanced, cannot understand the Supreme Being, the
-Personality of Godhead, for He is ananta, unlimited, in all six opulences.
+Since one may easily achieve the highest success by chanting the holy name of the Lord, one may ask
+why there are so many Vedic ritualistic ceremonies and why people are attracted to them. This verse
+answers that question. As stated in Bhagavad-gita (15.15), vedais ca sarvair aham eva vedyah: the real
+purpose of studying the Vedas is to approach the lotus feet of Lord Krsna. Unfortunately, unintelligent
+people bewildered by the grandeur of Vedic yajnas want to see gorgeous sacrifices performed. They want
+Vedic mantras chanted and huge amounts of money spent for such ceremonies. Sometimes we have to
+observe the Vedic ritualistic ceremonies to please such unintelligent men. Recently, when we established a
+large Krsna-Balarama temple in Vrndavana, we were obliged to have Vedic ceremonies enacted by
+brahmanas because the inhabitants of Vrndavana, especially the smarta-brahmanas, would not accept
+Europeans and Americans as bona fide brahmanas. Thus we had to engage brahmanas to perform costly
+yajnas. In spite of these yajnas, the members of our Society performed sankirtana loudly with mrdangas,
+and I considered the sankirtana more important than the Vedic ritualistic ceremonies. Both the
+ceremonies and the sankirtana were going on simultaneously. The ceremonies were meant for persons
+interested in Vedic rituals for elevation to heavenly planets (jadi-krta-matir madhu-puspitayam), whereas
+the sankirtana was meant for pure devotees interested in pleasing the Supreme Personality of Godhead.
+We would simply have performed sankirtana, but then the inhabitants of Vrndavana would not have
+taken the installation ceremony seriously. As explained here, the Vedic performances are meant for those
+whose intelligence has been dulled by the flowery language of the Vedas, which describe fruitive activities
+intended to elevate one to the higher planets.
+Especially in this age of Kali, sankirtana alone is sufficient. If the members of our temples in the
+different parts of the world simply continue sankirtana before the Deity, especially before Sri Caitanya
+Mahaprabhu, they will remain perfect. There is no need of any other performances. Nevertheless, to keep
+oneself clean in habits and mind, Deity worship and other regulative principles are required. Srila Jiva
+Gosvami says that although sankirtana is sufficient for the perfection of life, the arcana, or worship of the
+Deity in the temple, must continue in order that the devotees may stay clean and pure. Srila
+Bhaktisiddhanta Sarasvati Thakura therefore recommended that one follow both processes
+simultaneously. We strictly follow his principle of performing Deity worship and sankirtana along parallel
+lines. This we should continue.
 </p>
 
 </div>
@@ -85,7 +148,7 @@ Personality of Godhead, for He is ananta, unlimited, in all six opulences.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

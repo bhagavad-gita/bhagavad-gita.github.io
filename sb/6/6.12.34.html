@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.34.html">6.12.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tebhyo hiranyam rajatam
-vasamsy abharanani ca
-graman hayan gajan pradad
-dhenunam arbudani sat
-<p></p>
+tada ca khe dundubhayo vinedur
+gandharva-siddhah samaharsi-sanghah
+vartra-ghna-lingais tam abhistuvana
+mantrair muda kusumair abhyavarsan
+<br>
 <h2>Synonyms</h2>
-tebhyah--unto them (the learned brahmanas); hiranyam--gold; rajatam--silver; vasamsi--garments;
-abharanani--ornaments; ca--also; graman--villages; hayan--horses; gajan--elephants; pradat--gave in
-charity; dhenunam--of cows; arbudani--groups of one hundred million; sat--six.
-<p></p>
+tada--at that time; ca--also; khe--in the higher planetary systems in the sky; dundubhayah--the
+kettledrums; vineduh--sounded; gandharva--the Gandharvas; siddhah--and the Siddhas; sa-maharsisanghah--
+with the assembly of saintly persons; vartra-ghna-lingaih--celebrating the prowess of the killer
+of Vrtrasura; tam--him (Indra); abhistuvanah--praising; mantraih--by various mantras; muda--with great
+pleasure; kusumaih--with flowers; abhyavarsan--showered.
+<br>
 <h2>Translation</h2>
-Unto the brahmanas who took part in the ritualistic ceremony the King gave charity of gold, silver,
-garments, ornaments, villages, horses and elephants, as well as sixty crores of cows [six hundred million
-cows].
+When Vrtrasura was killed, the Gandharvas and Siddhas in the heavenly planets beat kettledrums in
+jubilation. With Vedic hymns they celebrated the prowess of Indra, the killer of Vrtrasura, praising Indra
+and showering flowers upon him with great pleasure.
 </p>
 
 </div>
@@ -70,7 +111,7 @@ cows].
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

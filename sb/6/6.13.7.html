@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.13.7.html">6.13.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dehena dehino rajan
-dehad deho 'bhijayate
-bijad eva yatha bijam
-dehy artha iva sasvatah
-<p></p>
+hayamedhena purusam
+paramatmanam isvaram
+istva narayanam devam
+moksyase 'pi jagad-vadhat
+<br>
 <h2>Synonyms</h2>
-dehena--by the body; dehinah--of the father possessing a material body; rajan--O King; dehat--from the
-body (of the mother); dehah--another body; abhijayate--takes birth; bijat--from one seed; eva--indeed;
-yatha--just as; bijam--another seed; dehi--a person who has accepted a material body; arthah--the material
-elements; iva--like; sasvatah--eternal.
-<p></p>
+hayamedhena--by the sacrifice known as asvamedha; purusam--the Supreme Person; paramatmanam--
+the Supersoul; isvaram--the supreme controller; istva--worshiping; narayanam--Lord Narayana; devam--
+the Supreme Lord; moksyase--you will be liberated; api--even; jagat-vadhat--from the sin for killing the
+whole world.
+<br>
 <h2>Translation</h2>
-As from one seed another seed is generated, O King, so from one body [the body of the father], through
-another body [the body of the mother], a third body is generated [the body of a son]. As the elements of
-the material body are eternal, the living entity who appears through these material elements is also
-eternal.
-<p></p>
-<h2>Purport</h2>
-From Bhagavad-gita we understand that there are two energies, namely the superior energy and inferior
-energy. Inferior energy consists of the five gross and three subtle material elements. The living entity. who
-represents the superior energy, appears in different types of bodies through these elements by the
-manipulation or supervision of the material energy. Actually both the material and spiritual energies--
-matter and spirit--exist eternally as potencies of the Supreme Personality of Godhead. The potent entity is
-the Supreme Person. Since the spiritual energy, the living being, who is part and parcel of the Supreme
-Lord, desires to enjoy this material world, the Lord gives him a chance to accept different types of
-material bodies and enjoy or suffer in different material conditions. Factually, the spiritual energy, the
-living entity who desires to enjoy material things, is manipulated by the Supreme Lord. The so-called
-father and mother have nothing to do with the living entity. As a result of his own choice and karma, the
-living being takes different bodies through the agency of so-called fathers and mothers.
+The rsis continued: O King Indra, by performing an asvamedha sacrifice and thereby pleasing the
+Supreme Personality of Godhead, who is the Supersoul, Lord Narayana, the supreme controller, one can
+be relieved even of the sinful reactions for killing the entire world, not to speak of killing a demon like
+Vrtrasura.
 </p>
 
 </div>
@@ -85,7 +111,7 @@ living being takes different bodies through the agency of so-called fathers and 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,67 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.13.html">6.3.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-antar dehesu bhutanam
-atmaste harir isvarah
-sarvam tad-dhisnyam iksadhvam
-evam vas tosito hy asau
-<p></p>
+yo namabhir vaci janam nijayam
+badhnati tantryam iva damabhir gah
+yasmai balim ta ime nama-karmanibandha-
+baddhas cakita vahanti
+<br>
 <h2>Synonyms</h2>
-antah dehesu--within the bodies (in the cores of the hearts); bhutanam--of all living entities; atma--the
-Supersoul; aste--resides; harih--the Supreme Personality of Godhead; isvarah--the Lord or director;
-sarvam--all; tat-dhisnyam--His place of residence; iksadhvam--try to see; evam--in this way; vah--with
-you; tositah--satisfied; hi--indeed; asau--that Supreme Personality of Godhead.
-<p></p>
+yah--He who; namabhih--by different names; vaci--to the Vedic language; janam--all people; nijayam--
+which has emanated from Himself; badhnati--binds; tantryam--to a rope; iva--like; damabhih--by cords;
+gah--bulls; yasmai--unto whom; balim--a small presentation of taxes; te--all of them; ime--these; namakarma--
+of names and different activities; nibandha--by the obligations; baddhah--bound; cakitah--being
+fearful; vahanti--carry.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead is situated as the Supersoul within the cores of the hearts of all
-living entities, whether moving or nonmoving, including men, birds, animals, trees and, indeed, all living
-entities. Therefore you should consider every body a residence or temple of the Lord. By such vision you
-will satisfy the Lord. You should not angrily kill these living entities in the forms of trees.
-<p></p>
+Just as the driver of a bullock cart ties ropes through the nostrils of his bulls to control them, the
+Supreme Personality of Godhead binds all men through the ropes of His words in the Vedas, which set
+forth the names and activities of the distinct orders of human society [brahmana, ksatriya, vaisya and
+sudra]. In fear, the members of these orders all worship the Supreme Lord by offering Him presentations
+according to their respective activities.
+<br>
 <h2>Purport</h2>
-As stated in Bhagavad-gita and confirmed by all the Vedic scriptures, isvarah sarva-bhutanam hrd-dese
-'rjuna tisthati: the Supersoul is situated within everyone's heart. Therefore, since everyone's body is the
-residence of the Supreme Lord, one should not destroy the body because of unnecessary envy. That will
-dissatisfy the Supersoul. Soma told the Pracetas that because they had tried to satisfy the Supersoul, now
-they should not displease Him.
+In this material world, everyone is conditioned, regardless of who he is. One may be a human being, a
+demigod or an animal, tree or plant, but everything is controlled by the laws of nature, and behind this
+natural control is the Supreme Personality of Godhead. This is confirmed by Bhagavad-gita (9.10),
+wherein Krsna says, mayadhyaksena prakrtih suyate sa-caracaram: "The material nature is working under
+My direction and producing all moving and nonmoving beings." Thus Krsna is behind the natural
+machine, which works under His control.
+Apart from other living entities, the living being in the human form of body is systematically controlled
+by the Vedic injunctions in terms of the divisions of varna and asrama. A human being is expected to
+follow the rules and regulations of varna and asrama; otherwise he cannot escape punishment by
+Yamaraja. The point is that every human being is expected to elevate himself to the position of a
+brahmana, the most intelligent man, and then one must transcend that position to become a Vaisnava.
+This is the perfection of life. The brahmana, ksatriya, vaisya and sudra can elevate themselves by
+worshiping the Lord according to their activities (sve sve karmany abhiratah samsiddhim labhate narah).
+The divisions of varna and asrama are necessary to insure the proper execution of duties and peaceful
+existence for everyone, but everyone is directed to worship the Supreme Lord, who is all-pervading (yena
+sarvam idam tatam). The Supreme Lord exists vertically and horizontally (otam protam), and therefore if
+one follows the Vedic injunctions by worshiping the Supreme Lord according to one's ability, his life will
+be perfect. As stated in Srimad-Bhagavatam (1.2.13):
+atah pumbhir dvija-srestha
+varnasrama-vibhagasah
+svanusthitasya dharmasya
+samsiddhir hari-tosanam
+"O best among the twice-born, it is therefore concluded that the highest perfection one can achieve, by
+discharging his prescribed duties [dharma] according to caste divisions and orders of life, is to please the
+Lord Hari." The varnasrama institution offers the perfect process for making one eligible to return home,
+back to Godhead, because the aim of every varna and asrama is to please the Supreme Lord. One can
+please the Lord under the direction of a bona fide spiritual master. and if one does so his life is perfect.
+The Supreme Lord is worshipable. and everyone worships Him directly or indirectly. Those who worship
+Him directly get the results of liberation quickly, whereas the liberation of those who serve Him indirectly
+is delayed.
+The words namabhir vaci are very important. In the varnasrama institution, there are different names--
+brahmana, ksatriya, vaisya, sudra, brahmacari, grhastha, vanaprastha and sannyasi. The vak, or Vedic
+injunctions, give directions for all these divisions. Everyone is expected to offer obeisances to the
+Supreme Lord and perform duties as indicated in the Vedas.
 </p>
 
 </div>
@@ -79,7 +149,7 @@ they should not displease Him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

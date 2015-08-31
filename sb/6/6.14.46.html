@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.14.46.html">6.14.46</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.46</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/46"><b>46</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-viditam ananta samastam
-tava jagad-atmano janair ihacaritam
-vijnapyam parama-guroh
-kiyad iva savitur iva khadyotaih
-<p></p>
+sa sayanam upavrajya
+drstva cottara-locanam
+pranendriyatmabhis tyaktam
+hatasmity apatad bhuvi
+<br>
 <h2>Synonyms</h2>
-viditam--well known; ananta--O unlimited; samastam--everything; tava--to You; jagat-atmanah--who are
-the Supersoul of all living entities; janaih--by the mass of people, or all living entities; iha--within this
-material world; acaritam--performed; vijnapyam--to be informed; parama-guroh--to the Supreme
-Personality of Godhead, the supreme master; kiyat--how much; iva--certainly; savituh--to the sun; iva--
-like; khadyotaih--by the fireflies.
-<p></p>
+sa--she (the maidservant); sayanam--lying down; upavrajya--going to; drstva--seeing; ca--also; uttaralocanam--
+his eyes turned upward (as are those of a dead body); prana-indriya-atmabhih--by the life force,
+senses and mind; tyaktam--abandoned; hata asmi--now I am doomed; iti--thus; apatat--fell down; bhuvi--
+on the ground.
+<br>
 <h2>Translation</h2>
-O unlimited Supreme Personality of Godhead, whatever a living entity does in this material world is
-well known to You because You are the Supersoul. In the presence of the sun there is nothing to be
-revealed by the light of a glowworm. Similarly, because You know everything, in Your presence there is
-nothing for me to make known.
+When the maidservant approached the child, who was lying down, she saw that his eyes were turned
+upward. There were no signs of life, all his senses having stopped, and she could understand that the
+child was dead. Seeing this, she immediately cried, "Now I am doomed," and fell to the ground.
 </p>
 
 </div>
@@ -73,7 +110,7 @@ nothing for me to make known.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

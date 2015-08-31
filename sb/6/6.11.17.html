@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.11.17.html">6.11.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato gato brahma-giropahuta
-rtambhara-dhyana-nivaritaghah
-papas tu digdevataya hataujas
-tam nabhyabhud avitam visnu-patnya
-<p></p>
+anye 'nu ye tveha nr-samsam ajna
+yad udyatastrah praharanti mahyam
+tair bhuta-nathan saganan nisatatrisula-
+nirbhinna-galair yajami
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; gatah--gone; brahma--of the brahmanas; gira--by the words; upahutah--being invited;
-rtambhara--on the Supreme Lord, who maintains truth; dhyana--by meditation; nivarita--impeded;
-aghah--whose sin; papah--the sinful activity; tu--then; dik-devataya--by the demigod Rudra; hata-ojah--
-with all prowess diminished; tam--him (Indra); na abhyabhut--could not overcome; avitam--being
-protected; visnu-patnya--by Lord Visnu's wife, the goddess of fortune.
-<p></p>
+anye--others; anu--follow; ye--who; tva--you; iha--in this connection; nr-samsam--very cruel; ajnah--
+persons unaware of my prowess; yat--if; udyata-astrah--with their swords raised; praharanti--attack;
+mahyam--me; taih--with those; bhuta-nathan--to such leaders of the ghosts as Bhairava; sa-ganan--with
+their hordes; nisata--sharpened; tri-sula--by the trident; nirbhinna--separated or pierced; galaih--having
+their necks; yajami--I shall offer sacrifices.
+<br>
 <h2>Translation</h2>
-Indra's sins were diminished by the influence of Rudra, the demigod of all directions. Because Indra was
-protected by the goddess of fortune, Lord Visnu's wife, who resides in the lotus clusters of Manasasarovara
-Lake, Indra's sins could not affect him. Indra was ultimately relieved of all the reactions of his
-sinful deeds by strictly worshiping Lord Visnu. Then he was called back to the heavenly planets by the
-brahmanas and reinstated in his position.
+You are naturally cruel. If the other demigods, unaware of my prowess, follow you by attacking me with
+raised weapons, I shall sever their heads with this sharp trident. With those heads I shall perform a
+sacrifice to Bhairava and the other leaders of the ghosts, along with their hordes.
 </p>
 
 </div>
@@ -74,7 +111,7 @@ brahmanas and reinstated in his position.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

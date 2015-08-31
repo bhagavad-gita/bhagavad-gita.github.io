@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.38.html">6.7.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa eva hi punah sarva-vastuni vastu-svarupah sarvesvarah sakala-jagat-karana-karana-bhutah sarvapratyag-
-atmatvat sarva-gunabhasopalaksita eka eva paryavasesitah.
-<p></p>
+sri-badarayanir uvaca
+tebhya evam pratisrutya
+visvarupo maha-tapah
+paurahityam vrtas cakre
+paramena samadhina
+<br>
 <h2>Synonyms</h2>
-sah--He (the Supreme Personality of Godhead); eva--indeed; hi--certainly; punah--again; sarva-vastuni--
-in everything, material and spiritual; vastu-svarupah--the substance; sarva-isvarah--the controller of
-everything; sakala-jagat--of the whole universe; karana--of the causes; karana-bhutah--existing as the
-cause; sarva-pratyak-atmatvat--because of being the Supersoul of every living being, or being present in
-everything, even the atom; sarva-guna--of all the effects of the material modes of nature (such as
-intelligence and the senses); abhasa--by the manifestations; upalaksitah--perceived; ekah--alone; eva--
-indeed; paryavasesitah--left remaining.
-<p></p>
+sri-badarayanih uvaca--Sri Sukadeva Gosvami said; tebhyah--unto them (the demigods); evam--thus;
+pratisrutya--promising; visvarupah--Visvarupa; maha-tapah--the most exalted personality; paurahityam--
+the priesthood; vrtah--surrounded by them; cakre--executed; paramena--supreme; samadhina--with
+attention.
+<br>
 <h2>Translation</h2>
-With deliberation, one will see that the Supreme Soul, although manifested in different ways, is actually
-the basic principle of everything. The total material energy is the cause of the material manifestation, but
-the material energy is caused by Him. Therefore He is the cause of all causes, the manifester of
-intelligence and the senses. He is perceived as the Supersoul of everything. Without Him, everything
-would be dead. You, as that Supersoul, the supreme controller, are the only one remaining.
-<p></p>
+Sri Sukadeva Gosvami continued: O King, after making this promise to the demigods, the exalted
+Visvarupa, surrounded by the demigods, performed the necessary priestly activities with great enthusiasm
+and attention.
+<br>
 <h2>Purport</h2>
-The words sarva-vastuni vastu-svarupah indicate that the Supreme Lord is the active principle of
-everything. As described in the Brahma-samhita (5.35):
-eko 'py asau racayitum jagad-anda-kotim
-yac-chaktir asti jagad-anda-caya yad-antah
-andantara-stha-paramanu-cayantara-stham
-govindam adi-purusam tam aham bhajami
-"I worship the Personality of Godhead, Govinda, who enters the existence of every universe and every
-atom by one of His plenary portions and thus manifests His infinite energy throughout the material
-creation." By His one plenary portion as Paramatma, antaryami, the Lord is all-pervading throughout the
-unlimited universes. He is the pratyak, or antaryami, of all living entities. The Lord says in Bhagavad-gita
-(13.3), ksetrajnam capi mam viddhi sarva-ksetresu bharata: "O scion of Bharata, you should understand
-that I am also the knower in all bodies." Because the Lord is the Supersoul, He is the active principle of
-every living entity and even the atom (anda-ntara-stha-paramanu-cayantara-stham). He is the actual
-reality. According to various stages of intelligence, one realizes the presence of the Supreme in everything
-through the manifestations of His energy. The entire world is permeated by the three gunas, and one can
-understand His presence according to one's modes of material nature.
+The word samadhina is very important. Samadhi means complete absorption with an undiverted mind.
+Visvarupa, who was a most learned brahmana, not only accepted the request of the demigods, but took
+their request seriously and performed the activities of priesthood with an undiverted mind. In other
+words, he accepted the priesthood not for material gain, but to profit the demigods. Such is the duty of a
+priest. The word purah means "family," and hita means "benefit." Thus the word purohita indicates that
+the priest is the well-wisher of the family. Another meaning of the word purah is "first." A priest's first
+duty is to see that his disciples benefit spiritually and materially by all means. Then he is satisfied. A priest
+should never be interested in performing Vedic rituals for his personal benefit.
 </p>
 
 </div>
@@ -92,7 +121,7 @@ understand His presence according to one's modes of material nature.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

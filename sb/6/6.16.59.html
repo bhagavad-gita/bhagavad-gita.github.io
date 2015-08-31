@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.59.html">6.16.59</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.59</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/59"><b>59</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nadhyagacchad vrata-cchidram
-tat-paro 'tha mahi-pate
-cintam tivram gatah sakrah
-kena me syac chivam tv iha
-<p></p>
+smrtvehayam pariklesam
+tatah phala-viparyayam
+abhayam capy anihayam
+sankalpad viramet kavih
+<br>
 <h2>Synonyms</h2>
-na--not; adhyagacchat--could find; vrata-chidram--a fault in the execution of the vow; tat-parah--intent
-upon that; atha--thereupon; mahi-pate--O master of the world; cintam--anxiety; tivram--intense; gatah--
-obtained; sakrah--Indra; kena--how; me--my; syat--can there be; sivam--well-being; tu--then; iha--here.
-<p></p>
+smrtva--remembering; ihayam--in the field of activities with fruitive results; pariklesam--the waste of
+energy and the miserable conditions; tatah--from that; phala-viparyayam--the opposite of the desired
+result; abhayam--fearlessness; ca--also; api--indeed; anihayam--when there is no desire for fruitive results;
+sankalpat--from material desire; viramet--should cease; kavih--one who is advanced in knowledge.
+<br>
 <h2>Translation</h2>
-O master of the entire world, when Indra could find no faults, he thought, "How will there be good
-fortune for me?" Thus he was full of deep anxiety.
+Remembering the great trouble found in the field of activities performed for fruitive results, and
+remembering how one receives the reverse of the results one desires--whether from material actions or
+from the fruitive activities recommended in the Vedic literatures--an intelligent man should cease from
+the desire for fruitive actions, for by such endeavors one cannot achieve the ultimate goal of life. On the
+other hand, if one acts without desires for fruitive results--in other words, if one engages in devotional
+activities--he can achieve the highest goal of life with freedom from miserable conditions. Considering
+this, one should cease from material desires.
 </p>
 
 </div>
@@ -69,7 +114,7 @@ fortune for me?" Thus he was full of deep anxiety.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

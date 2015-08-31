@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,53 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.15.9.html">6.15.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-suka uvaca
-bhagavan api tac chrutva
-prahasyagadha-dhir nrpa
-tusnim babhuva sadasi
-sabhyas ca tad-anuvratah
-<p></p>
+evam asvasito raja
+citraketur dvijoktibhih
+vimrjya panina vaktram
+adhi-mlanam abhasata
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; bhagavan--Lord Siva; api--also; tat--that; srutva--hearing;
-prahasya--smiling; agadhadhih--whose intelligence is unfathomed; nrpa--O King; tusnim--silent;
-babhuva--remained; sadasi--in the assembly; sabhyah--everyone assembled there; ca--and; tat-anuvratah--
-followed Lord Siva (remained silent).
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; evam--thus; asvasitah--being enlightened or given hope;
+raja--the King; citraketuh--Citraketu; dvija-uktibhih--by the instructions of the great brahmanas (Narada
+and Angira Rsi); vimrjya--wiping off; panina--by the hand; vaktram--his face; adhi-mlanam--shriveled due
+to lamentation; abhasata--spoke intelligently.
+<br>
 <h2>Translation</h2>
-Srila Sukadeva Gosvami continued: My dear King, after hearing Citraketu's statement, Lord Siva, the
-most powerful personality, whose knowledge is fathomless, simply smiled and remained silent, and all the
-members of the assembly followed the lord by not saying anything.
-<p></p>
-<h2>Purport</h2>
-Citraketu's purpose in criticizing Lord Siva is somewhat mysterious and cannot be understood by a
-common man. Srila Visvanatha Cakravarti Thakura, however, has made the following observations. Lord
-Siva, being the most exalted Vaisnava and one of the most powerful demigods, is able to do anything he
-desires. Although he was externally exhibiting the behavior of a common man and not following
-etiquette, such actions cannot diminish his exalted position. The difficulty is that a common man, seeing
-Lord Siva's behavior, might follow his example. As stated in Bhagavad-gita (3.21):
-yad yad acarati sresthas
-tat tad evetaro janah
-sa yat pramanam kurute
-lokas tad anuvartate
-"Whatever action a great man performs, common men follow. And whatever standards he sets by
-exemplary acts, all the world pursues." A common man might also criticize Lord Siva, like Daksa, who
-suffered the consequences for his criticism. King Citraketu desired that Lord Siva cease this external
-behavior so that others might be saved from criticizing him and thus becoming offenders. If one thinks
-that Visnu, the Supreme Personality of Godhead, is the only perfect personality whereas the demigods,
-even such demigods as Lord Siva, are inclined to improper social affairs, he is an offender. Considering all
-this, King Citraketu was somewhat harsh in his behavior with Lord Siva.
-Lord Siva, who is always deep in knowledge, could understand Citraketu's purpose, and therefore he
-was not at all angry; rather, he simply smiled and remained silent. The members of the assembly
-surrounding Lord Siva could also understand Citraketu's purpose. Consequently, following the behavior
-of Lord Siva, they did not protest; instead, following their master, they remained silent. If the members of
-the assembly thought that Citraketu had blasphemed Lord Siva, they would certainly have left at once,
-blocking their ears with their hands.
+Sri Sukadeva Gosvami continued: Thus enlightened by the instructions of Narada and Angira, King
+Citraketu became hopeful with knowledge. Wiping his shriveled face with his hand, the King began to
+speak.
 </p>
 
 </div>
@@ -97,7 +111,7 @@ blocking their ears with their hands.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

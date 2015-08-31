@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.30.html">6.3.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yasmin yato yena ca yasya yasmai
-yad yo yatha kurute karyate ca
-paravaresam paramam prak prasiddham
-tad brahma tad dhetur ananyad ekam
-<p></p>
+tat ksamyatam sa bhagavan purusah purano
+narayanah sva-purusair yad asat krtam nah
+svanam aho na vidusam racitanjalinam
+ksantir gariyasi namah purusaya bhumne
+<br>
 <h2>Synonyms</h2>
-yasmin--in whom (the Supreme Personality of Godhead or the supreme place of repose); yatah--from
-whom (everything emanates); yena--by whom (everything is enacted); ca--also; yasya--to whom
-everything belongs; yasmai--to whom (everything is offered); yat--which; yah--who; yatha--as; kurute--
-executes; karyate--is performed; ca--also; para-avaresam--of both, in the material and spiritual existence;
-paramam--the supreme; prak--the origin; prasiddham--well known to everyone; tat--that; brahma--the
-Supreme Brahman; tat hetuh--the cause of all causes; ananyat--having no other cause; ekam--one without
-a second.
-<p></p>
+tat--that; ksamyatam--let it be excused; sah--He; bhagavan--the Supreme Personality of Godhead;
+purusah--the Supreme Person; puranah--the oldest; narayanah--Lord Narayana; sva-purusaih--by my own
+servants; yat--which; asat--impudence; krtam--performed; nah--of us; svanam--of my own men; aho--alas;
+na vidusam--not knowing; racita-anjalinam--folding our hands together to beg Your pardon; ksantih--
+forgiveness; gariyasi--in the glorious; namah--respectful obeisances; purusaya--unto the person; bhumne--
+supreme and all-pervading.
+<br>
 <h2>Translation</h2>
-The Supreme Brahman, Krsna, is the ultimate resting place and source of everything. Everything is done
-by Him, everything belongs to Him, and everything is offered to Him. He is the ultimate objective, and
-whether acting or causing others to act, He is the ultimate doer. There are many causes, high and low, but
-since He is the cause of all causes, He is well known as the Supreme Brahman who existed before all
-activities. He is one without a second and has no other cause. I therefore offer my respects unto Him.
-<p></p>
+[Then Yamaraja, considering himself and his servants to be offenders, spoke as follows, begging pardon
+from the Lord.] O my Lord, my servants have surely committed a great offense by arresting a Vaisnava
+such as Ajamila. O Narayana, O supreme and oldest person, please forgive us. Because of our ignorance,
+we failed to recognize Ajamila as a servant of Your Lordship, and thus we have certainly committed a
+great offense. Therefore with folded hands we beg Your pardon. My Lord, since You are supremely
+merciful and are always full of good qualities, please pardon us. We offer our respectful obeisances unto
+You.
+<br>
 <h2>Purport</h2>
-The Supreme Personality of Godhead, Krsna, is the original cause, as confirmed in Bhagavad-gita (aham
-sarvasya prabhavah). Even this material world, which is conducted under the modes of material nature, is
-caused by the Supreme Personality of Godhead, who therefore also has an intimate relationship with the
-material world. If the material world were not a part of His body, the Supreme Lord, the supreme cause,
-would be incomplete. Therefore we hear, vasudevah sarvam iti sa mahatma sudurlabhah: if one knows
-that Vasudeva is the original cause of all causes, he becomes a perfect mahatma.
-The Brahma-samhita (5.1) declares:
-isvarah paramah krsnah
-sac-cid-ananda-vigrahah
-anadir adir govindah
-sarva-karana-karanam
-"Krsna, who is known as Govinda, is the supreme controller. He has an eternal, blissful, spiritual body.
-He is the origin of all. He has no other origin, for He is the prime cause of all causes." The Supreme
-Brahman (tad brahma) is the cause of all causes, but He has no cause. Anadir adir govindah sarva-karanakaranam:
-Govinda, Krsna, is the original cause of all causes, but He has no cause for His appearance as
-Govinda. Govinda expands in multifarious forms, but nevertheless they are one. As confirmed by
-Madhvacarya, ananyah sadrsabhavad eko rupady-abhedatah: Krsna has no cause nor any equal, and He is
-one because His various forms, as svamsa and vibhinnamsa, are nondifferent from Himself.
+Lord Yamaraja took upon himself the responsibility for the offense committed by his servants. If the
+servant of an establishment makes a mistake, the establishment takes responsibility for it. Although
+Yamaraja is above offenses, his servants, practically with his permission, went to arrest Ajamila, which
+was a great offense. The nyaya-sastra confirms, bhrtyaparadhe svamino dandah: if a servant makes a
+mistake, the master is punishable because he is responsible for the offense. Taking this seriously,
+Yamaraja, along with his servants, prayed with folded hands to be excused by the Supreme Personality of
+Godhead, Narayana.
 </p>
 
 </div>
@@ -96,7 +125,7 @@ one because His various forms, as svamsa and vibhinnamsa, are nondifferent from 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

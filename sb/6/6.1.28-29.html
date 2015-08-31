@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.1.28-29.html">6.1.28-29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.28-29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28-29"><b>28-29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa pasa-hastams trin drstva
 purusan ati-darunan
@@ -57,7 +96,7 @@ dure kridanakasaktam
 putram narayanahvayam
 plavitena svarenoccair
 ajuhavakulendriyah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--that person (Ajamila); pasa-hastan--having ropes in their hands; trin--three; drstva--seeing;
 purusan--persons; ati-darunan--very fearful in their features; vakra-tundan--with twisted faces; urdhvaromnah--
@@ -65,14 +104,14 @@ with hair standing on the body; atmanam--the self; netum--to take away; agatan--
 short distance away; kridanaka-asaktam--engaged in his play; putram--his child; narayana-ahvayam--
 named Narayana; plavitena--with tearful eyes; svarena--with his voice; uccaih--very loudly; ajuhava--
 called; akula-indriyah--being full of anxiety.
-<p></p>
+<br>
 <h2>Translation</h2>
 Ajamila then saw three awkward persons with deformed bodily features, fierce, twisted faces, and hair
 standing erect on their bodies. With ropes in their hands, they had come to take him away to the abode of
 Yamaraja. When he saw them he was extremely bewildered, and because of attachment to his child, who
 was playing a short distance away, Ajamila began to call him loudly by his name. Thus with tears in his
 eyes he somehow or other chanted the holy name of Narayana.
-<p></p>
+<br>
 <h2>Purport</h2>
 A person who performs sinful activities performs them with his body, mind and words. Therefore three
 order carriers from Yamaraja came to take Ajamila to Yamaraja's abode. Fortunately, even though he was
@@ -87,7 +126,7 @@ meant to chant the holy name of Narayana; he meant to call his son.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.12.4.html">6.12.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-prayo mumuksavas tesam
-kecanaiva dvijottama
-mumuksunam sahasresu
-kascin mucyeta sidhyati
-<p></p>
+chinnaika-bahuh parighena vrtrah
+samrabdha asadya grhita-vajram
+hanau tatadendram athamarebham
+vajram ca hastan nyapatan maghonah
+<br>
 <h2>Synonyms</h2>
-prayah--almost always; mumuksavah--persons interested in liberation; tesam--of them; kecana--some;
-eva--indeed; dvija-uttama--O best of the brahmanas; mumuksunam--of those who desire to be liberated;
-sahasresu--in many thousands; kascit--someone; mucyeta--may be actually liberated; sidhyati--someone is
-perfect.
-<p></p>
+chinna--cut off; eka--one; bahuh--whose arm; parighena--with a mace of iron; vrtrah--Vrtrasura;
+samrabdhah--being very angry; asadya--reaching; grhita--taking up; vajram--the thunderbolt; hanau--on
+the jaw; tatada--struck; indram--Lord Indra; atha--also; amara-ibham--his elephant; vajram--the
+thunderbolt; ca--and; hastat--from the hand; nyapatat--fell; maghonah--of King Indra.
+<br>
 <h2>Translation</h2>
-O best of the brahmanas, Sukadeva Gosvami, out of many persons who follow religious principles, only
-a few desire liberation from the material world. Among many thousands who desire liberation, one may
-actually achieve liberation, giving up material attachment to society, friendship, love, country, home, wife
-and children. And among many thousands of such liberated persons, one who can understand the true
-meaning of liberation is very rare.
-<p></p>
-<h2>Purport</h2>
-There are four classes of men, namely karmis, jnanis, yogis and bhaktas. This statement pertains
-especially to karmis and jnanis. A karmi tries to he happy within this material world by changing from
-one body to another. His objective is bodily comfort, either in this planet or in another. When such a
-person becomes a jnani, however, be aspires for liberation from material bondage. Among many such
-persons who aspire for liberation, one may actually be liberated during his life. Such a person gives up his
-attachment for society, friendship, love, country, family, wife and children. Among many such persons,
-who are in the vanaprastha stage, one may understand the value of becoming a sannyasi, completely
-accepting the renounced order of life.
+Although one of his arms was severed from his body, Vrtrasura angrily approached King Indra and
+struck him on the jaw with an iron mace. He also struck the elephant that carried Indra. Thus Indra
+dropped the thunderbolt from his hand.
 </p>
 
 </div>
@@ -83,7 +110,7 @@ accepting the renounced order of life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.1.4-5.html">6.1.4-5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.4-5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4-5"><b>4-5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 priyavratottanapador
 vamsas tac-caritani ca
@@ -57,7 +96,7 @@ dhara-mandala-samsthanam
 bhaga-laksana-manatah
 jyotisam vivaranam ca
 yathedam asrjad vibhuh
-<p></p>
+<br>
 <h2>Synonyms</h2>
 priyavrata--of Priyavrata; uttanapadoh--and of Uttanapada; vamsah--the dynasty; tat-caritani--their
 characteristics; ca--also; dvipa--different planets; varsa--lands; samudra--oceans and seas; adri--mountains;
@@ -65,7 +104,7 @@ nadi--rivers; udyana--gardens; vanaspatin--and trees; dhara-mandala--of the plan
 situation; bhaga--according to divisions; laksana--different symptoms; manatah--and measurements;
 jyotisam--of the sun and other luminaries; vivaranam--of the lower planetary systems; ca--and; yatha--as;
 idam--this; asrjat--created; vibhuh--the Supreme personality of Godhead.
-<p></p>
+<br>
 <h2>Translation</h2>
 My dear lord, you have described the dynasties and characteristics of King Priyavrata and King
 Uttanapada. The Supreme Personality of Godhead created this material world with various universes,
@@ -73,7 +112,7 @@ planetary systems, planets and stars, with varied lands, seas, oceans, mountains
 all with different characteristics. These are divided among this planet earth, the luminaries in the sky and
 the lower planetary systems. You have very clearly described these planets and the living entities who live
 on them.
-<p></p>
+<br>
 <h2>Purport</h2>
 Here the words yathedam asrjad vibhuh clearly indicate that the Supreme, the great, almighty
 Personality of Godhead, created this entire material world with its different varieties of planets, stars and
@@ -104,7 +143,7 @@ material elements, is the cause of the cosmic manifestation.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

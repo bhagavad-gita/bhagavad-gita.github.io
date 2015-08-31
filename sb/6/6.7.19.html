@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.7.19.html">6.7.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam nijaghnur abhidrutya
-sagana vibudharsabhah
-svaih svair divyastra-sastraughaih
-so 'grasat tani krtsnasah
-<p></p>
+tair visrstesubhis tiksnair
+nirbhinnangoru-bahavah
+brahmanam saranam jagmuh
+sahendra nata-kandharah
+<br>
 <h2>Synonyms</h2>
-tam--him; nijaghnuh--struck; abhidrutya--running to; sa-ganah--with soldiers; vibudha-rsabhah--all the
-great demigods; svaih svaih--with their own respective; divya--transcendental; astra--bows and arrows;
-sastra-oghaih--different weapons; sah--he (Vrtra); agrasat--swallowed; tani--them (the weapons);
-krtsnasah--all together.
-<p></p>
+taih--by them (the demons); visrsta--thrown; isubhih--by the arrows; tiksnaih--very sharp; nirbhinna--
+pierced all over; anga--bodies; uru--thighs; bahavah--and arms; brahmanam--of Lord Brahma; saranam--
+the shelter; jagmuh--approached; saha-indrah--with King Indra; nata-kandharah--their heads bent
+downward.
+<br>
 <h2>Translation</h2>
-The demigods, headed by Indra, charged the demon with their soldiers, striking him with their own
-transcendental bows and arrows and other weapons but Vrtrasura swallowed all their weapons.
+The demigods' heads, thighs and arms and the other parts of their bodies were injured by the sharp
+arrows of the demons. The demigods, headed by Indra, saw no other course than to immediately approach
+Lord Brahma with bowed heads for shelter and proper instruction.
 </p>
 
 </div>
@@ -70,7 +110,7 @@ transcendental bows and arrows and other weapons but Vrtrasura swallowed all the
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

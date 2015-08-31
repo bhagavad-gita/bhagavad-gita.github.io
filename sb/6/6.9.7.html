@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.9.7.html">6.9.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tena deva-ganah sarve
-vrtra-visphotanena vai
-nipetur murcchita bhumau
-yathaivasanina hatah
-<p></p>
+bhumis turiyam jagraha
+khata-pura-varena vai
+irinam brahma-hatyaya
+rupam bhumau pradrsyate
+<br>
 <h2>Synonyms</h2>
-tena--by that; deva-ganah--the demigods; sarve--all; vrtra-visphotanena--the tumultuous sound of
-Vrtrasura; vai--indeed; nipetuh--fell; murcchitah--fainted; bhumau--on the ground; yatha--just as if; eva--
-indeed; asanina--by a thunderbolt; hatah--struck.
-<p></p>
+bhumih--the earth; turiyam--one fourth; jagraha--accepted; khata-pura--of the filling of holes; varena--
+because of the benediction; vai--indeed; irinam--the deserts; brahma-hatyayah--of the reaction for killing a
+brahmana; rupam--form; bhumau--on the earth; pradrsyate--is visible.
+<br>
 <h2>Translation</h2>
-When all the demigods heard Vrtrasura's tumultuous roar, which resembled that of a lion, they fainted
-and fell to the ground as if struck by thunderbolts.
+In return for King Indra's benediction that ditches in the earth would be filled automatically, the land
+accepted one fourth of the sinful reactions for killing a brahmana. Because of those sinful reactions, we
+find many deserts on the surface of the earth.
+<br>
+<h2>Purport</h2>
+Because deserts are manifestations of the earth's diseased condition, no auspicious ritualistic ceremony
+can be performed in a desert. Persons destined to live in deserts are understood to be sharing the reactions
+for the sin of brahma-hatya, the killing of a brahmana.
 </p>
 
 </div>
@@ -69,7 +114,7 @@ and fell to the ground as if struck by thunderbolts.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

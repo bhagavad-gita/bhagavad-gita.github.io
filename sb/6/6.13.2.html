@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.13.2.html">6.13.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ko 'yam syat tava rajendra
-bhavan yam anusocati
-tvam casya katamah srstau
-puredanim atah param
-<p></p>
+devarsi-pitr-bhutani
+daitya devanugah svayam
+pratijagmuh sva-dhisnyani
+brahmesendradayas tatah
+<br>
 <h2>Synonyms</h2>
-kah--who; ayam--this; syat--is; tava--to you; raja-indra--O best of kings; bhavan--Your Lordship; yam--
-whom; anusocati--laments over; tvam--you; ca--and; asya--to him (the dead boy); katamah--who; srstau--
-in the birth; pura--previously; idanim--at this time, at the present; atah param--and hereafter, in the
-future.
-<p></p>
+deva--demigods; rsi--great saintly persons; pitr--the inhabitants of Pitrloka; bhutani--and the other
+living entities; daityah--demons; deva-anugah--the inhabitants of other planets following the principles of
+the demigods; svayam--independently (without asking permission from Indra); pratijagmuh--returned;
+sva-dhisnyani--to their respective planets and homes; brahma--Lord Brahma; isa--Lord Siva; indraadayah--
+and the demigods headed by Indra; tatah--thereafter.
+<br>
 <h2>Translation</h2>
-O King, what relationship does the dead body for which you lament have with you, and what
-relationship do you have with him? You may say that you are now related as father and son, but do you
-think this relationship existed before? Does it truly exist now? Will it continue in the future?
-<p></p>
+Thereafter, the demigods, the great saintly persons, the inhabitants of Pitrloka and Bhutaloka, the
+demons, the followers of the demigods, and also Lord Brahma, Lord Siva and the demigods subordinate to
+Indra all returned to their respective homes. While departing, however, no one spoke to Indra.
+<br>
 <h2>Purport</h2>
-The instructions given by Narada and Angira Muni are the true spiritual instructions for the illusioned
-conditioned soul. This world is temporary, but because of our previous karma we come here and accept
-bodies, creating temporary relationships in terms of society, friendship, love, nationality and community,
-which are all finished at death. These temporary relationships did not exist in the past, nor will they exist
-in the future. Therefore at the present moment the so-called relationships are illusions.
+In this connection Srila Visvanatha Cakravarti Thakura comments:
+brahmesendradaya iti; indrasya sva-dhisnya-gamanam nopapadyate vrtra-vadha-ksana eva brahmahatyopadrava-
+prapteh; tasmat tata ity anena manasa-sarovarad agatya pravartitad asvamedhat parata iti
+vyakhyeyam.
+Lord Brahma, Lord Siva and the other demigods returned to their respective abodes, but Indra did not,
+for he was disturbed at having killed Vrtrasura, who was actually a brahmana. After killing Vrtrasura,
+Indra went to the Manasa-sarovara Lake to become free from sinful reactions. When he left the lake, he
+performed an asvamedha-yajna and then returned to his own abode.
 </p>
 
 </div>
@@ -78,7 +121,7 @@ in the future. Therefore at the present moment the so-called relationships are i
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

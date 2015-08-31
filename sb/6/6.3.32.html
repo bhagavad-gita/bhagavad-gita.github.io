@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,89 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.32.html">6.3.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-astiti nastiti ca vastu-nisthayor
-eka-sthayor bhinna-viruddha-dharmanoh
-aveksitam kincana yoga-sankhyayoh
-samam param hy anukulam brhat tat
-<p></p>
+srnvatam grnatam viryany
+uddamani harer muhuh
+yatha sujataya bhaktya
+suddhyen natma vratadibhih
+<br>
 <h2>Synonyms</h2>
-asti--there is; iti--thus; na--not; asti--there is; iti--thus; ca--and; vastu-nisthayoh--professing knowledge
-of the ultimate cause; eka-sthayoh--with one and the same subject matter, establishing Brahman; bhinna--
-demonstrating different; viruddha-dharmanoh--and opposing characteristics; aveksitam--perceived;
-kincana--that something which; yoga-sankhyayoh--of mystic yoga and the Sankhya philosophy (analysis
-of the ways of nature); samam--the same; param--transcendental; hi--indeed; anukulam--dwelling place;
-brhat tat--that ultimate cause.
-<p></p>
+srnvatam--of those hearing; grnatam--and chanting; viryani--the wonderful activities; uddamani--able to
+counteract sin; hareh--of the Supreme Personality of Godhead; muhuh--always; yatha--as; su-jataya--easily
+brought forth; bhaktya--by devotional service; suddhyet--may be purified; na--not; atma--the heart and
+soul; vrata-adibhih--by performing ritualistic ceremonies.
+<br>
 <h2>Translation</h2>
-There are two parties--namely, the theists and the atheists. The theist, who accepts the Supersoul, finds
-the spiritual cause through mystic yoga. The Sankhyite, however, who merely analyzes the material
-elements, comes to a conclusion of impersonalism and does not accept a supreme cause--whether
-Bhagavan, Paramatma or even Brahman. Instead, he is preoccupied with the superfluous, external
-activities of material nature. Ultimately, however, both parties demonstrate the Absolute Truth because
-although they offer opposing statements, their object is the same ultimate cause. They are both
-approaching the same Supreme Brahman, to whom I offer my respectful obeisances.
-<p></p>
+One who constantly hears and chants the holy name of the Lord and hears and chants about His
+activities can very easily attain the platform of pure devotional service, which can cleanse the dirt from
+one's heart. One cannot achieve such purification merely by observing vows and performing Vedic
+ritualistic ceremonies.
+<br>
 <h2>Purport</h2>
-Actually there are two sides to this argument. Some say that the Absolute has no form (nirakara), and
-others say that the Absolute has a form (sakara). Therefore the word form is the common factor, although
-some accept it (asti or astika) whereas others try to negate it (nasti or nastika). Since the devotee
-considers the word "form" (akara) the common factor for both, he offers his respectful obeisances to the
-form, although others may go on arguing about whether the Absolute has a form or not.
-In this verse the word yoga-sankhyayoh is very important. Yoga means bhakti-yoga because yogis also
-accept the existence of the all-pervading Supreme Soul and try to see that Supreme Soul within their
-hearts. As stated in Srimad-Bhagavatam (12.13.1), dhyanavasthita-tad-gatena manasa pasyanti yam
-yoginah. The devotee tries to come directly in touch with the Supreme Personality of Godhead, whereas
-the yogi tries to find the Supersoul within the heart by meditation. Thus, both directly and indirectly,
-yoga means bhakti-yoga. Sankhya, however, means physical study of the cosmic situation through
-speculative knowledge. This is generally known as jnana-sastra. The Sankhyites are attached to the
-impersonal Brahman, but the Absolute Truth is known in three ways. Brahmeti paramatmeti bhagavan iti
-sabdyate: the Absolute Truth is one, but some accept Him as impersonal Brahman, some as the Supersoul
-existing everywhere, and some as Bhagavan, the Supreme Personality of Godhead. The central point is the
-Absolute Truth.
-Although the impersonalists and personalists fight with one another, they focus upon the same
-Parabrahman, the same Absolute Truth. In the yoga-sastras, Krsna is described as follows: krsnam
-pisangambaram ambujeksanam catur-bhujam sankha-gadady-udayudham. Thus the pleasing appearance
-of the Supreme Personality of Godhead's bodily features, His limbs and His dress are described. The
-sankhya-sastra, however, denies the existence of the Lord's transcendental form. The sankhya-sastra says
-that the Supreme Absolute Truth has no hands, no legs and no name: hy anama-rupa-guna-pani-padam
-acaksur asrotram ekam advitiyam api nama-rupadikam nasti. The Vedic mantras say, apani-pado javano
-grahita: the Supreme Lord has no legs and hands, but He can accept whatever is offered to Him. Actually
-such statements accept that the Supreme has hands and legs, but deny that He has material hands and
-legs. This is why the Absolute is called aprakrta. Krsna, the Supreme Personality of Godhead, has a saccid-
-ananda-vigraha, a form of eternity, knowledge and bliss, not a material form. The Sankhyites, or
-jnanis, deny the material form, and the devotees also know very well that the Absolute Truth, Bhagavan,
-has no material form.
-isvarah paramah krsnah
-sac-cid-ananda-vigrahah
-anadir adir govindah
-sarva-karana-karanam
-"Krsna, who is known as Govinda, is the supreme controller. He has an eternal, blissful, spiritual body.
-He is the origin of all. He has no other origin, for He is the prime cause of all causes." The conception of
-the Absolute without hands and legs and the conception of the Absolute with hands and legs are
-apparently contradictory, but they both coincide with the same truth about the Supreme Absolute Person.
-Therefore the word vastu-nisthayoh, which is used herein, indicates that both the yogis and Sankhyites
-have faith in the reality, but are arguing about it from the different viewpoints of material and spiritual
-identities. Parabrahman, or brhat, is the common point. The Sankhyites and yogis are both situated in that
-same Brahman, but they differ because of different angles of vision.
-The directions given by the bhakti-sastra point one in the perfect direction because the Supreme
-Personality of Godhead says in Bhagavad-gita, bhaktya mam abhijanati: "Only by devotional service am I
-to be known." The bhaktas know that the Supreme Person has no material form, whereas the jnanis
-simply deny the material form. One should therefore take shelter of the bhakti-marga, the path of
-devotion; then everything will be clear. Jnanis concentrate on the virat-rupa, the gigantic universal form
-of the Lord. This is a good system in the beginning for those who are extremely materialistic, but there is
-no need to think continuously of the virat-rupa. When Arjuna was shown the virat-rupa of Krsna, he saw
-it, but he did not want to see it perpetually. He therefore requested the Lord to return to His original form
-as two-armed Krsna. In conclusion, learned scholars find no contradictions in the devotees' concentration
-upon the spiritual form of the Lord (isvarah paramah krsnah sac-cid-ananda-vigrahah). In this regard,
-Srila Madhvacarya says that less intelligent nondevotees think that their conclusion is the ultimate, but
-because devotees are completely learned, they can understand that the Supreme Personality of Godhead is
-the ultimate goal.
+One may very easily practice chanting and hearing the holy name of the Lord and thus become ecstatic
+in spiritual life. Padma Purana states:
+namaparadha-yuktanam
+namany eva haranty agham
+avisranti-prayuktani
+tany evartha-karani ca
+Even if one chants the Hare Krsna maha-mantra offensively, one can avoid offenses by continuously
+chanting without deviation. One who becomes accustomed to this practice will always remain in a pure
+transcendental position, untouchable by sinful reactions. Sukadeva Gosvami especially requested King
+Pariksit to note this fact very carefully. There is no profit, however, in executing the Vedic ritualistic
+ceremonies. By performing such activities one may go to the higher planetary systems, but as stated in
+Bhagavad-gita (9.21), ksine punye martya-lokam visanti: when the period of one's enjoyment in the
+heavenly planets is terminated because of the limited extent of the results of one's pious activities, one
+must return to earth. Thus there is no use in endeavoring to travel up and down in the universe. It is
+better to chant the holy name of the Lord so that one may become fully purified and eligible to return
+home, back to Godhead. That is the aim of life, and that is the perfection of life.
 </p>
 
 </div>
@@ -133,7 +129,7 @@ the ultimate goal.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.6.3.html">6.6.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-badarayanir uvaca
-vrtah purohitas tvastro
-mahendrayanuprcchate
-narayanakhyam varmaha
-tad ihaika-manah srnu
-<p></p>
+namadheyany amusam tvam
+sapatyanam ca me srnu
+yasam prasuti-prasavair
+loka apuritas trayah
+<br>
 <h2>Synonyms</h2>
-sri-badarayanih uvaca--Sri Sukadeva Gosvami said; vrtah--the chosen; purohitah--priest; tvastrah--the
-son of Tvasta; mahendraya--unto King Indra; anuprcchate--after he (Indra) inquired; narayana-akhyam--
-named Narayana-kavaca; varma--defensive armor made of a mantra; aha--he said; tat--that; iha--this; ekamanah--
-with great attention; srnu--hear from me.
-<p></p>
+namadheyani--the different names; amusam--of them; tvam--you; sa-apatyanam--with their offspring;
+ca--and; me--from me; srnu--please hear; yasam--of all of whom; prasuti-prasavaih--by so many children
+and descendants; lokah--the worlds; apuritah--populated; trayah--three (the upper, middle and lower
+worlds).
+<br>
 <h2>Translation</h2>
-Sri Sukadeva Gosvami said: King Indra, the leader of the demigods, inquired about the armor known as
-Narayana-kavaca from Visvarupa, who was engaged by the demigods as their priest. Please hear
-Visvarupa's reply with great attention.
+Now please hear from me the names of all these daughters and their descendants, who filled all the
+three worlds.
 </p>
 
 </div>
@@ -72,7 +109,7 @@ Visvarupa's reply with great attention.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

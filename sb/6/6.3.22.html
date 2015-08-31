@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,52 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.22.html">6.3.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-astausid dhamsa-guhyena
-bhagavantam adhoksajam
-tubhyam tad abhidhasyami
-kasyatusyad yatha harih
-<p></p>
+etavan eva loke 'smin
+pumsam dharmah parah smrtah
+bhakti-yogo bhagavati
+tan-nama-grahanadibhih
+<br>
 <h2>Synonyms</h2>
-astausit--satisfied; hamsa-guhyena--by the celebrated prayers known as Hamsa-guhya; bhagavantam--the
-Supreme Personality of Godhead; adhoksajam--who is beyond the reach of the senses; tubhyam--unto
-you; tat--that; abhidhasyami--I shall explain; kasya--with Daksa, the prajapati; atusyat--was satisfied;
-yatha--how; harih--the Supreme Personality of Godhead.
-<p></p>
+etavan--this much; eva--indeed; loke asmin--in this material world; pumsam--of the living entities;
+dharmah--the religious principles; parah--transcendental; smrtah--recognized; bhakti-yogah--bhakti-yoga,
+or devotional service; bhagavati--to the Supreme Personality of Godhead (not to the demigods); tat--His;
+nama--of the holy name; grahana-adibhih--beginning with chanting.
+<br>
 <h2>Translation</h2>
-My dear King, I shall fully explain to you the Hamsa-guhya prayers, which were offered to the Supreme
-Personality of Godhead by Daksa, and I shall explain how the Lord was pleased with him for those
-prayers.
-<p></p>
+Devotional service, beginning with the chanting of the holy name of the Lord, is the ultimate religious
+principle for the living entity in human society.
+<br>
 <h2>Purport</h2>
-It is to be understood that the Hamsa-guhya prayers were not composed by Daksa, but were existing in
-the Vedic literature.
+As stated in the previous verse, dharmam bhagavatam, real religious principles, are bhagavata-dharma,
+the principles described in Srimad-Bhagavatam itself or in Bhagavad-gita, the preliminary study of the
+Bhagavatam. What are these principles? The Bhagavatam says, dharmah projjhita-kaitavo 'tra: in Srimad-
+Bhagavatam there are no cheating religious systems. Everything in the Bhagavatam is directly connected
+with the Supreme Personality of Godhead. The Bhagavatam further says, sa vai pumsam paro dharmo yato
+bhaktir adhoksaje: the supreme religion is that which teaches its followers how to love the Supreme
+Personality of Godhead, who is beyond the reach of experimental knowledge. Such a religious system
+begins with tan-nama-grahana, chanting of the holy name of the Lord (sravanam kirtanam visnoh
+smaranam pada-sevanam). After chanting the holy name of the Lord and dancing in ecstasy, one gradually
+sees the form of the Lord, the pastimes of the Lord and the transcendental qualities of the Lord. This way
+one fully understands the situation of the Personality of Godhead. One can come to this understanding of
+the Lord, how He descends into the material world, how He takes His births and what activities He
+performs, but one can know this only by executing devotional service. As stated in Bhagavad-gita, bhaktya
+mam abhijanati: simply by devotional service one can understand everything about the Supreme Lord. If
+one fortunately understands the Supreme Lord in this way, the result is tyaktva deham punar janma naiti:
+after giving up his material body, he no longer has to take birth in this material world. Instead, he returns
+home, back to Godhead. That is the ultimate perfection. Therefore Krsna says in Bhagavad-gita (8.15):
+mam upetya punar janma
+duhkhalayam asasvatam
+napnuvanti mahatmanah
+samsiddhim paramam gatah
+"After attaining Me, the great souls, who are yogis in devotion, never return to this temporary world,
+which is full of miseries, because they have attained the highest perfection."
 </p>
 
 </div>
@@ -75,7 +134,7 @@ the Vedic literature.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

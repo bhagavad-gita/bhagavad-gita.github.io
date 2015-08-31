@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.32.html">6.16.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-kasyapa uvaca
-varam varaya vamoru
-pritas te 'ham anindite
-striya bhartari suprite
-kah kama iha cagamah
-<p></p>
+sa uttamasloka-padabja-vistaram
+premasru-lesair upamehayan muhuh
+premoparuddhakhila-varna-nirgamo
+naivasakat tam prasamiditum ciram
+<br>
 <h2>Synonyms</h2>
-sri-kasyapah uvaca--Kasyapa Muni said; varam--benediction; varaya--ask; vamoru--O beautiful woman;
-pritah--pleased; te--with you; aham--I; anindite--O irreproachable lady; striyah--for the woman; bhartari--
-when the husband; su-prite--pleased; kah--what; kamah--desire; iha--here; ca--and; agamah--difficult to
-obtain.
-<p></p>
+sah--he; uttamasloka--of the Supreme Personality of Godhead; pada-abja--of the lotus feet; vistaram--the
+resting place; prema-asru--of tears of pure love; lesaih--by drops; upamehayan--moistening; muhuh--again
+and again; prema-uparuddha--choked with love; akhila--all; varna--of the letters; nirgamah--the coming
+out; na--not; eva--indeed; asakat--was able; tam--unto Him; prasamiditum--to offer prayers; ciram--for a
+long time.
+<br>
 <h2>Translation</h2>
-Kasyapa Muni said: O beautiful woman, O irreproachable lady, since I am very much pleased by your
-behavior, you may ask me for any benediction you want. If a husband is pleased, what desires are difficult
-for his wife to obtain, either in this world or in the next?
+With tears of love and affection, Citraketu repeatedly moistened the resting place of the Supreme Lord's
+lotus feet. Because his voice was choked in ecstasy, for a considerable time he was unable to utter any of
+the letters of the alphabet to offer the Lord suitable prayers.
+<br>
+<h2>Purport</h2>
+All the letters of the alphabet and the words constructed by those letters are meant for offering prayers
+to the Supreme Personality of Godhead. Maharaja Citraketu had the opportunity to offer prayers to the
+Lord by composing nice verses from the letters of the alphabet, but because of his ecstasy, for a
+considerable time he could not join those letters to offer prayers to the Lord. As stated in Srimad-
+Bhagavatam (1.5.22):
+idam hi pumsas tapasah srutasya va
+svistasya suktasya ca buddhi-dattayoh
+avicyuto 'rthah kavibhir nirupito
+yad uttamasloka-gunanuvarnanam
+If one has scientific, philosophical, political, economic or any other abilities and wants perfection in his
+knowledge, he should offer prayers to the Supreme Personality of Godhead by composing first-class
+poetry or engaging his talents in the service of the Lord. Citraketu wanted to do this, but he was unable
+because of loving ecstasy. Therefore he had to wait for a considerable time before be could offer prayers.
 </p>
 
 </div>
@@ -72,7 +126,7 @@ for his wife to obtain, either in this world or in the next?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

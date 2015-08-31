@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.11.14.html">6.11.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nabho gato disah sarvah
-sahasrakso visampate
-prag-udicim disam turnam
-pravisto nrpa manasam
-<p></p>
+sri-vrtra uvaca
+distya bhavan me samavasthito ripur
+yo brahma-ha guru-ha bhratr-ha ca
+distyanrno 'dyaham asattama tvaya
+mac-chula-nirbhinna-drsad-dhrdacirat
+<br>
 <h2>Synonyms</h2>
-nabhah--to the sky; gatah--going; disah--to the directions; sarvah--all; sahasra-aksah--Indra, who is
-endowed with one thousand eyes; visampate--O King; prak-udicim--to the northeast; disam--direction;
-turnam--very speedily; pravistah--entered; nrpa--O King; manasam--the lake known as Manasa-sarovara.
-<p></p>
+sri-vrtrah uvaca--the great hero Vrtrasura said; distya--by good fortune; bhavan--Your Lordship; me--of
+me; samavasthitah--situated (in front); ripuh--my enemy; yah--who; brahma-ha--the killer of a brahmana;
+guru-ha--the killer of your guru; bhratr-ha--the killer of my brother; ca--also; distya--by good fortune;
+anrnah--free from debt (to my brother); adya--today; aham--I; asat-tama--O most abominable one; tvaya--
+through you; mat-sula--by my trident; nirbhinna--being pierced; drsat--like stone; hrda--whose heart;
+acirat--very soon.
+<br>
 <h2>Translation</h2>
-O King, Indra first fled to the sky, but there also he saw the woman of personified sin chasing him. This
-witch followed him wherever he went. At last he very quickly went to the northeast and entered the
-Manasa-sarovara Lake.
+Sri Vrtrasura said: He who has killed a brahmana, he who has killed his spiritual master--indeed, he who
+has killed my brother--is now, by good fortune, standing before me face to face as my enemy. O most
+abominable one, when I pierce your stonelike heart with my trident, I shall be freed from my debt to my
+brother.
 </p>
 
 </div>
@@ -70,7 +114,7 @@ Manasa-sarovara Lake.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.5.37.html">6.5.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vipracittih simhikayam
-satam caikam ajijanat
-rahu-jyestham ketu-satam
-grahatvam ya upagatah
-<p></p>
+rnais tribhir amuktanam
+amimamsita-karmanam
+vighatah sreyasah papa
+lokayor ubhayoh krtah
+<br>
 <h2>Synonyms</h2>
-vipracittih--Vipracitti; simhikayam--in the womb of his wife Simhika; satam--to one hundred; ca--and;
-ekam--one; ajijanat--gave birth; rahu-jyestham--among whom Rahu is the oldest; ketu-satam--one
-hundred Ketus; grahatvam--planethood; ye--all of whom; upagatah--obtained.
-<p></p>
+rnaih--from the debts; tribhih--three; amuktanam--of persons not freed; amimamsita--not considering;
+karmanam--the path of duty; vighatah--ruin; sreyasah--of the path of good fortune; papa--O most sinful
+(Narada Muni); lokayoh--of the worlds; ubhayoh--both; krtah--done.
+<br>
 <h2>Translation</h2>
-In his wife Simhika, Vipracitti begot one hundred and one sons, of whom the eldest is Rahu and the
-others are the one hundred Ketus. All of them attained positions in the influential planets.
+Prajapati Daksa said: My sons were not at all freed from their three debts. Indeed, they did not properly
+consider their obligations. O Narada Muni, O personality of sinful action, you have obstructed their
+progress toward good fortune in this world and the next because they are still indebted to the saintly
+persons, the demigods and their father.
+<br>
+<h2>Purport</h2>
+As soon as a brahmana takes birth, he assumes three kinds of debts--debts to great saints, debts to the
+demigods and debts to his father. The son of a brahmana must undergo celibacy (brahmacarya) to clear
+his debts to the saintly persons, he must perform ritualistic ceremonies to clear his debts to the demigods,
+and he must beget children to become free from his debts to his father. Prajapati Daksa argued that
+although the renounced order is recommended for liberation, one cannot attain liberation unless one
+fulfills his obligations to the demigods, the saints and his father. Since Daksa's sons had not liberated
+themselves from these three debts, how could Narada Muni have led them to the renounced order of life?
+Apparently, Prajapati Daksa did not know the final decision of the sastras. As stated in Srimad-
+Bhagavatam (11.5.41):
+devarsi-bhutapta-nrnam pitrnam
+na kinkaro nayam rni ca rajan
+sarvatmana yah saranam saranyam
+gato mukundam parihrtya kartam
+Everyone is indebted to the demigods, to living entities in general, to his family, to the pitas and so on,
+but if one fully surrenders to Krsna, Mukunda, who can give one liberation, even if one performs no
+yajnas, one is freed from all debts. Even if one does not repay his debts, he is freed from all debts if he
+renounces the material world for the sake of the Supreme Personality of Godhead, whose lotus feet are the
+shelter of everyone. This is the verdict of the sastra. Therefore Narada Muni was completely right in
+instructing the sons of Prajapati Daksa to renounce this material world immediately and take shelter of
+the Supreme Personality of Godhead. Unfortunately, Prajapati Daksa, the father of the Haryasvas and
+Savalasvas, did not understand the great service rendered by Narada Muni. Daksa therefore addressed him
+as papa (the personality of sinful activities) and asadhu (a nonsaintly person). Since Narada Muni was a
+great saint and Vaisnava, he tolerated all such accusations from Prajapati Daksa. He merely performed his
+duty as a Vaisnava by delivering all the sons of Prajapati Daksa, enabling them to return home, back to
+Godhead.
 </p>
 
 </div>
@@ -69,7 +137,7 @@ others are the one hundred Ketus. All of them attained positions in the influent
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

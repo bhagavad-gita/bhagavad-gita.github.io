@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.9.20.html">6.9.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nanv esa vajras tava sakra tejasa
-harer dadhices tapasa ca tejitah
-tenaiva satrum jahi visnu-yantrito
-yato harir vijayah srir gunas tatah
-<p></p>
+tatas te vismitah sarve
+visanna grasta-tejasah
+pratyancam adi-purusam
+upatasthuh samahitah
+<br>
 <h2>Synonyms</h2>
-nanu--certainly; esah--this; vajrah--thunderbolt; tava--of yours; sakra--O Indra; tejasa--by the prowess;
-hareh--of Lord Visnu, the Supreme Personality of Godhead; dadhiceh--of Dadhici; tapasa--by the
-austerities; ca--as well as; tejitah--empowered; tena--with that; eva--certainly; satrum--your enemy; jahi--
-kill; visnu-yantritah--ordered by Lord Visnu; yatah--wherever; harih--Lord Visnu; vijayah--victory; srih--
-opulences; gunah--and other good qualities; tatah--there.
-<p></p>
+tatah--thereafter; te--they (the demigods); vismitah--being struck with wonder; sarve--all; visannah--
+being very morose; grasta-tejasah--having lost all their personal strength; pratyancam--to the Supersoul;
+adi-purusam--the original person; upatasthuh--prayed; samahitah--all gathered together.
+<br>
 <h2>Translation</h2>
-O Indra, King of heaven, the thunderbolt you carry to kill me has been empowered by the prowess of
-Lord Visnu and the strength of Dadhici's austerities. Since you have come here to kill me in accordance
-with Lord Visnu's order, there is no doubt that I shall be killed by the release of your thunderbolt. Lord
-Visnu has sided with you. Therefore your victory, opulence and all good qualities are assured.
-<p></p>
-<h2>Purport</h2>
-Vrtrasura not only assured King Indra that the thunderbolt was invincible, but also encouraged Indra to
-use it against him as soon as possible. Vrtrasura was eager to die with the stroke of the thunderbolt sent
-by Lord Visnu so that he could immediately return home, back to Godhead. By hurling the thunderbolt,
-Indra would gain victory and enjoy the heavenly planets, remaining in the material world for repeated
-birth and death. Indra wanted to gain victory over Vrtrasura and thereby become happy, but that would
-not at all be happiness. The heavenly planets are just below Brahmaloka, but as stated by the Supreme
-Lord, Krsna, abrahma-bhuvanal lokah punar avartino 'rjuna: even if one achieves Brahmaloka, he must
-still fall to the lower planetary systems again and again. However, if one goes back to Godhead, he never
-returns to this material world. By killing Vrtrasura, Indra would not actually gain; he would remain in the
-material world. Vrtrasura, however, would go to the spiritual world. Therefore victory was destined for
-Vrtrasura, not for Indra.
+Struck with wonder and disappointment upon seeing the strength of the demon, the demigods lost their
+own strength. Therefore they all met together to try to please the Supersoul, the Supreme Personality of
+Godhead, Narayana, by worshiping Him.
 </p>
 
 </div>
@@ -86,7 +109,7 @@ Vrtrasura, not for Indra.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

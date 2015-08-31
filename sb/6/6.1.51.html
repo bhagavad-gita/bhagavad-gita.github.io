@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,24 +81,25 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.1.51.html">6.1.51</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.51</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/51"><b>51</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tad etat sodasa-kalam
 lingam sakti-trayam mahat
 dhatte 'nusamsrtim pumsi
 harsa-soka-bhayartidam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tat--therefore; etat--this; sodasa-kalam--made of sixteen parts (namely the ten senses, the mind and the
 five sense objects); lingam--the subtle body; sakti-trayam--the effect of the three modes of material nature;
 mahat--insurmountable; dhatte--gives; anusamsrtim--almost perpetual rotation and transmigration in
 different types of bodies; pumsi--unto the living entity; harsa--jubilation; soka--lamentation; bhaya--fear;
 arti--misery; dam--which gives.
-<p></p>
+<br>
 <h2>Translation</h2>
 The subtle body is endowed with sixteen parts--the five knowledge-acquiring senses, the five working
 senses, the five objects of sense gratification, and the mind. This subtle body is an effect of the three
@@ -70,7 +109,7 @@ When the living entity gets the body of a demigod, he is certainly very jubilant
 body he is always in lamentation, and when he gets the body of an animal, he is always afraid. In all
 conditions, however, he is actually miserable. His miserable condition is called samsrti, or transmigration
 in material life.
-<p></p>
+<br>
 <h2>Purport</h2>
 The sum and substance of material conditional life is explained in this verse. The living entity, the
 seventeenth element, is struggling alone, life after life. This struggle is called samsrti, or material
@@ -86,7 +125,7 @@ his life becomes successful.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

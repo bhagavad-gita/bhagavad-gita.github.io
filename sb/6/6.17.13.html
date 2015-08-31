@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,66 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.17.13.html">6.17.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-guna-vyaktir iyam devi
-vyanjako guna-bhug bhavan
-tvam hi sarva-sariry atma
-srih sarirendriyasayah
-nama-rupe bhagavati
-pratyayas tvam apasrayah
-<p></p>
+esam anudhyeya-padabja-yugmam
+jagad-gurum mangala-mangalam svayam
+yah ksatra-bandhuh paribhuya surin
+prasasti dhrstas tad ayam hi dandyah
+<br>
 <h2>Synonyms</h2>
-guna-vyaktih--the reservoir of qualities; iyam--this; devi--goddess; vyanjakah--manifester; guna-bhuk--
-the enjoyer of the qualities; bhavan--You; tvam--You; hi--indeed; sarva-sariri atma--the Supersoul of all
-living entities; srih--the goddess of fortune; sarira--the body; indriya--senses; asayah--and the mind;
-nama--name; rupe--and form; bhagavati--Laksmi; pratyayah--the cause of manifestation; tvam--You;
-apasrayah--the support.
-<p></p>
+esam--of all these (exalted personalities); anudhyeya--to be constantly meditated upon; pada-abjayugmam--
+whose two lotus feet; jagat-gurum--the spiritual master of the whole world; mangalamangalam--
+personification of the topmost religious principle; svayam--himself; yah--he who; ksatrabandhuh--
+the lowest of the ksatriyas; paribhuya--overriding; surin--the demigods (like Brahma and the
+others); prasasti--chastises; dhrstah--impudent; tat--therefore; ayam--this person; hi--indeed; dandyah--to
+be punished.
+<br>
 <h2>Translation</h2>
-Mother Laksmi, who is here, is the reservoir of all spiritual qualities, whereas You manifest and enjoy all
-these qualities. Indeed, You are actually the enjoyer of everything. You live as the Supersoul of all living
-entities, aid the goddess of fortune is the form of their bodies, senses and minds. She also has a holy name
-and form, whereas You are the support of all such names and forms and the cause for their manifestation.
-<p></p>
+This Citraketu is the lowest of ksatriyas, for he has impudently overridden Brahma and the other
+demigods by insulting Lord Siva, upon whose lotus feet they always meditate. Lord Siva is personified
+religion and the spiritual master of the entire world, and therefore Citraketu must be punished.
+<br>
 <h2>Purport</h2>
-Madhvacarya, the acarya of the Tattvavadis, has described this verse in the following way: "Visnu is
-described as yajna personified, and mother Laksmi is described as spiritual activities and the original form
-of worship. In fact, they represent spiritual activities and the Supersoul of all yajna. Lord Visnu is the
-Supersoul even of Laksmidevi, but no one can be the Supersoul of Lord Visnu, for Lord Visnu Himself is
-the spiritual Supersoul of everyone."
-According to Madhvacarya, there are two tattvas, or factors. One is independent, and the other is
-dependent. The first tattva is the Supreme Lord, Visnu, and the second is the jiva-tattva. Laksmidevi,
-being dependent on Lord Visnu, is sometimes counted among the jivas. The Gaudiya Vaisnavas, however,
-describe Laksmidevi in accordance with the following two verses from the Prameya-ratnavali of Baladeva
-Vidyabhusana. The first verse is a quotation from the Visnu Purana.
-nityaiva sa jagan-mata
-visnoh srir anapayini
-yatha sarva-gato visnus
-tathaiveyam dvijottama
-visnoh syuh saktayas tisras
-tasu ya kirtita para
-saiva sris tad-abhinneti
-praha sisyan prabhur mahan
-"O best of the brahmanas, Laksmiji is the constant companion of the Supreme Personality of Godhead,
-Visnu, and therefore she is called anapayini. She is the mother of all creation. As Lord Visnu is allpervading,
-His spiritual potency, mother Laksmi, is also all-pervading." Lord Visnu has three principal
-potencies--internal, external and marginal. Sri Caitanya Mahaprabhu has accepted para-sakti, the spiritual
-energy of the Lord, as being identical with the Lord. Thus she is also included in the independent visnutattva."
-In the Kanti-mala commentary on the Prameya-ratnavali there is this statement: nanu kvacit nityamukta
-jivatvam laksmyah svikrtam, tatraha--praheti. nityaiveti padye sarva-vyapti-kathanena kalakasthety
-adi-padya-dvaye, suddho 'pity ukta ca mahaprabhuna svasisyan prati laksmya bhagavad-advaitam
-upadistam. kvacid yat tasyas tu dvaitam uktam, tat tu tad-avista-nitya-mukta jivam adaya sangatamas tu.
-"Although some authoritative Vaisnava disciplic successions count the goddess of fortune among the
-ever-liberated living entities (jivas) in Vaikuntha, Sri Caitanya Mahaprabhu, in accordance with the
-statement in the Visnu Purana, has described Laksmi as being identical with the visnu-tattva. The correct
-conclusion is that the descriptions of Laksmi as being different from Visnu are stated when an eternally
-liberated living entity is imbued with the quality of Laksmi; they do not pertain to mother Laksmi, the
-eternal consort of Lord Visnu."
+All the members of the assembly were exalted brahmanas and self-realized souls, but they did not say
+anything about the conduct of Lord Siva, who was embracing the goddess Parvati on his lap. Citraketu
+nonetheless criticized Lord Siva, and therefore the opinion of Parvati was that he should be punished.
 </p>
 
 </div>
@@ -110,7 +117,7 @@ eternal consort of Lord Visnu."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

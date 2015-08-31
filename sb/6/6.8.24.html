@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.8.24.html">6.8.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na te 'drsyanta sanchannah
-sara-jalaih samantatah
-punkhanupunkha-patitair
-jyotimsiva nabho-ghanaih
-<p></p>
+gade 'sani-sparsana-visphulinge
+nispindhi nispindhy ajita-priyasi
+kusmanda-vainayaka-yaksa-raksobhuta-
+grahams curnaya curnayarin
+<br>
 <h2>Synonyms</h2>
-na--not; te--they (the demigods); adrsyanta--were seen; sanchannah--being completely covered; sarajalaih--
-by networks of arrows; samantatah--all around; punkha-anupunkha--one arrow after another;
-patitaih--falling; jyotimsi iva--like the stars in the sky; nabhah-ghanaih--by the dense clouds.
-<p></p>
+gade--O club in the hands of the Supreme Personality of Godhead; asani--like thunderbolts; sparsana--
+whose touch; visphulinge--giving off sparks of fire; nispindhi nispindhi--pound to pieces, pound to
+pieces; ajita-priya--very dear to the Supreme Personality of Godhead; asi--you are; kusmanda--imps
+named Kusmandas; vainayaka--ghosts named Vainayakas; yaksa--ghosts named Yaksas; raksah--ghosts
+named Raksasas; bhuta--ghosts named Bhutas; grahan--and evil demons named Grahas; curnaya--
+pulverize; curnaya--pulverize; arin--my enemies.
+<br>
 <h2>Translation</h2>
-As the stars in the sky cannot be seen when covered by dense clouds, the demigods, being completely
-covered by networks of arrows falling upon them one after another, could not be seen.
+O club in the hand of the Supreme Personality of Godhead, you produce sparks of fire as powerful as
+thunderbolts, and you are extremely dear to the Lord. I am also His servant. Therefore kindly help me
+pound to pieces the evil living beings known as Kusmandas, Vainayakas, Yaksas, Raksasas, Bhutas and
+Grahas. Please pulverize them.
 </p>
 
 </div>
@@ -69,7 +113,7 @@ covered by networks of arrows falling upon them one after another, could not be 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

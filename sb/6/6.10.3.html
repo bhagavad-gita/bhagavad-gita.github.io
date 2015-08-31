@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.3.html">6.10.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kha apatat tad vicalad graholkavan
-niriksya duspreksyam ajata-viklavah
-vajrena vajri sata-parvanacchinad
-bhujam ca tasyoraga-raja-bhogam
-<p></p>
+api vrndaraka yuyam
+na janitha saririnam
+samsthayam yas tv abhidroho
+duhsahas cetanapahah
+<br>
 <h2>Synonyms</h2>
-khe--in the sky; apatat--flying toward him; tat--that trident; vicalat--rotating; graha-ulka-vat--like a
-falling star; niriksya--observing; duspreksyam--unbearable to see; ajata-viklavah--not afraid; vajrena--with
-the thunderbolt; vajri--Indra, the holder of the thunderbolt; sata-parvana--possessing one hundred joints;
-acchinat--cut; bhujam--the arm; ca--and; tasya--of him (Vrtrasura); uraga-raja--of the great serpent
-Vasuki; bhogam--like the body.
-<p></p>
+api--although; vrndarakah--O demigods; yuyam--all of you; na janitha--do not know; saririnam--of
+those who have material bodies; samsthayam--at the time of death, or while quitting this body; yah--
+which; tu--then; abhidrohah--severe pain; duhsahah--unbearable; cetana--the consciousness; apahah--
+which takes away.
+<br>
 <h2>Translation</h2>
-Flying in the sky, Vrtrasura's trident resembled a brilliant meteor. Although the blazing weapon was
-difficult to look upon, King Indra, unafraid, cut it to pieces with his thunderbolt. Simultaneously, he cut
-off one of Vrtrasura's arms, which was as thick as the body of Vasuki, the King of the serpents.
+O elevated demigods, at the time of death, severe, unbearable pain takes away the consciousness of all
+living entities who have accepted material bodies. Don't you know about this pain?
 </p>
 
 </div>
@@ -72,7 +109,7 @@ off one of Vrtrasura's arms, which was as thick as the body of Vasuki, the King 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

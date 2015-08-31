@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.55.html">6.16.55</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.55</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/55"><b>55</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-badham ity abhyupetyatha
-diti rajan maha-manah
-kasyapad garbham adhatta
-vratam canjo dadhara sa
-<p></p>
+yena prasuptah purusah
+svapam vedatmanas tada
+sukham ca nirgunam brahma
+tam atmanam avehi mam
+<br>
 <h2>Synonyms</h2>
-badham--yes; iti--thus; abhyupetya--accepting; atha--then; ditih--Diti; rajan--O King; maha-manah--
-jubilant; kasyapat--from Kasyapa; garbham--semen; adhatta--obtained; vratam--the vow; ca--and; anjah--
-properly; dadhara--discharged; sa--she.
-<p></p>
+yena--by whom (the Supreme Brahman); prasuptah--sleeping; purusah--a man; svapam--the subject of a
+dream; veda--knows; atmanah--of himself; tada--at that time; sukham--happiness; ca--also; nirgunam--
+without contact with the material environment; brahma--the supreme spirit; tam--Him; atmanam--the
+pervader; avehi--just know; mam--Me.
+<br>
 <h2>Translation</h2>
-O King Pariksit, Diti, the wife of Kasyapa, agreed to undergo the purificatory process known as
-pumsavana. "Yes," she said, "I shall do everything according to your instructions." With great jubilation
-she became pregnant, having taken semen from Kasyapa, and faithfully began discharging the vow.
+Know Me to be the Supreme Brahman, the all-pervading Supersoul through whom the sleeping living
+entity can understand his dreaming condition and his happiness beyond the activities of the material
+senses. That is to say, I am the cause of the activities of the sleeping living being.
+<br>
+<h2>Purport</h2>
+When the living entity becomes free from false ego, he understands his superior position as a spirit soul,
+part and parcel of the pleasure potency of the Lord. Thus, due to Brahman, even while sleeping the living
+entity can enjoy. The Lord says, "That Brahman, that Paramatma and that Bhagavan are I Myself." This is
+noted by Srila Jiva Gosvami in his Krama-sandarbha.
 </p>
 
 </div>
@@ -70,7 +116,7 @@ she became pregnant, having taken semen from Kasyapa, and faithfully began disch
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.17.2-3.html">6.17.2-3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/17">17</a>.2-3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2-3"><b>2-3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-sukle margasire pakse
-yosid bhartur anujnaya
-arabheta vratam idam
-sarva-kamikam aditah
-nisamya marutam janma
-brahmanan anumantrya ca
-snatva sukla-dati sukle
-vasitalankrtambare
-pujayet pratarasat prag
-bhagavantam sriya saha
-<p></p>
+sa laksam varsa-laksanam
+avyahata-balendriyah
+stuyamano maha-yogi
+munibhih siddha-caranaih
+kulacalendra-dronisu
+nana-sankalpa-siddhisu
+reme vidyadhara-stribhir
+gapayan harim isvaram
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; sukle--bright; margasire--during the month of November--
-December; pakse--during the fortnight; yosit--a woman; bhartuh--of the husband; anujnaya--with the
-permission; arabheta--should begin; vratam--vow; idam--this; sarva-kamikam--which fulfills all desires;
-aditah--from the first day; nisamya--hearing; marutam--of the Maruts; janma--the birth; brahmanan--the
-brahmanas; anumantrya--taking instruction from; ca--and; snatva--bathing; sukla-dati--having cleaned the
-teeth; sukle--white; vasita--should put on; alankrta--wearing ornaments; ambare--garments; pujayet--
-should worship; pratah-asat prak--before breakfast; bhagavantam--the Supreme Personality of Godhead;
-sriya saha--with the goddess of fortune.
-<p></p>
+sah--he (Citraketu); laksam--one hundred thousand; varsa--of years; laksanam--one hundred thousand;
+avyahata--without hindrance; bala-indriyah--whose strength and power of the senses; stuyamanah--being
+praised; maha-yogi--the great mystic yogi; munibhih--by saintly persons; siddha-caranaih--by the Siddhas
+and Caranas; kulacalendra-dronisu--within the valleys of the great mountain known as Kulacalendra, or
+Sumeru; nana-sankalpa-siddhisu--where one becomes perfect in all kinds of mystic power; reme--enjoyed;
+vidyadhara-stribhih--with the women of the Vidyadhara planet; gapayan--causing to praise; harim--the
+Supreme Personality of Godhead, Hari; isvaram--the controller.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: On the first day of the bright fortnight of the month of Agrahayana [November-
-December], following the instructions of her husband, a woman should begin this regulative devotional
-service with a vow of penance, for it can fulfill all one's desires. Before beginning the worship of Lord
-Visnu, the woman should hear the story of how the Maruts were born. Under the instructions of qualified
-brahmanas, in the morning she should wash her teeth, bathe, and dress herself with white cloth and
-ornaments, and before taking breakfast she should worship Lord Visnu and Laksmi.
+Being praised by great sages and saints and by the inhabitants of Siddhaloka and Caranaloka, Citraketu,
+the most powerful mystic yogi, wandered about enjoying life for millions of years. With bodily strength
+and senses free from deterioration, he traveled within the valleys of Sumeru Mountain, which is the place
+of perfection for various kinds of mystic power. In those valleys he enjoyed life with the women of
+Vidyadhara-loka by chanting the glories of the Supreme Lord, Hari.
+<br>
+<h2>Purport</h2>
+It is to be understood that Maharaja Citraketu, although surrounded by beautiful women from
+Vidyadhara-loka, did not forget to glorify the Lord by chanting the holy name of the Lord. It has been
+proved in many places that one who is not contaminated by any material condition, who is a pure devotee
+engaged in chanting the glories of the Lord, should be understood to be perfect.
 </p>
 
 </div>
@@ -85,7 +125,7 @@ ornaments, and before taking breakfast she should worship Lord Visnu and Laksmi.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.5.23.html">6.5.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-krttikadini naksatranindoh
-patnyas tu bharata
-daksa-sapat so 'napatyas
-tasu yaksma-graharditah
-<p></p>
+nasam nisamya putranam
+naradac chila-salinam
+anvatapyata kah socan
+suprajastvam sucam padam
+<br>
 <h2>Synonyms</h2>
-krttika-adini--headed by Krttika; naksatrani--the constellations; indoh--of the moon-god; patnyah--the
-wives; tu--but; bharata--O Maharaja Pariksit, descendant of the dynasty of Bharata; daksa-sapat--because
-of being cursed by Daksa; sah--the moon-god; anapatyah--without children; tasu--in so many wives;
-yaksma-graha-arditah--being oppressed by a disease that brings about gradual destruction.
-<p></p>
+nasam--the loss; nisamya--hearing of; putranam--of his sons; naradat--from Narada; sila-salinam--who
+were the best of well-behaved persons; anvatapyata--suffered; kah--Prajapati Daksa; socan--lamenting; suprajastvam--
+having ten thousand well-behaved sons; sucam--of lamentation; padam--position.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, best of the Bharatas, the constellations named Krttika were all wives of the moongod.
-However, because Prajapati Daksa had cursed him to suffer from a disease causing gradual
-destruction, the moon-god could not beget children in any of his wives.
+The Haryasvas, the sons of Prajapati Daksa, were very well behaved, cultured sons, but unfortunately,
+because of the instructions of Narada Muni, they deviated from the order of their father. When Daksa
+heard this news, which was brought to him by Narada Muni, he began to lament. Although he was the
+father of such good sons, he had lost them all. Certainly this was lamentable.
+<br>
+<h2>Purport</h2>
+The Haryasvas, the sons of Prajapati Daksa, were certainly Hell behaved, learned and advanced, and in
+accordance with the order of their father they went to perform austerities to beget good sons for their
+family. But Narada Muni took advantage of their good behavior and culture to properly direct them not to
+be involved with this material world, but to use their culture and knowledge to end their material affairs.
+The Haryasvas abided by the order of Narada Muni, but when news of this was brought to Prajapati
+Daksa, the prajapati, instead of being happy with the actions of Narada Muni, was extremely sorrowful.
+Similarly, we are trying to bring as many young men as possible to the Krsna consciousness movement for
+their ultimate benefit, but the parents of the young men joining this movement, being very sorry, are
+lamenting and making counterpropaganda. Of course, Prajapati Daksa did not make propaganda against
+Narada Muni, but later, as we shall see, Daksa cursed Narada Muni for his benevolent activities. This is
+the way of materialistic life. A materialistic father and mother want to engage their sons in begetting
+children, striving for improved economic conditions and rotting in materialistic life. They are not
+unhappy when their children become spoiled, useless citizens, but they lament when they join the Krsna
+consciousness movement to achieve the ultimate goal of life. This animosity between parents and the
+Krsna consciousness movement has existed since time immemorial. Even Narada Muni was condemned,
+not to speak of others. Nevertheless, Narada Muni never gives up his mission. To deliver as many fallen
+souls as possible, he continues playing his musical instrument and vibrating the transcendental sound
+Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare.
 </p>
 
 </div>
@@ -71,7 +130,7 @@ destruction, the moon-god could not beget children in any of his wives.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

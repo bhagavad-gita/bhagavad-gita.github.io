@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.16.45.html">6.16.45</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/16">16</a>.45</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/45"><b>45</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-kasyapa uvaca
-putras te bhavita bhadre
-indra-hadeva-bandhavah
-samvatsaram vratam idam
-yady anjo dharayisyasi
-<p></p>
+atha bhagavan vayam adhuna
+tvad-avaloka-parimrstasaya-malah
+sura-rsina yat kathitam
+tavakena katham anyatha bhavati
+<br>
 <h2>Synonyms</h2>
-sri-kasyapah uvaca--Kasyapa Muni said; putrah--son; te--your; bhavita--will be; bhadre--O gentle
-woman; indra-ha--killer of Indra, or follower of Indra; adeva-bandhavah--friend of the demons (or devabandhavah--
-friend of the demigods); samvatsaram--for a year; vratam--vow; idam--this; yadi--if; anjah--
-properly; dharayisyasi--you will execute.
-<p></p>
+atha--therefore; bhagavan--O Supreme Personality of Godhead; vayam--we; adhuna--at the present
+moment; tvat-avaloka--by seeing You; parimrsta--wiped away; asaya-malah--contaminated desires in the
+heart; sura-rsina--by the great sage of the demigods (Narada); yat--which; kathitam--spoken; tavakena--
+who is Your devotee; katham--how; anyatha--otherwise; bhavati--can it be.
+<br>
 <h2>Translation</h2>
-Kasyapa Muni said: My dear gentle wife, if you follow my instructions regarding this vow for at least
-one year, you will surely get a son who will be able to kill Indra. However, if you deviate from this vow of
-following the Vaisnava principles, you will get a son who will be favorable to Indra.
-<p></p>
+Therefore, my dear Lord, simply seeing You has now wiped away all the contamination of sinful
+activities and their results of material attachment and lusty desires, which always filled my mind and the
+core of my heart. Whatever is predicted by the great sage Narada Muni cannot be otherwise. In other
+words, I have obtained Your audience as a result of being trained by Narada Muni.
+<br>
 <h2>Purport</h2>
-The word indra-ha refers to an asura who is always eager to kill Indra. An enemy of Indra is naturally a
-friend to the asuras, but the word indra-ha also refers to one who follows Indra or who is obedient to him.
-When one becomes a devotee of Indra, he is certainly a friend to the demigods. Thus the words indrahadeva-
-bandhavah are equivocal, for they say, "Your son will kill Indra, but he will be very friendly to the
-demigods." If a person actually became a friend of the demigods, he certainly would not be able to kill
-Indra.
+This is the process of the perfect way. One must take lessons from authorities like Narada, Vyasa and
+Asita, and follow their principles. Then one will be able to see the Supreme Personality of Godhead even
+with one's own eyes. One only needs training. Atah sri-krsna-namadi na bhaved grahyam indriyaih. With
+our blunt eyes and other senses we cannot perceive the Supreme Personality of Godhead, but if we engage
+our senses in the service of the Lord according to the instructions of the authorities, it will be possible to
+see Him. As soon as one sees the Supreme Personality of Godhead, all the sinful reactions in the core of
+one's heart are certainly vanquished.
 </p>
 
 </div>
@@ -80,7 +120,7 @@ Indra.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

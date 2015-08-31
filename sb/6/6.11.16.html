@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.11.16.html">6.11.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tavat trinakam nahusah sasasa
-vidya-tapo-yoga-balanubhavah
-sa sampad-aisvarya-madandha-buddhir
-nitas tirascam gatim indra-patnya
-<p></p>
+sri-hri-daya-kirtibhir ujjhitam tvam
+sva-karmana purusadais ca garhyam
+krcchrena mac-chula-vibhinna-deham
+asprsta-vahnim samadanti grdhrah
+<br>
 <h2>Synonyms</h2>
-tavat--for so long; trinakam--the heavenly planet; nahusah--Nahusa; sasasa--ruled; vidya--by education;
-tapah--austerities; yoga--mystic power; bala--and strength; anubhavah--being equipped; sah--he (Nahusa);
-sampat--of so much wealth; aisvarya--and opulence; mada--by the madness; andha--blinded; buddhih--his
-intelligence; nitah--was brought; tirascam--of a snake; gatim--to the destination; indra-patnya--by Indra's
-wife Sacidevi.
-<p></p>
+sri--opulence or beauty; hri--shame; daya--mercy; kirtibhih--and glory; ujjhitam--bereft of; tvam--you;
+sva-karmana--by your own activities; purusa-adaih--by the Raksasas (man-eaters); ca--and; garhyam--
+condemnable; krcchrena--with great difficulty; mat-sula--by my trident; vibhinna--pierced; deham--your
+body; asprsta-vahnim--not even touched by fire; samadanti--will eat; grdhrah--the vultures.
+<br>
 <h2>Translation</h2>
-As long as King Indra lived in the water, wrapped in the stem of the lotus, Nahusa was equipped with
-the ability to rule the heavenly kingdom, due to his knowledge, austerity and mystic power. Nahusa,
-however, blinded and maddened by power and opulence, made undesirable proposals to Indra's wife with
-a desire to enjoy her. Thus Nahusa was cursed by a brahmana and later became a snake.
+Indra, you are bereft of all shame, mercy, glory and good fortune. Deprived of these good qualities by
+the reactions of your fruitive activities, you are to be condemned even by the man-eaters [Raksasas]. Now
+I shall pierce your body with my trident, and after you die with great pain, even fire will not touch you;
+only the vultures will eat your body.
 </p>
 
 </div>
@@ -73,7 +111,7 @@ a desire to enjoy her. Thus Nahusa was cursed by a brahmana and later became a s
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

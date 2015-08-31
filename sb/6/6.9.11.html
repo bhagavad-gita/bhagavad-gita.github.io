@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.9.11.html">6.9.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-airavato vrtra-gadabhimrsto
-vighurnito 'drih kulisahato yatha
-apasarad bhinna-mukhah sahendro
-muncann asrk sapta-dhanur bhrsartah
-<p></p>
+hata-putras tatas tvasta
+juhavendraya satrave
+indra-satro vivardhasva
+ma ciram jahi vidvisam
+<br>
 <h2>Synonyms</h2>
-airavatah--Airavata, the elephant of King Indra; vrtra-gada-abhimrstah--struck by the club in Vrtrasura's
-hand; vighurnitah--shaken; adrih--a mountain; kulisa--by a thunderbolt; ahatah--struck; yatha--just like;
-apasarat--was pushed back; bhinna-mukhah--having a broken mouth; saha-indrah--with King Indra;
-muncan--spitting; asrk--blood; sapta-dhanuh--a distance measured by seven bows (approximately
-fourteen yards); bhrsa--very severely; artah--aggrieved.
-<p></p>
+hata-putrah--who lost his son; tatah--thereafter; tvasta--Tvasta; juhava--performed a sacrifice; indraya--
+of Indra; satrave--for creating an enemy; indra-satro--O enemy of Indra; vivardhasva--increase; ma--not;
+ciram--after a long time; jahi--kill; vidvisam--your enemy.
+<br>
 <h2>Translation</h2>
-Struck with the club by Vrtrasura like a mountain struck by a thunderbolt, the elephant Airavata, feeling
-great pain and spitting blood from its broken mouth, was pushed back fourteen yards. In great distress,
-the elephant fell, with Indra on its back.
+After Visvarupa was killed, his father, Tvasta, performed ritualistic ceremonies to kill Indra. He offered
+oblations in the sacrificial fire, saying, "O enemy of Indra, flourish to kill your enemy without delay."
+<br>
+<h2>Purport</h2>
+There was some defect in Tvasta's chanting of the mantra because he chanted it long instead of short,
+and therefore the meaning changed. Tvasta intended to chant the word indra-satro, meaning, "O enemy of
+Indra." In this mantra, the word indra is in the possessive case (sasthi), and the word indra-satro is called
+a tat-purusa compound (tatpurusa-samasa). Unfortunately, instead of chanting the mantra short, Tvasta
+chanted it long, and its meaning changed from "the enemy of Indra" to "Indra, who is an enemy."
+Consequently instead of an enemy of Indra's, there emerged the body of Vrtrasura, of whom Indra was the
+enemy.
 </p>
 
 </div>
@@ -72,7 +117,7 @@ the elephant fell, with Indra on its back.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

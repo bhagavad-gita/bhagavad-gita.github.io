@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.11.5.html">6.11.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-indra uvaca
-stri-bhu-druma-jalair eno
-visvarupa-vadhodbhavam
-vibhaktam anugrhnadbhir
-vrtra-hatyam kva marjmy aham
-<p></p>
+yadi vah pradhane sraddha
+saram va ksullaka hrdi
+agre tisthata matram me
+na ced gramya-sukhe sprha
+<br>
 <h2>Synonyms</h2>
-indrah uvaca--King Indra replied; stri--by women; bhu--the earth; druma--the trees; jalaih--and water;
-enah--this (sin); visvarupa--of Visvarupa; vadha--from the killing; udbhavam--produced; vibhaktam--
-divided; anugrhnadbhih--showing their favor (to me); vrtra-hatyam--the killing of Vrtra; kva--how;
-marjmi--shall become free from; aham--I.
-<p></p>
+yadi--if; vah--of you; pradhane--in battle; sraddha--faith; saram--patience; va--or; ksullakah--O
+insignificant ones; hrdi--in the core of the heart; agre--in front; tisthata--just stand; matram--for a
+moment; me--of me; na--not; cet--if; gramya-sukhe--in sense gratification; sprha--desire.
+<br>
 <h2>Translation</h2>
-King Indra replied: When I killed Visvarupa, I received extensive sinful reactions, but I was favored by
-the women, land, trees and water, and therefore I was able to divide the sin among them. But now if I kill
-Vrtrasura, another brahmana, how shall I free myself from the sinful reactions?
+O insignificant demigods, if you truly have faith in your heroism, if you have patience in the cores of
+your hearts and if you are not ambitious for sense gratification, please stand before me for a moment.
+<br>
+<h2>Purport</h2>
+Rebuking the demigods, Vrtrasura challenged, "O demigods, if you are actually heroes, stand before me
+now and try to show your prowess. If you do not wish to fight, if you are afraid of losing your lives, I shall
+not kill you, for unlike you, I am not so evil minded as to kill persons who are neither heroic nor willing
+to fight. If you have faith in your heroism, please stand before me."
 </p>
 
 </div>
@@ -72,7 +114,7 @@ Vrtrasura, another brahmana, how shall I free myself from the sinful reactions?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

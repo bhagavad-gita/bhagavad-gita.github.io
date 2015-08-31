@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,47 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.4.40.html">6.4.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nettham pumsam viragah syat
-tvaya kevalina mrsa
-manyase yady upasamam
-sneha-pasa-nikrntanam
-<p></p>
+rupam tan mahad-ascaryam
+vicaksyagata-sadhvasah
+nanama dandavad bhumau
+prahrstatma prajapatih
+<br>
 <h2>Synonyms</h2>
-na--not; ittham--in this way; pumsam--of persons; viragah--renunciation; syat--is possible; tvaya--by
-you; kevalina mrsa--possessing knowledge falsely; manyase--you think; yadi--if; upasamam--renunciation
-of material enjoyment; sneha-pasa--the bonds of affection; nikrntanam--cutting.
-<p></p>
+rupam--transcendental form; tat--that; mahat-ascaryam--greatly wonderful; vicaksya--seeing; agatasadhvasah--
+in the beginning becoming afraid; nanama--offered obeisances; danda-vat--like a stick;
+bhumau--on the ground; prahrsta-atma--being pleased in his body, mind and soul; prajapatih--the
+prajapati known as Daksa.
+<br>
 <h2>Translation</h2>
-Prajapati Daksa continued: If you think that simply awakening the sense of renunciation will detach one
-from the material world, I must say that unless full knowledge is awakened, simply changing dresses as
-you have done cannot possibly bring detachment.
-<p></p>
-<h2>Purport</h2>
-Prajapati Daksa was correct in stating that changing one's dress cannot detach one from this material
-world. The sannyasis of Kali-yuga who change their robes from white to saffron and then think they can
-do whatever they like are more abominable than materialistic grhasthas. This is not recommended
-anywhere. Prajapati Daksa was right in pointing out this defect, but he did not know that Narada Muni
-had aroused the spirit of renunciation in the Haryasvas and Savalasvas through full knowledge. Such
-enlightened renunciation is desirable. One should enter the renounced order with full knowledge (jnanavairagya),
-for the perfection of life is possible for one who renounces this material world in that way. This
-elevated stage can be reached very easily, as supported by the statements of Srimad-Bhagavatam (1.2.7):
-vasudeve bhagavati
-bhakti-yogah prayojitah
-janayaty asu vairagyam
-jnanam ca yad ahaitukam
-"By rendering devotional service unto the Personality of Godhead, Sri Krsna, one immediately acquires
-causeless knowledge and detachment from the world." If one seriously engages in devotional service to
-Lord Vasudeva, jnana and vairagya are automatically manifest in one's person. There is no doubt of this.
-Prajapati Daksa's accusation that Narada had not actually elevated his sons to the platform of knowledge
-was not factual. All the sons of Prajapati Daksa had first been raised to the platform of jnana and had then
-automatically renounced this world. In summary, unless one's knowledge is awakened, renunciation
-cannot take place, for without elevated knowledge one cannot give up attachment for material enjoyment.
+Seeing that wonderful and effulgent form of the Supreme Personality of Godhead, Prajapati Daksa was
+first somewhat afraid, but then he was very pleased to see the Lord, and he fell to the ground like a stick
+[dandavat] to offer his respects to the Lord.
 </p>
 
 </div>
@@ -91,7 +110,7 @@ cannot take place, for without elevated knowledge one cannot give up attachment 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

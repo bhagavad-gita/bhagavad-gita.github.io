@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,54 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.9.22.html">6.9.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pumsam kilaikanta-dhiyam svakanam
-yah sampado divi bhumau rasayam
-na rati yad dvesa udvega adhir
-madah kalir vyasanam samprayasah
-<p></p>
+avismitam tam paripurna-kamam
+svenaiva labhena samam prasantam
+vinopasarpaty aparam hi balisah
+sva-langulenatititarti sindhum
+<br>
 <h2>Synonyms</h2>
-pumsam--unto persons; kila--certainly; ekanta-dhiyam--who are advanced in spiritual consciousness;
-svakanam--who are recognized by the Supreme Personality of Godhead as His own; yah--which;
-sampadah--opulences; divi--in the upper planetary systems; bhumau--in the middle planetary systems;
-rasayam--and in the lower planetary systems; na--not; rati--bestows; yat--from which; dvesah--envy;
-udvegah--anxiety; adhih--mental agitation; madah--pride; kalih--quarrel; vyasanam--distress due to loss;
-samprayasah--great endeavor.
-<p></p>
+avismitam--who is never struck with wonder; tam--Him; paripurna-kamam--who is fully satisfied;
+svena--by His own; eva--indeed; labhena--achievements; samam--equipoised; prasantam--very steady;
+vina--without; upasarpati--approaches; aparam--another; hi--indeed; balisah--a fool; sva--of a dog;
+langulena--by the tail; atititarti--wants to cross; sindhum--the sea.
+<br>
 <h2>Translation</h2>
-Persons who fully surrender at the lotus feet of the Supreme Personality of Godhead and always think of
-His lotus feet are accepted and recognized by the Lord as His own personal assistants or servants. The
-Lord never bestows upon such servants the brilliant opulences of the upper, lower and middle planetary
-systems of this material world. When one possesses material opulence in any of these three divisions of
-the universe, his possessions naturally increase his enmity, anxiety, mental agitation, pride and
-belligerence. Thus one goes through much endeavor to increase and maintain his possessions, and he
-suffers great unhappiness when he loses them.
-<p></p>
+Free from all material conceptions of existence and never wonder-struck by anything, the Lord is always
+jubilant and fully satisfied by His own spiritual perfection. He has no material designations, and therefore
+He is steady and unattached. That Supreme Personality of Godhead is the only shelter of everyone.
+Anyone desiring to be protected by others is certainly a great fool who desires to cross the sea by holding
+the tail of a dog.
+<br>
 <h2>Purport</h2>
-In Bhagavad-gita (4.11) the Lord says:
-ye yatha mam prapadyante
-tams tathaiva bhajamy aham
-mama vartmanuvartante
-manusyah partha sarvasah
-"As devotees surrender unto Me, I reward them accordingly. Everyone follows My path in all respects, O
-son of Prtha." Both Indra and Vrtrasura were certainly devotees of the Lord, although Indra took
-instructions from Visnu to kill Vrtrasura. The Lord was actually more favorable to Vrtrasura because after
-being killed by Indra's thunderbolt, Vrtrasura would go back to Godhead, whereas the victorious Indra
-would rot in this material world. Because both of them were devotees, the Lord awarded them the
-respective benedictions they wanted. Vrtrasura never wanted material possessions, for he knew very well
-the nature of such possessions. To accumulate material possessions, one must labor very hard, and when
-he gets them he creates many enemies because this material world is always full of rivalry. If one becomes
-rich, his friends or relatives are envious. For ekanta-bhaktas, unalloyed devotees, Krsna therefore never
-provides material possessions. A devotee sometimes needs some material possessions for preaching, but
-the possessions of a preacher are not like those of a karmi. A karmi's possessions are achieved as a result
-of karma, but those of a devotee are arranged by the Supreme Personality of Godhead just to facilitate his
-devotional activities. Because a devotee never uses material possessions for any purpose other than the
-service of the Lord, the possessions of a devotee are not to be compared to those of a karmi.
+A dog can swim in the water, but if a dog dives in the ocean and someone wants to cross the ocean by
+holding the dog's tail, he is certainly fool number one. A dog cannot cross the ocean, nor can a person
+cross the ocean by catching a dog's tail. Similarly, one who desires to cross the ocean of nescience should
+not seek the shelter of any demigod or anyone else but the fearless shelter of the Supreme Personality of
+Godhead. Srimad-Bhagavatam (10.14.58) therefore says:
+samasrita ye pada-pallava-plavam
+mahat-padam punya-yaso-murareh
+bhavambudhir vatsa-padam param padam
+padam padam yad vipadam na tesam
+The Lord's lotus feet are an indestructible boat, and if one takes shelter of that boat he can easily cross
+the ocean of nescience. Consequently there are no dangers for a devotee although he lives within this
+material world, which is full of dangers at every step. One should seek the shelter of the all-powerful
+instead of trying to be protected by one's own concocted ideas.
 </p>
 
 </div>
@@ -98,7 +127,7 @@ service of the Lord, the possessions of a devotee are not to be compared to thos
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

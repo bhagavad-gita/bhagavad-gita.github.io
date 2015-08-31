@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.10.11.html">6.10.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-purusah prakrtir vyaktam
-atma bhutendriyasayah
-saknuvanty asya sargadau
-na vina yad-anugrahat
-<p></p>
+sri-badarayanir uvaca
+evam krta-vyavasito
+dadhyann atharvanas tanum
+pare bhagavati brahmany
+atmanam sannayan jahau
+<br>
 <h2>Synonyms</h2>
-purusah--the generator of the total material energy; prakrtih--the material energy or material nature;
-vyaktam--the principles of manifestation (mahat-tattva); atma--the false ego; bhuta--the five material
-elements; indriya--the ten senses; asayah--the mind, intelligence and consciousness; saknuvanti--are able;
-asya--of this universe; sarga-adau--in the creation, etc.; na--not; vina--without; yat--of whom; anugrahat--
-the mercy.
-<p></p>
+sri-badarayanih uvaca--Sri Sukadeva Gosvami said; evam--thus; krta-vyavasitah--making certain of what
+to do (in giving his body to the demigods); dadhyan--Dadhici Muni; atharvanah--the son of Atharva;
+tanum--his body; pare--to the Supreme; bhagavati--Personality of Godhead; brahmani--the Supreme
+Brahman; atmanam--himself. the spirit soul; sannayan--offering; jahau--gave up.
+<br>
 <h2>Translation</h2>
-The three purusas--Karanodakasayi Visnu, Garbhodakasayi Visnu and Ksirodakasayi-Visnu--the
-material nature, the total material energy, the false ego, the five material elements, the material senses, the
-mind, the intelligence and consciousness cannot create the material manifestation without the direction of
-the Supreme Personality of Godhead.
-<p></p>
+Sri Sukadeva Gosvami said: Dadhici Muni, the son of Atharva, thus resolved to give his body to the
+service of the demigods. He placed himself, the spirit soul, at the lotus feet of the Supreme Personality of
+Godhead and in this way gave up his gross material body made of five elements.
+<br>
 <h2>Purport</h2>
-As confirmed in the Visnu Purana, parasya brahmanah saktis tathedam akhilam jagat: whatever
-manifestations we experience are nothing but various energies of the Supreme Personality of Godhead.
-These energies cannot create anything independently. This is also confirmed by the Lord Himself in
-Bhagavad-gita (9.10): mayadhyaksena prakrtih suyate sa-caracaram. "This material nature is working
-under My direction, O son of Kunti, and it is producing all moving and unmoving living beings." Only
-under the direction of the Lord, the Supreme Person, can prakrti, which is manifested in twenty-four
-elements, create different situations for the living entity. In the Vedas the Lord says:
-madiyam mahimanam ca
-parabrahmeti sabditam
-vetsyasy anugrhitam me
-samprasnair vivrtam hrdi
-"Since everything is a manifestation of My energy, I am known as Parabrahman. Therefore everyone
-should hear from Me about My glorious activities." The Lord also says in Bhagavad-gita (10.2), aham adir
-hi devanam: "I am the origin of all the demigods." Therefore the Supreme Personality of Godhead is the
-origin of everything, and no one is independent of Him. Srila Madhvacarya also says, anisa jiva-rupena:
-the living entity is anisa, never the controller, but is always controlled. Therefore when a living entity
-becomes proud of being an independent isvara, or god, that is his foolishness. Such foolishness is
-described in the following verse.
+As indicated by the words pare bhagavati brahmany atmanam sannayan, Dadhici placed himself, as
+spirit soul, at the lotus feet of the Supreme Personality of Godhead. In this regard, one may refer to the
+incident of Dhrtarastra's leaving his body, as described in the First Canto of Srimad-Bhagavatam
+(1.13.55). Dhrtarastra analytically divided his gross material body into the five different elements of
+which it was made--earth, water, fire, air and ether--and distributed them to the different reservoirs of
+these elements; in other words, he merged these five elements into the original mahat-tattva. By
+identifying his material conception of life, he gradually separated his spirit soul from material connections
+and placed himself at the lotus feet of the Supreme Personality of Godhead. The example given in this
+connection is that when an earthen pot is broken, the small portion of the sky within the pot is united
+with the large sky outside the pot. Mayavadi philosophers misunderstand this description of Srimad-
+Bhagavatam. Therefore Sri Ramanuja Svami, in his book Vedanta-tattva-sara, has described that this
+merging of the soul means that after separating himself from the material body made of eight elements--
+earth, water, fire, air, ether, false ego, mind and intelligence--the individual soul engages himself in
+devotional service to the Supreme Personality of Godhead in His eternal form (isvarah paramah krsnah
+sac-cid-ananda-vigrahah. anadir adir govindah sarva-karana-karanam). The material cause of the material
+elements absorbs the material body, and the spiritual soul assumes its original position. As described by
+Sri Caitanya Mahaprabhu, jivera 'svarupa' haya--krsnera 'nitya-dasa': the constitutional position of the
+living entity is that he is the eternal servant of Krsna. When one overcomes the material body through
+cultivation of spiritual knowledge and devotional service, one can revive his own position and thus
+engage in the service of the Lord.
 </p>
 
 </div>
@@ -93,7 +133,7 @@ described in the following verse.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

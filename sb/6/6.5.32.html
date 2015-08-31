@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.5.32.html">6.5.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-svarbhanoh suprabham kanyam
-uvaha namucih kila
-vrsaparvanas tu sarmistham
-yayatir nahuso bali
-<p></p>
+etavad uktva prayayau
+narado 'mogha-darsanah
+te 'pi canvagaman margam
+bhratrnam eva marisa
+<br>
 <h2>Synonyms</h2>
-svarbhanoh--of Svarbhanu; suprabham--Suprabha; kanyam--the daughter; uvaha--married; namucih--
-Namuci; kila--indeed; vrsaparvanah--of Vrsaparva; tu--but; sarmistham--Sarmistha; yayatih--King Yayati;
-nahusah--the son of Nahusa; bali--very powerful.
-<p></p>
+etavat--this much; uktva--speaking; prayayau--departed from that place; naradah--the great sage Narada;
+amogha-darsanah--whose glance is all-auspicious; te--they; api--also; ca--and; anvagaman--followed;
+margam--the path; bhratrnam--of their previous brothers; eva--indeed; marisa--O great Aryan king.
+<br>
 <h2>Translation</h2>
-The daughter of Svarbhanu named Suprabha was married by Namuci. The daughter of Vrsaparva named
-Sarmistha was given to the powerful King Yayati, the son of Nahusa.
+Sukadeva Gosvami continued: O best of the advanced Aryans, after saying this much to the sons of
+Prajapati Daksa, Narada Muni, whose merciful glance never goes in vain, left as he had planned. The sons
+of Daksa followed their elder brothers. Not attempting to produce children, they engaged themselves in
+Krsna consciousness.
 </p>
 
 </div>
@@ -69,7 +110,7 @@ Sarmistha was given to the powerful King Yayati, the son of Nahusa.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

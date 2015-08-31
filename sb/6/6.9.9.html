@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.9.9.html">6.9.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vilokya tam vajra-dharo 'tyamarsitah
-sva-satrave 'bhidravate maha-gadam
-ciksepa tam apatatim suduhsaham
-jagraha vamena karena lilaya
-<p></p>
+sasvat-kama-varenamhas
+turiyam jagrhuh striyah
+rajo-rupena tasv amho
+masi masi pradrsyate
+<br>
 <h2>Synonyms</h2>
-vilokya--seeing; tam--him (Vrtrasura); vajra-dharah--the carrier of the thunderbolt (King Indra); ati--
-very much; amarsitah--intolerant; sva--his own; satrave--toward the enemy; abhidravate--running; mahagadam--
-a very powerful club; ciksepa--threw; tam--that (club); apatatim--flying toward him; suduhsaham--
-very difficult to counteract; jagraha--caught; vamena--with his left; karena--hand; lilaya--very
-easily.
-<p></p>
+sasvat--perpetual; kama--of sexual desire; varena--because of the benediction; amhah--the sinful
+reaction for killing a brahmana; turiyam--one fourth; jagrhuh--accepted; striyah--women; rajah-rupena--in
+the form of the menstrual period; tasu--in them; amhah--the sinful reaction; masi masi--every month;
+pradrsyate--is visible.
+<br>
 <h2>Translation</h2>
-Seeing Vrtrasura's disposition, Indra, the King of heaven, became intolerant and threw at him one of his
-great clubs, which are extremely difficult to counteract. However, as the club flew toward him, Vrtrasura
-easily caught it with his left hand.
+In return for Lord Indra's benediction that they would be able to enjoy lusty desires continuously, even
+during pregnancy for as long as sex is not injurious to the embryo, women accepted one fourth of the
+sinful reactions. As a result of those reactions, women manifest the signs of menstruation every month.
+<br>
+<h2>Purport</h2>
+Women as a class are very lusty, and apparently their continuous lusty desires are never satisfied. In
+return for Lord Indra's benediction that there would be no cessation to their lusty desires, women
+accepted one fourth of the sinful reactions for killing a brahmana.
 </p>
 
 </div>
@@ -72,7 +115,7 @@ easily caught it with his left hand.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

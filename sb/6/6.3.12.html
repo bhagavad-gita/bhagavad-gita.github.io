@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,57 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.12.html">6.3.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tokanam pitarau bandhu
-drsah paksma striyah patih
-patih prajanam bhiksunam
-grhy ajnanam budhah suhrt
-<p></p>
+yama uvaca
+paro mad-anyo jagatas tasthusas ca
+otam protam patavad yatra visvam
+yad-amsato 'sya sthiti-janma-nasa
+nasy otavad yasya vase ca lokah
+<br>
 <h2>Synonyms</h2>
-tokanam--of children; pitarau--the two parents; bandhu--the friends; drsah--of the eye; paksma--the
-eyelid; striyah--of the woman; patih--the husband; patih--the protector; prajanam--of the subjects;
-bhiksunam--of the beggars; grhi--the householder; ajnanam--of the ignorant; budhah--the learned; suhrt--
-the friend.
-<p></p>
+yamah uvaca--Yamaraja replied; parah--superior; mat--than me; anyah--another; jagatah--of all moving
+things; tasthusah--of nonmoving things; ca--and; otam--crosswise; protam--lengthwise; patavat--like a
+woven cloth; yatra--in whom; visvam--the cosmic manifestation; yat--of whom; amsatah--from the partial
+expansions; asya--of this universe; sthiti--the maintenance; janma--the creation; nasah--the annihilation;
+nasi--in the nose; ota-vat--like the rope; yasya--of whom; vase--under the control; ca--and; lokah--the
+whole creation.
+<br>
 <h2>Translation</h2>
-As the father and mother are the friends and maintainers of their children, as the eyelid is the protector
-of the eye, as the husband is the maintainer and protector of a woman, as the householder is the
-maintainer and protector of beggars, and as the learned is the friend of the ignorant, so the king is the
-protector and giver of life to all his subjects. The trees are also subjects of the king. Therefore they should
-be given protection.
-<p></p>
+Yamaraja said: My dear servants, you have accepted me as the Supreme, but factually I am not. Above
+me, and above all the other demigods, including Indra and Candra, is the one supreme master and
+controller. The partial manifestations of His personality are Brahma, Visnu and Siva, who are in charge of
+the creation, maintenance and annihilation of this universe. He is like the two threads that form the
+length and breadth of a woven cloth. The entire world is controlled by Him just as a bull is controlled by a
+rope in its nose.
+<br>
 <h2>Purport</h2>
-By the supreme will of the Personality of Godhead, there are various protectors and maintainers for
-helpless living entities. The trees are also considered prajas, subjects of the king, and therefore the duty of
-the monarch is to protect even the trees, not to speak of others. The king is duty-bound to protect the
-living entities in his kingdom. Thus although the parents are directly responsible for the protection and
-maintenance of their children, the duty of the king is to see that all parents do their duty properly.
-Similarly, the king is also responsible for overseeing the other protectors mentioned in this verse. It may
-also be noted that the beggars who should be maintained by the householders are not professional
-beggars, but sannyasis and brahmanas, to whom the householders should supply food and clothing.
+The order carriers of Yamaraja suspected that there was a ruler even above Yamaraja. To eradicate their
+doubts, Yamaraja immediately replied, "Yes, there is one supreme controller above everything." Yamaraja
+is in charge of some of the moving living entities, namely the human beings, but the animals, who also
+move, are not under his control. Only human beings have consciousness of right and wrong, and among
+them only those who perform sinful activities come under the control of Yamaraja. Therefore although
+Yamaraja is a controller, he is only a departmental controller of a few living entities. There are other
+demigods who control many other departments, but above them all is one supreme controller, Krsna.
+Isvarah paramah krsnah sac-cid-ananda-vigrahah: the supreme controller is Krsna. Others, who control
+their own departments in the affairs of the universe, are insignificant in comparison to Krsna, the supreme
+controller. Krsna says in Bhagavad-gita (7.7), mattah parataram nanyat kincid asti dhananjaya: "My dear
+Dhananjaya [Arjuna], no one is superior to Me." Therefore Yamaraja immediately cleared away the doubts
+of his assistants, the Yamadutas, by confirming that there is a supreme controller above all others.
+Srila Madhvacarya explains that the words otam protam refer to the cause of all causes. The Supreme
+Lord is both vertical and horizontal to the cosmic manifestation. This is confirmed by the following verse
+from the Skanda Purana:
+yatha kantha-patah sutra
+otah protas ca sa sthitah
+evam visnav idam visvam
+otam protam ca samsthitam
+Like the two threads, horizontal and vertical, of which a quilt is manufactured, Lord Visnu is situated as
+the vertical and horizontal cause of the cosmic manifestation.
 </p>
 
 </div>
@@ -83,7 +139,7 @@ beggars, but sannyasis and brahmanas, to whom the householders should supply foo
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

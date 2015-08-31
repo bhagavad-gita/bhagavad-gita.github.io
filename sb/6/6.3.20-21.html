@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.20-21.html">6.3.20-21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.20-21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20-21"><b>20-21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 svayambhur naradah sambhuh
 kumarah kapilo manuh
@@ -57,7 +96,7 @@ dvadasaite vijanimo
 dharmam bhagavatam bhatah
 guhyam visuddham durbodham
 yam jnatvamrtam asnute
-<p></p>
+<br>
 <h2>Synonyms</h2>
 svayambhuh--Lord Brahma; naradah--the great saint Narada; sambhuh--Lord Siva; kumarah--the four
 Kumaras; kapilah--Lord Kapila; manuh--Svayambhuva Manu; prahladah--Prahlada Maharaja; janakah--
@@ -67,7 +106,7 @@ bhagavatam--which teach a person how to love the Supreme Personality of Godhead;
 servants; guhyam--very confidential; visuddham--transcendental, not contaminated by the material modes
 of nature; durbodham--not easily understood; yam--which; jnatva--understanding; amrtam--eternal life;
 asnute--he enjoys.
-<p></p>
+<br>
 <h2>Translation</h2>
 Lord Brahma, Bhagavan Narada, Lord Siva, the four Kumaras, Lord Kapila [the son of Devahuti],
 Svayambhuva Manu, Prahlada Maharaja, Janaka Maharaja, Grandfather Bhisma, Bali Maharaja, Sukadeva
@@ -76,7 +115,7 @@ principle, which is known as bhagavata-dharma, or surrender unto the Supreme Lor
 uncontaminated by the material modes of nature. It is very confidential and difficult for ordinary human
 beings to understand, but if by chance one fortunately understands it, he is immediately liberated, and
 thus he returns home, back to Godhead.
-<p></p>
+<br>
 <h2>Purport</h2>
 In Bhagavad-gita Lord Krsna refers to bhagavata-dharma as the most confidential religious principle
 (sarva-guhyatamam, guhyad guhyataram). Krsna says to Arjuna, "Because you are My very dear friend, I
@@ -103,7 +142,7 @@ principles.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

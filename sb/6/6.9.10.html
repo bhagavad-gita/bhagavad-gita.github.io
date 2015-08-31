@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.9.10.html">6.9.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa indra-satruh kupito bhrsam taya
-mahendra-vaham gadayoru-vikramah
-jaghana kumbha-sthala unnadan mrdhe
-tat karma sarve samapujayan nrpa
-<p></p>
+dravya-bhuyo-varenapas
+turiyam jagrhur malam
+tasu budbuda-phenabhyam
+drstam tad dharati ksipan
+<br>
 <h2>Synonyms</h2>
-sah--that; indra-satruh--Vrtrasura; kupitah--being angry; bhrsam--very much; taya--with that;
-mahendra-vaham--the elephant who is the carrier of Indra; gadaya--by the club; uru-vikramah--who is
-famous for his great strength; jaghana--struck; kumbha-sthale--on the head; unnadan--roaring loudly;
-mrdhe--in that fight; tat karma--that action (striking the head of Indra's elephant with the club in his left
-hand); sarve--all the soldiers (on both sides); samapujayan--glorified; nrpa--O King Pariksit.
-<p></p>
+dravya--other things; bhuyah--of increasing; varena--by the benediction; apah--water; turiyam--one
+fourth; jagrhuh--accepted; malam--the sinful reaction; tasu--in the water; budbuda-phenabhyam--by
+bubbles and foam; drstam--visible; tat--that; harati--one collects; ksipan--throwing away.
+<br>
 <h2>Translation</h2>
-O King Pariksit, the powerful Vrtrasura, the enemy of King Indra, angrily struck the head of Indra's
-elephant with that club, making a tumultuous sound on the battlefield. For this heroic deed, the soldiers
-on both sides glorified him.
+And in return for King Indra's benediction that water would increase the volume of other substances
+with which it was mixed, water accepted one fourth of the sinful reactions. Therefore there are bubbles
+and foam in water. When one collects water, these should be avoided.
+<br>
+<h2>Purport</h2>
+If water is mixed with milk, fruit juice or other similar substances, it increases their volume, and no one
+can understand which has increased. In return for this benediction, water accepted one fourth of Indra's
+sinful reactions. These sinful reactions are visible in foam and bubbles. Therefore one should avoid foam
+and bubbles while collecting drinking water.
 </p>
 
 </div>
@@ -72,7 +115,7 @@ on both sides glorified him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

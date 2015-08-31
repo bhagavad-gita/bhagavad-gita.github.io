@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.3.6.html">6.3.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tabhyam nirdahyamanams tan
-upalabhya kurudvaha
-rajovaca mahan somo
-manyum prasamayann iva
-<p></p>
+kintu sastr-bahutve syad
+bahunam iha karminam
+sastrtvam upacaro hi
+yatha mandala-vartinam
+<br>
 <h2>Synonyms</h2>
-tabhyam--by the wind and fire; nirdahyamanan--being burned; tan--them (the trees); upalabhya--seeing;
-kurudvaha--O Maharaja Pariksit; raja--the king of the forest; uvaca--said; mahan--the great; somah--
-predominating deity of the moon, Somadeva; manyum--the anger; prasamayan--pacifying; iva--like.
-<p></p>
+kintu--but; sastr--of governors or judges; bahutve--in the plurality; syat--there may be; bahunam--of
+many; iha--in this world; karminam--persons performing actions; sastrtvam--departmental management;
+upacarah--administration; hi--indeed; yatha--just like; mandala-vartinam--of the departmental heads.
+<br>
 <h2>Translation</h2>
-My dear King Pariksit, when Soma, the king of the trees and predominating deity of the moon, saw the
-fire and wind burning all the trees to ashes, he felt great sympathy because he is the maintainer of all
-herbs and trees. To appease the anger of the Pracetas, Soma spoke as follows.
-<p></p>
+The Yamadutas continued: Since there are many different karmis, or workers, there may be different
+judges or rulers to give them justice, but just as one central emperor controls different departmental
+rulers, there must be one supreme controller to guide all the judges.
+<br>
 <h2>Purport</h2>
-It is understood from this verse that the predominating deity of the moon is the maintainer of all the
-trees and plants throughout the universe. It is due to the moonshine that trees and plants grow very
-luxuriantly. Therefore how can we accept the so-called scientists whose moon expeditions have informed
-us that there are no trees or vegetation on the moon? Srila Visvanatha Cakravarti Thakura says, somo
-vrksadhisthata sa eva vrksanam raja: Soma, the predominating deity of the moon, is the king of all
-vegetation. How can we believe that the maintainer of vegetation has no vegetation on his own planet?
+In governmental management there may be departmental officials to give justice to different persons,
+but the law must be one, and that central law must control everyone. The Yamadutas could not imagine
+that two judges would give two different verdicts in the same case, and therefore they wanted to know
+who the central judge is. The Yamadutas were certain that Ajamila was a most sinful man, but although
+Yamaraja wanted to punish him, the Visnudutas excused him. This was a puzzling situation that the
+Yamadutas wanted Yamaraja to clarify.
 </p>
 
 </div>
@@ -78,7 +117,7 @@ vegetation. How can we believe that the maintainer of vegetation has no vegetati
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.8.25.html">6.8.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-na te sastrastra-varsaugha
-hy aseduh sura-sainikan
-chinnah siddha-pathe devair
-laghu-hastaih sahasradha
-<p></p>
+tvam yatudhana-pramatha-preta-matrpisaca-
+vipragraha-ghora-drstin
+darendra vidravaya krsna-purito
+bhima-svano 'rer hrdayani kampayan
+<br>
 <h2>Synonyms</h2>
-na--not; te--those; sastra-astra-varsa-oghah--showers of arrows and other weapons; hi--indeed; aseduh--
-reached; sura-sainikan--the armies of the demigods; chinnah--cut; siddha-pathe--in the sky; devaih--by
-the demigods; laghu-hastaih--quick-handed; sahasradha--into thousands of pieces.
-<p></p>
+tvam--you; yatudhana--Raksasas; pramatha--Pramathas; preta--Pretas; matr--Matas; pisaca--Pisacas;
+vipra-graha--brahmana ghosts; ghora-drstin--who have very fearful eyes; darendra--O Pancajanya, the
+conchshell in the hands of the Lord; vidravaya--drive away; krsna-puritah--being filled with air from the
+mouth of Krsna; bhima-svanah--sounding extremely fearful; areh--of the enemy; hrdayani--the cores of
+the hearts; kampayan--causing to tremble.
+<br>
 <h2>Translation</h2>
-The showers of various weapons and arrows released to kill the soldiers of the demigods did not reach
-them because the demigods, acting quickly, cut the weapons into thousands of pieces in the sky.
+O best of conchshells, O Pancajanya in the hands of the Lord, you are always filled with the breath of
+Lord Krsna. Therefore you create a fearful sound vibration that causes trembling in the hearts of enemies
+like the Raksasas, pramatha ghosts, Pretas, Matas, Pisacas and brahmana ghosts with fearful eyes.
 </p>
 
 </div>
@@ -69,7 +111,7 @@ them because the demigods, acting quickly, cut the weapons into thousands of pie
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/6/6.15.8.html">6.15.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-prayasah prakrtas capi
-striyam rahasi bibhrati
-ayam maha-vrata-dharo
-bibharti sadasi striyam
-<p></p>
+deha-dehi-vibhago 'yam
+aviveka-krtah pura
+jati-vyakti-vibhago 'yam
+yatha vastuni kalpitah
+<br>
 <h2>Synonyms</h2>
-prayasah--generally; prakrtah--conditioned souls; ca--also; api--although; striyam--a woman; rahasi--in a
-solitary place; bibhrati--embrace; ayam--this (Lord Siva); maha-vrata-dharah--the master of great vows
-and austerities; bibharti--enjoys; sadasi--in an assembly of great saintly persons; striyam--his wife.
-<p></p>
+deha--of this body; dehi--and the proprietor of the body; vibhagah--the division; ayam--this; aviveka--
+from ignorance; krtah--made; pura--from time immemorial; jati--of the class or caste; vyakti--and the
+individual; vibhagah--division; ayam--this; yatha--just as; vastuni--in the original object; kalpitah--
+imagined.
+<br>
 <h2>Translation</h2>
-Ordinary conditioned persons generally embrace their wives and enjoy their company in solitary places.
-How wonderful it is that Lord Mahadeva, although a great master of austerity, is embracing his wife
-openly in the midst of an assembly of great saints.
-<p></p>
+Divisions of generalization and specification, such as nationality and individuality, are the imaginations
+of persons who are not advanced in knowledge.
+<br>
 <h2>Purport</h2>
-The word maha-vrata-dharah indicates a brahmacari who has never fallen down. Lord Siva is counted
-among the best of yogis, yet he embraced his wife in the midst of great saintly persons. Citraketu
-appreciated how great Lord Siva was to be unaffected even in that situation. Therefore Citraketu was not
-an offender; he merely expressed his wonder.
+Actually there are two energies--material and spiritual. Both of them are ever-existing because they are
+emanations from the eternal truth, the Supreme Lord. Because the individual soul, the individual living
+entity, has desired to act in forgetfulness of his original identity since time immemorial, he is accepting
+different positions in material bodies and being designated according to many divisions of nationality,
+community, society, species and so on.
 </p>
 
 </div>
@@ -76,7 +116,7 @@ an offender; he merely expressed his wonder.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
