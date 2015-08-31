@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,64 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.33.html">10.2.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-asyatas te sara-vratair
-hanyamanah samantatah
-jijivisava utsrjya
-palayana-para yayuh
-<p></p>
+tatha na te madhava tavakah kvacid
+bhrasyanti margat tvayi baddha-sauhrdah
+tvayabhigupta vicaranti nirbhaya
+vinayakanikapa-murdhasu prabho
+<br>
 <h2>Synonyms</h2>
-asyatah--pierced by your discharged arrows; te--your; sara-vrataih--by the multitude of arrows; hanyamanah--
-being killed; samantatah--here and there; jijivisavah--aspiring to live; utsrjya--giving up the battlefield; palayanaparah--
-intent on escaping; yayuh--they fled (the fighting).
-<p></p>
+tatha--like them (the nondevotees); na--not; te--they (the devotees); madhava--O Lord, husband of the goddess of
+fortune; tavakah--the followers of the devotional path, the devotees; kvacit--in any circumstances; bhrasyanti--fall
+down; margat--from the path of devotional service; tvayi--unto You; baddha-sauhrdah--because of being fully
+attached to Your lotus feet; tvaya--by You; abhiguptah--always protected from all dangers; vicaranti--they move;
+nirbhayah--without fear; vinayaka-anikapa--the enemies who maintain paraphernalia to oppose the bhakti cult;
+murdhasu--on their heads; prabho--O Lord.
+<br>
 <h2>Translation</h2>
-While being pierced by your arrows, which you discharged on all sides, some of them, who were injured by the
-multitude of arrows but who desired to live, fled the battlefield, intent on escaping.
+O Madhava, Supreme Personality of Godhead, Lord of the goddess of fortune, if devotees completely in love with
+You sometimes fall from the path of devotion, they do not fall like nondevotees, for You still protect them. Thus
+they fearlessly traverse the heads of their opponents and continue to progress in devotional service.
+<br>
+<h2>Purport</h2>
+Devotees generally do not fall down, but if circumstantially they do, the Lord, because of their strong attachment
+to Him, gives them protection in all circumstances. Thus even if devotees fall down, they are still strong enough to
+traverse the heads of their enemies. We have actually seen that our Krsna consciousness movement has many
+opponents, such as the "deprogrammers," who instituted a strong legal case against the devotees. We thought that
+this case would take a long time to settle, but because the devotees were protected by the Supreme Personality of
+Godhead, we unexpectedly won the case in one day. Thus a case that was expected to continue for years was
+settled in a day because of the protection of the Supreme Personality of Godhead, who has promised in Bhagavadgita
+(9.31), kaunteya pratijanihi na me bhaktah pranasyati: "O son of Kunti, declare it boldly that My devotee never
+perishes." In history there are many instances of devotees like Citraketu, Indradyumna and Maharaja Bharata who
+circumstantially fell down but were still protected. Maharaja Bharata, for example, because of his attachment to a
+deer, thought of the deer at the time of death, and therefore in his next life he became a deer (yam yam vapi smaran
+bhavam tyajaty ante kalevaram). Because of protection by the Supreme Personality of Godhead, however, the deer
+remembered his relationship with the Lord and next took birth in a good brahminical family and performed
+devotional service (sucinam srimatam gehe yoga-bhrasto 'bhijayate). Similarly, Citraketu fell down and became a
+demon, Vrtrasura, but he too was protected. Thus even if one falls down from the path of bhakti-yoga, one is
+ultimately saved. If a devotee is strongly situated in devotional service, the Supreme Personality of Godhead has
+promised to protect him (kaunteya pratijanihi na me bhaktah pranasyati). But even if a devotee circumstantially
+falls down, he is protected by Madhava.
+The word Madhava is significant. Ma, mother Laksmi, the mother of all opulences, is always with the Supreme
+Personality of Godhead, and if a devotee is in touch with the Supreme Personality of Godhead, all the opulences of
+the Lord are ready to help him.
+yatra yogesvarah krsno
+yatra partho dhanur-dharah
+tatra srir vijayo bhutir
+dhruva nitir matir mama
+(Bg. 18.78)
+Wherever there is the Supreme Personality of Godhead, Krsna, and His devotee Arjuna, Partha, there is victory,
+opulence, extraordinary power and morality. The opulences of a devotee are not a result of karma-kanda-vicara. A
+devotee is always protected by all of the Supreme Lord's opulences, of which no one can deprive him (tesam
+nityabhiyuktanam yoga-ksemam vahamy aham). Thus a devotee cannot be defeated by any opponents. A devotee,
+therefore, should not deviate knowingly from the path of devotion. The adherent devotee is assured all protection
+from the Supreme Personality of Godhead.
 </p>
 
 </div>
@@ -69,7 +146,7 @@ multitude of arrows but who desired to live, fled the battlefield, intent on esc
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

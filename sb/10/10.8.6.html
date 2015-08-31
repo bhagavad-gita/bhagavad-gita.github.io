@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.6.html">10.8.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-atra bhoktavyam asmabhir
-divarudham ksudharditah
-vatsah samipe 'pah pitva
-carantu sanakais trnam
-<p></p>
+tvam hi brahma-vidam sresthah
+samskaran kartum arhasi
+balayor anayor nrnam
+janmana brahmano guruh
+<br>
 <h2>Synonyms</h2>
-atra--here, on this spot; bhoktavyam--our lunch should be eaten; asmabhih--by us; diva-arudham--it is very late
-now; ksudha arditah--we are fatigued with hunger; vatsah--the calves; samipe--nearby; apah--water; pitva--after
-drinking; carantu--let them eat; sanakaih--slowly; trnam--the grasses.
-<p></p>
+tvam--Your Holiness; hi--indeed; brahma-vidam--of all brahmanas, or persons who understand what is Brahman
+(brahma janatiti brahmanah); sresthah--you are the best; samskaran--ceremonies performed for reformation
+(because by these reformatory activities one takes one's second birth: samskarad bhaved dvijah); kartum arhasi--
+because you have kindly come here, kindly execute; balayoh--of these two sons (Krsna and Balarama); anayoh--of
+both of Them; nrnam--not only of Them, but of all human society; janmana--as soon as he takes birth;
+brahmanah--immediately the brahmana becomes; guruh--the guide. *
+<br>
 <h2>Translation</h2>
-I think we should take our lunch here, since we are already hungry because the time is very late. Here the calves
-may drink water and go slowly here and there and eat the grass.
+My lord, you are the best of the brahmanas, especially because you are fully aware of the jyotih-sastra, the
+astrological science. Therefore you are naturally the spiritual master of every human being. This being so, since you
+have kindly come to my house, kindly execute the reformatory activities for my two sons.
+<br>
+<h2>Purport</h2>
+The Supreme Personality of Godhead, Krsna, says in Bhagavad-gita (4.13), catur-varnyam maya srstam gunakarma-
+vibhagasah: the four varnas--brahmana, ksatriya, vaisya and sudra--must be present in society. The
+brahmanas are required for the guidance of the whole society. If there is no such institution as varnasrama-dharma
+and if human society has no such guide as the brahmana, human society will be hellish. In Kali-yuga, especially at
+the present moment, there is no such thing as a real brahmana, and therefore society is in a chaotic condition.
+Formerly there were qualified brahmanas, but at present, although there are certainly persons who think
+themselves brahmanas, they actually have no ability to guide society. The Krsna consciousness movement is
+therefore very much eager to reintroduce the varnasrama system into human society so that those who are
+bewildered or less intelligent will be able to take guidance from qualified brahmanas.
+Brahmana means Vaisnava. After one becomes a brahmana, the next stage of development in human society is to
+become a Vaisnava. People in general must be guided to the destination or goal of life, and therefore they must
+understand Visnu, the Supreme Personality of Godhead. The whole system of Vedic knowledge is based on this
+principle, but people have lost the clue (na te viduh svartha-gatim hi visnum), and they are simply pursuing sense
+gratification, with the risk of gliding down to a lower grade of life (mrtyu-samsara-vartmani). It doesn't matter
+whether one is born a brahmana or not. No one is born a brahmana; everyone is born a sudra. But by the guidance
+of a brahmana and by samskara, one can become dvija, twice-born, and then gradually become a brahmana.
+Brahmanism is not a system meant to create a monopoly for a particular class of men. Everyone should be educated
+so as to become a brahmana. At least there must be an opportunity to allow everyone to attain the destination of
+life. Regardless of whether one is born in a brahmana family, a ksatriya family or a sudra family, one may be guided
+by a proper brahmana and be promoted to the highest platform of being a Vaisnava. Thus the Krsna consciousness
+movement affords an opportunity to develop the right destiny for human society. Nanda Maharaja took advantage
+of the opportunity of Gargamuni's presence by requesting him to perform the necessary reformatory activities for
+his sons to guide Them toward the destination of life.
 </p>
 
 </div>
@@ -69,7 +137,7 @@ may drink water and go slowly here and there and eat the grass.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

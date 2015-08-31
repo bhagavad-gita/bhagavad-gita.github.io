@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.13.html">10.5.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-asatah sri-madandhasya
-daridryam param anjanam
-atmaupamyena bhutani
-daridrah param iksate
-<p></p>
+avadyanta vicitrani
+vaditrani mahotsave
+krsne visvesvare 'nante
+nandasya vrajam agate
+<br>
 <h2>Synonyms</h2>
-asatah--of such a foolish rascal; sri-mada-andhasya--who is blinded by temporarily possessing riches and
-opulence; daridryam--poverty; param anjanam--the best ointment for the eyes, by which to see things as they are;
-atma-aupamyena--with comparison to himself; bhutani--living beings; daridrah--a poverty-stricken man; param--
-perfectly; iksate--can see things as they are.
-<p></p>
+avadyanta--vibrated in celebration of Vasudeva's son; vicitrani--various; vaditrani--musical instruments; mahautsave--
+in the great festival; krsne--when Lord Krsna; visva-isvare--the master of the entire cosmic manifestation;
+anante--unlimitedly; nandasya--of Maharaja Nanda; vrajam--at the pasturing place; agate--had so arrived.
+<br>
 <h2>Translation</h2>
-Atheistic fools and rascals who are very much proud of wealth fail to see things as they are. Therefore, returning
-them to poverty is the proper ointment for their eyes so they may see things as they are. At least a poverty-stricken
-man can realize how painful poverty is, and therefore he will not want others to be in a painful condition like his
-own.
-<p></p>
+Now that the all-pervading, unlimited Lord Krsna, the master of the cosmic manifestation, had arrived within the
+estate of Maharaja Nanda, various types of musical instruments resounded to celebrate the great festival.
+<br>
 <h2>Purport</h2>
-Even today, if a man who was formerly poverty-stricken gets money, he is inclined to utilize his money to
-perform many philanthropic activities, like opening schools for uneducated men and hospitals for the diseased. In
-this connection there is an instructive story called punar musiko bhava, "Again Become a Mouse." A mouse was
-very much harassed by a cat, and therefore the mouse approached a saintly person to request to become a cat.
-When the mouse became a cat, he was harassed by a dog, and then when he became a dog, he was harassed by a
-tiger. But when he became a tiger, he stared at the saintly person, and when the saintly person asked him, "What
-do you want?" the tiger said, "I want to eat you." Then the saintly person cursed him, saying, "May you again
-become a mouse." A similar thing is going on all over the universe. One is going up and down, sometimes
-becoming a mouse, sometimes a tiger, and so on. Sri Caitanya Mahaprabhu said:
-brahmanda bhramite kona bhagyavan jiva
-guru-krsna-prasade paya bhakti-lata-bija
-(Cc. Madhya 19.151)
-The living entities are promoted and degraded by the laws of nature, but if one is very, very fortunate, by
-association with saintly persons he gets the seed of devotional service, and his life becomes successful. Narada
-Muni wanted to bring Nalakuvara and Manigriva to the platform of devotional service through poverty, and thus
-he cursed them. Such is the mercy of a Vaisnava. Unless one is brought to the Vaisnava platform, one cannot be a
-good man. Harav abhaktasya kuto mahad-gunah (Bhag. 5.18.12). An avaisnava never becomes a good man,
-however severely he is punished.
+The Lord says in Bhagavad-gita (4.7):
+yada yada hi dharmasya
+glanir bhavati bharata
+abhyutthanam adharmasya
+tadatmanam srjamy aham
+"Whenever and wherever there is a decline in religious practice, O descendant of Bharata, and a predominant rise
+of irreligion--at that time I descend Myself." Whenever Krsna comes, once in a day of Brahma, He comes to the
+house of Nanda Maharaja in Vrndavana. Krsna is the master of all creation (sarva-loka-mahesvaram). Therefore,
+not only in the neighborhood of Nanda Maharaja's estate, but all over the universe--and in all the other universes--
+musical sounds celebrated the auspicious arrival of the Lord.
 </p>
 
 </div>
@@ -92,7 +120,7 @@ however severely he is punished.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

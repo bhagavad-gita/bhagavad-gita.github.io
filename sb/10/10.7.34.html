@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,60 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.34.html">10.7.34</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.34</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/34"><b>34</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato 'tihrstah sva-krto 'krtarhanam
-puspaih suga apsarasas ca nartanaih
-gitaih sura vadya-dharas ca vadyakaih
-stavais ca vipra jaya-nihsvanair ganah
-<p></p>
+ekadarbhakam adaya
+svankam aropya bhamini
+prasnutam payayam asa
+stanam sneha-paripluta
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; ati-hrstah--everyone becoming very much pleased; sva-krtah--own respective duty; akrta--
-executed; arhanam--in the shape of worshiping the Supreme Personality of Godhead; puspaih--by showering
-flowers grown in Nandana-kanana from the heavens; su-gah--the celestial singers; apsarasah ca--and the celestial
-dancing girls; nartanaih--by dancing; gitaih--by singing celestial songs; surah--all the demigods; vadya-dharah ca--
-those who played on musical drums; vadyakaih--by playing respectively; stavaih ca--and by offering prayers;
-viprah--the brahmanas; jaya-nihsvanaih--simply by glorifying the Supreme Personality of Godhead; ganah--
-everyone.
-<p></p>
+ekada--once upon a time; arbhakam--the child; adaya--taking; sva-ankam--on her own lap; aropya--and placing
+Him; bhamini--mother Yasoda; prasnutam--breast milk oozing out; payayam asa--fed the child; stanam--her breast;
+sneha-paripluta--with great affection and love.
+<br>
 <h2>Translation</h2>
-Thereafter, everyone being pleased, the demigods began to shower flowers from Nandana-kanana, the celestial
-dancing girls began to dance, and the Gandharvas, who are famous for singing, offered songs of prayer. The
-drummers began to beat their kettledrums, and the brahmanas offered Vedic hymns. In this way, both in the
-heavens and on earth, everyone began to perform his own duties, glorifying the Lord.
-<p></p>
-<h2>Purport</h2>
-Everyone has some particular duty. The sastra has concluded (nirupitah) that everyone should glorify the
-Supreme Personality of Godhead by his own qualifications. If you are a singer, always glorify the Supreme Lord by
-singing very nicely. If you are a musician, glorify the Supreme Lord by playing musical instruments. Svanusthitasya
-dharmasya samsiddhir hari-tosanam (Bhag. 1.2.13). The perfection of life is to satisfy the Personality of Godhead.
-Therefore, beginning from this earth up to the celestial kingdom, everyone engaged in glorifying the Supreme
-Personality of Godhead. The decision of all great saintly persons is that whatever qualifications one has acquired
-should be utilized to glorify the Supreme Lord.
-idam hi pumsas tapasah srutasya va
-svistasya suktasya ca buddhi-dattayoh
-avicyuto 'rthah kavibhir nirupito
-yad uttamasloka-gunanuvarnanam
-"Learned sages have definitely concluded that the infallible purpose of the advancement of knowledge, austerity,
-Vedic study, sacrifice, the chanting of hymns, and charity is found in the transcendental descriptions of the
-qualities of the Lord, who is defined in choice poetry." (Bhag. 1.5.22) This is the perfection of life. One should be
-trained how to glorify the Supreme Personality of Godhead by one's respective qualities. Education, austerity,
-penance or, in the modern world, business, industry, education and so on--all should be engaged in glorifying the
-Lord. Then everyone in the world will be happy.
-Krsna comes, therefore, to exhibit His transcendental activities so that people may have the chance to glorify Him
-in every respect. To understand how to glorify the Lord is actual research work. It is not that everything should be
-understood without God. That is condemned.
-bhagavad-bhakti-hinasya
-jatih sastram japas tapah
-apranasyaiva dehasya
-mandanam loka-ranjanam
-(Hari-bhakti-sudhodaya 3.11)
-Without bhagavad-bhakti, without glorification of the Supreme Lord, whatever we have is simply a decoration of
-the dead body.
+One day mother Yasoda, having taken Krsna up and placed Him on her lap, was feeding Him milk from her
+breast with maternal affection. The milk was flowing from her breast, and the child was drinking it.
 </p>
 
 </div>
@@ -104,7 +108,7 @@ the dead body.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

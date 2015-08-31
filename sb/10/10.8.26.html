@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.26.html">10.8.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vrajaukasam sva-tokesu
-sneha-vally abdam anvaham
-sanair nihsima vavrdhe
-yatha krsne tv apurvavat
-<p></p>
+kalenalpena rajarse
+ramah krsnas ca gokule
+aghrsta-janubhih padbhir
+vicakramatur anjasa
+<br>
 <h2>Synonyms</h2>
-vraja-okasam--of all the inhabitants of Vraja, Vrndavana; sva-tokesu--for their own sons; sneha-valli--the creeper
-of affection; a-abdam--for one year; anu-aham--every day; sanaih--gradually; nihsima--without limit; vavrdhe--
-increased; yatha krsne--exactly accepting Krsna as their son; tu--indeed; apurva-vat--as it had not been previously.
-<p></p>
+kalena alpena--within a very short time; rajarse--O King (Maharaja Pariksit); ramah krsnah ca--both Rama and
+Krsna; gokule--in the village of Gokula; aghrsta-janubhih--without the help of crawling on Their knees; padbhih--
+by Their legs alone; vicakramatuh--began to walk; anjasa--very easily.
+<br>
 <h2>Translation</h2>
-Although the inhabitants of Vrajabhumi, the cowherd men and cowherd women, previously had more affection
-for Krsna than for their own children, now, for one year, their affection for their own sons continuously increased,
-for Krsna had now become their sons. There was no limit to the increment of their affection for their sons, who
-were now Krsna. Every day they found new inspiration for loving their children as much as they loved Krsna.
+O King Pariksit, within a very short time both Rama and Krsna began to walk very easily in Gokula on Their legs,
+by Their own strength, without the need to crawl.
+<br>
+<h2>Purport</h2>
+Instead of crawling with Their knees, the babies could now stand up by holding on to something and walk little
+by little, without difficulty, by the strength of Their legs.
 </p>
 
 </div>
@@ -71,7 +112,7 @@ were now Krsna. Every day they found new inspiration for loving their children a
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

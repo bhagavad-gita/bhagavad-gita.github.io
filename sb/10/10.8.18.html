@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.18.html">10.8.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatah krsno mudam kartum
-tan-matrnam ca kasya ca
-ubhayayitam atmanam
-cakre visva-krd isvarah
-<p></p>
+ya etasmin maha-bhagah
+pritim kurvanti manavah
+narayo 'bhibhavanty etan
+visnu-paksan ivasurah
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; krsnah--the Supreme Personality of Godhead; mudam--pleasure; kartum--to create; tatmatrnam
-ca--of the mothers of the cowherd boys and calves; kasya ca--and (the pleasure) of Brahma;
-ubhayayitam--expansion, both as the calves and as the cowherd boys; atmanam--Himself; cakre--did; visva-krt
-isvarah--it was not difficult for Him, for He is the creator of the whole cosmic manifestation.
-<p></p>
+ye--those persons who; etasmin--unto this child; maha-bhagah--very fortunate; pritim--affection; kurvanti--
+execute; manavah--such persons; na--not; arayah--the enemies; abhibhavanti--do overcome; etan--those who are
+attached to Krsna; visnu-paksan--the demigods, who always have Lord Visnu on their side; iva--like; asurah--the
+demons.
+<br>
 <h2>Translation</h2>
-Thereafter, just to create pleasure both for Brahma and for the mothers of the calves and cowherd boys, Krsna,
-the creator of the entire cosmic manifestation, expanded Himself as calves and boys.
-<p></p>
-<h2>Purport</h2>
-Although Brahma was already entangled in bewilderment, he wanted to show his power to the cowherd boys; but
-after he took away the boys and their calves and returned to his abode, Krsna created further astonishment for
-Brahma, and for the mothers of the boys, by establishing the lunch pastimes in the forest again and replacing all the
-calves and boys, just as they had appeared before. According to the Vedas, ekam bahu syam: the Personality of
-Godhead can become many, many millions upon millions of calves and cowherd boys, as He did to bewilder
-Brahma more and more.
+Demons [asuras] cannot harm the demigods, who always have Lord Visnu on their side. Similarly, any person or
+group attached to Krsna is extremely fortunate. Because such persons are very much affectionate toward Krsna,
+they cannot be defeated by demons like the associates of Kamsa [or by the internal enemies, the senses].
 </p>
 
 </div>
@@ -78,7 +110,7 @@ Brahma more and more.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.42.html">10.3.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-te tatra varnitam gopaih
-putanagamanadikam
-srutva tan-nidhanam svasti
-sisos casan suvismitah
-<p></p>
+tayor vam punar evaham
+adityam asa kasyapat
+upendra iti vikhyato
+vamanatvac ca vamanah
+<br>
 <h2>Synonyms</h2>
-te--all those persons who arrived; tatra--there (in the vicinity of Nanda Maharaja's estate); varnitam--described;
-gopaih--by the cowherd men; putana-agamana-adikam--everything about how Putana the witch had come there
-and played havoc; srutva--after hearing; tat-nidhanam--and about how Putana had died; svasti--all auspiciousness;
-sisoh--for the baby; ca--and; asan--offered; su-vismitah--being struck with great wonder because of what had
-happened.
-<p></p>
+tayoh--of you two, husband and wife; vam--in both of you; punah eva--even again; aham--I Myself; adityam--in
+the womb of Aditi; asa--appeared; kasyapat--by the semen of Kasyapa Muni; upendrah--by the name Upendra; iti--
+thus; vikhyatah--celebrated; vamanatvat ca--and because of being a dwarf; vamanah--I was known as Vamana.
+<br>
 <h2>Translation</h2>
-When the inhabitants of Vraja who had come from distant places heard the whole story of how Putana had come
-and then been killed by Krsna, they were certainly astonished, and they offered their blessings to the child for His
-wonderful deed of killing Putana. Nanda Maharaja, of course, was very much obliged to Vasudeva, who had
-foreseen the incident, and simply thanked him, thinking how wonderful Vasudeva was.
+In the next millennium, I again appeared from the two of you, who appeared as My mother, Aditi, and My father,
+Kasyapa. I was known as Upendra, and because of being a dwarf, I was also known as Vamana.
 </p>
 
 </div>
@@ -73,7 +108,7 @@ foreseen the incident, and simply thanked him, thinking how wonderful Vasudeva w
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

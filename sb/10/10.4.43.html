@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.43.html">10.4.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ittham vidita-tattvayam
-gopikayam sa isvarah
-vaisnavim vyatanon mayam
-putra-snehamayim vibhuh
-<p></p>
+sri-suka uvaca
+evam durmantribhih kamsah
+saha sammantrya durmatih
+brahma-himsam hitam mene
+kala-pasavrto 'surah
+<br>
 <h2>Synonyms</h2>
-ittham--in this way; vidita-tattvayam--when she understood the truth of everything philosophically; gopikayam--
-unto mother Yasoda; sah--the Supreme Lord; isvarah--the supreme controller; vaisnavim--visnumaya, or yogamaya;
-vyatanot--expanded; mayam--yogamaya; putra-sneha-mayim--very much attached because of maternal affection for
-her son; vibhuh--the Supreme Lord.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; evam--in this way; durmantribhih--his bad ministers; kamsah--King
+Kamsa; saha--along with; sammantrya--after considering very elaborately; durmatih--without good intelligence;
+brahma-himsam--persecution of the brahmanas; hitam--as the best way; mene--accepted; kala-pasa-avrtah--being
+bound by the rules and regulations of Yamaraja; asurah--because he was a demon.
+<br>
 <h2>Translation</h2>
-Mother Yasoda, by the grace of the Lord, could understand the real truth. But then again, the supreme master, by
-the influence of the internal potency, yogamaya, inspired her to become absorbed in intense maternal affection for
-her son.
-<p></p>
+Sukadeva Gosvami continued: Thus, having considered the instructions of his bad ministers, Kamsa, who was
+bound by the laws of Yamaraja and devoid of good intelligence because he was a demon, decided to persecute the
+saintly persons, the brahmanas, as the only way to achieve his own good fortune.
+<br>
 <h2>Purport</h2>
-Although mother Yasoda understood the whole philosophy of life, at the next moment she was overwhelmed by
-affection for her son by the influence of yogamaya. Unless she took care of her son Krsna, she thought, how could
-He be protected? She could not think otherwise, and thus she forgot all her philosophical speculations. This
-forgetfulness is described by Srila Visvanatha Cakravarti Thakura as being inspired by the influence of yogamaya
-(mohana-sadharmyan mayam). Materialistic persons are captivated by mahamaya, whereas devotees, by the
-arrangement of the spiritual energy, are captivated by yogamaya.
+Srila Locana dasa Thakura has sung, apana karama, bhunjaye samana, kahaye locana dasa. Instead of taking good
+instructions from the sages and the sastras, godless nondevotees act whimsically, according to their own plans.
+Actually, however, no one has his own plans because everyone is bound by the laws of nature and must act
+according to his tendency in material, conditional life. Therefore one must change one's own decision and follow
+the decision of Krsna and Krsna's devotees. Then one is rescued from punishment by Yamaraja. Kamsa was not
+uneducated. It appears from his talks with Vasudeva and Devaki that he knew all about the laws of nature. But
+because of his association with bad ministers, he could not make a clear decision about his welfare. Therefore the
+Caitanya-caritamrta (Madhya 22.54) says:
+'sadhu-sanga,' 'sadhu-sanga'----sarva-sastre kaya
+lava-matra sadhu-sasge sarva-siddhi haya
+If one desires his real welfare, he must associate with devotees and saintly persons and in this way rectify the
+material condition of his life.
 </p>
 
 </div>
@@ -79,7 +125,7 @@ arrangement of the spiritual energy, are captivated by yogamaya.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

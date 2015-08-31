@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.7.html">10.6.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gopibhih stobhito 'nrtyad
-bhagavan balavat kvacit
-udgayati kvacin mugdhas
-tad-vaso daru-yantravat
-<p></p>
+bala-grahas tatra vicinvati sisun
+yadrcchaya nanda-grhe 'sad-antakam
+balam praticchanna-nijoru-tejasam
+dadarsa talpe 'gnim ivahitam bhasi
+<br>
 <h2>Synonyms</h2>
-gopibhih--by the gopis (by flattery and offers of prizes); stobhitah--encouraged, induced; anrtyat--the small Krsna
-danced; bhagavan--although He was the Supreme Personality of Godhead; bala-vat--exactly like a human child;
-kvacit--sometimes; udgayati--He would sing very loudly; kvacit--sometimes; mugdhah--being amazed; tat-vasah--
-under their control; daru-yantra-vat--like a wooden doll.
-<p></p>
+bala-grahah--the witch, whose business was to kill small babies; tatra--standing there; vicinvati--thinking of,
+searching for; sisun--children; yadrcchaya--independently; nanda-grhe--in the house of Nanda Maharaja; asatantakam--
+who could kill all demons; balam--the child; praticchanna--covered; nija-uru-tejasam--whose unlimited
+power; dadarsa--she saw; talpe--(lying) on the bed; agnim--fire; iva--just like; ahitam--covered; bhasi--within ashes.
+<br>
 <h2>Translation</h2>
-The gopis would say, "If You dance, my dear Krsna, then I shall give You half a sweetmeat." By saying these
-words or by clapping their hands, all the gopis encouraged Krsna in different ways. At such times, although He was
-the supremely powerful Personality of Godhead, He would smile and dance according to their desire, as if He were
-a wooden doll in their hands. Sometimes He would sing very loudly, at their bidding. In this way, Krsna came
-completely under the control of the gopis.
+While searching for small children, Putana, whose business was to kill them, entered the house of Nanda
+Maharaja unobstructed, having been sent by the superior potency of the Lord. Without asking anyone's permission,
+she entered Nanda Maharaja's room, where she saw the child sleeping in bed, His unlimited power covered like a
+powerful fire covered by ashes. She could understand that this child was not ordinary, but was meant to kill all
+demons.
+<br>
+<h2>Purport</h2>
+Demons are always busy creating disturbances and killing. But the child lying on the bed in the house of Nanda
+Maharaja was meant to kill many demons.
 </p>
 
 </div>
@@ -73,7 +116,7 @@ completely under the control of the gopis.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

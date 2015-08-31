@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.46.html">10.4.46</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.46</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/46"><b>46</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-rajovaca
-nandah kim akarod brahman
-sreya evam mahodayam
-yasoda ca maha-bhaga
-papau yasyah stanam harih
-<p></p>
+ayuh sriyam yaso dharmam
+lokan asisa eva ca
+hanti sreyamsi sarvani
+pumso mahad-atikramah
+<br>
 <h2>Synonyms</h2>
-sri-raja uvaca--Maharaja Pariksit further inquired (from Sukadeva Gosvami); nandah--Maharaja Nanda; kim--
-what; akarot--performed; brahman--O learned brahmana; sreyah--auspicious activities, like performing penances
-and austerities; evam--as exhibited by him; maha-udayam--from which they achieved the greatest perfection;
-yasoda--mother Yasoda; ca--also; maha-bhaga--most fortunate; papau--drank; yasyah--of whom; stanam--the breast
-milk; harih--the Supreme Personality of Godhead.
-<p></p>
+ayuh--the duration of life; sriyam--beauty; yasah--fame; dharmam--religion; lokan--elevation to higher planets;
+asisah--blessings; eva--indeed; ca--also; hanti--destroys; sreyamsi--benedictions; sarvani--all; pumsah--of a person;
+mahat-atikramah--trespassing against great personalities.
+<br>
 <h2>Translation</h2>
-Having heard of the great fortune of mother Yasoda, Pariksit Maharaja inquired from Sukadeva Gosvami: O
-learned brahmana, mother Yasoda's breast milk was sucked by the Supreme Personality of Godhead. What past
-auspicious activities did she and Nanda Maharaja perform to achieve such perfection in ecstatic love?
-<p></p>
-<h2>Purport</h2>
-As stated in Bhagavad-gita (7.16), catur-vidha bhajante mam janah sukrtino 'rjuna. Without sukrti, or pious
-activities, no one can come to the shelter of the Supreme Personality of Godhead. The Lord is approached by four
-kinds of pious men (arto jijnasur artharthi jnani ca), but here we see that Nanda Maharaja and Yasoda surpassed all
-of them. Therefore Pariksit Maharaja naturally inquired, "What kind of pious activities did they perform in their
-past lives by which they achieved such a stage of perfection?" Of course, Nanda Maharaja and Yasoda are accepted
-as the father and mother of Krsna, yet mother Yasoda was more fortunate than Nanda Maharaja, Krsna's father,
-because Nanda Maharaja was sometimes separated from Krsna whereas Yasoda, Krsna's mother, was not separated
-from Krsna at any moment. From Krsna's babyhood to His childhood and from His childhood to His youth, mother
-Yasoda was always in association with Krsna. Even when Krsna was grown up, He would go to Vrndavana and sit
-on the lap of mother Yasoda. Therefore there is no comparison to the fortune of mother Yasoda, and Pariksit
-Maharaja naturally inquired, yasoda ca maha-bhaga.
+My dear King, when a man persecutes great souls, all his benedictions of longevity, beauty, fame, religion,
+blessings and promotion to higher planets will be destroyed.
+Thus end the Bhaktivedanta purports of the Tenth Canto, Fourth Chapter, of the Srimad-Bhagavatam, entitled
+"The Atrocities of King Kamsa."
+Chapter Five
+The Meeting of Nanda Maharaja and Vasudeva
+As described in this chapter, Nanda Maharaja very gorgeously performed the birth ceremony for his newborn
+child. Then he went to Kamsa to pay taxes due and met his intimate friend Vasudeva.
+There was great jubilation all over Vrndavana due to Krsna's birth. Everyone was overwhelmed with joy.
+Therefore the King of Vraja, Maharaja Nanda, wanted to perform the birth ceremony for his child, and this he did.
+During this great festival, Nanda Maharaja gave in charity to all present whatever they desired. After the festival,
+Nanda Maharaja put the cowherd men in charge of protecting Gokula, and then he went to Mathura to pay official
+taxes to Kamsa. In Mathura, Nanda Maharaja met Vasudeva. Nanda Maharaja and Vasudeva were brothers, and
+Vasudeva praised Nanda Maharaja's good fortune because he knew that Krsna had accepted Nanda Maharaja as His
+father. When Vasudeva inquired from Nanda Maharaja about the welfare of the child, Nanda Maharaja informed
+him all about Vrndavana, and Vasudeva was very much satisfied by this, although he expressed his grief because
+Devaki's many children had been killed by Kamsa. Nanda Maharaja consoled Vasudeva by saying that everything
+happens according to destiny and that one who knows this is not aggrieved. Expecting many disturbances in
+Gokula, Vasudeva then advised Nanda Maharaja not to wait in Mathura, but to return to Vrndavana as soon as
+possible. Thus Nanda Maharaja took leave of Vasudeva and returned to Vrndavana with the other cowherd men on
+their bullock carts.
 </p>
 
 </div>
@@ -86,7 +127,7 @@ Maharaja naturally inquired, yasoda ca maha-bhaga.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

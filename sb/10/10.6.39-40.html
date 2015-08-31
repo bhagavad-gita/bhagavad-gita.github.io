@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,61 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.39-40.html">10.6.39-40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.39-40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39-40"><b>39-40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kvacid vadayato venum
-ksepanaih ksipatah kvacit
-kvacit padaih kinkinibhih
-kvacit krtrima-go-vrsaih
-vrsayamanau nardantau
-yuyudhate parasparam
-anukrtya rutair jantums
-ceratuh prakrtau yatha
-<p></p>
+payamsi yasam apibat
+putra-sneha-snutany alam
+bhagavan devaki-putrah
+kaivalyady-akhila-pradah
+tasam aviratam krsne
+kurvatinam suteksanam
+na punah kalpate rajan
+samsaro 'jnana-sambhavah
+<br>
 <h2>Synonyms</h2>
-kvacit--sometimes; vadayatah--blowing; venum--on the flute; ksepanaih--with a device of rope for throwing;
-ksipatah--throwing stones to get fruit; kvacit--sometimes; kvacit padaih--sometimes with the legs; kinkinibhih--
-with the sound of ankle bells; kvacit--sometimes; krtrima-go-vrsaih--by becoming artificial cows and bulls;
-vrsayamanau--imitating the animals; nardantau--roaring loudly; yuyudhate--They both used to fight; parasparam--
-with one another; anukrtya--imitating; rutaih--by resounding; jantun--all the animals; ceratuh--They used to
-wander; prakrtau--two ordinary human children; yatha--like.
-<p></p>
+payamsi--milk (coming from the body); yasam--of all of whom; apibat--Lord Krsna drank; putra-sneha-snutani--
+that milk coming from the bodies of the gopis, not artificially but because of maternal affection; alam--sufficiently;
+bhagavan--the Supreme Personality of Godhead; devaki-putrah--who appeared as the son of Devaki; kaivalya-adi--
+like liberation or merging into the Brahman effulgence; akhila-pradah--the bestower of all similar blessings; tasam--
+of all of them (of all the gopis); aviratam--constantly; krsne--unto Lord Krsna; kurvatinam--making; suta-iksanam--
+as a mother looks upon her child; na--never; punah--again; kalpate--can be imagined; rajan--O King Pariksit;
+samsarah--the material bondage of birth and death; ajnana-sambhavah--which is to be accepted by foolish persons
+ignorantly trying to become happy.
+<br>
 <h2>Translation</h2>
-Sometimes Krsna and Balarama would play on Their flutes, sometimes They would throw ropes and stones
-devised for getting fruits from the trees, sometimes They would throw only stones, and sometimes, Their ankle
-bells tinkling, They would play football with fruits like bael and amalaki. Sometimes They would cover Themselves
-with blankets and imitate cows and bulls and fight with one another, roaring loudly, and sometimes They would
-imitate the voices of the animals. In this way They enjoyed sporting, exactly like two ordinary human children.
-<p></p>
+The Supreme Personality of Godhead, Krsna, is the bestower of many benedictions, including liberation
+[kaivalya], or oneness with the Brahman effulgence. For that Personality of Godhead, the gopis always felt maternal
+love, and Krsna sucked their breasts with full satisfaction. Therefore, because of their relationship as mother and
+son, although the gopis were engaged in various family activities, one should never think that they returned to this
+material world after leaving their bodies.
+<br>
 <h2>Purport</h2>
-Vrndavana is full of peacocks. Kujat-kokila-hamsa-sarasa-ganakirne mayurakule. The Vrndavana forest is always
-full of cuckoos, ducks, swans, peacocks, cranes and also monkeys, bulls and cows. So Krsna and Balarama used to
-imitate the sounds of these animals and enjoy sporting.
+The advantage of Krsna consciousness is described herein. Krsna consciousness gradually develops on the
+transcendental platform. One may think of Krsna as the supreme personality, one may think of Krsna as the
+supreme master, one may think of Krsna as the supreme friend, one may think of Krsna as the supreme son, or one
+may think of Krsna as the supreme conjugal lover. If one is connected with Krsna in any of these transcendental
+relationships, the course of one's material life is understood to have already ended. As confirmed in Bhagavad-gita
+(4.9), tyaktva deham punar janma naiti mam eti: for such devotees, going back home, back to Godhead, is
+guaranteed. Na punah kalpate rajan samsaro jnana-sambhavah. This verse also guarantees that devotees who
+constantly think of Krsna in a particular relationship will never return to this material world. In this material world
+of samsara, there are the same relationships. One thinks, "Here is my son," "Here is my wife," "Here is my lover,"
+or "Here is my friend." But these relationships are temporary illusions. Ajnana-sambhavah: such a consciousness
+awakens in ignorance. But when the same relationships awaken in Krsna consciousness, one's spiritual life is
+revived, and one is guaranteed to return home, back to Godhead. Even though the gopis who were friends of
+Rohini and mother Yasoda and who allowed their breasts to be sucked by Krsna were not directly Krsna's mothers,
+they all had the same chance as Rohini and Yasoda to go back to Godhead and act as Krsna's mothers-in-law,
+servants and so on. The word samsara refers to attachment for one's body, home, husband or wife, and children,
+but although the gopis and all the other inhabitants of Vrndavana had the same affection and attachment for
+husband and home, their central affection was for Krsna in some transcendental relationship, and therefore they
+were guaranteed to be promoted to Goloka Vrndavana in the next life, to live with Krsna eternally in spiritual
+happiness. The easiest way to attain spiritual elevation, to be liberated from this material world, and to go back
+home, back to Godhead, is recommended by Bhaktivinoda Thakura: krsnera samsara kara chadi' anacara. One
+should give up all sinful activities and remain in the family of Krsna. Then one's liberation is guaranteed.
 </p>
 
 </div>
@@ -84,7 +143,7 @@ imitate the sounds of these animals and enjoy sporting.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.25.html">10.2.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-naikatra priya-samvasah
-suhrdam citra-karmanam
-oghena vyuhyamananam
-plavanam srotaso yatha
-<p></p>
+brahma bhavas ca tatraitya
+munibhir naradadibhih
+devaih sanucaraih sakam
+girbhir vrsanam aidayan
+<br>
 <h2>Synonyms</h2>
-na--not; ekatra--in one place; priya-samvasah--living together with dear friends and relatives; suhrdam--of
-friends; citra-karmanam--of all of us who have had varieties of reactions to our past karma; oghena--by the force;
-vyuhyamananam--carried away; plavanam--of sticks and other objects floating in the water; srotasah--of the waves;
-yatha--as.
-<p></p>
+brahma--the supreme four-headed demigod; bhavah ca--and Lord Siva; tatra--there; etya--arriving; munibhih--
+accompanied by great sages; narada-adibhih--by Narada and others; devaih--and by demigods like Indra, Candra
+and Varuna; sa-anucaraih--with their followers; sakam--all together; girbhih--by their transcendental prayers;
+vrsanam--the Supreme Personality of Godhead, who can bestow blessings upon everyone; aidayan--pleased.
+<br>
 <h2>Translation</h2>
-Many planks and sticks, unable to stay together, are carried away by the force of a river's waves. Similarly,
-although we are intimately related with friends and family members, we are unable to stay together because of our
-varied past deeds and the waves of time.
-<p></p>
+Lord Brahma and Lord Siva, accompanied by great sages like Narada, Devala and Vyasa and by other demigods
+like Indra, Candra and Varuna, invisibly approached the room of Devaki, where they all joined in offering their
+respectful obeisances and prayers to please the Supreme Personality of Godhead, who can bestow blessings upon
+everyone.
+<br>
 <h2>Purport</h2>
-Vasudeva was lamenting because he and Nanda Maharaja could not live together. Yet how could they live
-together? Vasudeva warns that all of us, even if intimately related, are carried away by the waves of time according
-to the results of past karma.
+Dvau bhuta-sargau loke 'smin daiva asura eva ca (Padma Purana). There are two classes of men--the daivas and
+the asuras--and there is a great difference between them. Kamsa, being an asura, was always planning how to kill
+the Supreme Personality of Godhead or His mother, Devaki. Thus he was also Krsna conscious. But devotees are
+Krsna conscious favorably (visnu-bhaktah smrto daivah). Brahma is so powerful that he is in charge of creating an
+entire universe, yet he personally came to receive the Supreme Personality of Godhead. Bhava, Lord Siva, is always
+jubilant in chanting the holy name of the Lord. And what to speak of Narada? Narada-muni, bajaya vina, radhikaramana-
+name. Narada Muni is always chanting the glories of the Lord, and his engagement is to travel all over the
+universe and find a devotee or make someone a devotee. Even a hunter was made a devotee by the grace of Narada.
+Srila Sanatana Gosvami, in his Tosani, says that the word narada-adibhih means that Narada and the demigods
+were accompanied by other saintly persons, like Sanaka and Sanatana, all of whom came to congratulate or
+welcome the Supreme Personality of Godhead. Even though Kamsa was planning to kill Devaki, he too awaited the
+arrival of the Supreme Personality of Godhead (pratiksams taj janma).
 </p>
 
 </div>
@@ -76,7 +125,7 @@ to the results of past karma.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

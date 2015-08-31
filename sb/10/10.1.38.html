@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.38.html">10.1.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-distya hare 'sya bhavatah pado bhuvo
-bharo 'panitas tava janmanesituh
-distyankitam tvat-padakaih susobhanair
-draksyama gam dyam ca tavanukampitam
-<p></p>
+mrtyur janmavatam vira
+dehena saha jayate
+adya vabda-satante va
+mrtyur vai praninam dhruvah
+<br>
 <h2>Synonyms</h2>
-distya--by fortune; hare--O Lord; asyah--of this (world); bhavatah--of Your Lordship; padah--of the place;
-bhuvah--on this earth; bharah--the burden created by the demons; apanitah--now removed; tava--of Your Lordship;
-janmana--by appearance as an incarnation; isituh--You, the controller of everything; distya--and by fortune;
-ankitam--marked; tvat-padakaih--by Your lotus feet; su-sobhanaih--which are transcendentally decorated with the
-marks of conchshell, disc, lotus and club; draksyama--we shall surely observe; gam--upon this earth; dyam ca--in
-heaven also; tava anukampitam--due to Your causeless mercy upon us.
-<p></p>
+mrtyuh--death; janma-vatam--of the living entities who have taken birth; vira--O great hero; dehena saha--along
+with the body; jayate--is born (one who has taken birth is sure to die); adya--today; va--either; abda-sata--of
+hundreds of years; ante--at the end; va--or; mrtyuh--death; vai--indeed; praninam--for every living entity;
+dhruvah--is assured.
+<br>
 <h2>Translation</h2>
-O Lord, we are fortunate because the heavy burden of the demons upon this earth is immediately removed by
-Your appearance. Indeed, we are certainly fortunate, for we shall be able to see upon this earth and in the heavenly
-planets the marks of lotus, conchshell, club and disc that adorn Your lotus feet.
-<p></p>
+O great hero, one who takes birth is sure to die, for death is born with the body. One may die today or after
+hundreds of years, but death is sure for every living entity.
+<br>
 <h2>Purport</h2>
-The soles of the Lord's lotus feet are marked with sankha-cakra-gada-padma--conchshell, disc, club and lotus--
-and also by a flag and a thunderbolt. When Krsna walks on this earth or in the heavenly planets, these marks are
-visible wherever He goes. Vrndavana-dhama is a transcendental place because of Krsna's walking on this land
-frequently. The inhabitants of Vrndavana were fortunate to see these marks here and there. When Akrura went to
-Vrndavana to take Krsna and Balarama away to the festival arranged by Kamsa, upon seeing the marks of the Lord's
-lotus feet on the ground of Vrndavana, he fell down and began to groan. These marks are visible to devotees who
-receive the causeless mercy of the Supreme Personality of Godhead (tavanukampitam). The demigods were jubilant
-not only because the appearance of the Supreme Lord would do away with the burdensome demons, but also
-because they would be able to see upon the ground the transcendental marks from the soles of the Lord's lotus feet.
-The gopis always thought of the Lord's lotus feet when He was walking in the pasturing grounds, and, as described
-in the previous verse, simply by thinking of the Lord's lotus feet, the gopis were fully absorbed in transcendence
-(avista-ceta na bhavaya kalpate). Like the gopis, one who is always absorbed in thought of the Lord is beyond the
-material platform and will not remain in this material world. It is our duty, therefore, always to hear, chant and
-think about the Lord's lotus feet, as actually done by Vaisnavas who have decided to live in Vrndavana always and
-think of the Lord's lotus feet twenty-four hours a day.
+Vasudeva wanted to impress upon Kamsa that although Kamsa feared dying and therefore wanted to kill even a
+woman, he could not avoid death. Death is sure. Why then should Kamsa do something that would be detrimental
+to his reputation and that of his family? As confirmed in Bhagavad-gita (2.27):
+jatasya hi dhruvo mrtyur
+dhruvam janma mrtasya ca
+tasmad apariharye 'rthe
+na tvam socitum arhasi
+"For one who has taken his birth, death is certain; and for one who is dead, birth is certain. Therefore, in the
+unavoidable discharge of your duty, you should not lament." One should not fear death. Rather, one should
+prepare oneself for the next birth. One should utilize one's time in this human form to end the process of birth and
+death. It is not that to save oneself from death one should entangle oneself in sinful activities. This is not good.
 </p>
 
 </div>
@@ -90,7 +122,7 @@ think of the Lord's lotus feet twenty-four hours a day.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

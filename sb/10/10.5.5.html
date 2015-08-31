@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.5.html">10.5.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yadrcchaya ca devarsir
-bhagavams tatra kaurava
-apasyan narado devau
-ksibanau samabudhyata
-<p></p>
+saumangalya-giro viprah
+suta-magadha-vandinah
+gayakas ca jagur nedur
+bheryo dundubhayo muhuh
+<br>
 <h2>Synonyms</h2>
-yadrcchaya--by chance, while wandering all over the universe; ca--and; deva-rsih--the supreme saintly person
-among the demigods; bhagavan--the most powerful; tatra--there (where the two sons of Kuvera were enjoying life);
-kaurava--O Maharaja Pariksit; apasyat--when he saw; naradah--the great saint; devau--the two boys of the
-demigods; ksibanau--with eyes maddened by intoxication; samabudhyata--he could understand (their position).
-<p></p>
+saumangalya-girah--whose chanting of mantras and hymns purified the environment by their vibration; viprah--
+the brahmanas; suta--experts in reciting all the histories; magadha--experts in reciting the histories of special royal
+families; vandinah--general professional reciters; gayakah--singers; ca--as well as; jaguh--chanted; neduh--vibrated;
+bheryah--a kind of musical instrument; dundubhayah--a kind of musical instrument; muhuh--constantly.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, by some auspicious opportunity for the two boys, the great saint Devarsi Narada once
-appeared there by chance. Seeing them intoxicated, with rolling eyes, he could understand their situation.
-<p></p>
-<h2>Purport</h2>
-It is said:
-'sadhu-sanga,' 'sadhu-sanga'----sarva-sastre kaya
-lava-matra sadhu-sange sarva-siddhi haya
-(Cc. Madhya 22.54)
-Wherever Narada Muni goes, any moment at which he appears is understood to be extremely auspicious. It is
-also said:
-brahmanda bhramite kona bhagyavan jiva
-guru-krsna-prasade paya bhakti-lata-bija
-"According to their karma, all living entities are wandering throughout the entire universe. Some of them are
-being elevated to the upper planetary systems, and some are going down into the lower planetary systems. Out of
-many millions of wandering living entities, one who is very fortunate gets an opportunity to associate with a bona
-fide spiritual master by the grace of Krsna. By the mercy of both Krsna and the spiritual master, such a person
-receives the seed of the creeper of devotional service." (Cc. Madhya 19.151) Narada appeared in the garden to give
-the two sons of Kuvera the seed of devotional service, even though they were intoxicated. Saintly persons know
-how to bestow mercy upon the fallen souls.
+The brahmanas recited auspicious Vedic hymns, which purified the environment by their vibration. The experts
+in reciting old histories like the Puranas, the experts in reciting the histories of royal families, and general reciters
+all chanted, while singers sang and many kinds of musical instruments, like bheris and dundubhis, played in
+accompaniment.
 </p>
 
 </div>
@@ -87,7 +111,7 @@ how to bestow mercy upon the fallen souls.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

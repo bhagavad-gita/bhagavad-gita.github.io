@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.7.html">10.5.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tau drstva madira-mattau
-sri-madandhau suratmajau
-tayor anugraharthaya
-sapam dasyann idam jagau
-<p></p>
+gavo vrsa vatsatara
+haridra-taila-rusitah
+vicitra-dhatu-barhasragvastra-
+kancana-malinah
+<br>
 <h2>Synonyms</h2>
-tau--the two boys of the demigods; drstva--seeing; madira-mattau--very intoxicated because of drinking liquor;
-sri-mada-andhau--being blind with false prestige and opulence; sura-atmajau--the two sons of the demigods;
-tayoh--unto them; anugraha-arthaya--for the purpose of giving special mercy; sapam--a curse; dasyan--desiring to
-offer them; idam--this; jagau--uttered.
-<p></p>
+gavah--the cows; vrsah--the bulls; vatsatarah--the calves; haridra--with a mixture of turmeric; taila--and oil;
+rusitah--their entire bodies smeared; vicitra--decorated varieties of; dhatu--colored minerals; barha-srak--peacockfeather
+garlands; vastra--cloths; kancana--golden ornaments; malinah--being decorated with garlands.
+<br>
 <h2>Translation</h2>
-Seeing the two sons of the demigods naked and intoxicated by opulence and false prestige, Devarsi Narada, in
-order to show them special mercy, desired to give them a special curse. Thus he spoke as follows.
-<p></p>
+The cows, the bulls and the calves were thoroughly smeared with a mixture of turmeric and oil, mixed with
+varieties of minerals. Their heads were bedecked with peacock feathers, and they were garlanded and covered with
+cloth and golden ornaments.
+<br>
 <h2>Purport</h2>
-Although in the beginning Narada Muni appeared very angry and cursed them, at the end the two demigods
-Nalakuvara and Manigriva were able to see the Supreme Personality of Godhead, Krsna, face to face. Thus the curse
-was ultimately auspicious and brilliant. One has to judge what kind of curse Narada placed upon them. Srila
-Visvanatha Cakravarti Thakura gives herein a good example. When a father finds his child deeply asleep but the
-child has to take some medicine to cure some disease, the father pinches the child so that the child will get up and
-take the medicine. In a similar way, Narada Muni cursed Nalakuvara and Manigriva in order to cure their disease of
-material blindness.
+The Supreme Personality of Godhead has instructed in Bhagavad-gita (18.44), krsi-go-raksya-vanijyam vaisyakarma-
+svabhavajam: "Farming, cow protection and trade are the qualities of work for the vaisyas." Nanda Maharaja
+belonged to the vaisya community, the agriculturalist community. How to protect the cows and how rich this
+community was are explained in these verses. We can hardly imagine that cows, bulls and calves could be cared for
+so nicely and decorated so well with cloths and valuable golden ornaments. How happy they were. As described
+elsewhere in the Bhagavatam, during Maharaja Yudhisthira's time the cows were so happy that they used to muddy
+the pasturing ground with milk. This is Indian civilization. Yet in the same place, India, Bharata-varsa, how much
+people are suffering by giving up the Vedic way of life and not understanding the teachings of Bhagavad-gita.
 </p>
 
 </div>
@@ -79,7 +119,7 @@ material blindness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

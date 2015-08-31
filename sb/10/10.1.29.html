@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.29.html">10.1.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-janma te mayy asau papo
-ma vidyan madhusudana
-samudvije bhavad-dhetoh
-kamsad aham adhira-dhih
-<p></p>
+tasyam tu karhicic chaurir
+vasudevah krtodvahah
+devakya suryaya sardham
+prayane ratham aruhat
+<br>
 <h2>Synonyms</h2>
-janma--the birth; te--of Your Lordship; mayi--in my (womb); asau--that Kamsa; papah--extremely sinful; ma
-vidyat--may be unable to understand; madhusudana--O Madhusudana; samudvije--I am full of anxiety; bhavathetoh--
-because of Your appearance; kamsat--because of Kamsa, with whom I have had such bad experience; aham--
-I; adhira-dhih--have become more and more anxious.
-<p></p>
+tasyam--in that place known as Mathura; tu--indeed; karhicit--some time ago; saurih--the demigod, descendant of
+Sura; vasudevah--who appeared as Vasudeva; krta-udvahah--after being married; devakya--Devaki; suryaya--his
+newly married wife; sardham--along with; prayane--for returning home; ratham--the chariot; aruhat--mounted.
+<br>
 <h2>Translation</h2>
-O Madhusudana, because of Your appearance, I am becoming more and more anxious in fear of Kamsa.
-Therefore, please arrange for that sinful Kamsa to be unable to understand that You have taken birth from my
-womb.
-<p></p>
-<h2>Purport</h2>
-Devaki addressed the Supreme Personality of Godhead as Madhusudana. She was aware that the Lord had killed
-many demons like Madhu who were hundreds and thousands of times more powerful than Kamsa, yet because of
-affection for the transcendental child, she believed that Kamsa could kill Him. Instead of thinking of the unlimited
-power of the Lord, she thought of the Lord with affection, and therefore she requested the transcendental child to
-disappear.
+Some time ago, Vasudeva, who belonged to the demigod family [or to the Sura dynasty], married Devaki. After
+the marriage, he mounted his chariot to return home with his newly married wife.
 </p>
 
 </div>
@@ -78,7 +108,7 @@ disappear.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

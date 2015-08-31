@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.19.html">10.6.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pasya pasya vayasyams te
-matr-mrstan svalankrtan
-tvam ca snatah krtaharo
-viharasva svalankrtah
-<p></p>
+yasoda-rohinibhyam tah
+samam balasya sarvatah
+raksam vidadhire samyag
+go-puccha-bhramanadibhih
+<br>
 <h2>Synonyms</h2>
-pasya pasya--just see, just see; vayasyan--boys of Your age; te--Your; matr-mrstan--cleansed by their mothers; sualankrtan--
-decorated with nice ornaments; tvam ca--You also; snatah--after taking a bath; krta-aharah--and eating
-Your lunch; viharasva--enjoy with them; su-alankrtah--fully decorated like them.
-<p></p>
+yasoda-rohinibhyam--with mother Yasoda and mother Rohini, who principally took charge of the child; tah--the
+other gopis; samam--equally as important as Yasoda and Rohini; balasya--of the child; sarvatah--from all dangers;
+raksam--protection; vidadhire--executed; samyak--completely; go-puccha-bhramana-adibhih--by waving around
+the switch of a cow.
+<br>
 <h2>Translation</h2>
-Just see how all Your playmates of Your own age have been cleansed and decorated with beautiful ornaments by
-their mothers. You should come here, and after You have taken Your bath, eaten Your lunch and been decorated
-with ornaments, You may play with Your friends again.
-<p></p>
+Thereafter, mother Yasoda and Rohini, along with the other elderly gopis, waved about the switch of a cow to
+give full protection to the child Sri Krsna.
+<br>
 <h2>Purport</h2>
-Generally young boys are competitive. If one friend has done something, another friend also wants to do
-something. Therefore mother Yasoda pointed out how Krsna's playmates were decorated, so that Krsna might be
-induced to decorate Himself like them.
+When Krsna was saved from such a great danger, mother Yasoda and Rohini were principally concerned, and the
+other elderly gopis, who were almost equally concerned, followed the activities of mother Yasoda and Rohini. Here
+we find that in household affairs, ladies could take charge of protecting a child simply by taking help from the cow.
+As described here, they knew how to wave about the switch of a cow so as to protect the child from all types of
+danger. There are so many facilities afforded by cow protection, but people have forgotten these arts. The
+importance of protecting cows is therefore stressed by Krsna in Bhagavad-gita (krsi-go-raksya-vanijyam vaisyakarma
+svabhavajam). Even now in the Indian villages surrounding Vrndavana, the villagers live happily simply by
+giving protection to the cow. They keep cow dung very carefully and dry it to use as fuel. They keep a sufficient
+stock of grains, and because of giving protection to the cows, they have sufficient milk and milk products to solve
+all economic problems. Simply by giving protection to the cow, the villagers live so peacefully. Even the urine and
+stool of cows have medicinal value.
 </p>
 
 </div>
@@ -75,7 +122,7 @@ induced to decorate Himself like them.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

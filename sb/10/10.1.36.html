@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.36.html">10.1.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam vam tapyatos tivram
-tapah parama-duskaram
-divya-varsa-sahasrani
-dvadaseyur mad-atmanoh
-<p></p>
+tam jugupsita-karmanam
+nrsamsam nirapatrapam
+vasudevo maha-bhaga
+uvaca parisantvayan
+<br>
 <h2>Synonyms</h2>
-evam--in this way; vam--for both of you; tapyatoh--executing austerities; tivram--very severe; tapah--austerity;
-parama-duskaram--extremely difficult to execute; divya-varsa--celestial years, or years counted according to the
-higher planetary system; sahasrani--thousand; dvadasa--twelve; iyuh--passed; mat-atmanoh--simply engaged in
-consciousness of Me.
-<p></p>
+tam--unto him (Kamsa); jugupsita-karmanam--who was ready to commit such an offensive act; nrsamsam--very
+cruel; nirapatrapam--shameless; vasudevah--Vasudeva; maha-bhagah--the greatly fortunate father of Vasudeva;
+uvaca--said; parisantvayan--pacifying.
+<br>
 <h2>Translation</h2>
-Thus you spent twelve thousand celestial years performing difficult activities of tapasya in consciousness of Me
-[Krsna consciousness].
+Wanting to pacify Kamsa, who was so cruel and envious that he was shamelessly ready to kill his sister, the great
+soul Vasudeva, who was to be the father of Krsna, spoke to him in the following words.
+<br>
+<h2>Purport</h2>
+Vasudeva, who was to be the father of Krsna, is described here as maha-bhaga, a very upright and sober
+personality, because although Kamsa was ready to kill Vasudeva's wife, Vasudeva remained sober and unagitated.
+In a peaceful attitude, Vasudeva began to address Kamsa by putting forward reasonable arguments. Vasudeva was a
+great personality because he knew how to pacify a cruel person and how to forgive even the bitterest enemy. One
+who is fortunate is never caught, even by tigers or snakes.
 </p>
 
 </div>
@@ -70,7 +115,7 @@ Thus you spent twelve thousand celestial years performing difficult activities o
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

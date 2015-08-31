@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,57 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.42.html">10.4.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aham mamasau patir esa me suto
-vrajesvarasyakhila-vittapa sati
-gopyas ca gopah saha-godhanas ca me
-yan-mayayettham kumatih sa me gatih
-<p></p>
+sa hi sarva-suradhyakso
+hy asura-dvid guha-sayah
+tan-mula devatah sarvah
+sesvarah sa-catur-mukhah
+ayam vai tad-vadhopayo
+yad rsinam vihimsanam
+<br>
 <h2>Synonyms</h2>
-aham--my existence ("I am something"); mama--my; asau--Nanda Maharaja; patih--husband; esah--this (Krsna);
-me sutah--is my son; vraja-isvarasya--of my husband, Nanda Maharaja; akhila-vitta-pa--I am the possessor of
-unlimited opulence and wealth; sati--because I am his wife; gopyah ca--and all the damsels of the cowherd men;
-gopah--all the cowherd men (are my subordinates); saha-godhanah ca--with the cows and calves; me--my; yatmayaya--
-all such things addressed by me are, after all, given by the mercy of the Supreme; ittham--thus; kumatih--I
-am wrongly thinking they are my possessions; sah me gatih--He is therefore my only shelter (I am simply
-instrumental).
-<p></p>
+sah--He (Lord Visnu); hi--indeed; sarva-sura-adhyaksah--the leader of all the demigods; hi--indeed; asura-dvit--
+the enemy of the asuras; guha-sayah--He is the Supersoul within the core of everyone's heart; tat-mulah--taking
+shelter at His lotus feet; devatah--the demigods exist; sarvah--all of them; sa-isvarah--including Lord Siva; sa-catuhmukhah--
+as well as Lord Brahma, who has four faces; ayam--this is; vai--indeed; tat-vadha-upayah--the only means
+of killing Him (Visnu); yat--which; rsinam--of great sages, saintly persons, or Vaisnavas; vihimsanam--suppression
+with all kinds of persecution.
+<br>
 <h2>Translation</h2>
-It is by the influence of the Supreme Lord's maya that I am wrongly thinking that Nanda Maharaja is my
-husband, that Krsna is my son, and that because I am the queen of Nanda Maharaja, all the wealth of cows and
-calves are my possessions and all the cowherd men and their wives are my subjects. Actually, I also am eternally
-subordinate to the Supreme Lord. He is my ultimate shelter.
-<p></p>
+Lord Visnu, the Supersoul within the core of everyone's heart, is the ultimate enemy of the asuras and is therefore
+known as asura-dvit. He is the leader of all the demigods because all the demigods, including Lord Siva and Lord
+Brahma, exist under His protection. The great saintly persons, sages and Vaisnavas also depend upon Him. To
+persecute the Vaisnavas, therefore, is the only way to kill Visnu.
+<br>
 <h2>Purport</h2>
-Following in the footsteps of mother Yasoda, everyone should follow this mentality of renunciation. Whatever
-wealth, opulence or whatever else we may possess belongs not to us but to the Supreme Personality of Godhead,
-who is the ultimate shelter of everyone and the ultimate owner of everything. As stated by the Lord Himself in
-Bhagavad-gita (5.29):
-bhoktaram yajna-tapasam
-sarva-loka-mahesvaram
-suhrdam sarva-bhutanam
-jnatva mam santim rcchati
-"The sages, knowing Me as the ultimate purpose of all sacrifices and austerities, the Supreme Lord of all planets
-and demigods and the benefactor and well-wisher of all living entities, attain peace from the pangs of material
-miseries."
-We should not be proud of our possessions. As expressed by mother Yasoda herein, "I am not the owner of
-possessions, the opulent wife of Nanda Maharaja. The estate, the possessions, the cows and calves and the subjects
-like the gopis and cowherd men are all given to me." One should give up thinking of "my possessions, my son and
-my husband" (janasya moho'yam aham mameti). Nothing belongs to anyone but the Supreme Lord. Only because
-of illusion do we wrongly think, "I am existing" or "Everything belongs to me." Thus mother Yasoda completely
-surrendered unto the Supreme Lord. For the moment, she was rather disappointed, thinking, "My endeavors to
-protect my son by charity and other auspicious activities are useless. The Supreme Lord has given me many things,
-but unless He takes charge of everything, there is no assurance of protection. I must therefore ultimately seek
-shelter of the Supreme personality of Godhead." As stated by Prahlada Maharaja (Bhag. 7.9.19), balasya neha
-saranam pitarau nrsimha: a father and mother cannot ultimately take care of their children. Ato grha-ksetrasutapta-
-vittair janasya moho 'yam aham mameti (Bhag. 5.5.8). One's land, home, wealth and all of one's
-possessions belong to the Supreme Personality of Godhead, although we wrongly think, "I am this" and "These
-things are mine."
+The demigods and the Vaisnavas especially are part and parcel of the Supreme Lord, Visnu, because they are
+always obedient to His orders (om tad visnoh paramam padam sada pasyanti surayah). The demoniac followers of
+Kamsa thought that if the Vaisnavas, saintly persons and sages were persecuted, the original body of Visnu would
+naturally be destroyed. Thus they decided to suppress Vaisnavism. The asuras perpetually struggle to persecute the
+Vaisnavas because they do not want Vaisnavism to spread. Vaisnavas preach only devotional service, not
+encouraging karmis, jnanis and yogis, because if one must liberate oneself from material, conditional life, one must
+ultimately become a Vaisnava. Our Krsna consciousness movement is directed with this understanding, and
+therefore the asuras always try to suppress it.
 </p>
 
 </div>
@@ -101,7 +125,7 @@ things are mine."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

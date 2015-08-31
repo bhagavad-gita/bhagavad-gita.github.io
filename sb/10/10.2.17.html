@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.17.html">10.2.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-rohini ca maha-bhaga
-nanda-gopabhinandita
-vyacarad divya-vasa-srakkanthabharana-
-bhusita
-<p></p>
+sa bibhrat paurusam dhama
+bhrajamano yatha ravih
+durasado 'tidurdharso
+bhutanam sambabhuva ha
+<br>
 <h2>Synonyms</h2>
-rohini--Rohini, the mother of Baladeva; ca--also; maha-bhaga--the most fortunate mother of Baladeva (greatly
-fortunate because of having the opportunity to raise Krsna and Balarama together); nanda-gopa-abhinandita--being
-honored by Maharaja Nanda and mother Yasoda; vyacarat--was busy wandering here and there; divya--beautiful;
-vasa--with a dress; srak--with a garland; kantha-abharana--and with an ornament covering the neck; bhusita--
-decorated.
-<p></p>
+sah--he (Vasudeva); bibhrat--carried; paurusam--pertaining to the Supreme Person; dhama--the spiritual
+effulgence; bhrajamanah--illuminating; yatha--as; ravih--the sunshine; durasadah--very difficult even to look at,
+difficult to understand by sensory perception; ati-durdharsah--approachable with great difficulty; bhutanam--of all
+living entities; sambabhuva--so he became; ha--positively.
+<br>
 <h2>Translation</h2>
-The most fortunate Rohini, the mother of Baladeva, was honored by Nanda Maharaja and Yasoda, and thus she
-also dressed gorgeously and decorated herself with a necklace, a garland and other ornaments. She was busy
-wandering here and there to receive the women who were guests at the festival.
-<p></p>
+While carrying the form of the Supreme Personality of Godhead within the core of his heart, Vasudeva bore the
+Lord's transcendentally illuminating effulgence, and thus he became as bright as the sun. He was therefore very
+difficult to see or approach through sensory perception. Indeed, he was unapproachable and unperceivable even for
+such formidable men as Kamsa, and not only for Kamsa but for all living entities.
+<br>
 <h2>Purport</h2>
-Rohini, another wife of Vasudeva's, was also kept under the care of Nanda Maharaja with her son Baladeva.
-Because her husband was imprisoned by Kamsa, she was not very happy, but on the occasion of Krsna-janmastami,
-Nandotsava, when Nanda Maharaja gave dresses and ornaments to others, he also gave gorgeous garments and
-ornaments to Rohini so that she could take part in the festival. Thus she also was busy receiving the women who
-were guests. Because of her good fortune in being able to raise Krsna and Balarama together, she is described as
-maha-bhaga, greatly fortunate.
+The word dhama is significant. Dhama refers to the place where the Supreme Personality of Godhead resides. In
+the beginning of Srimad-Bhagavatam (1.1.1) it is said, dhamna svena sada nirasta-kuhakam satyam param dhimahi.
+In the abode of the Supreme Personality of Godhead, there is no influence of material energy (dhamna svena sada
+nirasta-kuhakam). Any place where the Supreme Personality of Godhead is present by His name, form, qualities or
+paraphernalia immediately becomes a dhama. For example, we speak of Vrndavana-dhama, Dvaraka-dhama and
+Mathura-dhama because in these places the name, fame, qualities and paraphernalia of the Supreme Godhead are
+always present. Similarly, if one is empowered by the Supreme Personality of Godhead to do something, the core of
+his heart becomes a dhama, and thus he becomes so extraordinarily powerful that not only his enemies but also
+people in general are astonished to observe his activities. Because he is unapproachable, his enemies are simply
+struck with wonder, as explained here by the words durasado 'tidurdharsah.
+The words paurusam dhama have been explained by various acaryas. Sri Viraraghava Acarya says that these
+words refer to the effulgence of the Supreme Personality of Godhead. Vijayadhvaja says that they signify visnutejas,
+and Sukadeva says bhagavat-svarupa. The Vaisnava-tosani says that these words indicate the influence of the
+Supreme Lord's effulgence, and Visvanatha Cakravarti Thakura says that they signify the appearance of the
+Supreme Personality of Godhead.
 </p>
 
 </div>
@@ -80,7 +128,7 @@ maha-bhaga, greatly fortunate.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

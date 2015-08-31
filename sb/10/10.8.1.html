@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.1.html">10.8.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-suka uvaca
-sadhu prstam maha-bhaga
-tvaya bhagavatottama
-yan nutanayasisasya
-srnvann api katham muhuh
-<p></p>
+gargah purohito rajan
+yadunam sumaha-tapah
+vrajam jagama nandasya
+vasudeva-pracoditah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sukadeva Gosvami said; sadhu prstam--I have been very much honored by your inquiry; mahabhaga--
-you are a greatly fortunate personality; tvaya--by you; bhagavata-uttama--O best of devotees; yat--because;
-nutanayasi--you are making newer and newer; isasya--of the Supreme Personality of Godhead; srnvan api--
-although you are continuously hearing; katham--the pastimes; muhuh--again and again.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; gargah--Gargamuni; purohitah--the priest; rajan--O King Pariksit;
+yadunam--of the Yadu dynasty; su-maha-tapah--highly elevated in austerity and penance; vrajam--to the village
+known as Vrajabhumi; jagama--went; nandasya--of Maharaja Nanda; vasudeva-pracoditah--being inspired by
+Vasudeva.
+<br>
 <h2>Translation</h2>
-Srila Sukadeva Gosvami said: O best of devotees, most fortunate Pariksit, you have inquired very nicely, for
-although constantly hearing the pastimes of the Lord, you are perceiving His activities to be newer and newer.
-<p></p>
-<h2>Purport</h2>
-Unless one is very advanced in Krsna consciousness, one cannot stick to hearing the pastimes of the Lord
-constantly. Nityam nava-navaya-manam: even though advanced devotees hear continually about the Lord for years,
-they still feel that these topics are coming to them as newer and fresher. Therefore such devotees cannot give up
-hearing of the pastimes of Lord Krsna. premanjana-cchurita-bhakti-vilocanena santah sadaiva hrdayesu vilokayanti.
-The word santah is used to refer to persons who have developed love for Krsna. Yam syamasundaram acintya-gunasvarupam
-govindam adi-purusam tam aham bhajami (Brahma-samhita 5.38). Pariksit Maharaja, therefore, is
-addressed as bhagavatottama, the best of devotees, because unless one is very much elevated in devotional service,
-one cannot feel ecstasy from hearing more and more and appreciate the topics as ever fresher and newer.
+Sukadeva Gosvami said: O Maharaja Pariksit, the priest of the Yadu dynasty, namely Gargamuni, who was highly
+elevated in austerity and penance, was then inspired by Vasudeva to go see Nanda Maharaja at his home.
 </p>
 
 </div>
@@ -81,7 +110,7 @@ one cannot feel ecstasy from hearing more and more and appreciate the topics as 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

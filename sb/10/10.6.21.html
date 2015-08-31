@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.21.html">10.6.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-gopa-vrddha mahotpatan
-anubhuya brhadvane
-nandadayah samagamya
-vraja-karyam amantrayan
-<p></p>
+gopyah samsprsta-salila
+angesu karayoh prthak
+nyasyatmany atha balasya
+bija-nyasam akurvata
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; gopa-vrddhah--the elderly persons among the cowherd men; mahautpatan--
-very great disturbances; anubhuya--after experiencing; brhadvane--in the place known as Brhadvana;
-nanda-adayah--the cowherd men, headed by Nanda Maharaja; samagamya--assembled, came together; vrajakaryam--
-the business of Vrajabhumi; amantrayan--deliberated on how to stop the continuous disturbances in
-Mahavana.
-<p></p>
+gopyah--the gopis; samsprsta-salilah--touching a cup of water and drinking; angesu--on their bodies; karayoh--on
+their two hands; prthak--separately; nyasya--after placing the letters of the mantra; atmani--on their own; atha--
+then; balasya--of the child; bija-nyasam--the process of mantra-nyasa; akurvata--executed.
+<br>
 <h2>Translation</h2>
-Sri Sukadeva Gosvami continued: Then one time, having seen the great disturbances in Brhadvana, all the elderly
-persons among the cowherd men, headed by Nanda Maharaja, assembled and began to consider what to do to stop
-the continuous disturbing situations in Vraja.
+The gopis first executed the process of acamana, drinking a sip of water from the right hand. They purified their
+bodies and hands with the nyasa-mantra and then applied the same mantra upon the body of the child.
+<br>
+<h2>Purport</h2>
+Nyasa-mantra includes acamana, or first drinking a sip of water kept in the right hand. There are different visnumantras
+to purify the body. The gopis, and in fact any householders, knew the process for being purified by
+chanting Vedic hymns. The gopis executed this process first to purify themselves and then to purify the child
+Krsna. One executes the process of anga-nyasa and kara-nyasa simply by drinking a little sip of water and chanting
+the mantra. The mantra is preceded with the first letter of the name, followed by anusvara and the word namah:
+om namo 'jas tavanghri avyat, mam mano manimams tava januni avyat, and so on. By losing Indian culture, Indian
+householders have forgotten how to execute the anga-nyasa and are simply busy in sense gratification, without any
+advanced knowledge of human civilization.
 </p>
 
 </div>
@@ -73,7 +118,7 @@ the continuous disturbing situations in Vraja.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.44.html">10.4.44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/44"><b>44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sadyo nasta-smrtir gopi
-saropyaroham atmajam
-pravrddha-sneha-kalilahrdayasid
-yatha pura
-<p></p>
+sandisya sadhu-lokasya
+kadane kadana-priyan
+kama-rupa-dharan diksu
+danavan grham avisat
+<br>
 <h2>Synonyms</h2>
-sadyah--after all these philosophical speculations, mother Yasoda fully surrendered to the Supreme personality of
-Godhead; nasta-smrtih--having gotten rid of the memory of seeing the universal form within Krsna's mouth; gopi--
-mother Yasoda; sa--she; aropya--seating; aroham--on the lap; atmajam--her son; pravrddha--increased; sneha--by
-affection; kalila--affected; hrdaya--the core of her heart; asit--became situated; yatha pura--as she was formerly.
-<p></p>
+sandisya--after giving permission; sadhu-lokasya--of the saintly persons; kadane--in persecution; kadana-priyan--
+to the demons, who were very expert at persecuting others; kama-rupa-dharan--who could assume any form,
+according to their own desire; diksu--in all directions; danavan--to the demons; grham avisat--Kamsa entered his
+own palace.
+<br>
 <h2>Translation</h2>
-Immediately forgetting yogamaya's illusion that Krsna had shown the universal form within His mouth, mother
-Yasoda took her son on her lap as before, feeling increased affection in her heart for her transcendental child.
-<p></p>
-<h2>Purport</h2>
-Mother Yasoda regarded the vision of the universal form within Krsna's mouth as an arrangement of yogamaya,
-like a dream. As one forgets everything after a dream, mother Yasoda immediately forgot the entire incident. As her
-natural feeling of affection increased, she decided to herself, "Now let this incident be forgotten. I do not mind.
-Here is my son. Let me kiss Him."
+These demons, the followers of Kamsa, were expert at persecuting others, especially the Vaisnavas, and could
+assume any form they desired. After giving these demons permission to go everywhere and persecute the saintly
+persons, Kamsa entered his palace.
 </p>
 
 </div>
@@ -76,7 +110,7 @@ Here is my son. Let me kiss Him."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

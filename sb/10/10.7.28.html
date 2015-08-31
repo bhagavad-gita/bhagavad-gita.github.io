@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.28.html">10.7.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-krtyam kim atrasya khalasya jivanam
-na va amisam ca satam vihimsanam
-dvayam katham syad iti samvicintya
-jnatvavisat tundam asesa-drg gharih
-<p></p>
+gala-grahana-niscesto
+daityo nirgata-locanah
+avyakta-ravo nyapatat
+saha-balo vyasur vraje
+<br>
 <h2>Synonyms</h2>
-krtyam kim--what to do; atra--in this situation; asya khalasya--of this envious demon; jivanam--the existence of
-life; na--there should not be; va--either; amisam ca--and of those who are innocent; satam--of the devotees;
-vihimsanam--the death; dvayam--both actions (killing the demon and saving the boys); katham--how; syat--can be
-possible; iti samvicintya--very perfectly thinking about the subject matter; jnatva--and deciding what to do; avisat--
-entered; tundam--within the mouth of the demon; asesa-drk harih--Krsna, who has unlimited potency, could
-understand past, future and present.
-<p></p>
+gala-grahana-niscestah--because of Krsna's grasping the neck of the demon Trnavarta, the demon choked and
+could not do anything; daityah--the demon; nirgata-locanah--his eyes popped out because of pressure; avyaktaravah--
+because of choking, he could not even make a sound; nyapatat--fell down; saha-balah--with the child;
+vyasuh vraje--lifeless on the ground of Vraja.
+<br>
 <h2>Translation</h2>
-Now, what was to be done? How could both the killing of this demon and the saving of the devotees be
-performed simultaneously? Krsna, being unlimitedly potent, decided to wait for an intelligent means by which He
-could simultaneously save the boys and kill the demon. Then He entered the mouth of Aghasura.
-<p></p>
-<h2>Purport</h2>
-Krsna is known as ananta-virya-sarvajna because everything is known to Him. Because He knows everything
-perfectly well, it was not difficult for Him to find a means by which He could save the boys and at the same time
-kill the demon. Thus He also decided to enter the demon's mouth.
+With Krsna grasping him by the throat, Trnavarta choked, unable to make even a sound or even to move his
+hands and legs. His eyes popping out, the demon lost his life and fell, along with the little boy, down to the ground
+of Vraja.
 </p>
 
 </div>
@@ -78,7 +110,7 @@ kill the demon. Thus He also decided to enter the demon's mouth.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

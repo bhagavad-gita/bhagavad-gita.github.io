@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.12.html">10.6.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sarit-tira-gatam krsnam
-bhagnarjunam athahvayat
-ramam ca rohini devi
-kridantam balakair bhrsam
-<p></p>
+tasyah svanenatigabhira-ramhasa
+sadrir mahi dyaus ca cacala sa-graha
+rasa disas ca pratinedire janah
+petuh ksitau vajra-nipata-sankaya
+<br>
 <h2>Synonyms</h2>
-sarit-tira--to the riverside; gatam--who had gone; krsnam--unto Krsna; bhagna-arjunam--after the pastime of
-breaking the yamala-arjuna trees; atha--then; ahvayat--called; ramam ca--as well as Balarama; rohini--the mother of
-Balarama; devi--the goddess of fortune; kridantam--who were engaged in playing; balakaih--with many other boys;
-bhrsam--with deep attention.
-<p></p>
+tasyah--of the great Raksasi Putana; svanena--by the vibration of the sound; ati--very; gabhira--deep; ramhasa--
+forceful; sa-adrih--with the mountains; mahi--the surface of the world; dyauh ca--and outer space; cacala--
+trembled; sa-graha--with the stars; rasa--below the planet earth; disah ca--and all directions; pratinedire--vibrated;
+janah--people in general; petuh--fell down; ksitau--on the surface of the world; vajra-nipata-sankaya--by suspecting
+that thunderbolts were falling.
+<br>
 <h2>Translation</h2>
-Once, after the uprooting of the yamala-arjuna trees, Rohinidevi went to call Rama and Krsna, who had both
-gone to the riverside and were playing with the other boys with deep attention.
-<p></p>
+As Putana screamed loudly and forcefully, the earth with its mountains, and outer space with its planets,
+trembled. The lower planets and all directions vibrated, and people fell down, fearing that thunderbolts were falling
+upon them.
+<br>
 <h2>Purport</h2>
-Mother Yasoda was more attached to Krsna and Balarama than Rohinidevi was, although Rohinidevi was the
-mother of Balarama. Mother Yasoda sent Rohinidevi to call Rama and Krsna from Their play, since it was the right
-time for lunch. Therefore Rohinidevi went to call Them, breaking Their engagement in play.
+Srila Visvanatha Cakravarti Thakura remarks that in this verse the word rasa refers to the planetary systems
+below the earth, such as Rasatala, Atala, Vitala, Sutala and Talatala.
 </p>
 
 </div>
@@ -75,7 +115,7 @@ time for lunch. Therefore Rohinidevi went to call Them, breaking Their engagemen
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

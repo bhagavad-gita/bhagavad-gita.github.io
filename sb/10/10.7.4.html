@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,50 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.4.html">10.7.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-phala-prabala-stavakasumanah-
-piccha-dhatubhih
-kaca-gunja-mani-svarnabhusita
-apy abhusayan
-<p></p>
+sri-suka uvaca
+kadacid autthanika-kautukaplave
+janmarksa-yoge samaveta-yositam
+vaditra-gita-dvija-mantra-vacakais
+cakara sunor abhisecanam sati
+<br>
 <h2>Synonyms</h2>
-phala--fruits from the forest; prabala--green leaves; stavaka--bunches; sumanah--beautiful flowers; piccha--
-peacock feathers; dhatubhih--very soft and colorful minerals; kaca--a kind of gem; gunja--small conchshells; mani--
-pearls; svarna--gold; bhusitah--although decorated; api abhusayan--in spite of being decorated by their mothers,
-the boys decorated themselves still more with the above-mentioned articles.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami continued to speak (at the request of Maharaja Pariksit); kadacit--at that
+time (when Krsna was three months old); autthanika-kautuka-aplave--when Krsna was three or four months old
+and His body was developing, He attempted to turn around, and this pleasing occasion was observed with a festival
+and bathing ceremony; janma-rksa-yoge--at that time, there was also a conjunction of the moon with the
+auspicious constellation Rohini; samaveta-yositam--(the ceremony was observed) among the assembled women, a
+ceremony of mothers; vaditra-gita--different varieties of music and singing; dvija-mantra-vacakaih--with chanting
+of Vedic hymns by qualified brahmanas; cakara--executed; sunoh--of her son; abhisecanam--the bathing ceremony;
+sati--mother Yasoda.
+<br>
 <h2>Translation</h2>
-Although all these boys were already decorated by their mothers with ornaments of kaca, gunja, pearls and gold,
-when they went into the forest they further decorated themselves with fruits, green leaves, bunches of flowers,
-peacock feathers and soft minerals.
+Sukadeva Gosvami said: When mother Yasoda's baby was slanting His body to attempt to rise and turn around,
+this attempt was observed by a Vedic ceremony. In such a ceremony, called utthana, which is performed when a
+child is due to leave the house for the first time, the child is properly bathed. Just after Krsna turned three months
+old, mother Yasoda celebrated this ceremony with other women of the neighborhood. On that day, there was a
+conjunction of the moon with the constellation Rohini. As the brahmanas joined by chanting Vedic hymns and
+professional musicians also took part, this great ceremony was observed by mother Yasoda
+<br>
+<h2>Purport</h2>
+There is no question of overpopulation or of children's being a burden for their parents in a Vedic society. Such a
+society is so well organized and people are so advanced in spiritual consciousness that childbirth is never regarded
+as a burden or a botheration. The more a child grows, the more his parents become jubilant, and the child's
+attempts to turn over are also a source of jubilation. Even before the child is born, when the mother is pregnant,
+many recommended ritualistic ceremonies are performed. For example, when the child has been within the womb
+for three months and for seven months, there is a ceremony the mother observes by eating with neighboring
+children. This ceremony is called svada-bhaksana. Similarly, before the birth of the child there is the garbhadhana
+ceremony. In Vedic civilization, childbirth or pregnancy is never regarded as a burden; rather, it is a cause for
+jubilation. In contrast, people in modern civilization do not like pregnancy or childbirth, and when there is a child,
+they sometimes kill it. We can just consider how human society has fallen since the inauguration of Kali-yuga.
+Although people still claim to be civilized, at the present moment there is actually no human civilization, but only
+an assembly of two-legged animals.
 </p>
 
 </div>
@@ -71,7 +132,7 @@ peacock feathers and soft minerals.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.24.html">10.6.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-muktah kathancid raksasya
-bala-ghnya balako hy asau
-harer anugrahan nunam
-anas copari napatat
-<p></p>
+indriyani hrsikesah
+pranan narayano 'vatu
+svetadvipa-patis cittam
+mano yogesvaro 'vatu
+<br>
 <h2>Synonyms</h2>
-muktah--was delivered; kathancit--somehow or other; raksasyah--from the hands of the Raksasi Putana; balaghnyah--
-who was determined to kill small children; balakah--especially the child Krsna; hi--because; asau--He;
-hareh anugrahat--by the mercy of the Supreme Personality of Godhead; nunam--indeed; anah ca--and the handcart;
-upari--on top of the child; na--not; apatat--did fall down.
-<p></p>
+indriyani--all the senses; hrsikesah--Lord Hrsikesa, the proprietor of all the senses; pranan--all kinds of life air;
+narayanah--Lord Narayana; avatu--may He give protection; svetadvipa-patih--the master of Svetadvipa, Visnu;
+cittam--the core of the heart; manah--the mind; yogesvarah--Lord Yogesvara; avatu--may He give protection.
+<br>
 <h2>Translation</h2>
-The child Krsna, simply by the mercy of the Supreme Personality of Godhead, was somehow or other rescued
-from the hands of the Raksasi Putana, who was determined to kill Him. Then, again by the mercy of the Supreme
-Godhead, the handcart missed falling upon the child.
+May Hrsikesa protect Your senses, and Narayana Your life air. May the master of Svetadvipa protect the core of
+Your heart, and may Lord Yogesvara protect Your mind.
 </p>
 
 </div>
@@ -71,7 +108,7 @@ Godhead, the handcart missed falling upon the child.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

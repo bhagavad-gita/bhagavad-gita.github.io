@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.32.html">10.4.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ekada kridamanas te
-ramadya gopa-darakah
-krsno mrdam bhaksitavan
-iti matre nyavedayan
-<p></p>
+kim udyamaih karisyanti
+devah samara-bhiravah
+nityam udvigna-manaso
+jya-ghosair dhanusas tava
+<br>
 <h2>Synonyms</h2>
-ekada--once upon a time; kridamanah--now Krsna, being still more grown up, was playing with other children of
-the same age; te--they; rama-adyah--Balarama and others; gopa-darakah--other boys born in the same
-neighborhood of the cowherd men; krsnah mrdam bhaksitavan--O Mother, Krsna has eaten earth (a complaint was
-lodged); iti--thus; matre--unto mother Yasoda; nyavedayan--they submitted.
-<p></p>
+kim--what; udyamaih--by their endeavors; karisyanti--will do; devah--all the demigods; samara-bhiravah--who
+are afraid of fighting; nityam--always; udvigna-manasah--with agitated minds; jya-ghosaih--by the sound of the
+string; dhanusah--of the bow; tava--your.
+<br>
 <h2>Translation</h2>
-One day while Krsna was playing with His small playmates, including Balarama and other sons of the gopas, all
-His friends came together and lodged a complaint to mother Yasoda. "Mother," they submitted, "Krsna has eaten
-earth."
-<p></p>
-<h2>Purport</h2>
-Here is another of Krsna's transcendental activities invented to please the gopis. First a complaint was lodged
-with mother Yasoda about Krsna's stealing, but mother Yasoda did not chastise Him. Now, in an attempt to awaken
-mother Yasoda's anger so that she would chastise Krsna, another complaint was invented--that Krsna had eaten
-earth.
+The demigods always fear the sound of your bowstring. They are constantly in anxiety, afraid of fighting.
+Therefore, what can they do by their endeavors to harm you?
 </p>
 
 </div>
@@ -77,7 +108,7 @@ earth.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

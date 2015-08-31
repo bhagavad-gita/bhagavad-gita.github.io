@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.7.html">10.4.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-uttarya gopi susrtam payah punah
-pravisya samdrsya ca dadhy-amatrakam
-bhagnam vilokya sva-sutasya karma taj
-jahasa tam capi na tatra pasyati
-<p></p>
+sri-suka uvaca
+upaguhyatmajam evam
+rudatya dina-dinavat
+yacitas tam vinirbhartsya
+hastad acicchide khalah
+<br>
 <h2>Synonyms</h2>
-uttarya--putting down from the oven; gopi--mother Yasoda; su-srtam--very hot; payah--the milk; punah--again;
-pravisya--entered the churning spot; samdrsya--by observing; ca--also; dadhi-amatrakam--the container of yogurt;
-bhagnam--broken; vilokya--seeing this; sva-sutasya--of her own child; karma--work; tat--that; jahasa--smiled; tam
-ca--Krsna also; api--at the same time; na--not; tatra--there; pasyati--finding.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; upaguhya--embracing; atmajam--her daughter; evam--in this way;
+rudatya--by Devaki, who was crying; dina-dina-vat--very piteously, like a poor woman; yacitah--being begged;
+tam--her (Devaki); vinirbhartsya--chastising; hastat--from her hands; acicchide--separated the child by force;
+khalah--Kamsa, the most cruel.
+<br>
 <h2>Translation</h2>
-Mother Yasoda, after taking down the hot milk from the oven, returned to the churning spot, and when she saw
-that the container of yogurt was broken and that Krsna was not present, she concluded that the breaking of the pot
-was the work of Krsna.
-<p></p>
+Sukadeva Gosvami continued: piteously embracing her daughter and crying, Devaki begged Kamsa for the child,
+but he was so cruel that he chastised her and forcibly snatched the child from her hands.
+<br>
 <h2>Purport</h2>
-Seeing the pot broken and Krsna not present, Yasoda definitely concluded that the breaking of the pot was the
-work of Krsna. There was no doubt about it.
+Although Devaki was crying like a very poor woman, actually she was not poor, and therefore the word used here
+is dinavat. She had already given birth to Krsna. Therefore, who could have been richer than she? Even the
+demigods had come to offer prayers to Devaki, but she played the part of a poor, piteously afflicted woman because
+she wanted to save the daughter of Yasoda.
 </p>
 
 </div>
@@ -75,7 +116,7 @@ work of Krsna. There was no doubt about it.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

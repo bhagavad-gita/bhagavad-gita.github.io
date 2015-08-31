@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.8.html">10.6.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bibharti kvacid ajnaptah
-pithakonmana-padukam
-bahu-ksepam ca kurute
-svanam ca pritim avahan
-<p></p>
+vibudhya tam balaka-marika-graham
+caracaratma sa nimiliteksanah
+anantam aropayad ankam antakam
+yathoragam suptam abuddhi-rajju-dhih
+<br>
 <h2>Synonyms</h2>
-bibharti--Krsna would simply stand and touch articles as if unable to raise them; kvacit--sometimes; ajnaptah--
-being ordered; pithaka-unmana--the wooden seat and wooden measuring pot; padukam--bringing the wooden
-shoes; bahu-ksepam ca--striking the arms on the body; kurute--does; svanam ca--of His own relatives, the gopis
-and other intimate friends; pritim--the pleasure; avahan--inviting.
-<p></p>
+vibudhya--understanding; tam--her (Putana); balaka-marika-graham--a witch very expert in killing small babies;
+cara-acara-atma--Krsna, the all-pervading Supersoul; sah--He; nimilita-iksanah--closed His eyes; anantam--the
+Unlimited; aropayat--she placed; ankam--on her lap; antakam--for her own annihilation; yatha--as; uragam--a
+snake; suptam--while sleeping; abuddhi--a person who has no intelligence; rajju-dhih--one who thinks a snake to
+be a rope.
+<br>
 <h2>Translation</h2>
-Sometimes mother Yasoda and her gopi friends would tell Krsna, "Bring this article" or "Bring that article."
-Sometimes they would order Him to bring a wooden plank, wooden shoes or a wooden measuring pot, and Krsna,
-when thus ordered by the mothers, would try to bring them. Sometimes, however, as if unable to raise these things,
-He would touch them and stand there. Just to invite the pleasure of His relatives, He would strike His body with
-His arms to show that He had sufficient strength.
+Lord Sri Krsna, the all-pervading Supersoul, lying on the bed, understood that Putana, a witch who was expert in
+killing small children, had come to kill Him. Therefore, as if afraid of her, Krsna closed His eyes. Thus Putana took
+upon her lap Him who was to be her own annihilation, just as an unintelligent person places a sleeping snake on
+his lap, thinking the snake to be a rope.
+<br>
+<h2>Purport</h2>
+In this verse there are two perplexities. When Krsna saw that Putana had come to kill Him, He thought that since
+this woman was present with motherly affection, although artificial, He had to offer her a benediction. Therefore
+He looked at her with a little perplexity and then closed His eyes again. Putana Raksasi also was perplexed. She was
+not intelligent enough to understand that she was taking a sleeping snake on her lap; she thought the snake to be
+an ordinary rope. The two words antakam and anantam are contradictory. Because of not being intelligent, Putana
+thought that she could kill her antakam, the source of her annihilation; but because He is ananta, unlimited, no
+one can kill Him.
 </p>
 
 </div>
@@ -73,7 +121,7 @@ His arms to show that He had sufficient strength.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

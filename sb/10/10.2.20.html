@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.20.html">10.2.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vasudeva upasrutya
-bhrataram nandam agatam
-jnatva datta-karam rajne
-yayau tad-avamocanam
-<p></p>
+tam viksya kamsah prabhayajitantaram
+virocayantim bhavanam suci-smitam
+ahaisa me prana-haro harir guham
+dhruvam srito yan na pureyam idrsi
+<br>
 <h2>Synonyms</h2>
-vasudevah--Vasudeva; upasrutya--when he heard; bhrataram--that his dear friend and brother; nandam--Nanda
-Maharaja; agatam--had come to Mathura; jnatva--when he learned; datta-karam--and had already paid the taxes;
-rajne--unto the King; yayau--he went; tat-avamocanam--to the residential quarters of Nanda Maharaja.
-<p></p>
+tam--her (Devaki); viksya--after seeing; kamsah--her brother Kamsa; prabhaya--with the enhancement of her
+beauty and influence; ajita-antaram--because of keeping Ajita, the Supreme Personality of Godhead, Visnu, within
+herself; virocayantim--illuminating; bhavanam--the whole atmosphere of the house; suci-smitam--smiling and
+brilliant; aha--said to himself; esah--this (Supreme Person); me--my; prana-harah--who will kill me; harih--Lord
+Visnu; guham--within the womb of Devaki; dhruvam--certainly; sritah--has taken shelter; yat--because; na--was
+not; pura--formerly; iyam--Devaki; idrsi--like this.
+<br>
 <h2>Translation</h2>
-When Vasudeva heard that Nanda Maharaja, his very dear friend and brother, had come to Mathura and already
-paid the taxes to Kamsa, he went to Nanda Maharaja's residence.
-<p></p>
+Because the Supreme Personality of Godhead was within her womb, Devaki illuminated the entire atmosphere in
+the place where she was confined. Seeing her jubilant, pure and smiling, Kamsa thought, "The Supreme Personality
+of Godhead, Visnu, who is now within her, will kill me. Devaki has never before looked so brilliant and jubilant."
+<br>
 <h2>Purport</h2>
-Vasudeva and Nanda Maharaja were so intimately connected that they lived like brothers. Furthermore, it is
-learned from the notes of Sripada Madhvacarya that Vasudeva and Nanda Maharaja were stepbrothers. Vasudeva's
-father, Surasena, married a vaisya girl, and from her Nanda Maharaja was born. Later, Nanda Maharaja himself
-married a vaisya girl, Yasoda. Therefore his family is celebrated as a vaisya family, and Krsna, identifying Himself as
-their son, took charge of vaisya activities (krsi-go-raksya-vanijyam). Balarama represents plowing the land for
-agriculture and therefore always carries in His hand a plow, whereas Krsna tends cows and therefore carries a flute
-in His hand. Thus the two brothers represent krsi-raksya and go-raksya.
+The Lord says in Bhagavad-gita (4.7):
+yada yada hi dharmasya
+glanir bhavati bharata
+abhyutthanam adharmasya
+tadatmanam srjamy aham
+"Whenever and wherever there is a decline in religious practice, O descendant of Bharata, and a predominant rise
+of irreligion--at that time I descend Myself." In this age, at the present moment, there are inordinate discrepancies
+in the discharge of human duties. Human life is meant for God realization, but unfortunately the materialistic
+civilization is stressing only the senses of the body, not understanding the living force within the body. As clearly
+stated in Bhagavad-gita (dehino 'smin yatha dehe), within the body is the body's proprietor, the living force, which
+is more important. But human society has become so fallen that instead of understanding the living force within
+the body, people have become busy with external things. This is a discrepancy in human duties. Therefore Krsna
+has taken birth or taken shelter within the womb of the Krsna consciousness movement. Men of Kamsa's class,
+therefore, are very much afraid and are busy trying to stop this movement, especially in the Western countries. One
+politician has remarked that the Krsna consciousness movement is spreading like an epidemic and that if not
+checked immediately, within ten years it may capture governmental power. There is, of course, such potency in the
+Krsna consciousness movement. As stated by authorities (Cc. Adi 17.22), kali-kale nama-rupe krsna-avatara: in
+this age, Krsna has appeared in the Hare Krsna maha-mantra. The Krsna consciousness movement is spreading like
+wildfire all over the world, and it will go on doing so. Men who are like Kamsa are very much afraid of the
+movement's progress and acceptance by the younger generation, but as Krsna could not be killed by Kamsa, this
+movement cannot be checked by men of Kamsa's class. The movement will go on increasing more and more,
+provided the leaders of the movement remain firmly Krsna conscious by following the regulative principles and the
+primary activities of chanting the Hare Krsna mantra regularly.
 </p>
 
 </div>
@@ -78,7 +137,7 @@ in His hand. Thus the two brothers represent krsi-raksya and go-raksya.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

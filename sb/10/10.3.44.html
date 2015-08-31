@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,68 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.44.html">10.3.44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/44"><b>44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ya etat putana-moksam
-krsnasyarbhakam adbhutam
-srnuyac chraddhaya martyo
-govinde labhate ratim
-<p></p>
+etad vam darsitam rupam
+prag-janma-smaranaya me
+nanyatha mad-bhavam jnanam
+martya-lingena jayate
+<br>
 <h2>Synonyms</h2>
-yah--anyone who; etat--this; putana-moksam--salvation of Putana; krsnasya--of Krsna; arbhakam--the childhood
-pastimes; adbhutam--wonderful; srnuyat--should hear; sraddhaya--with faith and devotion; martyah--any person
-within this material world; govinde--for the Supreme Person, Govinda, Adi-purusa; labhate--gains; ratim--
-attachment.
-<p></p>
+etat--this form of Visnu; vam--unto both of you; darsitam--has been shown; rupam--My form as the Supreme
+Personality of Godhead with four hands; prak-janma--of My previous appearances; smaranaya--just to remind you;
+me--My; na--not; anyatha--otherwise; mat-bhavam--Visnu's appearance; jnanam--this transcendental knowledge;
+martya-lingena--by taking birth like a human child; jayate--does arise.
+<br>
 <h2>Translation</h2>
-Any person who hears with faith and devotion about how Krsna, the Supreme Personality of Godhead, killed
-Putana, and who thus invests his hearing in such childhood pastimes of Krsna, certainly attains attachment for
-Govinda, the supreme, original person.
-<p></p>
+I have shown you this form of Visnu just to remind you of My previous births. Otherwise, if I appeared like an
+ordinary human child, you would not believe that the Supreme Personality of Godhead, Visnu, has indeed
+appeared.
+<br>
 <h2>Purport</h2>
-The incident in which the great witch attempted to kill the child but was killed herself is certainly wonderful.
-Therefore this verse uses the word adbhutam, meaning "specifically wonderful." Krsna has left us many wonderful
-narrations about Him. Simply by reading these narrations, as they are described in Krsna, the Supreme personality
-of Godhead, one gains salvation from this material world and gradually develops attachment to and devotion for
-Govinda, Adi-purusa.
-Thus end the Bhaktivedanta purports of the Tenth Canto, Sixth Chapter, of the Srimad-Bhagavatam, entitled "The
-Killing of the Demon Putana."
-Chapter Seven
-The Killing of the Demon Trnavarta
-In this chapter, Sri Krsna's pastimes of breaking the cart (sakata-bhanjana), killing the asura known as Trnavarta,
-and demonstrating the entire universe within His mouth are especially described.
-When Sukadeva Gosvami saw that Maharaja Pariksit was eagerly waiting to hear about Lord Krsna's pastimes as a
-child, he was very much pleased, and he continued to speak. When Sri Krsna was only three months old and was
-just trying to turn backside up, before He even attempted to crawl, mother Yasoda wanted to observe a ritualistic
-ceremony with her friends for the good fortune of the child. Such a ritualistic ceremony is generally performed
-with ladies who also have small children. When mother Yasoda saw that Krsna was falling asleep, because of other
-engagements she put the child underneath a household cart, called sakata, and while the child was sleeping, she
-engaged herself in other business pertaining to the auspicious ritualistic ceremony. Underneath the cart was a
-cradle, and mother Yasoda placed the child in that cradle. The child was sleeping, but suddenly He awakened and,
-as usual for a child, began to kick His small legs. This kicking shook the cart, which collapsed with a great sound,
-breaking completely and spilling all its contents. Children who were playing nearby immediately informed mother
-Yasoda that the cart had broken, and therefore she hastily arrived there in great anxiety with the other gopis.
-Mother Yasoda immediately took the child on her lap and allowed Him to suck her breast. Then various types of
-Vedic ritualistic ceremonies were performed with the help of the brahmanas. Not knowing the real identity of the
-child, the brahmanas showered the child with blessings.
-Another day, when mother Yasoda was sitting with her child on her lap, she suddenly observed that he had
-assumed the weight of the entire universe. She was so astonished that she had to put the child down, and in the
-meantime Trnavarta, one of the servants of Kamsa, appeared there as a whirlwind and took the child away. The
-whole tract of land known as Gokula became surcharged with dust, no one could see where the child had been
-taken, and all the gopis were overwhelmed because He had been taken away in the dust storm. But up in the sky,
-the asura, being overburdened by the child, could not carry the child far away, although he also could not drop the
-child because the child had caught him so tightly that it was difficult for him to separate the child from his body.
-Thus Trnavarta himself fell down from a very great height, the child grasping him tightly by the shoulder, and
-immediately died. The demon having fallen, the gopis picked the child up and delivered Him to the lap of mother
-Yasoda. Thus mother Yasoda was struck with wonder, but because of yogamaya's influence, no one could
-understand who Krsna was and what had actually happened. Rather, everyone began to praise fortune for the
-child's having been saved from such a calamity. Nanda Maharaja, of course, was thinking of the wonderful
-foretelling of Vasudeva and began to praise him as a great yogi. Later, when the child was on the lap of mother
-Yasoda, the child yawned, and mother Yasoda could see within His mouth the entire universal manifestation.
+Devaki did not need to be reminded that the Supreme personality of Godhead, Lord Visnu, had appeared as her
+son; she already accepted this. Nonetheless, she was anxious, thinking that if her neighbors heard that Visnu had
+appeared as her son, none of them would believe it. Therefore she wanted Lord Visnu to transform Himself into a
+human child. On the other hand, the Supreme Lord was also anxious, thinking that if He appeared as an ordinary
+child, she would not believe that Lord Visnu had appeared. Such are the dealings between devotees and the Lord.
+The Lord deals with His devotees exactly like a human being, but this does not mean that the Lord is one of the
+human beings, for this is the conclusion of nondevotees (avajananti mam mudha manusim tanum asritam).
+Devotees know the Supreme Personality of Godhead under any circumstances. This is the difference between a
+devotee and a nondevotee. The Lord says, man-mana bhava mad-bhakto mad-yaji mam namaskuru: "Engage your
+mind always in thinking of Me, become My devotee, offer obeisances and worship Me." A nondevotee cannot
+believe that simply by thinking of one person, one can achieve liberation from this material world and go back
+home, back to Godhead. But this is a fact. The Lord comes as a human being, and if one becomes attached to the
+Lord on the platform of loving service, one's promotion to the transcendental world is assured.
 </p>
 
 </div>
@@ -112,7 +125,7 @@ Yasoda, the child yawned, and mother Yasoda could see within His mouth the entir
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

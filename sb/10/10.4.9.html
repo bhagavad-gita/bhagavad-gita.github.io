@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.9.html">10.4.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam atta-yastim prasamiksya satvaras
-tato 'varuhyapasasara bhitavat
-gopy anvadhavan na yam apa yoginam
-ksamam pravestum tapaseritam manah
-<p></p>
+sa tad-dhastat samutpatya
+sadyo devy ambaram gata
+adrsyatanuja visnoh
+sayudhasta-mahabhuja
+<br>
 <h2>Synonyms</h2>
-tam--unto mother Yasoda; atta-yastim--carrying in her hand a stick; prasamiksya--Krsna, seeing her in that
-attitude; satvarah--very quickly; tatah--from there; avaruhya--getting down; apasasara--began to flee; bhita-vat--as if
-very much afraid; gopi--mother Yasoda; anvadhavat--began to follow Him; na--not; yam--unto whom; apa--failed to
-reach; yoginam--of great yogis, mystics; ksamam--who could reach Him; pravestum--trying to enter into the
-Brahman effulgence or Paramatma; tapasa--with great austerities and penances; iritam--trying for that purpose;
-manah--by meditation.
-<p></p>
+sa--that female child; tat-hastat--from the hand of Kamsa; sam-utpatya--slipped upward; sadyah--immediately;
+devi--the form of a demigoddess; ambaram--into the sky; gata--went; adrsyata--was seen; anuja--the younger sister;
+visnoh--of the Supreme personality of Godhead; sa-ayudha--with weapons; asta--eight; maha-bhuja--with mighty
+arms.
+<br>
 <h2>Translation</h2>
-When Lord Sri Krsna saw His mother, stick in hand, He very quickly got down from the top of the mortar and
-began to flee as if very much afraid. Although yogis try to capture Him as Paramatma by meditation, desiring to
-enter into the effulgence of the Lord with great austerities and penances, they fail to reach Him. But mother Yasoda,
-thinking that same Personality of Godhead, Krsna, to be her son, began following Krsna to catch Him.
-<p></p>
+The child, Yogamaya-devi, the younger sister of Lord Visnu, slipped upward from Kamsa's hands and appeared in
+the sky as Devi, the goddess Durga, with eight arms, completely equipped with weapons.
+<br>
 <h2>Purport</h2>
-Yogis, mystics, want to catch Krsna as Paramatma, and with great austerities and penances they try to approach
-Him, yet they cannot. Here we see, however, that Krsna is going to be caught by Yasoda and is running away in
-fear. This illustrates the difference between the bhakta and the yogi. Yogis cannot reach Krsna, but for pure
-devotees like mother Yasoda, Krsna is already caught. Krsna was even afraid of mother Yasoda's stick. This was
-mentioned by Queen Kunti in her prayers: bhaya-bhavanaya sthitasya (Bhag. 1.8.31). Krsna is afraid of mother
-Yasoda, and yogis are afraid of Krsna. Yogis try to reach Krsna by jnana-yoga and other yogas, but fail. Yet although
-mother Yasoda was a woman, Krsna was afraid of her, as clearly described in this verse.
+Kamsa tried to dash the child downward against a piece of stone, but since she was Yogamaya, the younger sister
+of Lord Visnu, she slipped upward and assumed the form of the goddess Durga. The word anuja, meaning "the
+younger sister," is significant. When Visnu, or Krsna, took birth from Devaki, He must have simultaneously taken
+birth from Yasoda also. Otherwise how could Yogamaya have been anuja, the Lord's younger sister?
 </p>
 
 </div>
@@ -83,7 +115,7 @@ mother Yasoda was a woman, Krsna was afraid of her, as clearly described in this
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

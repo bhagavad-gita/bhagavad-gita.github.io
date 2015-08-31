@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.26.html">10.7.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tavat pravistas tv asurodarantaram
-param na girnah sisavah sa-vatsah
-pratiksamanena bakari-vesanam
-hata-sva-kanta-smaranena raksasa
-<p></p>
+trnavartah santa-rayo
+vatya-rupa-dharo haran
+krsnam nabho-gato gantum
+nasaknod bhuri-bhara-bhrt
+<br>
 <h2>Synonyms</h2>
-tavat--in the meantime; pravistah--all entered; tu--indeed; asura-udara-antaram--within the belly of the great
-demon; param--but; na girnah--they were not swallowed; sisavah--all the boys; sa-vatsah--along with their calves;
-pratiksamanena--who was just waiting for; baka-ari--of the enemy of Bakasura; vesanam--the entering; hata-svakanta-
-smaranena--the asura was thinking of his own dead relatives, who would not be satisfied unless Krsna were
-dead; raksasa--by the demon.
-<p></p>
+trnavartah--the demon Trnavarta; santa-rayah--the force of the blast reduced; vatya-rupa-dharah--who had
+assumed the form of a forceful whirlwind; haran--and had thus taken away; krsnam--Krsna, the Supreme
+Personality of Godhead; nabhah-gatah--went up to the top of the sky; gantum--to go further; na asaknot--was not
+able; bhuri-bhara-bhrt--because Krsna then became more powerful and heavy than the demon.
+<br>
 <h2>Translation</h2>
-In the meantime, while Krsna was considering how to stop them, all the cowherd boys entered the mouth of the
-demon. The demon, however, did not swallow them, for he was thinking of his own relatives who had been killed
-by Krsna and was just waiting for Krsna to enter his mouth.
+Having assumed the form of a forceful whirlwind, the demon Trnavarta took Krsna very high in the sky, but
+when Krsna became heavier than the demon, the demon had to stop his force and could go no further.
+<br>
+<h2>Purport</h2>
+Here is a competition in yogic power between Krsna and Trnavartasura. By practicing mystic yoga, asuras
+generally attain some perfection in the eight siddhis, or perfections, namely anima, laghima, mahima, prapti,
+prakamya, isitva, vasitva and kamavasayita. But although a demon may acquire such powers to a very limited
+extent, he cannot compete with the mystic power of Krsna, for Krsna is Yogesvara, the source of all mystic power
+(yatra yogesvaro harih). No one can compete with Krsna. Sometimes, of course, having acquired a fragmental
+portion of Krsna's mystic power, asuras demonstrate their power to the foolish public and assert themselves to be
+God, not knowing that God is the supreme Yogesvara. Here also we see that Trnavarta assumed the mahima-siddhi
+and took Krsna away as if Krsna were an ordinary child. But Krsna also became a mystic mahima-siddha. When
+mother Yasoda was carrying Him, He became so heavy that His mother, who was usually accustomed to carrying
+Him, could not bear Him and had to place Him down on the ground. Thus Trnavarta had been able to take Krsna
+away in the presence of mother Yasoda. But when Krsna, high in the sky, assumed the mahima-siddhi, the demon,
+unable to go further, was obliged to stop his force and come down according to Krsna's desire. One should not,
+therefore, compete with Krsna's mystic power.
+Devotees automatically have all mystic power, but they do not like to compete with Krsna. Instead, they fully
+surrender to Krsna, and their yogic power is demonstrated by Krsna's mercy. Devotees can show mystic yoga so
+powerful that a demon could not even dream of it, but they never try to demonstrate it for their personal sense
+gratification. Whatever they do is for the service of the Lord, and therefore they are always in a position superior to
+that of the demons. There are many karmis, yogis and jnanis who artificially try to compete with Krsna, and thus
+ordinary, foolish people who do not care to hear Srimad-Bhagavatam from authorities consider some rascal yogi to
+be Bhagavan, the Supreme Personality of Godhead. At the present moment there are many so-called babas who
+present themselves as incarnations of God by showing some insignificant mystic wonder, and foolish people regard
+them as God because of lacking knowledge of Krsna.
 </p>
 
 </div>
@@ -72,7 +133,7 @@ by Krsna and was just waiting for Krsna to enter his mouth.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

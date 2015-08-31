@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,46 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.5.html">10.4.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam ankam arudham apayayat stanam
-sneha-snutam sa-smitam iksati mukham
-atrptam utsrjya javena sa yayav
-utsicyamane payasi tv adhisrite
-<p></p>
+bahavo himsita bhratah
+sisavah pavakopamah
+tvaya daiva-nisrstena
+putrikaika pradiyatam
+<br>
 <h2>Synonyms</h2>
-tam--unto Krsna; ankam arudham--very affectionately allowing Him to sit down on her lap; apayayat--allowed to
-drink; stanam--her breast; sneha-snutam--which was flowing with milk because of intense affection; sa-smitam
-iksati mukham--mother Yasoda was smiling and observing the smiling face of Krsna; atrptam--Krsna, who was still
-not fully satisfied by drinking the milk; utsrjya--putting Him aside; javena--very hastily; sa--mother Yasoda; yayau--
-left that place; utsicyamane payasi--because of seeing that the milk was overflowing; tu--but; adhisrite--in the milk
-pan on the oven.
-<p></p>
+bahavah--many; himsitah--killed out of envy; bhratah--my dear brother; sisavah--small children; pavakaupamah--
+all of them equal to fire in brightness and beauty; tvaya--by you; daiva-nisrstena--as spoken by destiny;
+putrika--daughter; eka--one; pradiyatam--give me as your gift.
+<br>
 <h2>Translation</h2>
-Mother Yasoda then embraced Krsna, allowed Him to sit down on her lap, and began to look upon the face of the
-Lord with great love and affection. Because of her intense affection, milk was flowing from her breast. But when
-she saw that the milk pan on the oven was boiling over, she immediately left her son to take care of the overflowing
-milk, although the child was not yet fully satisfied with drinking the milk of His mother's breast.
-<p></p>
+My dear brother, by the influence of destiny you have already killed many babies, each of them as bright and
+beautiful as fire. But kindly spare this daughter. Give her to me as your gift.
+<br>
 <h2>Purport</h2>
-Everything in the household affairs of mother Yasoda was meant for Krsna. Although Krsna was drinking the
-breast milk of mother Yasoda, when she saw that the milk pan in the kitchen was overflowing, she had to take care
-of it immediately, and thus she left her son, who then became very angry, not having been fully satisfied with
-drinking the milk of her breast. Sometimes one must take care of more than one item of important business for the
-same purpose. Therefore mother Yasoda was not unjust when she left her son to take care of the overflowing milk.
-On the platform of love and affection, it is the duty of the devotee to do one thing first and other things later. The
-proper intuition by which to do this is given by Krsna.
-tesam satata-yuktanam
-bhajatam priti-purvakam
-dadami buddhi-yogam tam
-yena mam upayanti te
-(Bg. 10.10)
-In Krsna consciousness, everything is dynamic. Krsna guides the devotee in what to do first and what to do next
-on the platform of absolute truth.
+Here we see that Devaki first focused Kamsa's attention on his atrocious activities, his killing of her many sons.
+Then she wanted to compromise with him by saying that whatever he had done was not his fault, but was ordained
+by destiny. Then she appealed to him to give her the daughter as a gift. Devaki was the daughter of a ksatriya and
+knew how to play the political game. In politics there are different methods of achieving success: first repression
+(dama), then compromise (sama), and then asking for a gift (dana). Devaki first adopted the policy of repression
+by directly attacking Kamsa for having cruelly, atrociously killed her babies. Then she compromised by saying that
+this was not his fault, and then she begged for a gift. As we learn from the history of the Mahabharata, or "Greater
+India," the wives and daughters of the ruling class, the ksatriyas, knew the political game, but we never find that a
+woman was given the post of chief executive. This is in accordance with the injunctions of Manu-samhita, but
+unfortunately Manu-samhita is now being insulted, and the Aryans, the members of Vedic society, cannot do
+anything. Such is the nature of Kali-yuga.
+Nothing happens unless ordained by destiny.
+tasyaiva hetoh prayateta kovido
+na labhyate yad bhramatam upary adhah
+tal labhyate duhkhavad anyatah sukham
+kalena sarvatra gabhira-ramhasa
+(Bhag. 1.5.18)
+Devaki knew very well that because the killing of her many children had been ordained by destiny, Kamsa was
+not to be blamed. There was no need to give good instructions to Kamsa. Upadeso hi murkhanam prakopaya na
+santaye (Canakya Pandita). If a foolish person is given good instructions, he becomes more and more angry.
+Moreover, a cruel person is more dangerous than a snake. A snake and a cruel person are both cruel, but a cruel
+person is more dangerous because although a snake can be charmed by mantras or subdued by herbs, a cruel
+person cannot be subdued by any means. Such was the nature of Kamsa.
 </p>
 
 </div>
@@ -90,7 +133,7 @@ on the platform of absolute truth.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

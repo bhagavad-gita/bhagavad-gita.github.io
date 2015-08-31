@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.16.html">10.7.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-iti vyavasyajagaram brhad vapuh
-sa yojanayama-mahadri-pivaram
-dhrtvadbhutam vyatta-guhananam tada
-pathi vyaseta grasanasaya khalah
-<p></p>
+gavah sarva-gunopeta
+vasah-srag-rukma-malinih
+atmajabhyudayarthaya
+pradat te canvayunjata
+<br>
 <h2>Synonyms</h2>
-iti--in this way; vyavasya--deciding; ajagaram--python; brhat vapuh--a very, very large body; sah--Aghasura;
-yojana-ayama--occupying eight miles of land; maha-adri-pivaram--as thick as a great mountain; dhrtva--assuming
-this form; adbhutam--wonderful; vyatta--spread; guha-ananam--having a mouth resembling a big cave in a
-mountain; tada--at that time; pathi--on the road; vyaseta--occupied; grasana-asaya--expecting to swallow all the
-cowherd boys; khalah--the most crooked.
-<p></p>
+gavah--cows; sarva-guna-upetah--being fully qualified by giving sufficient milk, etc.; vasah--well dressed; srak--
+with flower garlands; rukma-malinih--and with garlands of gold; atmaja-abhyudaya-arthaya--for the purpose of his
+son's affluence; pradat--gave in charity; te--those brahmanas; ca--also; anvayunjata--accepted them.
+<br>
 <h2>Translation</h2>
-After thus deciding, that crooked Aghasura assumed the form of a huge python, as thick as a big mountain and as
-long as eight miles. Having assumed this wonderful python's body, he spread his mouth like a big cave in the
-mountains and lay down on the road, expecting to swallow Krsna and His associates the cowherd boys.
+Nanda Maharaja, for the sake of the affluence of his own son Krsna, gave the brahmanas cows fully decorated
+with garments, flower garlands and gold necklaces. These cows, fully qualified to give ample milk, were given to
+the brahmanas in charity, and the brahmanas accepted them and bestowed blessings upon the whole family, and
+especially upon Krsna.
+<br>
+<h2>Purport</h2>
+Nanda Maharaja first fed the brahmanas sumptuously and then gave them in charity first-class cows fully
+decorated with golden necklaces, garments and flower garlands.
 </p>
 
 </div>
@@ -72,7 +114,7 @@ mountains and lay down on the road, expecting to swallow Krsna and His associate
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

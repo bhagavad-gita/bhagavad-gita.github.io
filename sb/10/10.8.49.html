@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,74 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.49.html">10.8.49</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.49</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/49"><b>49</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-anghri-mastakam apurnas
-tulasi-nava-damabhih
-komalaih sarva-gatresu
-bhuri-punyavad-arpitaih
-<p></p>
+jatayor nau mahadeve
+bhuvi visvesvare harau
+bhaktih syat parama loke
+yayanjo durgatim taret
+<br>
 <h2>Synonyms</h2>
-a-anghri-mastakam--from the feet up to the top of the head; apurnah--fully decorated; tulasi-nava-damabhih--
-with garlands of fresh tulasi leaves; komalaih--tender, soft; sarva-gatresu--on all the limbs of the body; bhuripunyavat-
-arpitaih--which were offered by devotees engaged in the greatest pious activity, worshiping the Supreme
-Lord by hearing, chanting and so on.
-<p></p>
+jatayoh--after we two have taken birth; nau--both husband and wife, Drona and Dhara; mahadeve--in the
+Supreme Person, the Supreme Personality of Godhead; bhuvi--on the earth; visva-isvare--in the master of all the
+planetary systems; harau--in the Supreme Lord; bhaktih--devotional service; syat--will be spread; parama--the
+ultimate goal of life; loke--in the world; yaya--by which; anjah--very easily; durgatim--miserable life; taret--one can
+avoid and be delivered.
+<br>
 <h2>Translation</h2>
-Every part of Their bodies, from Their feet to the top of Their heads, was fully decorated with fresh, tender
-garlands of tulasi leaves offered by devotees engaged in worshiping the Lord by the greatest pious activities, namely
-hearing and chanting.
-<p></p>
+Drona and Dhara said: Please permit us to be born on the planet earth so that after our appearance, the Supreme
+Lord, the Personality of Godhead, the supreme controller and master of all planets, will also appear and spread
+devotional service, the ultimate goal of life, so that those born in this material world may very easily be delivered
+from the miserable condition of materialistic life by accepting this devotional service.
+<br>
 <h2>Purport</h2>
-The word bhuri-punyavad-arpitaih is significant in this verse. These forms of Visnu were worshiped by those
-who had performed pious activities (sukrtibhih) for many births and who were constantly engaged in devotional
-service (sravanam kirtanam visnoh). Bhakti, devotional service, is the engagement of those who have performed
-highly developed pious activities. The accumulation of pious activities has already been mentioned elsewhere in
-the Srimad-Bhagavatam (10.12.11), where Sukadeva Gosvami says,
-ittham satam brahma-sukhanubhutya
-dasyam gatanam para-daivatena
-mayasritanam nara-darakena
-sakam vijahruh krta-punya-punjah
-"Those who are engaged in self-realization, appreciating the Brahman effulgence of the Lord, and those engaged
-in devotional service, accepting the Supreme personality of Godhead as master, as well as those who are under the
-clutches of maya, thinking the Lord an ordinary person, cannot understand that certain exalted personalities--after
-accumulating volumes of pious activities--are now playing with the Lord in friendship as cowherd boys."
-In our Krsna-Balarama Temple in Vrndavana, there is a tamala tree that covers an entire corner of the courtyard.
-Before there was a temple the tree was lying neglected, but now it has developed very luxuriantly, covering the
-whole corner of the courtyard. This is a sign of bhuri-punya.
+This statement by Drona clearly indicates that Drona and Dhara are the eternal father and mother of Krsna.
+Whenever there is a necessity of Krsna's appearance, Drona and Dhara appear first, and then Krsna appears. Krsna
+says in Bhagavad-gita that His birth is not ordinary (janma karma ca me divyam).
+ajo 'pi sann avyayatma
+bhutanam isvaro 'pi san
+prakrtim svam adhisthaya
+sambhavamy atma-mayaya
+"Although I am unborn and My transcendental body never deteriorates, and although I am the Lord of all
+sentient beings, I still appear in every millennium in My original transcendental form." (Bg. 4.6) Before Krsna's
+appearance, Drona and Dhara appear in order to become His father and mother. It is they who appear as Nanda
+Maharaja and his wife, Yasoda. In other words, it is not possible for a sadhana-siddha living being to become the
+father or mother of Krsna, for Krsna's father and mother are already designated. But by following the principles
+exhibited by Nanda Maharaja and Yasoda and their associates, the inhabitants of Vrndavana, ordinary living beings
+may attain such affection as exhibited by Nanda and Yasoda.
+When Drona and Dhara were requested to beget children, they chose to come to this world to have the Supreme
+Personality of Godhead as their son, Krsna. Krsna's appearance means paritranaya sadhunam vinasaya ca
+duskrtam--the devotees are protected, and the miscreants are vanquished. Whenever Krsna comes, He distributes
+the highest goal of life, devotional service. He appears as Caitanya Mahaprabhu for the same purpose because
+unless one comes to devotional service, one cannot be delivered from the miseries of the material world
+(duhkhalayam asasvatam), where the living beings struggle for existence. The Lord says in Bhagavad-gita (15.7):
+mamaivamso jiva-loke
+jiva-bhutah sanatanah
+manah sasthanindriyani
+prakrti-sthani karsati
+"The living entities in this conditioned world are My eternal, fragmental parts. Because of conditioned life, they
+are struggling very hard with the six senses, which include the mind." The living entities are struggling to become
+happy, but unless they take to the bhakti cult, their happiness is not possible. Krsna clearly says:
+asraddadhanah purusa
+dharmasyasya parantapa
+aprapya mam nivartante
+mrtyu-samsara-vartmani
+"Those who are not faithful on the path of devotional service cannot attain Me, O conqueror of foes, but return to
+birth and death in this material world." (Bg. 9.3)
+Foolish persons do not know how risky life is here if one does not follow the instructions of Krsna. The Krsna
+consciousness movement, therefore, has been started so that by practicing Krsna consciousness one can avoid the
+risky life of this material existence. There is no question of accepting or not accepting Krsna consciousness. It is
+not optional; it is compulsory. If we do not take to Krsna consciousness, our life is very risky. Everything is
+explained in Bhagavad-gita. Therefore, to learn how to become free from the miserable condition of material
+existence, Bhagavad-gita As It Is is the preliminary study. Then, if one understands Bhagavad-gita, one can proceed
+to Srimad-Bhagavatam, and if one advances further, one may study Caitanya-caritamrta. We are therefore
+presenting these invaluable books to the whole world so that people may study them and be happy, being delivered
+from miserable conditional life.
 </p>
 
 </div>
@@ -89,7 +156,7 @@ whole corner of the courtyard. This is a sign of bhuri-punya.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.40.html">10.4.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kim svapna etad uta devamaya
-kim va madiyo bata buddhi-mohah
-atho amusyaiva mamarbhakasya
-yah kascanautpattika atma-yogah
-<p></p>
+tasmat sarvatmana rajan
+brahmanan brahma-vadinah
+tapasvino yajna-silan
+gas ca hanmo havir-dughah
+<br>
 <h2>Synonyms</h2>
-kim--whether; svapnah--a dream; etat--all this; uta--or otherwise; deva-maya--an illusory manifestation by the
-external energy; kim va--or else; madiyah--my personal; bata--indeed; buddhi-mohah--illusion of intelligence;
-atho--otherwise; amusya--of such; eva--indeed; mama arbhakasya--of my child; yah--which; kascana--some;
-autpattikah--natural; atma-yogah--personal mystic power.
-<p></p>
+tasmat--therefore; sarva-atmana--in every respect; rajan--O King; brahmanan--the brahmanas; brahma-vadinah--
+who maintain the brahminical culture, centered around Visnu; tapasvinah--persons who are engaged in austerities;
+yajna-silan--persons engaged in offering sacrifices; gah ca--cows and persons engaged in protecting cows; hanmah--
+we shall kill; havih-dughah--because they supply milk, from which clarified butter is obtained for the offering of
+sacrifice.
+<br>
 <h2>Translation</h2>
-[Mother Yasoda began to argue within herself:] Is this a dream, or is it an illusory creation by the external
-energy? Has this been manifested by my own intelligence, or is it some mystic power of my child?
-<p></p>
-<h2>Purport</h2>
-When mother Yasoda saw this wonderful manifestation within the mouth of her child, she began to argue within
-herself about whether it was a dream. Then she considered, "I am not dreaming, because my eyes are open. I am
-actually seeing what is happening. I am not sleeping, nor am I dreaming. Then maybe this is an illusion created by
-devamaya. But that is also not possible. What business would the demigods have showing such things to me? I am
-an insignificant woman with no connection with the demigods. Why should they take the trouble to put me into
-devamaya? That also is not possible." Then mother Yasoda considered whether the vision might be due to
-bewilderment: "I am fit in health; I am not diseased. Why should there be any bewilderment? It is not possible that
-my brain is deranged, since I am ordinarily quite fit to think. Then this vision must be due to some mystic power of
-my son, as predicted by Gargamuni." Thus she finally concluded that the vision was due to her son's activities, and
-nothing else.
+O King, we, who are your adherents in all respects, shall therefore kill the Vedic brahmanas, the persons engaged
+in offering sacrifices and austerities, and the cows that supply milk, from which clarified butter is obtained for the
+ingredients of sacrifice.
 </p>
 
 </div>
@@ -82,7 +111,7 @@ nothing else.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

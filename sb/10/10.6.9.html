@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.9.html">10.6.9</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.9</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9"><b>9</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-darsayams tad-vidam loka
-atmano bhrtya-vasyatam
-vrajasyovaha vai harsam
-bhagavan bala-cestitaih
-<p></p>
+tam tiksna-cittam ativama-cestitam
+viksyantara kosa-paricchadasivat
+vara-striyam tat-prabhaya ca dharsite
+niriksyamane janani hy atisthatam
+<br>
 <h2>Synonyms</h2>
-darsayan--exhibiting; tat-vidam--unto persons who can understand Krsna's activities; loke--throughout the whole
-world; atmanah--of Himself; bhrtya-vasyatam--how He is agreeable to carrying out the orders of His servants, His
-devotees; vrajasya--of Vrajabhumi; uvaha--executed; vai--indeed; harsam--pleasure; bhagavan--the Supreme
-Personality of Godhead; bala-cestitaih--by His activities like those of a child trying to do so many things.
-<p></p>
+tam--that (Putana Raksasi); tiksna-cittam--having a very fierce heart for killing the child; ati-vama-cestitam--
+although she was trying to treat the child better than a mother; viksya antara--seeing her within the room; kosaparicchada-
+asi-vat--like a sharp sword within a soft sheath; vara-striyam--the very beautiful woman; tat-prabhaya--
+by her influence; ca--also; dharsite--being overwhelmed; niriksyamane--were seeing; janani--the two mothers; hi--
+indeed; atisthatam--they remained silent, without prohibiting.
+<br>
 <h2>Translation</h2>
-To pure devotees throughout the world who could understand His activities, the Supreme Personality of
-Godhead, Krsna, exhibited how much He can be subdued by His devotees, His servants. In this way He increased
-the pleasure of the Vrajavasis by His childhood activities.
-<p></p>
+Putana Raksasi's heart was fierce and cruel, but she looked like a very affectionate mother. Thus she resembled a
+sharp sword in a soft sheath. Although seeing her within the room, Yasoda and Rohini, overwhelmed by her
+beauty, did not stop her, but remained silent because she treated the child like a mother.
+<br>
 <h2>Purport</h2>
-That Krsna performed childhood activities to increase the pleasure of His devotees was another transcendental
-humor. He exhibited these activities not only to the inhabitants of Vrajabhumi, but also to others, who were
-captivated by His external potency and opulence. Both the internal devotees, who were simply absorbed in love of
-Krsna, and the external devotees, who were captivated by His unlimited potency, were informed of Krsna's desire
-to be submissive to His servants.
+Although Putana was an outsider and although she personified fierce death because the determination within her
+heart was to kill the child, when she directly came and placed the child on her lap to offer the child her breast to
+suck, the mothers were so captivated by her beauty that they did not prohibit her. Sometimes a beautiful woman is
+dangerous because everyone, being captivated by external beauty (maya-mohita), is unable to understand what is
+in her mind. Those who are captivated by the beauty of the external energy are called maya-mohita. Mohitam
+nabhijanati mam ebhyah param avyayam (Bg. 7.13). Na te viduh svartha-gatim hi visnum durasaya ye bahir-arthamaninah
+(Bhag. 7.5.31). Here, of course, the two mothers Rohini and Yasoda were not maya-mohita, deluded by
+the external energy, but to develop the pastimes of the Lord, they were captivated by yogamaya. Such maya-moha
+is the action of yogamaya.
 </p>
 
 </div>
@@ -78,7 +122,7 @@ to be submissive to His servants.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

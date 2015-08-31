@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.14.html">10.5.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yatha kantaka-viddhango
-jantor necchati tam vyatham
-jiva-samyam gato lingair
-na tathaviddha-kantakah
-<p></p>
+gopah parasparam hrsta
+dadhi-ksira-ghrtambubhih
+asincanto vilimpanto
+navanitais ca ciksipuh
+<br>
 <h2>Synonyms</h2>
-yatha--just as; kantaka-viddha-angah--a person whose body has been pinpricked; jantoh--of such an animal; na--
-not; icchati--desires; tam--a particular; vyatham--pain; jiva-samyam gatah--when he understands that the position
-is the same for everyone; lingaih--by possessing a particular type of body; na--not; tatha--so; aviddha-kantakah--a
-person who has not been pinpricked.
-<p></p>
+gopah--the cowherd men; parasparam--on one another; hrstah--being so pleased; dadhi--with curd; ksira--with
+condensed milk; ghrta-ambubhih--with water mixed with butter; asincantah--sprinkling; vilimpantah--smearing;
+navanitaih ca--and with butter; ciksipuh--they threw on one another.
+<br>
 <h2>Translation</h2>
-By seeing their faces, one whose body has been pricked by pins can understand the pain of others who are
-pinpricked. Realizing that this pain is the same for everyone, he does not want others to suffer in this way. But one
-who has never been pricked by pins cannot understand this pain.
-<p></p>
+In gladness, the cowherd men enjoyed the great festival by splashing one another's bodies with a mixture of curd,
+condensed milk, butter and water. They threw butter on one another and smeared it on one another's bodies.
+<br>
 <h2>Purport</h2>
-There is a saying, "The happiness of wealth is enjoyable by a person who has tasted the distress of poverty."
-There is also another common saying, vandhya ki bujhibe prasava-vedana: "A woman who has not given birth to a
-child cannot understand the pain of childbirth." Unless one comes to the platform of actual experience, one cannot
-realize what is pain and what is happiness in this material world. The laws of nature act accordingly. If one has
-killed an animal, one must himself be killed by that same animal. This is called mamsa. Mam means "me," and sa
-means "he." As I am eating an animal, that animal will have the opportunity to eat me. In every state, therefore, it is
-ordinarily the custom that if a person commits murder he is hanged.
+From this statement we can understand that five thousand years ago not only was there enough milk, butter and
+curd to eat, drink and cook with, but when there was a festival it would be thrown about without restriction. There
+was no limit to how extensively milk, butter, curd and other such products were used in human society. Everyone
+had an ample stock of milk, and by using it in many varied milk preparations, people would keep good health in
+natural ways and thus enjoy life in Krsna consciousness.
 </p>
 
 </div>
@@ -80,7 +115,7 @@ ordinarily the custom that if a person commits murder he is hanged.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

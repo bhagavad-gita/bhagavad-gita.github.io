@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,71 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.6.html">10.2.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vrajah sammrsta-samsiktadvarajira-
-grhantarah
-citra-dhvaja-pataka-srakcaila-
-pallava-toranaih
-<p></p>
+bhagavan api visvatma
+viditva kamsajam bhayam
+yadunam nija-nathanam
+yogamayam samadisat
+<br>
 <h2>Synonyms</h2>
-vrajah--the land occupied by Nanda Maharaja; sammrsta--very nicely cleaned; samsikta--very nicely washed;
-dvara--all the doors or entrances; ajira--courtyards; grha-antarah--everything within the house; citra--variegated;
-dhvaja--of festoons; pataka--of flags; srak--of flower garlands; caila--of pieces of cloth; pallava--of the leaves of
-mango trees; toranaih--(decorated) by gates in different places.
-<p></p>
+bhagavan--Sri Krsna, the Supreme Personality of Godhead; api--also; visvatma--who is the Supersoul of everyone;
+viditva--understanding the position of the Yadus and His other devotees; kamsa-jam--because of Kamsa; bhayam--
+fear; yadunam--of the Yadus; nija-nathanam--who had accepted Him, the Supreme Lord, as their supreme shelter;
+yogamayam--unto Yogamaya, the spiritual potency of Krsna; samadisat--ordered as follows.
+<br>
 <h2>Translation</h2>
-Vrajapura, the residence of Nanda Maharaja, was fully decorated with varieties of festoons and flags, and in
-different places, gates were made with varieties of flower garlands, pieces of cloth, and mango leaves. The
-courtyards, the gates near the roads, and everything within the rooms of the houses were perfectly swept and
-washed with water.
+To protect the Yadus, His personal devotees, from Kamsa's attack, the Personality of Godhead, Visvatma, the
+Supreme Soul of everyone, ordered Yogamaya as follows.
+<br>
+<h2>Purport</h2>
+The words bhagavan api visvatma viditva kamsajam bhayam are commented upon by Srila Sanatana Gosvami.
+Bhagavan svayam is Krsna (krsnas tu bhagavan svayam). He is Visvatma, the original Supersoul of everyone,
+because his plenary portion expands as the Supersoul. This is confirmed in Bhagavad-gita (13.3): ksetra jnam capi
+mam viddhi sarva-ksetresu bharata. Lord Krsna is the ksetra jna, or Supersoul, of all living entities. He is the
+original source of all expansions of the Personality of Godhead. There are hundreds and thousands of plenary
+expansions of Visnu, such as Sankarsana, Pradyumna, Aniruddha and Vasudeva, but here in this material world,
+the Visvatma, the Supersoul for all living entities, is Ksirodakasayi Visnu. As stated in Bhagavad-gita (18.61),
+isvarah sarva-bhutanam hrd-dese'rjuna tisthati: "The Supreme Lord is situated in the heart of all living entities, O
+Arjuna." Krsna is actually Visvatma by His plenary expansion as visnu-tattva, yet because of His affection for His
+devotees, He acts as Supersoul to give them directions (sarvasya caham hrdi sannivisto mattah smrtir jnanam
+apohanam ca).
+The affairs of the Supersoul pertain to Ksirodakasayi Visnu, but Krsna took compassion on Devaki, His devotee,
+because He understood her fear of Kamsa's persecution. A pure devotee is always fearful of material existence. No
+one knows what will happen next, for one may have to change his body at any moment (tatha dehantara-praptih).
+Knowing this fact, a pure devotee acts in such a way that he will not have his life spoiled by being obliged to accept
+another body and undergo the tribulations of material existence. This is bhayam, or fear. Bhayam
+dvitiyabhinivesatah syat (Bhag. 11.2.37). This fear is due to material existence. Properly speaking, everyone should
+always be alert and fearful of material existence, but although everyone is prone to be affected by the ignorance of
+material existence, the Supreme Personality of Godhead, Krsna, is always alert to the protection of His devotees.
+Krsna is so kind and affectionate toward His devotees that He helps them by giving them the intelligence by which
+to exist in this material world without forgetting Him even for a moment. The Lord says:
+tesam evanukampartham
+aham ajnana-jam tamah
+nasayamy atma-bhavastho
+jnana-dipena bhasvata
+"Out of compassion for them, I, dwelling in their hearts, destroy with the shining lamp of knowledge the
+darkness born of ignorance." (Bg. 10.11)
+The word yoga means "link." Any system of yoga is an attempt to reconnect our broken relationship with the
+Supreme Personality of Godhead. There are different types of yoga, of which bhakti-yoga is the best. In other yoga
+systems, one must undergo various processes before attaining perfection, but bhakti-yoga is direct. The Lord says
+in Bhagavad-gita (6.47):
+yoginam api sarvesam
+mad-gatenantaratmana
+sraddhavan bhajate yo mam
+sa me yuktatamo matah
+"Of all yogis, he who always abides in Me with great faith, worshiping Me in transcendental loving service, is
+most intimately united with Me in yoga and is the highest of all." For the bhakti-yogi, a human body is guaranteed
+in his next existence, as stated by Lord Krsna (sucinam srimatam gehe yoga-bhrasto 'bhijayate). Yogamaya is the
+spiritual potency of the Lord. Out of affection for His devotees, the Lord always stays in spiritual touch with them,
+although otherwise His maya potency is so strong that she bewilders even exalted demigods like Brahma. Therefore
+the Lord's potency is called yogamaya. Since the Lord is Visvatma, He immediately ordered Yogamaya to give
+protection to Devaki.
 </p>
 
 </div>
@@ -72,7 +153,7 @@ washed with water.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

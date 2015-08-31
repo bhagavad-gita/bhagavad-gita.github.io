@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.17.html">10.1.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa bibhrat paurusam dhama
-bhrajamano yatha ravih
-durasado 'tidurdharso
-bhutanam sambabhuva ha
-<p></p>
+bhumir drpta-nrpa-vyajadaityanika-
+satayutaih
+akranta bhuri-bharena
+brahmanam saranam yayau
+<br>
 <h2>Synonyms</h2>
-sah--he (Vasudeva); bibhrat--carried; paurusam--pertaining to the Supreme Person; dhama--the spiritual
-effulgence; bhrajamanah--illuminating; yatha--as; ravih--the sunshine; durasadah--very difficult even to look at,
-difficult to understand by sensory perception; ati-durdharsah--approachable with great difficulty; bhutanam--of all
-living entities; sambabhuva--so he became; ha--positively.
-<p></p>
+bhumih--mother earth; drpta--puffed up; nrpa-vyaja--posing as kings, or the supreme power personified in the
+state; daitya--of demons; anika--of military phalanxes of soldiers; sata-ayutaih--unlimitedly, by many hundreds of
+thousands; akranta--being overburdened; bhuri-bharena--by a burden of unnecessary fighting power; brahmanam--
+unto Lord Brahma; saranam--to take shelter; yayau--went.
+<br>
 <h2>Translation</h2>
-While carrying the form of the Supreme Personality of Godhead within the core of his heart, Vasudeva bore the
-Lord's transcendentally illuminating effulgence, and thus he became as bright as the sun. He was therefore very
-difficult to see or approach through sensory perception. Indeed, he was unapproachable and unperceivable even for
-such formidable men as Kamsa, and not only for Kamsa but for all living entities.
-<p></p>
+Once when mother earth was overburdened by hundreds of thousands of military phalanxes of various conceited
+demons dressed like kings, she approached Lord Brahma for relief.
+<br>
 <h2>Purport</h2>
-The word dhama is significant. Dhama refers to the place where the Supreme Personality of Godhead resides. In
-the beginning of Srimad-Bhagavatam (1.1.1) it is said, dhamna svena sada nirasta-kuhakam satyam param dhimahi.
-In the abode of the Supreme Personality of Godhead, there is no influence of material energy (dhamna svena sada
-nirasta-kuhakam). Any place where the Supreme Personality of Godhead is present by His name, form, qualities or
-paraphernalia immediately becomes a dhama. For example, we speak of Vrndavana-dhama, Dvaraka-dhama and
-Mathura-dhama because in these places the name, fame, qualities and paraphernalia of the Supreme Godhead are
-always present. Similarly, if one is empowered by the Supreme Personality of Godhead to do something, the core of
-his heart becomes a dhama, and thus he becomes so extraordinarily powerful that not only his enemies but also
-people in general are astonished to observe his activities. Because he is unapproachable, his enemies are simply
-struck with wonder, as explained here by the words durasado 'tidurdharsah.
-The words paurusam dhama have been explained by various acaryas. Sri Viraraghava Acarya says that these
-words refer to the effulgence of the Supreme Personality of Godhead. Vijayadhvaja says that they signify visnutejas,
-and Sukadeva says bhagavat-svarupa. The Vaisnava-tosani says that these words indicate the influence of the
-Supreme Lord's effulgence, and Visvanatha Cakravarti Thakura says that they signify the appearance of the
-Supreme Personality of Godhead.
+When the world is overburdened by unnecessary military arrangements and when various demoniac kings are
+the executive heads of state, this burden causes the appearance of the Supreme Personality of Godhead. As the Lord
+says in Bhagavad-gita (4.7):
+yada yada hi dharmasya
+glanir bhavati bharata
+abhyutthanam adharmasya
+tadatmanam srjamy aham
+"Whenever and wherever there is a decline in religious practice, O descendant of Bharata, and a predominant rise
+of irreligion--at that time I appear Myself." When the residents of this earth become atheistic and godless, they
+descend to the status of animals like dogs and hogs, and thus their only business is to bark among themselves. This
+is dharmasya glani, deviation from the goal of life. Human life is meant for attaining the highest perfection of Krsna
+consciousness, but when people are godless and the presidents or kings are unnecessarily puffed up with military
+power, their business is to fight and increase the military strength of their different states. Nowadays, therefore, it
+appears that every state is busy manufacturing atomic weapons to prepare for a third world war. Such preparations
+are certainly unnecessary; they reflect the false pride of the heads of state. The real business of a chief executive is
+to see to the happiness of the mass of people by training them in Krsna consciousness in different divisions of life.
+Catur-varnyam maya srstam guna-karma-vibhagasah (Bg. 4.13). A leader should train the people as brahmanas,
+ksatriyas, vaisyas and sudras and engage them in various occupational duties, thus helping them progress toward
+Krsna consciousness. Instead, however, rogues and thieves in the guise of protectors arrange for a voting system,
+and in the name of democracy they come to power by hook or crook and exploit the citizens. Even long, long ago,
+asuras, persons devoid of God consciousness, became the heads of state, and now this is happening again. The
+various states of the world are preoccupied with arranging for military strength. Sometimes they spend sixty-five
+percent of the government's revenue for this purpose. But why should people's hard-earned money be spent in this
+way? Because of the present world situation, Krsna has descended in the form of the Krsna consciousness
+movement. This is quite natural, for without the Krsna consciousness movement the world cannot be peaceful and
+happy.
 </p>
 
 </div>
@@ -89,7 +137,7 @@ Supreme Personality of Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

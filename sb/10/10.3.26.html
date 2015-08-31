@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.26.html">10.3.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-trnavartah santa-rayo
-vatya-rupa-dharo haran
-krsnam nabho-gato gantum
-nasaknod bhuri-bhara-bhrt
-<p></p>
+yo 'yam kalas tasya te 'vyakta-bandho
+cestam ahus cestate yena visvam
+nimesadir vatsaranto mahiyams
+tam tvesanam ksema-dhama prapadye
+<br>
 <h2>Synonyms</h2>
-trnavartah--the demon Trnavarta; santa-rayah--the force of the blast reduced; vatya-rupa-dharah--who had
-assumed the form of a forceful whirlwind; haran--and had thus taken away; krsnam--Krsna, the Supreme
-Personality of Godhead; nabhah-gatah--went up to the top of the sky; gantum--to go further; na asaknot--was not
-able; bhuri-bhara-bhrt--because Krsna then became more powerful and heavy than the demon.
-<p></p>
+yah--that which; ayam--this; kalah--time (minutes, hours, seconds); tasya--of Him; te--of You; avyakta-bandho--
+O my Lord, You are the inaugurator of the unmanifested (the original mahat-tattva or prakrti); cestam--attempt or
+pastimes; ahuh--it is said; cestate--works; yena--by which; visvam--the entire creation; nimesa-adih--beginning with
+minute parts of time; vatsara-antah--up to the limit of a year; mahiyan--powerful; tam--unto Your Lordship; tva
+isanam--unto You, the supreme controller; ksema-dhama--the reservoir of all auspiciousness; prapadye--I offer full
+surrender.
+<br>
 <h2>Translation</h2>
-Having assumed the form of a forceful whirlwind, the demon Trnavarta took Krsna very high in the sky, but
-when Krsna became heavier than the demon, the demon had to stop his force and could go no further.
-<p></p>
+O inaugurator of the material energy, this wonderful creation works under the control of powerful time, which is
+divided into seconds, minutes, hours and years. This element of time, which extends for many millions of years, is
+but another form of Lord Visnu. For Your pastimes, You act as the controller of time, but You are the reservoir of
+all good fortune. Let me offer my full surrender unto Your Lordship.
+<br>
 <h2>Purport</h2>
-Here is a competition in yogic power between Krsna and Trnavartasura. By practicing mystic yoga, asuras
-generally attain some perfection in the eight siddhis, or perfections, namely anima, laghima, mahima, prapti,
-prakamya, isitva, vasitva and kamavasayita. But although a demon may acquire such powers to a very limited
-extent, he cannot compete with the mystic power of Krsna, for Krsna is Yogesvara, the source of all mystic power
-(yatra yogesvaro harih). No one can compete with Krsna. Sometimes, of course, having acquired a fragmental
-portion of Krsna's mystic power, asuras demonstrate their power to the foolish public and assert themselves to be
-God, not knowing that God is the supreme Yogesvara. Here also we see that Trnavarta assumed the mahima-siddhi
-and took Krsna away as if Krsna were an ordinary child. But Krsna also became a mystic mahima-siddha. When
-mother Yasoda was carrying Him, He became so heavy that His mother, who was usually accustomed to carrying
-Him, could not bear Him and had to place Him down on the ground. Thus Trnavarta had been able to take Krsna
-away in the presence of mother Yasoda. But when Krsna, high in the sky, assumed the mahima-siddhi, the demon,
-unable to go further, was obliged to stop his force and come down according to Krsna's desire. One should not,
-therefore, compete with Krsna's mystic power.
-Devotees automatically have all mystic power, but they do not like to compete with Krsna. Instead, they fully
-surrender to Krsna, and their yogic power is demonstrated by Krsna's mercy. Devotees can show mystic yoga so
-powerful that a demon could not even dream of it, but they never try to demonstrate it for their personal sense
-gratification. Whatever they do is for the service of the Lord, and therefore they are always in a position superior to
-that of the demons. There are many karmis, yogis and jnanis who artificially try to compete with Krsna, and thus
-ordinary, foolish people who do not care to hear Srimad-Bhagavatam from authorities consider some rascal yogi to
-be Bhagavan, the Supreme Personality of Godhead. At the present moment there are many so-called babas who
-present themselves as incarnations of God by showing some insignificant mystic wonder, and foolish people regard
-them as God because of lacking knowledge of Krsna.
+As stated in the Brahma-samhita (5.52):
+yac-caksur esa savita sakala-grahanam
+raja samasta-sura-murtir asesa-tejah
+yasyajnaya bhramati sambhrta-kala-cakro
+govindam adi-purusam tam aham bhajami
+"The sun is the king of all planetary systems and has unlimited potency in heat and light. I worship Govinda, the
+primeval Lord, the Supreme Personality of Godhead, under whose control even the sun, which is considered to be
+the eye of the Lord, rotates within the fixed orbit of eternal time." Although we see the cosmic manifestation as
+gigantic and wonderful, it is within the limitations of kala, the time factor. This time factor is also controlled by the
+Supreme Personality of Godhead, as confirmed in Bhagavad-gita (mayadhyaksena prakrtih suyate sa-caracaram).
+Prakrti, the cosmic manifestation, is under the control of time. Indeed, everything is under the control of time, and
+time is controlled by the Supreme Personality of Godhead. Therefore the Supreme Lord has no fear of the
+onslaughts of time. Time is estimated according to the movements of the sun (savita). Every minute, every second,
+every day, every night, every month and every year of time can be calculated according to the sun's movements.
+But the sun is not independent, for it is under time's control. Bhramati sambhrta-kala-cakrah: the sun moves within
+the kala-cakra, the orbit of time. The sun is under the control of time, and time is controlled by the Supreme
+Personality of Godhead. Therefore the Lord has no fear of time.
+The Lord is addressed here as avyakta-bandhu, or the inaugurator of the movements of the entire cosmic
+manifestation. Sometimes the cosmic manifestation is compared to a potter's wheel. When a potter's wheel is
+spinning, who has set it in motion? It is the potter, of course, although sometimes we can see only the motion of
+the wheel and cannot see the potter himself. Therefore the Lord, who is behind the motion of the cosmos, is called
+avyakta-bandhu. Everything is within the limits of time, but time moves under the direction of the Lord, who is
+therefore not within time's limit.
 </p>
 
 </div>
@@ -94,7 +138,7 @@ them as God because of lacking knowledge of Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

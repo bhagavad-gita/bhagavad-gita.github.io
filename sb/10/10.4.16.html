@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.16.html">10.4.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yadasit tad api nyunam
-tenanyad api sandadhe
-tad api dvy-angulam nyunam
-yad yad adatta bandhanam
-<p></p>
+sa tv aham tyakta-karunyas
+tyakta-jnati-suhrt khalah
+kan lokan vai gamisyami
+brahma-heva mrtah svasan
+<br>
 <h2>Synonyms</h2>
-yada--when; asit--became; tat api--even the new rope that had been joined; nyunam--still short; tena--then, with
-the second rope; anyat api--another rope also; sandadhe--she joined; tat api--that also; dvi-angulam--by a
-measurement of two fingers; nyunam--remained short; yat yat adatta--in this way, one after another, whatever
-ropes she joined; bandhanam--for binding Krsna.
-<p></p>
+sah--that person (Kamsa); tu--indeed; aham--I; tyakta-karunyah--devoid of all mercy; tyakta-jnati-suhrt--my
+relatives and friends have been rejected by me; khalah--cruel; kan lokan--which planets; vai--indeed; gamisyami--
+shall go; brahma-ha iva--like the killer of a brahmana; mrtah svasan--either after death or while breathing.
+<br>
 <h2>Translation</h2>
-This new rope also was short by a measurement of two fingers, and when another rope was joined to it, it was
-still two fingers too short. As many ropes as she joined, all of them failed; their shortness could not be overcome.
+Being merciless and cruel, I have forsaken all my relatives and friends. Therefore, like a person who has killed a
+brahmana, I do not know to which planet I shall go, either after death or while breathing.
 </p>
 
 </div>
@@ -70,7 +108,7 @@ still two fingers too short. As many ropes as she joined, all of them failed; th
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

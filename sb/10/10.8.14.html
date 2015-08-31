@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.14.html">10.8.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ity uktvadri-dari-kunjagahvaresv
-atma-vatsakan
-vicinvan bhagavan krsnah
-sapani-kavalo yayau
-<p></p>
+prag ayam vasudevasya
+kvacij jatas tavatmajah
+vasudeva iti sriman
+abhijnah sampracaksate
+<br>
 <h2>Synonyms</h2>
-iti uktva--saying this ("Let Me bring your calves personally"); adri-dari-kunja-gahvaresu--everywhere in the
-mountains, the mountain caves, the bushes and narrow places; atma-vatsakan--the calves belonging to His own
-personal friends; vicinvan--searching out; bhagavan--the Supreme Personality of Godhead; krsnah--Lord Krsna; sapani-
-kavalah--carrying His yogurt and rice in His hand; yayau--started out.
-<p></p>
+prak--before; ayam--this child; vasudevasya--of Vasudeva; kvacit--sometimes; jatah--was born; tava--your;
+atmajah--Krsna, who has taken birth as your child; vasudevah--therefore He may be given the name Vasudeva; iti--
+thus; sriman--very beautiful; abhijnah--those who are learned; sampracaksate--also say that Krsna is Vasudeva.
+<br>
 <h2>Translation</h2>
-"Let Me go and search for the calves," Krsna said. "Don't disturb your enjoyment." Then, carrying His yogurt and
-rice in His hand, the Supreme Personality of Godhead, Krsna, immediately went out to search for the calves of His
-friends. To please His friends, He began searching in all the mountains, mountain caves, bushes and narrow
-passages.
-<p></p>
+For many reasons, this beautiful son of yours sometimes appeared previously as the son of Vasudeva. Therefore,
+those who are learned sometimes call this child Vasudeva.
+<br>
 <h2>Purport</h2>
-The Vedas (Svetasvatara Upanisad 6.8) assert that the Supreme Personality of Godhead has nothing to do
-personally (na tasya karyam karanam ca vidyate) because He is doing everything through His energies and
-potencies (parasya saktir vividhaiva sruyate). Nonetheless, here we see that He took personal care to find the calves
-of His friends. This was Krsna's causeless mercy. Mayadhyaksena prakrtih suyate sa-caracaram: all the affairs of the
-entire world and the entire cosmic manifestation are working under His direction, through His different energies.
-Still, when there is a need to take care of His friends, He does this personally. Krsna assured His friends, "Don't be
-afraid. I am going personally to search for your calves." This was Krsna's causeless mercy.
+Gargamuni indirectly disclosed, "This child was originally born as the son of Vasudeva, although He is acting as
+your child. Generally He is your child, but sometimes He is the son of Vasudeva."
 </p>
 
 </div>
@@ -81,7 +112,7 @@ afraid. I am going personally to search for your calves." This was Krsna's cause
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

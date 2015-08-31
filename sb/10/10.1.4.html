@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.4.html">10.1.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 nivrtta-tarsair upagiyamanad
 bhavausadhac chrotra-mano-'bhiramat
 ka uttamasloka-gunanuvadat
 puman virajyeta vina pasughnat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 nivrtta--released from; tarsaih--lust or material activities; upagiyamanat--which is described or sung; bhavaausadhat--
 which is the right medicine for the material disease; srotra--the process of aural reception; manah--the
@@ -61,14 +100,14 @@ subject matter of thought for the mind; abhiramat--from the pleasing vibrations 
 uttamasloka--of the Supreme Personality of Godhead; guna-anuvadat--from describing such activities; puman--a
 person; virajyeta--can keep himself aloof; vina--except; pasu-ghnat--either a butcher or one who is killing his own
 personal existence.
-<p></p>
+<br>
 <h2>Translation</h2>
 Glorification of the Supreme Personality of Godhead is performed in the parampara system; that is, it is conveyed
 from spiritual master to disciple. Such glorification is relished by those no longer interested in the false, temporary
 glorification of this cosmic manifestation. Descriptions of the Lord are the right medicine for the conditioned soul
 undergoing repeated birth and death. Therefore, who will cease hearing such glorification of the Lord except a
 butcher or one who is killing his own self?
-<p></p>
+<br>
 <h2>Purport</h2>
 In India it is the practice among the general populace to hear about Krsna, either from Bhagavad-gita or from
 Srimad-Bhagavatam, in order to gain relief from the disease of repeated birth and death. Although India is now
@@ -181,7 +220,7 @@ gratification.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

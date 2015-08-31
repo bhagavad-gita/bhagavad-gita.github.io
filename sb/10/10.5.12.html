@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.12.html">10.5.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam sadharanam deham
-avyakta-prabhavapyayam
-ko vidvan atmasat krtva
-hanti jantun rte 'satah
-<p></p>
+ta asisah prayunjanas
+ciram pahiti balake
+haridra-curna-tailadbhih
+sincantyo 'janam ujjaguh
+<br>
 <h2>Synonyms</h2>
-evam--in this way; sadharanam--common property; deham--the body; avyakta--from unmanifested nature;
-prabhava--manifested in that way; apyayam--and again merged with the unmanifested ("for dust thou art, and unto
-dust shalt thou return"); kah--who is that person; vidvan--one who is actually in knowledge; atmasat krtva--
-claiming as his own; hanti--kills; jantun--poor animals; rte--except; asatah--rascals who have no knowledge, no
-clear understanding.
-<p></p>
+tah--all the women, the wives and daughters of the cowherd men; asisah--blessings; prayunjanah--offering;
+ciram--for a long time; pahi--may You become the King of Vraja and maintain all its inhabitants; iti--thus; balake--
+unto the newborn child; haridra-curna--powder of turmeric; taila-adbhih--mixed with oil; sincantyah--sprinkling;
+ajanam--the Supreme Personality of Godhead, who is unborn; ujjaguh--offered prayers.
+<br>
 <h2>Translation</h2>
-This body, after all, is produced by the unmanifested nature and again annihilated and merged in the natural
-elements. Therefore, it is the common property of everyone. Under the circumstances, who but a rascal claims this
-property as his own and while maintaining it commits such sinful activities as killing animals just to satisfy his
-whims? Unless one is a rascal, one cannot commit such sinful activities.
-<p></p>
-<h2>Purport</h2>
-Atheists do not believe in the existence of the soul. Nonetheless, unless one is very cruel, why should one kill
-animals unnecessarily? The body is a manifestation of a combination of matter. In the beginning it was nothing,
-but by a combination of matter it has come into existence. Then again, when the combination is dismantled, the
-body will no longer exist. In the beginning it was nothing, and in the end it will be nothing. Why then should one
-commit sinful activities when it is manifested? It is not possible for anyone to do this unless he is rascal number
-one.
+Offering blessings to the newborn child, Krsna, the wives and daughters of the cowherd men said, "May You
+become the King of Vraja and long maintain all its inhabitants." They sprinkled a mixture of turmeric powder, oil
+and water upon the birthless Supreme Lord and offered their prayers.
 </p>
 
 </div>
@@ -81,7 +110,7 @@ one.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

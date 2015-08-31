@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,58 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.5.html">10.8.5</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.5</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5"><b>5</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aho 'tiramyam pulinam vayasyah
-sva-keli-sampan mrdulaccha-balukam
-sphutat-saro-gandha-hrtali-patrikadhvani-
-pratidhvana-lasad-drumakulam
-<p></p>
+jyotisam ayanam saksad
+yat taj jnanam atindriyam
+pranitam bhavata yena
+puman veda paravaram
+<br>
 <h2>Synonyms</h2>
-aho--oh; ati-ramyam--very, very beautiful; pulinam--the bank of the river; vayasyah--My dear friends; sva-kelisampat--
-full with all paraphernalia for pastimes of play; mrdula-accha-balukam--the very soft and clean sandy
-bank; sphutat--in full bloom; sarah-gandha--by the aroma of the lotus flower; hrta--attracted; ali--of the
-bumblebees; patrika--and of the birds; dhvani-pratidhvana--the sounds of their chirping and moving and the
-echoes of these sounds; lasat--moving all over; druma-akulam--full of nice trees.
-<p></p>
+jyotisam--knowledge of astrology (along with other aspects of culture in human society, and specifically in
+civilized society, there must be knowledge of astrology); ayanam--the movements of the stars and planets in
+relationship to human society; saksat--directly; yat tat jnanam--such knowledge; ati-indriyam--which an ordinary
+person cannot understand because it is beyond his vision; pranitam bhavata--you have prepared a perfect book of
+knowledge; yena--by which; puman--any person; veda--can understand; para-avaram--the cause and effect of
+destiny.
+<br>
 <h2>Translation</h2>
-My dear friends, just see how this riverbank is extremely beautiful because of its pleasing atmosphere. And just
-see how the blooming lotuses are attracting bees and birds by their aroma. The humming and chirping of the bees
-and birds is echoing throughout the beautiful trees in the forest. Also, here the sands are clean and soft. Therefore,
-this must be considered the best place for our sporting and pastimes.
-<p></p>
+O great saintly person, you have compiled the astrological knowledge by which one can understand past and
+present unseen things. By the strength of this knowledge, any human being can understand what he has done in
+his past life and how it affects his present life. This is known to you.
+<br>
 <h2>Purport</h2>
-The description of Vrndavana forest as given herewith was spoken by Krsna five thousand years ago, and the
-same condition prevailed during the time of the Vaisnava acaryas three or four hundred years ago. Kujat-kokilahamsa-
-sarasa-ganakirne mayurakule. Vrndavana forest is always filled with the chirping and cooing of birds like
-cuckoos (kokila), ducks (hamsa) and cranes (sarasa), and it is also full of peacocks (mayurakule). The same
-sounds and atmosphere still prevail in the area where our Krsna-Balarama temple is situated. Everyone who visits
-this temple is pleased to hear the chirping of the birds as described here (kujat-kokila-hamsa-sarasa).
+The word "destiny" is now defined. Unintelligent persons who do not understand the meaning of life are just like
+animals. Animals do not know the past, present and future of life, nor are they able to understand it. But a human
+being can understand this, if he is sober. Therefore, as stated in Bhagavad-gita (2.13), dhiras tatra na muhyati: a
+sober person is not bewildered. The simple truth is that although life is eternal, in this material world one changes
+from one body to another. Foolish people, especially in this age, do not understand this simple truth. Krsna says:
+dehino 'smin yatha dehe
+kaumaram yauvanam jara
+tatha dehantara-praptir
+dhiras tatra na muhyati
+"As the embodied soul continually passes, in this body, from boyhood to youth to old age, the soul similarly
+passes into another body at death. The self-realized soul is not bewildered by such a change." (Bg. 2.13) Krsna, the
+greatest authority, says that the body will change. And as soon as the body changes, one's whole program of work
+changes also. Today I am a human being or a great personality, but with a little deviation from nature's law, I shall
+have to accept a different type of body. Today I am a human being, but tomorrow I may become a dog, and then
+whatever activities I have performed in this life will be a failure. This simple truth is now rarely understood, but
+one who is a dhira can understand this. Those in this material world for material enjoyment should know that
+because their present position will cease to exist, they must be careful in how they act. This is also stated by
+Rsabhadeva. Na sadhu manye yata atmano 'yam asann api klesada asa dehah (Bhag. 5.5.4). Although this body is
+temporary, as long as we have to live in this body we must suffer. Whether one has a short life or a long life, one
+must suffer the threefold miseries of material life. Therefore any gentleman, dhira, must be interested in jyotisa,
+astrology.
+Nanda Maharaja was trying to take advantage of the opportunity afforded by Gargamuni's presence, for
+Gargamuni was a great authority in this knowledge of astrology, by which one can see the unseen events of past,
+present and future. It is the duty of a father to understand the astrological position of his children and do what is
+needed for their happiness. Now, taking advantage of the opportunity afforded by the presence of Gargamuni,
+Nanda Maharaja suggested that Gargamuni prepare a horoscope for Nanda's two sons, Krsna and Balarama.
 </p>
 
 </div>
@@ -81,7 +140,7 @@ this temple is pleased to hear the chirping of the birds as described here (kuja
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

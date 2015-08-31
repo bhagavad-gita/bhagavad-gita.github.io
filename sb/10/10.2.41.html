@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.41.html">10.2.41</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.41</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/41"><b>41</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vipra gavas ca vedas ca
-tapah satyam damah samah
-sraddha daya titiksa ca
-kratavas ca hares tanuh
-<p></p>
+distyamba te kuksi-gatah parah puman
+amsena saksad bhagavan bhavaya nah
+mabhud bhayam bhoja-pater mumursor
+gopta yadunam bhavita tavatmajah
+<br>
 <h2>Synonyms</h2>
-viprah--the brahmanas; gavah ca--and the cows; vedah ca--and the Vedic knowledge; tapah--austerity; satyam--
-truthfulness; damah--control of the senses; samah--control of the mind; sraddha--faith; daya--mercy; titiksa--
-tolerance; ca--also; kratavah ca--as well as sacrifices; hareh tanuh--are the different parts of the body of Lord Visnu.
-<p></p>
+distya--by fortune; amba--O mother; te--your; kuksi-gatah--in the womb; parah--the Supreme; puman--
+Personality of Godhead; amsena--with all His energies, His parts and parcels; saksat--directly; bhagavan--the
+Supreme Personality of Godhead; bhavaya--for the auspiciousness; nah--of all of us; ma abhut--never be; bhayam--
+fearful; bhoja-pateh--from Kamsa, King of the Bhoja dynasty; mumursoh--who has decided to be killed by the Lord;
+gopta--the protector; yadunam--of the Yadu dynasty; bhavita--will become; tava atmajah--your son.
+<br>
 <h2>Translation</h2>
-The brahmanas, the cows, Vedic knowledge, austerity, truthfulness, control of the mind and senses, faith, mercy,
-tolerance and sacrifice are the different parts of the body of Lord Visnu, and they are the paraphernalia for a godly
-civilization.
-<p></p>
+O mother Devaki, by your good fortune and ours, the Supreme Personality of Godhead Himself, with all His
+plenary portions, such as Baladeva, is now within your womb. Therefore you need not fear Kamsa, who has
+decided to be killed by the Lord. Your eternal son, Krsna, will be the protector of the entire Yadu dynasty.
+<br>
 <h2>Purport</h2>
-When we offer our obeisances to the Personality of Godhead, we say:
-namo brahmanya-devaya
-go-brahmana-hitaya ca
-jagad-dhitaya krsnaya
-govindaya namo namah
-When Krsna comes to establish real perfection in the social order, He personally gives protection to the cows and
-the brahmanas (go-brahmana-hitaya ca). This is His first interest because without protection of the brahmanas and
-the cows, there can be no human civilization and no question of happy, peaceful life. Asuras, therefore, are always
-interested in killing the brahmanas and cows. Especially in this age, Kali-yuga, cows are being killed all over the
-world, and as soon as there is a movement to establish brahminical civilization, people in general rebel. Thus they
-regard the Krsna consciousness movement as a form of "brainwashing." How can such envious persons be happy in
-their godless civilization? The Supreme Personality of Godhead punishes them by keeping them in darkness, birth
-after birth, and pushing them lower and lower into wretched conditions of hellish life. The Krsna consciousness
-movement has started a brahminical civilization, but especially when it is introduced in the Western countries, the
-asuras try to impede it in many ways. Nonetheless, we must push forward this movement tolerantly for the benefit
-of human society.
+The words parah puman amsena signify that Krsna is the original Supreme Personality of Godhead. This is the
+verdict of the sastra (krsnas tu bhagavan svayam). Thus the demigods assured Devaki, "Your son is the Supreme
+Personality of Godhead, and He is appearing with Baladeva, His plenary portion. He will give you all protection and
+kill Kamsa, who has decided to continue his enmity toward the Lord and thus be killed by Him."
 </p>
 
 </div>
@@ -88,7 +117,7 @@ of human society.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

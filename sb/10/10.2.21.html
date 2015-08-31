@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.21.html">10.2.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam drstva sahasotthaya
-dehah pranam ivagatam
-pritah priyatamam dorbhyam
-sasvaje prema-vihvalah
-<p></p>
+kim adya tasmin karaniyam asu me
+yad artha-tantro na vihanti vikramam
+striyah svasur gurumatya vadho 'yam
+yasah sriyam hanty anukalam ayuh
+<br>
 <h2>Synonyms</h2>
-tam--him (Vasudeva); drstva--seeing; sahasa--suddenly; utthaya--getting up; dehah--the same body; pranam--life;
-iva--as if; agatam--had returned; pritah--so pleased; priya-tamam--his dear friend and brother; dorbhyam--by his
-two arms; sasvaje--embraced; prema-vihvalah--overwhelmed with love and affection.
-<p></p>
+kim--what; adya--now, immediately; tasmin--in this situation; karaniyam--is to be done; asu--without delay; me--
+my duty; yat--because; artha-tantrah--the Supreme Personality of Godhead, who is always determined to protect
+the sadhus and kill the asadhus; na--does not; vihanti--give up; vikramam--His prowess; striyah--of a woman;
+svasuh--of my sister; guru-matyah--especially when she is pregnant; vadhah ayam--the killing; yasah--fame;
+sriyam--opulence; hanti--will vanquish; anukalam--forever; ayuh--and the duration of life.
+<br>
 <h2>Translation</h2>
-When Nanda Maharaja heard that Vasudeva had come, he was overwhelmed with love and affection, being as
-pleased as if his body had regained its life. Seeing Vasudeva suddenly present, he got up and embraced him with
-both arms.
-<p></p>
+Kamsa thought: What is my duty now? The Supreme Lord, who knows His purpose [paritranaya sadhunam
+vinasaya ca duskrtam], will not give up His prowess. Devaki is a woman, she is my sister, and moreover she is now
+pregnant. If I kill her, my reputation, opulence and duration of life will certainly be vanquished.
+<br>
 <h2>Purport</h2>
-Nanda Maharaja was older than Vasudeva. Therefore Nanda Maharaja embraced him, and Vasudeva offered him
-namaskara.
+According to Vedic principles, a woman, a brahmana, an old man, a child and a cow should never be killed. It
+appears that Kamsa, although a great enemy of the Supreme Personality of Godhead, was aware of the Vedic
+culture and conscious of the fact that the soul transmigrates from one body to another and that one suffers in the
+next life according to the karmas of this life. Therefore he was afraid of killing Devaki, since she was a woman, she
+was his sister, and she was pregnant. A ksatriya becomes famous by performing heroic acts. But what would be
+heroic about killing a woman who, while confined in his custody, was under his shelter? Therefore, he did not
+want to act drastically by killing Devaki. Kamsa's enemy was within Devaki's womb, but killing an enemy in such a
+nescient state would not be an exhibition of prowess. According to ksatriya rules, an enemy should be fought face
+to face and with proper weapons. Then if the enemy is killed, the victor becomes famous. Kamsa very
+conscientiously deliberated upon these facts and therefore refrained from killing Devaki, although he was
+completely confident that his enemy had already appeared within her womb.
 </p>
 
 </div>
@@ -74,7 +124,7 @@ namaskara.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

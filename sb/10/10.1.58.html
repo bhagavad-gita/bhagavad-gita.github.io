@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.58.html">10.1.58</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.58</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/58"><b>58</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 kim duhsaham nu sadhunam
 vidusam kim apeksitam
 kim akaryam kadaryanam
 dustyajam kim dhrtatmanam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 kim--what is; duhsaham--painful; nu--indeed; sadhunam--for saintly persons; vidusam--of learned persons; kim
 apeksitam--what is dependence; kim akaryam--what is forbidden work; kadaryanam--of persons in the lowest
 grade; dustyajam--very difficult to give up; kim--what is; dhrta-atmanam--of persons who are self-realized.
-<p></p>
+<br>
 <h2>Translation</h2>
 What is painful for saintly persons who strictly adhere to the truth? How could there not be independence for
 pure devotees who know the Supreme Lord as the substance? What deeds are forbidden for persons of the lowest
 character? And what cannot be given up for the sake of Lord Krsna by those who have fully surrendered at His
 lotus feet?
-<p></p>
+<br>
 <h2>Purport</h2>
 Since the eighth son of Devaki was to kill Kamsa, one might ask what the need was for Vasudeva to deliver the
 first-born child. The answer is that Vasudeva had promised Kamsa that he would deliver all the children born of
@@ -82,7 +121,7 @@ appear. He begot one child every year so that Krsna's turn to appear would come 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

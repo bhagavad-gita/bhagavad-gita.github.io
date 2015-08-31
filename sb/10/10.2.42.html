@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,77 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.42.html">10.2.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa hi sarva-suradhyakso
-hy asura-dvid guha-sayah
-tan-mula devatah sarvah
-sesvarah sa-catur-mukhah
-ayam vai tad-vadhopayo
-yad rsinam vihimsanam
-<p></p>
+sri-suka uvaca
+ity abhistuya purusam
+yad-rupam anidam yatha
+brahmesanau purodhaya
+devah pratiyayur divam
+<br>
 <h2>Synonyms</h2>
-sah--He (Lord Visnu); hi--indeed; sarva-sura-adhyaksah--the leader of all the demigods; hi--indeed; asura-dvit--
-the enemy of the asuras; guha-sayah--He is the Supersoul within the core of everyone's heart; tat-mulah--taking
-shelter at His lotus feet; devatah--the demigods exist; sarvah--all of them; sa-isvarah--including Lord Siva; sa-catuhmukhah--
-as well as Lord Brahma, who has four faces; ayam--this is; vai--indeed; tat-vadha-upayah--the only means
-of killing Him (Visnu); yat--which; rsinam--of great sages, saintly persons, or Vaisnavas; vihimsanam--suppression
-with all kinds of persecution.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--in this way; abhistuya--offering prayers; purusam--unto the
+Supreme Personality; yat-rupam--whose form; anidam--transcendental; yatha--as; brahma--Lord Brahma; isanau--
+and Lord Siva; purodhaya--keeping them in front; devah--all the demigods; pratiyayuh--returned; divam--to their
+heavenly homes.
+<br>
 <h2>Translation</h2>
-Lord Visnu, the Supersoul within the core of everyone's heart, is the ultimate enemy of the asuras and is therefore
-known as asura-dvit. He is the leader of all the demigods because all the demigods, including Lord Siva and Lord
-Brahma, exist under His protection. The great saintly persons, sages and Vaisnavas also depend upon Him. To
-persecute the Vaisnavas, therefore, is the only way to kill Visnu.
-<p></p>
+After thus offering prayers to the Supreme Personality of Godhead, Lord Visnu, the Transcendence, all the
+demigods, with Lord Brahma and Lord Siva before them, returned to their homes in the heavenly planets.
+<br>
 <h2>Purport</h2>
-The demigods and the Vaisnavas especially are part and parcel of the Supreme Lord, Visnu, because they are
-always obedient to His orders (om tad visnoh paramam padam sada pasyanti surayah). The demoniac followers of
-Kamsa thought that if the Vaisnavas, saintly persons and sages were persecuted, the original body of Visnu would
-naturally be destroyed. Thus they decided to suppress Vaisnavism. The asuras perpetually struggle to persecute the
-Vaisnavas because they do not want Vaisnavism to spread. Vaisnavas preach only devotional service, not
-encouraging karmis, jnanis and yogis, because if one must liberate oneself from material, conditional life, one must
-ultimately become a Vaisnava. Our Krsna consciousness movement is directed with this understanding, and
-therefore the asuras always try to suppress it.
+It is said:
+adyapiha caitanya ei saba lila kare
+yan'ra bhagye thake, se dekhaye nirantare
+(Caitanya-bhagavata, Madhya 23.513)
+The incarnations of the Supreme Personality of Godhead appear continuously, like the waves of a river or an
+ocean. There is no limit to the Lord's incarnations, but they can be perceived only by devotees who are fortunate.
+The devatas, the demigods, fortunately understood the incarnation of the Supreme Personality of Godhead, and
+thus they offered their prayers. Then Lord Siva and Lord Brahma led the demigods in returning to their homes.
+The word kuksi-gatah, meaning "within the womb of Devaki," has been discussed by Sri Jiva Gosvami in his
+Krama-sandarbha commentary. Since it was said at first that Krsna was present within the heart of Vasudeva and
+was transferred to the heart of Devaki, Sri Jiva Gosvami writes, how is it that Krsna was now in the womb? He
+replies that there is no contradiction. From the heart the Lord can go to the womb, or from the womb He can go to
+the heart. Indeed, He can go or stay anywhere. As confirmed in the Brahma-samhita (5.35), andantara-sthaparamanu-
+cayantara-stham govindam adi-purusam tam aham bhajami. The Lord can stay wherever He likes.
+Devaki, therefore, in accordance with the desire of her former life, now had the opportunity to seek the benediction
+of having the Supreme Personality of Godhead as her son, Devaki-nandana.
+Thus end the Bhaktivedanta purports of the Tenth Canto, Second Chapter, of the Srimad-Bhagavatam, entitled
+"Prayers by the Demigods for Lord Krsna in the Womb."
+Chapter Three
+The Birth of Lord Krsna
+As described in this chapter, the Supreme Personality of Godhead, Krsna, Hari in His original form, appeared as
+Visnu so that His father and mother could understand that their son was the Supreme Personality of Godhead.
+Because they were afraid of Kamsa, when the Lord appeared as an ordinary child they took Him to Gokula, the
+home of Nanda Maharaja.
+Mother Devaki, being fully transcendental, sac-cid-ananda, does not belong to this material world. Thus the
+Supreme Personality of Godhead appeared with four hands, as if born from her womb. Upon seeing the Lord in
+that Visnu form, Vasudeva was struck with wonder, and in transcendental happiness he and Devaki mentally gave
+ten thousand cows in charity to the brahmanas. Vasudeva then offered prayers to the Lord, addressing Him as the
+Supreme Person, Parabrahman, the Supersoul, who is beyond duality and who is internally and externally allpervading.
+The Lord, the cause of all causes, is beyond material existence, although He is the creator of this
+material world. When He enters this world as Paramatma, He is all-pervading (andantara-stha-paramanucayantara-
+stham), yet He is transcendentally situated. For the creation, maintenance and annihilation of this
+material world, the Lord appears as the guna-avataras--Brahma, Visnu and Mahesvara. Thus Vasudeva offered
+prayers full of meaning to the Supreme Personality of Godhead. Devaki followed her husband by offering prayers
+describing the transcendental nature of the Lord. Fearing Kamsa and desiring that the Lord not be understood by
+atheistic and materialistic nondevotees, she prayed that the Lord withdraw His transcendental four-armed form and
+appear like an ordinary child with two hands.
+The Lord reminded Vasudeva and Devaki of two other incarnations in which He had appeared as their son. He
+had appeared as Prsnigarbha and Vamanadeva, and now this was the third time He was appearing as the son of
+Devaki to fulfill their desire. The Lord then decided to leave the residence of Vasudeva and Devaki, in the prison
+house of Kamsa, and at this very time, Yogamaya took birth as the daughter of Yasoda. By the arrangement of
+Yogamaya, Vasudeva was able to leave the prison house and save the child from the hands of Kamsa. When
+Vasudeva brought Krsna to the house of Nanda Maharaja, he saw that by Yogamaya's arrangement, Yasoda, as well
+as everyone else, was deeply asleep. Thus he exchanged the babies, taking Yogamaya from Yasoda's lap and placing
+Krsna there instead. Then Vasudeva returned to his own place, having taken Yogamaya as his daughter. He placed
+Yogamaya on Devaki's bed and prepared to be a prisoner as before. In Gokula, Yasoda could not understand
+whether she had given birth to a male or a female child.
 </p>
 
 </div>
@@ -86,7 +159,7 @@ therefore the asuras always try to suppress it.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.28.html">10.5.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatra sriya paramaya kakubhah sphurantau
-siddhav upetya kujayor iva jata-vedah
-krsnam pranamya sirasakhila-loka-natham
-baddhanjali virajasav idam ucatuh sma
-<p></p>
+pumsas tri-vargo vihitah
+suhrdo hy anubhavitah
+na tesu klisyamanesu
+tri-vargo 'rthaya kalpate
+<br>
 <h2>Synonyms</h2>
-tatra--there, on the very spot where the two arjunas fell; sriya--with beautification; paramaya--superexcellent;
-kakubhah--all directions; sphurantau--illuminating by effulgence; siddhau--two perfect persons; upetya--then
-coming out; kujayoh--from between the two trees; iva--like; jata-vedah--fire personified; krsnam--unto Lord Krsna;
-pranamya--offering obeisances; sirasa--with the head; akhila-loka-natham--to the Supreme Person, the controller of
-everything; baddha-anjali--with folded hands; virajasau--fully cleansed of the mode of ignorance; idam--the
-following words; ucatuh sma--uttered.
-<p></p>
+pumsah--of a person; tri-vargah--the three aims of life (religion, economic development and sense gratification);
+vihitah--enjoined according to Vedic ritualistic ceremonies; suhrdah--toward relatives and friends; hi--indeed;
+anubhavitah--when they are properly in line; na--not; tesu--in them; klisyamanesu--if they are actually in any
+difficulty; tri-vargah--these three aims of life; arthaya--for any purpose; kalpate--does become so.
+<br>
 <h2>Translation</h2>
-Thereafter, in that very place where the two arjuna trees had fallen, two great, perfect personalities, who appeared
-like fire personified, came out of the two trees. The effulgence of their beauty illuminating all directions, with
-bowed heads they offered obeisances to Krsna, and with hands folded they spoke the following words.
+When one's friends and relatives are properly situated, one's religion, economic development and sense
+gratification, as described in the Vedic literatures, are beneficial. Otherwise, if one's friends and relatives are in
+distress, these three cannot offer any happiness.
+<br>
+<h2>Purport</h2>
+Vasudeva regretfully informed Nanda Maharaja that although he had his wife and children, he could not properly
+discharge his duty of maintaining them and was therefore unhappy.
 </p>
 
 </div>
@@ -73,7 +114,7 @@ bowed heads they offered obeisances to Krsna, and with hands folded they spoke t
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

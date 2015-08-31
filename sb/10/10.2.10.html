@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,51 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.10.html">10.2.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nava-kunkuma-kinjalkamukha-
-pankaja-bhutayah
-balibhis tvaritam jagmuh
-prthu-sronyas calat-kucah
-<p></p>
+arcisyanti manusyas tvam
+sarva-kama-varesvarim
+dhupopahara-balibhih
+sarva-kama-vara-pradam
+<br>
 <h2>Synonyms</h2>
-nava-kunkuma-kinjalka--with saffron and newly grown kunkuma flower; mukha-pankaja-bhutayah--exhibiting
-an extraordinary beauty in their lotuslike faces; balibhih--with presentations in their hands; tvaritam--very quickly;
-jagmuh--went (to the house of mother Yasoda); prthu-sronyah--bearing full hips, fulfilling womanly beauty; calatkucah--
-their developed breasts were moving.
-<p></p>
+arcisyanti--will worship; manusyah--human society; tvam--unto you; sarva-kama-vara-isvarim--because you are
+the best of the demigods who can fulfill all material desires; dhupa--by incense; upahara--by presentations;
+balibhih--by different types of worship through sacrifice; sarva-kama--of all material desires; vara--the blessings;
+pradam--one who can bestow.
+<br>
 <h2>Translation</h2>
-Their lotuslike faces extraordinarily beautiful, being decorated with saffron and newly grown kunkuma, the
-wives of the cowherd men hurried to the house of mother Yasoda with presentations in their hands. Because of
-natural beauty, the wives had full hips and full breasts, which moved as they hurried along.
-<p></p>
+By sacrifices of animals, ordinary human beings will worship you gorgeously, with various paraphernalia, because
+you are supreme in fulfilling the material desires of everyone.
+<br>
 <h2>Purport</h2>
-The cowherd men and women in the villages lived a very natural life, and the women developed a natural
-feminine beauty, with full hips and breasts. Because women in modern civilization do not live naturally, their hips
-and breasts do not develop this natural fullness. Because of artificial living, women have lost their natural beauty,
-although they claim to be independent and advanced in material civilization. This description of the village women
-gives a clear example of the contrast between natural life and the artificial life of a condemned society, such as that
-of the Western countries, where topless, bottomless beauty may be easily purchased in clubs and shops and for
-public advertisements. The word balibhih indicates that the women were carrying gold coins, jeweled necklaces,
-nice cloths, newly grown grass, sandalwood pulp, flower garlands and similar offerings on plates made of gold.
-Such offerings are called bali. The words tvaritam jagmuh indicate how happy the village women were to
-understand that mother Yasoda had given birth to a wonderful child known as Krsna.
+As stated in Bhagavad-gita (7.20), kamais tais tair hrta jnanah prapadyante 'nya-devatah: "Those whose minds are
+distorted by material desires surrender unto demigods." Therefore the word manusya, meaning "human being,"
+here refers to one who does not know the actual goal of life. Such a person wants to enjoy the material world by
+taking birth in a highly elevated family with the benefits of education, beauty and immense wealth, which in this
+material world are desirable. One who has forgotten the real aim of life may worship goddess Durga, maya-sakti,
+under various names, for different purposes, and in different places. As there are many holy places for the worship
+of Krsna, there are also many holy places in India for the worship of Durgadevi, or Mayadevi, who took birth as the
+daughter of Yasoda. After cheating Kamsa, Mayadevi dispersed herself to various places, especially in Vindhyacala,
+to accept regular worship from ordinary men. A human being should actually be interested in understanding atmatattva,
+the truth of atma, the spirit soul, and Paramatma, the supreme soul. Those who are interested in atma-tattva
+worship the Supreme Personality of Godhead (yasmin vijnate sarvam evam vijnatam bhavati). However, as
+explained in the next verse of this chapter, those who cannot understand atma-tattva (apasyatam atma-tattvam)
+worship Yogamaya in her different features. Therefore Srimad-Bhagavatam (2.1.2) says:
+srotavyadini rajendra
+nrnam santi sahasrasah
+apasyatam atma-tattvam
+grhesu grha-medhinam
+"Those persons who are materially engrossed, being blind to the knowledge of ultimate truth, have many subject
+matters for hearing in human society, O Emperor." Those who are interested in remaining in this material world
+and are not interested in spiritual salvation have many duties, but for one who is interested in spiritual salvation,
+the only duty is to surrender fully unto Krsna (sarva-dharman parityajya mam ekam saranam vraja). Such a person
+is not interested in material enjoyment.
 </p>
 
 </div>
@@ -83,7 +133,7 @@ understand that mother Yasoda had given birth to a wonderful child known as Krsn
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

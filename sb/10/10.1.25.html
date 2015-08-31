@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,69 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.25.html">10.1.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-naste loke dvi-parardhavasane
-maha-bhutesv adi-bhutam gatesu
-vyakte 'vyaktam kala-vegena yate
-bhavan ekah sisyate 'sesa-samjnah
-<p></p>
+visnor maya bhagavati
+yaya sammohitam jagat
+adista prabhunamsena
+karyarthe sambhavisyati
+<br>
 <h2>Synonyms</h2>
-naste--after the annihilation; loke--of the cosmic manifestation; dvi-parardha-avasane--after millions and millions
-of years (the life of Brahma); maha-bhutesu--when the five primary elements (earth, water, fire, air and ether); adibhutam
-gatesu--enter within the subtle elements of sense perception; vyakte--when everything manifested;
-avyaktam--into the unmanifested; kala-vegena--by the force of time; yate--enters; bhavan--Your Lordship; ekah--
-only one; sisyate--remains; asesa-samjnah--the same one with different names.
-<p></p>
+visnoh maya--the potency of the Supreme Personality of Godhead, Visnu; bhagavati--as good as Bhagavan and
+therefore known as Bhagavati; yaya--by whom; sammohitam--captivated; jagat--all the worlds, both material and
+spiritual; adista--being ordered; prabhuna--by the master; amsena--with her different potential factors; karyaarthe--
+for executing business; sambhavisyati--would also appear.
+<br>
 <h2>Translation</h2>
-After millions of years, at the time of cosmic annihilation, when everything, manifested and unmanifested, is
-annihilated by the force of time, the five gross elements enter into the subtle conception, and the manifested
-categories enter into the unmanifested substance. At that time, You alone remain, and You are known as Ananta
-Sesa-naga.
-<p></p>
+The potency of the Lord, known as visnu-maya, who is as good as the Supreme Personality of Godhead, will also
+appear with Lord Krsna. This potency, acting in different capacities, captivates all the worlds, both material and
+spiritual. At the request of her master, she will appear with her different potencies in order to execute the work of
+the Lord.
+<br>
 <h2>Purport</h2>
-At the time of annihilation, the five gross elements--earth, water, fire, air and ether--enter into the mind,
-intelligence and false ego (ahankara), and the entire cosmic manifestation enters into the spiritual energy of the
-Supreme Personality of Godhead, who alone remains as the origin of everything. The Lord is therefore known as
-Sesa-naga, as Adi-purusa and by many other names.
-Devaki therefore prayed, "After many millions of years, when Lord Brahma comes to the end of his life, the
-annihilation of the cosmic manifestation takes place. At that time the five elements--namely earth, water, fire, air
-and ether--enter into the mahat-tattva. The mahat-tattva again enters, by the force of time, into the nonmanifested
-total material energy; the total material energy enters into the energetic pradhana, and the pradhana enters into
-You. Therefore after the annihilation of the whole cosmic manifestation, You alone remain with Your
-transcendental name, form, quality and paraphernalia.
-"My Lord, I offer my respectful obeisances unto You because You are the director of the unmanifested total
-energy, and the ultimate reservoir of the material nature. My Lord, the whole cosmic manifestation is under the
-influence of time, beginning from the moment up to the duration of the year. All act under Your direction. You are
-the original director of everything and the reservoir of all potent energies."
+Parasya saktir vividhaiva sruyate (Svetasvatara Upanisad 6.8). In the Vedas it is said that the potencies of the
+Supreme Personality of Godhead are called by different names, such as yogamaya and mahamaya. Ultimately,
+however, the Lord's potency is one, exactly as electric potency is one although it can act both to cool and to heat.
+The Lord's potency acts in both the spiritual and material worlds. In the spiritual world the Lord's potency works
+as yogamaya, and in the material world the same potency works as mahamaya, exactly as electricity works in both a
+heater and a cooler. In the material world, this potency, working as mahamaya, acts upon the conditioned souls to
+deprive them more and more of devotional service. It is said, yaya sammohito jiva atmanam tri-gunatmakam. In the
+material world the conditioned soul thinks of himself as a product of tri-guna, the three modes of material nature.
+This is the bodily conception of life. Because of associating with the three gunas of the material potency, everyone
+identifies himself with his body. Someone is thinking he is a brahmana, someone a ksatriya, and someone a vaisya
+or sudra. Actually, however, one is neither a brahmana, a ksatriya, a vaisya nor a sudra; one is part and parcel of
+the Supreme Lord (mamaivamsah), but because of being covered by the material energy, mahamaya, one identifies
+himself in these different ways. When the conditioned soul becomes liberated, however, he thinks himself an
+eternal servant of Krsna. Jivera 'svarupa' haya--krsnera 'nitya-dasa.' When he comes to that position, the same
+potency, acting as yogamaya, increasingly helps him become purified and devote his energy to the service of the
+Lord.
+In either case, whether the soul is conditioned or liberated, the Lord is supreme. As stated in Bhagavad-gita
+(9.10), mayadhyaksena prakrtih suyate sa-caracaram: it is by the order of the Supreme Personality of Godhead that
+the material energy, mahamaya, works upon the conditioned soul.
+prakrteh kriyamanani
+gunaih karmani sarvasah
+ahankara-vimudhatma
+kartaham iti manyate
+"The bewildered spirit soul, under the influence of the three modes of material nature, thinks himself to be the
+doer of activities which are in actuality carried out by nature." (Bg. 3.27) Within conditioned life, no one has
+freedom, but because one is bewildered, being subject to the rule of mahamaya, one foolishly thinks himself
+independent (ahankara-vimudhatma kartaham iti manyate). But when the conditioned soul becomes liberated by
+executing devotional service, he is given a greater and greater chance to relish a relationship with the Supreme
+Personality of Godhead in different transcendental statuses, such as dasya-rasa, sakhya-rasa, vatsalya-rasa and
+madhurya-rasa.
+Thus the Lord's potency, visnu-maya, has two features--avaranika and unmukha. When the Lord appeared, His
+potency came with Him and acted in different ways. She acted as yogamaya with Yasoda, Devaki and other intimate
+relations of the Lord, and she acted in a different way with Kamsa, Salva and other asuras. By the order of Lord
+Krsna, His potency yogamaya came with Him and exhibited different activities according to the time and
+circumstances. Karyarthe sambhavisyati. Yogamaya acted differently to execute different purposes desired by the
+Lord. As confirmed in Bhagavad-gita (9.13), mahatmanas tu mam partha daivim prakrtim asritah. The mahatmas,
+who fully surrender to the lotus feet of the Lord, are directed by yogamaya, whereas the duratmas, those who are
+devoid of devotional service, are directed by mahamaya.
 </p>
 
 </div>
@@ -89,7 +151,7 @@ the original director of everything and the reservoir of all potent energies."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

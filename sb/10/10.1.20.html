@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,63 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.20.html">10.1.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sa tvam tri-loka-sthitaye sva-mayaya
-bibharsi suklam khalu varnam atmanah
-sargaya raktam rajasopabrmhitam
-krsnam ca varnam tamasa janatyaye
-<p></p>
+tatra gatva jagannatham
+deva-devam vrsakapim
+purusam purusa-suktena
+upatasthe samahitah
+<br>
 <h2>Synonyms</h2>
-sah tvam--Your Lordship, who are the same person, the Transcendence; tri-loka-sthitaye--to maintain the three
-worlds, the upper, middle and lower planetary systems; sva-mayaya--by Your personal energy (atma-mayaya);
-bibharsi--assume; suklam--the white form of Visnu in goodness; khalu--as well as; varnam--color; atmanah--of the
-same category as You (visnu-tattva); sargaya--for the creation of the entire world; raktam--the reddish color of rajoguna;
-rajasa--with the quality of passion; upabrmhitam--being charged; krsnam ca--and the quality of darkness;
-varnam--the color; tamasa--which is surrounded by ignorance; jana-atyaye--for the ultimate destruction of the
-entire creation.
-<p></p>
+tatra--there (on the shore of the ocean of milk); gatva--after going; jagannatham--unto the master of the entire
+universe, the Supreme Being; deva-devam--the Supreme God of all gods; vrsakapim--the Supreme Person, Visnu,
+who provides for everyone and diminishes everyone's suffering; purusam--the Supreme Person; purusa-suktena--
+with the Vedic mantra known as purusa-sukta; upatasthe--worshiped; samahitah--with full attention.
+<br>
 <h2>Translation</h2>
-My Lord, Your form is transcendental to the three material modes, yet for the maintenance of the three worlds,
-You assume the white color of Visnu in goodness; for creation, which is surrounded by the quality of passion, You
-appear reddish; and at the end, when there is a need for annihilation, which is surrounded by ignorance, You
-appear blackish.
-<p></p>
+After reaching the shore of the ocean of milk, the demigods worshiped the Supreme Personality of Godhead, Lord
+Visnu, the master of the whole universe, the supreme God of all gods, who provides for everyone and diminishes
+everyone's suffering. With great attention, they worshiped Lord Visnu, who lies on the ocean of milk, by reciting
+the Vedic mantras known as the Purusa-sukta.
+<br>
 <h2>Purport</h2>
-Vasudeva prayed to the Lord, "You are called suklam. Suklam, or 'whiteness,' is the symbolic representation of
-the Absolute Truth because it is unaffected by the material qualities. Lord Brahma is called rakta, or red, because
-Brahma represents the qualities of passion for creation. Darkness is entrusted to Lord Siva because he annihilates
-the cosmos. The creation, annihilation and maintenance of this cosmic manifestation are conducted by Your
-potencies, yet You are always unaffected by those qualities." As confirmed in the Vedas, harir hi nirgunah saksat:
-the Supreme Personality of Godhead is always free from all material qualities. It is also said that the qualities of
-passion and ignorance are nonexistent in the person of the Supreme Lord.
-In this verse, the three colors mentioned--sukla, rakta and krsna--are not to be understood literally, in terms of
-what we experience with our senses, but rather as representatives of sattva-guna, rajo-guna and tamo-guna. After
-all, sometimes we see that a duck is white, although it is in tamo-guna, the mode of ignorance. Illustrating the logic
-called bakandha-nyaya, the duck is such a fool that it runs after the testicles of a bull, thinking them to be a
-hanging fish that can be taken when it drops. Thus the duck is always in darkness. Vyasadeva, however, the
-compiler of the Vedic literature, is blackish, but this does not mean that he is in tamo-guna; rather, he is in the
-highest position of sattva-guna, beyond the material modes of nature. Sometimes these colors (sukla-raktas tatha
-pitah) are used to designate the brahmanas, ksatriyas, vaisyas and sudras. Lord Ksirodakasayi Visnu is celebrated as
-possessing a blackish color, Lord Siva is whitish, and Lord Brahma is reddish, but according to Srila Sanatana
-Gosvami in the Vaisnava-tosani-tika, this exhibition of colors is not what is referred to here.
-The real understanding of sukla, rakta and krsna is as follows. The Lord is always transcendental, but for the sake
-of creation He assumes the color rakta as Lord Brahma. Again, sometimes the Lord becomes angry. As He says in
-Bhagavad-gita (16.19):
-tan aham dvisatah kruran
-samsaresu naradhaman
-ksipamy ajasram asubhan
-asurisv eva yonisu
-"Those who are envious and mischievous, who are the lowest among men, are cast by Me into the ocean of
-material existence, into various demoniac species of life." To destroy the demons, the Lord becomes angry, and
-therefore He assumes the form of Lord Siva. In summary, the Supreme personality of Godhead is always beyond
-the material qualities, and we should not be misled into thinking otherwise simply because of sense perception.
-One must understand the position of the Lord through the authorities, or mahajanas. As stated in Srimad-
-Bhagavatam (1.3.28), ete camsa-kalah pumsah krsnas tu bhagavan svayam.
+The demigods, such as Lord Brahma, Lord Siva, King Indra, Candra and Surya, are all subordinate to the
+Supreme Personality of Godhead. Aside from the demigods, even in human society there are many influential
+personalities supervising various businesses or establishments. Lord Visnu, however, is the God of gods
+(paramesvara). He is parama-purusa, the Supreme Being, Paramatma. As confirmed in the Brahma-samhita (5.1),
+isvarah paramah krsnah sac-cid-ananda-vigrahah: "Krsna, known as Govinda, is the supreme controller. He has an
+eternal, blissful, spiritual body." No one is equal to or greater than the Supreme Personality of Godhead, and
+therefore He is described here by many words: jagannatha, deva-deva, vrsakapi and purusa. The supremacy of Lord
+Visnu is also confirmed in Bhagavad-gita (10.12) in this statement by Arjuna:
+param brahma param dhama
+pavitram paramam bhavan
+purusam sasvatam divyam
+adi-devam ajam vibhum
+"You are the Supreme Brahman, the ultimate, the supreme abode and purifier, the Absolute Truth and the eternal
+divine person. You are the primal God, transcendental and original, and You are the unborn and all-pervading
+beauty." Krsna is adi-purusa, the original Personality of Godhead (govindam adi-purusam tam aham bhajami).
+Visnu is a plenary expansion of Lord Krsna, and all the visnu-tattvas are paramesvara, deva-deva.
 </p>
 
 </div>
@@ -107,7 +129,7 @@ Bhagavatam (1.3.28), ete camsa-kalah pumsah krsnas tu bhagavan svayam.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.38.html">10.2.38</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.38</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38"><b>38</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-yathamayo 'nge samupeksito nrbhir
-na sakyate rudha-padas cikitsitum
-yathendriya-grama upeksitas tatha
-ripur mahan baddha-balo na calyate
-<p></p>
+distya hare 'sya bhavatah pado bhuvo
+bharo 'panitas tava janmanesituh
+distyankitam tvat-padakaih susobhanair
+draksyama gam dyam ca tavanukampitam
+<br>
 <h2>Synonyms</h2>
-yatha--as; amayah--a disease; ange--in the body; samupeksitah--being neglected; nrbhih--by men; na--not;
-sakyate--is able; rudha-padah--when it is acute; cikitsitum--to be treated; yatha--and as; indriya-gramah--the senses;
-upeksitah--not controlled in the beginning; tatha--similarly; ripuh mahan--a great enemy; baddha-balah--if he
-becomes strong; na--not; calyate--can be controlled.
-<p></p>
+distya--by fortune; hare--O Lord; asyah--of this (world); bhavatah--of Your Lordship; padah--of the place;
+bhuvah--on this earth; bharah--the burden created by the demons; apanitah--now removed; tava--of Your Lordship;
+janmana--by appearance as an incarnation; isituh--You, the controller of everything; distya--and by fortune;
+ankitam--marked; tvat-padakaih--by Your lotus feet; su-sobhanaih--which are transcendentally decorated with the
+marks of conchshell, disc, lotus and club; draksyama--we shall surely observe; gam--upon this earth; dyam ca--in
+heaven also; tava anukampitam--due to Your causeless mercy upon us.
+<br>
 <h2>Translation</h2>
-As a disease, if initially neglected, becomes acute and impossible to cure, or as the senses, if not controlled at
-first, are impossible to control later, an enemy, if neglected in the beginning, later becomes insurmountable.
+O Lord, we are fortunate because the heavy burden of the demons upon this earth is immediately removed by
+Your appearance. Indeed, we are certainly fortunate, for we shall be able to see upon this earth and in the heavenly
+planets the marks of lotus, conchshell, club and disc that adorn Your lotus feet.
+<br>
+<h2>Purport</h2>
+The soles of the Lord's lotus feet are marked with sankha-cakra-gada-padma--conchshell, disc, club and lotus--
+and also by a flag and a thunderbolt. When Krsna walks on this earth or in the heavenly planets, these marks are
+visible wherever He goes. Vrndavana-dhama is a transcendental place because of Krsna's walking on this land
+frequently. The inhabitants of Vrndavana were fortunate to see these marks here and there. When Akrura went to
+Vrndavana to take Krsna and Balarama away to the festival arranged by Kamsa, upon seeing the marks of the Lord's
+lotus feet on the ground of Vrndavana, he fell down and began to groan. These marks are visible to devotees who
+receive the causeless mercy of the Supreme Personality of Godhead (tavanukampitam). The demigods were jubilant
+not only because the appearance of the Supreme Lord would do away with the burdensome demons, but also
+because they would be able to see upon the ground the transcendental marks from the soles of the Lord's lotus feet.
+The gopis always thought of the Lord's lotus feet when He was walking in the pasturing grounds, and, as described
+in the previous verse, simply by thinking of the Lord's lotus feet, the gopis were fully absorbed in transcendence
+(avista-ceta na bhavaya kalpate). Like the gopis, one who is always absorbed in thought of the Lord is beyond the
+material platform and will not remain in this material world. It is our duty, therefore, always to hear, chant and
+think about the Lord's lotus feet, as actually done by Vaisnavas who have decided to live in Vrndavana always and
+think of the Lord's lotus feet twenty-four hours a day.
 </p>
 
 </div>
@@ -70,7 +129,7 @@ first, are impossible to control later, an enemy, if neglected in the beginning,
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

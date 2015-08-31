@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.19.html">10.7.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-aho mitrani gadata
-sattva-kutam purah sthitam
-asmat-sangrasana-vyattavyala-
-tundayate na va
-<p></p>
+bhumau nidhaya tam gopi
+vismita bhara-pidita
+maha-purusam adadhyau
+jagatam asa karmasu
+<br>
 <h2>Synonyms</h2>
-aho--oh; mitrani--friends; gadata--just let us know; sattva-kutam--dead python; purah sthitam--as it is just before
-us all; asmat--all of us; sangrasana--to devour us altogether; vyatta-vyala-tunda-yate--the python has spread its
-mouth; na va--whether it is a fact or not.
-<p></p>
+bhumau--on the ground; nidhaya--placing; tam--the child; gopi--mother Yasoda; vismita--being astonished;
+bhara-pidita--being aggrieved by the weight of the child; maha-purusam--Lord Visnu, Narayana; adadhyau--took
+shelter of; jagatam--as if the weight of the whole world; asa--engaged herself; karmasu--in other household affairs.
+<br>
 <h2>Translation</h2>
-The boys said: Dear friends, is this creature dead, or is it actually a living python with its mouth spread wide just
-to swallow us all? Kindly clear up this doubt.
-<p></p>
+Feeling the child to be as heavy as the entire universe and therefore being anxious, thinking that perhaps the
+child was being attacked by some other ghost or demon, the astonished mother Yasoda put the child down on the
+ground and began to think of Narayana. Foreseeing disturbances, she called for the brahmanas to counteract this
+heaviness, and then she engaged in her other household affairs. She had no alternative than to remember the lotus
+feet of Narayana, for she could not understand that Krsna was the original source of everything.
+<br>
 <h2>Purport</h2>
-The friends began to discuss among themselves the reality of the wonderful creature laying before them. Was it
-dead, or was it actually a living python trying to swallow them up?
+Mother Yasoda did not understand that Krsna is the heaviest of all heavy things and that Krsna rests within
+everything (mat-sthani sarva-bhutani). As confirmed in Bhagavad-gita (9.4), maya tatam idam sarvam jagad
+avyakta-murtina: Krsna is everywhere in His impersonal form, and everything rests upon Him. Nonetheless, na
+caham tesv avasthitah: Krsna is not everywhere. Mother Yasoda was unable to understand this philosophy because
+she was dealing with Krsna as His real mother by the arrangement of yogamaya. Not understanding the importance
+of Krsna, she could only seek shelter of Narayana for Krsna's safety and call the brahmanas to counteract the
+situation.
 </p>
 
 </div>
@@ -73,7 +120,7 @@ dead, or was it actually a living python trying to swallow them up?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

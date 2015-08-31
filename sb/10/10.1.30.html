@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.30.html">10.1.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-upasamhara visvatmann
-ado rupam alaukikam
-sankha-cakra-gada-padmasriya
-justam catur-bhujam
-<p></p>
+ugrasena-sutah kamsah
+svasuh priya-cikirsaya
+rasmin hayanam jagraha
+raukmai ratha-satair vrtah
+<br>
 <h2>Synonyms</h2>
-upasamhara--withdraw; visvatman--O all-pervading Supreme Personality of Godhead; adah--that; rupam--form;
-alaukikam--which is unnatural in this world; sankha-cakra-gada-padma--of the conchshell, disc, club and lotus;
-sriya--with these opulences; justam--decorated; catuh-bhujam--four hands.
-<p></p>
+ugrasena-sutah--the son of Ugrasena; kamsah--by the name Kamsa; svasuh--of his own sister Devaki; priyacikirsaya--
+to please her on the occasion of her marriage; rasmin--the reins; hayanam--of the horses; jagraha--took;
+raukmaih--made of gold; ratha-sataih--by hundreds of chariots; vrtah--surrounded.
+<br>
 <h2>Translation</h2>
-O my Lord, You are the all-pervading Supreme Personality of Godhead, and Your transcendental four-armed
-form, holding conchshell, disc, club and lotus, is unnatural for this world. Please withdraw this form [and become
-just like a natural human child so that I may try to hide You somewhere].
-<p></p>
-<h2>Purport</h2>
-Devaki was thinking of hiding the Supreme Personality of Godhead and not handing Him over to Kamsa as she
-had all her previous children. Although Vasudeva had promised to hand over every child to Kamsa, this time he
-wanted to break his promise and hide the child somewhere. But because of the Lord's appearance in this surprising
-four-armed form, He would be impossible to hide.
+Kamsa, the son of King Ugrasena, in order to please his sister Devaki on the occasion of her marriage, took
+charge of the reins of the horses and became the chariot driver. He was surrounded by hundreds of golden chariots.
 </p>
 
 </div>
@@ -76,7 +108,7 @@ four-armed form, He would be impossible to hide.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

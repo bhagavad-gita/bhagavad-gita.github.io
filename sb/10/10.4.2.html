@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.2.html">10.4.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam drstva parama-pritah
-pratyutthaya krtanjalih
-anarcadhoksaja-dhiya
-pranipata-purahsaram
-<p></p>
+te tu turnam upavrajya
+devakya garbha-janma tat
+acakhyur bhoja-rajaya
+yad udvignah pratiksate
+<br>
 <h2>Synonyms</h2>
-tam--him (Gargamuni); drstva--after seeing; parama-pritah--Nanda Maharaja was very much pleased;
-pratyutthaya--standing up to receive him; krta-anjalih--with folded hands; anarca--worshiped; adhoksaja-dhiya--
-although Gargamuni was visible to the senses, Nanda Maharaja maintained a very high respect for him; pranipatapurahsaram--
-Nanda Maharaja fell down before him and offered obeisances.
-<p></p>
+te--all the watchmen; tu--indeed; turnam--very quickly; upavrajya--going before (the King); devakyah--of Devaki;
+garbha-janma--the deliverance from the womb; tat--that (child); acakhyuh--submitted; bhoja-rajaya--unto the King
+of the Bhojas, Kamsa; yat--of whom; udvignah--with great anxiety; pratiksate--was waiting (for the child's birth).
+<br>
 <h2>Translation</h2>
-When Nanda Maharaja saw Gargamuni present at his home, Nanda was so pleased that he stood up to receive
-him with folded hands. Although seeing Gargamuni with his eyes, Nanda Maharaja could appreciate that
-Gargamuni was adhoksaja; that is, he was not an ordinary person seen by material senses.
+Thereafter, all the watchmen very quickly approached King Kamsa, the ruler of the Bhoja dynasty, and submitted
+the news of the birth of Devaki's child. Kamsa, who had awaited this news very anxiously, immediately took action.
+<br>
+<h2>Purport</h2>
+Kamsa was very anxiously waiting because of the prophecy that the eighth child of Devaki would kill him. This
+time, naturally, he was awake and waiting, and when the watchmen approached him, he immediately took action
+to kill the child.
 </p>
 
 </div>
@@ -71,7 +113,7 @@ Gargamuni was adhoksaja; that is, he was not an ordinary person seen by material
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

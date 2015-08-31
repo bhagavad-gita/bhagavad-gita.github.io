@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,79 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.22.html">10.2.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pujitah sukham asinah
-prstvanamayam adrtah
-prasakta-dhih svatmajayor
-idam aha visampate
-<p></p>
+sa esa jivan khalu sampareto
+varteta yo 'tyanta-nrsamsitena
+dehe mrte tam manujah sapanti
+ganta tamo 'ndham tanu-manino dhruvam
+<br>
 <h2>Synonyms</h2>
-pujitah--Vasudeva having been so dearly welcomed; sukham asinah--having been given a place to sit comfortably;
-prstva--asking; anamayam--all-auspicious inquiries; adrtah--being honored and respectfully received; prasaktadhih--
-because of his being very much attached; sva-atmajayoh--to his own two sons, Krsna and Balarama; idam--
-the following; aha--inquired; visam-pate--O Maharaja Pariksit.
-<p></p>
+sah--he; esah--that jealous person; jivan--while living; khalu--even; samparetah--is dead; varteta--continues to
+live; yah--anyone who; atyanta--very much; nrsamsitena--by executing cruel activities; dehe--when the body; mrte--
+is finished; tam--him; manujah--all human beings; sapanti--condemn; ganta--he will go; tamah andham--to hellish
+life; tanu-maninah--of a person in the bodily concept of life; dhruvam--without a doubt.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, having thus been received and welcomed by Nanda Maharaja with honor, Vasudeva sat
-down very peacefully and inquired about his own two sons because of intense love for them.
+A person who is very cruel is regarded as dead even while living, for while he is living or after his death, everyone
+condemns him. And after the death of a person in the bodily concept of life, he is undoubtedly transferred to the
+hell known as Andhatama.
+<br>
+<h2>Purport</h2>
+Kamsa considered that if he killed his sister, while living he would be condemned by everyone, and after death he
+would go to the darkest region of hellish life because of his cruelty. It is said that a cruel person like a butcher is
+advised not to live and not to die. While living, a cruel person creates a hellish condition for his next birth, and
+therefore he should not live; but he is also advised not to die, because after death he must go to the darkest region
+of hell. Thus in either circumstance he is condemned. Kamsa, therefore, having good sense about the science of the
+soul's transmigration, deliberately refrained from killing Devaki.
+In this verse the words ganta tamo 'ndham tanu-manino dhruvam are very important and require extensive
+understanding. Srila Jiva Gosvami, in his Vaisnava-tosani-tika, says: tatra tanu-maninah papina iti dehatmabuddhyaiva
+papabhiniveso bhavati. One who lives in the bodily concept, thinking, "I am this body," involves
+himself, by the very nature of this conception, in a life of sinful activities. Anyone living in such a conception is to
+be considered a candidate for hell.
+adanta-gobhir visatam tamisram
+punah punas carvita-carvananam
+(Bhag. > 7.5.30)
+One who is in a bodily concept of life has no control over sense gratification. Such a person can do anything
+sinful to eat, drink, be merry and enjoy a life of sense gratification, not knowing of the soul's transmigration from
+one body to another. Such a person does whatever he likes, whatever he imagines, and therefore, being subject to
+the laws of nature, he suffers miserably again and again in different material bodies.
+yavat kriyas tavad idam mano vai
+karmatmakam yena sarira-bandhah
+(Bhag. 5.5.5)
+In the bodily concept of life, a person is karmanubandha, or conditioned by karma, and as long as the mind is
+absorbed in karma, one must accept a material body. Sarira-bandha, bondage to the material body, is a source of
+misery (klesa-da).
+na sadhu manye yata atmano 'yam
+asann api klesada asa dehah
+Although the body is temporary, it always gives one trouble in many ways, but human civilization is now
+unfortunately based on tanu-mani, the bodily concept of life, by which one thinks, "I belong to this nation," "I
+belong to this group," "I belong to that group," and so on. Each of us has his own ideas, and we are becoming
+increasingly involved, individually, socially, communally and nationally, in the complexities of karmanubandha,
+sinful activities. For the maintenance of the body, men are killing so many other bodies and becoming implicated
+in karmanubandha. Therefore Srila Jiva Gosvami says that tanu-mani, those in the bodily concept of life, are papi,
+sinful persons. For such sinful persons, the ultimate destination is the darkest region of hellish life (ganta tamo
+'ndham). In particular, a person who wants to maintain his body by killing animals is most sinful and cannot
+understand the value of spiritual life. In Bhagavad-gita (16.19-20) the Lord says:
+tan aham dvisatah kruran
+samsaresu naradhaman
+ksipamy ajasram asubhan
+asurisv eva yonisu
+asurim yonim apanna
+mudha janmani janmani
+mam aprapyaiva kaunteya
+tato yanty adhamam gatim
+"Those who are envious and mischievous, who are the lowest among men, are cast by Me into the ocean of
+material existence, into various demoniac species of life. Attaining repeated birth among the species of demoniac
+life, such persons can never approach Me. Gradually they sink down to the most abominable type of existence." A
+human being is meant to understand the value of human life, which is a boon obtained after many, many births.
+Therefore one must free oneself from tanu-mani, the bodily concept of life, and realize the Supreme Personality of
+Godhead.
 </p>
 
 </div>
@@ -70,7 +161,7 @@ down very peacefully and inquired about his own two sons because of intense love
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

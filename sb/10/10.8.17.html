@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.17.html">10.8.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kvapy adrstvantar-vipine
-vatsan palams ca visva-vit
-sarvam vidhi-krtam krsnah
-sahasavajagama ha
-<p></p>
+puranena vraja-pate
+sadhavo dasyu-piditah
+arajake raksyamana
+jigyur dasyun samedhitah
+<br>
 <h2>Synonyms</h2>
-kva api--anywhere; adrstva--not seeing at all; antah-vipine--within the forest; vatsan--the calves; palan ca--and
-their caretakers, the cowherd boys; visva-vit--Krsna, who is aware of everything going on throughout the whole
-cosmic manifestation; sarvam--everything; vidhi-krtam--was executed by Brahma; krsnah--Lord Krsna; sahasa--
-immediately; avajagama ha--could understand.
-<p></p>
+pura--formerly; anena--by Krsna; vraja-pate--O King of Vraja; sadhavah--those who were honest; dasyu-piditah--
+being disturbed by rogues and thieves; arajake--when there was an irregular government; raksyamanah--were
+protected; jigyuh--conquered; dasyun--the rogues and thieves; samedhitah--flourished.
+<br>
 <h2>Translation</h2>
-When Krsna was unable to find the calves and their caretakers, the cowherd boys, anywhere in the forest, He
-could suddenly understand that this was the work of Lord Brahma.
-<p></p>
+O Nanda Maharaja, as recorded in history, when there was an irregular, incapable government, Indra having been
+dethroned, and people were being harassed and disturbed by thieves, this child appeared in order to protect the
+people and enable them to flourish, and He curbed the rogues and thieves.
+<br>
 <h2>Purport</h2>
-Although Krsna is visva-vit, the knower of everything happening in the entire cosmic manifestation, as an
-innocent child He showed ignorance of Brahma's actions, although He could immediately understand that these
-were the doings of Brahma. This pastime is called brahma-vimohana, the bewilderment of Brahma. Brahma was
-already bewildered by Krsna's activities as an innocent child, and now he would be further bewildered.
+Indra is the king of the universe. Demons, thieves and rogues always disturb Indra (indrari-vyakulam lokam), but
+when indraris, the enemies of Indra, become prominent, Krsna appears. Krsnas tu bhagavan svayam. indrarivyakulam
+lokam mrdayanti yuge yuge (Bhag. 1.3.28).
 </p>
 
 </div>
@@ -76,7 +114,7 @@ already bewildered by Krsna's activities as an innocent child, and now he would 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.4.html">10.6.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bala ucur aneneti
-tiryag-gatam ulukhalam
-vikarsata madhya-gena
-purusav apy acaksmahi
-<p></p>
+sa khe-cary ekadotpatya
+putana nanda-gokulam
+yositva mayayatmanam
+pravisat kama-carini
+<br>
 <h2>Synonyms</h2>
-balah--all the other boys; ucuh--said; anena--by Him (Krsna); iti--thus; tiryak--crosswise; gatam--which had
-become; ulukhalam--the wooden mortar; vikarsata--by Krsna, who was dragging; madhya-gena--going between the
-two trees; purusau--two beautiful persons; api--also; acaksmahi--we have seen with our own eyes.
-<p></p>
+sa--that (Putana); khe-cari--who traveled in outer space; ekada--once upon a time; utpatya--was flying; putana--
+the demon Putana; nanda-gokulam--at the place of Nanda Maharaja, Gokula; yositva--converting into a very
+beautiful woman; mayaya--by mystic power; atmanam--herself; pravisat--entered; kama-carini--one who could
+move according to her own desire.
+<br>
 <h2>Translation</h2>
-Then all the cowherd boys said: It is Krsna who has done this. When He was in between the two trees, the mortar
-fell crosswise. Krsna dragged the mortar, and the two trees fell down. After that, two beautiful men came out of the
-trees. We have seen this with our own eyes.
-<p></p>
+Once upon a time, Putana Raksasi, who could move according to her desire and was wandering in outer space,
+converted herself by mystic power into a very beautiful woman and thus entered Gokula, the abode of Nanda
+Maharaja.
+<br>
 <h2>Purport</h2>
-Krsna's playmates wanted to inform Krsna's father of the exact situation by explaining that not only did the trees
-break, but out of the broken trees came two beautiful men. "All these things happened," they said. "We have seen
-them with our own eyes."
+Raksasis learn mystic powers by which they can travel in outer space without machines. In some parts of India
+there are still such mystical witches, who can sit on a stick and use it to fly from one place to another in a very
+short time. This art was known to Putana. Assuming the feature of a very beautiful woman, she entered Nanda
+Maharaja's abode, Gokula.
 </p>
 
 </div>
@@ -75,7 +116,7 @@ them with our own eyes."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

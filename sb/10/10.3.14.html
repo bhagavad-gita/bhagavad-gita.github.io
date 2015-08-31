@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,79 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.14.html">10.3.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-patamano 'pi tad-dehas
-tri-gavyuty-antara-druman
-curnayam asa rajendra
-mahad asit tad adbhutam
-<p></p>
+sa eva svaprakrtyedam
+srstvagre tri-gunatmakam
+tad anu tvam hy apravistah
+pravista iva bhavyase
+<br>
 <h2>Synonyms</h2>
-patamanah api--even while falling down; tat-dehah--her gigantic body; tri-gavyuti-antara--within a limit of twelve
-miles; druman--all kinds of trees; curnayam asa--smashed; rajendra--O King Pariksit; mahat asit--was quite
-gigantic; tat--that body; adbhutam--and very, very wonderful.
-<p></p>
+sah--He (the Supreme Personality of Godhead); eva--indeed; sva-prakrtya--by Your personal energy
+(mayadhyaksena prakrtih suyate sa-caracaram); idam--this material world; srstva--after creating; agre--in the
+beginning; tri-guna-atmakam--made of three modes of energy (sattva-rajas-tamo-guna); tat anu--thereafter; tvam--
+Your Lordship; hi--indeed; apravistah--although You did not enter; pravistah iva--You appear to have entered;
+bhavyase--are so understood.
+<br>
 <h2>Translation</h2>
-O King Pariksit, when the gigantic body of Putana fell to the ground, it smashed all the trees within a limit of
-twelve miles. Appearing in a gigantic body, she was certainly extraordinary.
-<p></p>
+My Lord, You are the same person who in the beginning created this material world by His personal external
+energy. After the creation of this world of three gunas [sattva, rajas and tamas], You appear to have entered it,
+although in fact You have not.
+<br>
 <h2>Purport</h2>
-Because of the grievous hurt imposed upon her by Krsna's sucking her breast, Putana, while dying, not only left
-the room but abandoned the village and fell down in the pasturing ground in her gigantic body.
+In Bhagavad-gita (7.4) the Supreme Personality of Godhead clearly explains:
+bhumir apo 'nalo vayuh
+kham mano buddhir eva ca
+ahankara itiyam me
+bhinna prakrtir astadha
+This material world of three modes of nature--sattva-guna, rajo-guna and tamo-guna--is a composition of earth,
+water, fire, air, mind, intelligence and false ego, all of which are energies coming from Krsna, yet Krsna, being
+always transcendental, is aloof from this material world. Those who are not in pure knowledge think that Krsna is a
+product of matter and that His body is material like ours (avajananti mam mudhah). In fact, however, Krsna is
+always aloof from this material world.
+In the Vedic literature, we find the creation described in relationship to Maha-Visnu. As stated in the Brahmasamhita
+(5.35):
+eko 'py asau racayitum jagad-anda-kotim
+yac-chaktir asti jagad-anda-caya yad-antah
+andantara-stha-paramanu-cayantara-stham
+govindam adi-purusam tam aham bhajami
+"I worship the primeval Lord, Govinda, the original Personality of Godhead. By His partial plenary expansion as
+Maha-Visnu, He enters into material nature. Then He enters every universe as Garbhodakasayi Visnu, and He
+enters all the elements, including every atom of matter, as Ksirodakasayi Visnu. Such manifestations of cosmic
+creation are innumerable, both in the universes and in the individual atoms." Govinda is partially exhibited as
+antaryami, the Supersoul, who enters this material world (andantara-stha) and who is also within the atom. The
+Brahma-samhita (5.48) further says:
+yasyaika-nisvasita-kalam athavalambya
+jivanti loma-vilaja jagad-anda-nathah
+visnur mahan sa iha yasya kala-viseso
+govindam adi-purusam tam aham bhajami
+This verse describes Maha-Visnu as a plenary expansion of Krsna. Maha-Visnu lies on the Causal Ocean, and
+when He exhales, millions of brahmandas, or universes, come from the pores of His body. Then, when Maha-Visnu
+inhales, all these brahmandas disappear. Thus the millions of brahmandas controlled by the Brahmas and other
+demigods come and go in this material world through the breathing of Maha-Visnu.
+Foolish persons think that when Krsna appears as the son of Vasudeva, He is limited like an ordinary child. But
+Vasudeva was aware that although the Lord had appeared as his son, the Lord had not entered Devaki's womb and
+then come out. Rather, the Lord was always there. The Supreme Lord is all-pervading, present within and without.
+pravista iva bhavyase: He only seemed to have entered the womb of Devaki and to have now appeared as
+Vasudeva's child. The expression of this knowledge by Vasudeva indicates that Vasudeva knew how these events
+took place. Vasudeva was certainly a devotee of the Lord in full knowledge, and we must learn from devotees like
+him. Bhagavad-gita (4.34) therefore recommends:
+tad viddhi pranipatena
+pariprasnena sevaya
+upadeksyanti te jnanam
+jnaninas tattva-darsinah
+"Just try to learn the truth by approaching a spiritual master. Inquire from him submissively and render service
+unto him. The self-realized soul can impart knowledge unto you because he has seen the truth." Vasudeva begot
+the Supreme Personality of Godhead, yet he was in full knowledge of how the Supreme Lord appears and
+disappears. He was therefore tattva-darsi, a seer of the truth, because he personally saw how the Supreme Absolute
+Truth appeared as his son. Vasudeva was not in ignorance, thinking that because the Supreme Godhead had
+appeared as his son, the Lord had become limited. The Lord is unlimitedly existing and all-pervading, inside and
+outside. Thus there is no question of His appearance or disappearance.
 </p>
 
 </div>
@@ -73,7 +161,7 @@ the room but abandoned the village and fell down in the pasturing ground in her 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

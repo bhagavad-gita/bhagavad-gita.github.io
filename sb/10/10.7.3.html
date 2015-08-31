@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,45 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.3.html">10.7.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-krsna-vatsair asankhyatair
-yuthi-krtya sva-vatsakan
-carayanto 'rbha-lilabhir
-vijahrus tatra tatra ha
-<p></p>
+athanyad api krsnasya
+tokacaritam adbhutam
+manusam lokam asadya
+taj-jatim anurundhatah
+<br>
 <h2>Synonyms</h2>
-krsna--of Lord Krsna; vatsaih--along with the calves; asankhyataih--unlimited; yuthi-krtya--assembled them; svavatsakan--
-personal calves; carayantah--executing; arbha-lilabhih--by boyhood pastimes; vijahruh--enjoyed; tatra
-tatra--here and there; ha--indeed.
-<p></p>
+atha--also; anyat api--other pastimes also; krsnasya--of child Krsna; toka-acaritam adbhutam--they are also
+wonderful childhood pastimes; manusam--as if playing as a human child; lokam asadya--appearing on this planet
+earth in human society; tat-jatim--exactly like a human child; anurundhatah--who was imitating.
+<br>
 <h2>Translation</h2>
-Along with the cowherd boys and their own groups of calves, Krsna came out with an unlimited number of
-calves assembled. Then all the boys began to sport in the forest in a greatly playful spirit.
-<p></p>
+Please describe other pastimes of Krsna, the Supreme Personality, who appeared on this planet earth, imitating a
+human child and performing wonderful activities like killing Putana.
+<br>
 <h2>Purport</h2>
-In this verse the words krsna-vatsair asankhyataih are significant. The word asankhyata means "unlimited."
-Krsna's calves were unlimited. We may speak of hundreds, thousands, tens of thousands, hundreds of thousands,
-millions, billions, trillions, tens of trillions, and so on, but when we go further to speak of numbers impossible for
-us to count, we are speaking of unlimited numbers. Such unlimited numbers are indicated here by the word
-asankhyataih. Krsna is unlimited, His potency is unlimited, His cows and calves are unlimited, and His space is
-unlimited. Therefore He is described in Bhagavad-gita as Parabrahman. The word brahman means "unlimited," and
-Krsna is the Supreme Unlimited, Parabrahman. Therefore, we should not consider the statements of this verse to be
-mythological. They are factual, but inconceivable. Krsna can accommodate an unlimited number of calves and an
-unlimited measurement of space. This is neither mythological nor false, but if we study Krsna's potency with our
-limited knowledge, that potency will never be possible to understand. Atah sri-krsna-namadi na bhaved grahyam
-indriyaih (Bhakti-rasamrta-sindhu 1.2.109). Our senses cannot perceive how He could keep an unlimited number
-of calves and cows and have unlimited space in which to do so. But this is answered in the Brhad-bhagavatamrta:
-evam prabhoh priyanam ca
-dhamnas ca samayasya ca
-avicintya-prabhavatvad
-atra kincin na durghatam
-Sri Sanatana Gosvami, in the Brhad-bhagavatamrta, states that since everything about Krsna is unlimited, nothing
-is impossible for Him. It is in this sense that we have to understand this verse.
+Maharaja Pariksit requested Sukadeva Gosvami to narrate other childhood pastimes exhibited by Krsna while
+playing as a human child. The Supreme Personality of Godhead incarnates at different times in different planets
+and universes, and according to the nature of those places, He exhibits His unlimited potency. That a child sitting
+on the lap of his mother was able to kill the gigantic Putana is extremely wonderful for the inhabitants of this
+planet, but on other planets the inhabitants are more advanced, and therefore the pastimes the Lord performs there
+are still more wonderful. Krsna's appearance on this planet like a human being makes us more fortunate than the
+demigods in the higher planets, and therefore Maharaja Pariksit was very much interested in hearing about Him.
 </p>
 
 </div>
@@ -89,7 +117,7 @@ is impossible for Him. It is in this sense that we have to understand this verse
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

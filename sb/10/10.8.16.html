@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.16.html">10.8.16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/16"><b>16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato vatsan adrstvaitya
-puline 'pi ca vatsapan
-ubhav api vane krsno
-vicikaya samantatah
-<p></p>
+esa vah sreya adhasyad
+gopa-gokula-nandanah
+anena sarva-durgani
+yuyam anjas tarisyatha
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; vatsan--the calves; adrstva--not seeing there within the forest; etya--after; puline api--to the
-bank of the Yamuna; ca--also; vatsapan--could not see the cowherd boys; ubhau api--both of them (the calves and
-the cowherd boys); vane--within the forest; krsnah--Lord Krsna; vicikaya--searched all over; samantatah--here and
-there.
-<p></p>
+esah--this child; vah--for all of you people; sreyah--the most auspicious; adhasyat--will act all-auspiciously; gopagokula-
+nandanah--just like a cowherd boy, born in a family of cowherd men as the son of the estate of Gokula;
+anena--by Him; sarva-durgani--all kinds of miserable conditions; yuyam--all of you; anjah--easily; tarisyatha--will
+overcome.
+<br>
 <h2>Translation</h2>
-Thereafter, when Krsna was unable to find the calves, He returned to the bank of the river, but there He was also
-unable to see the cowherd boys. Thus He began to search for both the calves and the boys, as if He could not
-understand what had happened.
-<p></p>
+To increase the transcendental bliss of the cowherd men of Gokula, this child will always act auspiciously for
+you. And by His grace only, you will surpass all difficulties.
+<br>
 <h2>Purport</h2>
-Krsna could immediately understand that Brahma had taken away both the calves and the boys, but as an
-innocent child He searched here and there so that Brahma could not understand Krsna's maya. This was all a
-dramatic performance. A player knows everything, but still he plays on the stage in such a way that others do not
-understand him.
+For the cowherd men and the cows, Krsna is the supreme friend. Therefore He is worshiped by the prayer namo
+brahmanya-devaya go-brahmana-hitaya ca. His pastimes in Gokula, His dhama, are always favorable to the
+brahmanas and the cows. His first business is to give all comfort to the cows and the brahmanas. In fact, comfort
+for the brahmanas is secondary, and comfort for the cows is His first concern. Because of His presence, all people
+would overcome all difficulties and always be situated in transcendental bliss.
 </p>
 
 </div>
@@ -77,7 +116,7 @@ understand him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

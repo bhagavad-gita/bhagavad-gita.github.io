@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,61 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.13.html">10.1.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-vasudeva uvaca
-vidito 'si bhavan saksat
-purusah prakrteh parah
-kevalanubhavanandasvarupah
-sarva-buddhi-drk
-<p></p>
+naisatiduhsaha ksun mam
+tyaktodam api badhate
+pibantam tvan-mukhambhojacyutam
+hari-kathamrtam
+<br>
 <h2>Synonyms</h2>
-sri-vasudevah uvaca--Sri Vasudeva prayed; viditah asi--now I am fully conscious of You; bhavan--Your Lordship;
-saksat--directly; purusah--the Supreme Person; prakrteh--to material nature; parah--transcendental, beyond
-everything material; kevala-anubhava-ananda-svarupah--Your form is sac-cid-ananda-vigraha, and whoever
-perceives You becomes transcendentally blissful; sarva-buddhi-drk--the supreme observer, the Supersoul, the
-intelligence of everyone.
-<p></p>
+na--not; esa--all this; ati-duhsaha--extremely difficult to bear; ksut--hunger; mam--unto me; tyakta-udam--even
+after giving up drinking water; api--also; badhate--does not hinder; pibantam--while drinking; tvat-mukhaambhoja-
+cyutam--emanating from your lotus mouth; hari-katha-amrtam--the nectar of topics concerning Krsna.
+<br>
 <h2>Translation</h2>
-Vasudeva said: My Lord, You are the Supreme Person, beyond material existence, and You are the Supersoul.
-Your form can be perceived by transcendental knowledge, by which You can be understood as the Supreme
-Personality of Godhead. I now understand Your position perfectly.
-<p></p>
+Because of my vow on the verge of death, I have given up even drinking water, yet because I am drinking the
+nectar of topics about Krsna, which is flowing from the lotus mouth of Your Lordship, my hunger and thirst, which
+are extremely difficult to bear, cannot hinder me.
+<br>
 <h2>Purport</h2>
-Within Vasudeva's heart, affection for his son and knowledge of the Supreme Lord's transcendental nature both
-awakened In the beginning Vasudeva thought, "Such a beautiful child has been born, but now Kamsa will come
-and kill Him." But when he understood that this was not an ordinary child but the Supreme Personality of
-Godhead, he became fearless. Regarding his son as the Supreme Lord, wonderful in everything, he began offering
-prayers appropriate for the Supreme Lord. Completely free from fear of Kamsa's atrocities, he accepted the child
-simultaneously as an object of affection and as an object of worship by prayers.
+To prepare to meet death in seven days, Maharaja Pariksit gave up all food and drink. As a human being, he was
+certainly both hungry and thirsty, and therefore Sukadeva Gosvami might have wanted to stop narrating the
+transcendental topics of Krsna; but despite his fast, Maharaja Pariksit was not at all fatigued. "The hunger and
+thirst from my fast do not disturb me," he said. "Once when I felt very thirsty, I went to the asrama of Samika Muni
+to drink water, but the muni did not supply it. I therefore wrapped a dead snake over his shoulder, and that is why
+I was cursed by the brahmana boy. Now, however, I am quite fit. I am not at all disturbed by my hunger and
+thirst." This indicates that although on the material platform there are disturbances from hunger and thirst, on the
+spiritual platform there is no such thing as fatigue.
+The entire world is suffering because of spiritual thirst. Every living being is Brahman, or spirit soul, and needs
+spiritual food to satisfy his hunger and thirst. Unfortunately, however, the world is completely unaware of the
+nectar of krsna-katha. The Krsna consciousness movement is therefore a boon to philosophers, religionists and
+people in general. There is certainly a charming attraction in Krsna and krsna-katha. Therefore the Absolute Truth
+is called Krsna, the most attractive.
+The word amrta is also an important reference to the moon, and the word ambuja means "lotus." The pleasing
+moonshine and pleasing fragrance of the lotus combined to bring pleasure to everyone hearing krsna-katha from
+the mouth of Sukadeva Gosvami. As it is said:
+matir na krsne paratah svato va
+mitho 'bhipadyeta grha-vratanam
+adanta-gobhir visatam tamisram
+punah punas carvita-carvananam
+"Because of their uncontrolled senses, persons too addicted to materialistic life make progress toward hellish
+conditions and repeatedly chew that which has already been chewed. Their inclinations toward Krsna are never
+aroused, either by the instructions of others, by their own efforts, or by a combination of both." (Bhag. 7.5.30) At
+the present moment, all of human society is engaged in the business of chewing the chewed (punah punas carvitacarvananam).
+People are prepared to undergo mrtyu-samsara-vartmani, taking birth in one form, dying, accepting
+another form and dying again. To stop this repetition of birth and death, krsna-katha, or Krsna consciousness, is
+absolutely necessary. But unless one hears krsna-katha from a realized soul like Sukadeva Gosvami, one cannot
+relish the nectar of krsna-katha, which puts an end to all material fatigue, and enjoy the blissful life of
+transcendental existence. In relation to the Krsna consciousness movement, we actually see that those who have
+tasted the nectar of krsna-katha lose all material desires, whereas those who cannot understand Krsna or krsnakatha
+regard the Krsna conscious life as "brainwashing" and "mind control." While the devotees enjoy spiritual
+bliss, the nondevotees are surprised that the devotees have forgotten material hankerings.
 </p>
 
 </div>
@@ -81,7 +143,7 @@ simultaneously as an object of affection and as an object of worship by prayers.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.19.html">10.1.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvatto 'sya janma-sthiti-samyaman vibho
-vadanty anihad agunad avikriyat
-tvayisvare brahmani no virudhyate
-tvad-asrayatvad upacaryate gunaih
-<p></p>
+brahma tad-upadharyatha
+saha devais taya saha
+jagama sa-tri-nayanas
+tiram ksira-payo-nidheh
+<br>
 <h2>Synonyms</h2>
-tvattah--are from Your Lordship; asya--of the entire cosmic manifestation; janma--the creation; sthiti--
-maintenance; samyaman--and annihilation; vibho--O my Lord; vadanti--the learned Vedic scholars conclude;
-anihat--who are free from endeavor; agunat--who are unaffected by the modes of material nature; avikriyat--who
-are unchanging in Your spiritual situation; tvayi--in You; isvare--the Supreme Personality of Godhead; brahmani--
-who are Parabrahman, the Supreme Brahman; no--not; virudhyate--there is a contradiction; tvat-asrayatvat--
-because of being controlled by You; upacaryate--things are going on automatically; gunaih--by the operation of the
-material modes.
-<p></p>
+brahma--Lord Brahma; tat-upadharya--understanding everything rightly; atha--thereafter; saha--with; devaih--the
+demigods; taya saha--with mother earth; jagama--approached; sa-tri-nayanah--with Lord Siva, who has three eyes;
+tiram--the shore; ksira-payah-nidheh--of the ocean of milk.
+<br>
 <h2>Translation</h2>
-O my Lord, learned Vedic scholars conclude that the creation, maintenance and annihilation of the entire cosmic
-manifestation are performed by You, who are free from endeavor, unaffected by the modes of material nature, and
-changeless in Your spiritual situation. There are no contradictions in You, who are the Supreme Personality of
-Godhead, Parabrahman. Because the three modes of material nature--sattva, rajas and tamas--are under Your
-control, everything takes place automatically.
-<p></p>
+Thereafter, having heard of the distress of mother earth, Lord Brahma, with mother earth, Lord Siva and all the
+other demigods, approached the shore of the ocean of milk.
+<br>
 <h2>Purport</h2>
-As stated in the Vedas:
-na tasya karyam karanam ca vidyate
-na tat-samas cabhyadhikas ca drsyate
-parasya saktir vividhaiva sruyate
-svabhaviki jnana-bala-kriya ca
-"The Supreme Lord has nothing to do, and no one is found to be equal to or greater than Him, for everything is
-done naturally and systematically by His multifarious energies." (Svetasvatara Upanisad 6.8) Creation, maintenance
-and annihilation are all conducted personally by the Supreme Personality of Godhead, and this is confirmed in
-Bhagavad-gita (mayadhyaksena prakrtih suyate sa-caracaram). Yet ultimately the Lord does not need to do
-anything, and therefore He is nirvikara, changeless. Because everything is done under His direction, He is called
-srsti-karta, the master of creation. Similarly, He is the master of annihilation. When a master sits in one place while
-his servants work in different duties, whatever the servants are doing is ultimately an activity of the master,
-although he is doing nothing (na tasya karyam karanam ca vidyate). The Lord's potencies are so numerous that
-everything is nicely done. Therefore, He is naturally still and is not directly the doer of anything in this material
-world.
+After Lord Brahma understood the precarious condition of the earth, he first visited the demigods headed by Lord
+Indra, who are in charge of the various affairs of this universe, and Lord Siva, who is responsible for annihilation.
+Both maintenance and annihilation go on perpetually, under the order of the Supreme Personality of Godhead. As
+stated in Bhagavad-gita (4.8), paritranaya sadhunam vinasaya ca duskrtam. Those who are obedient to the laws of
+God are protected by different servants and demigods, whereas those who are undesirable are vanquished by Lord
+Siva. Lord Brahma first met all the demigods, including Lord Siva. Then, along with mother earth, they went to the
+shore of the ocean of milk, where Lord Visnu lies on a white island, Svetadvipa.
 </p>
 
 </div>
@@ -93,7 +117,7 @@ world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

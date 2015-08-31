@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.6.html">10.5.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tam drstva vridita devyo
-vivastrah sapa-sankitah
-vasamsi paryadhuh sighram
-vivastrau naiva guhyakau
-<p></p>
+vrajah sammrsta-samsiktadvarajira-
+grhantarah
+citra-dhvaja-pataka-srakcaila-
+pallava-toranaih
+<br>
 <h2>Synonyms</h2>
-tam--Narada Muni; drstva--seeing; vriditah--being ashamed; devyah--the young girls of the demigods; vivastrah--
-although they were naked; sapa-sankitah--being afraid of being cursed; vasamsi--garments; paryadhuh--covered the
-body; sighram--very swiftly; vivastrau--who were also naked; na--not; eva--indeed; guhyakau--the two sons of
-Kuvera.
-<p></p>
+vrajah--the land occupied by Nanda Maharaja; sammrsta--very nicely cleaned; samsikta--very nicely washed;
+dvara--all the doors or entrances; ajira--courtyards; grha-antarah--everything within the house; citra--variegated;
+dhvaja--of festoons; pataka--of flags; srak--of flower garlands; caila--of pieces of cloth; pallava--of the leaves of
+mango trees; toranaih--(decorated) by gates in different places.
+<br>
 <h2>Translation</h2>
-Upon seeing Narada, the naked young girls of the demigods were very much ashamed. Afraid of being cursed,
-they covered their bodies with their garments. But the two sons of Kuvera did not do so; instead, not caring about
-Narada, they remained naked.
+Vrajapura, the residence of Nanda Maharaja, was fully decorated with varieties of festoons and flags, and in
+different places, gates were made with varieties of flower garlands, pieces of cloth, and mango leaves. The
+courtyards, the gates near the roads, and everything within the rooms of the houses were perfectly swept and
+washed with water.
 </p>
 
 </div>
@@ -71,7 +111,7 @@ Narada, they remained naked.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,45 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.22.html">10.4.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-krsnas tu grha-krtyesu
-vyagrayam matari prabhuh
-adraksid arjunau purvam
-guhyakau dhanadatmajau
-<p></p>
+yavad dhato 'smi hantasmity
+atmanam manyate 'sva-drk
+tavat tad-abhimany ajno
+badhya-badhakatam iyat
+<br>
 <h2>Synonyms</h2>
-krsnah tu--in the meantime; grha-krtyesu--in engagement in household affairs; vyagrayam--very busy; matari--
-when His mother; prabhuh--the Lord; adraksit--observed; arjunau--the twin arjuna trees; purvam--before Him;
-guhyakau--which in a former millennium had been demigods; dhanada-atmajau--the sons of Kuvera, the treasurer
-of the demigods.
-<p></p>
+yavat--as long as; hatah asmi--I am now being killed (by others); hanta asmi--I am the killer (of others); iti--thus;
+atmanam--own self; manyate--he considers; a-sva-drk--one who has not seen himself (because of the darkness of
+the bodily conception of life); tavat--for that long; tat-abhimani--regarding himself as the killed or the killer;
+ajnah--a foolish person; badhya-badhakatam--the worldly transaction of being obliged to execute some
+responsibility; iyat--continues.
+<br>
 <h2>Translation</h2>
-While mother Yasoda was very busy with household affairs, the Supreme Lord, Krsna, observed twin trees known
-as yamala-arjuna, which in a former millennium had been the demigod sons of Kuvera.
+In the bodily conception of life, one remains in darkness, without self-realization, thinking, "I am being killed" or
+"I have killed my enemies." As long as a foolish person thus considers the self to be the killer or the killed, he
+continues to be responsible for material obligations, and consequently he suffers the reactions of happiness and
+distress.
+<br>
+<h2>Purport</h2>
+By the grace of the Lord, Kamsa felt sincere regret for having unnecessarily persecuted such Vaisnavas as Devaki
+and Vasudeva, and thus he came to the transcendental stage of knowledge. "Because I am situated on the platform
+of knowledge," Kamsa said, "understanding that I am not at all the killer of your sons, I have no responsibility for
+their death. As long as I thought that I would be killed by your son, I was in ignorance, but now I am free from this
+ignorance, which was due to a bodily conception of life." As stated in Bhagavad-gita (18.17):
+yasya nahankrto bhavo
+buddhir yasya na lipyate
+hatvapi sa imal lokan
+na hanti na nibadhyate
+"One who is not motivated by false ego, whose intelligence is not entangled, though he kills men in this world, is
+not the slayer. Nor is he bound by his actions." According to this axiomatic truth, Kamsa pleaded that he was not
+responsible for having killed the sons of Devaki and Vasudeva. "Please try to excuse me for such false, external
+activities," he said, "and be pacified with this same knowledge."
 </p>
 
 </div>
@@ -70,7 +127,7 @@ as yamala-arjuna, which in a former millennium had been the demigod sons of Kuve
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

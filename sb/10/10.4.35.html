@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.35.html">10.4.35</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.35</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/35"><b>35</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-naham bhaksitavan amba
-sarve mithyabhisamsinah
-yadi satya-giras tarhi
-samaksam pasya me mukham
-<p></p>
+na tvam vismrta-sastrastran
+virathan bhaya-samvrtan
+hamsy anyasakta-vimukhan
+bhagna-capan ayudhyatah
+<br>
 <h2>Synonyms</h2>
-na--not; aham--I; bhaksitavan--have eaten dirt; amba--My dear mother; sarve--all of them; mithya-abhisamsinah--
-all liars, simply complaining against Me so that you may chastise Me; yadi--if it is actually a fact; satya-girah--that
-they have spoken the truth; tarhi--then; samaksam--directly; pasya--see; me--My; mukham--mouth.
-<p></p>
+na--not; tvam--Your Majesty; vismrta-sastra-astran--those who have forgotten how to use weapons; virathan--
+without chariots; bhaya-samvrtan--bewildered by fear; hamsi--does kill; anya-asakta-vimukhan--persons attached
+not to fighting but to some other subject matter; bhagna-capan--their bows broken; ayudhyatah--and thus not
+fighting.
+<br>
 <h2>Translation</h2>
-Lord Sri Krsna replied: My dear mother, I have never eaten dirt. All My friends complaining against Me are liars.
-If you think they are being truthful, you can directly look into My mouth and examine it.
-<p></p>
+When the demigods are bereft of their chariots, when they forget how to use weapons, when they are fearful or
+attached to something other than fighting, or when their bows are broken and they have thus lost the ability to
+fight, Your Majesty does not kill them.
+<br>
 <h2>Purport</h2>
-Krsna presented Himself as an innocent child to increase the transcendental ecstasy of maternal affection. As
-described in the sastra, tadana-bhayan mithyoktir vatsalya-rasa-posika. This means that sometimes a small child
-speaks lies. For example, he may have stolen something or eaten something and yet deny that he has done so. We
-ordinarily see this in the material world, but in relation to Krsna it is different; such activities are meant to endow
-the devotee with transcendental ecstasy. The Supreme Personality of Godhead was playing as a liar and accusing all
-the other devotees of being liars. As stated in Srimad-Bhagavatam (10.12.11), krta-punya-punjah: a devotee may
-attain such an ecstatic position after many, many births of devotional service. Persons who have amassed the
-results of a vast amount of pious activities can attain the stage of associating with Krsna and playing with Him like
-ordinary playmates. One should not consider these transactions of transcendental service to be untruthful
-accusations. One should never accuse such devotees of being ordinary boys speaking lies, for they attained this
-stage of associating with Krsna by great austerities (tapasa brahmacaryena samena ca damena ca).
+There are principles that govern even fighting. If an enemy has no chariot, is unmindful of the fighting art
+because of fear, or is unwilling to fight, he is not to be killed. Kamsa's ministers reminded Kamsa that despite his
+power, he was cognizant of the principles of fighting, and therefore he had excused the demigods because of their
+incapability. "But the present emergency," the ministers said, "is not intended for such mercy or military etiquette.
+Now you should prepare to fight under any circumstances." Thus they advised Kamsa to give up the traditional
+etiquette in fighting and chastise the enemy at any cost.
 </p>
 
 </div>
@@ -82,7 +118,7 @@ stage of associating with Krsna by great austerities (tapasa brahmacaryena samen
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

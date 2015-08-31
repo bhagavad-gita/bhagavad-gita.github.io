@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.21.html">10.8.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tat-tad-vatsan prthan nitva
-tat-tad-gosthe nivesya sah
-tat-tad-atmabhavad rajams
-tat-tat-sadma pravistavan
-<p></p>
+kalena vrajatalpena
+gokule rama-kesavau
+janubhyam saha panibhyam
+ringamanau vijahratuh
+<br>
 <h2>Synonyms</h2>
-tat-tat-vatsan--the calves, which belonged to different cows; prthak--separately; nitva--bringing; tat-tat-gosthe--to
-their respective cow sheds; nivesya--entering; sah--Krsna; tat-tat-atma--as originally different individual souls;
-abhavat--He expanded Himself in that way; rajan--O King Pariksit; tat-tat-sadma--their respective houses;
-pravistavan--entered (Krsna thus entered everywhere).
-<p></p>
+kalena--of time; vrajata--passing; alpena--a very small duration; gokule--in Gokula, Vraja-dhama; rama-kesavau--
+both Balarama and Krsna; janubhyam--by the strength of Their knees; saha panibhyam--resting on Their hands;
+ringamanau--crawling; vijahratuh--enjoyed childhood play.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, Krsna, who had divided Himself as different calves and also as different cowherd boys,
-entered different cow sheds as the calves and then different homes as different boys.
-<p></p>
+After a short time passed, both brothers, Rama and Krsna, began to crawl on the ground of Vraja with the
+strength of Their hands and knees and thus enjoy Their childhood play.
+<br>
 <h2>Purport</h2>
-Krsna had many, many friends, of whom Sridama, Sudama and Subala were prominent. Thus Krsna Himself
-became Sridama, Sudama and Subala and entered their respective houses with their respective calves.
+One brahmana devotee says:
+srutim apare smrtim itare bharatam anye bhajantu bhava-bhitah
+aham iha nandam vande yasyalinde param brahma
+"Let others, fearing material existence, worship the Vedas, the Vedic supplementary puranas and the
+Mahabharata, but I shall worship Nanda Maharaja, in whose courtyard the Supreme Brahman is crawling." For a
+highly exalted devotee, kaivalya, merging into the existence of the Supreme, appears no better than hell
+(narakayate). But here one can simply think of the crawling of Krsna and Balarama in the courtyard of Nanda
+Maharaja and always merge in transcendental happiness. As long as one is absorbed in thoughts of krsna-lila,
+especially Krsna's childhood pastimes, as Pariksit Maharaja desired to be, one is always merged in actual kaivalya.
+Therefore Vyasadeva compiled Srimad-Bhagavatam. Lokasyajanato vidvams cakre satvata-samhitam (Bhag. 1.7.6).
+Vyasadeva compiled Srimad-Bhagavatam, under the instruction of Narada, so that anyone can take advantage of
+this literature, think of Krsna's pastimes and always be liberated.
+srutim apare smrtim itare bharatam anye bhajantu bhava-bhitah
+aham iha nandam vande yasyalinde param brahma
 </p>
 
 </div>
@@ -74,7 +124,7 @@ became Sridama, Sudama and Subala and entered their respective houses with their
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

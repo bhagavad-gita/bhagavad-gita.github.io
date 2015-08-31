@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,40 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.20.html">10.8.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-svayam atmatma-govatsan
-prativaryatma-vatsapaih
-kridann atma-viharais ca
-sarvatma pravisad vrajam
-<p></p>
+sri-suka uvaca
+ity atmanam samadisya
+garge ca sva-grham gate
+nandah pramudito mene
+atmanam purnam asisam
+<br>
 <h2>Synonyms</h2>
-svayam atma--Krsna, who is personally the Supreme Soul, the Supersoul; atma-go-vatsan--now expanded into
-calves that were also He Himself; prativarya atma-vatsapaih--again He Himself was represented as the cowherd boys
-controlling and commanding the calves; kridan--thus Himself constituting everything in these transcendental
-pastimes; atma-viharaih ca--enjoying Himself by Himself in different ways; sarva-atma--the Supersoul, Krsna;
-pravisat--entered; vrajam--Vrajabhumi, the land of Maharaja Nanda and Yasoda.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; atmanam--about the Absolute Truth, the Supreme Soul;
+samadisya--after fully instructing; garge--when Gargamuni; ca--also; sva-grham--to his own abode; gate--had
+departed; nandah--Maharaja Nanda; pramuditah--became extremely pleased; mene--considered; atmanam--his own
+self; purnam asisam--full of all good fortune.
+<br>
 <h2>Translation</h2>
-Now expanding Himself so as to appear as all the calves and cowherd boys, all of them as they were, and at the
-same time appear as their leader, Krsna entered Vrajabhumi, the land of His father, Nanda Maharaja, just as He
-usually did while enjoying their company.
-<p></p>
+Srila Sukadeva Gosvami continued: After Gargamuni, having instructed Nanda Maharaja about Krsna, departed
+for his own home, Nanda Maharaja was very pleased and considered himself full of all good fortune.
+<br>
 <h2>Purport</h2>
-Krsna usually stayed in the forest and pasturing ground, taking care of the calves and cows with His associates
-the cowherd boys. Now that the original group had been taken away by Brahma, Krsna Himself assumed the forms
-of every member of the group, without anyone's knowledge, even the knowledge of Baladeva, and continued the
-usual program. He was ordering His friends to do this and that, and He was controlling the calves and going into
-the forest to search for them when they went astray, allured by new grass, but these calves and boys were He
-Himself. This was Krsna's inconceivable potency. As explained by Srila Jiva Gosvami, radha krsna-pranaya-vikrtir
-hladini saktir asmat. Radha and Krsna are the same. Krsna, by expanding His pleasure potency, becomes
-Radharani. The same pleasure potency (ananda-cinmaya-rasa) was expanded by Krsna when He Himself became all
-the calves and boys and enjoyed transcendental bliss in Vrajabhumi. This was done by the yogamaya potency and
-was inconceivable to persons under the potency of mahamaya.
+Krsna is the Supersoul, and Nanda Maharaja is the individual soul. By the instructions of Gargamuni, both of
+them were blessed. Nanda Maharaja was thinking of Krsna's safety from the hands of demons like Putana and
+Sakatasura, and because he possessed such a son, he thought of himself as most fortunate.
 </p>
 
 </div>
@@ -84,7 +115,7 @@ was inconceivable to persons under the potency of mahamaya.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

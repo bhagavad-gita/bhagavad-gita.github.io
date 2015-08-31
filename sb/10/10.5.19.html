@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.19.html">10.5.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad aham mattayor madhvya
-varunya sri-madandhayoh
-tamo-madam harisyami
-strainayor ajitatmanoh
-<p></p>
+gopan gokula-raksayam
+nirupya mathuram gatah
+nandah kamsasya varsikyam
+karam datum kurudvaha
+<br>
 <h2>Synonyms</h2>
-tat--therefore; aham--I; mattayoh--of these two drunken persons; madhvya--by drinking liquor; varunya--named
-Varuni; sri-mada-andhayoh--who are blinded by celestial opulence; tamah-madam--this false prestige due to the
-mode of ignorance; harisyami--I shall take away; strainayoh--because they have become so attached to women;
-ajita-atmanoh--being unable to control the senses.
-<p></p>
+gopan--the cowherd men; gokula-raksayam--in giving protection to the state of Gokula; nirupya--after
+appointing; mathuram--to Mathura; gatah--went; nandah--Nanda Maharaja; kamsasya--of Kamsa; varsikyam--
+yearly taxes; karam--the share of profit; datum--to pay; kuru-udvaha--O Maharaja Pariksit, best protector of the
+Kuru dynasty.
+<br>
 <h2>Translation</h2>
-Therefore, since these two persons, drunk with the liquor named Varuni, or Madhvi, and unable to control their
-senses, have been blinded by the pride of celestial opulence and have become attached to women, I shall relieve
-them of their false prestige.
-<p></p>
+Sukadeva Gosvami continued: Thereafter, my dear King Pariksit, O best protector of the Kuru dynasty, Nanda
+Maharaja appointed the local cowherd men to protect Gokula and then went to Mathura to pay the yearly taxes to
+King Kamsa.
+<br>
 <h2>Purport</h2>
-When a sadhu chastises or punishes someone, he does not do so for revenge. Maharaja Pariksit had inquired why
-Narada Muni was subject to such a spirit of revenge (tamah). But this was not tamah, for Narada Muni, in full
-knowledge of what was for the good of the two brothers, wisely thought of how to cure them. Vaisnavas are good
-physicians. They know how to protect a person from material disease. Thus they are never in tamo-guna. Sa gunan
-samatityaitan brahma-bhuyaya kalpate (Bg. 14.26). Vaisnavas are always situated on the transcendental platform,
-the Brahman platform. They cannot be subject to mistakes or the influence of the modes of material nature.
-Whatever they do, after full consideration, is meant just to lead everyone back home, back to Godhead.
+Because the killing of babies was going on and had already become known, Nanda Maharaja was very much
+afraid for his newborn child. Thus he appointed the local cowherd men to protect his home and child. He wanted
+to go immediately to Mathura to pay the taxes due and also to offer some presentation for the sake of his newborn
+son. For the protection of the child, he had worshiped various demigods and forefathers and given charity to
+everyone's satisfaction. Similarly, Nanda Maharaja wanted not only to pay Kamsa the yearly taxes but also to offer
+some presentation so that Kamsa too would be satisfied. His only concern was how to protect his transcendental
+child, Krsna.
 </p>
 
 </div>
@@ -80,7 +119,7 @@ Whatever they do, after full consideration, is meant just to lead everyone back 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

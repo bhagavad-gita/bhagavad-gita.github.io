@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.18.html">10.4.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sva-matuh svinna-gatraya
-visrasta-kabara-srajah
-drstva parisramam krsnah
-krpayasit sva-bandhane
-<p></p>
+ma socatam maha-bhagav
+atmajan sva-krtam bhujah
+jantavo na sadaikatra
+daivadhinas tadasate
+<br>
 <h2>Synonyms</h2>
-sva-matuh--of His own mother (Krsna's mother, Yasodadevi); svinna-gatrayah--when Krsna saw His mother
-perspiring all over because of unnecessary labor; visrasta--were falling down; kabara--from her hair; srajah--of
-whom the flowers; drstva--by seeing the condition of His mother; parisramam--He could understand that she was
-now overworked and feeling fatigued; krsnah--the Supreme Personality of Godhead; krpaya--by His causeless
-mercy upon His devotee and mother; asit--agreed; sva-bandhane--in binding Him.
-<p></p>
+ma socatam--kindly do not be aggrieved (for what happened in the past); maha-bhagau--O you who are learned
+and fortunate in spiritual knowledge; atmajan--for your sons; sva-krtam--only because of their own acts; bhujah--
+who are suffering; jantavah--all living entities; na--not; sada--always; ekatra--in one place; daiva-adhinah--who are
+under the control of providence; tada--hence; asate--live.
+<br>
 <h2>Translation</h2>
-Because of mother Yasoda's hard labor, her whole body became covered with perspiration, and the flowers and
-comb were falling from her hair. When child Krsna saw His mother thus fatigued, He became merciful to her and
-agreed to be bound.
-<p></p>
+O great souls, your children have suffered their own misfortune. Therefore, please do not lament for them. All
+living entities are under the control of the Supreme, and they cannot always live together.
+<br>
 <h2>Purport</h2>
-When mother Yasoda and the other ladies finally saw that Krsna, although decorated with many bangles and
-other jeweled ornaments, could not be bound with all the ropes available in the house, they decided that Krsna was
-so fortunate that He could not be bound by any material condition. Thus they gave up the idea of binding Him. But
-in competition between Krsna and His devotee, Krsna sometimes agrees to be defeated. Thus Krsna's internal
-energy, yogamaya, was brought to work, and Krsna agreed to be bound by mother Yasoda.
+Kamsa addressed his sister and brother-in-law as maha-bhagau because although he killed their ordinary
+children, the goddess Durga took birth from them. Because Devaki bore Durgadevi in her womb, Kamsa praised
+both Devaki and her husband. Asuras are very devoted to the goddess Durga, Kali and so forth. Kamsa, therefore,
+truly astonished, appreciated the exalted position of his sister and brother-in-law. Durga is certainly not under the
+laws of nature, because she herself is the controller of the laws of nature. Ordinary living beings, however, are
+controlled by these laws (prakrteh kriyamanani gunaih karmani sarvasah). Consequently, none of us are allowed to
+live together for any long period. By speaking in this way, Kamsa tried to pacify his sister and brother-in-law.
 </p>
 
 </div>
@@ -79,7 +118,7 @@ energy, yogamaya, was brought to work, and Krsna agreed to be bound by mother Ya
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

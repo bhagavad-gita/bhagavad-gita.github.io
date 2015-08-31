@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.36.html">10.8.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kim etad adbhutam iva
-vasudeve 'khilatmani
-vrajasya satmanas tokesv
-apurvam prema vardhate
-<p></p>
+yady evam tarhi vyadehity
+uktah sa bhagavan harih
+vyadattavyahataisvaryah
+krida-manuja-balakah
+<br>
 <h2>Synonyms</h2>
-kim--what; etat--this; adbhutam--wonderful; iva--just as; vasudeve--in Vasudeva, Lord Sri Krsna; akhila-atmani--
-the Supersoul of all living entities; vrajasya--of all the inhabitants of Vraja; sa-atmanah--along with Me; tokesu--in
-these boys; apurvam--unprecedented; prema--affection; vardhate--is increasing.
-<p></p>
+yadi--if; evam--it is so; tarhi--then; vyadehi--open Your mouth wide (I want to see); iti uktah--in this way ordered
+by mother Yasoda; sah--He; bhagavan--the Supreme Personality of Godhead; harih--the Supreme Lord; vyadatta--
+opened His mouth; avyahata-aisvaryah--without minimizing any potencies of absolute opulence (aisvaryasya
+samagrasya); krida--pastimes; manuja-balakah--exactly like the child of a human being.
+<br>
 <h2>Translation</h2>
-What is this wonderful phenomenon? The affection of all the inhabitants of Vraja, including Me, toward these
-boys and calves is increasing as never before, just like our affection for Lord Krsna, the Supersoul of all living
-entities.
-<p></p>
+Mother Yasoda challenged Krsna, "If You have not eaten earth, then open Your mouth wide." When challenged
+by His mother in this way, Krsna, the son of Nanda Maharaja and Yasoda, to exhibit pastimes like a human child,
+opened His mouth. Although the Supreme Personality of Godhead, Krsna, who is full of all opulences, did not
+disturb His mother's parental affection, His opulence was automatically displayed, for Krsna's opulence is never
+lost at any stage, but is manifest at the proper time.
+<br>
 <h2>Purport</h2>
-This increase of affection was not maya; rather, because Krsna had expanded Himself as everything and because
-the whole life of everyone in Vrndavana was meant for Krsna, the cows, because of affection for Krsna, had more
-affection for the older calves than for the new calves, and the men increased in their affection for their sons.
-Balarama was astonished to see all the residents of Vrndavana so affectionate toward their own children, exactly as
-they had been for Krsna. Similarly, the cows had grown affectionate toward their calves--as much as toward Krsna.
-Balarama was surprised to see the acts of yogamaya. Therefore He inquired from Krsna, "What is happening here?
-What is this mystery?"
+Without disturbing the ecstasy of His mother's affection, Krsna opened His mouth and displayed His own natural
+opulences. When a person is given varieties of food, there may be a hundred and one varieties, but if one likes
+ordinary saka, spinach, he prefers to eat that. Similarly, although Krsna was full of opulences, now, by the order of
+mother Yasoda, He opened wide His mouth like a human child and did not neglect the transcendental humor of
+maternal affection.
 </p>
 
 </div>
@@ -79,7 +119,7 @@ What is this mystery?"
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

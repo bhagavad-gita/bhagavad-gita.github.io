@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,61 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.32.html">10.5.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-grhyamanais tvam agrahyo
-vikaraih prakrtair gunaih
-ko nv iharhati vijnatum
-prak siddham guna-samvrtah
-<p></p>
+sri-suka uvaca
+iti nandadayo gopah
+proktas te saurina yayuh
+anobhir anadud-yuktais
+tam anujnapya gokulam
+<br>
 <h2>Synonyms</h2>
-grhyamanaih--accepting the body made of material nature as existing at the present moment because of being
-visible; tvam--You; agrahyah--not confined in a body made of material nature; vikaraih--agitated by the mind;
-prakrtaih gunaih--by the material modes of nature (sattva-guna, rajo-guna and tamo-guna); kah--who is there; nu--
-after that; iha--in this material world; arhati--who deserves; vijnatum--to know; prak siddham--that which existed
-before the creation; guna-samvrtah--because of being covered by the material qualities.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; nanda-adayah--Nanda Maharaja and his companions;
+gopah--the cowherd men; proktah--being advised; te--they; saurina--by Vasudeva; yayuh--started from that place;
+anobhih--by the bullock carts; anadut-yuktaih--yoked with oxen; tam anujnapya--taking permission from
+Vasudeva; gokulam--for Gokula.
+<br>
 <h2>Translation</h2>
-O Lord, You exist before the creation. Therefore, who, trapped by a body of material qualities in this material
-world, can understand You?
-<p></p>
-<h2>Purport</h2>
-As it is said:
-atah sri-krsna-namadi
-na bhaved grahyam indriyaih
-sevonmukhe hi jihvadau
-svayam eva sphuraty adah
-(Bhakti-rasamrta-sindhu 1.2.234)
-Krsna's name, attributes and form are Absolute Truth, existing before the creation. Therefore, how can those who
-are created--that is, those entrapped in bodies created of material elements--understand Krsna perfectly? This is not
-possible. But, sevonmukhe hi jihvadau svayam eva sphuraty adah: Krsna reveals Himself to those engaged in
-devotional service. This is also confirmed in Bhagavad-gita (18.15) by the Lord Himself: bhaktya mam abhijanati.
-Even the descriptions of Krsna in Srimad-Bhagavatam are sometimes misunderstood by less intelligent men with a
-poor fund of knowledge. Therefore, the best course by which to know Him is to engage oneself in pure devotional
-activities. The more one advances in devotional activities, the more one can understand Him as He is. If from the
-material platform one could understand Krsna, then, since Krsna is everything (sarvam khalv idam brahma), one
-could understand Krsna by seeing anything within this material world. But that is not possible.
-maya tatam idam sarvam
-jagad avyakta-murtina
-mat-sthani sarva-bhutani
-na caham tesv avasthitah
-(Bg. 9.4)
-Everything is resting on Krsna, and everything is Krsna, but this is not to be realized by persons on the material
-platform.
+Sukadeva Gosvami said: After Vasudeva advised Nanda Maharaja in this way, Nanda Maharaja and his associates,
+the cowherd men, took permission from Vasudeva, yoked their bulls to the bullock carts, and started riding for
+Gokula.
+Thus end the Bhaktivedanta purports to the Tenth Canto, Fifth Chapter, of the Srimad-Bhagavatam, entitled "The
+Meeting of Nanda Maharaja and Vasudeva."
+Chapter Six
+The Killing of the Demon Putana
+A summary of the Sixth Chapter is as follows: when Nanda Maharaja, following the instructions of Vasudeva, was
+returning home, he saw a great demoniac woman lying on the road, and then he heard about her death.
+While Nanda Maharaja, the King of Vraja, was thinking about Vasudeva's words concerning disturbances in
+Gokula, he was a little afraid and sought shelter at the lotus feet of Sri Hari. Meanwhile, Kamsa sent to the village
+of Gokula a Raksasi named Putana, who was wandering here and there killing small babies. Of course, wherever
+there is no Krsna consciousness, there is the danger of such Raksasis, but since the Supreme Personality of
+Godhead Himself was in Gokula, Putana could accept nothing there but her own death.
+One day, Putana arrived from outer space in Gokula, the home of Nanda Maharaja, and by displaying her mystic
+power, she assumed the disguise of a very beautiful woman. Taking courage, she immediately entered Krsna's
+bedroom without anyone's permission; by the grace of Krsna, no one forbade her to enter the house or the room,
+because that was Krsna's desire. The baby Krsna, who resembled a fire covered by ashes, looked upon Putana and
+thought that He would have to kill this demon, the beautiful woman. Enchanted by the influence of yogamaya and
+the Personality of Godhead, Putana took Krsna upon her lap, and neither Rohini nor Yasoda objected. The demon
+Putana offered her breast for Krsna to suck, but her breast was smeared with poison. The child Krsna, therefore,
+squeezed Putana's breast so severely that in unbearable pain she had to assume her original body and fell to the
+ground. Then Krsna began playing on her breast just like a small child. When Krsna was playing, the gopis were
+pacified and took the child away to their own laps. After this incident, the gopis took precautions because of the
+attack of the Raksasi. Mother Yasoda gave the child her breast to suck and then laid Him in bed.
+Meanwhile, Nanda and his associates the cowherd men returned from Mathura, and when they saw the great
+dead body of Putana, they were struck with wonder. Everyone was astonished that Vasudeva had foretold this
+mishap, and they praised Vasudeva for his power of foresight. The inhabitants of Vraja cut the gigantic body of
+Putana into pieces, but because Krsna had sucked her breast, she had been freed from all sins, and therefore when
+the cowherd men burned the pieces of her body in a fire, the smoke filled the air with a very pleasing fragrance.
+Ultimately, although Putana had desired to kill Krsna, she attained the Lord's abode. From this incident we gain
+the instruction that if one is attached to Krsna somehow or other, even as an enemy, one ultimately attains success.
+What then is to be said of devotees who are naturally attached to Krsna in love? When the inhabitants of Vraja
+heard about the killing of Putana and the welfare of the child, they were very much satisfied. Nanda Maharaja took
+the baby Krsna on his lap and was filled with satisfaction.
 </p>
 
 </div>
@@ -95,7 +143,7 @@ platform.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,64 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.31.html">10.2.31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31"><b>31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-vasudeva uvaca
-karo vai varsiko datto
-rajne drsta vayam ca vah
-neha stheyam bahu-titham
-santy utpatas ca gokule
-<p></p>
+svayam samuttirya sudustaram dyuman
+bhavarnavam bhimam adabhra-sauhrdah
+bhavat-padambhoruha-navam atra te
+nidhaya yatah sad-anugraho bhavan
+<br>
 <h2>Synonyms</h2>
-sri-vasudevah uvaca--Sri Vasudeva replied; karah--the taxes; vai--indeed; varsikah--yearly; dattah--have already
-been paid by you; rajne--to the King; drstah--have been seen; vayam ca--both of us; vah--of you; na--not; iha--in
-this place; stheyam--should be staying; bahu-titham--for many days; santi--may be; utpatah ca--many disturbances;
-gokule--in your home, Gokula.
-<p></p>
+svayam--personally; samuttirya--perfectly crossing; su-dustaram--which is very difficult to cross; dyuman--O
+Lord, who appear exactly like the sun, illuminating the darkness of this world of ignorance; bhava-arnavam--the
+ocean of nescience; bhimam--which is extremely fierce; adabhra-sauhrdah--devotees who are incessantly friendly to
+the fallen souls; bhavat-pada-ambhoruha--Your lotus feet; navam--the boat for crossing; atra--in this world; te--they
+(the Vaisnavas); nidhaya--leaving behind; yatah--on to the ultimate destination, Vaikuntha; sat-anugrahah--who
+are always kind and merciful to the devotees; bhavan--You.
+<br>
 <h2>Translation</h2>
-Vasudeva said to Nanda Maharaja: Now, my dear brother, since you have paid the annual taxes to Kamsa and
-have also seen me, do not stay in this place for many days. It is better to return to Gokula, since I know that there
-may be some disturbances there.
+O Lord, who resemble the shining sun, You are always ready to fulfill the desire of Your devotee, and therefore
+You are known as a desire tree [vancha-kalpataru]. When acaryas completely take shelter under Your lotus feet in
+order to cross the fierce ocean of nescience, they leave behind on earth the method by which they cross, and
+because You are very merciful to Your other devotees, You accept this method to help them.
+<br>
+<h2>Purport</h2>
+This statement reveals how the merciful acaryas and the merciful Supreme Personality of Godhead together help
+the serious devotee who wants to return home, back to Godhead. Sri Caitanya Mahaprabhu, in His teachings to
+Rupa Gosvami, said:
+brahmanda bhramite kona bhagyavan jiva
+guru-krsna-prasade paya bhakti-lata-bija
+(Cc. Madhya 19.151)
+One can achieve the seed of bhakti-lata, devotional service, by the mercy of guru and Krsna. The duty of the guru
+is to find the means, according to the time, the circumstances and the candidate, by which one can be induced to
+render devotional service, which Krsna accepts from a candidate who wants to be successful in going back home,
+back to Godhead. After wandering throughout the universe, a fortunate person within this material world seeks
+shelter of such a guru, or acarya, who trains the devotee in the suitable ways to render service according to the
+circumstances so that the Supreme Personality of Godhead will accept the service. This makes it easier for the
+candidate to reach the ultimate destination. The acarya's duty, therefore, is to find the means by which devotees
+may render service according to references from sastra. Rupa Gosvami, for example, in order to help subsequent
+devotees, published such devotional books as Bhakti-rasamrta-sindhu. Thus it is the duty of the acarya to publish
+books that will help future candidates take up the method of service and become eligible to return home, back to
+Godhead, by the mercy of the Lord. In our Krsna consciousness movement, this same path is being prescribed and
+followed. Thus the devotees have been advised to refrain from four sinful activities--illicit sex, intoxication, meateating
+and gambling--and to chant sixteen rounds a day. These are bona fide instructions. Because in the Western
+countries constant chanting is not possible, one should not artificially imitate Haridasa Thakura, but should follow
+this method. Krsna will accept a devotee who strictly follows the regulative principles and the method prescribed
+in the various books and literatures published by the authorities. The acarya gives the suitable method for crossing
+the ocean of nescience by accepting the boat of the Lord's lotus feet, and if this method is strictly followed, the
+followers will ultimately reach the destination, by the grace of the Lord. This method is called acarya-sampradaya.
+It is therefore said, sampradaya-vihina ye mantras te nisphala matah (Padma Purana). The acarya-sampradaya is
+strictly bona fide. Therefore one must accept the acarya-sampradaya; otherwise one's endeavor will be futile. Srila
+Narottama dasa Thakura therefore sings:
+tandera carana sevi bhakta sane vasa
+janame janame haya, ei abhilasa
+One must worship the lotus feet of the acarya and live within the society of devotees. Then one's endeavor to
+cross over nescience will surely be successful.
 </p>
 
 </div>
@@ -72,7 +146,7 @@ may be some disturbances there.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,59 +81,65 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.1-2.html">10.2.1-2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.1-2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1-2"><b>1-2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-suka uvaca
-nandas tv atmaja utpanne
-jatahlado maha-manah
-ahuya vipran veda-jnan
-snatah sucir alankrtah
-vacayitva svastyayanam
-jata-karmatmajasya vai
-karayam asa vidhivat
-pitr-devarcanam tatha
-<p></p>
+pralamba-baka-canuratrnavarta-
+mahasanaih
+mustikarista-dvividaputana-
+kesi-dhenukaih
+anyais casura-bhupalair
+bana-bhaumadibhir yutah
+yadunam kadanam cakre
+bali magadha-samsrayah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; nandah--Maharaja Nanda; tu--indeed; atmaje--his son; utpanne--
-having been born; jata--overwhelmed; ahladah--in great jubilation; maha-manah--who was great minded; ahuya--
-invited; vipran--the brahmanas; veda-jnan--who were fully conversant in Vedic knowledge; snatah--taking a full
-bath; sucih--purifying himself; alankrtah--being dressed very nicely with ornaments and fresh garments; vacayitva--
-after causing to be recited; svasti-ayanam--Vedic mantras (by the brahmanas); jata-karma--the festival for the birth
-of the child; atmajasya--of his own son; vai--indeed; karayam asa--caused to be performed; vidhi-vat--according to
-the Vedic regulations; pitr-deva-arcanam--the worship of the forefathers and the demigods; tatha--as well as.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; pralamba--by the asura named Pralamba; baka--by the asura named
+Baka; canura--by the asura named Canura; trnavarta--by the asura named Trnavarta; mahasanaih--by Aghasura;
+mustika--by the asura named Mustika; arista--by the asura Arista; dvivida--by the asura named Dvivida; putana--by
+Putana; kesi--by Kesi; dhenukaih--by Dhenuka; anyaih ca--and by many others; asura-bhupalaih--by demoniac
+kings on the surface of the globe; bana--by King Bana; bhauma--by Bhaumasura; adibhih--and by others as well;
+yutah--being assisted; yadunam--of the kings of the Yadu dynasty; kadanam--persecution; cakre--regularly
+performed; bali--very powerful; magadha-samsrayah--under the protection of Jarasandha, the King of Magadha.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: Nanda Maharaja was naturally very magnanimous, and when Lord Sri Krsna appeared as
-his son, he was overwhelmed by jubilation. Therefore, after bathing and purifying himself and dressing himself
-properly, he invited brahmanas who knew how to recite Vedic mantras. After having these qualified brahmanas
-recite auspicious Vedic hymns, he arranged to have the Vedic birth ceremony celebrated for his newborn child
-according to the rules and regulations, and he also arranged for worship of the demigods and forefathers.
-<p></p>
+Sukadeva Gosvami said: Under the protection of Magadharaja, Jarasandha, the powerful Kamsa began
+persecuting the kings of the Yadu dynasty. In this he had the cooperation of demons like Pralamba, Baka, Canura,
+Trnavarta, Aghasura, Mustika, Arista, Dvivida, Putana, Kesi, Dhenuka, Banasura, Narakasura and many other
+demoniac kings on the surface of the earth.
+<br>
 <h2>Purport</h2>
-Srila Visvanatha Cakravarti Thakura has discussed the significance of the words nandas tu. The word tu, he says,
-is not used to fulfill the sentence, because without tu the sentence is complete. Therefore the word tu is used for a
-different purpose. Although Krsna appeared as the son of Devaki, Devaki and Vasudeva did not enjoy the jatakarma,
-the festival of the birth ceremony. Instead, this ceremony was enjoyed by Nanda Maharaja, as stated here
-(nandas tv atmaja utpanne jatahlado maha-manah). When Nanda Maharaja met Vasudeva, Vasudeva could not
-disclose, "Your son Krsna is actually my son. You are His father in a different way, spiritually." Because of fear of
-Kamsa, Vasudeva could not observe the festival for Krsna's birth, Nanda Maharaja, however, took full advantage of
-this opportunity.
-The jata-karma ceremony can take place when the umbilical cord, connecting the child and the placenta, is cut.
-However, since Krsna was brought by Vasudeva to the house of Nanda Maharaja, where was the chance for this to
-happen? In this regard, Visvanatha Cakravarti Thakura desires to prove with evidence from many sastras that
-Krsna actually took birth as the son of Yasoda before the birth of Yogamaya, who is therefore described as the
-Lord's younger sister. Even though there may be doubts about the cutting of the umbilical cord, and even though it
-is possible that this was not done, when the Supreme Personality of Godhead appears, such events are regarded as
-factual. Krsna appeared as Varahadeva from the nostril of Brahma, and therefore Brahma is described as the father
-of Varahadeva. Also significant are the words karayam asa vidhivat. Being overwhelmed with jubilation over the
-birth of his son, Nanda Maharaja did not see whether the cord was cut or not. Thus he performed the ceremony
-very gorgeously. According to the opinion of some authorities, Krsna was actually born as the son of Yasoda. In any
-case, without regard for material understandings, we can accept that Nanda Maharaja's celebration for the
-ceremony of Krsna's birth was proper. This ceremony is therefore well known everywhere as Nandotsava.
+This verse supports the following statement given by the Lord in Bhagavad-gita (4.7-8):
+yada yada hi dharmasya
+glanir bhavati bharata
+abhyutthanam adharmasya
+tadatmanam srjamy aham
+paritranaya sadhunam
+vinasaya ca duskrtam
+dharma-samsthapanarthaya
+sambhavami yuge yuge
+"Whenever and wherever there is a decline in religious practice, O descendant of Bharata, and a predominant rise
+of irreligion--at that time I descend Myself. To deliver the pious and to annihilate the miscreants, as well as to
+reestablish the principles of religion, I advent Myself millennium after millennium."
+The Lord's purpose in maintaining this material world is to give everyone a chance to go back home, back to
+Godhead, but kings and political leaders unfortunately try to hinder the purpose of the Lord, and therefore the
+Lord appears, either personally or with His plenary portions, to set things right. It is therefore said:
+garbham sancarya rohinyam
+devakya yogamayaya
+tasyah kuksim gatah krsno
+dvitiyo vibudhaih stutah
+"Krsna appeared in the womb of Devaki after transferring Baladeva to the womb of Rohini by the power of
+Yogamaya." Yadubhih sa vyarudhyata. The kings of the Yadu dynasty were all devotees, but there were many
+powerful demons, such as Salva, who began to persecute them. At that time, Jarasandha, who was Kamsa's fatherin-
+law, was extremely powerful, and therefore Kamsa took advantage of his protection and the help of the demons
+in persecuting the kings of the Yadu dynasty. The demons naturally appeared more powerful than the demigods,
+but ultimately, because of help received from the Supreme Personality of Godhead, the demons were defeated and
+the demigods triumphant.
 </p>
 
 </div>
@@ -103,7 +147,7 @@ ceremony of Krsna's birth was proper. This ceremony is therefore well known ever
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

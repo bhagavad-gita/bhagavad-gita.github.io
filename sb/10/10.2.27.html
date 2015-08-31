@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,82 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.27.html">10.2.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bhratar mama sutah kaccin
-matra saha bhavad-vraje
-tatam bhavantam manvano
-bhavadbhyam upalalitah
-<p></p>
+ekayano 'sau dvi-phalas tri-mulas
+catu-rasah panca-vidhah sad-atma
+sapta-tvag asta-vitapo navakso
+dasa-cchadi dvi-khago hy adi-vrksah
+<br>
 <h2>Synonyms</h2>
-bhratah--my dear brother; mama--my; sutah--son (Baladeva, born of Rohini); kaccit--whether; matra saha--with
-His mother, Rohini; bhavat-vraje--in your house; tatam--as father; bhavantam--unto you; manvanah--thinking;
-bhavadbhyam--by you and your wife, Yasoda; upalalitah--properly being raised.
-<p></p>
+eka-ayanah--the body of an ordinary living being is fully dependent on the material elements; asau--that; dviphalah--
+in this body we are subject to material happiness and distress, which result from karma; tri-mulah--having
+three roots, the three modes of nature (goodness, passion and ignorance), upon which the body is created; catuhrasah--
+four rasas, or tastes; panca-vidhah--consisting of five senses for acquiring knowledge (the eyes, ears, nose,
+tongue and touch); sat-atma--six circumstances (lamentation, illusion, old age, death, hunger and thirst); saptatvak--
+having seven coverings (skin, blood, muscle, fat, bone, marrow and semen); asta-vitapah--eight branches (the
+five gross elements--earth, water, fire, air and ether--and also the mind, intelligence and ego); nava-aksah--nine
+holes; dasa-chadi--ten kinds of life air, resembling the leaves of a tree; dvi-khagah--two birds (the individual soul
+and the Supersoul); hi--indeed; adi-vrksah --this is the original tree or construction of the material body, whether
+individual or universal.
+<br>
 <h2>Translation</h2>
-My son Baladeva, being raised by you and your wife, Yasodadevi, considers you His father and mother. Is he
-living very peacefully in your home with His real mother, Rohini?
+The body [the total body and the individual body are of the same composition] may figuratively be called "the
+original tree." From this tree, which fully depends on the ground of material nature, come two kinds of fruit--the
+enjoyment of happiness and the suffering of distress. The cause of the tree, forming its three roots, is association
+with the three modes of material nature--goodness, passion and ignorance. The fruits of bodily happiness have four
+tastes--religiosity, economic development, sense gratification and liberation--which are experienced through five
+senses for acquiring knowledge in the midst of six circumstances: lamentation, illusion, old age, death, hunger and
+thirst. The seven layers of bark covering the tree are skin, blood, muscle, fat, bone, marrow and semen, and the
+eight branches of the tree are the five gross and three subtle elements--earth, water, fire, air, ether, mind,
+intelligence and false ego. The tree of the body has nine hollows--the eyes, the ears, the nostrils, the mouth, the
+rectum and the genitals--and ten leaves, the ten airs passing through the body. In this tree of the body there are two
+birds: one is the individual soul, and the other is the Supersoul.
+<br>
+<h2>Purport</h2>
+This material world is composed of five principal elements--earth, water, fire, air and ether--all of which are
+emanations from Krsna. Although materialistic scientists may accept these five primary elements as the cause of the
+material manifestation, these elements in their gross and subtle states are produced by Krsna, whose marginal
+potency also produces the living entities working within this material world. The Seventh Chapter of Bhagavad-gita
+clearly states that the entire cosmic manifestation is a combination of two of Krsna's energies--the superior energy
+and the inferior energy. The living entities are the superior energy, and the inanimate material elements are His
+inferior energy. In the dormant stage, everything rests in Krsna.
+Material scientists cannot give such a thorough analysis of the material structure of the body. The analysis of the
+material scientists concerns itself only with inanimate matter, but this is inadequate because the living entity is
+completely separate from the material bodily structure. In Bhagavad-gita (7.5) the Lord says:
+apareyam itas tv anyam
+prakrtim viddhi me param
+jiva-bhutam maha-baho
+yayedam dharyate jagat
+"Besides this inferior nature, O mighty-armed Arjuna, there is a superior energy of Mine, which consists of all the
+living entities who are struggling with material nature and are sustaining the universe." Although the material
+elements emanate from the Supreme Personality of Godhead, Krsna, they are separated elements and are sustained
+by the living elements.
+As indicated by the word dvi-khagah, the living elements within the body resemble two birds in a tree. Kha
+means "sky," and ga means "one who flies." Thus the word dvi-khagah refers to birds. In the tree of the body there
+are two birds, or two living elements, and they are always different. In Bhagavad-gita (13.3), the Lord says, ksetra
+jnam capi mam viddhi sarva-ksetresu bharata: "O scion of Bharata, you should understand that I am also the
+knower in all bodies." The ksetra jna, the owner of the body, is also called the khaga, the living entity. Within the
+body there are two such ksetra jnas--the individual soul and the Supersoul. The individual soul is the owner of his
+individual body, but the Supersoul is present within the bodies of all living entities. Such a thorough analysis and
+understanding of the bodily structure cannot be obtained anywhere but in the Vedic literature.
+When two birds enter a tree, one may foolishly think that the birds become one or merge with the tree, but
+actually they do not. Rather, each bird keeps its individual identity. Similarly, the individual soul and the Supersoul
+do not become one, nor do they merge with matter. The living entity lives close to matter, but this does not mean
+that he merges or mixes with it (asango hy ayam purusah), although material scientists mistakenly see the organic
+and inorganic, or animate and inanimate, to be mixed.
+Vedic knowledge has been kept imprisoned or concealed, but every human being needs to understand it in truth.
+The modern civilization of ignorance is simply engaged in analyzing the body, and thus people come to the
+erroneous conclusion that the living force within the body is generated under certain material conditions. People
+have no information of the soul, but this verse gives the perfect explanation that there are two living forces (dvikhaga):
+the individual soul and the Supersoul. The Supersoul is present in every body (isvarah sarva-bhutanam
+hrd-dese 'rjuna tisthati), whereas the individual soul is situated only in his own body (dehi) and is transmigrating
+from one body to another.
 </p>
 
 </div>
@@ -69,7 +164,7 @@ living very peacefully in your home with His real mother, Rohini?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

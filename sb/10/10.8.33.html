@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,34 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.33.html">10.8.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad-iksanotprema-rasaplutasaya
-jatanuraga gata-manyavo 'rbhakan
-uduhya dorbhih parirabhya murdhani
-ghranair avapuh paramam mudam te
-<p></p>
+sa grhitva kare krsnam
+upalabhya hitaisini
+yasoda bhaya-sambhrantapreksanaksam
+abhasata
+<br>
 <h2>Synonyms</h2>
-tat-iksana-utprema-rasa-apluta-asayah--all the thoughts of the cowherd men merged in the mellow of paternal
-love, which was aroused by seeing their sons; jata-anuragah--experiencing a great longing or attraction; gatamanyavah--
-their anger disappeared; arbhakan--their young sons; uduhya--lifting; dorbhih--with their arms;
-parirabhya--embracing; murdhani--on the head; ghranaih--by smelling; avapuh--obtained; paramam--the highest;
-mudam--pleasure; te--those cowherd men.
-<p></p>
+sa--mother Yasoda; grhitva--taking; kare--within the hands (being anxious about what Krsna might have eaten);
+krsnam--Krsna; upalabhya--wanted to chastise Him; hita-esini--because she was anxious for the welfare of Krsna,
+she became very much agitated, thinking, "How is it that Krsna has eaten earth?"; yasoda--mother Yasoda; bhayasambhranta-
+preksana-aksam--began to look very carefully within Krsna's mouth in fear, to see if Krsna had eaten
+something dangerous; abhasata--began to address Krsna.
+<br>
 <h2>Translation</h2>
-At that time, all the thoughts of the cowherd men merged in the mellow of paternal love, which was aroused by
-the sight of their sons. Experiencing a great attraction, their anger completely disappearing, they lifted their sons,
-embraced them in their arms and enjoyed the highest pleasure by smelling their sons' heads.
-<p></p>
-<h2>Purport</h2>
-After Brahma stole the original cowherd boys and calves, Krsna expanded Himself to become the boys and calves
-again. Therefore, because the boys were actually Krsna's expansions, the cowherd men were especially attracted to
-them. At first the cowherd men, who were on top of the hill, were angry, but because of Krsna the boys were
-extremely attractive, and therefore the cowherd men immediately came down from the hill with special affection.
+Upon hearing this from Krsna's playmates, mother Yasoda, who was always full of anxiety over Krsna's welfare,
+picked Krsna up with her hands to look into His mouth and chastise Him. Her eyes fearful, she spoke to her son as
+follows.
 </p>
 
 </div>
@@ -78,7 +111,7 @@ extremely attractive, and therefore the cowherd men immediately came down from t
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

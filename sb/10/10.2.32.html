@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,60 +81,100 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.32.html">10.2.32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/32"><b>32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-iti nandadayo gopah
-proktas te saurina yayuh
-anobhir anadud-yuktais
-tam anujnapya gokulam
-<p></p>
+ye 'nye 'ravindaksa vimukta-maninas
+tvayy asta-bhavad avisuddha-buddhayah
+aruhya krcchrena param padam tatah
+patanty adho 'nadrta-yusmad-anghrayah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--thus; nanda-adayah--Nanda Maharaja and his companions;
-gopah--the cowherd men; proktah--being advised; te--they; saurina--by Vasudeva; yayuh--started from that place;
-anobhih--by the bullock carts; anadut-yuktaih--yoked with oxen; tam anujnapya--taking permission from
-Vasudeva; gokulam--for Gokula.
-<p></p>
+ye anye--anyone, or all others; aravinda-aksa--O lotus-eyed one; vimukta-maninah--falsely considering
+themselves free from the bondage of material contamination; tvayi--unto You; asta-bhavat--speculating in various
+ways but not knowing or desiring more information of Your lotus feet; avisuddha-buddhayah--whose intelligence is
+still not purified and who do not know the goal of life; aruhya--even though achieving; krcchrena--by undergoing
+severe austerities, penances and hard labor; param padam--the highest position (according to their imagination and
+speculation); tatah--from that position; patanti--they fall; adhah--down into material existence again; anadrta--
+neglecting devotion to; yusmat--Your; anghrayah--lotus feet.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami said: After Vasudeva advised Nanda Maharaja in this way, Nanda Maharaja and his associates,
-the cowherd men, took permission from Vasudeva, yoked their bulls to the bullock carts, and started riding for
-Gokula.
-Thus end the Bhaktivedanta purports to the Tenth Canto, Fifth Chapter, of the Srimad-Bhagavatam, entitled "The
-Meeting of Nanda Maharaja and Vasudeva."
-Chapter Six
-The Killing of the Demon Putana
-A summary of the Sixth Chapter is as follows: when Nanda Maharaja, following the instructions of Vasudeva, was
-returning home, he saw a great demoniac woman lying on the road, and then he heard about her death.
-While Nanda Maharaja, the King of Vraja, was thinking about Vasudeva's words concerning disturbances in
-Gokula, he was a little afraid and sought shelter at the lotus feet of Sri Hari. Meanwhile, Kamsa sent to the village
-of Gokula a Raksasi named Putana, who was wandering here and there killing small babies. Of course, wherever
-there is no Krsna consciousness, there is the danger of such Raksasis, but since the Supreme Personality of
-Godhead Himself was in Gokula, Putana could accept nothing there but her own death.
-One day, Putana arrived from outer space in Gokula, the home of Nanda Maharaja, and by displaying her mystic
-power, she assumed the disguise of a very beautiful woman. Taking courage, she immediately entered Krsna's
-bedroom without anyone's permission; by the grace of Krsna, no one forbade her to enter the house or the room,
-because that was Krsna's desire. The baby Krsna, who resembled a fire covered by ashes, looked upon Putana and
-thought that He would have to kill this demon, the beautiful woman. Enchanted by the influence of yogamaya and
-the Personality of Godhead, Putana took Krsna upon her lap, and neither Rohini nor Yasoda objected. The demon
-Putana offered her breast for Krsna to suck, but her breast was smeared with poison. The child Krsna, therefore,
-squeezed Putana's breast so severely that in unbearable pain she had to assume her original body and fell to the
-ground. Then Krsna began playing on her breast just like a small child. When Krsna was playing, the gopis were
-pacified and took the child away to their own laps. After this incident, the gopis took precautions because of the
-attack of the Raksasi. Mother Yasoda gave the child her breast to suck and then laid Him in bed.
-Meanwhile, Nanda and his associates the cowherd men returned from Mathura, and when they saw the great
-dead body of Putana, they were struck with wonder. Everyone was astonished that Vasudeva had foretold this
-mishap, and they praised Vasudeva for his power of foresight. The inhabitants of Vraja cut the gigantic body of
-Putana into pieces, but because Krsna had sucked her breast, she had been freed from all sins, and therefore when
-the cowherd men burned the pieces of her body in a fire, the smoke filled the air with a very pleasing fragrance.
-Ultimately, although Putana had desired to kill Krsna, she attained the Lord's abode. From this incident we gain
-the instruction that if one is attached to Krsna somehow or other, even as an enemy, one ultimately attains success.
-What then is to be said of devotees who are naturally attached to Krsna in love? When the inhabitants of Vraja
-heard about the killing of Putana and the welfare of the child, they were very much satisfied. Nanda Maharaja took
-the baby Krsna on his lap and was filled with satisfaction.
+[Someone may say that aside from devotees, who always seek shelter at the Lord's lotus feet, there are those who
+are not devotees but who have accepted different processes for attaining salvation. What happens to them? In
+answer to this question, Lord Brahma and the other demigods said:] O lotus-eyed Lord, although nondevotees who
+accept severe austerities and penances to achieve the highest position may think themselves liberated, their
+intelligence is impure. They fall down from their position of imagined superiority because they have no regard for
+Your lotus feet.
+<br>
+<h2>Purport</h2>
+Aside from devotees, there are many others, nondevotees, known as karmis, jnanis or yogis, philanthropists,
+altruists, politicians, impersonalists and voidists. There are many varieties of nondevotees who have their
+respective ways of liberation, but simply because they do not know the shelter of the Lord's lotus feet, although
+they falsely think that they have been liberated and elevated to the highest position, they fall down. As clearly
+stated by the Lord Himself in Bhagavad-gita (9.3):
+asraddadhanah purusa
+dharmasyasya parantapa
+aprapya mam nivartante
+mrtyu-samsara-vartmani
+"Those who are not faithful on the path of devotional service cannot attain Me, O conqueror of foes, but return to
+birth and death in this material world." It doesn't matter whether one is a karmi, jnani, yogi, philanthropist,
+politician or whatever; if one has no love for the lotus feet of the Lord, one falls down. That is the verdict given by
+Lord brahma in this verse.
+There are persons who advocate accepting any process and who say that whatever process one accepts will lead
+to the same goal, but that is refuted in this verse, where such persons are referred to as vimukta-maninah,
+signifying that although they think they have attained the highest perfection, in fact they have not. In the present
+day, big, big politicians all over the world think that by scheming they can occupy the highest political post, that of
+president or prime minister, but we actually see that even in this life such big prime ministers, presidents and other
+politicians, because of being nondevotees, fall down (patanty adhah). To become president or prime minister is not
+easy; one must work very hard (aruhya krcchrena) to achieve the post. And even though one may reach his goal, at
+any moment one may be kicked down by material nature. In human society there have been many instances in
+which great, exalted politicians have fallen from government and become lost in historical oblivion. The cause of
+this is avisuddha-buddhayah: their intelligence is impure. The sastra says, na te viduh svartha-gatim hi visnum
+(Bhag. 7.5.31). One achieves the perfection of life by becoming a devotee of Visnu, but people do not know this.
+Therefore, as stated in Bhagavad-gita (12.5), kleso 'dhikataras tesam avyaktasakta-cetasam. Persons who do not
+ultimately accept the Supreme Personality of Godhead and take to devotional service, but who instead are attached
+to impersonalism and voidism, must undergo great labor to achieve their goals.
+sreyah-srtim bhaktim udasya te vibho
+klisyanti ye kevala-bodha-labdhaye
+(Bhag. 10.14.4)
+To achieve understanding, such persons work very hard and undergo severe austerities, but their hard labor and
+austerities themselves are their only achievement, for they do not actually achieve the real goal of life.
+Dhruva Maharaja at first wanted to achieve the greatest material kingdom and greater material possessions than
+his father, but when he was actually favored by the Lord, who appeared before him to give him the benediction he
+desired, Dhruva Maharaja refused it, saying, svamin krtartho'smi varam na yace: "Now I am fully satisfied. I do not
+want any material benediction." (Hari-bhakti-sudhodaya 7.28) This is the perfection of life. Yam labdhva caparam
+labham manyate nadhikam tatah (Bg. 6.22). If one achieves the shelter of the Lord's lotus feet, one is fully satisfied
+and does not need to ask for any material benediction.
+At night, no one can see a lotus, for lotuses blossom only during the daytime. Therefore the word aravindaksa is
+significant. One who is not captivated by the lotus eyes or transcendental form of the Supreme Lord is in darkness,
+exactly like one who cannot see a lotus. One who has not come to the point of seeing the lotus eyes and
+transcendental form of Syamasundara is a failure. premanjana-cchurita-bhakti-vilocanena santah sadaiva hrdayesu
+vilokayanti. Those who are attached to the Supreme Personality of Godhead in love always see the Lord's lotus eyes
+and lotus feet, whereas others cannot see the Lord's beauty and are therefore classified as anadrta-yusmadanghrayah,
+or neglectful of the Lord's personal form. Those who neglect the Lord's form are surely failures on every
+path in life, but if one develops even a little love for the Supreme Personality of Godhead, one is liberated without
+difficulty (svalpam apy asya dharmasya trayate mahato bhayat). Therefore the Supreme Personality of Godhead
+recommends in Bhagavad-gita (9.34), man-mana bhava mad-bhakto mad-yaji mam namaskuru: "Simply think of
+Me, become My devotee, worship Me and offer some slight homage to Me." Simply by this process, one is
+guaranteed to return home, back to Godhead, and thus attain the highest perfection. The Lord further affirms in
+Bhagavad-gita (18.54-55):
+brahma-bhutah prasannatma
+na socati na kanksati
+samah sarvesu bhutesu
+mad-bhaktim labhate param
+bhaktya mam abhijanati
+yavan yas casmi tattvatah
+tato mam tattvato jnatva
+visate tad-anantaram
+"One who is thus transcendentally situated at once realizes the Supreme Brahman and becomes fully joyful. He
+never laments nor desires to have anything; he is equally disposed to every living entity. In that state he attains
+pure devotional service unto Me. One can understand the Supreme Personality as He is only by devotional service.
+And when one is in full consciousness of the Supreme Lord by such devotion, he can enter into the kingdom of
+God."
 </p>
 
 </div>
@@ -104,7 +182,7 @@ the baby Krsna on his lap and was filled with satisfaction.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

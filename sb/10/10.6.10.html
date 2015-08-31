@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.10.html">10.6.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-krinihi bhoh phalaniti
-srutva satvaram acyutah
-phalarthi dhanyam adaya
-yayau sarva-phala-pradah
-<p></p>
+tasmin stanam durjara-viryam ulbanam
+ghorankam adaya sisor dadav atha
+gadham karabhyam bhagavan prapidya tatpranaih
+samam rosa-samanvito 'pibat
+<br>
 <h2>Synonyms</h2>
-krinihi--please come and purchase; bhoh--O neighborhood residents; phalani--ripe fruits; iti--thus; srutva--
-hearing; satvaram--very soon; acyutah--Krsna; phala-arthi--as if He wanted some fruits; dhanyam adaya--capturing
-some grains of paddy; yayau--went to the fruit vendor; sarva-phala-pradah--the Supreme Personality of Godhead,
-who can give all kinds of fruit to everyone, had now become in need of fruits.
-<p></p>
+tasmin--in that very spot; stanam--the breast; durjara-viryam--a very powerful weapon mixed with poison;
+ulbanam--which was fierce; ghora--the most ferocious Putana; ankam--on her lap; adaya--placing; sisoh--in the
+mouth of the child; dadau--pushed; atha--thereupon; gadham--very hard; karabhyam--with both hands; bhagavan--
+the Supreme Personality of Godhead; prapidya--giving her great pain; tat-pranaih--her life; samam--along with;
+rosa-samanvitah--being very angry at her; apibat--sucked the breast.
+<br>
 <h2>Translation</h2>
-Once a woman selling fruit was calling, "O inhabitants of Vrajabhumi, if you want to purchase some fruits, come
-here!" Upon hearing this, Krsna immediately took some grains and went to barter as if He needed some fruits.
-<p></p>
+On that very spot, the fiercely dangerous Raksasi took Krsna on her lap and pushed her breast into His mouth.
+The nipple of her breast was smeared with a dangerous, immediately effective poison, but the Supreme Personality
+of Godhead, Krsna, becoming very angry at her, took hold of her breast, squeezed it very hard with both hands,
+and sucked out both the poison and her life.
+<br>
 <h2>Purport</h2>
-Aborigines generally go to the villagers to sell fruits. How much the aborigines were attached to Krsna is here
-described. Krsna, to show His favor to the aborigines, would immediately go purchase fruits, bartering with paddy
-in His hand as He had seen others do.
+Lord Krsna was not angry at Putana for His own sake. Rather, He was angry because the Raksasi had killed so
+many small children in Vrajabhumi. Therefore He decided that she should be punished by having to forfeit her life.
 </p>
 
 </div>
@@ -75,7 +116,7 @@ in His hand as He had seen others do.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

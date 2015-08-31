@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,49 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.23.html">10.1.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-suka uvaca
-athainam atmajam viksya
-maha-purusa-laksanam
-devaki tam upadhavat
-kamsad bhita suvismita
-<p></p>
+vasudeva-grhe saksad
+bhagavan purusah parah
+janisyate tat-priyartham
+sambhavantu sura-striyah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; atha--after this offering of prayers by Vasudeva; enam--this Krsna;
-atmajam--their son; viksya--observing; maha-purusa-laksanam--with all the symptoms of the Supreme Personality
-of Godhead, Visnu; devaki--Krsna's mother; tam--unto Him (Krsna); upadhavat--offered prayers; kamsat--of
-Kamsa; bhita--being afraid; su-vismita--and also being astonished by seeing such a wonderful child.
-<p></p>
+vasudeva-grhe--in the house of Vasudeva (who would be the father of Krsna when the Lord appeared); saksat--
+personally; bhagavan--the Supreme Personality of Godhead, who has full potency; purusah--the original person;
+parah--who is transcendental; janisyate--will appear; tat-priya-artham--and for His satisfaction; sambhavantu--
+should take birth; sura-striyah--all the wives of the demigods.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami continued: Thereafter, having seen that her child had all the symptoms of the Supreme
-Personality of Godhead, Devaki, who was very much afraid of Kamsa and unusually astonished, began to offer
-prayers to the Lord.
-<p></p>
+The Supreme Personality of Godhead, Sri Krsna, who has full potency, will personally appear as the son of
+Vasudeva. Therefore all the wives of the demigods should also appear in order to satisfy Him.
+<br>
 <h2>Purport</h2>
-The word suvismita, meaning "astonished," is significant in this verse. Devaki and her husband, Vasudeva, were
-assured that their child was the Supreme Personality of Godhead and could not be killed by Kamsa, but because of
-affection, as they thought of Kamsa's previous atrocities, they were simultaneously afraid that Krsna would be
-killed. This is why the word suvismita has been used. Similarly, we are also astounded upon thinking of whether
-this movement will be killed by the asuras or will continue to advance without fear.
+In Bhagavad-gita (4.9) the Lord says, tyaktva deham punar janma naiti mam eti: after giving up the material
+body, the devotee of the Lord returns home, back to Godhead. This means that the devotee is first transferred to
+the particular universe where the Lord is at that time staying to exhibit His pastimes. There are innumerable
+universes, and the Lord is appearing in one of these universes at every moment. Therefore His pastimes are called
+nitya-lila, eternal pastimes. The Lord's appearance as a child in the house of Devaki takes place continuously in one
+universe after another. Therefore, the devotee is first transferred to that particular universe where the pastimes of
+the Lord are current. As stated in Bhagavad-gita, even if a devotee does not complete the course of devotional
+service, he enjoys the happiness of the heavenly planets, where the most pious people dwell, and then takes birth
+in the house of a suci or sriman, a pious brahmana or a wealthy vaisya (sucinam srimatam gehe yoga-bhrasto
+'bhijayate). Thus a pure devotee, even if unable to execute devotional service completely, is transferred to the
+upper planetary system, where pious people reside. From there, if his devotional service is complete, such a
+devotee is transferred to the place where the Lord's pastimes are going on. Herein it is said, sambhavantu surastriyah.
+Sura-stri, the women of the heavenly planets, were thus ordered to appear in the Yadu dynasty in
+Vrndavana to enrich the pastimes of Lord Krsna. These sura-stri, when further trained to live with Krsna, would be
+transferred to the original Goloka Vrndavana. During Lord Krsna's pastimes within this world, the sura-stri were to
+appear in different ways in different families to give pleasure to the Lord, just so that they would be fully trained
+before going to the eternal Goloka Vrndavana. With the association of Lord Krsna, either at Dvaraka-puri,
+Mathura-puri or Vrndavana, they would certainly return home, back to Godhead. Among the sura-stri, the women
+of the heavenly planets, there are many devotees, such as the mother of the Upendra incarnation of Krsna. It was
+such devoted women who were called for in this connection.
 </p>
 
 </div>
@@ -79,7 +131,7 @@ this movement will be killed by the asuras or will continue to advance without f
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

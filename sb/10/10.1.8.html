@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,76 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.8.html">10.1.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-devakya jathare garbham
-sesakhyam dhama mamakam
-tat sannikrsya rohinya
-udare sannivesaya
-<p></p>
+rohinyas tanayah prokto
+ramah sankarsanas tvaya
+devakya garbha-sambandhah
+kuto dehantaram vina
+<br>
 <h2>Synonyms</h2>
-devakyah--of Devaki; jathare--within the womb; garbham--the embryo; sesa-akhyam--known as Sesa, the plenary
-expansion of Krsna; dhama--the plenary expansion; mamakam--of Me; tat--Him; sannikrsya--attracting; rohinyah--
-of Rohini; udare--within the womb; sannivesaya--transfer without difficulty.
-<p></p>
+rohinyah--of Rohinidevi, the mother of Baladeva; tanayah--the son; proktah--is well known; ramah--Balarama;
+sankarsanah--Balarama is none other than Sankarsana, the first Deity in the quadruple group (Sankarsana,
+Aniruddha, Pradyumna and Vasudeva); tvaya--by you (it is so said); devakyah--of Devaki, the mother of Krsna;
+garbha-sambandhah--connected with the womb; kutah--how; deha-antaram--transferring bodies; vina--without.
+<br>
 <h2>Translation</h2>
-Within the womb of Devaki is My partial plenary expansion known as Sankarsana or Sesa. Without difficulty,
-transfer Him into the womb of Rohini.
-<p></p>
+My dear Sukadeva Gosvami, you have already explained that Sankarsana, who belongs to the second quadruple,
+appeared as the son of Rohini named Balarama. If Balarama was not transferred from one body to another, how is it
+possible that He was first in the womb of Devaki and then in the womb of Rohini? Kindly explain this to me.
+<br>
 <h2>Purport</h2>
-The first plenary expansion of Krsna is Baladeva, also known as Sesa. The Sesa incarnation of the Supreme
-Personality of Godhead supports the entire universe, and the eternal mother of this incarnation is mother Rohini.
-"Because I am going into the womb of Devaki," the Lord told Yogamaya, "the Sesa incarnation has already gone
-there and made suitable arrangements so that I may live there. Now He should enter the womb of Rohini, His
-eternal mother."
-In this connection, one may ask how the Supreme Personality of Godhead, who is always situated
-transcendentally, could enter the womb of Devaki, which had previously been entered by the six asuras, the sadgarbhas.
-Does this mean that the Sad-garbhasuras were equal to the transcendental body of the Supreme
-Personality of Godhead? The following answer is given by Srila Visvanatha Cakravarti Thakura.
-The entire creation, as well as its individual parts, is an expansion of the energy of the Supreme Personality of
-Godhead. Therefore, even though the Lord enters the material world, He does not do so. This is explained by the
-Lord Himself in Bhagavad-gita (9.4-5):
-maya tatam idam sarvam
-jagad avyakta-murtina
-mat-sthani sarva-bhutani
-na caham tesv avasthitah
-na ca mat-sthani bhutani
-pasya me yogam aisvaram
-bhuta-bhrn na ca bhuta-stho
-mamatma bhuta-bhavanah
-"By Me, in My unmanifested form, this entire universe is pervaded. All beings are in Me, but I am not in them.
-And yet everything that is created does not rest in Me. Behold My mystic opulence! Although I am the maintainer
-of all living entities, and although I am everywhere, My Self is the very source of creation." Sarvam khalv idam
-brahma. Everything is an expansion of Brahman, the Supreme Personality of Godhead, yet everything is not the
-Supreme Godhead, and He is not everywhere. Everything rests upon Him and yet does not rest upon Him. This can
-be explained only through the acintya-bhedabheda philosophy. Such truths cannot be understood, however, unless
-one is a pure devotee, for the Lord says in Bhagavad-gita (18.55), bhaktya mam abhijanati yavan yas casmi
-tattvatah: "One can understand the Supreme Personality as He is only by devotional service." Even though the Lord
-cannot be understood by ordinary persons, this principle should be understood from the statement of the sastras.
-A pure devotee is always transcendentally situated because of executing nine different processes of bhakti-yoga
-(sravanam kirtanam visnoh smaranam pada-sevanam. arcanam vandanam dasyam sakhyam atma-nivedanam).
-Thus situated in devotional service, a devotee, although in the material world, is not in the material world. Yet a
-devotee always fears, "Because I am associated with the material world, so many contaminations affect me."
-Therefore he is always alert in fear, which gradually diminishes his material association.
-Symbolically, mother Devaki's constant fear of Kamsa was purifying her. A pure devotee should always fear
-material association, and in this way all the asuras of material association will be killed, as the sad-garbhasuras
-were killed by Kamsa. It is said that from the mind, Marici appears. In other words, Marici is an incarnation of the
-mind. Marici has six sons: Kama, Krodha, Lobha, Moha, Mada and Matsarya (lust, anger, greed, illusion, madness
-and envy). The Supreme Personality of Godhead appears in pure devotional service. This is confirmed in the
-Vedas: bhaktir evainam darsayati. Only bhakti can bring one in contact with the Supreme Personality of Godhead.
-The Supreme Personality of Godhead appeared from the womb of Devaki, and therefore Devaki symbolically
-represents bhakti, and Kamsa symbolically represents material fear. When a pure devotee always fears material
-association, his real position of bhakti is manifested, and he naturally becomes uninterested in material enjoyment.
-When the six sons of Marici are killed by such fear and one is freed from material contamination, within the womb
-of bhakti the Supreme Personality of Godhead appears. Thus the seventh pregnancy of Devaki signifies the
-appearance of the Supreme Personality of Godhead. After the six sons Kama, Krodha, Lobha, Moha, Mada and
-Matsarya are killed, the Sesa incarnation creates a suitable situation for the appearance of the Supreme Personality
-of Godhead. In other words, when one awakens his natural Krsna consciousness, Lord Krsna appears. This is the
-explanation given by Srila Visvanatha Cakravarti Thakura.
+Here is a question particularly directed at understanding Balarama, who is Sankarsana Himself. Balarama is well
+known as the son of Rohini, yet it is also known that He was the son of Devaki. Pariksit Maharaja wanted to
+understand the mystery of Balarama's being the son of both Devaki and Rohini.
 </p>
 
 </div>
@@ -120,7 +115,7 @@ explanation given by Srila Visvanatha Cakravarti Thakura.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

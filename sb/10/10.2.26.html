@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,144 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.26.html">10.2.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kaccit pasavyam nirujam
-bhury-ambu-trna-virudham
-brhad vanam tad adhuna
-yatrasse tvam suhrd-vrtah
-<p></p>
+satya-vratam satya-param tri-satyam
+satyasya yonim nihitam ca satye
+satyasya satyam rta-satya-netram
+satyatmakam tvam saranam prapannah
+<br>
 <h2>Synonyms</h2>
-kaccit--whether; pasavyam--protection of the cows; nirujam--without difficulties or disease; bhuri--sufficient;
-ambu--water; trna--grass; virudham--plants; brhat vanam--the great forest; tat--all these arrangements are there;
-adhuna--now; yatra--where; asse--are living; tvam--you; suhrt-vrtah--surrounded by friends.
-<p></p>
+satya-vratam--the Personality of Godhead, who never deviates from His vow
+).
+To honor this vow, the Lord appeared.
+*; satya-param--who is the Absolute Truth (as stated in the beginning of Srimad-Bhagavatam, satyam param
+dhimahi); tri-satyam--He is always present as the Absolute Truth, before the creation of this cosmic manifestation,
+during its maintenance, and even after its annihilation; satyasya--of all relative truths, which are emanations from
+the Absolute Truth, Krsna; yonim--t;he cause; nihitam--entered). Therefore He is called antaryami, the inner force.
+*; ca--and; satye--in the factors that create this material world (namely, the five elements--earth, water, fire, air and
+ether); satyasya--of all that is accepted as the truth; satyam--the Lord is the original truth; rta-satya-netram--He is
+the origin of whatever truth is pleasing (sunetram); satya-atmakam--everything pertaining to the Lord is truth (saccid-
+ananda: His body is truth, His knowledge is truth, and His pleasure is truth); tvam--unto you, O Lord;
+saranam--offering our full surrender; prapannah--we are completely under Your protection.
+<br>
 <h2>Translation</h2>
-My dear friend Nanda Maharaja, in the place where you are living with your friends, is the forest favorable for the
-animals, the cows? I hope there is no disease or inconvenience. The place must be full of water, grass and other
-plants.
-<p></p>
+The demigods prayed: O Lord, You never deviate from Your vow, which is always perfect because whatever You
+decide is perfectly correct and cannot be stopped by anyone. Being present in the three phases of cosmic
+manifestation--creation, maintenance and annihilation--You are the Supreme Truth. Indeed, unless one is
+completely truthful, one cannot achieve Your favor, which therefore cannot be achieved by hypocrites. You are the
+active principle, the real truth, in all the ingredients of creation, and therefore you are known as antaryami, the
+inner force. You are equal to everyone, and Your instructions apply for everyone, for all time. You are the
+beginning of all truth. Therefore, offering our obeisances, we surrender unto You. Kindly give us protection.
+<br>
 <h2>Purport</h2>
-For human happiness, one must care for the animals, especially the cows. Vasudeva therefore inquired whether
-there was a good arrangement for the animals where Nanda Maharaja lived. For the proper pursuit of human
-happiness, there must be arrangements for the protection of cows. This means that there must be forests and
-adequate pasturing grounds full of grass and water. If the animals are happy, there will be an ample supply of milk,
-from which human beings will benefit by deriving many milk products with which to live happily. As enjoined in
-Bhagavad-gita (18.44), krsi-go-raksya-vanijyam vaisya-karma-svabhavajam. Without giving proper facilities to the
-animals, how can human society be happy? That people are raising cattle to send to the slaughterhouse is a great
-sin. By this demoniac enterprise, people are ruining their chance for a truly human life. Because they are not giving
-any importance to the instructions of Krsna, the advancement of their so-called civilization resembles the crazy
-efforts of men in a lunatic asylum.
+The demigods or devotees know perfectly well that the Supreme Personality of Godhead is the true substance,
+whether within this material world or in the spiritual world. Srimad-Bhagavatam begins, therefore, with the words
+om namo bhagavate vasudevaya. .. satyam param dhimahi. Vasudeva, Krsna, is the param satyam, the Supreme
+Truth. The Supreme Truth can be approached or understood by the supreme method, as declared by the Supreme
+Truth: bhaktya mam abhijanati yavan yas casmi tattvatah (Bg. 18.55). Bhakti, devotional service, is the only way to
+understand the Absolute Truth. For protection, therefore, the demigods surrender to the Supreme Truth, not to the
+relative truth. There are persons who worship various demigods, but the Supreme Truth, Krsna, declares in
+Bhagavad-gita (7.23), antavat tu phalam tesam tad bhavaty alpa-medhasam: "Men of small intelligence worship the
+demigods, and their fruits are limited and temporary." Worship of demigods may be useful for a limited time, but
+the result is antavat, perishable. This material world is impermanent, the demigods are impermanent, and the
+benedictions derived from the demigods are also impermanent, whereas the living entity is eternal (nityo nityanam
+cetanas cetananam). Every living entity, therefore, must search for eternal happiness, not temporary happiness. The
+words satyam param dhimahi indicate that one should search for the Absolute Truth, not the relative truth.
+While offering prayers to the Supreme Personality of Godhead, Nrsimhadeva, Prahlada Maharaja said:
+balasya neha saranam pitarau nrsimha
+nartasya cagadam udanvati majjato nauh
+Generally it is understood that the protectors for a child are his parents, but this is not actually the fact. The real
+protector is the Supreme Personality of Godhead.
+taptasya tat-pratividhir ya ihanjasestas
+tavad vibho tanu-bhrtam tvad-upeksitanam
+(Bhag. 7.9.19)
+If neglected by the Supreme Personality of Godhead, a child, despite the presence of his parents, will suffer, and a
+diseased person, despite all medical help, will die. In this material world, where there is a struggle for existence,
+men have invented many means for protection, but these are useless if the Supreme Personality of Godhead rejects
+them. Therefore the demigods purposefully say, satyatmakam tvam saranam prapannah: "Real protection can be
+obtained from You, O Lord, and therefore we surrender unto You,"
+The Lord demands that one surrender unto Him (sarva-dharman parityajya mam ekam saranam vraja), and He
+further says:
+sakrd eva prapanno yas
+tavasmiti ca yacate
+abhayam sarvada tasmai
+dadamy etad vratam mama
+"If one surrenders unto Me sincerely, saying, 'My Lord, from this day I am fully surrendered unto You,' I always
+give him protection. That is My vow." (Ramayana, Yuddha-kanda 18.33) The demigods offered their prayers to the
+Supreme Personality of Godhead because He had now appeared in the womb of His devotee Devaki to protect all
+the devotees harassed by Kamsa and his lieutenants. Thus the Lord acts as satyavrata. The protection given by the
+Supreme Personality of Godhead cannot be compared to the protection given by the demigods. It is said that
+Ravana was a great devotee of Lord Siva, but when Lord Ramacandra went to kill him, Lord Siva could not give
+him protection.
+Lord Brahma and Lord Siva, accompanied by great sages like Narada and followed by many other demigods, had
+now invisibly appeared in the house of Kamsa. They began to pray for the Supreme Personality of Godhead in
+select prayers which are very pleasing to the devotees and which award fulfillment of devotional desires. The first
+words they spoke acclaimed that the Lord is true to His vow. As stated in the Bhagavad-gita, Krsna descends upon
+this material world just to protect the pious and destroy the impious. That is His vow. The demigods could
+understand that the Lord had taken His residence within the womb of Devaki to fulfill this vow. They were very
+glad that the Lord was appearing to fulfill His mission, and they addressed Him as satyam param, or the Supreme
+Absolute Truth.
+Everyone is searching after the truth. That is the philosophical way of life. The demigods give information that
+the Supreme Absolute Truth is Krsna. One who becomes fully Krsna conscious can attain the Absolute Truth.
+Krsna is the Absolute Truth. Relative truth is not truth in all the three phases of eternal time. Time is divided into
+past, present and future. Krsna is Truth always, past, present and future. In the material world, everything is being
+controlled by supreme time, in the course of past, present and future. But before the creation, Krsna was existing,
+and when there is creation, everything is resting in Krsna, and when this creation is finished, Krsna will remain.
+Therefore, He is Absolute Truth in all circumstances, If there is any truth within this material world, it emanates
+from the Supreme Truth, Krsna. If there is any opulence within this material world, the cause of the opulence is
+Krsna. If there is any reputation within this material world, the cause of the reputation is Krsna. If there is any
+strength within this material world, the cause of such strength is Krsna. If there is any wisdom and education
+within this material world, the cause of such wisdom and education is Krsna. Therefore Krsna is the source of all
+relative truths.
+Devotees, therefore, following in the footsteps of Lord Brahma, pray, govindam adi-purusam tam aham bhajami,
+worshiping the adi-purusa, the supreme truth, Govinda. Everything, everywhere, is performed in terms of three
+principles, jnana-bala-kriya--knowledge, strength and activity. In every field, if there is not full knowledge, full
+strength and full activity, an endeavor is never successful. Therefore, if one wants success in everything, one must
+be backed by these three principles. In the Vedas (Svetasvatara Upanisad 6.8) there is this statement about the
+Supreme Personality of Godhead:
+na tasya karyam karanam ca vidyate
+na tat samas cabhyadhikas ca drsyate
+parasya saktir vividhaiva sruyate
+svabhaviki jnana-bala-kriya ca
+The Supreme Personality of Godhead does not need to do anything personally, for He has such potencies that
+anything He wants done will be done perfectly well through the control of material nature (svabhaviki jnana-balakriya
+ca). Similarly, those who are engaged in the service of the Lord are not meant to struggle for existence. The
+devotees who are fully engaged in spreading the Krsna consciousness movement, more than ten thousand men and
+women all over the world, have no steady or permanent occupation, yet we actually see that they are maintained
+very opulently. The Lord says in Bhagavad-gita (9.22):
+ananyas cintayanto mam
+ye janah paryupasate
+tesam nityabhiyuktanam
+yoga-ksemam vahamy aham
+"For those who worship Me with devotion, meditating on My transcendental form, I carry to them what they lack
+and preserve what they have." The devotees have no anxiety over what will happen next, where they will stay or
+what they will eat, for everything is maintained and supplied by the Supreme Personality of Godhead, who has
+promised, kaunteya pratijanihi na me bhaktah pranasyati: "O son of Kunti, declare it boldly that My devotee never
+perishes." (Bg. 9.31) From all angles of vision, therefore, in all circumstances, if one fully surrenders unto the
+Supreme Personality of Godhead, there is no question of one's struggling for existence. In this connection, the
+commentary by Sripada Madhvacarya, who quotes from the Tantra-bhagavata, is very meaningful:
+sac-chadba uttamam bruyad
+anandantiti vai vadet
+yetijnanam samuddistam
+purnananda-drsis tatah
+attrtvac ca tada danat
+satyattya cocyate vibhuh
+Explaining the words satyasya yonim, Srila Visvanatha Cakravarti Thakura says that Krsna is the avatari, the
+origin of all incarnations. All incarnations are the Absolute Truth, yet the Supreme Personality of Godhead Krsna is
+the origin of all incarnations. Diparcir eva hi dasantaram abhyupetya dipayate (Brahma-samhita 5.46). There may
+be many lamps, all equal in power, yet there is a first lamp, a second lamp, a third lamp and so on. Similarly, there
+are many incarnations, who are compared to lamps, but the first lamp, the original Personality of Godhead, is
+Krsna. Govindam adi-purusam tam aham bhajami.
+The demigods must offer worship in obedience to the Supreme Personality of Godhead, but one might argue that
+since the Supreme Godhead was within the womb of Devaki, He was also coming in a material body. Why then
+should He be worshiped? Why should one make a distinction between an ordinary living entity and the Supreme
+Personality of Godhead? These questions are answered in the following verses.
 </p>
 
 </div>
@@ -82,7 +226,7 @@ efforts of men in a lunatic asylum.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

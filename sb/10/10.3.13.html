@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.13.html">10.3.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nisa-carittham vyathita-stana vyasur
-vyadaya kesams caranau bhujav api
-prasarya gosthe nija-rupam asthita
-vajrahato vrtra ivapatan nrpa
-<p></p>
+sri-vasudeva uvaca
+vidito 'si bhavan saksat
+purusah prakrteh parah
+kevalanubhavanandasvarupah
+sarva-buddhi-drk
+<br>
 <h2>Synonyms</h2>
-nisa-cari--the Raksasi; ittham--in this way; vyathita-stana--being severely aggrieved because of pressure on her
-breast; vyasuh--lost her life; vyadaya--opening her mouth wide; kesan--bunch of hairs; caranau--her two legs;
-bhujau--her two hands; api--also; prasarya--expanding; gosthe--in the pasturing ground; nija-rupam asthita--
-remained in her original demoniac form; vajra-ahatah--killed by the thunderbolt of Indra; vrtrah--Vrtrasura; iva--as
-if; apatat--fell down; nrpa--O King.
-<p></p>
+sri-vasudevah uvaca--Sri Vasudeva prayed; viditah asi--now I am fully conscious of You; bhavan--Your Lordship;
+saksat--directly; purusah--the Supreme Person; prakrteh--to material nature; parah--transcendental, beyond
+everything material; kevala-anubhava-ananda-svarupah--Your form is sac-cid-ananda-vigraha, and whoever
+perceives You becomes transcendentally blissful; sarva-buddhi-drk--the supreme observer, the Supersoul, the
+intelligence of everyone.
+<br>
 <h2>Translation</h2>
-In this way the demon Putana, very much aggrieved because her breast was being attacked by Krsna, lost her life.
-O King Pariksit, opening her mouth wide and spreading her arms, legs and hair, she fell down in the pasturing
-ground in her original form as a Raksasi, as Vrtrasura had fallen when killed by the thunderbolt of Indra.
-<p></p>
+Vasudeva said: My Lord, You are the Supreme Person, beyond material existence, and You are the Supersoul.
+Your form can be perceived by transcendental knowledge, by which You can be understood as the Supreme
+Personality of Godhead. I now understand Your position perfectly.
+<br>
 <h2>Purport</h2>
-Putana was a great Raksasi who knew the art of covering her original form by mystic power, but when she was
-killed her mystic power could not hide her, and she appeared in her original form.
+Within Vasudeva's heart, affection for his son and knowledge of the Supreme Lord's transcendental nature both
+awakened In the beginning Vasudeva thought, "Such a beautiful child has been born, but now Kamsa will come
+and kill Him." But when he understood that this was not an ordinary child but the Supreme Personality of
+Godhead, he became fearless. Regarding his son as the Supreme Lord, wonderful in everything, he began offering
+prayers appropriate for the Supreme Lord. Completely free from fear of Kamsa's atrocities, he accepted the child
+simultaneously as an object of affection and as an object of worship by prayers.
 </p>
 
 </div>
@@ -76,7 +120,7 @@ killed her mystic power could not hide her, and she appeared in her original for
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

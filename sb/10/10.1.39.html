@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,51 +81,58 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.39.html">10.1.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ajusta-gramya-visayav
-anapatyau ca dam-pati
-na vavrathe 'pavargam me
-mohitau deva-mayaya
-<p></p>
+dehe pancatvam apanne
+dehi karmanugo 'vasah
+dehantaram anuprapya
+praktanam tyajate vapuh
+<br>
 <h2>Synonyms</h2>
-ajusta-gramya-visayau--for sex life and to beget a child like Me; anapatyau--because of possessing no son; ca--
-also; dam-pati--both husband and wife; na--never; vavrathe--asked for (any other benediction); apavargam--
-liberation from this world; me--from Me; mohitau--being so much attracted; deva-mayaya--by transcendental love
-for Me (desiring Me as your beloved son).
-<p></p>
+dehe--when the body; pancatvam apanne--turns into five elements; dehi--the proprietor of the body, the living
+being; karma-anugah--following the reactions of his own fruitive activities; avasah--spontaneously, automatically;
+deha-antaram--another body (made of material elements); anuprapya--receiving as a result; praktanam--the former;
+tyajate--gives up; vapuh--body.
+<br>
 <h2>Translation</h2>
-Being husband and wife but always sonless, you were attracted by sexual desires, for by the influence of
-devamaya, transcendental love, you wanted to have Me as your son. Therefore you never desired to be liberated
-from this material world.
-<p></p>
+When the present body turns to dust and is again reduced to five elements--earth, water, fire, air and ether--the
+proprietor of the body, the living being, automatically receives another body of material elements according to his
+fruitive activities. When the next body is obtained, he gives up the present body.
+<br>
 <h2>Purport</h2>
-Vasudeva and Devaki had been dam-pati, husband and wife, since the time of Sutapa and Prsni, and they wanted
-to remain husband and wife in order to have the Supreme Personality of Godhead as their son. This attachment
-came about by the influence of devamaya. Loving Krsna as one's son is a Vedic principle. Vasudeva and Devaki
-never desired anything but to have the Lord as their son, yet for this purpose they apparently wanted to live like
-ordinary grhasthas for sexual indulgence. Although this was a transaction of spiritual potency, their desire appears
-like attachment for sex in conjugal life. If one wants to return home, back to Godhead, one must give up such
-desires. This is possible only when one develops intense love for the Supreme Personality of Godhead. Sri Caitanya
-Mahaprabhu has said:
-niskincanasya bhagavad-bhajanonmukhasya
-param param jigamisor bhava-sagarasya
-(Cc. Madhya 11.8)
-If one wants to go back home, back to Godhead, one must be niskincana, free from all material desires.
-Therefore, instead of desiring to have the Lord come here and become one's son, one should desire to become free
-from all material desires (anyabhilasita-sunyam) and go back home, back to Godhead. Sri Caitanya Mahaprabhu
-teaches us in His Siksastaka:
-na dhanam na janam na sundarim
-kavitam va jagad-isa kamaye
-mama janmani janmanisvare
-bhavatad bhaktir ahaituki tvayi
-"O almighty Lord, I have no desire to accumulate wealth, nor do I desire beautiful women, nor do I want any
-number of followers. I only want Your causeless devotional service, birth after birth." One should not ask the Lord
-to fulfill any materially tainted desires.
+This is confirmed in Bhagavad-gita, which presents the beginning of spiritual understanding.
+dehino 'smin yatha dehe
+kaumaram yauvanam jara
+tatha dehantara-praptir
+dhiras tatra na muhyati
+"As the embodied soul continually passes, in this body, from boyhood to youth to old age, the soul similarly
+passes into another body at death. The self-realized soul is not bewildered by such a change." (Bg. 2.13) A person
+or an animal is not the material body; rather, the material body is the covering of the living being. Bhagavad-gita
+compares the body to a dress and elaborately explains how one changes dresses one after another. The same Vedic
+knowledge is confirmed here. The living being, the soul, is constantly changing bodies one after another. Even in
+the present life, the body changes from childhood to boyhood, from boyhood to youth, and from youth to old age;
+similarly, when the body is too old to continue, the living being gives up this body and, by the laws of nature,
+automatically gets another body according to his fruitive activities, desires and ambitions. The laws of nature
+control this sequence, and therefore as long as the living entity is under the control of the external, material energy,
+the process of bodily change takes place automatically, according to one's fruitive activities. Vasudeva therefore
+wanted to impress upon Kamsa that if he committed this sinful act of killing a woman, in his next life he would
+certainly get a material body still more conditioned to the sufferings of material existence. Thus Vasudeva advised
+Kamsa not to commit sinful activities.
+One who commits sinful activities because of ignorance, tamo-guna, obtains a lower body. Karanam guna-sango
+'sya sad-asad-yoni janmasu (Bg. 13.22). There are hundreds and thousands of different species of life. Why are
+there higher and lower bodies? One receives these bodies according to the contaminations of material nature. If in
+this life one is contaminated by the mode of ignorance and sinful activities (duskrti), in the next life, by the laws of
+nature, one will certainly get a body full of suffering. The laws of nature are not subservient to the whimsical
+desires of the conditioned soul. Our endeavor, therefore, should be to associate always with sattva-guna and not
+indulge in rajo-guna or tamo-guna (rajas-tamo-bhavah). Lusty desires and greed keep the living entity perpetually
+in ignorance and prevent him from being elevated to the platform of sattva-guna or suddha-sattva-guna. One is
+advised to be situated in suddha-sattva-guna, devotional service, for thus one is immune to the reactions of the
+three modes of material nature.
 </p>
 
 </div>
@@ -95,7 +140,7 @@ to fulfill any materially tainted desires.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.43.html">10.8.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-evam etesu bhedesu
-ciram dhyatva sa atma-bhuh
-satyah ke katare neti
-jnatum neste kathancana
-<p></p>
+ittham vidita-tattvayam
+gopikayam sa isvarah
+vaisnavim vyatanon mayam
+putra-snehamayim vibhuh
+<br>
 <h2>Synonyms</h2>
-evam--in this way; etesu bhedesu--between these boys, who were existing separately; ciram--for a long time;
-dhyatva--after thinking; sah--he; atma-bhuh--Lord Brahma; satyah--real; ke--who; katare--who; na--are not; iti--
-thus; jnatum--to understand; na--not; iste--was able; kathancana--in any way at all.
-<p></p>
+ittham--in this way; vidita-tattvayam--when she understood the truth of everything philosophically; gopikayam--
+unto mother Yasoda; sah--the Supreme Lord; isvarah--the supreme controller; vaisnavim--visnumaya, or yogamaya;
+vyatanot--expanded; mayam--yogamaya; putra-sneha-mayim--very much attached because of maternal affection for
+her son; vibhuh--the Supreme Lord.
+<br>
 <h2>Translation</h2>
-Thus Lord Brahma, thinking and thinking for a long time, tried to distinguish between those two sets of boys,
-who were each separately existing. He tried to understand who was real and who was not real, but he couldn't
-understand at all.
-<p></p>
+Mother Yasoda, by the grace of the Lord, could understand the real truth. But then again, the supreme master, by
+the influence of the internal potency, yogamaya, inspired her to become absorbed in intense maternal affection for
+her son.
+<br>
 <h2>Purport</h2>
-Brahma was puzzled. "The original boys and calves are still sleeping as I have kept them," he thought, "but
-another set is here playing with Krsna. How has this happened?" Brahma could not grasp what was happening.
-Which boys were real, and which were not real? Brahma was unable to come to any definite conclusion. He
-pondered the matter for a long while. "How can there be two sets of calves and boys at the same time? Have the
-boys and calves here been created by Krsna, or has Krsna created the ones lying asleep? Or are both merely
-creations of Krsna?" Brahma thought about the subject in many different ways. "After I go to the cave and see that
-the boys and calves are still there, does Krsna go take them away and put them here so that I come here and see
-them, and does Krsna then take them from here and put them there?" Brahma could not figure out how there
-could be two sets of calves and cowherd boys exactly alike. Although thinking and thinking, he could not
-understand at all.
+Although mother Yasoda understood the whole philosophy of life, at the next moment she was overwhelmed by
+affection for her son by the influence of yogamaya. Unless she took care of her son Krsna, she thought, how could
+He be protected? She could not think otherwise, and thus she forgot all her philosophical speculations. This
+forgetfulness is described by Srila Visvanatha Cakravarti Thakura as being inspired by the influence of yogamaya
+(mohana-sadharmyan mayam). Materialistic persons are captivated by mahamaya, whereas devotees, by the
+arrangement of the spiritual energy, are captivated by yogamaya.
 </p>
 
 </div>
@@ -82,7 +118,7 @@ understand at all.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

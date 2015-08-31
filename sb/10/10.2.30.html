@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,76 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.30.html">10.2.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nunam hy adrsta-nistho 'yam
-adrsta-paramo janah
-adrstam atmanas tattvam
-yo veda na sa muhyati
-<p></p>
+tvayy ambujaksakhila-sattva-dhamni
+samadhinavesita-cetasaike
+tvat-pada-potena mahat-krtena
+kurvanti govatsa-padam bhavabdhim
+<br>
 <h2>Synonyms</h2>
-nunam--certainly; hi--indeed; adrsta--unseen; nisthah ayam--something ends there; adrsta--the unseen destiny;
-paramah--ultimate; janah--every living entity within this material world; adrstam--that destiny; atmanah--of
-oneself; tattvam--ultimate truth; yah--anyone who; veda--knows; na--not; sah--he; muhyati--becomes bewildered.
-<p></p>
+tvayi--in You; ambuja-aksa--O lotus-eyed Lord; akhila-sattva-dhamni--who are the original cause of all existence,
+from whom everything emanates and in whom all potencies reside; samadhina--by constant meditation and
+complete absorption (in thoughts of You, the Supreme Personality of Godhead); avesita--fully absorbed, fully
+engaged; cetasa--but by such a mentality; eke--the one process of always thinking of Your lotus feet; tvat-padapotena--
+by boarding such a boat as Your lotus feet; mahat-krtena--by that action which is considered the most
+powerful original existence or which is executed by mahajanas; kurvanti--they make; govatsa-padam--like the
+hoofprint of a calf; bhava-abdhim--the great ocean of nescience.
+<br>
 <h2>Translation</h2>
-Every man is certainly controlled by destiny, which determines the results of one's fruitive activities. In other
-words, one has a son or daughter because of unseen destiny, and when the son or daughter is no longer present,
-this also is due to unseen destiny. Destiny is the ultimate controller of everyone. One who knows this is never
-bewildered.
-<p></p>
+O lotus-eyed Lord, by concentrating one's meditation on Your lotus feet, which are the reservoir of all existence,
+and by accepting those lotus feet as the boat by which to cross the ocean of nescience, one follows in the footsteps
+of mahajanas [great saints, sages and devotees]. By this simple process, one can cross the ocean of nescience as
+easily as one steps over the hoofprint of a calf.
+<br>
 <h2>Purport</h2>
-Nanda Maharaja consoled his younger brother Vasudeva by saying that destiny is ultimately responsible for
-everything. Vasudeva should not be unhappy that his many children had been killed by Kamsa or that the last
-child, the daughter, had gone to the heavenly planets.
+The true mission in life is to cross the ocean of nescience, of repeated birth and death. Those in the darkness of
+ignorance, however, do not know this mission. Instead, being carried away by the waves of material nature
+(prakrteh kriyamanani gunaih karmani sarvasah), they are undergoing the tribulations of mrtyu-samsara-vartmani,
+repeated birth and death. But persons who have achieved knowledge by the association of devotees follow the
+mahajanas (mahat-krtena). Such a person always concentrates his mind upon the lotus feet of the Lord and
+executes one or more of the nine varieties of devotional service (sravanam kirtanam visnoh smaranam padasevanam).
+Simply by this process, one can cross the insurmountable ocean of nescience.
+Devotional service is powerful in any form. Sri-visnoh sravane pariksid abhavad vaiyasakih kirtane (Bhaktirasamrta-
+sindhu 1.2.265). According to this verse, Maharaja Pariksit became liberated by fully concentrating his
+mind on hearing the Lord's holy name, attributes and pastimes. Similarly, Sukadeva Gosvami simply glorified the
+Lord, and by speaking on the subject matters of Krsna that constitute the entire Srimad-Bhagavatam, he too was
+liberated. One may also be liberated simply by sakhya, friendly behavior with the Lord. Such is the power of
+devotional service, as we learn from the examples set by the Lord's many pure devotees.
+svayambhur naradah sambhuh
+kumarah kapilo manuh
+prahlado janako bhismo
+balir vaiyasakir vayam
+(Bhag. 6.3.20)
+We have to follow in the footsteps of such devotees, for by this one easy process one can cross the great ocean of
+nescience just as one might cross a small hole created by the hoof of a calf.
+Here the Lord is described as ambujaksa, or lotus-eyed. By seeing the eyes of the Lord, which are compared to
+lotus flowers, one becomes so satisfied that one does not want to turn his eyes to anything else. Simply by seeing
+the transcendental form of the Lord, a devotee is at once fully absorbed in the Lord in his heart. This absorption is
+called samadhi. Dhyanavasthita-tad-gatena manasa pasyanti yam yoginah (Bhag. 12.13.1). A yogi is fully absorbed
+in thoughts of the Supreme Personality of Godhead, for he has no other business than to think of the Lord always
+within the heart. It is also said:
+samasrita ye pada-pallava-plavam
+mahat-padam punya-yaso murareh
+bhavambudhir vatsa-padam param padam
+padam padam yad vipadam na tesam
+"For one who has accepted the boat of the lotus feet of the Lord, who is the shelter of the cosmic manifestation
+and is famous as Murari, the enemy of the demon Mura, the ocean of the material world is like the water contained
+in a calf's hoofprint. His goal is param padam, or Vaikuntha, the place where there are no material miseries, not the
+place where there is danger at every step." (Bhag. 10.14.58) This process is recommended here by authorities like
+Lord Brahma and Lord Siva (svayambhur naradah sambhuh), and therefore we must take to this process in order to
+transcend nescience. This is very easy, but we must follow in the footsteps of great personalities, and then success
+will be possible.
+In regard to the word mahat-krtena, it is also significant that the process shown by great devotees is not only for
+them but also for others. If things are made easy, this affords facility for the person who has made them easy and
+also for others who follow the same principles. The process recommended in this verse for crossing the ocean of
+nescience is easy not only for the devotee but also for common persons who follow the devotee (mahajano yena
+gatah sa panthah).
 </p>
 
 </div>
@@ -76,7 +158,7 @@ child, the daughter, had gone to the heavenly planets.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

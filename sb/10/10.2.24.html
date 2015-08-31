@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,68 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.24.html">10.2.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-distya samsara-cakre 'smin
-vartamanah punar-bhavah
-upalabdho bhavan adya
-durlabham priya-darsanam
-<p></p>
+asinah samvisams tisthan
+bhunjanah paryatan mahim
+cintayano hrsikesam
+apasyat tanmayam jagat
+<br>
 <h2>Synonyms</h2>
-distya--it is also by great fortune; samsara-cakre asmin--in this world of birth and death; vartamanah--although I
-was existing; punah-bhavah--my meeting with you is just like another birth; upalabdhah--being obtained by me;
-bhavan--you; adya--today; durlabham--although it was never to happen; priya-darsanam--to see you again, my very
-dear friend and brother.
-<p></p>
+asinah--while sitting comfortably in his sitting room or on the throne; samvisan--or lying on his bed; tisthan--or
+staying anywhere; bhunjanah--while eating; paryatan--while walking or moving; mahim--on the ground, going
+hither and thither; cintayanah--always inimically thinking of; hrsikesam--the Supreme Personality of Godhead, the
+controller of everything; apasyat--observed; tat-mayam--consisting of Him (Krsna), and nothing more; jagat--the
+entire world.
+<br>
 <h2>Translation</h2>
-It is also by good fortune that I am seeing you. Having obtained this opportunity, I feel as if I have taken birth
-again. Even though one is present in this world, to meet with intimate friends and dear relatives in this material
-world is extremely difficult.
-<p></p>
+While sitting on his throne or in his sitting room, while lying on his bed, or, indeed, while situated anywhere,
+and while eating, sleeping or walking, Kamsa saw only his enemy, the Supreme Lord, Hrsikesa. In other words, by
+thinking of his all-pervading enemy, Kamsa became unfavorably Krsna conscious.
+<br>
 <h2>Purport</h2>
-Vasudeva had been imprisoned by Kamsa, and therefore, although present in Mathura, he was unable to see
-Nanda Maharaja for many years. Therefore when they met again, Vasudeva considered this meeting to be another
-birth.
+Srila Rupa Gosvami has described the finest pattern of devotional service as anukulyena krsnanusilanam, or
+cultivating Krsna consciousness favorably. Kamsa, of course, was also Krsna conscious, but because he regarded
+Krsna as his enemy, even though he was fully absorbed in Krsna consciousness, his Krsna consciousness was not
+favorable for his existence. Krsna consciousness, favorably cultivated, makes one completely happy, so much so
+that a Krsna conscious person does not consider kaivalya-sukham, or merging into the existence of Krsna, to be a
+great gain. Kaivalyam narakayate. For a Krsna conscious person, even merging into the existence of Krsna, or
+Brahman, as impersonalists aspire to do, is uncomfortable. Kaivalyam narakayate tridasa-pur akasa-puspayate.
+Karmis hanker to be promoted to the heavenly planets, but a Krsna conscious person considers such promotion a
+will-o'-the-wisp, good for nothing. Durdantendriya-kala-sarpa-patali protkhata-damstrayate. Yogis try to control
+their senses and thus become happy, but a Krsna conscious person neglects the methods of yoga. He is
+unconcerned with the greatest of enemies, the senses, which are compared to snakes. For a Krsna conscious person
+who is cultivating Krsna consciousness favorably, the happiness conceived by the karmis, jnanis and yogis is
+treated as less than a fig. Kamsa, however, because of cultivating Krsna consciousness in a different way--that is,
+inimically--was uncomfortable in all the affairs of his life; whether sitting, sleeping, walking or eating, he was
+always in danger. This is the difference between a devotee and a nondevotee. A nondevotee or atheist also
+cultivates God consciousness--by trying to avoid God in everything. For example, so-called scientists who want to
+create life by a combination of chemicals regard the external, material elements as supreme. Such scientists do not
+like the idea that life is part and parcel of the Supreme Lord. As clearly stated in Bhagavad-gita (mamaivamso jivaloke
+jiva-bhutah), the living entities do not arise from a combination of material elements, such as earth, water, air
+and fire, but are separated portions of the Supreme Personality of Godhead. If one can understand the position of
+the living entity as a separated portion of the Supreme Personality of Godhead, by studying the nature of the living
+entity one can understand the nature of the Supreme Godhead, since the living entity is a fragmental sample of the
+Godhead. But because atheists are not interested in God consciousness, they try to be happy by cultivating Krsna
+consciousness in various unfavorable ways.
+Although Kamsa was always absorbed in thoughts of Hari, the Supreme Personality of Godhead, he was not
+happy. A devotee, however, whether sitting on a throne or beneath a tree, is always happy. Srila Rupa Gosvami
+resigned from office as a government minister to sit beneath a tree, yet he was happy. Tyaktva turnam asesamandalapati-
+srenim sada tucchavat (Sad-gosvamy-astaka 4). He did not care for his comfortable position as
+minister; he was happy even beneath a tree in Vrndavana, favorably serving the Supreme Personality of Godhead.
+This is the difference between a devotee and a nondevotee. For a nondevotee, the world is full of problems,
+whereas for a devotee the entire world is full of happiness.
+visvam purna-sukhayate vidhi-mahendradis ca kitayate
+yat-karunya-kataksa-vaibhavavatam tam gauram eva stumah
+(Caitanya-candramrta 95)
+This comfortable position of a devotee can be established by the mercy of Lord Caitanya Mahaprabhu. Yasmin
+sthito na duhkhena gurunapi vicalyate (Bg. 6.22). Even when a devotee is superficially put into great difficulty, he
+is never disturbed.
 </p>
 
 </div>
@@ -76,7 +150,7 @@ birth.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

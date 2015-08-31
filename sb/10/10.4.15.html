@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.15.html">10.4.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tad dama badhyamanasya
-svarbhakasya krtagasah
-dvy-angulonam abhut tena
-sandadhe 'nyac ca gopika
-<p></p>
+aho bhaginy aho bhama
+maya vam bata papmana
+purusada ivapatyam
+bahavo himsitah sutah
+<br>
 <h2>Synonyms</h2>
-tat dama--that binding rope; badhyamanasya--who was being bound by mother Yasoda; sva-arbhakasya--of her
-own son; krta-agasah--who was an offender; dvi-angula--by a measurement of two fingers; unam--short; abhut--
-became; tena--with that rope; sandadhe--joined; anyat ca--another rope; gopika--mother Yasoda.
-<p></p>
+aho--alas; bhagini--my dear sister; aho--alas; bhama--my dear brother-in-law; maya--by me; vam--of you; bata--
+indeed; papmana--because of sinful activities; purusa-adah--a Raksasa, man-eater; iva--like; apatyam--child;
+bahavah--many; himsitah--have been killed; sutah--sons.
+<br>
 <h2>Translation</h2>
-When mother Yasoda was trying to bind the offending child, she saw that the binding rope was short by a
-distance the width of two fingers. Thus she brought another rope to join to it.
-<p></p>
+Alas, my sister! Alas, my brother-in-law! I am indeed so sinful that exactly like a man-eater [Raksasa] who eats
+his own child, I have killed so many sons born of you.
+<br>
 <h2>Purport</h2>
-Here is the first chapter in Krsna's exhibition of unlimited potency to mother Yasoda when she tried to bind Him:
-the rope was too short. The Lord had already shown His unlimited potency by killing Putana, Sakatasura and
-Trnavarta. Now Krsna exhibited another vibhuti, or display of potency, to mother Yasoda. "Unless I agree," Krsna
-desired to show, "you cannot bind Me." Thus although mother Yasoda, in her attempt to bind Krsna, added one
-rope after another, ultimately she was a failure. When Krsna agreed, however, she was successful. In other words,
-one must be in transcendental love with Krsna, but that does not mean that one can control Krsna. When Krsna is
-satisfied with one's devotional service, He does everything Himself. Sevonmukhe hi jihvadau svayam eva sphuraty
-adah. He reveals more and more to the devotee as the devotee advances in service. Jihvadau: this service begins
-with the tongue, with chanting and with taking the prasada of Krsna.
-atah sri-krsna-namadi
-na bhaved grahyam indriyaih
-sevonmukhe hi jihvadau
-svayam eva sphuraty adah
-(Bhakti-rasamrta-sindhu 1.2.234)
+Raksasas are understood to be accustomed to eating their own sons, as snakes and many other animals sometimes
+do. At the present moment in Kali-yuga, Raksasa fathers and mothers are killing their own children in the womb,
+and some are even eating the fetus with great relish. Thus the so-called civilization is gradually advancing by
+producing Raksasas.
 </p>
 
 </div>
@@ -85,7 +114,7 @@ svayam eva sphuraty adah
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

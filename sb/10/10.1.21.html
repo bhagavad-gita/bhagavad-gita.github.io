@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,48 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.21.html">10.1.21</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.21</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/21"><b>21</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tvam asya lokasya vibho riraksisur
-grhe 'vatirno 'si mamakhilesvara
-rajanya-samjnasura-koti-yuthapair
-nirvyuhyamana nihanisyase camuh
-<p></p>
+giram samadhau gagane samiritam
+nisamya vedhas tridasan uvaca ha
+gam paurusim me srnutamarah punar
+vidhiyatam asu tathaiva ma ciram
+<br>
 <h2>Synonyms</h2>
-tvam--Your Lordship; asya--of this world; lokasya--especially of this martya-loka, the planet earth; vibho--O
-Supreme; riraksisuh--desiring protection (from the disturbance of the asuras); grhe--in this house; avatirnah asi--
-have now appeared; mama--my; akhila-isvara--although You are the proprietor of the entire creation; rajanyasamjna-
-asura-koti-yutha-paih--with millions of demons and their followers in the roles of politicians and kings;
-nirvyuhyamanah--which are moving here and there all over the world; nihanisyase--will kill; camuh--the armies,
-paraphernalia, soldiers and retinues.
-<p></p>
+giram--a vibration of words; samadhau--in trance; gagane--in the sky; samiritam--vibrated; nisamya--hearing;
+vedhah--Lord Brahma; tridasan--unto the demigods; uvaca--said; ha--oh; gam--the order; paurusim--received from
+the Supreme Person; me--from me; srnuta--just hear; amarah--O demigods; punah--again; vidhiyatam--execute;
+asu--immediately; tatha eva--just so; ma--do not; ciram--delay.
+<br>
 <h2>Translation</h2>
-O my Lord, proprietor of all creation, You have now appeared in my house, desiring to protect this world. I am
-sure that You will kill all the armies that are moving all over the world under the leadership of politicians who are
-dressed as ksatriya rulers but who are factually demons. They must be killed by You for the protection of the
-innocent public.
-<p></p>
+While in trance, Lord Brahma heard the words of Lord Visnu vibrating in the sky. Thus he told the demigods: O
+demigods, hear from me the order of Ksirodakasayi Visnu, the Supreme Person, and execute it attentively without
+delay.
+<br>
 <h2>Purport</h2>
-Krsna appears in this world for two purposes, paritranaya sadhunam vinasaya ca duskrtam: to protect the
-innocent, religious devotees of the Lord and to annihilate all the uneducated, uncultured asuras, who unnecessarily
-bark like dogs and fight among themselves for political power. It is said, kali-kale nama-rupe krsna avatara. The
-Hare Krsna movement is also an incarnation of Krsna in the form of the holy name (nama-rupe). Every one of us
-who is actually afraid of the asuric rulers and politicians must welcome this incarnation of Krsna: Hare Krsna, Hare
-Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare. Then we will surely be protected
-from the harassment of asuric rulers. At the present moment these rulers are so powerful that by hook or by crook
-they capture the highest posts in government and harass countless numbers of people on the plea of national
-security or some emergency. Then again, one asura defeats another asura, but the public continues to suffer.
-Therefore the entire world is in a precarious condition, and the only hope is this Hare Krsna movement. Lord
-Nrsimhadeva appeared when Prahlada was excessively harassed by his asuric father. Because of such asuric
-fathers--that is, the ruling politicians--it is very difficult to press forward the Hare Krsna movement, but because
-Krsna has now appeared in His holy name through this movement, we can hope that these asuric fathers will be
-annihilated and the kingdom of God established all over the world. The entire world is now full of many asuras in
-the guise of politicians, gurus, sadhus, yogis and incarnations, and they are misleading the general public away
-from Krsna consciousness, which can offer true benefit to human society.
+It appears that the words of the Supreme Personality of Godhead can be heard in trance by competent persons.
+Modern science gives us telephones, by which one can hear sound vibrations from a distant place. Similarly,
+although other persons cannot hear the words of Lord Visnu, Lord Brahma is able to hear the Lord's words within
+himself. This is confirmed in the beginning of Srimad-Bhagavatam (1.1.1): tene brahma hrda ya adi-kavaye. Adikavi
+is Lord Brahma. In the beginning of the creation, Lord Brahma received the instructions of Vedic knowledge
+from Lord Visnu through the medium of the heart (hrda). The same principle is confirmed herewith. While
+Brahma was in trance, he was able to hear the words of Ksirodakasayi Visnu, and he carried the Lord's message to
+the demigods. Similarly, in the beginning, Brahma first received the Vedic knowledge from the Supreme
+Personality of Godhead through the core of the heart. In both instances the same process was used in transmitting
+the message to Lord Brahma. In other words, although Lord Visnu was invisible even to Lord Brahma, Lord
+Brahma could hear Lord Visnu's words through the heart. The Supreme Personality of Godhead is invisible even to
+Lord Brahma, yet He descends on this earth and becomes visible to people in general. This is certainly an act of His
+causeless mercy, but fools and nondevotees think that Krsna is an ordinary historical person. Because they think
+that the Lord is an ordinary person like them, they are described as mudha (avajananti mam mudhah). The
+causeless mercy of the Supreme Personality of Godhead is neglected by such demoniac persons, who cannot
+understand the instructions of Bhagavad-gita and who therefore misinterpret them.
 </p>
 
 </div>
@@ -92,7 +128,7 @@ from Krsna consciousness, which can offer true benefit to human society.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

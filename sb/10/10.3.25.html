@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,46 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.25.html">10.3.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ruditam anunisamya tatra gopyo
-bhrsam anutapta-dhiyo 'sru-purna-mukhyah
-rurudur anupalabhya nanda-sunum
-pavana uparata-pamsu-varsa-vege
-<p></p>
+naste loke dvi-parardhavasane
+maha-bhutesv adi-bhutam gatesu
+vyakte 'vyaktam kala-vegena yate
+bhavan ekah sisyate 'sesa-samjnah
+<br>
 <h2>Synonyms</h2>
-ruditam--mother Yasoda, crying pitifully; anunisamya--after hearing; tatra--there; gopyah--the other ladies, the
-gopis; bhrsam--highly; anutapta--lamenting sympathetically after mother Yasoda; dhiyah--with such feelings; asrupurna-
-mukhyah--and the other gopis, their faces full of tears; ruruduh--they were crying; anupalabhya--without
-finding; nanda-sunum--the son of Nanda Maharaja, Krsna; pavane--when the whirlwind; uparata--had ceased;
-pamsu-varsa-vege--its force of showering dust.
-<p></p>
+naste--after the annihilation; loke--of the cosmic manifestation; dvi-parardha-avasane--after millions and millions
+of years (the life of Brahma); maha-bhutesu--when the five primary elements (earth, water, fire, air and ether); adibhutam
+gatesu--enter within the subtle elements of sense perception; vyakte--when everything manifested;
+avyaktam--into the unmanifested; kala-vegena--by the force of time; yate--enters; bhavan--Your Lordship; ekah--
+only one; sisyate--remains; asesa-samjnah--the same one with different names.
+<br>
 <h2>Translation</h2>
-When the force of the dust storm and the winds subsided, Yasoda's friends, the other gopis, approached mother
-Yasoda, hearing her pitiful crying. Not seeing Krsna present, they too felt very much aggrieved and joined mother
-Yasoda in crying, their eyes full of tears.
-<p></p>
+After millions of years, at the time of cosmic annihilation, when everything, manifested and unmanifested, is
+annihilated by the force of time, the five gross elements enter into the subtle conception, and the manifested
+categories enter into the unmanifested substance. At that time, You alone remain, and You are known as Ananta
+Sesa-naga.
+<br>
 <h2>Purport</h2>
-This attachment of the gopis to Krsna is wonderful and transcendental. The center of all the activities of the gopis
-was Krsna. When Krsna was there they were happy, and when Krsna was not there, they were unhappy. Thus
-when mother Yasoda was lamenting Krsna's absence, the other ladies also began to cry.
+At the time of annihilation, the five gross elements--earth, water, fire, air and ether--enter into the mind,
+intelligence and false ego (ahankara), and the entire cosmic manifestation enters into the spiritual energy of the
+Supreme Personality of Godhead, who alone remains as the origin of everything. The Lord is therefore known as
+Sesa-naga, as Adi-purusa and by many other names.
+Devaki therefore prayed, "After many millions of years, when Lord Brahma comes to the end of his life, the
+annihilation of the cosmic manifestation takes place. At that time the five elements--namely earth, water, fire, air
+and ether--enter into the mahat-tattva. The mahat-tattva again enters, by the force of time, into the nonmanifested
+total material energy; the total material energy enters into the energetic pradhana, and the pradhana enters into
+You. Therefore after the annihilation of the whole cosmic manifestation, You alone remain with Your
+transcendental name, form, quality and paraphernalia.
+"My Lord, I offer my respectful obeisances unto You because You are the director of the unmanifested total
+energy, and the ultimate reservoir of the material nature. My Lord, the whole cosmic manifestation is under the
+influence of time, beginning from the moment up to the duration of the year. All act under Your direction. You are
+the original director of everything and the reservoir of all potent energies."
 </p>
 
 </div>
@@ -77,7 +128,7 @@ when mother Yasoda was lamenting Krsna's absence, the other ladies also began to
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

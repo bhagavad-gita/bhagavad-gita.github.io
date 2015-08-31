@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.43.html">10.6.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-grhitvapara-padabhyam
-saha-langulam acyutah
-bhramayitva kapitthagre
-prahinod gata-jivitam
-sa kapitthair maha-kayah
-patyamanaih papata ha
-<p></p>
+nandah sva-putram adaya
+pretyagatam udara-dhih
+murdhny upaghraya paramam
+mudam lebhe kurudvaha
+<br>
 <h2>Synonyms</h2>
-grhitva--capturing; apara-padabhyam--with the hind legs; saha--along with; langulam--the tail; acyutah--Krsna,
-the Supreme Personality of Godhead; bhramayitva--twirling around very severely; kapittha-agre--on the top of a
-kapittha tree; prahinot--threw him; gata-jivitam--lifeless body; sah--that demon; kapitthaih--with the kapittha trees;
-maha-kayah--assumed a great body; patyamanaih--and while the tree fell down; papata ha--he fell dead on the
-ground.
-<p></p>
+nandah--Maharaja Nanda; sva-putram adaya--taking his son Krsna on his lap; pretya-agatam--as if Krsna had
+returned from death (no one could even imagine that from such danger a child could be saved); udara-dhih--
+because he was always liberal and simple; murdhni--on the head of Krsna; upaghraya--formally smelling;
+paramam--highest; mudam--peace; lebhe--achieved; kuru-udvaha--O Maharaja Pariksit.
+<br>
 <h2>Translation</h2>
-Thereafter, Sri Krsna caught the demon by the hind legs and tail, twirled the demon's whole body very strongly
-until the demon was dead, and threw him into the top of a kapittha tree, which then fell down, along with the body
-of the demon, who had assumed a great form.
-<p></p>
+O Maharaja Pariksit, best of the Kurus, Nanda Maharaja was very liberal and simple. He immediately took his son
+Krsna on his lap as if Krsna had returned from death, and by formally smelling his son's head, Nanda Maharaja
+undoubtedly enjoyed transcendental bliss.
+<br>
 <h2>Purport</h2>
-Krsna killed the demon in such a way as to get the kapittha fruits to fall so that He and Balarama and the other
-boys could take advantage of the opportunity to eat them. The kapittha is sometimes called ksatbelphala. The pulp
-of this fruit is very palatable. It is sweet and sour, and everyone likes it.
+Nanda Maharaja could not understand how the inhabitants of his house had allowed Putana to enter the house,
+nor could he imagine the gravity of the situation. He did not understand that Krsna had wanted to kill Putana and
+that His pastimes were performed by yogamaya. Nanda Maharaja simply thought that someone had entered his
+house and created havoc. This was Nanda Maharaja's simplicity.
 </p>
 
 </div>
@@ -79,7 +116,7 @@ of this fruit is very palatable. It is sweet and sour, and everyone likes it.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

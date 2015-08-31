@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.1.html">10.6.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-suka uvaca
-gopa nandadayah srutva
-drumayoh patato ravam
-tatrajagmuh kuru-srestha
-nirghata-bhaya-sankitah
-<p></p>
+nandah pathi vacah saurer
+na mrseti vicintayan
+harim jagama saranam
+utpatagama-sankitah
+<br>
 <h2>Synonyms</h2>
-sri-sukah uvaca--Sri Sukadeva Gosvami said; gopah--all the cowherd men; nanda-adayah--headed by Nanda
-Maharaja; srutva--hearing; drumayoh--of the two trees; patatoh--falling down; ravam--the high sound, as terrible as
-a thunderbolt; tatra--there, on the spot; ajagmuh--went; kuru-srestha--O Maharaja Pariksit; nirghata-bhayasankitah--
-who were afraid of falling thunderbolts.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; nandah--Nanda Maharaja; pathi--on his way back home; vacah--the
+words; saureh--of Vasudeva; na--not; mrsa--without purpose or cause; iti--thus; vicintayan--while thinking about
+inauspiciousness for his little son, Krsna; harim--unto the Supreme Lord, the controller; jagama--took; saranam--
+shelter; utpata--of disturbances; agama--with the expectation; sankitah--thus being afraid.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami continued: O Maharaja Pariksit, when the yamala-arjuna trees fell, all the cowherd men in the
-neighborhood, hearing the fierce sound and fearing thunderbolts, went to the spot.
+Sukadeva Gosvami continued: My dear King, while Nanda Maharaja was on the way home, he considered that
+what Vasudeva had said could not be false or useless. There must have been some danger of disturbances in
+Gokula. As Nanda Maharaja thought about the danger for his beautiful son, Krsna, he was afraid, and he took
+shelter at the lotus feet of the supreme controller.
+<br>
+<h2>Purport</h2>
+Whenever there is danger, the pure devotee thinks of the protection and shelter of the Supreme Personality of
+Godhead. This is also advised in Bhagavad-gita (9.33): anityam asukham lokam imam prapya bhajasva mam. In
+this material world there is danger at every step (padam padam yad vipadam). Therefore a devotee has no other
+course than to take shelter of the Lord at every step.
 </p>
 
 </div>
@@ -71,7 +118,7 @@ neighborhood, hearing the fierce sound and fearing thunderbolts, went to the spo
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

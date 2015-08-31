@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,56 +81,27 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.33.html">10.7.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pinahi-bhogotthitam adbhutam mahaj
-jyotih sva-dhamna jvalayad diso dasa
-pratiksya khe 'vasthitam isa-nirgamam
-vivesa tasmin misatam divaukasam
-<p></p>
+drstvadbhutani bahuso
+nanda-gopo brhadvane
+vasudeva-vaco bhuyo
+manayam asa vismitah
+<br>
 <h2>Synonyms</h2>
-pina--very great; ahi-bhoga-utthitam--issuing from the serpent's body, which was meant for material enjoyment;
-adbhutam--very wonderful; mahat--great; jyotih--effulgence; sva-dhamna--by his own illumination; jvalayat--
-making glaring; disah dasa--all the ten directions; pratiksya--waiting; khe--in the sky; avasthitam--individually
-staying; isa-nirgamam--until the Supreme Personality of Godhead, Krsna, came out; vivesa--entered; tasmin--in the
-body of Krsna; misatam--while observing; divaukasam--all the demigods.
-<p></p>
+drstva--after seeing; adbhutani--the very wonderful and astonishing incidents; bahusah--many times; nandagopah--
+Nanda Maharaja, the head of the cowherd men; brhadvane--in Brhadvana; vasudeva-vacah--the words
+spoken by Vasudeva when Nanda Maharaja was in Mathura; bhuyah--again and again; manayam asa--accepted how
+true they were; vismitah--in great astonishment.
+<br>
 <h2>Translation</h2>
-From the body of the gigantic python, a glaring effulgence came out, illuminating all directions, and stayed
-individually in the sky until Krsna came out from the corpse's mouth. Then, as all the demigods looked on, this
-effulgence entered into Krsna's body.
-<p></p>
-<h2>Purport</h2>
-Apparently the serpent named Aghasura, because of having received association with Krsna, attained mukti by
-entering Krsna's body. Entering the body of Krsna is called sayujya-mukti, but later verses prove that Aghasura,
-like Dantavakra and others, received sarupya-mukti. This has been broadly described by Srila Visvanatha
-Cakravarti Thakura with references from the Vaisnava-tosani of Srila Jiva Gosvami. Aghasura attained sarupyamukti,
-being promoted to the Vaikuntha planets to live with the same four-armed bodily features as Visnu. The
-explanation of how this is so may be summarized as follows.
-The effulgence came out from the python's body and became purified, attaining spiritual suddha-sattva, freedom
-from material contamination, because Krsna had stayed within the serpent's body, even after the serpent's death.
-One may doubt that such a demon, full of mischievous activities, could attain the liberation of sarupya or sayujya,
-and one may be astonished about this. But Krsna is so kind that in order to drive away such doubts, He had the
-effulgence, the individual life of the python, wait for some time in its individuality, in the presence of all the
-demigods.
-Krsna is the full effulgence, and every living being is part and parcel of that effulgence. As proved here, the
-effulgence in every living being is individual. For some time, the effulgence remained outside the demon's body,
-individually, and did not mix with the whole effulgence, the brahmajyoti. The Brahman effulgence is not visible to
-material eyes, but to prove that every living being is individual, Krsna had this individual effulgence stay outside
-the demon's body for some time, for everyone to see. Then Krsna proved that anyone killed by Him attains
-liberation, whether sayujya, sarupya, samipya or whatever.
-But the liberation of those who are on the transcendental platform of love and affection is vimukti, special
-liberation. Thus the serpent first entered the body of Krsna personally and mixed with the Brahman effulgence.
-This merging is called sayujya-mukti. But from later verses we find that Aghasura attained sarupya-mukti. Text 38
-explains that Aghasura attained a body exactly like that of Visnu, and the verse after that also clearly states that he
-attained a completely spiritual body like that of Narayana. Therefore in two or three places the Bhagavatam has
-confirmed that Aghasura attained sarupya-mukti. One may then argue, How is it that he mixed with the Brahman
-effulgence? The answer is that as Jaya and Vijaya, after three births, again attained sarupya-mukti and association
-with the Lord, Aghasura received a similar liberation.
+Having seen all these incidents in Brhadvana, Nanda Maharaja became more and more astonished, and he
+remembered the words spoken to him by Vasudeva in Mathura.
 </p>
 
 </div>
@@ -100,7 +109,7 @@ with the Lord, Aghasura received a similar liberation.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,59 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.15.html">10.8.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ambhojanma-janis tad-antara-gato mayarbhakasyesitur
-drastum manju mahitvam anyad api tad-vatsan ito vatsapan
-nitvanyatra kurudvahantaradadhat khe 'vasthito yah pura
-drstvaghasura-moksanam prabhavatah praptah param vismayam
-<p></p>
+bahuni santi namani
+rupani ca sutasya te
+guna-karmanurupani
+tany aham veda no janah
+<br>
 <h2>Synonyms</h2>
-ambhojanma-janih--Lord Brahma, who was born from a lotus flower; tat-antara-gatah--now became entangled
-with the affairs of Krsna, who was enjoying luncheon pastimes with His cowherd boys; maya-arbhakasya--of the
-boys made by Krsna's maya; isituh--of the supreme controller; drastum--just to see; manju--very pleasing;
-mahitvam anyat api--other glories of the Lord also; tat-vatsan--their calves; itah--than that place where they were;
-vatsa-pan--and the cowherd boys taking care of the calves; nitva--bringing them; anyatra--to a different place;
-kurudvaha--O Maharaja Pariksit; antara-dadhat--kept hidden and invisible for some time; khe avasthitah yah--this
-person Brahma, who was situated in the higher planetary system in the sky; pura--formerly; drstva--was observing;
-aghasura-moksanam--the wonderful killing and deliverance of Aghasura from material tribulation; prabhavatah--of
-the all-potent Supreme Person; praptah param vismayam--had become extremely astonished.
-<p></p>
+bahuni--various; santi--there are; namani--names; rupani--forms; ca--also; sutasya--of the son; te--your; gunakarma-
+anu-rupani--according to His attributes and activities; tani--them; aham--I; veda--know; no janah--not
+ordinary persons.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, Brahma, who resides in the higher planetary system in the sky, had observed the activities of
-the most powerful Krsna in killing and delivering Aghasura, and he was astonished. Now that same Brahma wanted
-to show some of his own power and see the power of Krsna, who was engaged in His childhood pastimes, playing
-as if with ordinary cowherd boys. Therefore, in Krsna's absence, Brahma took all the boys and calves to another
-place. Thus he became entangled, for in the very near future he would see how powerful Krsna was.
-<p></p>
+For this son of yours there are many forms and names according to His transcendental qualities and activities.
+These are known to me, but people in general do not understand them.
+<br>
 <h2>Purport</h2>
-When Aghasura was being killed by Krsna, who was accompanied by His associates, Brahma was astonished, but
-when he saw that Krsna was very much enjoying His pastimes of lunch, he was even more astonished and wanted
-to test whether Krsna was actually there. Thus he became entangled in Krsna's maya. After all, Brahma was born
-materially. As mentioned here, ambhojanma janih: he was born of ambhoja, a lotus flower. It does not matter that
-he was born of a lotus and not of any man, animal or material father. A lotus is also material, and anyone born
-through the material energy must be subject to the four material deficiencies: bhrama (the tendency to commit
-mistakes), pramada (the tendency to be illusioned), vipralipsa (the tendency to cheat) and karanapatava (imperfect
-senses). Thus Brahma also became entangled.
-Brahma, with his maya, wanted to test whether Krsna was actually present. These cowherd boys were but
-expansions of Krsna's personal self (ananda-cinmaya-rasa-pratibhavitabhih). Later Krsna would show Brahma how
-He expands Himself into everything as His personal pleasure, ananda-cinmaya-rasa. Hladini saktir asmat: Krsna has
-a transcendental potency called hladini sakti. He does not enjoy anything that is a product of the material energy.
-Brahma, therefore, would see Lord Krsna expand His energy.
-Brahma wanted to take away Krsna's associates, but instead he took away some other boys and calves. Ravana
-wanted to take away Sita, but that was impossible, and instead he took away a maya Sita. Similarly, Brahma took
-away mayarbhakah: boys manifested by Krsna's maya. Brahma could show some extraordinary opulence to the
-mayarbhakah; but he could not show any extraordinary potency to Krsna's associates. That he would see in the
-very near future. Mayarbhakasya isituh. This bewilderment, this maya, was caused by the supreme controller,
-prabhavatah--the all-potent Supreme person, Krsna--and we shall see the result. Anyone materially born is subject
-to bewilderment. This pastime is therefore called brahma-vimohana-lila, the pastime of bewildering Brahma.
-Mohitam nabhijanati mam ebhyah param avyayam (Bg. 7.13). Materially born persons cannot fully understand
-Krsna. Even the demigods cannot understand Him (muhyanti yat surayah). Tene brahma hrda ya adi-kavaye (Bhag.
-1.1.1). Everyone, from Brahma down to the small insect, must take lessons from Krsna.
+Bahuni: the Lord has many names. Advaitam acyutam anadim ananta-rupam adyam purana-purusam navayauvanam
+ca. As stated in the Brahma-samhita (5.33), the Lord is one, but He has many forms and many names. It
+was not that because Gargamuni gave the child the name Krsna, that was His only name. He has other names, such
+as Bhaktavatsala, Giridhari, Govinda and Gopala. If we analyze the nirukti, or semantic derivation, of the word
+"Krsna," we find that na signifies that He stops the repetition of birth and death, and krs means sattartha, or
+"existence." (Krsna is the whole of existence.) Also, krs means "attraction," and na means ananda, or "bliss." Krsna
+is known as Mukunda because He wants to give everyone spiritual, eternal, blissful life. Unfortunately, because of
+the living entity's little independence, the living entity wants to "deprogram" the program of Krsna. This is the
+material disease. Nonetheless, because Krsna wants to give transcendental bliss to the living entities, He appears in
+various forms. Therefore He is called Krsna. Because Gargamuni was an astrologer, he knew what others did not
+know. Yet Krsna has so many names that even Gargamuni did not know them all. It is to be concluded that Krsna,
+according to His transcendental activities, has many names and many forms.
 </p>
 
 </div>
@@ -103,7 +122,7 @@ Krsna. Even the demigods cannot understand Him (muhyanti yat surayah). Tene brah
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

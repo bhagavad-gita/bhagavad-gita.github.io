@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.20.html">10.7.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-satyam arka-kararaktam
-uttara-hanuvad ghanam
-adhara-hanuvad rodhas
-tat-praticchayayarunam
-<p></p>
+daityo namna trnavartah
+kamsa-bhrtyah pranoditah
+cakravata-svarupena
+jaharasinam arbhakam
+<br>
 <h2>Synonyms</h2>
-satyam--now the boys decided that it was in fact a living python; arka-kara-araktam--appearing like the sunshine;
-uttara-hanuvat ghanam--on the cloud resembling the upper lips; adhara-hanuvat--resembling the lower lips;
-rodhah--big bank; tat-praticchayaya--by the reflection of sunshine; arunam--reddish.
-<p></p>
+daityah--another demon; namna--by the name; trnavartah--Trnavartasura; kamsa-bhrtyah--a servant of Kamsa;
+pranoditah--having been induced by him; cakravata-svarupena--in the form of a whirlwind; jahara--swept away;
+asinam--the sitting; arbhakam--child.
+<br>
 <h2>Translation</h2>
-Thereafter they decided: Dear friends, this is certainly an animal sitting here to swallow us all. Its upper lip
-resembles a cloud reddened by the sunshine, and its lower lip resembles the reddish shadows of a cloud.
+While the child was sitting on the ground, a demon named Trnavarta, who was a servant of Kamsa's, came there
+as a whirlwind, at Kamsa's instigation, and very easily carried the child away into the air.
+<br>
+<h2>Purport</h2>
+Krsna's heaviness was unbearable for the child's mother, but when Trnavartasura came, he immediately carried
+the child away. This was another demonstration of Krsna's inconceivable energy. When the Trnavarta demon came,
+Krsna became lighter than the grass so that the demon could carry Him away. This was ananda-cinmaya-rasa,
+Krsna's blissful, transcendental pleasure.
 </p>
 
 </div>
@@ -69,7 +114,7 @@ resembles a cloud reddened by the sunshine, and its lower lip resembles the redd
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

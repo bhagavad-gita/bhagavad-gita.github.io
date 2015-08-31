@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.29.html">10.2.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-sri-nanda uvaca
-aho te devaki-putrah
-kamsena bahavo hatah
-ekavasistavaraja
-kanya sapi divam gata
-<p></p>
+bibharsi rupany avabodha atma
+ksemaya lokasya caracarasya
+sattvopapannani sukhavahani
+satam abhadrani muhuh khalanam
+<br>
 <h2>Synonyms</h2>
-sri-nandah uvaca--Nanda Maharaja said; aho--alas; te--your; devaki-putrah--all the sons of your wife Devaki;
-kamsena--by King Kamsa; bahavah--many; hatah--have been killed; eka--one; avasista--remaining child; avaraja--
-the youngest of all; kanya--a daughter also; sa api--she also; divam gata--gone to the heavenly planets.
-<p></p>
+bibharsi--You accept; rupani--varieties of forms, such as Matsya, Kurma, Varaha, Rama and Nrsimha; avabodhah
+atma--in spite of having different incarnations, You remain the Supreme, full of knowledge; ksemaya--for the
+benefit of everyone, and especially the devotees; lokasya--of all living entities; cara-acarasya--moving and
+nonmoving; sattva-upapannani--all such incarnations are transcendental (suddha-sattva); sukha-avahani--full of
+transcendental bliss; satam--of the devotees; abhadrani--all inauspiciousness or annihilation; muhuh--again and
+again; khalanam--of the nondevotees.
+<br>
 <h2>Translation</h2>
-Nanda Maharaja said: Alas, King Kamsa killed so many of your children, born of Devaki. And your one daughter,
-the youngest child of all, entered the heavenly planets.
-<p></p>
+O Lord, You are always in full knowledge, and to bring all good fortune to all living entities, You appear in
+different incarnations, all of them transcendental to the material creation. When You appear in these incarnations,
+You are pleasing to the pious and religious devotees, but for nondevotees You are the annihilator.
+<br>
 <h2>Purport</h2>
-When Vasudeva understood from Nanda Maharaja that the mystery of Krsna's birth and His having been
-exchanged with Yasoda's daughter was yet undisclosed, he was happy that things were going on nicely. By saying
-that Vasudeva's daughter, his youngest child, had gone to the heavenly planets, Nanda Maharaja indicated that he
-did not know that this daughter was born of Yasoda and that Vasudeva had exchanged her with Krsna. Thus the
-doubts of Vasudeva were dispelled.
+This verse explains why the Supreme Personality of Godhead appears as an incarnation again and again. The
+incarnations of the Supreme Personality of Godhead all function differently, but their main purpose is paritranaya
+sadhunam vinasaya ca duskrtam--to protect the devotees and annihilate the miscreants. Yet even though the
+duskrtis, or miscreants, are annihilated, this is ultimately good for them.
 </p>
 
 </div>
@@ -77,7 +118,7 @@ doubts of Vasudeva were dispelled.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

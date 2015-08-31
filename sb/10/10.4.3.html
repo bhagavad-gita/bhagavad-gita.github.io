@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.3.html">10.4.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ksaumam vasah prthu-kati-tate bibhrati sutra-naddham
-putra-sneha-snuta-kuca-yugam jata-kampam ca subhruh
-rajjv-akarsa-srama-bhuja-calat-kankanau kundale ca
-svinnam vaktram kabara-vigalan-malati nirmamantha
-<p></p>
+sa talpat turnam utthaya
+kalo 'yam iti vihvalah
+suti-grham agat turnam
+praskhalan mukta-murdhajah
+<br>
 <h2>Synonyms</h2>
-ksaumam--saffron and yellow mixed; vasah--mother Yasoda was wearing such a sari; prthu-kati-tate--
-surrounding her large hips; bibhrati--shaking; sutra-naddham--bound with a belt; putra-sneha-snuta--because of
-intense love for her child, became wet with milk; kuca-yugam--the nipples of her breasts; jata-kampam ca--as they
-were very nicely moving and quivering; su-bhruh--who had very beautiful eyebrows; rajju-akarsa--by pulling on
-the rope of the churning rod; srama--because of the labor; bhuja--on whose hands; calat-kankanau--the two
-bangles were moving; kundale--the two earrings; ca--also; svinnam--her hair was black like a cloud, so perspiration
-was dropping like rain; vaktram--throughout her face; kabara-vigalat-malati--and malati flowers were dropping
-from her hair; nirmamantha--thus mother Yasoda was churning the butter.
-<p></p>
+sah--he (King Kamsa); talpat--from the bed; turnam--very quickly; utthaya--getting up; kalah ayam--here is my
+death, the supreme time; iti--in this way; vihvalah--overwhelmed; suti-grham--to the maternity home; agat--went;
+turnam--without delay; praskhalan--scattering; mukta--had become opened; murdha-jah--the hair on the head.
+<br>
 <h2>Translation</h2>
-Dressed in a saffron-yellow sari, with a belt tied about her full hips, mother Yasoda pulled on the churning rope,
-laboring considerably, her bangles and earrings moving and vibrating and her whole body shaking. Because of her
-intense love for her child, her breasts were wet with milk. Her face, with its very beautiful eyebrows, was wet with
-perspiration, and malati flowers were falling from her hair.
-<p></p>
+Kamsa immediately got up from bed, thinking, "Here is Kala, the supreme time factor, which has taken birth to
+kill me!" Thus overwhelmed, Kamsa, his hair scattered on his head, at once approached the place where the child
+had been born.
+<br>
 <h2>Purport</h2>
-Anyone who desires to be Krsna conscious in motherly affection or parental affection should contemplate the
-bodily features of mother Yasoda. It is not that one should desire to become like Yasoda, for this is Mayavada.
-Either in parental affection or conjugal love, friendship or servitorship--in any way--we must follow in the
-footsteps of the inhabitants of Vrndavana, not try to become like them. Therefore this description is provided here.
-Advanced devotees must cherish this description, always thinking of mother Yasoda's features--how she was
-dressed, how she was working and perspiring, how beautifully the flowers were arranged in her hair, and so on.
-One should take advantage of the full description provided here by thinking of mother Yasoda in maternal affection
-for Krsna.
+The word kalah is significant. Although the child was born to kill Kamsa, Kamsa thought that this was the proper
+time to kill the child so that he himself would be saved. Kala is actually another name of the Supreme Personality
+of Godhead when He appears only for the purpose of killing. When Arjuna inquired from Krsna in His universal
+form, "Who are You?" the Lord presented Himself as kala, death personified to kill. By nature's law, when there is
+an unwanted increase in population, kala appears, and by some arrangement of the Supreme Personality of
+Godhead, people are killed wholesale in different ways, by war, pestilence, famine and so on. At that time, even
+atheistic political leaders go to a church, mosque or temple for protection by God or gods and submissively say,
+"God willing." Before that, they pay no attention to God, not caring to know God or His will, but when kala
+appears, they say, "God willing." Death is but another feature of the supreme kala, the Supreme Personality of
+Godhead. At the time of death, the atheist must submit to this supreme kala, and then the Supreme Personality of
+Godhead takes away all his possessions (mrtyuh sarva-haras caham) and forces him to accept another body (tatha
+dehantara-praptih). This the atheists do not know, and if they do know, they neglect it so that they may go on with
+their normal life. The Krsna consciousness movement is trying to teach them that although for a few years one may
+act as a great protector or great watchman, with the appearance of kala, death, one must take another body by the
+laws of nature. Not knowing this, they unnecessarily waste their time in their occupation as watchdogs and do not
+try to get the mercy of the Supreme Personality of Godhead. As it is clearly said, aprapya mam nivartante mrtyusamsara-
+vartmani: without Krsna consciousness, one is condemned to continue wandering in birth and death, not
+knowing what will happen in one's next birth.
 </p>
 
 </div>
@@ -86,7 +129,7 @@ for Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

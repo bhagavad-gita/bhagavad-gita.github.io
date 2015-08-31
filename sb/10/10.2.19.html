@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,36 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.19.html">10.2.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gopan gokula-raksayam
-nirupya mathuram gatah
-nandah kamsasya varsikyam
-karam datum kurudvaha
-<p></p>
+sa devaki sarva-jagan-nivasanivasa-
+bhuta nitaram na reje
+bhojendra-gehe 'gni-sikheva ruddha
+sarasvati jnana-khale yatha sati
+<br>
 <h2>Synonyms</h2>
-gopan--the cowherd men; gokula-raksayam--in giving protection to the state of Gokula; nirupya--after
-appointing; mathuram--to Mathura; gatah--went; nandah--Nanda Maharaja; kamsasya--of Kamsa; varsikyam--
-yearly taxes; karam--the share of profit; datum--to pay; kuru-udvaha--O Maharaja Pariksit, best protector of the
-Kuru dynasty.
-<p></p>
+sa devaki--that Devakidevi; sarva-jagat-nivasa--of the Supreme Personality of Godhead, the sustainer of all the
+universes (mat-sthani sarva-bhutani); nivasa-bhuta--the womb of Devaki has now become the residence; nitaram--
+extensively; na--not; reje--became illuminated; bhojendra-gehe--within the limits of the house of Kamsa; agni-sikha
+iva--like the flames of a fire; ruddha--covered; sarasvati--knowledge; jnana-khale--in a person known as jnanakhala,
+one who possesses knowledge but cannot distribute it; yatha--or just as; sati--so being.
+<br>
 <h2>Translation</h2>
-Sukadeva Gosvami continued: Thereafter, my dear King Pariksit, O best protector of the Kuru dynasty, Nanda
-Maharaja appointed the local cowherd men to protect Gokula and then went to Mathura to pay the yearly taxes to
-King Kamsa.
-<p></p>
+Devaki then kept within herself the Supreme Personality of Godhead, the cause of all causes, the foundation of
+the entire cosmos, but because she was under arrest in the house of Kamsa, she was like the flames of a fire covered
+by the walls of a pot, or like a person who has knowledge but cannot distribute it to the world for the benefit of
+human society.
+<br>
 <h2>Purport</h2>
-Because the killing of babies was going on and had already become known, Nanda Maharaja was very much
-afraid for his newborn child. Thus he appointed the local cowherd men to protect his home and child. He wanted
-to go immediately to Mathura to pay the taxes due and also to offer some presentation for the sake of his newborn
-son. For the protection of the child, he had worshiped various demigods and forefathers and given charity to
-everyone's satisfaction. Similarly, Nanda Maharaja wanted not only to pay Kamsa the yearly taxes but also to offer
-some presentation so that Kamsa too would be satisfied. His only concern was how to protect his transcendental
-child, Krsna.
+In this verse the word jnana-khala is most significant. Knowledge is meant for distribution. Although there is
+already much scientific knowledge, whenever scientists or philosophers awaken to a particular type of knowledge,
+they try to distribute it throughout the world, for otherwise the knowledge gradually dries up and no one benefits
+from it. India has the knowledge of Bhagavad-gita, but unfortunately, for some reason or other, this sublime
+knowledge of the science of God was not distributed throughout the world, although it is meant for all of human
+society. Therefore Krsna Himself appeared as Sri Caitanya Mahaprabhu and ordered all Indians to take up the cause
+of distributing the knowledge of Bhagavad-gita throughout the entire world.
+yare dekha, tare kaha 'krsna'-upadesa
+amara ajnaya guru hana tara' ei desa
+"Instruct everyone to follow the orders of Lord Sri Krsna as they are given in Bhagavad-gita and Srimad-
+Bhagavatam. In this way become a spiritual master and try to liberate everyone in this land." (Cc. Madhya 7.128)
+Although India has the sublime knowledge of Bhagavad-gita, Indians have not done their proper duty of
+distributing it. Now, therefore, the Krsna consciousness movement has been set up to distribute this knowledge as
+it is, without distortion. Although previously there were attempts to distribute the knowledge of Bhagavad-gita,
+these attempts involved distortion and compromise with mundane knowledge. But now the Krsna consciousness
+movement, without mundane compromises, is distributing Bhagavad-gita as it is, and people are deriving the
+benefits of awakening to Krsna consciousness and becoming devotees of Lord Krsna. Therefore the proper
+distribution of knowledge has begun by which not only will the whole world benefit, but India's glory will be
+magnified in human society. Kamsa tried to arrest Krsna consciousness within his house (bhojendra-gehe), with
+the result that Kamsa, with all his opulences, was later vanquished. Similarly, the real knowledge of Bhagavad-gita
+was being choked by unscrupulous Indian leaders, with the result that India's culture, and knowledge of the
+Supreme were being lost. Now, however, because Krsna consciousness is spreading, the proper use of Bhagavadgita
+is being attempted.
 </p>
 
 </div>
@@ -80,7 +137,7 @@ child, Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

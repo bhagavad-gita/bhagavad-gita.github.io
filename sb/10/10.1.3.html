@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.3.html">10.1.3</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.3</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3"><b>3</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-te pidita nivivisuh
-kuru-pancala-kekayan
-salvan vidarbhan nisadhan
-videhan kosalan api
-<p></p>
+avatirya yador vamse
+bhagavan bhuta-bhavanah
+krtavan yani visvatma
+tani no vada vistarat
+<br>
 <h2>Synonyms</h2>
-te--they (the kings of the Yadu dynasty); piditah--being persecuted; nivivisuh--took shelter or entered (the
-kingdoms); kuru-pancala--the countries occupied by the Kurus and Pancalas; kekayan--the countries of the
-Kekayas; salvan--the countries occupied by the Salvas; vidarbhan--the countries occupied by the Vidarbhas;
-nisadhan--the countries occupied by the Nisadhas; videhan--the country of Videha; kosalan api--as well as the
-countries occupied by the Kosalas.
-<p></p>
+avatirya--after descending; yadoh vamse--in the dynasty of Yadu; bhagavan--the Supreme Personality of Godhead;
+bhuta-bhavanah--who is the cause of the cosmic manifestation; krtavan--executed; yani--whatever (activities);
+visva-atma--the Supersoul of the entire universe; tani--all of those (activities); nah--unto us; vada--kindly say;
+vistarat--elaborately.
+<br>
 <h2>Translation</h2>
-Persecuted by the demoniac kings, the Yadavas left their own kingdom and entered various others, like those of
-the Kurus, Pancalas, Kekayas, Salvas, Vidarbhas, Nisadhas, Videhas and Kosalas.
+The Supersoul, the Supreme Personality of Godhead, Sri Krsna, the cause of the cosmic manifestation, appeared
+in the dynasty of Yadu. Please tell me elaborately about His glorious activities and character, from the beginning to
+the end of His life.
+<br>
+<h2>Purport</h2>
+In this verse the words krtavan yani indicate that all the different activities Krsna performed while present on
+earth are beneficial to human society. If religionists, philosophers and people in general simply hear the activities
+of Krsna, they will be liberated. We have described several times that there are two kinds of krsna-katha,
+represented by Bhagavad-gita, spoken personally by Krsna about Himself, and Srimad-Bhagavatam, spoken by
+Sukadeva Gosvami about the glories of Krsna. Anyone who becomes even slightly interested in krsna-katha is
+liberated. Kirtanad eva krsnasya mukta-sangah param vrajet (Bhag. 12.3.51). Simply by chanting or repeating
+krsna-katha, one is liberated from the contamination of Kali-yuga. Caitanya Mahaprabhu therefore advised, yare
+dekha, tare kaha 'krsna'-upadesa (Cc. Madhya 7.128). This is the mission of Krsna consciousness: to hear about
+Krsna and thus be liberated from material bondage.
 </p>
 
 </div>
@@ -71,7 +121,7 @@ the Kurus, Pancalas, Kekayas, Salvas, Vidarbhas, Nisadhas, Videhas and Kosalas.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

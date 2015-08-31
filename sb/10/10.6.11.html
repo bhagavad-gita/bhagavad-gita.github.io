@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.11.html">10.6.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-phala-vikrayini tasya
-cyuta-dhanya-kara-dvayam
-phalair apurayad ratnaih
-phala-bhandam apuri ca
-<p></p>
+sa munca muncalam iti prabhasini
+nispidyamanakhila-jiva-marmani
+vivrtya netre caranau bhujau muhuh
+prasvinna-gatra ksipati ruroda ha
+<br>
 <h2>Synonyms</h2>
-phala-vikrayini--the aborigine fruit vendor, who was an elderly woman; tasya--of Krsna; cyuta-dhanya--the paddy
-He brought to barter having mostly fallen; kara-dvayam--palms of the hands; phalaih apurayat--the fruit vendor
-filled His small palms with fruits; ratnaih--in exchange for jewels and gold; phala-bhandam--the basket of fruit;
-apuri ca--filled.
-<p></p>
+sa--she (Putana Raksasi); munca--give up; munca--give up; alam--suck my breast no longer; iti--thus;
+prabhasini--crying; nispidyamana--being pressed severely; akhila-jiva-marmani--in every center of her vitality;
+vivrtya--opening wide; netre--her two eyes; caranau--two legs; bhujau--two hands; muhuh--again and again;
+prasvinna-gatra--with her body perspiring; ksipati--throwing; ruroda--cried severely; ha--indeed.
+<br>
 <h2>Translation</h2>
-While Krsna was going to the fruit vendor very hastily, most of the grains He was holding fell. Nonetheless, the
-fruit vendor filled Krsna's hands with fruits, and her fruit basket was immediately filled with jewels and gold.
-<p></p>
+Unbearably pressed in every vital point, the demon Putana began to cry, "Please leave me, leave me! Suck my
+breast no longer!" Perspiring, her eyes wide open and her arms and legs flailing, she cried very loudly again and
+again.
+<br>
 <h2>Purport</h2>
-In Bhagavad-gita (9.26) Krsna says:
-patram puspam phalam toyam
-yo me bhaktya prayacchati
-tad aham bhakty-upahrtam
-asnami prayatatmanah
-Krsna is so kind that if anyone offers Him a leaf, a fruit, a flower or some water, He will immediately accept it.
-The only condition is that these things should be offered with bhakti (yo me bhaktya prayacchati). Otherwise, if
-one is puffed up with false prestige, thinking, "I have so much opulence, and I am giving something to Krsna,"
-one's offering will not be accepted by Krsna. The fruit vendor, although a woman belonging to the poor aborigine
-class, dealt with Krsna with great affection, saying, "Krsna, You have come to me to take some fruit in exchange for
-grains. All the grains have fallen, but still You may take whatever You like." Thus she filled Krsna's palms with
-whatever fruits He could carry. In exchange, Krsna filled her whole basket with jewels and gold.
-From this incident one should learn that for anything offered to Krsna with love and affection, Krsna can
-reciprocate many millions of times over, both materially and spiritually. The basic principle involved is an
-exchange of love. Therefore Krsna teaches in Bhagavad-gita (9.27):
-yat karosi yad asnasi
-yaj juhosi dadasi yat
-yat tapasyasi kaunteya
-tat kurusva mad-arpanam
-"O son of Kunti, all that you do, all that you eat, all that you offer and give away, as well as all austerities that you
-may perform, should be done as an offering unto Me." With love and affection, one should try to give something to
-Krsna from one's source of income. Then one's life will be successful. Krsna is full in all opulences; He does not
-need anything from anyone. But if one is prepared to give something to Krsna, that is for one's own benefit. The
-example given in this connection is that when one's real face is decorated, the reflection of one's face is
-automatically decorated. Similarly, if we try to serve Krsna with all our opulences, we, as parts and parcels or
-reflections of Krsna, will become happy in exchange. Krsna is always happy, for He is atmarama, fully satisfied with
-His own opulence.
+The Raksasi was severely punished by Krsna. She threw her arms and legs about, and Krsna also began to kick
+her with His legs to punish her properly for her mischievous activities.
 </p>
 
 </div>
@@ -99,7 +114,7 @@ His own opulence.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

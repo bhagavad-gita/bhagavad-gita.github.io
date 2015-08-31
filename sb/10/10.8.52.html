@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,38 +81,58 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.52.html">10.8.52</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.52</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/52"><b>52</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-animadyair mahimabhir
-ajadyabhir vibhutibhih
-catur-vimsatibhis tattvaih
-parita mahad-adibhih
-<p></p>
+krsno brahmana adesam
+satyam kartum vraje vibhuh
+saha-ramo vasams cakre
+tesam pritim sva-lilaya
+<br>
 <h2>Synonyms</h2>
-anima-adyaih--headed by anima; mahimabhih--by opulences; aja-adyabhih--headed by Aja; vibhutibhih--by
-potencies; catuh-vimsatibhih--twenty-four in number; tattvaih--by elements for the creation of the material world;
-paritah--(all the visnu-murtis) were surrounded; mahat-adibhih--headed by the mahat-tattva.
-<p></p>
+krsnah--the Supreme Personality, Krsna; brahmanah--of Lord Brahma; adesam--the order; satyam--truthful;
+kartum--to make; vraje--in Vrajabhumi, Vrndavana; vibhuh--the supreme powerful; saha-ramah--along with
+Balarama; vasan--residing; cakre--increased; tesam--of all the inhabitants of Vrndavana; pritim--the pleasure; svalilaya--
+by His transcendental pastimes.
+<br>
 <h2>Translation</h2>
-All the visnu-murtis were surrounded by the opulences, headed by anima-siddhi; by the mystic potencies, headed
-by Aja; and by the twenty-four elements for the creation of the material world, headed by the mahat-tattva.
-<p></p>
-<h2>Purport</h2>
-In this verse the word mahimabhih means aisvarya, or opulence. The Supreme Personality of Godhead can do
-whatever He likes. That is His aisvarya. No one can command Him, but He can command everyone. Sad-aisvaryapurnam.
-The Lord is full in six opulences. The yoga-siddhis, the perfections of yoga, such as the ability to become
-smaller than the smallest (anima-siddhi) or bigger than the biggest (mahima-siddhi), are present in Lord Visnu.
-Sad-aisvaryaih purno ya iha bhagavan (Cc. Adi 1.3). The word aja means maya, or mystic power. Everything
-mysterious is in full existence in Visnu.
-The twenty-four elements mentioned are the five working senses (panca-karmendriya), the five senses for
-obtaining knowledge (panca-jnanendriya), the five gross material elements (panca-mahabhuta), the five sense
-objects (panca-tanmatra), the mind (manas), the false ego (ahankara), the mahat-tattva, and material nature
-(prakrti). All twenty-four of these elements are employed for the manifestation of this material world. The mahattattva
-is divided into different subtle categories, but originally it is called the mahat-tattva.
+Thus the Supreme Personality, Krsna, along with Balarama, lived in Vrajabhumi, Vrndavana, just to substantiate
+the benediction of Brahma. By exhibiting different pastimes in His childhood, He increased the transcendental
+pleasure of Nanda and the other inhabitants of Vrndavana.
+Thus end the Bhaktivedanta purports of the Tenth Canto, Eighth Chapter, of the Srimad-Bhagavatam, entitled,
+"Lord Krsna Shows the Universal Form Within His Mouth."
+Chapter Nine
+Mother Yasoda Binds Lord Lord Krsna
+While mother Yasoda was allowing Krsna to drink her breast milk, she was forced to stop because she saw the
+milk pan boiling over on the oven. The maidservants being engaged in other business, she stopped allowing Krsna
+to drink from her breast and immediately attended to the overflowing milk pan. Krsna became very angry because
+of His mother's behavior and devised a means of breaking the pots of yogurt. Because He created this disturbance,
+mother Yasoda decided to bind Him. These incidents are described in this chapter.
+One day, the maidservants being engaged in other work, mother Yasoda was churning the yogurt into butter
+herself, and in the meantime Krsna came and requested her to allow Him to suck her breast milk. Of course,
+mother Yasoda immediately allowed Him to do so, but then she saw that the hot milk on the oven was boiling over,
+and therefore she immediately stopped allowing Krsna to drink the milk of her breast and went to stop the milk on
+the oven from overflowing. Krsna, however, having been interrupted in His business of sucking the breast, was
+very angry. He took a piece of stone, broke the churning pot and entered a room, where He began to eat the freshly
+churned butter. When mother Yasoda, after attending to the overflowing milk, returned and saw the pot broken,
+she could understand that this was the work of Krsna, and therefore she went to search for Him. When she entered
+the room, she saw Krsna standing on the ulukhala, a large mortar for grinding spices. Having turned the mortar
+upside down, He was stealing butter hanging from a swing and was distributing the butter to the monkeys. As soon
+as Krsna saw that His mother had come, He immediately began to run away, and mother Yasoda began to follow
+Him. After going some distance, mother Yasoda was able to catch Krsna, who because of His offense was crying.
+Mother Yasoda, of course, threatened to punish Krsna if He acted that way again, and she decided to bind Him with
+rope. Unfortunately, when the time came to knot the rope, the rope with which she wanted to bind Him was short
+by a distance equal to the width of two fingers. When she made the rope longer by adding another rope, she again
+saw that it was short by two fingers. Again and again she tried, and again and again she found the rope too short by
+two fingers. Thus she became very tired, and Krsna, seeing His affectionate mother so tired, allowed Himself to be
+bound. Now, being compassionate, He did not show her His unlimited potency. After mother Yasoda bound Krsna
+and became engaged in other household affairs, Krsna observed two yamala-arjuna trees, which were actually
+Nalakuvara and Manigriva, two sons of Kuvera who had been condemned by Narada Muni to become trees. Krsna,
+by His mercy, now began to proceed toward the trees to fulfill the desire of Narada Muni.
 </p>
 
 </div>
@@ -82,7 +140,7 @@ is divided into different subtle categories, but originally it is called the mah
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

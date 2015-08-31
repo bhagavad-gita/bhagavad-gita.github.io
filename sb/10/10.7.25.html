@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,34 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.25.html">10.7.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ittham mitho 'tathyam ataj-jna-bhasitam
-srutva vicintyety amrsa mrsayate
-rakso viditvakhila-bhuta-hrt-sthitah
-svanam niroddhum bhagavan mano dadhe
-<p></p>
+ruditam anunisamya tatra gopyo
+bhrsam anutapta-dhiyo 'sru-purna-mukhyah
+rurudur anupalabhya nanda-sunum
+pavana uparata-pamsu-varsa-vege
+<br>
 <h2>Synonyms</h2>
-ittham--in this way; mithah--or another; atathyam--a subject matter that is not a fact; a-tat-jna--without
-knowledge; bhasitam--while they were talking; srutva--Krsna hearing them; vicintya--thinking; iti--thus; amrsa--
-actually, truly; mrsayate--who is trying to appear as a false thing (actually the animal was Aghasura, but because of
-poor knowledge they were thinking him to be a dead python); raksah--(Krsna, however, could understand that) he
-was a demon; viditva--knowing it; akhila-bhuta-hrt-sthitah--because He is antaryami, situated everywhere, in the
-core of everyone's heart; svanam--of His own associates; niroddhum--just to forbid them; bhagavan--the Supreme
-Personality of Godhead; manah dadhe--made up His mind.
-<p></p>
+ruditam--mother Yasoda, crying pitifully; anunisamya--after hearing; tatra--there; gopyah--the other ladies, the
+gopis; bhrsam--highly; anutapta--lamenting sympathetically after mother Yasoda; dhiyah--with such feelings; asrupurna-
+mukhyah--and the other gopis, their faces full of tears; ruruduh--they were crying; anupalabhya--without
+finding; nanda-sunum--the son of Nanda Maharaja, Krsna; pavane--when the whirlwind; uparata--had ceased;
+pamsu-varsa-vege--its force of showering dust.
+<br>
 <h2>Translation</h2>
-The Supreme Personality of Godhead, Sri Krsna, who is situated as antaryami, the Supersoul, in the core of
-everyone's heart, heard the boys talking among themselves about the artificial python. Unknown to them, it was
-actually Aghasura, a demon who had appeared as a python. Krsna, knowing this, wanted to forbid His associates to
-enter the demon's mouth.
+When the force of the dust storm and the winds subsided, Yasoda's friends, the other gopis, approached mother
+Yasoda, hearing her pitiful crying. Not seeing Krsna present, they too felt very much aggrieved and joined mother
+Yasoda in crying, their eyes full of tears.
+<br>
+<h2>Purport</h2>
+This attachment of the gopis to Krsna is wonderful and transcendental. The center of all the activities of the gopis
+was Krsna. When Krsna was there they were happy, and when Krsna was not there, they were unhappy. Thus
+when mother Yasoda was lamenting Krsna's absence, the other ladies also began to cry.
 </p>
 
 </div>
@@ -75,7 +116,7 @@ enter the demon's mouth.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

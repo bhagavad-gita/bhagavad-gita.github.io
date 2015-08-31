@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.27.html">10.8.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ittham atmatmanatmanam
-vatsa-pala-misena sah
-palayan vatsapo varsam
-cikride vana-gosthayoh
-<p></p>
+tatas tu bhagavan krsno
+vayasyair vraja-balakaih
+saha-ramo vraja-strinam
+cikride janayan mudam
+<br>
 <h2>Synonyms</h2>
-ittham--in this way; atma--the Supreme Soul, Krsna; atmana--by Himself; atmanam--Himself again; vatsa-palamisena--
-with the forms of cowherd boys and calves; sah--Krsna Himself; palayan--maintaining; vatsa-pah--tending
-the calves; varsam--continuously for one year; cikride--enjoyed the pastimes; vana-gosthayoh--both in Vrndavana
-and in the forest.
-<p></p>
+tatah--thereafter; tu--but; bhagavan--the Supreme Personality of Godhead; krsnah--Lord Krsna; vayasyaih--with
+Their playmates; vraja-balakaih--with other small children in Vraja; saha-ramah--along with Balarama; vrajastrinam--
+of all the ladies of Vraja; cikride--played very happily; janayan--awakening; mudam--transcendental bliss.
+<br>
 <h2>Translation</h2>
-In this way, Lord Sri Krsna, having Himself become the cowherd boys and groups of calves, maintained Himself
-by Himself. Thus He continued His pastimes, both in Vrndavana and in the forest, for one year.
-<p></p>
+Thereafter, Lord Krsna, along with Balarama, began to play with the other children of the cowherd men, thus
+awakening the transcendental bliss of the cowherd women.
+<br>
 <h2>Purport</h2>
-Everything was Krsna. The calves, the cowherd boys and their maintainer Himself were all Krsna. In other words,
-Krsna expanded Himself in varieties of calves and cowherd boys and continued His pastimes uninterrupted for one
-year. As stated in Bhagavad-gita, Krsna's expansion is situated in everyone's heart as the Supersoul. Similarly,
-instead of expanding Himself as the Supersoul, He expanded Himself as a portion of calves and cowherd boys for
-one continuous year.
+The word saha-ramah, meaning "along with Balarama," is significant in this verse. In such transcendental
+pastimes, Krsna is the chief hero, and Balarama provides additional help.
 </p>
 
 </div>
@@ -77,7 +112,7 @@ one continuous year.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,43 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.6.html">10.3.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-autthanikautsukya-mana manasvini
-samagatan pujayati vrajaukasah
-naivasrnod vai ruditam sutasya sa
-rudan stanarthi caranav udaksipat
-<p></p>
+jaguh kinnara-gandharvas
+tustuvuh siddha-caranah
+vidyadharyas ca nanrtur
+apsarobhih samam muda
+<br>
 <h2>Synonyms</h2>
-autthanika-autsukya-manah--mother Yasoda was very busy celebrating the utthana ceremony of her child;
-manasvini--very liberal in distributing food, clothing, ornaments and cows, according to necessity; samagatan--to
-the assembled guests; pujayati--just to satisfy them; vraja-okasah--to the inhabitants of Vraja; na--not; eva--
-certainly; asrnot--did hear; vai--indeed; ruditam--the crying; sutasya--of her child; sa--mother Yasoda; rudan--
-crying; stana-arthi--Krsna, who was hankering to drink His mother's milk by sucking her breast; caranau
-udaksipat--out of anger, threw His two legs hither and thither.
-<p></p>
+jaguh--recited auspicious songs; kinnara-gandharvah--the Kinnaras and Gandharvas, inhabitants of various
+planets in the heavenly planetary system; tustuvuh--offered their respective prayers; siddha-caranah--the Siddhas
+and Caranas, other inhabitants of the heavenly planets; vidyadharyah ca--and the Vidyadharis, another group of
+inhabitants of the heavenly planets; nanrtuh--danced in transcendental bliss; apsarobhih--the Apsaras, beautiful
+dancers in the heavenly kingdom; samam--along with; muda--in great jubilation.
+<br>
 <h2>Translation</h2>
-The liberal mother Yasoda, absorbed in celebrating the utthana ceremony, was busy receiving guests, worshiping
-them with all respect and offering them clothing, cows, garlands and grains. Thus she could not hear the child
-crying for His mother. At that time, the child Krsna, demanding to drink the milk of His mother's breast, angrily
-threw His legs upward.
-<p></p>
-<h2>Purport</h2>
-Krsna had been placed underneath a household handcart, but this handcart was actually another form of the
-Sakatasura, a demon who had come there to kill the child. Now, on the plea of demanding to suck His mother's
-breast, Krsna took this opportunity to kill the demon. Thus He kicked Sakatasura just to expose him. Although
-Krsna's mother was engaged in receiving guests, Lord Krsna wanted to draw her attention by killing the Sakatasura,
-and therefore he kicked that cart-shaped demon. Such are the pastimes of Krsna. Krsna wanted to draw the
-attention of His mother, but while doing so He created a great havoc not understandable by ordinary persons.
-These narrations are wonderfully enjoyable, and those who are fortunate are struck with wonder upon hearing of
-these extraordinary activities of the Lord. Although the less intelligent regard them as mythological because a dull
-brain cannot understand them, they are real facts. These narrations are actually so enjoyable and enlightening that
-Maharaja Pariksit and Sukadeva Gosvami took pleasure in them, and other liberated persons, following in their
-footsteps, become fully jubilant by hearing about the wonderful activities of the Lord.
+The Kinnaras and Gandharvas began to sing auspicious songs, the Siddhas and Caranas offered auspicious
+prayers, and the Vidyadharis, along with the Apsaras, began to dance in jubilation.
 </p>
 
 </div>
@@ -87,7 +110,7 @@ footsteps, become fully jubilant by hearing about the wonderful activities of th
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

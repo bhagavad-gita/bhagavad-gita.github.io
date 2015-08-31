@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,69 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.28.html">10.2.28</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.28</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28"><b>28</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pumsas tri-vargo vihitah
-suhrdo hy anubhavitah
-na tesu klisyamanesu
-tri-vargo 'rthaya kalpate
-<p></p>
+tvam eka evasya satah prasutis
+tvam sannidhanam tvam anugrahas ca
+tvan-mayaya samvrta-cetasas tvam
+pasyanti nana na vipascito ye
+<br>
 <h2>Synonyms</h2>
-pumsah--of a person; tri-vargah--the three aims of life (religion, economic development and sense gratification);
-vihitah--enjoined according to Vedic ritualistic ceremonies; suhrdah--toward relatives and friends; hi--indeed;
-anubhavitah--when they are properly in line; na--not; tesu--in them; klisyamanesu--if they are actually in any
-difficulty; tri-vargah--these three aims of life; arthaya--for any purpose; kalpate--does become so.
-<p></p>
+tvam--You (O Lord); ekah--being one without a second, You are everything; eva--indeed; asya satah--of this
+cosmic manifestation now visible; prasutih--the original source; tvam--Your Lordship; sannidhanam--the
+conservation of all such energy when everything is annihilated; tvam--Your Lordship; anugrahah ca--and the
+maintainer; tvat-mayaya--by Your illusory, external energy; samvrta-cetasah--those whose intelligence is covered by
+such illusory energy; tvam--unto You; pasyanti--observe; nana--many varieties; na--not; vipascitah--learned
+scholars or devotees; ye--who are.
+<br>
 <h2>Translation</h2>
-When one's friends and relatives are properly situated, one's religion, economic development and sense
-gratification, as described in the Vedic literatures, are beneficial. Otherwise, if one's friends and relatives are in
-distress, these three cannot offer any happiness.
-<p></p>
+The efficient cause of this material world, manifested with its many varieties as the original tree, is You, O Lord.
+You are also the maintainer of this material world, and after annihilation You are the one in whom everything is
+conserved. Those who are covered by Your external energy cannot see You behind this manifestation, but theirs is
+not the vision of learned devotees.
+<br>
 <h2>Purport</h2>
-Vasudeva regretfully informed Nanda Maharaja that although he had his wife and children, he could not properly
-discharge his duty of maintaining them and was therefore unhappy.
+Various demigods, beginning from Lord Brahma, Lord Siva and even Visnu, are supposed to be the creator,
+maintainer and annihilator of this material world, but actually they are not. The fact is that everything is the
+Supreme Personality of Godhead, manifested in varieties of energy. Ekam evadvitiyam brahma. There is no second
+existence. Those who are truly vipascit, learned, are those who have reached the platform of understanding and
+observing the Supreme Personality of Godhead in any condition of life. premanjana-cchurita-bhakti-vilocanena
+santah sadaiva hrdayesu vilokayanti (Brahma-samhita 5.38). Learned devotees accept even conditions of distress as
+representing the presence of the Supreme Lord. When a devotee is in distress, he sees that the Lord has appeared as
+distress just to relieve or purify the devotee from the contamination of the material world. While one is within this
+material world, one is in various conditions, and therefore a devotee sees a condition of distress as but another
+feature of the Lord. Tat te'nukampam susamiksamanah (Bhag. 10.14.8). A devotee, therefore, regards distress as a
+great favor of the Lord because he understands that he is being cleansed of contamination. Tesam aham
+samuddharta mrtyu-samsara-sagarat (Bg. 12.7). The appearance of distress is a negative process intended to give
+the devotee relief from this material world, which is called mrtyu-samsara, or the constant repetition of birth and
+death. To save a surrendered soul from repeated birth and death, the Lord purifies him of contamination by
+offering him a little distress. This cannot be understood by a nondevotee, but a devotee can see this because he is
+vipascit, or learned. A nondevotee, therefore, is perturbed in distress, but a devotee welcomes distress as another
+feature of the Lord. Sarvam khalv idam brahma. A devotee can actually see that there is only the Supreme
+Personality of Godhead and no second entity. Ekam evadvitiyam. There is only the Lord, who presents Himself in
+different energies.
+Persons who are not in real knowledge think that Brahma is the creator, Visnu the maintainer and Siva the
+annihilator and that the different demigods are intended to fulfill diverse purposes. Thus they create diverse
+purposes and worship various demigods to have these purposes fulfilled (kamais tais tair hrta jnanah prapadyante
+'nya-devatah). A devotee, however, knows that these various demigods are but different parts of the Supreme
+Personality of Godhead and that these parts need not be worshiped. As the Lord says in Bhagavad-gita (9.23):
+ye 'py anya-devata bhakta
+yajante sraddhayanvitah
+te 'pi mam eva kaunteya
+yajanty avidhi-purvakam
+"Whatever a man may sacrifice to other gods, O son of Kunti, is really meant for Me alone, but it is offered
+without true understanding." There is no need to worship the demigods, for this is avidhi, not in order. Simply by
+surrendering oneself at the lotus feet of Krsna, one can completely discharge one's duties; there is no need to
+worship various deities or demigods. These various divinities are observed by the mudhas, fools, who are
+bewildered by the three modes of material nature (tribhir gunamayair bhavair ebhih sarvam idam jagat). Such fools
+cannot understand that the real source of everything is the Supreme Personality of Godhead (mohitam nabhijanati
+mam ebhyah param avyayam). Not being disturbed by the Lord's various features, one should concentrate upon
+and worship the Supreme Lord (mam ekam saranam vraja). This should be the guiding principle of one's life.
 </p>
 
 </div>
@@ -75,7 +151,7 @@ discharge his duty of maintaining them and was therefore unhappy.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

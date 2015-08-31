@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,50 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.40.html">10.8.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tavad etyatmabhur atmamanena
-truty-anehasa
-purovad abdam kridantam
-dadrse sa-kalam harim
-<p></p>
+kim svapna etad uta devamaya
+kim va madiyo bata buddhi-mohah
+atho amusyaiva mamarbhakasya
+yah kascanautpattika atma-yogah
+<br>
 <h2>Synonyms</h2>
-tavat--for so long; etya--after returning; atma-bhuh--Lord Brahma; atma-manena--by his (Brahma's) own
-measurement; truti-anehasa--by a moment's time; purah-vat--just as previously; a-abdam--for one year (by human
-measurement of time); kridantam--playing; dadrse--he saw; sa-kalam--along with His expansions; harim--Lord Hari
-(Sri Krsna).
-<p></p>
+kim--whether; svapnah--a dream; etat--all this; uta--or otherwise; deva-maya--an illusory manifestation by the
+external energy; kim va--or else; madiyah--my personal; bata--indeed; buddhi-mohah--illusion of intelligence;
+atho--otherwise; amusya--of such; eva--indeed; mama arbhakasya--of my child; yah--which; kascana--some;
+autpattikah--natural; atma-yogah--personal mystic power.
+<br>
 <h2>Translation</h2>
-When Lord Brahma returned after a moment of time had passed (according to his own measurement), he saw
-that although by human measurement a complete year had passed, Lord Krsna, after all that time, was engaged just
-as before in playing with the boys and calves, who were His expansions.
-<p></p>
+[Mother Yasoda began to argue within herself:] Is this a dream, or is it an illusory creation by the external
+energy? Has this been manifested by my own intelligence, or is it some mystic power of my child?
+<br>
 <h2>Purport</h2>
-Lord Brahma had gone away for only a moment of his time, but when he returned, a year of human time had
-passed. On different planets, the calculation of time is different. To give an example, a man-made satellite may
-orbit the earth in an hour and twenty-five minutes and thus complete one full day, although a day ordinarily takes
-twenty-four hours for those living on earth. Therefore, what was but a moment for Brahma was one year on earth.
-Krsna continued to expand Himself in so many forms for one year, but by the arrangement of yogamaya no one
-could understand this but Balarama.
-After one moment of Brahma's calculation, Brahma came back to see the fun caused by his stealing the boys and
-calves. But he was also afraid that he was playing with fire. Krsna was his master, and he had played mischief for
-fun by taking away Krsna's calves and boys. He was really anxious, so he did not stay away very long; he came back
-after a moment (of his calculation). When Brahma returned, he saw that all the boys, calves and cows were playing
-with Krsna in the same way as when he had come upon them; by Krsna's display of yogamaya, the same pastimes
-were going on without any change.
-On the day when Lord Brahma had first come, Baladeva could not go with Krsna and the cowherd boys, for it was
-His birthday, and His mother had kept Him back for the proper ceremonial bath, called santika-snana. Therefore
-Lord Baladeva was not taken by Brahma at that time. Now, one year later, Brahma returned, and because he
-returned on exactly the same day, Baladeva was again kept at home for His birthday. Therefore, although this verse
-mentions that Brahma saw Krsna and all the cowherd boys, Baladeva is not mentioned. It was five or six days
-earlier that Baladeva had inquired from Krsna about the extraordinary affection of the cows and cowherd men, but
-now, when Brahma returned, Brahma saw all the calves and cowherd boys playing with Krsna as expansions of
-Krsna, but he did not see Baladeva. As in the previous year, Lord Baladeva did not go to the woods on the day Lord
-Brahma appeared there.
+When mother Yasoda saw this wonderful manifestation within the mouth of her child, she began to argue within
+herself about whether it was a dream. Then she considered, "I am not dreaming, because my eyes are open. I am
+actually seeing what is happening. I am not sleeping, nor am I dreaming. Then maybe this is an illusion created by
+devamaya. But that is also not possible. What business would the demigods have showing such things to me? I am
+an insignificant woman with no connection with the demigods. Why should they take the trouble to put me into
+devamaya? That also is not possible." Then mother Yasoda considered whether the vision might be due to
+bewilderment: "I am fit in health; I am not diseased. Why should there be any bewilderment? It is not possible that
+my brain is deranged, since I am ordinarily quite fit to think. Then this vision must be due to some mystic power of
+my son, as predicted by Gargamuni." Thus she finally concluded that the vision was due to her son's activities, and
+nothing else.
 </p>
 
 </div>
@@ -94,7 +121,7 @@ Brahma appeared there.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

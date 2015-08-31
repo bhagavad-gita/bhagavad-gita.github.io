@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.14.html">10.2.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gopah parasparam hrsta
-dadhi-ksira-ghrtambubhih
-asincanto vilimpanto
-navanitais ca ciksipuh
-<p></p>
+sandistaivam bhagavata
+tathety om iti tad-vacah
+pratigrhya parikramya
+gam gata tat tathakarot
+<br>
 <h2>Synonyms</h2>
-gopah--the cowherd men; parasparam--on one another; hrstah--being so pleased; dadhi--with curd; ksira--with
-condensed milk; ghrta-ambubhih--with water mixed with butter; asincantah--sprinkling; vilimpantah--smearing;
-navanitaih ca--and with butter; ciksipuh--they threw on one another.
-<p></p>
+sandista--having been ordered; evam--thus; bhagavata--by the Supreme Personality of Godhead; tatha iti--so be it;
+om--affirmation by the mantra om; iti--thus; tat-vacah--His words; pratigrhya--accepting the order; parikramya--
+after circumambulating Him; gam--to the surface of the globe; gata--she immediately went; tat--the order, as given
+by the Supreme Personality of Godhead; tatha--just so; akarot--executed.
+<br>
 <h2>Translation</h2>
-In gladness, the cowherd men enjoyed the great festival by splashing one another's bodies with a mixture of curd,
-condensed milk, butter and water. They threw butter on one another and smeared it on one another's bodies.
-<p></p>
+Thus instructed by the Supreme Personality of Godhead, Yogamaya immediately agreed. With the Vedic mantra
+om, she confirmed that she would do what He asked. Thus having accepted the order of the Supreme Personality of
+Godhead, she circumambulated Him and started for the place on earth known as Nanda-gokula. There she did
+everything just as she had been told.
+<br>
 <h2>Purport</h2>
-From this statement we can understand that five thousand years ago not only was there enough milk, butter and
-curd to eat, drink and cook with, but when there was a festival it would be thrown about without restriction. There
-was no limit to how extensively milk, butter, curd and other such products were used in human society. Everyone
-had an ample stock of milk, and by using it in many varied milk preparations, people would keep good health in
-natural ways and thus enjoy life in Krsna consciousness.
+After receiving the orders of the Supreme Personality of Godhead, Yogamaya twice confirmed her acceptance by
+saying, "Yes, sir, I shall do as You order," and then saying om. Srila Visvanatha Cakravarti Thakura comments that
+om signifies Vedic confirmation. Thus Yogamaya very faithfully received the Lord's order as a Vedic injunction. It
+is a fact that whatever is spoken by the Supreme Personality of Godhead is a Vedic injunction that no one should
+neglect. In Vedic injunctions there are no mistakes, illusions, cheating or imperfection. Unless one understands the
+authority of the Vedic version, there is no purpose in quoting sastra. No one should violate the Vedic injunctions.
+Rather, one should strictly execute the orders given in the Vedas. As stated in Bhagavad-gita (16.24):
+tasmac chastram pramanam te
+karyakarya-vyavasthitau
+jnatva sastra-vidhanoktam
+karma kartum iharhasi
+"One should understand what is duty and what is not duty by the regulations of the scriptures. Knowing such
+rules and regulations, one should act so that one may gradually be elevated."
 </p>
 
 </div>
@@ -76,7 +126,7 @@ natural ways and thus enjoy life in Krsna consciousness.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

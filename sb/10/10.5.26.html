@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,39 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.26.html">10.5.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ity antarenarjunayoh
-krsnas tu yamayor yayau
-atma-nirvesa-matrena
-tiryag-gatam ulukhalam
-<p></p>
+kaccit pasavyam nirujam
+bhury-ambu-trna-virudham
+brhad vanam tad adhuna
+yatrasse tvam suhrd-vrtah
+<br>
 <h2>Synonyms</h2>
-iti--thus deciding; antarena--between; arjunayoh--the two arjuna trees; krsnah tu--Lord Krsna; yamayoh yayau--
-entered between the two trees; atma-nirvesa-matrena--as soon as He entered (between the two trees); tiryak--
-crossways; gatam--so became; ulukhalam--the big mortar for grinding spices.
-<p></p>
+kaccit--whether; pasavyam--protection of the cows; nirujam--without difficulties or disease; bhuri--sufficient;
+ambu--water; trna--grass; virudham--plants; brhat vanam--the great forest; tat--all these arrangements are there;
+adhuna--now; yatra--where; asse--are living; tvam--you; suhrt-vrtah--surrounded by friends.
+<br>
 <h2>Translation</h2>
-Having thus spoken, Krsna soon entered between the two arjuna trees, and thus the big mortar to which He was
-bound turned crosswise and stuck between them.
+My dear friend Nanda Maharaja, in the place where you are living with your friends, is the forest favorable for the
+animals, the cows? I hope there is no disease or inconvenience. The place must be full of water, grass and other
+plants.
+<br>
+<h2>Purport</h2>
+For human happiness, one must care for the animals, especially the cows. Vasudeva therefore inquired whether
+there was a good arrangement for the animals where Nanda Maharaja lived. For the proper pursuit of human
+happiness, there must be arrangements for the protection of cows. This means that there must be forests and
+adequate pasturing grounds full of grass and water. If the animals are happy, there will be an ample supply of milk,
+from which human beings will benefit by deriving many milk products with which to live happily. As enjoined in
+Bhagavad-gita (18.44), krsi-go-raksya-vanijyam vaisya-karma-svabhavajam. Without giving proper facilities to the
+animals, how can human society be happy? That people are raising cattle to send to the slaughterhouse is a great
+sin. By this demoniac enterprise, people are ruining their chance for a truly human life. Because they are not giving
+any importance to the instructions of Krsna, the advancement of their so-called civilization resembles the crazy
+efforts of men in a lunatic asylum.
 </p>
 
 </div>
@@ -69,7 +121,7 @@ bound turned crosswise and stuck between them.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

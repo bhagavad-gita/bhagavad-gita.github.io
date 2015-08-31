@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,49 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.29.html">10.4.29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/29"><b>29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-vatsan muncan kvacid asamaye krosa-sanjata-hasah
-steyam svadv atty atha dadhi-payah kalpitaih steya-yogaih
-markan bhoksyan vibhajati sa cen natti bhandam bhinnatti
-dravyalabhe sagrha-kupito yaty upakrosya tokan
-<p></p>
+tasyam ratryam vyatitayam
+kamsa ahuya mantrinah
+tebhya acasta tat sarvam
+yad uktam yoga-nidraya
+<br>
 <h2>Synonyms</h2>
-vatsan--the calves; muncan--releasing; kvacit--sometimes; asamaye--at odd times; krosa-sanjata-hasah--after this,
-when the head of the house is angry, Krsna begins to smile; steyam--obtained by stealing; svadu--very tasteful; atti--
-eats; atha--thus; dadhi-payah--pot of curd and milk; kalpitaih--devised; steya-yogaih--by some sort of stealing
-process; markan--to the monkeys; bhoksyan--giving to eat; vibhajati--divides their portion; sah--the monkey; cet--
-if; na--not; atti--eats; bhandam--the pot; bhinnatti--He breaks; dravya-alabhe--when eatables are unavailable or He
-cannot find such pots; sa-grha-kupitah--He becomes angry at the residents of the house; yati--He goes away;
-upakrosya--irritating and pinching; tokan--the small children.
-<p></p>
+tasyam--that; ratryam--night; vyatitayam--having passed; kamsah--King Kamsa; ahuya--calling for; mantrinah--all
+the ministers; tebhyah--them; acasta--informed; tat--that; sarvam--all; yat uktam--which was spoken (that Kamsa's
+murderer was already somewhere else); yoga-nidraya--by Yogamaya, the goddess Durga.
+<br>
 <h2>Translation</h2>
-"Our dear friend Yasoda, your son sometimes comes to our houses before the milking of the cows and releases
-the calves, and when the master of the house becomes angry, your son merely smiles. Sometimes He devises some
-process by which He steals palatable curd, butter and milk, which He then eats and drinks. When the monkeys
-assemble, He divides it with them, and when the monkeys have their bellies so full that they won't take more, He
-breaks the pots. Sometimes, if He gets no opportunity to steal butter or milk from a house, He will be angry at the
-householders, and for His revenge He will agitate the small children by pinching them. Then, when the children
-begin crying, Krsna will go away.
-<p></p>
+After that night passed, Kamsa summoned his ministers and informed them of all that had been spoken by
+Yogamaya [who had revealed that He who was to slay Kamsa had already been born somewhere else].
+<br>
 <h2>Purport</h2>
-The narration of Krsna's naughty childhood activities would be presented to mother Yasoda in the form of
-complaints. Sometimes Krsna would enter the house of a neighbor, and if He found no one there, He would release
-the calves before the time for the cows to be milked. The calves are actually supposed to be released when their
-mothers are milked, but Krsna would release them before that time, and naturally the calves would drink all the
-milk from their mothers. When the cowherd men saw this, they would chase Krsna and try to catch Him, saying,
-"Here is Krsna doing mischief," but He would flee and enter another house, where He would again devise some
-means to steal butter and curd. Then the cowherd men would again try to capture Him, saying, "Here is the butter
-thief. Better capture Him!" And they would be angry. But Krsna would simply smile, and they would forget
-everything. Sometimes, in their presence, He would begin eating the curd and butter. There was no need for Krsna
-to eat butter, since His belly was always full, but He would try to eat it, or else He would break the pots and
-distribute the contents to the monkeys. In this way, Krsna was always engaged in mischief-making. If in any house
-He could not find any butter or curd to steal, He would go into a room and agitate the small children sleeping there
-by pinching them, and when they cried He would go away.
+The Vedic scripture Candi describes maya, the energy of the Supreme Lord, as nidra: durga devi sarva-bhutesu
+nidra-rupena samasthitah. The energy of Yogamaya and Mahamaya keeps the living entities sleeping in this
+material world in the great darkness of ignorance. Yogamaya, the goddess Durga, kept Kamsa in darkness about
+Krsna's birth and misled him to believe that his enemy Krsna had been born elsewhere. Krsna was born the son of
+Devaki, but according to the Lord's original plan, as prophesied to Brahma, He went to Vrndavana to give pleasure
+to mother Yasoda and Nanda Maharaja and other intimate friends and devotees for eleven years. Then He would
+return to kill Kamsa. Because Kamsa did not know this, he believed Yogamaya's statement that Krsna was born
+elsewhere, not of Devaki.
 </p>
 
 </div>
@@ -93,7 +118,7 @@ by pinching them, and when they cried He would go away.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

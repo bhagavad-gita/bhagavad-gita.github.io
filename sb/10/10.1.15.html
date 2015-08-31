@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,44 +81,43 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.15.html">10.1.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-garbhe pranite devakya
-rohinim yoga-nidraya
-aho visramsito garbha
-iti paura vicukrusuh
-<p></p>
+sri-suka uvaca
+samyag vyavasita buddhis
+tava rajarsi-sattama
+vasudeva-kathayam te
+yaj jata naisthiki ratih
+<br>
 <h2>Synonyms</h2>
-garbhe--when the embryo; pranite--was carried from the womb; devakyah--of Devaki; rohinim--to the womb of
-Rohini; yoga-nidraya--by the spiritual energy called Yogamaya; aho--alas; visramsitah--is lost; garbhah--the embryo;
-iti--thus; paurah--all the inhabitants of the house; vicukrusuh--lamented.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; samyak--completely; vyavasita--fixed; buddhih--intelligence; tava--
+of Your Majesty; raja-rsi-sattama--O best of rajarsis, saintly kings; vasudeva-kathayam--in hearing about the topics
+of Vasudeva, Krsna; te--your; yat--because; jata--developed; naisthiki--without cessation; ratih--attraction or
+ecstatic devotional service.
+<br>
 <h2>Translation</h2>
-When the child of Devaki was attracted and transferred into the womb of Rohini by Yogamaya, Devaki seemed to
-have a miscarriage. Thus all the inhabitants of the palace loudly lamented, "Alas, Devaki has lost her child!"
-<p></p>
+Srila Sukadeva Gosvami said: O Your Majesty, best of all saintly kings, because you are greatly attracted to topics
+of Vasudeva, it is certain that your intelligence is firmly fixed in spiritual understanding, which is the only true goal
+for humanity. Because that attraction is unceasing, it is certainly sublime.
+<br>
 <h2>Purport</h2>
-"All the inhabitants of the palace" includes Kamsa. When everyone lamented, Kamsa joined in compassion,
-thinking that perhaps because of drugs or some other external means, Devaki had undergone this abortion. The
-real story of what happened after Yogamaya attracted the child of Devaki into the womb of Rohini in the seventh
-month of Rohini's pregnancy is described as follows in the Hari-vamsa. At midnight, while Rohini was deeply
-sleeping, she experienced, as if in a dream, that she had undergone a miscarriage. After some time, when she
-awoke, she saw that this had indeed happened, and she was in great anxiety. But Yogamaya then informed her, "O
-auspicious lady, your child is now being replaced. I am attracting a child from the womb of Devaki, and therefore
-your child will be known as Sankarsana."
-The word yoga-nidra is significant. When one is spiritually reconnected through self-realization, one regards his
-material life as having been like a dream. As stated in Bhagavad-gita (2.69):
-ya nisa sarva-bhutanam
-tasyam jagarti samyami
-yasyam jagrati bhutani
-sa nisa pasyato muneh
-"What is night for all beings is the time of awakening for the self-controlled; and the time of awakening for all
-beings is night for the introspective sage." The stage of self-realization is called yoga-nidra. All material activities
-appear to be a dream when one is spiritually awakened. Thus yoga-nidra may be explained to be Yogamaya.
+Krsna-katha is compulsory for the rajarsi, or executive head of government. This is also mentioned in Bhagavadgita
+(imam rajarsayo viduh). Unfortunately, however, in this age the governmental power is gradually being
+captured by third-class and fourth-class men who have no spiritual understanding, and society is therefore very
+quickly becoming degraded. Krsna-katha must be understood by the executive heads of government, for otherwise
+how will people be happy and gain relief from the pangs of materialistic life? One who has fixed his mind in Krsna
+consciousness should be understood to have very sharp intelligence in regard to the value of life. Maharaja Pariksit
+was rajarsi-sattama, the best of all saintly kings, and Sukadeva Gosvami was muni-sattama, the best of munis. Both
+of them were elevated because of their common interest in krsna-katha. The exalted position of the speaker and the
+audience will be explained very nicely in the next verse. Krsna-katha is so enlivening that Maharaja Pariksit forgot
+everything material, even his personal comfort in relation to food and drink. This is an example of how the Krsna
+consciousness movement should spread all over the world to bring both the speaker and the audience to the
+transcendental platform and back home, back to Godhead.
 </p>
 
 </div>
@@ -88,7 +125,7 @@ appear to be a dream when one is spiritually awakened. Thus yoga-nidra may be ex
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

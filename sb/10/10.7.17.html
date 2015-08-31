@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.7.17.html">10.7.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-dharadharostho jaladottarostho
-dary-anananto giri-srnga-damstrah
-dhvantantar-asyo vitatadhva-jihvah
-parusanila-svasa-daveksanosnah
-<p></p>
+vipra mantra-vido yuktas
+tair yah proktas tathasisah
+ta nisphala bhavisyanti
+na kadacid api sphutam
+<br>
 <h2>Synonyms</h2>
-dhara--on the surface of the globe; adhara-osthah--whose lower lip; jalada-uttara-osthah--whose upper lip was
-touching the clouds; dari-anana-antah--whose mouth was expanded very widely like a mountain cave; giri-srnga--
-like a mountain peak; damstrah--whose teeth; dhvanta-antah-asyah--within whose mouth the atmosphere was as
-dark as possible; vitata-adhva-jihvah--whose tongue was like a broad way; parusa-anila-svasa--whose breath was
-like a warm wind; dava-iksana-usnah--and whose glance was like flames of fire.
-<p></p>
+viprah--the brahmanas; mantra-vidah--completely expert in chanting the Vedic hymns; yuktah--perfect mystic
+yogis; taih--by them; yah--whatsoever; proktah--was spoken; tatha--becomes just so; asisah--all blessings; tah--such
+words; nisphalah--useless, without fruit; bhavisyanti na--never will become; kadacit--at any time; api--indeed;
+sphutam--always factual, as it is.
+<br>
 <h2>Translation</h2>
-His lower lip rested on the surface of the earth, and his upper lip was touching the clouds in the sky. The borders
-of his mouth resembled the sides of a big cave in a mountain, and the middle of his mouth was as dark as possible.
-His tongue resembled a broad traffic-way, his breath was like a warm wind, and his eyes blazed like fire.
+The brahmanas, who were completely expert in chanting the Vedic hymns, were all yogis fully equipped with
+mystic powers. Whatever blessings they spoke were certainly never fruitless.
+<br>
+<h2>Purport</h2>
+Brahmanas fully equipped with the brahminical qualifications are always yogis fully powerful in mystic yoga.
+Their words never fail. In every transaction with other members of society, brahmanas are certainly dependable. In
+this age, however, one must take into account that the brahmanas are uncertain in their qualifications. Because
+there are no yajnic brahmanas, all yajnas are forbidden. The only yajna recommended in this age is sankirtanayajna.
+Yajnaih sankirtana-prayair yajanti hi sumedhasah (Bhag. 11.5.32). Yajna is meant to satisfy Visnu (yajnarthat
+karmano 'nyatra loko 'yam karma-bandhanah). Because in this age there are no qualified brahmanas, people should
+perform yajna by chanting the Hare Krsna mantra (yajnaih sankirtana-prayair yajanti hi sumedhasah). Life is meant
+for yajna, and yajna is performed by the chanting of Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama,
+Hare Rama, Rama Rama, Hare Hare.
 </p>
 
 </div>
@@ -72,7 +120,7 @@ His tongue resembled a broad traffic-way, his breath was like a warm wind, and h
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

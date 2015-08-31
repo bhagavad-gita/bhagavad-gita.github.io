@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.43.html">10.3.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-nandah sva-putram adaya
-pretyagatam udara-dhih
-murdhny upaghraya paramam
-mudam lebhe kurudvaha
-<p></p>
+trtiye 'smin bhave 'ham vai
+tenaiva vapusatha vam
+jato bhuyas tayor eva
+satyam me vyahrtam sati
+<br>
 <h2>Synonyms</h2>
-nandah--Maharaja Nanda; sva-putram adaya--taking his son Krsna on his lap; pretya-agatam--as if Krsna had
-returned from death (no one could even imagine that from such danger a child could be saved); udara-dhih--
-because he was always liberal and simple; murdhni--on the head of Krsna; upaghraya--formally smelling;
-paramam--highest; mudam--peace; lebhe--achieved; kuru-udvaha--O Maharaja Pariksit.
-<p></p>
+trtiye--for the third time; asmin bhave--in this appearance (as Krsna); aham--I Myself; vai--indeed; tena--with the
+same personality; eva--in this way; vapusa--by the form; atha--as; vam--of both of you; jatah--born; bhuyah--again;
+tayoh--of both of you; eva--indeed; satyam--take as truth; me--My; vyahrtam--words; sati--O supremely chaste.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, best of the Kurus, Nanda Maharaja was very liberal and simple. He immediately took his son
-Krsna on his lap as if Krsna had returned from death, and by formally smelling his son's head, Nanda Maharaja
-undoubtedly enjoyed transcendental bliss.
-<p></p>
+O supremely chaste mother, I, the same personality, have now appeared of you both as your son for the third
+time. Take My words as the truth.
+<br>
 <h2>Purport</h2>
-Nanda Maharaja could not understand how the inhabitants of his house had allowed Putana to enter the house,
-nor could he imagine the gravity of the situation. He did not understand that Krsna had wanted to kill Putana and
-that His pastimes were performed by yogamaya. Nanda Maharaja simply thought that someone had entered his
-house and created havoc. This was Nanda Maharaja's simplicity.
+The Supreme Personality of Godhead chooses a mother and father from whom to take birth again and again. The
+Lord took birth originally from Sutapa and Prsni, then from Kasyapa and Aditi, and again from the same father and
+mother, Vasudeva and Devaki. "In other appearances also," the Lord said, "I took the form of an ordinary child just
+to become your son so that we could reciprocate eternal love." Jiva Gosvami has explained this verse in his Krsnasandarbha,
+Ninety-sixth Chapter, where he notes that in text 37 the Lord says, amuna vapusa, meaning "by this
+same form." In other words, the Lord told Devaki, "This time I have appeared in My original form as Sri Krsna."
+Srila Jiva Gosvami says that the other forms were partial expansions of the Lord's original form, but because of the
+intense love developed by Prsni and Sutapa, the Lord appeared from Devaki and Vasudeva in His full opulence as
+Sri Krsna. In this verse the Lord confirms, "I am the same Supreme Personality of Godhead, but I appear in full
+opulence as Sri Krsna." This is the purport of the words tenaiva vapusa. When the Lord mentioned the birth of
+Prsnigarbha, He did not say tenaiva vapusa, but He assured Devaki that in the third birth the Supreme Personality
+of Godhead Krsna had appeared, not His partial expansion. Prsnigarbha and Vamana were partial expansions of
+Krsna, but in this third birth Krsna Himself appeared. This is the explanation given in Sri Krsna-sandarbha by Srila
+Jiva Gosvami.
 </p>
 
 </div>
@@ -77,7 +124,7 @@ house and created havoc. This was Nanda Maharaja's simplicity.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

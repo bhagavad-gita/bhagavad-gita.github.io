@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,52 +81,57 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.22.html">10.1.22</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.22</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/22"><b>22</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ayam tv asabhyas tava janma nau grhe
-srutvagrajams te nyavadhit suresvara
-sa te 'vataram purusaih samarpitam
-srutvadhunaivabhisaraty udayudhah
-<p></p>
+puraiva pumsavadhrto dhara-jvaro
+bhavadbhir amsair yadusupajanyatam
+sa yavad urvya bharam isvaresvarah
+sva-kala-saktya ksapayams cared bhuvi
+<br>
 <h2>Synonyms</h2>
-ayam--this (rascal); tu--but; asabhyah--who is not civilized at all (asura means "uncivilized," and sura means
-"civilized"); tava--of Your Lordship; janma--the birth; nau--our; grhe--into the home; srutva--after hearing; agrajan
-te--all the brothers born before You; nyavadhit--killed; sura-isvara--O Lord of the suras, the civilized persons; sah--
-he (that uncivilized Kamsa); te--Your; avataram--appearance; purusaih--by his lieutenants; samarpitam--being
-informed of; srutva--after hearing; adhuna--now; eva--indeed; abhisarati--will come immediately; udayudhah--with
-raised weapons.
-<p></p>
+pura--even before this; eva--indeed; pumsa--by the Supreme Personality of Godhead; avadhrtah--was certainly
+known; dhara-jvarah--the distress on the earth; bhavadbhih--by your good selves; amsaih--expanding as plenary
+portions; yadusu--in the family of King Yadu; upajanyatam--take your birth and appear there; sah--He (the
+Supreme Personality of Godhead); yavat--as long as; urvyah--of the earth; bharam--the burden; isvara-isvarah--the
+Lord of lords; sva-kala-saktya--by His own potency the time factor; ksapayan--diminishing; caret--should move;
+bhuvi--on the surface of the earth.
+<br>
 <h2>Translation</h2>
-O my Lord, Lord of the demigods, after hearing the prophecy that You would take birth in our home and kill
-him, this uncivilized Kamsa killed so many of Your elder brothers. As soon as he hears from his lieutenants that
-You have appeared, he will immediately come with weapons to kill You.
-<p></p>
+Lord Brahma informed the demigods: Before we submitted our petition to the Lord, He was already aware of the
+distress on earth. Consequently, for as long as the Lord moves on earth to diminish its burden by His own potency
+in the form of time, all of you demigods should appear through plenary portions as sons and grandsons in the
+family of the Yadus.
+<br>
 <h2>Purport</h2>
-Kamsa has here been described as asabhya, meaning "uncivilized" or "most heinous," because he killed the many
-children of his sister. When he heard the prophecy that he would be killed by her eighth son, this uncivilized man,
-Kamsa, was immediately ready to kill his innocent sister on the occasion of her marriage. An uncivilized man can
-do anything for the satisfaction of his senses. He can kill children, he can kill cows, he can kill brahmanas, he can
-kill old men; he has no mercy for anyone. According to the Vedic civilization, cows, women, children, old men and
-brahmanas should be excused if they are at fault. But asuras, uncivilized men, do not care about that. At the
-present moment, the killing of cows and the killing of children is going on unrestrictedly, and therefore this
-civilization is not at all human, and those who are conducting this condemned civilization are uncivilized asuras.
-Such uncivilized men are not in favor of the Krsna consciousness movement. As public officers, they declare
-without hesitation that the chanting of the Hare Krsna movement is a nuisance, although Bhagavad-gita clearly
-says, satatam kirtayanto mam yatantas ca drdha-vratah. According to this verse, it is the duty of the mahatmas to
-chant the Hare Krsna mantra and try to spread it all over the world to the best of their ability. Unfortunately,
-society is in such an uncivilized state that there are so-called mahatmas who are prepared to kill cows and children
-and stop the Hare Krsna movement. Such uncivilized activities were actually demonstrated in opposition to the
-Hare Krsna movement's Bombay center, Hare Krsna Land. As Kamsa was not expected to kill the beautiful child of
-Devaki and Vasudeva, the uncivilized society, although unhappy about the advancement of the Krsna
-consciousness movement, cannot be expected to stop it. Yet we must face many difficulties in many different ways.
-Although Krsna cannot be killed, Vasudeva, as the father of Krsna, was trembling because in affection he thought
-that Kamsa would immediately come and kill his son. Similarly, although the Krsna consciousness movement and
-Krsna are not different and no asuras can check it, we are afraid that at any moment the asuras can stop this
-movement in any part of the world.
+As stated in the Brahma-samhita (5.39):
+ramadi-murtisu kala-niyamena tisthan
+nanavataram akarod bhuvanesu kintu
+krsnah svayam samabhavat paramah puman yo
+govindam adi-purusam tam aham bhajami
+"I worship the Supreme Personality of Godhead, Govinda, who is always situated in various incarnations such as
+Rama, Nrsimha and many sub-incarnations as well, but who is the original personality of Godhead, known as
+Krsna, and who incarnates personally also."
+In this verse from Srimad-Bhagavatam we find the words puraiva pumsavadhrto dhara jvarah. The word pumsa
+refers to Krsna, who was already aware of how the whole world was suffering because of the increase of demons.
+Without reference to the supreme power of the Personality of Godhead, demons assert themselves to be
+independent kings and presidents, and thus they create a disturbance by increasing their military power. When
+such disturbances are very prominent, Krsna appears. At present also, various demoniac states all over the world
+are increasing their military power in many ways, and the whole situation has become distressful. Therefore Krsna
+has appeared by His name, in the Hare Krsna movement, which will certainly diminish the burden of the world.
+Philosophers, religionists, and people in general must take to this movement very seriously, for man-made plans
+and devices will not help bring peace on earth. The transcendental sound Hare Krsna is not different from the
+person Krsna.
+nama cintamanih krsnas
+caitanya-rasa-vigrahah
+purnah suddho nitya-mukto
+'bhinnatvan nama-naminoh
+(Padma Purana)
+There is no difference between the sound Hare Krsna and Krsna the person.
 </p>
 
 </div>
@@ -96,7 +139,7 @@ movement in any part of the world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

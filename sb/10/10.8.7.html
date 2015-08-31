@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,36 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.7.html">10.8.7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/7"><b>7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatheti payayitvarbha
-vatsan arudhya sadvale
-muktva sikyani bubhujuh
-samam bhagavata muda
-<p></p>
+sri-garga uvaca
+yadunam aham acaryah
+khyatas ca bhuvi sarvada
+sutam maya samskrtam te
+manyate devaki-sutam
+<br>
 <h2>Synonyms</h2>
-tatha iti--as Krsna proposed, the other cowherd boys agreed; payayitva arbhah--they allowed to drink water;
-vatsan--the calves; arudhya--tying them to the trees, allowed them to eat; sadvale--in a place of green, tender
-grasses; muktva--opening; sikyani--their bags of eatables and other paraphernalia; bubhujuh--went and enjoyed;
-samam--equally; bhagavata--with the Supreme personality of Godhead; muda--in transcendental pleasure.
-<p></p>
+sri-gargah uvaca--Gargamuni said; yadunam--of the Yadu dynasty; aham--I am; acaryah--the priestly guide, or
+purohita; khyatah ca--this is already known; bhuvi--everywhere; sarvada--always; sutam--the son; maya--by me;
+samskrtam--having undergone the purificatory process; te--of you; manyate--would be considered; devaki-sutam--
+the son of Devaki.
+<br>
 <h2>Translation</h2>
-Accepting Lord Krsna's proposal, the cowherd boys allowed the calves to drink water from the river and then tied
-them to trees where there was green, tender grass. Then the boys opened their baskets of food and began eating
-with Krsna in great transcendental pleasure.
+Gargamuni said: My dear Nanda Maharaja, I am the priestly guide of the Yadu dynasty. This is known
+everywhere. Therefore, if I perform the purificatory process for your sons, Kamsa will consider Them the sons of
+Devaki.
+<br>
+<h2>Purport</h2>
+Gargamuni indirectly disclosed that Krsna was the son of Devaki, not of Yasoda. Since Kamsa was already
+searching for Krsna, if the purificatory process were undertaken by Gargamuni, Kamsa might be informed, and that
+would create a catastrophe. It may be argued that although Gargamuni was the priest of the Yadu dynasty, Nanda
+Maharaja also belonged to that dynasty. Nanda Maharaja, however, was not acting as a ksatriya. Therefore
+Gargamuni said, "If I act as your priest, this will confirm that Krsna is the son of Devaki."
 </p>
 
 </div>
@@ -71,7 +118,7 @@ with Krsna in great transcendental pleasure.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,39 +81,125 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.36.html">10.2.36</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.36</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/36"><b>36</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kim ksema-surair vibudhair
-asamyuga-vikatthanaih
-raho-jusa kim harina
-sambhuna va vanaukasa
-kim indrenalpa-viryena
-brahmana va tapasyata
-<p></p>
+na nama-rupe guna-janma-karmabhir
+nirupitavye tava tasya saksinah
+mano-vacobhyam anumeya-vartmano
+deva kriyayam pratiyanty athapi hi
+<br>
 <h2>Synonyms</h2>
-kim--what is there to fear; ksema--in a place where there is a scarcity of the ability to fight; suraih--by the
-demigods; vibudhaih--by such powerful persons; asamyuga-vikatthanaih--by boasting and talking uselessly, away
-from the fighting; rahah-jusa--who is living in a solitary place within the core of the heart; kim harina--what is the
-fear from Lord Visnu; sambhuna--(and what is the fear) from Lord Siva; va--either; vana-okasa--who is living in the
-forest; kim indrena--what is the fear from Indra; alpa-viryena--he is not at all powerful (having no power to fight
-with you); brahmana--and what is the fear from Brahma; va--either; tapasyata--who is always engaged in
-meditation.
-<p></p>
+na--not; nama-rupe--the name and form; guna--with attributes; janma--appearance; karmabhih--activities or
+pastimes; nirupitavye--are not able to be ascertained; tava--Your; tasya--of Him; saksinah--who is the direct
+observer; manah--of the mind; vacobhyam--words; anumeya--hypothesis; vartmanah--the path; deva--O Lord;
+kriyayam--in devotional activities; pratiyanti--they realize; atha api--still; hi--indeed (You can be realized by the
+devotees).
+<br>
 <h2>Translation</h2>
-The demigods boast uselessly while away from the battlefield. Only where there is no fighting can they show
-their prowess. Therefore, from such demigods we have nothing to fear. As for Lord Visnu, He is in seclusion in the
-core of the hearts of the yogis. As for Lord Siva, he has gone to the forest. And as for Lord Brahma, he is always
-engaged in austerities and meditation. The other demigods, headed by Indra, are devoid of prowess. Therefore you
-have nothing to fear.
-<p></p>
+O Lord, Your transcendental name and form are not ascertained by those who merely speculate on the path of
+imagination. Your name, form and attributes can be ascertained only through devotional service.
+<br>
 <h2>Purport</h2>
-Kamsa's ministers told Kamsa that all the exalted demigods had fled in fear of him. One had gone to the forest,
-one to the core of the heart, and one to engage in tapasya. "Thus you can be free from all fear of the demigods,"
-they said. "Just prepare to fight."
+As stated in the Padma Purana:
+atah sri-krsna-namadi
+na bhaved grahyam indriyaih
+sevonmukhe hi jihvadau
+svayam eva sphuraty adah
+"One cannot understand the transcendental nature of the name, form, quality and pastimes of Sri Krsna through
+one's materially contaminated senses. Only when one becomes spiritually saturated by transcendental service to the
+Lord are the transcendental name, form, quality and pastimes of the Lord revealed to him." Since Krsna and His
+transcendental name, form and activities are all of a transcendental nature, ordinary persons or those who are only
+slightly advanced cannot understand them. Even big scholars who are nondevotees think that Krsna is fictitious.
+Yet although so-called scholars and commentators do not believe that Krsna was factually a historical person whose
+presence on the Battlefield of Kuruksetra is recorded in the history of Mahabharata, they feel compelled to write
+commentaries on Bhagavad-gita and other historical records. Sevonmukhe hi jihvadau svayam eva sphuraty adah:
+Krsna's transcendental name, form, attributes and activities can be revealed only when one engages in His service
+in full consciousness. This confirms Krsna's own words in Bhagavad-gita (18.55):
+bhaktya mam abhijanati
+yavan yas casmi tattvatah
+tato mam tattvato jnatva
+visate tad-anantaram
+"One can understand the Supreme Personality of Godhead as He is only by devotional service. And when one is
+in full consciousness of the Supreme Lord by such devotion, he can enter into the kingdom of God." Only by
+sevonmukha, by engaging oneself in the Lord's service, can one realize the name, form and qualities of the Supreme
+Personality of Godhead.
+"O Lord," the demigods say, "the impersonalists, who are nondevotees, cannot understand that Your name is
+identical with Your form." Since the Lord is absolute, there is no difference between His name and His actual form.
+In the material world there is a difference between form and name. The mango fruit is different from the name of
+the mango. One cannot taste the mango fruit simply by chanting, "Mango, mango, mango." But the devotee who
+knows that there is no difference between the name and the form of the Lord chants Hare Krsna, Hare Krsna, Krsna
+Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare, and realizes that he is always in Krsna's
+company.
+For persons who are not very advanced in absolute knowledge of the Supreme, Lord Krsna exhibits His
+transcendental pastimes. They can simply think of the pastimes of the Lord and get the full benefit. Since there is
+no difference between the transcendental name and form of the Lord, there is no difference between the
+transcendental pastimes and the form of the Lord. For those who are less intelligent (like women, laborers or the
+mercantile class), the great sage Vyasadeva wrote Mahabharata. In the Mahabharata, Krsna is present in His
+different activities. Mahabharata is history, and simply by studying, hearing, and memorizing the transcendental
+activities of Krsna, the less intelligent can also gradually rise to the standard of pure devotees.
+The pure devotees, who are always absorbed in the thought of the transcendental lotus feet of Krsna and who are
+always engaged in devotional service in full Krsna consciousness, are never to be considered to be in the material
+world. Srila Rupa Gosvami has explained that those who are always engaged in Krsna consciousness by body, mind
+and activities are to be considered liberated even within this body. This is also confirmed in the Bhagavad-gita:
+those who are engaged in the devotional service of the Lord have already transcended the material position.
+Krsna appears in order to give a chance to both the devotees and the nondevotees for realization of the ultimate
+goal of life. The devotees get the direct chance to see Him and worship Him. Those who are not on that platform
+get the chance to become acquainted with His activities and thus become elevated to the same position.
+The Brahma-samhita (5.38) says:
+premanjana-cchurita-bhakti-vilocanena
+santah sadaiva hrdayesu vilokayanti
+yam syamasundaram acintya-guna-svarupam
+govindam adi-purusam tam aham bhajami
+Although Krsna's transcendental form is presented as black, devotees who are in love with the Supreme
+Personality of Godhead appreciate the Lord as Syamasundara, having a very beautiful blackish form. The Lord's
+form is so beautiful that the Brahma-samhita (5.30) also states:
+venum kvanantam aravinda-dalayataksam
+barhavatamsam asitambuda-sundarangam
+kandarpa-koti-kamaniya-visesa-sobham
+govindam adi-purusam tam aham bhajami
+"I worship Govinda, the primeval Lord, who plays on His transcendental flute. His eyes are like lotus flowers, He
+is decorated with peacock plumes, and His bodily color resembles the color of a fresh black cloud, although His
+bodily features are more beautiful than millions of Cupids." This beauty of the Supreme Lord can be seen by
+devotees who are in love with Him, devotees whose eyes are anointed with love of Godhead (premanjana-cchuritabhakti-
+vilocanena).
+The Lord is also known as Giridhari or Girivara-dhari. Because Krsna, for the sake of His devotees, lifted
+Govardhana Hill, the devotees appreciate the Lord's inconceivable strength; but nondevotees, in spite of directly
+perceiving the Lord's inconceivable strength and power, regard the Lord's activities as fictitious. This is the
+difference between a devotee and a nondevotee. Nondevotees cannot give any nomenclature for the Supreme
+Personality of Godhead, yet the Lord is known as Syamasundara and Giridhari. Similarly, the Lord is known as
+Devaki-nandana and Yasoda-nandana because He accepted the role of son for mother Devaki and mother Yasoda,
+and He is known as Gopala because He enjoyed the sport of maintaining the cows and calves. Therefore, although
+He has no mundane name, He is addressed by devotees as Devaki-nandana, Yasoda-nandana, Gopala and
+Syamasundara. These are all transcendental names that only devotees can appreciate and nondevotees cannot.
+The history of Krsna the person has been openly seen by everyone, yet only those who are in love with the
+Supreme Personality of Godhead can appreciate this history, whereas nondevotees, who have not developed their
+loving qualities, think that the activities, form and attributes of the Supreme Personality of Godhead are fictitious.
+Therefore this verse explains, na nama-rupe guna janma-karmabhir nirupitavye tava tasya saksinah. In this
+connection, Srila Visvanatha Cakravarti Thakura has given the example that persons suffering from jaundice
+cannot taste the sweetness of sugar candy, although everyone knows that sugar candy is sweet. Similarly, because
+of the material disease, nondevotees cannot understand the transcendental name, form, attributes and activities of
+the Supreme Personality of Godhead, although they actually see the Lord's activities, either through authority or
+through history. The Puranas are old, authentic histories, but nondevotees cannot understand them, especially
+Srimad-Bhagavatam, which is the essence of Vedic knowledge. Nondevotees cannot understand even the
+preliminary study of transcendental knowledge, Bhagavad-gita. They simply speculate and present commentaries
+with absurd distortions. In conclusion, unless one elevates himself to the transcendental platform by practicing
+bhakti-yoga, one cannot understand the Supreme Personality of Godhead or His name, form, attributes or
+activities. But if by chance, by the association of devotees, one can actually understand the Lord and His features,
+one immediately becomes a liberated person. As the Lord says in Bhagavad-gita (4.9):
+janma karma ca me divyam
+evam yo vetti tattvatah
+tyaktva deham punar janma
+naiti mam eti so 'rjuna
+"One who knows the transcendental nature of My appearance and activities does not, upon leaving the body,
+take his birth again in this material world, but attains My eternal abode, O Arjuna."
+Srila Rupa Gosvami has therefore said that by affection and love for the Supreme Personality of Godhead,
+devotees can express their mind to Him with their words. Others, however, cannot do this, as confirmed in
+Bhagavad-gita (bhaktya mam abhijanati yavan yas casmi tattvatah).
 </p>
 
 </div>
@@ -83,7 +207,7 @@ they said. "Just prepare to fight."
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

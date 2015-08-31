@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,32 +81,40 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.23.html">10.8.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tato nrponmardana-majja-lepanalankara-
-raksa-tilakasanadibhih
-samlalitah svacaritaih praharsayan
-sayam gato yama-yamena madhavah
-<p></p>
+tan-matarau nija-sutau ghrnaya snuvantyau
+pankanga-raga-rucirav upagrhya dorbhyam
+dattva stanam prapibatoh sma mukham niriksya
+mugdha-smitalpa-dasanam yayatuh pramodam
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; nrpa--O King (Maharaja Pariksit); unmardana--by massaging them with oil; majja--by bathing;
-lepana--by smearing the body with oil and sandalwood pulp; alankara--by decorating with ornaments; raksa--by
-chanting protective mantras; tilaka--by decorating the body with tilaka marks in twelve places; asana-adibhih--and
-by feeding them sumptuously; samlalitah--in this way cared for by the mothers; sva-acaritaih--by their
-characteristic behavior; praharsa-yan--making the mothers very much pleased; sayam--evening; gatah--arrived;
-yama-yamena--as the time of each activity passed; madhavah--Lord Krsna.
-<p></p>
+tat-matarau--Their mothers (Rohini and Yasoda); nija-sutau--their own respective sons; ghrnaya--with great
+affection; snuvantyau--allowed to suck the flowing milk from their breasts very happily; panka-anga-raga-rucirau--
+whose beautiful transcendental bodies were covered with muddy cow dung and urine; upagrhya--taking care of;
+dorbhyam--by their arms; dattva--delivering Them; stanam--the breast; prapibatoh--when the babies were sucking;
+sma--indeed; mukham--the mouth; niriksya--and seeing; mugdha-smita-alpa-dasanam--smiling with little teeth
+coming out of Their mouths (they were more and more attracted); yayatuh--and enjoyed; pramodam--
+transcendental bliss.
+<br>
 <h2>Translation</h2>
-Thereafter, O Maharaja Pariksit, as required according to the scheduled round of His pastimes, Krsna returned in
-the evening, entered the house of each of the cowherd boys, and engaged exactly like the former boys, thus
-enlivening their mothers with transcendental pleasure. The mothers took care of the boys by massaging them with
-oil, bathing them, smearing their bodies with sandalwood pulp, decorating them with ornaments, chanting
-protective mantras, decorating their bodies with tilaka and giving them food. In this way, the mothers served Krsna
-personally.
+Dressed with muddy earth mixed with cow dung and cow urine, the babies looked very beautiful, and when They
+went to Their mothers, both Yasoda and Rohini picked Them up with great affection, embraced Them and allowed
+Them to suck the milk flowing from their breasts. While sucking the breast, the babies smiled, and Their small
+teeth were visible. Their mothers, upon seeing those beautiful teeth, enjoyed great transcendental bliss.
+<br>
+<h2>Purport</h2>
+As the mothers cared for their respective babies, by the arrangement of yogamaya the babies thought, "Here is My
+mother," and the mothers thought, "Here is my son." Because of affection, milk naturally flowed from the mothers'
+breasts, and the babies drank it. When the mothers saw small teeth coming in, they would count them and be
+happy, and when the babies saw Their mothers allowing Them to drink their breast milk, the babies also felt
+transcendental pleasure. As this transcendental affection continued between Rohini and Balarama and Yasoda and
+Krsna, they all enjoyed transcendental bliss.
 </p>
 
 </div>
@@ -76,7 +122,7 @@ personally.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

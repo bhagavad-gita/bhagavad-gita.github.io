@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,54 +81,33 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.23.html">10.4.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-pura narada-sapena
-vrksatam prapitau madat
-nalakuvara-manigrivav
-iti khyatau sriyanvitau
-<p></p>
+ksamadhvam mama dauratmyam
+sadhavo dina-vatsalah
+ity uktvasru-mukhah padau
+syalah svasror athagrahit
+<br>
 <h2>Synonyms</h2>
-pura--formerly; narada-sapena--being cursed by Narada Muni; vrksatam--the forms of trees; prapitau--obtained;
-madat--because of madness; nalakuvara--one of them was Nalakuvara; manigrivau--the other was Manigriva; iti--
-thus; khyatau--well known; sriya anvitau--very opulent.
-<p></p>
+ksamadhvam--kindly excuse; mama--my; dauratmyam--atrocious activities; sadhavah--both of you are great
+saintly persons; dina-vatsalah--and are very kind to poor, cripple-minded persons; iti uktva--saying this; asrumukhah--
+his face full of tears; padau--the feet; syalah--his brother-in-law Kamsa; svasrah--of his sister and brotherin-
+law; atha--thus; agrahit--captured.
+<br>
 <h2>Translation</h2>
-In their former birth, these two sons, known as Nalakuvara and Manigriva, were extremely opulent and
-fortunate. But because of pride and false prestige, they did not care about anyone, and thus Narada Muni cursed
-them to become trees.
-Thus end the Bhaktivedanta purports of the Tenth Canto, Ninth Chapter, of the Srimad-Bhagavatam, entitled
-"Mother Yasoda Binds Lord Krsna."
-Chapter Ten
-Deliverance of the Yamala-arjuna Trees
-This chapter describes how Krsna broke the twin arjuna trees, from which Nalakuvara and Manigriva, the sons of
-Kuvera, then came out.
-Nalakuvara and Manigriva were great devotees of Lord Siva, but because of material opulence they became so
-extravagant and senseless that one day they were enjoying with naked girls in a lake and shamelessly walking here
-and there. Suddenly Narada Muni passed by, but they were so maddened by their wealth and false prestige that
-even though they saw Narada Muni present, they remained naked and were not even ashamed. In other words,
-because of opulence and false prestige, they lost their sense of common decency. Of course, it is the nature of the
-material qualities that when one becomes very much opulent in terms of wealth and a prestigious position, one
-loses one's sense of etiquette and does not care about anyone, even a sage like Narada Muni. For such bewildered
-persons (ahankara-vimudhatma), who especially deride devotees, the proper punishment is to be again stricken
-with poverty. The Vedic rules and regulations prescribe how to control the false sense of prestige by the practice of
-yama, niyama and so on (tapasa brahmacaryena samena ca damena ca). A poor man can be convinced very easily
-that the prestige of an opulent position in this material world is temporary, but a rich man cannot. Therefore
-Narada Muni set an example by cursing these two persons, Nalakuvara and Manigriva, to become dull and
-unconscious like trees. This was a fit punishment. But because Krsna is always merciful, even though they were
-punished they were fortunate enough to see the Supreme Personality of Godhead face to face. Therefore the
-punishment given by Vaisnavas is not at all punishment; rather, it is another kind of mercy. By the curse of the
-devarsi, Nalakuvara and Manigriva became twin arjuna trees and remained in the courtyard of mother Yasoda and
-Nanda Maharaja, waiting for the opportunity to see Krsna directly. Lord Krsna, by the desire of His devotee,
-uprooted these yamala-arjuna trees, and when Nalakuvara and Manigriva were thus delivered by Krsna after one
-hundred years of the devas, their old consciousness revived, and they offered Krsna prayers suitable to be offered
-by demigods. Having thus gotten the opportunity to see Krsna face to face, they understood how merciful Narada
-Muni was, and therefore they expressed their indebtedness to him and thanked him. Then, after circumambulating
-the Supreme Personality of Godhead, Krsna, they departed for their respective abodes.
+Kamsa begged, "My dear sister and brother-in-law, please be merciful to such a poor-hearted person as me, since
+both of you are saintly persons. Please excuse my atrocities." Having said this, Kamsa fell at the feet of Vasudeva
+and Devaki, his eyes full of tears of regret.
+<br>
+<h2>Purport</h2>
+Although Kamsa had spoken very nicely on the subject of real knowledge, his past deeds were abominable and
+atrocious, and therefore he further begged forgiveness from his sister and brother-in-law by falling at their feet and
+admitting that he was a most sinful person.
 </p>
 
 </div>
@@ -98,7 +115,7 @@ the Supreme Personality of Godhead, Krsna, they departed for their respective ab
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

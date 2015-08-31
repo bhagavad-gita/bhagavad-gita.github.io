@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,25 +81,55 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.4.html">10.8.4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/4"><b>4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tathagha-vadanan mrtyo
-raksitva vatsa-palakan
-sarit-pulinam aniya
-bhagavan idam abravit
-<p></p>
+mahad-vicalanam nrnam
+grhinam dina-cetasam
+nihsreyasaya bhagavan
+kalpate nanyatha kvacit
+<br>
 <h2>Synonyms</h2>
-tatha--thereafter; agha-vadanat--from the mouth of Aghasura; mrtyoh--death personified; raksitva--after saving;
-vatsa-palakan--all the cowherd boys and calves; sarit-pulinam--to the bank of the river; aniya--bringing them;
-bhagavan--the Supreme Personality of Godhead, Krsna; idam--these words; abravit--spoke.
-<p></p>
+mahat-vicalanam--the movement of great personalities; nrnam--in the houses of ordinary persons; grhinam--
+especially householders; dina-cetasam--who are very simple-minded, being engaged in family maintenance and
+nothing more; nihsreyasaya--a great personality has no reason to go to the grhastha but to benefit him; bhagavan--
+O most powerful devotee; kalpate--is to be taken that way; na anyatha--not for any other purpose; kvacit--at any
+time.
+<br>
 <h2>Translation</h2>
-Then, after saving the boys and calves from the mouth of Aghasura, who was death personified, Lord Krsna, the
-Supreme Personality of Godhead, brought them all to the bank of the river and spoke the following words.
+O my lord, O great devotee, persons like you move from one place to another not for their own interests but for
+the sake of poor-hearted grhasthas [householders]. Otherwise they have no interest in going from one place to
+another.
+<br>
+<h2>Purport</h2>
+As factually stated by Nanda Maharaja, Gargamuni, being a devotee, had no needs. Similarly, when Krsna comes
+He has no needs, for He is purna, atmarama. Nonetheless, He descends to this material world to protect the
+devotees and vanquish miscreants (paritranaya sadhunam vinasaya ca duskrtam). This is the mission of the
+Supreme Personality of Godhead, and devotees also have the same mission. One who executes this mission of paraupakara,
+performing welfare activities for people in general, is recognized by Krsna, the Supreme Personality of
+Godhead, as being very, very dear to Him (na ca tasman manusyesu kascin me priya-krttamah). Similarly, Caitanya
+Mahaprabhu has advised this para-upakara, and He has especially advised the inhabitants of India:
+bharata-bhumite haila manusya-janma yara
+janma sarthaka kari' kara para-upakara
+"One who has taken his birth as a human being in the land of India [Bharata-varsa] should make his life
+successful and work for the benefit of all other people." (Cc. Adi 9.41) On the whole, the duty of a pure Vaisnava
+devotee is to act for the welfare of others.
+Nanda Maharaja could understand that Gargamuni had come for this purpose and that his own duty now was to
+act according to Gargamuni's advice. Thus he said, "Please tell me what is my duty." This should be the attitude of
+everyone, especially the householder. The varnasrama society is organized into eight divisions: brahmana, ksatriya,
+vaisya, sudra, brahmacarya, grhastha, vanaprastha and sannyasa. Nanda Maharaja represented himself as grhinam,
+a householder. A brahmacari factually has no needs, but grhi, householders, are engaged in sense gratification. As
+stated in Bhagavad-gita (2.44), bhogaisvarya-prasaktanam tayapahrta-cetasam. Everyone has come to this material
+world for sense gratification, and the position of those who are too attached to sense gratification and who
+therefore accept the grhastha-asrama is very precarious. Since everyone in this material world is searching for sense
+gratification, grhasthas are required to be trained as mahat, great mahatmas. Therefore Nanda Maharaja specifically
+used the word mahad-vicalanam. Gargamuni had no interest to serve by going to Nanda Maharaja, but Nanda
+Maharaja, as a grhastha, was always perfectly ready to receive instructions from a mahatma to gain the real benefit
+in life. Thus he was ready to execute Gargamuni's order.
 </p>
 
 </div>
@@ -69,7 +137,7 @@ Supreme Personality of Godhead, brought them all to the bank of the river and sp
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,42 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.11.html">10.8.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bibhrad venum jathara-patayoh srnga-vetre ca kakse
-vame panau masrna-kavalam tat-phalany angulisu
-tisthan madhye sva-parisuhrdo hasayan narmabhih svaih
-svarge loke misati bubhuje yajna-bhug bala-kelih
-<p></p>
+sri-suka uvaca
+evam samprarthito viprah
+sva-cikirsitam eva tat
+cakara nama-karanam
+gudho rahasi balayoh
+<br>
 <h2>Synonyms</h2>
-bibhrat venum--keeping the flute; jathara-patayoh--between the tight clothing and the abdomen; srnga-vetre--
-both the horn bugle and the cow-driving stick; ca--also; kakse--on the waist; vame--on the left-hand side; panau--
-taking in hand; masrna-kavalam--very nice food prepared with rice and first-class curd; tat-phalani--suitable pieces
-of fruit like bael; angulisu--between the fingers; tisthan--staying in this way; madhye--in the middle; sva-parisuhrdah--
-His own personal associates; hasayan--making them laugh; narmabhih--with joking words; svaih--His
-own; svarge loke misati--while the inhabitants of the heavenly planets, Svargaloka, were watching this wonderful
-scene; bubhuje--Krsna enjoyed; yajna-bhuk bala-kelih--although He accepts offerings in yajna, for the sake of
-childhood pastimes He was enjoying foodstuffs very jubilantly with His cowherd boyfriends.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; evam--in this way; samprarthitah--being eagerly requested; viprah--
+the brahmana Gargamuni; sva-cikirsitam eva--which he already desired to do and for which he had gone there; tat--
+that; cakara--performed; nama-karanam--the name-giving ceremony; gudhah--confidentially; rahasi--in a secluded
+place; balayoh--of the two boys (Krsna and Balarama).
+<br>
 <h2>Translation</h2>
-Krsna is yajna-bhuk--that is, He eats only offerings of yajna--but to exhibit His childhood pastimes, He now sat
-with His flute tucked between His waist and His tight cloth on His right side and with His horn bugle and cowdriving
-stick on His left. Holding in His hand a very nice preparation of yogurt and rice, with pieces of suitable
-fruit between His fingers, He sat like the whorl of a lotus flower, looking forward toward all His friends, personally
-joking with them and creating jubilant laughter among them as He ate. At that time, the denizens of heaven were
-watching, struck with wonder at how the Personality of Godhead, who eats only in yajna, was now eating with His
-friends in the forest.
-<p></p>
-<h2>Purport</h2>
-When Krsna was eating with His cowherd boyfriends, a certain bumblebee came there to take part in the eating.
-Thus Krsna joked, "Why have you come to disturb My brahmana friend Madhumangala? You want to kill a
-brahmana. This is not good." All the boys would laugh and enjoy, speaking such joking words while eating. Thus
-the inhabitants of the higher planets were astonished at how the Supreme personality of Godhead, who eats only
-when yajna is offered, was now eating like an ordinary child with His friends in the forest.
+Sukadeva Gosvami continued: Having thus been especially requested by Nanda Maharaja to do that which he
+already desired to do, Gargamuni performed the name-giving ceremony for Krsna and Balarama in a solitary place.
 </p>
 
 </div>
@@ -86,7 +110,7 @@ when yajna is offered, was now eating like an ordinary child with His friends in
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.41.html">10.3.41</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.41</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/41"><b>41</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-kata-dhumasya saurabhyam
-avaghraya vrajaukasah
-kim idam kuta eveti
-vadanto vrajam ayayuh
-<p></p>
+adrstvanyatamam loke
+silaudarya-gunaih samam
+aham suto vam abhavam
+prsnigarbha iti srutah
+<br>
 <h2>Synonyms</h2>
-kata-dhumasya--of the smoke emanating from the fire burning the different parts of Putana's body; saurabhyam--
-the fragrance; avaghraya--when they smelled through their nostrils; vraja-okasah--the inhabitants of Vrajabhumi in
-distant places; kim idam--what is this fragrance; kutah--where does it come from; eva--indeed; iti--in this way;
-vadantah--speaking; vrajam--the place of Nanda Maharaja, Vrajabhumi; ayayuh--reached.
-<p></p>
+adrstva--not finding; anyatamam--anyone else; loke--in this world; sila-audarya-gunaih--with the transcendental
+qualities of good character and magnanimity; samam--equal to you; aham--I; sutah--the son; vam--of both of you;
+abhavam--became; prsni-garbhah--celebrated as born of Prsni; iti--thus; srutah--I am known.
+<br>
 <h2>Translation</h2>
-Upon smelling the fragrance of the smoke emanating from Putana's burning body, many inhabitants of
-Vrajabhumi in distant places were astonished. "Where is this fragrance coming from?" they asked. Thus they went
-to the spot where Putana's body was being burnt.
-<p></p>
+Since I found no one else as highly elevated as you in simplicity and other qualities of good character, I appeared
+in this world as Prsnigarbha, or one who is celebrated as having taken birth from Prsni.
+<br>
 <h2>Purport</h2>
-The aroma of the smoke emanating from a burning fire is not always very favorable. Therefore upon smelling
-such a wonderful fragrance, the inhabitants of Vraja were astonished.
+In the Treta-yuga the Lord appeared as Prsnigarbha. Srila Visvanatha Cakravarti Thakura says, prsnigarbha iti so
+'yam treta-yugavataro laksyate.
 </p>
 
 </div>
@@ -75,7 +112,7 @@ such a wonderful fragrance, the inhabitants of Vraja were astonished.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,37 +81,38 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.13.html">10.2.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-avadyanta vicitrani
-vaditrani mahotsave
-krsne visvesvare 'nante
-nandasya vrajam agate
-<p></p>
+garbha-sankarsanat tam vai
+prahuh sankarsanam bhuvi
+rameti loka-ramanad
+balabhadram balocchrayat
+<br>
 <h2>Synonyms</h2>
-avadyanta--vibrated in celebration of Vasudeva's son; vicitrani--various; vaditrani--musical instruments; mahautsave--
-in the great festival; krsne--when Lord Krsna; visva-isvare--the master of the entire cosmic manifestation;
-anante--unlimitedly; nandasya--of Maharaja Nanda; vrajam--at the pasturing place; agate--had so arrived.
-<p></p>
+garbha-sankarsanat--because He will be taken from the womb of Devaki to that of Rohini; tam--Him (Rohininandana,
+the son of Rohini); vai--indeed; prahuh--people will call; sankarsanam--by the name Sankarsana; bhuvi--
+in the world; rama iti--He will also be called Rama; loka-ramanat--because of His special mercy in enabling people
+in general to become devotees; balabhadram--He will also be called Balabhadra; bala-ucchrayat--because of
+extensive bodily strength.
+<br>
 <h2>Translation</h2>
-Now that the all-pervading, unlimited Lord Krsna, the master of the cosmic manifestation, had arrived within the
-estate of Maharaja Nanda, various types of musical instruments resounded to celebrate the great festival.
-<p></p>
+The son of Rohini will also be celebrated as Sankarsana because of being sent from the womb of Devaki to the
+womb of Rohini. He will be called Rama because of His ability to please all the inhabitants of Gokula, and He will
+be known as Balabhadra because of His extensive physical strength.
+<br>
 <h2>Purport</h2>
-The Lord says in Bhagavad-gita (4.7):
-yada yada hi dharmasya
-glanir bhavati bharata
-abhyutthanam adharmasya
-tadatmanam srjamy aham
-"Whenever and wherever there is a decline in religious practice, O descendant of Bharata, and a predominant rise
-of irreligion--at that time I descend Myself." Whenever Krsna comes, once in a day of Brahma, He comes to the
-house of Nanda Maharaja in Vrndavana. Krsna is the master of all creation (sarva-loka-mahesvaram). Therefore,
-not only in the neighborhood of Nanda Maharaja's estate, but all over the universe--and in all the other universes--
-musical sounds celebrated the auspicious arrival of the Lord.
+These are some of the reasons why Balarama is known as Sankarsana, Balarama or sometimes Rama. In the mahamantra--
+Hare Krsna, Hare Krsna, Krsna Krsna, Hare Hare. Hare Rama, Hare Rama, Rama Rama, Hare Hare--people
+sometimes object when Rama is accepted as Balarama. But although devotees of Lord Rama may object, they
+should know that there is no difference between Balarama and Lord Rama. Here Srimad-Bhagavatam clearly states
+that Balarama is also known as Rama (rameti). Therefore, it is not artificial for us to speak of Lord Balarama as Lord
+Rama. Jayadeva Gosvami also speaks of three Ramas: Parasurama, Raghupati Rama and Balarama. All of them are
+Ramas.
 </p>
 
 </div>
@@ -81,7 +120,7 @@ musical sounds celebrated the auspicious arrival of the Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,33 +81,44 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.1.40.html">10.1.40</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.40</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/40"><b>40</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gate mayi yuvam labdhva
-varam mat-sadrsam sutam
-gramyan bhogan abhunjatham
-yuvam prapta-manorathau
-<p></p>
+vrajams tisthan padaikena
+yathaivaikena gacchati
+yatha trna-jalaukaivam
+dehi karma-gatim gatah
+<br>
 <h2>Synonyms</h2>
-gate mayi--after My departure; yuvam--both of you (husband and wife); labdhva--after receiving; varam--the
-benediction of (having a son); mat-sadrsam--exactly like Me; sutam--a son; gramyan bhogan--engagement in sex;
-abhunjatham--enjoyed; yuvam--both of you; prapta--having been achieved; manorathau--the desired result of your
-aspirations.
-<p></p>
+vrajan--a person, while traveling on the road; tisthan--while standing; pada ekena--on one foot; yatha--as; eva--
+indeed; ekena--by another foot; gacchati--goes; yatha--as; trna-jalauka--a worm on a vegetable; evam--in this way;
+dehi--the living entity; karma-gatim--the reactions of fruitive activities; gatah--undergoes.
+<br>
 <h2>Translation</h2>
-After you received that benediction and I disappeared, you engaged yourselves in sex to have a son like Me, and I
-fulfilled your desire.
-<p></p>
+Just as a person traveling on the road rests one foot on the ground and then lifts the other, or as a worm on a
+vegetable transfers itself to one leaf and then gives up the previous one, the conditioned soul takes shelter of
+another body and then gives up the one he had before.
+<br>
 <h2>Purport</h2>
-According to the Sanskrit dictionary Amara-kosa, sex life is also called gramya-dharma, material desire, but in
-spiritual life this gramya-dharma, the material desire for sex, is not very much appreciated. If one has a tinge of
-attachment for the material enjoyments of eating, sleeping, mating and defending, one is not niskincana. But one
-really should be niskincana. Therefore, one should be free from the desire to beget a child like Krsna by sexual
-enjoyment. This is indirectly hinted at in this verse.
+This is the process of the soul's transmigration from one body to another. At the time of death, according to his
+mental condition, the living being is carried by the subtle body, consisting of mind, intelligence and ego, to another
+gross body. When higher authorities have decided what kind of gross body the living entity will have, he is forced
+to enter such a body, and thus he automatically gives up his previous body. Dull-minded persons who do not have
+the intelligence to understand this process of transmigration take for granted that when the gross body is finished,
+one's life is finished forever. Such persons have no brains with which to understand the process of transmigration.
+At the present moment there is great opposition to the Hare Krsna movement, which is being called a
+"brainwashing" movement. But actually the so-called scientists, philosophers and other leaders in the Western
+countries have no brains at all. The Hare Krsna movement is trying to elevate such foolish persons by enlightening
+their intelligence so that they will take advantage of the human body. Unfortunately, because of gross ignorance,
+they regard the Hare Krsna movement as a brainwashing movement. They do not know that without God
+consciousness one is forced to continue transmigrating from one body to another. Because of their devilish brains,
+they will next be forced to accept an abominable life and practically never be able to liberate themselves from the
+conditional life of material existence. How this transmigration of the soul takes place is very clearly explained in
+this verse.
 </p>
 
 </div>
@@ -77,7 +126,7 @@ enjoyment. This is indirectly hinted at in this verse.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

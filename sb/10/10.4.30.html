@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,41 +81,42 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.30.html">10.4.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-hastagrahye racayati vidhim pithakolukhaladyais
-chidram hy antar-nihita-vayunah sikya-bhandesu tad-vit
-dhvantagare dhrta-mani-ganam svangam artha-pradipam
-kale gopyo yarhi grha-krtyesu suvyagra-cittah
-<p></p>
+akarnya bhartur gaditam
+tam ucur deva-satravah
+devan prati krtamarsa
+daiteya nati-kovidah
+<br>
 <h2>Synonyms</h2>
-hasta-agrahye--when the destination is out of the reach of His hands; racayati--He arranges to make; vidhim--a
-means; pithaka--by wooden planks piled together; ulukhala-adyaih--and by overturning the stone mortar for
-grinding spices; chidram--a hole; hi--indeed; antah-nihita--about the contents of the pot; vayunah--with such
-knowledge; sikya--hanging by a swing; bhandesu--in the pots; tat-vit--expert in that knowledge, or in full
-knowledge; dhvanta-agare--in a very dark room; dhrta-mani-ganam--because of being decorated with valuable
-jewels; sva-angam--His own body; artha-pradipam--is the light required for seeing in darkness; kale--after that, in
-due course of time; gopyah--the elderly gopis; yarhi--as soon as; grha-krtyesu--in discharging household affairs; suvyagra-
-cittah--are busily engaged.
-<p></p>
+akarnya--after hearing; bhartuh--of their master; gaditam--the words or statement; tam ucuh--replied to him;
+deva-satravah--all the asuras, who were enemies of the demigods; devan--the demigods; prati--toward; krtaamarsah--
+who were envious; daiteyah--the asuras; na--not; ati-kovidah--who were very expert in executing
+transactions.
+<br>
 <h2>Translation</h2>
-"When the milk and curd are kept high on a swing hanging from the ceiling and Krsna and Balarama cannot
-reach it, They arrange to reach it by piling up various planks and turning upside down the mortar for grinding
-spices. Being quite aware of the contents of a pot, They pick holes in it. While the elderly gopis go about their
-household affairs, Krsna and Balarama sometimes go into a dark room, brightening the place with the valuable
-jewels and ornaments on Their bodies and taking advantage of this light by stealing.
-<p></p>
+After hearing their master's statement, the envious asuras, who were enemies of the demigods and were not very
+expert in their dealings, advised Kamsa as follows.
+<br>
 <h2>Purport</h2>
-Formerly, in every household, yogurt and butter were kept for use in emergencies. But Krsna and Balarama
-would pile up planks so that They could reach the pots and would then pick holes in the pots with Their hands so
-that the contents would leak out and They could drink it. This was another means for stealing butter and milk.
-When the butter and milk were kept in a dark room, Krsna and Balarama would go there and make the place bright
-with the valuable jewels on Their bodies. On the whole, Krsna and Balarama engaged in stealing butter and milk
-from the neighborhood houses in many ways.
+There are two different types of men--the asuras and the suras.
+dvau bhuta-sargau loke 'smin
+daiva asura eva ca
+visnu-bhaktah smrto daiva
+asuras tad-viparyayah
+(Padma Purana)
+Those who are devotees of Lord Visnu, Krsna, are suras, or devas, whereas those who are opposed to the devotees
+are called asuras. Devotees are expert in all transactions (yasyasti bhaktir bhagavaty akincana sarvair gunais tatra
+samasate surah). Therefore they are called kovida, which means "expert." Asuras, however, although superficially
+showing expertise in passionate activities, are actually all fools. They are neither sober nor expert. Whatever they
+do is imperfect. Moghasa mogha-karmanah. According to this description of the asuras given in Bhagavad-gita
+(9.12), whatever they do will ultimately be baffled. It was such persons who advised Kamsa because they were his
+chief friends and ministers.
 </p>
 
 </div>
@@ -85,7 +124,7 @@ from the neighborhood houses in many ways.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

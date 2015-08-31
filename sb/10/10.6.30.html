@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,35 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.30.html">10.6.30</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.30</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30"><b>30</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tac chrutvaika-dhiyo gopah
-sadhu sadhv iti vadinah
-vrajan svan svan samayujya
-yayu rudha-paricchadah
-<p></p>
+sri-suka uvaca
+iti pranaya-baddhabhir
+gopibhih krta-raksanam
+payayitva stanam mata
+sannyavesayad atmajam
+<br>
 <h2>Synonyms</h2>
-tat srutva--hearing this advice of Upananda's; eka-dhiyah--voting unanimously; gopah--all the cowherd men;
-sadhu sadhu--very nice, very nice; iti--thus; vadinah--speaking, declaring; vrajan--cows; svan svan--own respective;
-samayujya--assembling; yayuh--started; rudha-paricchadah--all the dresses and paraphernalia having been kept on
-the carts.
-<p></p>
+sri-sukah uvaca--Sri Sukadeva Gosvami said; iti--in this way; pranaya-baddhabhih--who were bound with
+maternal affection; gopibhih--by the elderly gopis, headed by mother Yasoda; krta-raksanam--all measures were
+taken to protect the child; payayitva--and after that, feeding the child; stanam--the nipple; mata--mother Yasoda;
+sannyavesayat--made to lie down on the bed; atmajam--her son.
+<br>
 <h2>Translation</h2>
-Upon hearing this advice from Upananda, the cowherd men unanimously agreed. "Very nice," they said. "Very
-nice." Thus they sorted out their household affairs, placed their clothing and other paraphernalia on the carts, and
-immediately started for Vrndavana.
+Srila Sukadeva Gosvami continued: All the gopis, headed by mother Yasoda, were bound by maternal affection.
+After they thus chanted mantras to protect the child, mother Yasoda gave the child the nipple of her breast to suck
+and then got Him to lie down on His bed.
+<br>
+<h2>Purport</h2>
+When a baby drinks milk from the breast of his mother, this is a good sign of health. So the elderly gopis were
+not satisfied with chanting mantras to give protection to Krsna; they also tested whether their child's health was in
+order. When the child sucked the breast, this confirmed that He was healthy, and when the gopis were fully
+satisfied, they had the child lie down on His bed.
 </p>
 
 </div>
@@ -71,7 +117,7 @@ immediately started for Vrndavana.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

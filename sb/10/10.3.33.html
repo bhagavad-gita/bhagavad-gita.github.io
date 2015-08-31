@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,26 +81,56 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.3.33.html">10.3.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-drstvadbhutani bahuso
-nanda-gopo brhadvane
-vasudeva-vaco bhuyo
-manayam asa vismitah
-<p></p>
+yuvam vai brahmanadistau
+praja-sarge yada tatah
+sanniyamyendriya-gramam
+tepathe paramam tapah
+<br>
 <h2>Synonyms</h2>
-drstva--after seeing; adbhutani--the very wonderful and astonishing incidents; bahusah--many times; nandagopah--
-Nanda Maharaja, the head of the cowherd men; brhadvane--in Brhadvana; vasudeva-vacah--the words
-spoken by Vasudeva when Nanda Maharaja was in Mathura; bhuyah--again and again; manayam asa--accepted how
-true they were; vismitah--in great astonishment.
-<p></p>
+yuvam--both of you (Prsni and Sutapa); vai--indeed; brahmana adistau--ordered by Lord Brahma (who is known
+as Pitamaha, the father of the Prajapatis); praja-sarge--in the creation of progeny; yada--when; tatah--thereafter;
+sanniyamya--keeping under full control; indriya-gramam--the senses; tepathe--underwent; paramam--very great;
+tapah--austerity.
+<br>
 <h2>Translation</h2>
-Having seen all these incidents in Brhadvana, Nanda Maharaja became more and more astonished, and he
-remembered the words spoken to him by Vasudeva in Mathura.
+When both of you were ordered by Lord Brahma to create progeny, you first underwent severe austerities by
+controlling your senses.
+<br>
+<h2>Purport</h2>
+Here is an instruction about how to use one's senses to create progeny. According to Vedic principles, before
+creating progeny one must fully control the senses. This control takes place through the garbhadhana-samskara. In
+India there is great agitation for birth control in various mechanical ways, but birth cannot be mechanically
+controlled. As stated in Bhagavad-gita (13.9), janma-mrtyu jara-vyadhi-duhkha-dosanudarsanam: birth, death, old
+age and disease are certainly the primary distresses of the material world. People are trying to control birth, but
+they are not able to control death; and if one cannot control death, one cannot control birth either. In other words,
+artificially controlling birth is not any more feasible than artificially controlling death.
+According to Vedic civilization, procreation should not be contrary to religious principles, and then the birthrate
+will be controlled. As stated in Bhagavad-gita (7.11), dharmaviruddho bhutesu kamo'smi: sex not contrary to
+religious principles is a representation of the Supreme Lord. People should be educated in how to give birth to
+good children through samskaras, beginning with the garbhadhana-samskara; birth should not be controlled by
+artificial means, for this will lead to a civilization of animals. If one follows religious principles, he automatically
+practices birth control because if one is spiritually educated he knows that the after-effects of sex are various types
+of misery (bahu-duhkha-bhaja). One who is spiritually advanced does not indulge in uncontrolled sex. Therefore,
+instead of being forced to refrain from sex or refrain from giving birth to many children, people should be
+spiritually educated, and then birth control will automatically follow.
+If one is determined to make spiritual advancement, he will not beget a child unless able to make that child a
+devotee. As stated in Srimad-Bhagavatam (5.5.18), pita na sa syat: one should not become a father unless one is
+able to protect his child from mrtyu, the path of birth and death. But where is there education about this? A
+responsible father never begets children like cats and dogs. Instead of being encouraged to adopt artificial means of
+birth control, people should be educated in Krsna consciousness because only then will they understand their
+responsibility to their children. If one can beget children who will be devotees and be taught to turn aside from the
+path of birth and death (mrtyu-samsara-vartmani), there is no need of birth control. Rather, one should be
+encouraged to beget children. Artificial means of birth control have no value. Whether one begets children or does
+not, a population of men who are like cats and dogs will never make human society happy. It is therefore necessary
+for people to be educated spiritually so that instead of begetting children like cats and dogs, they will undergo
+austerities to produce devotees. This will make their lives successful.
 </p>
 
 </div>
@@ -70,7 +138,7 @@ remembered the words spoken to him by Vasudeva in Mathura.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

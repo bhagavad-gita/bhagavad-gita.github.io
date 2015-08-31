@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,47 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.27.html">10.4.27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/27"><b>27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tatas tu bhagavan krsno
-vayasyair vraja-balakaih
-saha-ramo vraja-strinam
-cikride janayan mudam
-<p></p>
+soka-harsa-bhaya-dvesalobha-
+moha-madanvitah
+mitho ghnantam na pasyanti
+bhavair bhavam prthag-drsah
+<br>
 <h2>Synonyms</h2>
-tatah--thereafter; tu--but; bhagavan--the Supreme Personality of Godhead; krsnah--Lord Krsna; vayasyaih--with
-Their playmates; vraja-balakaih--with other small children in Vraja; saha-ramah--along with Balarama; vrajastrinam--
-of all the ladies of Vraja; cikride--played very happily; janayan--awakening; mudam--transcendental bliss.
-<p></p>
+soka--lamentation; harsa--jubilation; bhaya--fear; dvesa--envy; lobha--greed; moha--illusion; mada--madness;
+anvitah--endowed with; mithah--one another; ghnantam--engaged in killing; na pasyanti--do not see; bhavaih--
+because of such differentiation; bhavam--the situation in relation to the Supreme Lord; prthak-drsah--persons who
+see everything as separate from the control of the Lord.
+<br>
 <h2>Translation</h2>
-Thereafter, Lord Krsna, along with Balarama, began to play with the other children of the cowherd men, thus
-awakening the transcendental bliss of the cowherd women.
-<p></p>
+Persons with the vision of differentiation are imbued with the material qualities lamentation, jubilation, fear,
+envy, greed, illusion and madness. They are influenced by the immediate cause, which they are busy counteracting,
+because they have no knowledge of the remote, supreme cause, the Personality of Godhead.
+<br>
 <h2>Purport</h2>
-The word saha-ramah, meaning "along with Balarama," is significant in this verse. In such transcendental
-pastimes, Krsna is the chief hero, and Balarama provides additional help.
+Krsna is the cause of all causes (sarva-karana-karanam), but one who has no connection with Krsna is disturbed
+by immediate causes and cannot restrain his vision of separation or differences. When an expert physician treats a
+patient, he tries to find the original cause of the disease and is not diverted by the symptoms of that original cause.
+Similarly, a devotee is never disturbed by reverses in life. Tat te 'nukampam susamiksamanah (Bhag. 10.14.8). A
+devotee understands that when he is in distress, this is due to his own past misdeeds, which are now accruing
+reactions, although by the grace of the Supreme Personality of Godhead these are only very slight. Karmani
+nirdahati kintu ca bhakti-bhajam (Brahma-samhita 5.54). When a devotee under the protection of the Supreme
+Personality of Godhead is to suffer because of faults in his past deeds, he passes through only a little misery by the
+grace of the Lord. Although the disease of a devotee is due to mistakes committed sometime in the past, he agrees
+to suffer and tolerate such miseries, and he depends fully on the Supreme Personality of Godhead. Thus he is never
+affected by material conditions of lamentation, jubilation, fear and so on. A devotee never sees anything to be
+unconnected with the Supreme Personality of Godhead. Srila Madhvacarya, quoting from the Bhavisya Purana,
+says:
+bhagavad-darsanad yasya
+virodhad darsanam prthak
+prthag-drstih sa vijneyo
+na tu sad-bheda-darsanah
 </p>
 
 </div>
@@ -73,7 +129,7 @@ pastimes, Krsna is the chief hero, and Balarama provides additional help.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

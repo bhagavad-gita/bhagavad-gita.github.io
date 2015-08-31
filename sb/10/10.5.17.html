@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,55 +81,37 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.5.17.html">10.5.17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/17"><b>17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-daridrasyaiva yujyante
-sadhavah sama-darsinah
-sadbhih ksinoti tam tarsam
-tata arad visuddhyati
-<p></p>
+rohini ca maha-bhaga
+nanda-gopabhinandita
+vyacarad divya-vasa-srakkanthabharana-
+bhusita
+<br>
 <h2>Synonyms</h2>
-daridrasya--of a person who is poverty-stricken; eva--indeed; yujyante--may easily associate; sadhavah--saintly
-persons; sama-darsinah--although sadhus are equal to everyone, to the poor and the rich, the poor man can take
-advantage of their association; sadbhih--by the association of such saintly persons; ksinoti--reduces; tam--the
-original cause of material suffering; tarsam--the desire for material enjoyment; tatah--thereafter; arat--very soon;
-visuddhyati--his material contamination is cleansed off.
-<p></p>
+rohini--Rohini, the mother of Baladeva; ca--also; maha-bhaga--the most fortunate mother of Baladeva (greatly
+fortunate because of having the opportunity to raise Krsna and Balarama together); nanda-gopa-abhinandita--being
+honored by Maharaja Nanda and mother Yasoda; vyacarat--was busy wandering here and there; divya--beautiful;
+vasa--with a dress; srak--with a garland; kantha-abharana--and with an ornament covering the neck; bhusita--
+decorated.
+<br>
 <h2>Translation</h2>
-Saintly persons may freely associate with those who are poverty-stricken, but not with those who are rich. A
-poverty-stricken man, by association with saintly persons, very soon becomes uninterested in material desires, and
-the dirty things within the core of his heart are cleansed away.
-<p></p>
+The most fortunate Rohini, the mother of Baladeva, was honored by Nanda Maharaja and Yasoda, and thus she
+also dressed gorgeously and decorated herself with a necklace, a garland and other ornaments. She was busy
+wandering here and there to receive the women who were guests at the festival.
+<br>
 <h2>Purport</h2>
-It is said, mahad-vicalanam nrnam grhinam dina-cetasam (Bhag. 10.8.4). The only business of a saintly person or
-sannyasi, a person in the renounced order, is to preach Krsna consciousness. Sadhus, saintly persons, want to
-preach to both the poor and the rich, but the poor take more advantage of the sadhus' preaching than the rich do.
-A poor man receives sadhus very quickly, offers them obeisances, and tries to take advantage of their presence,
-whereas a rich man keeps a big greyhound dog at his door so that no one can enter his house. He posts a sign
-saying "Beware of Dog" and avoids the association of saintly persons, whereas a poor man keeps his door open for
-them and thus benefits by their association more than a rich man does. Because Narada Muni, in his previous life,
-was the poverty-stricken son of a maidservant, he got the association of saintly persons and later became the
-exalted Narada Muni. This was his actual experience. Therefore, he is now comparing the position of a poor man
-with that of a rich man.
-satam prasangan mama virya-samvido
-bhavanti hrt-karna-rasayanah kathah
-taj-josanad asv apavarga-vartmani
-sraddha ratir bhaktir anukramisyati
-(Bhag. 3.25.25)
-If one gets the advantage of association with saintly persons, by their instructions one becomes more and more
-purified of material desires.
-krsna-bahirmukha haiya bhoga-vancha kare
-nikata-stha maya tare japatiya dhare
-(Prema-vivarta)
-Material life means that one forgets Krsna and that one increases in one's desires for sense gratification. But if one
-receives the advantage of instructions from saintly persons and forgets the importance of material desires, one is
-automatically purified. Ceto-darpana-marjanam bhava-maha-davagni-nirvapanam (Siksastaka 1). Unless the core of
-a materialistic person's heart is purified, he cannot get rid of the pangs of bhava-maha-davagni, the blazing fire of
-material existence.
+Rohini, another wife of Vasudeva's, was also kept under the care of Nanda Maharaja with her son Baladeva.
+Because her husband was imprisoned by Kamsa, she was not very happy, but on the occasion of Krsna-janmastami,
+Nandotsava, when Nanda Maharaja gave dresses and ornaments to others, he also gave gorgeous garments and
+ornaments to Rohini so that she could take part in the festival. Thus she also was busy receiving the women who
+were guests. Because of her good fortune in being able to raise Krsna and Balarama together, she is described as
+maha-bhaga, greatly fortunate.
 </p>
 
 </div>
@@ -99,7 +119,7 @@ material existence.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

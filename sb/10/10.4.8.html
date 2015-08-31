@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,26 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.4.8.html">10.4.8</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.8</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/8"><b>8</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-ulukhalanghrer upari vyavasthitam
-markaya kamam dadatam sici sthitam
-haiyangavam caurya-visankiteksanam
-niriksya pascat sutam agamac chanaih
-<p></p>
+tam grhitva caranayor
+jata-matram svasuh sutam
+apothayac chila-prsthe
+svarthonmulita-sauhrdah
+<br>
 <h2>Synonyms</h2>
-ulukhala-anghreh--of the mortar in which spices were ground and which was being kept upside down; upari--on
-top; vyavasthitam--Krsna was sitting; markaya--unto a monkey; kamam--according to His satisfaction; dadatam--
-delivering shares; sici sthitam--situated in the butter pot hanging on the swing; haiyangavam--butter and other
-milk preparations; caurya-visankita--because of stealing, were anxiously looking hither and thither; iksanam--
-whose eyes; niriksya--by seeing these activities; pascat--from behind; sutam--her son; agamat--she reached; sanaih--
-very slowly, cautiously.
-<p></p>
+tam--the child; grhitva--taking by force; caranayoh--by the two legs; jata-matram--the newborn child; svasuh--of
+his sister; sutam--the daughter; apothayat--smashed; sila-prsthe--on the surface of a stone; sva-artha-unmulita--
+uprooted because of intense selfishness; sauhrdah--all friendship or family relationships.
+<br>
 <h2>Translation</h2>
-Krsna, at that time, was sitting on an upside-down wooden mortar for grinding spices and was distributing milk
-preparations such as yogurt and butter to the monkeys as He liked. Because of having stolen, He was looking all
-around with great anxiety, suspecting that He might be chastised by His mother. Mother Yasoda, upon seeing Him,
-very cautiously approached Him from behind.
-<p></p>
-<h2>Purport</h2>
-Mother Yasoda was able to trace Krsna by following His butter-smeared footprints. She saw that Krsna was
-stealing butter, and thus she smiled. Meanwhile, the crows also entered the room and came out in fear. Thus
-mother Yasoda found Krsna stealing butter and very anxiously looking here and there.
+Having uprooted all relationships with his sister because of intense selfishness, Kamsa, who was sitting on his
+knees, grasped the newborn child by the legs and tried to dash her against the surface of a stone.
 </p>
 
 </div>
@@ -79,7 +108,7 @@ mother Yasoda found Krsna stealing butter and very anxiously looking here and th
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

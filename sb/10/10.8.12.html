@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,48 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.8.12.html">10.8.12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/12"><b>12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-bharataivam vatsa-pesu
-bhunjanesv acyutatmasu
-vatsas tv antar-vane duram
-vivisus trna-lobhitah
-<p></p>
+sri-garga uvaca
+ayam hi rohini-putro
+ramayan suhrdo gunaih
+akhyasyate rama iti
+baladhikyad balam viduh
+yadunam aprthag-bhavat
+sankarsanam usanty api
+<br>
 <h2>Synonyms</h2>
-bharata--O Maharaja Pariksit; evam--in this way (while they were enjoying their lunch); vatsa-pesu--along with
-all the boys tending the calves; bhunjanesu--engaged in taking their food; acyuta-atmasu--all of them being very
-near and dear to Acyuta, Krsna; vatsah--the calves; tu--however; antah-vane--within the deep forest; duram--far
-away; vivisuh--entered; trna-lobhitah--being allured by green grass.
-<p></p>
+sri-gargah uvaca--Gargamuni said; ayam--this; hi--indeed; rohini-putrah--the son of Rohini; ramayan--pleasing;
+suhrdah--all His friends and relatives; gunaih--by transcendental qualities; akhyasyate--will be called; ramah--by
+the name Rama, the supreme enjoyer; iti--in this way; bala-adhikyat--because of extraordinary strength; balam
+viduh--will be known as Balarama; yadunam--of the Yadu dynasty; aprthak-bhavat--because of not being separated
+from you; sankarsanam--by the name Sankarsana, or uniting two families; usanti--attracts; api--also.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, while the cowherd boys, who knew nothing within the core of their hearts but Krsna, were
-thus engaged in eating their lunch in the forest, the calves went far away, deep into the forest, being allured by
-green grass.
+Gargamuni said: This child, the son of Rohini, will give all happiness to His relatives and friends by His
+transcendental qualities. Therefore He will be known as Rama. And because He will manifest extraordinary bodily
+strength, He will also be known as Bala. Moreover, because He unites two families--Vasudeva's family and the
+family of Nanda Maharaja--He will be known as Sankarsana.
+<br>
+<h2>Purport</h2>
+Baladeva was actually the son of Devaki, but He was transferred from Devaki's womb to that of Rohini. This fact
+was not disclosed. According to a statement in the Hari-vamsa:
+pratyuvaca tato ramah
+sarvams tan abhitah sthitan
+yadavesv api sarvesu
+bhavanto mama vallabhah
+Gargamuni did disclose to Nanda Maharaja that Balarama would be known as Sankarsana because of uniting two
+families--the yadu-vamsa and the vamsa of Nanda Maharaja--one of which was known as ksatriya and the other as
+vaisya. Both families had the same original forefather, the only difference being that Nanda Maharaja was born of a
+vaisya wife whereas Vasudeva was born of a ksatriya wife. Later, Nanda Maharaja married a vaisya wife, and
+Vasudeva married a ksatriya wife. So although the families of Nanda Maharaja and Vasudeva both came from the
+same father, they were divided as ksatriya and vaisya. Now Baladeva united them, and therefore He was known as
+Sankarsana.
 </p>
 
 </div>
@@ -71,7 +130,7 @@ green grass.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,35 +81,73 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.2.18.html">10.2.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-tata arabhya nandasya
-vrajah sarva-samrddhiman
-harer nivasatma-gunai
-ramakridam abhun nrpa
-<p></p>
+tato jagan-mangalam acyutamsam
+samahitam sura-sutena devi
+dadhara sarvatmakam atma-bhutam
+kastha yathananda-karam manastah
+<br>
 <h2>Synonyms</h2>
-tatah arabhya--beginning from that time; nandasya--of Maharaja Nanda; vrajah--Vrajabhumi, the land for
-protecting and breeding cows; sarva-samrddhiman--became opulent with all kinds of riches; hareh nivasa--of the
-residence of the Supreme Personality of Godhead; atma-gunaih--by the transcendental qualities; rama-akridam--the
-place of pastimes for the goddess of fortune; abhut--became; nrpa--O King (Maharaja Pariksit).
-<p></p>
+tatah--thereafter; jagat-mangalam--auspiciousness for all living entities in all the universes of the creation; acyutaamsam--
+the Supreme Personality of Godhead, who is never bereft of the six opulences, all of which are present in
+all His plenary expansions; samahitam--fully transferred; sura-sutena--by Vasudeva, the son of Surasena; devi--
+Devaki-devi; dadhara--carried; sarva-atmakam--the Supreme Soul of everyone; atma-bhutam--the cause of all
+causes; kastha--the east; yatha--just as; ananda-karam--the blissful (moon); manastah--being placed within the
+mind.
+<br>
 <h2>Translation</h2>
-O Maharaja Pariksit, the home of Nanda Maharaja is eternally the abode of the Supreme Personality of Godhead
-and His transcendental qualities and is therefore always naturally endowed with the opulence of all wealth. Yet
-beginning from Lord Krsna's appearance there, it became the place for the pastimes of the goddess of fortune.
-<p></p>
+Thereafter, accompanied by plenary expansions, the fully opulent Supreme Personality of Godhead, who is allauspicious
+for the entire universe, was transferred from the mind of Vasudeva to the mind of Devaki. Devaki,
+having thus been initiated by Vasudeva, became beautiful by carrying Lord Krsna, the original consciousness for
+everyone, the cause of all causes, within the core of her heart, just as the east becomes beautiful by carrying the
+rising moon.
+<br>
 <h2>Purport</h2>
-As stated in the Brahma-samhita (5.29), laksmi-sahasra-sata-sambhrama-sevyamanam govindam adi-purusam
-tam aham bhajami. The abode of Krsna is always served by hundreds and thousands of goddesses of fortune.
-Wherever Krsna goes, the goddess of fortune naturally resides with Him. The chief of the goddesses of fortune is
-Srimati Radharani. Therefore, Krsna's appearance in the land of Vraja indicated that the chief goddess of fortune,
-Radharani, would also appear there very soon. Nanda Maharaja's abode was already opulent, and since Krsna had
-appeared, it would be opulent in all respects.
+As indicated here by the word manastah, the Supreme Personality of Godhead was transferred from the core of
+Vasudeva's mind or heart to the core of the heart of Devaki. We should note carefully that the Lord was transferred
+to Devaki not by the ordinary way for a human being, but by diksa, initiation. Thus the importance of initiation is
+mentioned here. Unless one is initiated by the right person, who always carries within his heart the Supreme
+Personality of Godhead, one cannot acquire the power to carry the Supreme Godhead within the core of one's own
+heart.
+The word acyutamsam is used because the Supreme Personality of Godhead is Sad-aisvarya-purna, full in the
+opulences of wealth, strength, fame, knowledge, beauty and renunciation. The Supreme Godhead is never
+separated from His personal opulences. As stated in the Brahma-samhita (5.39), ramadi-murtisu kala-niyamena
+tisthan: the Lord is always situated with all His plenary expansions, such as Rama, Nrsimha and Varaha. Therefore
+the word acyutamsam is specifically used here, signifying that the Lord is always present with His plenary
+expansions and opulences. There is no need to think of the Lord artificially as yogis do. Dhyanavasthita-tad-gatena
+manasa pasyanti yam yoginah (Bhag. 12.13.1). Yogis meditate upon the Supreme person within the mind. For a
+devotee, however, the Lord is present, and His presence need only be awakened through initiation by a bona fide
+spiritual master. The Lord did not need to live within the womb of Devaki, for His presence within the core of her
+heart was sufficient to carry Him. One is here forbidden to think that Krsna was begotten by Vasudeva within the
+womb of Devaki and that she carried the child within her womb.
+When Vasudeva was sustaining the form of the Supreme Personality of Godhead within his heart, he appeared
+just like the glowing sun, whose shining rays are always unbearable and scorching to the common man. The form
+of the Lord situated in the pure, unalloyed heart of Vasudeva is not different from the original form of Krsna. The
+appearance of the form of Krsna anywhere, and specifically within the heart, is called dhama. Dhama refers not
+only to Krsna's form, but to His name, His form, His quality and His paraphernalia. Everything becomes manifest
+simultaneously.
+Thus the eternal form of the Supreme Personality of Godhead with full potencies was transferred from the mind
+of Vasudeva to the mind of Devaki, exactly as the setting sun's rays are transferred to the full moon rising in the
+east.
+Krsna, the Supreme Personality of Godhead, entered the body of Devaki from the body of Vasudeva. He was
+beyond the conditions of the ordinary living entity. When Krsna is there, it is to be understood that all His plenary
+expansions, such as Narayana, and incarnations like Lord Nrsimha and Varaha, are with Him, and they are not
+subject to the conditions of material existence. In this way, Devaki became the residence of the Supreme
+Personality of Godhead, who is one without a second and the cause of all creation. Devaki became the residence of
+the Absolute Truth, but because she was within the house of Kamsa, she looked just like a suppressed fire, or like
+misused education. When fire is covered by the walls of a pot or is kept in a jug, the illuminating rays of the fire
+cannot be very much appreciated. Similarly, misused knowledge, which does not benefit the people in general, is
+not very much appreciated. So Devaki was kept within the prison walls of Kamsa's palace, and no one could see her
+transcendental beauty, which resulted from her conceiving the Supreme Personality of Godhead.
+Commenting upon this verse, Sri Viraraghava Acarya writes, vasudeva-devaki jatharayor hrdayayor bhagavatah
+sambandhah. The Supreme Lord's entrance into the womb of Devaki from the heart of Vasudeva was a heart-toheart
+relationship.
 </p>
 
 </div>
@@ -79,7 +155,7 @@ appeared, it would be opulent in all respects.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/10/10.6.33.html">10.6.33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/33"><b>33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
-gopyo rudha-ratha nutnakuca-
-kunkuma-kantayah
-krsna-lila jaguh pritya
-niska-kanthyah suvasasah
-<p></p>
+kalevaram parasubhis
+chittva tat te vrajaukasah
+dure ksiptvavayavaso
+nyadahan kastha-vestitam
+<br>
 <h2>Synonyms</h2>
-gopyah--all the cowherd women; rudha-rathah--while riding on the bullock carts; nutna-kuca-kunkumakantayah--
-their bodies, especially their breasts, were decorated with fresh kunkuma; krsna-lilah--the pastimes of
-Krsna; jaguh--they chanted; pritya--with great pleasure; niska-kanthyah--decorated with lockets on their necks; suvasasah--
-very well dressed.
-<p></p>
+kalevaram--the gigantic body of Putana; parasubhih--with the aid of axes; chittva--after cutting to pieces; tat--that
+(body); te--all of those; vraja-okasah--inhabitants of Vraja; dure--far, far away; ksiptva--after throwing; avayavasah--
+different parts of the body, piece by piece; nyadahan--burned to ashes; kastha-vestitam--covered by wood.
+<br>
 <h2>Translation</h2>
-The cowherd women, riding on the bullock carts, were dressed very nicely with excellent garments, and their
-bodies, especially their breasts, were decorated with fresh kunkuma powder. As they rode, they began to chant
-with great pleasure the pastimes of Krsna.
+The inhabitants of Vraja cut the gigantic body of Putana into pieces with the help of axes. Then they threw the
+pieces far away, covered them with wood and burned them to ashes.
+<br>
+<h2>Purport</h2>
+It is the practice that after a snake has been killed, its body is cut into various pieces for fear that it may come to
+life again simply by interacting with air. Merely killing a serpent is not sufficient; after it is killed, it must be cut to
+pieces and burned, and then the danger will be over. Putana resembled a great serpent, and therefore the cowherd
+men took the same precautions by burning her body to ashes.
 </p>
 
 </div>
@@ -71,7 +114,7 @@ with great pleasure the pastimes of Krsna.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
