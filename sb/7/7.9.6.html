@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.6.html">7.9.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa tat-kara-sparsa-dhutakhilasubhah
 sapady abhivyakta-paratma-darsanah
 tat-pada-padmam hrdi nirvrto dadhau
 hrsyat-tanuh klinna-hrd-asru-locanah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--he (Prahlada Maharaja); tat-kara-sparsa--because of being touched on the head by the lotus hand of
 Nrsimhadeva; dhuta--being cleansed; akhila--all; asubhah--inauspiciousness or material desires; sapadi--
@@ -62,14 +101,14 @@ knowledge); tat-pada-padmam--Lord Nrsimhadeva's lotus feet; hrdi--within the cor
 nirvrtah--full of transcendental bliss; dadhau--captured; hrsyat-tanuh--having transcendental ecstatic bliss
 manifested in the body; klinna-hrt--whose heart was softened due to transcendental ecstasy; asrulocanah--
 with tears in his eyes.
-<p></p>
+<br>
 <h2>Translation</h2>
 By the touch of Lord Nrsimhadeva's hand on Prahlada Maharaja's head, Prahlada was completely freed
 of all material contaminations and desires, as if he had been thoroughly cleansed. Therefore he at once
 became transcendentally situated, and all the symptoms of ecstasy became manifest in his body. His heart
 filled with love, and his eyes with tears, and thus he was able to completely capture the lotus feet of the
 Lord within the core of his heart.
-<p></p>
+<br>
 <h2>Purport</h2>
 As stated in Bhagavad-gita (14.26):
 mam ca yo 'vyabhicarena
@@ -99,7 +138,7 @@ contamination he is immediately fit to be situated in devotional service.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

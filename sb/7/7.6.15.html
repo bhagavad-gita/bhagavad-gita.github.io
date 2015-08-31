@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.6.15.html">7.6.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 vittesu nityabhinivista-ceta
 vidvams ca dosam para-vitta-hartuh
 pretyeha vathapy ajitendriyas tad
 asanta-kamo harate kutumbi
-<p></p>
+<br>
 <h2>Synonyms</h2>
 vittesu--in material wealth; nitya-abhinivista-cetah--whose mind is always absorbed; vidvan--having
 learned; ca--also; dosam--the fault; para-vitta-hartuh--of one who steals the money of others by cheating
 or by transactions on the black market; pretya--after dying; iha--in this material world; va--or; athapi--
 still; ajita-indriyah--because of being unable to control the senses; tat--that; asanta-kamah--whose desires
 are unsatiated; harate--steals; kutumbi--too fond of his family.
-<p></p>
+<br>
 <h2>Translation</h2>
 If a person too attached to the duties of family maintenance is unable to control his senses, the core of
 his heart is immersed in how to accumulate money. Although he knows that one who takes the wealth of
 others will be punished by the law of the government, and by the laws of Yamaraja after death, he
 continues cheating others to acquire money.
-<p></p>
+<br>
 <h2>Purport</h2>
 Especially in these days, people do not believe in a next life or in the court of Yamaraja and the various
 punishments of the sinful. But at least one should know that one who cheats others to acquire money will
@@ -80,7 +119,7 @@ is unable to control his senses.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

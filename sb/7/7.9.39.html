@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.39.html">7.9.39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/39"><b>39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 naitan manas tava kathasu vikuntha-natha
 sampriyate durita-dustam asadhu tivram
 kamaturam harsa-soka-bhayaisanartam
 tasmin katham tava gatim vimrsami dinah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--certainly not; etat--this; manah--mind; tava--Your; kathasu--in transcendental topics; vikunthanatha--
 O Lord of Vaikuntha, where there is no anxiety; sampriyate--is pacified or interested in; durita--by
@@ -62,14 +101,14 @@ always full of different desires and lusty propensities; harsa-soka--sometimes b
 by distress; bhaya--and sometimes by fear; esana--and by desiring; artam--distressed; tasmin--in that
 mental status; katham--how; tava--Your; gatim--transcendental activities; vimrsami--I shall consider and
 try to understand; dinah--who am most fallen and poor.
-<p></p>
+<br>
 <h2>Translation</h2>
 My dear Lord of the Vaikuntha planets, where there is no anxiety, my mind is extremely sinful and
 lusty, being sometimes so-called happy and sometimes so-called distressed. My mind is full of lamentation
 and fear, and it always seeks more and more money. Thus it has become most polluted and is never
 satisfied in topics concerning You. I am therefore most fallen and poor. In such a status of life, how shall I
 be able to discuss Your activities?
-<p></p>
+<br>
 <h2>Purport</h2>
 Here Prahlada Maharaja represents himself as a common man, although he actually has nothing to do
 with this material world. Prahlada is always situated in the Vaikuntha planets of the spiritual world, but
@@ -114,7 +153,7 @@ becomes free from all material bondage.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

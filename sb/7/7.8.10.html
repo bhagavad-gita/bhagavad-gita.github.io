@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.10.html">7.8.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 dasyun pura san na vijitya lumpato
 manyanta eke sva-jita diso dasa
 jitatmano jnasya samasya dehinam
 sadhoh sva-moha-prabhavah kutah pare
-<p></p>
+<br>
 <h2>Synonyms</h2>
 dasyun--plunderers; pura--in the beginning; sat--six; na--not; vijitya--conquering; lumpatah--stealing all
 one s possessions; manyante--consider; eke--some; sva-jitah--conquered; disah dasa--the ten directions;
 jita-atmanah--one who has conquered the senses; jnasya--learned; samasya--equipoised; dehinam--to all
 living entities; sadhoh--of such a saintly person; sva-moha-prabhavah--created by one's own illusion;
 kutah--where; pare--enemies or opposing elements.
-<p></p>
+<br>
 <h2>Translation</h2>
 In former times there were many fools like you who did not conquer the six enemies that steal away the
 wealth of the body. These fools were very proud, thinking, "I have conquered all enemies in all the ten
 directions." But if a person is victorious over the six enemies and is equipoised toward all living entities,
 for him there are no enemies. Enemies are merely imagined by one in ignorance.
-<p></p>
+<br>
 <h2>Purport</h2>
 In this material world, everyone thinks that he has conquered his enemies, not understanding that his
 enemies are his uncontrolled mind and five senses (manah sasthanindriyani prakrti-sthani karsati). In this
@@ -83,7 +122,7 @@ knows that there are no enemies but those within oneself--the uncontrolled mind 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.43.html">7.9.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 naivodvije para duratyaya-vaitaranyas
 tvad-virya-gayana-mahamrta-magna-cittah
 soce tato vimukha-cetasa indriyarthamaya-
 sukhaya bharam udvahato vimudhan
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; eva--certainly; udvije--I am disturbed or afraid; para--O Supreme; duratyaya--insurmountable
 or very difficult to cross; vaitaranyah--of the Vaitarani, the river of the material world; tvat-virya--of Your
@@ -64,13 +103,13 @@ in sense gratification; maya-sukhaya--for temporary, illusory happiness; bharam-
 or responsibility (of maintaining one's family, society and nation and elaborate arrangements for that
 purpose); udvahatah--who are lifting (by making grand plans for this arrangement); vimudhan--although
 all of them are nothing but fools and rascals (I am thinking of them also).
-<p></p>
+<br>
 <h2>Translation</h2>
 O best of the great personalities, I am not at all afraid of material existence, for wherever I stay I am fully
 absorbed in thoughts of Your glories and activities. My concern is only for the fools and rascals who are
 making elaborate plans for material happiness and maintaining their families, societies and countries. I am
 simply concerned with love for them.
-<p></p>
+<br>
 <h2>Purport</h2>
 Throughout the entire world, everyone is making big, big plans to adjust the miseries of the material
 world, and this is true at present, in the past and in the future. Nonetheless, although they make elaborate
@@ -111,7 +150,7 @@ world.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.5.37.html">7.5.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 paro 'py apatyam hita-krd yathausadham
 sva-dehajo 'py amayavat suto 'hitah
 chindyat tad angam yad utatmano 'hitam
 sesam sukham jivati yad-vivarjanat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 parah--not belonging to the same group or family; api--although; apatyam--a child; hita-krt--who is
 beneficial; yatha--just as; ausadham--remedial herb; sva-deha-jah--born of one's own body; api--although;
 amaya-vat--like a disease; sutah--a son; ahitah--who is not a well-wisher; chindyat--one should cut off;
 tat--that; angam--part of the body; yat--which; uta--indeed; atmanah--for the body; ahitam--not beneficial;
 sesam--the balance; sukham--happily; jivati--lives; yat--of which; vivarjanat--by cutting off.
-<p></p>
+<br>
 <h2>Translation</h2>
 Although a medicinal herb, being born in the forest, does not belong to the same category as a man, if
 beneficial it is kept very carefully. Similarly, if someone outside one's family is favorable, he should be
 given protection like a son. On the other hand, if a limb of one's body is poisoned by disease, it must be
 amputated so that the rest of the body may live happily. Similarly, even one's own son, if unfavorable,
 must be rejected, although born of one's own body.
-<p></p>
+<br>
 <h2>Purport</h2>
 Sri Caitanya Mahaprabhu has instructed all devotees of the Lord to be humbler than the grass and more
 tolerant than trees; otherwise there will always be disturbances to their execution of devotional service.
@@ -91,7 +130,7 @@ even prepared to kill his own son. He justified this by putting forward the logi
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

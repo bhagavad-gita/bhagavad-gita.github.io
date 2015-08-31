@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.2.44.html">7.2.44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/44"><b>44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 suyajno nanv ayam sete
 mudha yam anusocatha
 yah srota yo 'nuvakteha
 sa na drsyeta karhicit
-<p></p>
+<br>
 <h2>Synonyms</h2>
 suyajnah--the king named Suyajna; nanu--indeed; ayam--this; sete--lies; mudhah--O foolish people;
 yam--whom; anusocatha--you cry for; yah--he who; srota--the hearer; yah--he who; anuvakta--the
 speaker; iha--in this world; sah--he; na--not; drsyeta--is visible; karhicit--at any time.
-<p></p>
+<br>
 <h2>Translation</h2>
 Yamaraja continued: O lamenters, you are all fools! The person named Suyajna, for whom you lament,
 is still lying before you and has not gone anywhere. Then what is the cause for your lamentation?
 Previously he heard you and replied to you, but now, not finding him, you are lamenting. This is
 contradictory behavior, for you have never actually seen the person within the body who heard you and
 replied. There is no need for your lamentation, for the body you have always seen is lying here.
-<p></p>
+<br>
 <h2>Purport</h2>
 This instruction by Yamaraja in the form of a boy is understandable even for a common man. A
 common man who considers the body the self is certainly comparable to an animal (yasyatma-buddhih
@@ -85,7 +124,7 @@ was never seen, what is the need of lamentation?
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

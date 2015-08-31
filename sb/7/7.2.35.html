@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,27 +81,28 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.2.35.html">7.2.35</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.35</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/35"><b>35</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 evam vilapatinam vai
 parigrhya mrtam patim
 anicchatinam nirharam
 arko 'stam sannyavartata
-<p></p>
+<br>
 <h2>Synonyms</h2>
 evam--thus; vilapatinam--of the lamenting queens; vai--indeed; parigrhya--taking on their laps; mrtam--
 the dead; patim--husband; anicchatinam--not desiring; nirharam--the carrying out of the body for the
 funeral ceremony; arkah--the sun; astam--the setting position; sannyavartata--passed away.
-<p></p>
+<br>
 <h2>Translation</h2>
 The time was appropriate for the body to be burned, but the queens, not allowing it to be taken away,
 continued lamenting for the dead body, which they kept on their laps. In the meantime, the sun
 completed its movements for setting in the west.
-<p></p>
+<br>
 <h2>Purport</h2>
 According to the Vedic system, if a person dies during the daytime it is customary for his funeral
 ceremony to be performed before the sun sets, regardless of whether he is burned or buried, and if he dies
@@ -96,7 +135,7 @@ dying with the dead body of their husband.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

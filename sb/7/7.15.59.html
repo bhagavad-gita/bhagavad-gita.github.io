@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.15.59.html">7.15.59</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.59</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/59"><b>59</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ksity-adinam iharthanam
 chaya na katamapi hi
 na sanghato vikaro 'pi
 na prthan nanvito mrsa
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ksiti-adinam--of the five elements, beginning with the earth; iha--in this world; arthanam--of those five
 elements; chaya--shadow; na--neither; katama--which of them; api--indeed; hi--certainly; na--nor;
 sanghatah--combination; vikarah--transformation; api--although; na prthak--nor separated; na anvitah--
 nor inherent in; mrsa--all these theories are without substance.
-<p></p>
+<br>
 <h2>Translation</h2>
 In this world there are five elements--namely earth, water, fire, air and ether--but the body is not a
 reflection of them, nor a combination or transformation of them. Because the body and its ingredients are
 neither distinct nor amalgamated, all such theories are insubstantial.
-<p></p>
+<br>
 <h2>Purport</h2>
 A forest is certainly a transformation of the earth, but one tree does not depend on another tree; if one is
 cut down, this does not mean that the others are cut down. Therefore, the forest is neither a combination
@@ -96,7 +135,7 @@ can present Himself everywhere and anywhere in a form of His energy to accept se
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

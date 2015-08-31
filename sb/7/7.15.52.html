@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.15.52.html">7.15.52</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.52</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/52"><b>52</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 nisekadi-smasanantaih
 samskaraih samskrto dvijah
 indriyesu kriya-yajnan
 jnana-dipesu juhvati
-<p></p>
+<br>
 <h2>Synonyms</h2>
 niseka-adi--the beginning of life (the purificatory process of garbhadhana, performed when the father
 begets a child by discharging semen into the womb of the mother); smasana-antaih--and at death, when
@@ -61,14 +100,14 @@ the body is put into a crematorium and burnt to ashes; samskaraih--by such purif
 samskrtah--purified; dvijah--a twice-born brahmana; indriyesu--into the senses; kriya-yajnan--activities
 and sacrifices (which elevate one to a higher planetary system); jnana-dipesu--by enlightenment in real
 knowledge; juhvati--offers.
-<p></p>
+<br>
 <h2>Translation</h2>
 A twice-born brahmana [dvija] gains his life by the grace of his parents through the process of
 purification known as garbhadhana. There are also other processes of purification, until the end of life,
 when the funeral ceremony [antyesti-kriya] is performed. Thus in due course a qualified brahmana
 becomes uninterested in materialistic activities and sacrifices, but he offers the sensual sacrifices, in full
 knowledge, into the working senses, which are illuminated by the fire of knowledge.
-<p></p>
+<br>
 <h2>Purport</h2>
 Those interested in materialistic activities remain in the cycle of birth and death. Pravrtti-marga, or the
 inclination to stay in the material world to enjoy varieties of sense gratification, has been explained in the
@@ -97,7 +136,7 @@ the safety of going back home, back to Godhead.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

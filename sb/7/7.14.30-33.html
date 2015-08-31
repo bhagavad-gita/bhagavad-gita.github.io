@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.14.30-33.html">7.14.30-33</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.30-33</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30-33"><b>30-33</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 saramsi puskaradini
 ksetrany arhasritany uta
@@ -67,7 +106,7 @@ etan desan niseveta
 sreyas-kamo hy abhiksnasah
 dharmo hy atrehitah pumsam
 sahasradhi-phalodayah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 saramsi--lakes; puskara-adini--such as Puskara; ksetrani--sacred places (like Kuruksetra, Gayaksetra and
 Jagannatha Puri); arha--for worshipable, saintly persons; asritani--places of shelter; uta--celebrated;
@@ -89,7 +128,7 @@ well as; ye--those which; etan desan--all these countries; niseveta--should wors
 one who desires auspiciousness; hi--indeed; abhiksnasah--again and again; dharmah--religious
 activities; hi--from which; atra--in these places; ihitah--performed; pumsam--of the persons; sahasraadhi--
 more than a thousand times; phala-udayah--effective.
-<p></p>
+<br>
 <h2>Translation</h2>
 The sacred lakes like Puskara and places where saintly persons live, like Kuruksetra, Gaya, Prayaga,
 Pulahasrama, Naimisaranya, the banks of the Phalgu River, Setubandha, Prabhasa, Dvaraka, Varanasi,
@@ -101,7 +140,7 @@ where Radha-Krsna Deities are worshiped must all be visited and worshiped by tho
 spiritually advanced. One who intends to advance in spiritual life may visit all these places and perform
 ritualistic ceremonies to get results a thousand times better than the results of the same activities
 performed in any other place.
-<p></p>
+<br>
 <h2>Purport</h2>
 In these verses and in verse twenty-nine, stress is given to one point: harer arcasritas ca ye or harer arca.
 In other words, any place where the Deity of the Supreme Personality of Godhead is worshiped by
@@ -127,7 +166,7 @@ value of spiritual life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

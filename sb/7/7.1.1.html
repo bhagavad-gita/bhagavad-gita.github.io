@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.1.1.html">7.1.1</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.1</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/1"><b>1</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-rajovaca
 samah priyah suhrd brahman
 bhutanam bhagavan svayam
 indrasyarthe katham daityan
 avadhid visamo yatha
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-raja uvaca--Maharaja Pariksit said; samah--equal; priyah--beloved; suhrt--friend; brahman--O
 brahmana (Sukadeva); bhutanam--toward all living entities; bhagavan--the Supreme Lord, Visnu;
 svayam--Himself; indrasya--of Indra; arthe--for the benefit; katham--how; daityan--the demons; avadhit--
 killed; visamah--partial; yatha--as if.
-<p></p>
+<br>
 <h2>Translation</h2>
 King Pariksit inquired: My dear brahmana, the Supreme Personality of Godhead, Visnu, being
 everyone's well-wisher, is equal and extremely dear to everyone. How, then, did He become partial like a
 common man for the sake of Indra and thus kill Indra's enemies? How can a person equal to everyone be
 partial to some and inimical toward others?
-<p></p>
+<br>
 <h2>Purport</h2>
 In Bhagavad-gita (9.29) the Lord says, samo 'ham sarva-bhutesu na me dvesyo 'sti na priyah: "I am equal
 to everyone. No one is dear to Me, nor is anyone My enemy." In the previous canto, however, it has been
@@ -94,7 +133,7 @@ arose in the heart of Pariksit Maharaja, and therefore he inquired from Sukadeva
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

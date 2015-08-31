@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.3.26-27.html">7.3.26-27</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.26-27</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26-27"><b>26-27</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-hiranyakasipur uvaca
 kalpante kala-srstena
@@ -58,7 +97,7 @@ atmana tri-vrta cedam
 srjaty avati lumpati
 rajah-sattva-tamo-dhamne
 paraya mahate namah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-hiranyakasipuh uvaca--Hiranyakasipu said; kalpa-ante--at the end of every day of Lord Brahma; kalasrstena--
 created by the time factor; yah--he who; andhena--by dense darkness; tamasa--by ignorance;
@@ -68,7 +107,7 @@ material nature; ca--also; idam--this material world; srjati--creates; avati--ma
 rajah--of the mode of passion; sattva--the mode of goodness; tamah--and the mode of ignorance;
 dhamne--unto the supreme lord; paraya--unto the supreme; mahate--unto the great; namah--my
 respectful obeisances.
-<p></p>
+<br>
 <h2>Translation</h2>
 Let me offer my respectful obeisances unto the supreme lord within this universe. At the end of each
 day of his life, the universe is fully covered with dense darkness by the influence of time, and then again,
@@ -76,7 +115,7 @@ during his next day, that self-effulgent lord, by his own effulgence, manifests,
 entire cosmic manifestation through the material energy, which is invested with the three modes of
 material nature. He, Lord Brahma, is the shelter of those modes of nature--sattva-guna, rajo-guna and
 tamo-guna.
-<p></p>
+<br>
 <h2>Purport</h2>
 The words abhivyanag jagad idam refer to he who creates this cosmic manifestation. The original
 creator is the Supreme personality of Godhead, Krsna (janmady asya yatah); Lord Brahma is the
@@ -98,7 +137,7 @@ is the original engineer.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

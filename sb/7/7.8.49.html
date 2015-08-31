@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.49.html">7.8.49</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.49</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/49"><b>49</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-prajapataya ucuh
 prajesa vayam te paresabhisrsta
 na yena praja vai srjamo nisiddhah
 sa esa tvaya bhinna-vaksa nu sete
 jagan-mangalam sattva-murte 'vatarah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-prajapatayah ucuh--the great personalities who created the various living beings offered their prayers
 by saying; praja-isah--the prajapatis created by Lord Brahma, who have created generations of living
@@ -63,7 +102,7 @@ entities; vayam--we; te--of You; para-isa--O Supreme Lord; abhisrstah--born; na-
 sah--he (Hiranyakasipu); esah--this; tvaya--by You; bhinna-vaksah--whose chest has been split; nu--
 indeed; sete--lies down; jagat-mangalam--for the auspiciousness of the whole world; sattva-murte--in this
 transcendental form of pure goodness; avatarah--this incarnation.
-<p></p>
+<br>
 <h2>Translation</h2>
 The prajapatis offered their prayers as follows: O Supreme Lord, Lord of even Brahma and Siva, we, the
 prajapatis, were created by You to execute Your orders, but we were forbidden by Hiranyakasipu to create
@@ -77,7 +116,7 @@ meant for the welfare of the entire universe.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

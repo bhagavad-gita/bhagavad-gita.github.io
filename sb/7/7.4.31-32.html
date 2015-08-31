@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.4.31-32.html">7.4.31-32</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.31-32</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/31-32"><b>31-32</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 brahmanyah sila-sampannah
 satya-sandho jitendriyah
@@ -59,7 +98,7 @@ bhratrvat sadrse snigdho
 gurusv isvara-bhavanah
 vidyartha-rupa-janmadhyo
 mana-stambha-vivarjitah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 brahmanyah--cultured as a good brahmana; sila-sampannah--possessing all good qualities; satyasandhah--
 determined to understand the Absolute Truth; jita-indriyah--fully controlling the senses and
@@ -70,7 +109,7 @@ exactly like a brother; sadrse--to his equals; snigdhah--very affectionate; guru
 masters; isvara-bhavanah--who considered exactly like the Supreme Personality of Godhead; vidya--
 education; artha--riches; rupa--beauty; janma--aristocracy or nobility; adhyah--endowed with; mana--
 pride; stambha--impudence; vivarjitah--completely free from.
-<p></p>
+<br>
 <h2>Translation</h2>
 [The qualities of Maharaja Prahlada, the son of Hiranyakasipu, are described herewith.] He was
 completely cultured as a qualified brahmana, having very good character and being determined to
@@ -80,7 +119,7 @@ like a menial servant, to the poor he was like a father, to his equals he was at
 brother, and he considered his teachers, spiritual masters and older Godbrothers to be as good as the
 Supreme Personality of Godhead. He was completely free from unnatural pride that might have arisen
 from his good education, riches, beauty, aristocracy and so on.
-<p></p>
+<br>
 <h2>Purport</h2>
 These are some of the qualifications of a Vaisnava. A Vaisnava is automatically a brahmana because a
 Vaisnava has all the good qualities of a brahmana.
@@ -113,7 +152,7 @@ gurav ity arthah).
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

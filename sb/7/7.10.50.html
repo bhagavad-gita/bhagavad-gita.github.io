@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.10.50.html">7.10.50</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.50</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/50"><b>50</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 na yasya saksad bhava-padmajadibhi
 rupam dhiya vastutayopavarnitam
 maunena bhaktyopasamena pujitah
 prasidatam esa sa satvatam patih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; yasya--of whom; saksat--directly; bhava--Lord Siva; padma-ja--Lord Brahma (born from the
 lotus); adibhih--by them and others also; rupam--the form; dhiya--even by meditation; vastutaya--
 fundamentally; upavarnitam--described and perceived; maunena--by samadhi, deep meditation; bhaktya--
 by devotional service; upasamena--by renunciation; pujitah--worshiped; prasidatam--may He be pleased;
 esah--this; sah--He; satvatam--of the great devotees; patih--the master.
-<p></p>
+<br>
 <h2>Translation</h2>
 Exalted persons like Lord Siva and Lord Brahma could not properly describe the truth of the Supreme
 Personality of Godhead, Krsna. May the Lord, who is always worshiped as the protector of all devotees by
 great saints who observe vows of silence, meditation, devotional service and renunciation, be pleased with
 us.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Absolute Truth is sought by different persons in different ways, yet He remains inconceivable.
 Nonetheless, devotees like the Pandavas, the gopis, the cowherd boys, Mother Yasoda, Nanda Maharaja
@@ -81,7 +120,7 @@ prays that the Lord will be pleased with him.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

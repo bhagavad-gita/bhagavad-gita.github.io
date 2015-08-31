@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.19.html">7.9.19</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.19</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/19"><b>19</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 balasya neha saranam pitarau nrsimha
 nartasya cagadam udanvati majjato nauh
 taptasya tat-pratividhir ya ihanjasestas
 tavad vibho tanu-bhrtam tvad-upeksitanam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 balasya--of a little child; na--not; iha--in this world; saranam--shelter (protection); pitarau--the father
 and mother; nrsimha--O my Lord Nrsimhadeva; na--neither; artasya--of a person suffering from some
@@ -63,14 +102,14 @@ the counteraction (invented for stopping the suffering of material existence); y
 which; iha--in this material world; anjasa--very easily; istah--accepted (as a remedy); tavat--similarly;
 vibho--O my Lord, O Supreme; tanu-bhrtam--of the living entities who have accepted material bodies;
 tvat-upeksitanam--who are neglected by You and not accepted by You.
-<p></p>
+<br>
 <h2>Translation</h2>
 My Lord Nrsimhadeva, O Supreme, because of a bodily conception of life, embodied souls neglected and
 not cared for by You cannot do anything for their betterment. Whatever remedies they accept, although
 perhaps temporarily beneficial, are certainly impermanent. For example, a father and mother cannot
 protect their child, a physician and medicine cannot relieve a suffering patient, and a boat on the ocean
 cannot protect a drowning man.
-<p></p>
+<br>
 <h2>Purport</h2>
 Through parental care, through remedies for different kinds of disease, and through means of protection
 on the water, in the air and on land, there is always an endeavor for relief from various kinds of suffering
@@ -103,7 +142,7 @@ never be happy within this material world, in either the upper or lower planetar
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.26.html">7.8.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa tasya hastotkalitas tadasuro
 vikridato yadvad ahir garutmatah
 asadhv amanyanta hrtaukaso 'mara
 ghana-cchada bharata sarva-dhisnya-pah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--he (Hiranyakasipu); tasya--of Him (Lord Nrsimhadeva); hasta--from the hands; utkalitah--slipped;
 tada--at that time; asurah--the King of the demons, Hiranyakasipu; vikridatah--playing; yadvat--exactly
 like; ahih--a snake; garutmatah--of Garuda; asadhu--not very good; amanyanta--considered; hrta-okasah--
 whose abodes were taken by Hiranyakasipu; amarah--the demigods; ghana-cchadah--situated behind a
 cover of clouds; bharata--O great son of Bharata; sarva-dhisnya-pah--the rulers of the heavenly planets.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Yudhisthira, O great son of Bharata, when Lord Nrsimhadeva gave Hiranyakasipu a chance to slip
 from His hand, just as Garuda sometimes plays with a snake and lets it slip from his mouth, the demigods,
 who had lost their abodes and who were hiding behind the clouds for fear of the demon, did not consider
 that incident very good. Indeed, they were perturbed.
-<p></p>
+<br>
 <h2>Purport</h2>
 When Hiranyakasipu was in the process of being killed by Lord Nrsimhadeva, the Lord gave the demon
 a chance to slip from His clutches. This incident was not very much appreciated by the demigods, for they
@@ -80,7 +119,7 @@ would take great revenge upon them. Therefore they were very much afraid.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

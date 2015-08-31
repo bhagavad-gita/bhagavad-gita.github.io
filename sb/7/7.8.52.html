@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.52.html">7.8.52</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.52</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/52"><b>52</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-yaksa ucuh
 vayam anucara-mukhyah karmabhis te mano-jnais
 ta iha diti-sutena prapita vahakatvam
 sa tu jana-paritapam tat-krtam janata te
 narahara upanitah pancatam panca-vimsa
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-yaksah ucuh--the inhabitants of the Yaksa planet prayed; vayam--we; anucara-mukhyah--the chief
 among Your many servants; karmabhih--by services; te--unto You; mano-jnaih--very pleasing; te--they;
@@ -63,14 +102,14 @@ vahakatvam--the palanquin carriers; sah--he; tu--but; jana-paritapam--the misera
 everyone; tat-krtam--caused by him; janata--knowing; te--by You; nara-hara--O Lord in the form of
 Nrsimha; upanitah--is put to; pancatam--death; panca-vimsa--O twenty-fifth principle (the controller of
 the other twenty-four elements).
-<p></p>
+<br>
 <h2>Translation</h2>
 The inhabitants of Yaksaloka prayed: O controller of the twenty-four elements, we are considered the
 best servants of Your Lordship because of rendering services pleasing to You, yet we engaged as palanquin
 carriers by the order of Hiranyakasipu, the son of Diti. O Lord in the form of Nrsimhadeva, You know
 how this demon gave trouble to everyone, but now You have killed him, and his body is mixing with the
 five material elements.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Supreme Lord is the controller of the ten senses, the five material elements, the five sense objects,
 the mind, the intelligence, the false ego and the soul. Therefore He is addressed as panca-vimsa, the
@@ -87,7 +126,7 @@ offered their prayers.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

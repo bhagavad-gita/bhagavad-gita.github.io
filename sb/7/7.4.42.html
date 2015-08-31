@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.4.42.html">7.4.42</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.42</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/42"><b>42</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa uttama-sloka-padaravindayor
 nisevayakincana-sanga-labdhaya
 tanvan param nirvrtim atmano muhur
 duhsanga-dinasya manah samam vyadhat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--he (Prahlada Maharaja); uttama-sloka-pada-aravindayoh--to the lotus feet of the Supreme
 Personality of Godhead, who is worshiped by transcendental prayers; nisevaya--by constant service;
@@ -61,13 +100,13 @@ akincana--of devotees who have nothing to do with the material world; sanga--in 
 labdhaya--obtained; tanvan--expanding; param--highest; nirvrtim--bliss; atmanah--of the spirit soul;
 muhuh--constantly; duhsanga-dinasya--of a person poor in spiritual understanding due to bad
 association; manah--the mind; samam--peaceful; vyadhat--made.
-<p></p>
+<br>
 <h2>Translation</h2>
 Because of his association with perfect, unalloyed devotees who had nothing to do with anything
 material, Prahlada Maharaja constantly engaged in the service of the Lord's lotus feet. By seeing his bodily
 features when he was in perfect ecstasy, persons very poor in spiritual understanding became purified. In
 other words, Prahlada Maharaja bestowed upon them transcendental bliss.
-<p></p>
+<br>
 <h2>Purport</h2>
 Apparently Prahlada Maharaja was placed in circumstances in which he was always tortured by his
 father. In such material conditions, one cannot have an undisturbed mind, but since bhakti is
@@ -84,7 +123,7 @@ become spiritually advanced and blissful upon seeing the behavior of a pure devo
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

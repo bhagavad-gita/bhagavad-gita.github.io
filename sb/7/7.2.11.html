@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.2.11.html">7.2.11</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.11</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/11"><b>11</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 visnur dvija-kriya-mulo
 yajno dharmamayah puman
 devarsi-pitr-bhutanam
 dharmasya ca parayanam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 visnuh--Lord Visnu, the Supreme Personality of Godhead; dvija--of the brahmanas and ksatriyas; kriyamulah--
 whose root is the performance of yajna and the ritualistic ceremonies mentioned in the Vedas;
@@ -61,14 +100,14 @@ yajnah--personified yajna (Lord Visnu, who is known as the yajna-purusa); dharma
 religious principles; puman--the Supreme Person; deva-rsi--of the demigods and great rsis like Vyasadeva
 and Narada; pitr--of the forefathers; bhutanam--and of all other living entities; dharmasya--of the religious
 principles; ca--also; parayanam--the shelter.
-<p></p>
+<br>
 <h2>Translation</h2>
 The basic principle of brahminical culture is to satisfy Lord Visnu, the personification of sacrificial and
 ritualistic ceremonies. Lord Visnu is the personified reservoir of all religious principles, and He is the
 shelter of all the demigods, the great pitas, and the people in general. When the brahmanas are killed, no
 one will exist to encourage the ksatriyas to perform yajnas, and thus the demigods, not being appeased by
 yajna, will automatically die.
-<p></p>
+<br>
 <h2>Purport</h2>
 Since Visnu is the central point of brahminical culture, Hiranyakasipu's plan was to kill Visnu, for if
 Visnu were killed, naturally the brahminical culture would also be lost. With brahminical culture lost,
@@ -112,7 +151,7 @@ government will automatically come back, and people will be extremely happy.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

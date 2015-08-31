@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.14.20-23.html">7.14.20-23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.20-23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20-23"><b>20-23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 ayane visuve kuryad
 vyatipate dina-ksaye
@@ -65,7 +104,7 @@ dvadasyam anuradha syac
 chravanas tisra uttarah
 tisrsv ekadasi vasu
 janmarksa-srona-yoga-yuk
-<p></p>
+<br>
 <h2>Synonyms</h2>
 ayane--on the day when the sun begins to move north, or Makara-sankranti, and on the day when the
 sun begins to move south, or Karkata-sankranti; visuve--on the Mesa-sankranti and on the Tula-sankranti;
@@ -85,7 +124,7 @@ Sravana; tisrah--the three (naksatras); uttarah--the naksatras named Uttara (Utt
 and Uttara-bhadrapada); tisrsu--on three; ekadasi--the eleventh lunar day; va--or; asu--on these; janmarksa--
 of one's own janma-naksatra, or birth star; srona--of Sravana-naksatra; yoga--by a conjunction; yuk--
 having.
-<p></p>
+<br>
 <h2>Translation</h2>
 One should perform the sraddha ceremony on the Makara-sankranti [the day when the sun begins to
 move north] or on the Karkata-sankranti [the day when the sun begins to move south]. One should also
@@ -102,7 +141,7 @@ Sravana, Uttara-phalguni, Uttarasadha or Uttara-bhadrapada. Again, one should pe
 when the eleventh lunar day is in conjunction with either Uttara-phalguni, Uttarasadha or Uttarabhadrapada.
 Finally, one should perform this ceremony on days conjoined with one's own birth star
 [janma-naksatra] or with Sravana-naksatra.
-<p></p>
+<br>
 <h2>Purport</h2>
 The word ayana means "path" or "going." The six months when the sun moves toward the north are
 called uttarayana, or the northern path, and the six months when it moves south are called daksinayana,
@@ -137,7 +176,7 @@ encourages the ceremony, all go to hell.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

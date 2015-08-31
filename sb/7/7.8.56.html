@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.56.html">7.8.56</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.56</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/56"><b>56</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-visnu-parsada ucuh
 adyaitad dhari-nara-rupam adbhutam te
 drstam nah saranada sarva-loka-sarma
 so 'yam te vidhikara isa vipra-saptas
 tasyedam nidhanam anugrahaya vidmah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-visnu-parsadah ucuh--the associates of Lord Visnu in Vaikunthaloka said; adya--today; etat--this;
 hari-nara--of half lion and half human being; rupam--form; adbhutam--very wonderful; te--Your; drstam--
@@ -62,14 +101,14 @@ seen; nah--of us; sarana-da--the everlasting bestower of shelter; sarva-loka-sar
 fortune to all the various planets; sah--he; ayam--this; te--of Your Lordship; vidhikarah--order carrier
 (servant); isa--O Lord; vipra-saptah--being cursed by the brahmanas; tasya--of him; idam--this;
 nidhanam--killing; anugrahaya--for the special favor; vidmah--we understand.
-<p></p>
+<br>
 <h2>Translation</h2>
 The associates of Lord Visnu in Vaikuntha offered this prayer: O Lord, our supreme giver of shelter,
 today we have seen Your wonderful form as Lord Nrsimhadeva, meant for the good fortune of all the
 world. O Lord, we can understand that Hiranyakasipu was the same Jaya who engaged in Your service but
 was cursed by brahmanas and who thus received the body of a demon. We understand that his having
 now been killed is Your special mercy upon him.
-<p></p>
+<br>
 <h2>Purport</h2>
 Hiranyakasipu's coming to this earth and acting as the Lord's enemy was prearranged. Jaya and Vijaya
 were cursed by the brahmanas Sanaka, Sanat-kumara, Sanandana and Sanatana because Jaya and Vijaya
@@ -163,7 +202,7 @@ material facilities. Rather, he wanted to remain always a servant of the servant
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

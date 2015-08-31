@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,31 +81,32 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.12.25.html">7.12.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/12">12</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 khe khani vayau nisvasams
 tejahsusmanam atmavan
 apsv asrk-slesma-puyani
 ksitau sesam yathodbhavam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 khe--in the sky; khani--all the holes of the body; vayau--in the air; nisvasan--all the different airs moving
 within the body (prana, apana, etc.); tejahsu--in fire; usmanam--the heat of the body; atma-van--a person
 who knows the self; apsu--in water; asrk--blood; slesma--mucus; puyani--and urine; ksitau--in the earth;
 sesam--the remaining (namely skin, bones and the other hard things in the body); yatha-udbhavam--
 wherefrom all of them grew.
-<p></p>
+<br>
 <h2>Translation</h2>
 A sober, self-realized person who has full knowledge should merge the various parts of the body in their
 original sources. The holes in the body are caused by the sky, the process of breathing is caused by the air,
 the heat of the body is caused by fire, and semen, blood and mucus are caused by water. The hard
 substances, like skin, muscle and bone, are caused by earth. In this way all the constituents of the body
 are caused by various elements, and they should be merged again into those elements.
-<p></p>
+<br>
 <h2>Purport</h2>
 To be self-realized, one must understand the original sources of the various elements of the body. The
 body is a combination of skin, bone, muscle, blood, semen, urine, stool, heat, breath and so on, which all
@@ -80,7 +119,7 @@ constituents. Then one becomes a self-realized person, or atmavan, one who knows
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

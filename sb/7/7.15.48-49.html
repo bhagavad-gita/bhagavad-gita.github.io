@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.15.48-49.html">7.15.48-49</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.48-49</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/48-49"><b>48-49</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 himsram dravyamayam kamyam
 agni-hotrady-asantidam
@@ -57,7 +96,7 @@ etad istam pravrttakhyam
 hutam prahutam eva ca
 purtam suralayaramakupajivyadi-
 laksanam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 himsram--a system of killing and sacrificing animals; dravya-mayam--requiring much paraphernalia;
 kamyam--full of unlimited material desires; agni-hotra-adi--ritualistic ceremonies such as the agni-hotrayajna;
@@ -69,7 +108,7 @@ Supreme Personality of Godhead; prahutam--a ceremony called Baliharana; eva--ind
 purtam--for the benefit of the public; sura-alaya--constructing temples for demigods; arama--resting
 houses and gardens; kupa--digging wells; ajivya-adi--activities like distributing food and water;
 laksanam--symptoms.
-<p></p>
+<br>
 <h2>Translation</h2>
 The ritualistic ceremonies and sacrifices known as agni-hotra-yajna, darsa-yajna, purnamasa-yajna,
 caturmasya-yajna, pasu-yajna and soma-yajna are all symptomized by the killing of animals and the
@@ -86,7 +125,7 @@ attachment to material desires.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

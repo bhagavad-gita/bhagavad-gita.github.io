@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.10.15-17.html">7.10.15-17</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.15-17</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15-17"><b>15-17</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-prahrada uvaca
 varam varaya etat te
@@ -62,7 +101,7 @@ tasmat pita me puyeta
 durantad dustarad aghat
 putas te 'panga-samdrstas
 tada krpana-vatsala
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-prahradah uvaca--Prahlada Maharaja said; varam--benediction; varaye--I pray; etat--this; te--from
 You; varada-isat--the Supreme Personality of Godhead, who offers benedictions even to such exalted
@@ -76,7 +115,7 @@ pita--father; me--my; puyeta--may be purified; durantat--very great; dustarat--d
 from all sinful activities; putah--(although he was) purified; te--of You; apanga--by the glance over him;
 samdrstah--being looked at; tada--at that time; krpana-vatsala--O You who are merciful to the
 materialistic.
-<p></p>
+<br>
 <h2>Translation</h2>
 Prahlada Maharaja said: O Supreme Lord, because You are so merciful to the fallen souls, I ask You for
 only one benediction. I know that my father, at the time of his death, had already been purified by Your
@@ -84,7 +123,7 @@ glance upon him, but because of his ignorance of Your beautiful power and suprem
 unnecessarily angry at You, falsely thinking that You were the killer of his brother. Thus he directly
 blasphemed Your Lordship, the spiritual master of all living beings, and committed heavily sinful
 activities directed against me, Your devotee. I wish that he be excused for these sinful activities.
-<p></p>
+<br>
 <h2>Purport</h2>
 Although Hiranyakasipu was purified as soon as he came in contact with the Lord's lap and the Lord
 saw him, Prahlada Maharaja still wanted to hear from the Lord's own mouth that his father had been
@@ -98,7 +137,7 @@ forget his father's affection.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

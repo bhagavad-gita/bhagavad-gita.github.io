@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.23.html">7.9.23</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.23</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23"><b>23</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 drsta maya divi vibho 'khila-dhisnya-panam
 ayuh sriyo vibhava icchati yan jano 'yam
 ye 'smat pituh kupita-hasa-vijrmbhita-bhruvisphurjitena
 lulitah sa tu te nirastah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 drstah--have been seen practically; maya--by me; divi--in the higher planetary systems; vibho--O my
 Lord; akhila--all; dhisnya-panam--of the chiefs of different states or planets; ayuh--the duration of life;
@@ -62,14 +101,14 @@ people in general; ye--all of which (duration of life, opulence, etc.); asmat pi
 Hiranyakasipu; kupita-hasa--by his critical laughing when angry; vijrmbhita--being expanded; bhru--of
 the eyebrows; visphurjitena--simply by the feature; lulitah--pulled down or finished; sah--he (my father);
 tu--but; te--by You; nirastah--completely vanquished.
-<p></p>
+<br>
 <h2>Translation</h2>
 My dear Lord, people in general want to be elevated to the higher planetary systems for a long duration
 of life, opulence and enjoyment, but I have seen all of these through the activities of my father. When my
 father was angry and he laughed sarcastically at the demigods, they were immediately vanquished simply
 by seeing the movements of his eyebrows. Yet my father, who was so powerful, has now been vanquished
 by You within a moment.
-<p></p>
+<br>
 <h2>Purport</h2>
 Within this material world, one should understand by practical experience the value of material
 opulence, longevity and influence. We have actual experience that even on this planet there have been
@@ -91,7 +130,7 @@ saved from the wheel of repeated birth, death, old age and disease.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

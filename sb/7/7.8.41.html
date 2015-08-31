@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.41.html">7.8.41</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.41</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/41"><b>41</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-rudra uvaca
 kopa-kalo yugantas te
 hato 'yam asuro 'lpakah
 tat-sutam pahy upasrtam
 bhaktam te bhakta-vatsala
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-rudrah uvaca--Lord Siva offered his prayer; kopa-kalah--the right time for Your anger (for the
 purpose of annihilating the universe); yuga-antah--the end of the millennium; te--by You; hatah--killed;
 ayam--this; asurah--great demon; alpakah--very insignificant; tat-sutam--his son (Prahlada Maharaja);
 pahi--just protect; upasrtam--who is surrendered and standing nearby; bhaktam--devotee; te--of Your
 Lordship; bhakta-vatsala--O my Lord, who are so affectionate to Your devotee.
-<p></p>
+<br>
 <h2>Translation</h2>
 Lord Siva said: The end of the millennium is the time for Your anger. Now that this insignificant demon
 Hiranyakasipu has been killed, O my Lord, who are naturally affectionate to Your devotee, kindly protect
 his son Prahlada Maharaja, who is standing nearby as Your fully surrendered devotee.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Supreme Personality of Godhead is the creator of the material world. There are three processes in
 creation--namely creation, maintenance and finally annihilation. During the period of annihilation, at the
@@ -87,7 +126,7 @@ surrendered devotee.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.5.23-24.html">7.5.23-24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/5">5</a>.23-24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/23-24"><b>23-24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-prahrada uvaca
 sravanam kirtanam visnoh
@@ -58,7 +97,7 @@ iti pumsarpita visnau
 bhaktis cen nava-laksana
 kriyeta bhagavaty addha
 tan manye 'dhitam uttamam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-prahradah uvaca--Prahlada Maharaja said; sravanam--hearing; kirtanam--chanting; visnoh--of Lord
 Visnu (not anyone else); smaranam--remembering; pada-sevanam--serving the feet; arcanam--offering
@@ -68,7 +107,7 @@ whatever one has; iti--thus; pumsa arpita--offered by the devotee; visnau--unto 
 else); bhaktih--devotional service; cet--if; nava-laksana--possessing nine different processes; kriyeta--one
 should perform; bhagavati--unto the Supreme Personality of Godhead; addha--directly or completely; tat--
 that; manye--I consider; adhitam--learning; uttamam--topmost.
-<p></p>
+<br>
 <h2>Translation</h2>
 Prahlada Maharaja said: Hearing and chanting about the transcendental holy name, form, qualities,
 paraphernalia and pastimes of Lord Visnu, remembering them, serving the lotus feet of the Lord, offering
@@ -77,7 +116,7 @@ His servant, considering the Lord one's best friend, and surrendering everything
 words, serving Him with the body, mind and words)--these nine processes are accepted as pure
 devotional service. One who has dedicated his life to the service of Krsna through these nine methods
 should be understood to be the most learned person, for he has acquired complete knowledge.
-<p></p>
+<br>
 <h2>Purport</h2>
 When Prahlada Maharaja was asked by his father to say something from whatever he had learned, he
 considered that what he had learned from his spiritual master was the best of all teachings whereas what
@@ -456,7 +495,7 @@ sometimes found in the behavior of Rukminidevi at Dvaraka.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

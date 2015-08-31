@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.50.html">7.8.50</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.50</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/50"><b>50</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-gandharva ucuh
 vayam vibho te nata-natya-gayaka
 yenatmasad virya-balaujasa krtah
 sa esa nito bhavata dasam imam
 kim utpathasthah kusalaya kalpate
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-gandharvah ucuh--the inhabitants of Gandharvaloka (who are usually engaged as musicians of the
 heavenly planets) said; vayam--we; vibho--O Lord; te--Your; nata-natya-gayakah--dancers and singers in
@@ -62,13 +101,13 @@ dramatic performances; yena--by whom; atmasat--under subjection; virya--of his v
 strength; ojasa--by the influence; krtah--made (brought); sah--he (Hiranyakasipu); esah--this; nitah--
 brought; bhavata--by Your Lordship; dasam imam--to this condition; kim--whether; utpathasthah--anyone
 who is an upstart; kusalaya--for auspiciousness; kalpate--is capable.
-<p></p>
+<br>
 <h2>Translation</h2>
 The inhabitants of Gandharvaloka prayed: Your Lordship, we ever engage in Your service by dancing
 and singing in dramatic performances, but this Hiranyakasipu, by the influence of his bodily strength and
 valor, brought us under his subjugation. Now he has been brought to this low condition by Your
 Lordship. What benefit can result from the activities of such an upstart as Hiranyakasipu?
-<p></p>
+<br>
 <h2>Purport</h2>
 By being a very obedient servant of the Supreme Lord, one becomes extremely powerful in bodily
 strength, influence and effulgence, whereas the fate of demoniac upstarts is ultimately to fall down like
@@ -82,7 +121,7 @@ victorious over the influence of Hiranyakasipu by the grace of the Supreme Lord.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

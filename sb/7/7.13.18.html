@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.13.18.html">7.13.18</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.18</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/18"><b>18</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 na te sayanasya nirudyamasya
 brahman nu hartho yata eva bhogah
 abhogino 'yam tava vipra dehah
 piva yatas tad vada nah ksamam cet
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; te--of you; sayanasya--lying down; nirudyamasya--without activities; brahman--O saintly
 person; nu--indeed; ha--it is evident; arthah--money; yatah--from which; eva--indeed; bhogah--sense
 enjoyment; abhoginah--of one who is not engaged in sense enjoyment; ayam--this; tava--your; vipra--O
 learned brahmana; dehah--body; piva--fat; yatah--how is it; tat--that fact; vada--kindly tell; nah--us;
 ksamam--excuse; cet--if I have asked an impudent question.
-<p></p>
+<br>
 <h2>Translation</h2>
 O brahmana, fully in knowledge of transcendence, you have nothing to do, and therefore you are lying
 down. It is also understood that you have no money for sense enjoyment. How then has your body
 become so fat? Under the circumstances, if you do not consider my question impudent, kindly explain
 how this has happened.
-<p></p>
+<br>
 <h2>Purport</h2>
 Generally those engaged in spiritual advancement take food only once, either in the afternoon or in the
 evening. If one takes food only once, naturally he does not become fat. The learned sage, however, was
@@ -82,7 +121,7 @@ question him about this.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.2.6.html">7.2.6</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/2">2</a>.6</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/6"><b>6</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sapatnair ghatitah ksudrair
 bhrata me dayitah suhrt
 parsni-grahena harina
 samenapy upadhavanaih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sapatnaih--by the enemies; ghatitah--killed; ksudraih--insignificant in power; bhrata--brother; me--my;
 dayitah--very dear; suhrt--well-wisher; parsni-grahena--attacking from the rear; harina--by the Supreme
 Personality of Godhead; samena--equal to everyone (both the demigods and demons); api--although;
 upadhavanaih--by the worshipers, the demigods.
-<p></p>
+<br>
 <h2>Translation</h2>
 My insignificant enemies the demigods have combined to kill my very dear and obedient well-wisher,
 my brother Hiranyaksa. Although the Supreme Lord, Visnu, is always equal to both of us--namely, the
 demigods and the demons--this time, being devoutly worshiped by the demigods, He has taken their side
 and helped them kill Hiranyaksa.
-<p></p>
+<br>
 <h2>Purport</h2>
 As stated in Bhagavad-gita (9.29), samo 'ham sarva-bhutesu: the Lord is equal to all living entities. Since
 the demigods and demons are both living entities, how is it possible that the Lord was partial to one class
@@ -84,7 +123,7 @@ from the state laws to live peacefully and fulfill his real interests.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

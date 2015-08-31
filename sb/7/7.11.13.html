@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.11.13.html">7.11.13</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/11">11</a>.13</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/13"><b>13</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 samskara yatravicchinnah
 sa dvijo 'jo jagada yam
@@ -55,14 +94,14 @@ ijyadhyayana-danani
 vihitani dvijanmanam
 janma-karmavadatanam
 kriyas casrama-coditah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 samskarah--reformatory processes; yatra--wherein; avicchinnah--without interruption; sah--such a
 person; dvi-jah--twice-born; ajah--Lord Brahma; jagada--sanctioned; yam--who; ijya--worshiping;
 adhyayana--studies of the Vedas; danani--and charity; vihitani--prescribed; dvi-janmanam--of persons
 who are called twice-born; janma--by birth; karma--and activities; avadatanam--who are purified; kriyah--
 activities; ca--also; asrama-coditah--recommended for the four asramas.
-<p></p>
+<br>
 <h2>Translation</h2>
 Those who have been reformed by the garbhadhana ceremony and other prescribed reformatory
 methods, performed with Vedic mantras and without interruption, and who have been approved by Lord
@@ -70,7 +109,7 @@ Brahma, are dvijas, or twice-born. Such brahmanas, ksatriyas and vaisyas, purifi
 traditions and by their behavior, should worship the Lord, study the Vedas and give charity. In this
 system, they should follow the principles of the four asramas [brahmacarya, grhastha, vanaprastha and
 sannyasa].
-<p></p>
+<br>
 <h2>Purport</h2>
 After giving a general list of thirty qualifications for one's behavior, Narada Muni now describes the
 principles of the four varnas and four asramas. A human being must be trained in the above-mentioned
@@ -95,7 +134,7 @@ legislative assemblies, parliaments and similar bodies.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

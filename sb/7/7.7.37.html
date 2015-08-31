@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.7.37.html">7.7.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 adhoksajalambham ihasubhatmanah
 saririnah samsrti-cakra-satanam
 tad brahma-nirvana-sukham vidur budhas
 tato bhajadhvam hrdaye hrd-isvaram
-<p></p>
+<br>
 <h2>Synonyms</h2>
 adhoksaja--with the Supreme Personality of Godhead, who is beyond the reach of the materialistic mind
 or experimental knowledge; alambham--being constantly in contact; iha--in this material world; asubhaatmanah--
@@ -63,7 +102,7 @@ connected with the Supreme Brahman, the Absolute Truth; sukham--transcendental h
 viduh--understand; budhah--those who are spiritually advanced; tatah--therefore; bhajadhvam--engage in
 devotional service; hrdaye--within the core of the heart; hrt-isvaram--to the Supreme Personality of
 Godhead, the Supersoul within the heart.
-<p></p>
+<br>
 <h2>Translation</h2>
 The real problem of life is the repetition of birth and death, which is like a wheel rolling repeatedly up
 and down. This wheel, however, completely stops when one is in touch with the Supreme Personality of
@@ -71,7 +110,7 @@ Godhead. In other words, by the transcendental bliss realized from constant enga
 service, one is completely liberated from material existence. All learned men know this. Therefore, my
 dear friends, O sons of the asuras, immediately begin meditating upon and worshiping the Supersoul
 within everyone's heart.
-<p></p>
+<br>
 <h2>Purport</h2>
 Generally it is understood that by merging into the existence of Brahman, the impersonal feature of the
 Absolute Truth, one becomes completely happy. The words brahma-nirvana refer to connecting with the
@@ -121,7 +160,7 @@ that when one is in touch with the Absolute Truth, material sense gratification 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

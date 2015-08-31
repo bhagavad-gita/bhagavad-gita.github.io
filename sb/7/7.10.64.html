@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,28 +81,29 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.10.64.html">7.10.64</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.64</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/64"><b>64</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 devo 'suro naro 'nyo va
 nesvaro 'stiha kascana
 atmano 'nyasya va distam
 daivenapohitum dvayoh
-<p></p>
+<br>
 <h2>Synonyms</h2>
 devah--the demigods; asurah--the demons; narah--humans; anyah--or anyone else; va--either; na--not;
 isvarah--the supreme controller; asti--is; iha--in this world; kascana--anyone; atmanah--one's own;
 anyasya--another's; va--either; distam--destiny; daivena--which is given by the Supreme Lord; apohitum--
 to undo; dvayoh--of both of them.
-<p></p>
+<br>
 <h2>Translation</h2>
 Maya Danava said: What has been destined by the Supreme Lord for oneself, for others, or for both
 oneself and others cannot be undone anywhere or by anyone, whether one be a demigod, a demon, a
 human being or anyone else.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Supreme Lord is one--Krsna, the visnu-tattva. Krsna expands Himself into visnu-tattva personal
 expansions (svamsa), who control everything. Maya Danava said, "However I plan, you plan or both of us
@@ -79,7 +118,7 @@ entities, but without the sanction of the Supreme Lord they are futile.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

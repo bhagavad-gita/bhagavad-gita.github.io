@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.54.html">7.8.54</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.54</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/54"><b>54</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-vaitalika ucuh
 sabhasu satresu tavamalam yaso
 gitva saparyam mahatim labhamahe
 yas tam anaisid vasam esa durjano
 dvistya hatas te bhagavan yathamayah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-vaitalikah ucuh--the inhabitants of Vaitalika-loka said; sabhasu--in great assemblies; satresu--in the
 arenas of sacrifice; tava--Your; amalam--without any spot of material contamination; yasah--reputation;
@@ -62,7 +101,7 @@ gitva--singing; saparyam--respectful position; mahatim--great; labhamahe--we ach
 tam--that (respectful position); anaisit--brought under; vasam--his control; esah--this; durjanah--crooked
 person; dvistya--by great fortune; hatah--killed; te--by You; bhagavan--O Lord; yatha--exactly like;
 amayah--a disease.
-<p></p>
+<br>
 <h2>Translation</h2>
 The inhabitants of Vaitalika-loka said: Dear Lord, because of chanting Your spotless glories in great
 assemblies and arenas of sacrifice, we were accustomed to great respect from everyone. This demon,
@@ -75,7 +114,7 @@ one cures a chronic disease.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

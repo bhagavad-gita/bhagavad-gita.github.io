@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.15.38-39.html">7.15.38-39</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.38-39</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/38-39"><b>38-39</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 grhasthasya kriya-tyago
 vrata-tyago vatorapi
@@ -57,7 +96,7 @@ asramapasada hy ete
 khalv asrama-vidambanah
 deva-maya-vimudhams tan
 upeksetanukampaya
-<p></p>
+<br>
 <h2>Synonyms</h2>
 grhasthasya--for a person situated in householder life; kriya-tyagah--to give up the duty of a
 householder; vrata-tyagah--to give up vows and austerity; vatoh--for a brahmacari; api--also; tapasvinah--
@@ -68,7 +107,7 @@ these; khalu--indeed; asrama-vidambanah--imitating and therefore cheating the di
 deva-maya-vimudhan--who are bewildered by the external energy of the Supreme Lord; tan--them;
 upekseta--one should reject and not accept as genuine; anukampaya--or by compassion (teach them real
 life).
-<p></p>
+<br>
 <h2>Translation</h2>
 It is abominable for a person living in the grhastha-asrama to give up the regulative principles, for a
 brahmacari not to follow the brahmacari vows while living under the care of the guru, for a vanaprastha
@@ -77,7 +116,7 @@ gratification. One who acts in this way is to be considered the lowest renegade.
 bewildered by the external energy of the Supreme Personality of Godhead, and one should either reject
 him from any position, or taking compassion upon him, teach him, if possible, to resume his original
 position.
-<p></p>
+<br>
 <h2>Purport</h2>
 We have repeatedly stressed that human culture does not begin unless one takes to the principles of
 varnasrama-dharma. Although grhastha life is a concession for the enjoyment of sex, one cannot enjoy sex
@@ -95,7 +134,7 @@ life. Otherwise one should reject them and pay them no attention.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

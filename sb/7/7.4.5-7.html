@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.4.5-7.html">7.4.5-7</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.5-7</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/5-7"><b>5-7</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa vijitya disah sarva
 lokams ca trin mahasurah
@@ -61,7 +100,7 @@ sarva-sattva-patin jitva
 vasam aniya visva-jit
 jahara loka-palanam
 sthanani saha tejasa
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--he (Hiranyakasipu); vijitya--conquering; disah--the directions; sarvah--all; lokan--planetary
 systems; ca--and; trin--three (upper, lower and middle); maha-asurah--the great demon; deva--the
@@ -73,7 +112,7 @@ the leaders of Pisacaloka; preta--of the Pretas; bhuta--and of the Bhutas; patin
 sarva-sattva-patin--the masters of all the different planets; jitva--conquering; vasam aniya--bringing under
 control; visva-jit--the conqueror of the whole universe; jahara--usurped; loka-palanam--of the demigods
 who manage the universal affairs; sthanani--the places; saha--with; tejasa--all their power.
-<p></p>
+<br>
 <h2>Translation</h2>
 Hiranyakasipu became the conqueror of the entire universe. Indeed, that great demon conquered all the
 planets in the three worlds--upper, middle and lower--including the planets of the human beings, the
@@ -81,7 +120,7 @@ Gandharvas, the Garudas, the great serpents, the Siddhas, Caranas and Vidyadhara
 Yamaraja, the Manus, the Yaksas, the Raksasas, the Pisacas and their masters, and the masters of the
 ghosts and Bhutas. He defeated the rulers of all the other planets where there are living entities and
 brought them under his control. Conquering the abodes of all, he seized their power and influence.
-<p></p>
+<br>
 <h2>Purport</h2>
 The word garuda in this verse indicates that there are planets of great birds like Garuda. Similarly, the
 word uraga indicates that there are planets of enormous serpents. Such a description of the various
@@ -98,7 +137,7 @@ scientists who say that all other planets are vacant and that only the earth is 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

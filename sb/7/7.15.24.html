@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.15.24.html">7.15.24</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/15">15</a>.24</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/24"><b>24</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 krpaya bhutajam duhkham
 daivam jahyat samadhina
 atmajam yoga-viryena
 nidram sattva-nisevaya
-<p></p>
+<br>
 <h2>Synonyms</h2>
 krpaya--by being merciful to all other living entities; bhuta-jam--because of other living entities;
 duhkham--suffering; daivam--sufferings imposed by providence; jahyat--one should give up; samadhina--
 by trance or meditation; atma-jam--sufferings due to the body and mind; yoga-viryena--by practicing
 hatha-yoga, pranayama and so forth; nidram--sleeping; sattva-nisevaya--by developing brahminical
 qualifications or the mode of goodness.
-<p></p>
+<br>
 <h2>Translation</h2>
 By good behavior and freedom from envy one should counteract sufferings due to other living entities,
 by meditation in trance one should counteract sufferings due to providence, and by practicing hatha-yoga,
 pranayama and so forth one should counteract sufferings due to the body and mind. Similarly, by
 developing the mode of goodness, especially in regard to eating, one should conquer sleep.
-<p></p>
+<br>
 <h2>Purport</h2>
 By practice, one should avoid eating in such a way that other living entities will be disturbed and suffer.
 Since I suffer when pinched or killed by others, I should not attempt to pinch or kill any other living
@@ -84,7 +123,7 @@ mystic hatha-yoga.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

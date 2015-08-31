@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.8.44.html">7.8.44</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/8">8</a>.44</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/44"><b>44</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-pitara ucuh
 sraddhani no 'dhibubhuje prasabham tanujair
 dattani tirtha-samaye 'py apibat tilambu
 tasyodaran nakha-vidirna-vapad ya arcchat
 tasmai namo nrharaye 'khila-dharma-goptre
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-pitarah ucuh--the inhabitants of Pitrloka said; sraddhani--the performances of the sraddha ceremony
 (offering of food grains to dead forefathers by a particular process); nah--our; adhibubhuje--enjoyed;
@@ -65,7 +104,7 @@ the skin of the intestines of which; yah--He who (the Personality of Godhead); a
 unto Him (the Supreme Personality of Godhead); namah--respectful obeisances; nr-haraye--who has
 appeared as half lion and half man (Nrhari); akhila--universal; dharma--religious principles; goptre--who
 maintains.
-<p></p>
+<br>
 <h2>Translation</h2>
 The inhabitants of Pitrloka prayed: Let us offer our respectful obeisances unto Lord Nrsimhadeva, the
 maintainer of the religious principles of the universe. He has killed Hiranyakasipu, the demon who by
@@ -73,7 +112,7 @@ force enjoyed all the offerings of the sraddha ceremonies performed by our sons 
 anniversaries of our death and who drank the water with sesame seeds offered in holy places of
 pilgrimage. By killing this demon, O Lord, You have taken back all this stolen property from his abdomen
 by piercing it with Your nails. We therefore wish to offer our respectful obeisances unto You.
-<p></p>
+<br>
 <h2>Purport</h2>
 It is the duty of all householders to offer food grains to all their departed forefathers, but during the
 time of Hiranyakasipu this process was stopped; no one would offer sraddha oblations of food grains to
@@ -89,7 +128,7 @@ Nrsimhadeva, everyone feels comfortable, irrespective of the planet upon which h
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

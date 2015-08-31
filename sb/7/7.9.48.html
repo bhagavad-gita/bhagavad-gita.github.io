@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.48.html">7.9.48</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.48</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/48"><b>48</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tvam vayur agnir avanir viyad ambu matrah
 pranendriyani hrdayam cid anugrahas ca
 sarvam tvam eva saguno vigunas ca bhuman
 nanyat tvad asty api mano-vacasa niruktam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tvam--You (are); vayuh--air; agnih--fire; avanih--earth; viyat--sky; ambu--water; matrah--the sense
 objects; prana--the life airs; indriyani--the senses; hrdayam--the mind; cit--consciousness; anugrahah ca--
@@ -61,13 +100,13 @@ and false ego or the demigods; sarvam--everything; tvam--You; eva--only; sa-guna
 its three modes; vigunah--the spiritual spark and Supersoul, which are beyond material nature; ca--and;
 bhuman--O my great Lord; na--not; anyat--other; tvat--than You; asti--is; api--although; manah-vacasa--by
 mind and words; niruktam--everything manifested.
-<p></p>
+<br>
 <h2>Translation</h2>
 O Supreme Lord, You are actually the air, the earth, fire, sky and water. You are the objects of sense
 perception, the life airs, the five senses, the mind, consciousness and false ego. Indeed, You are
 everything, subtle and gross. The material elements and anything expressed, either by the words or by the
 mind, are nothing but You.
-<p></p>
+<br>
 <h2>Purport</h2>
 This is the all-pervasive conception of the Supreme Personality of Godhead, which explains how He
 spreads everywhere and anywhere. Sarvam khalv idam brahma: everything is Brahman--the Supreme
@@ -86,7 +125,7 @@ Lord stays only where His devotees chant His glories.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

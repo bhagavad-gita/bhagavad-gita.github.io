@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.14.14.html">7.14.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 siddhair yajnavasistarthaih
 kalpayed vrttim atmanah
 sese svatvam tyajan prajnah
 padavim mahatam iyat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 siddhaih--things obtained by the grace of the Lord; yajna-avasista-arthaih--things obtained after a
 sacrifice is offered to the Lord or after the recommended panca-suna yajna is performed; kalpayet--one
@@ -61,13 +100,13 @@ should consider; vrttim--the means of livelihood; atmanah--for the self; sese--a
 proprietorship over one's wife, children, home, business and so on; tyajan--giving up; prajnah--
 those who are wise; padavim--the position; mahatam--of the great personalities who are fully satisfied in
 spiritual consciousness; iyat--should achieve.
-<p></p>
+<br>
 <h2>Translation</h2>
 An intelligent person should be satisfied with eating prasada [food offered to the Lord] or with
 performing the five different kinds of yajna [panca-suna]. By such activities, one can give up attachment
 for the body and so-called proprietorship with reference to the body. When one is able to do this, he is
 firmly fixed in the position of a mahatma.
-<p></p>
+<br>
 <h2>Purport</h2>
 Nature already has an arrangement to feed us. By the order of the Supreme Personality of Godhead,
 there is an arrangement for eatables for every living entity within the 8,400,000 forms of life. Eko
@@ -86,7 +125,7 @@ time and energy with the risk of falling down in the cycle of birth and death.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

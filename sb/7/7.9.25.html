@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.25.html">7.9.25</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.25</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/25"><b>25</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 kutrasisah sruti-sukha mrgatrsni-rupah
 kvedam kalevaram asesa-rujam virohah
 nirvidyate na tu jano yad apiti vidvan
 kamanalam madhu-lavaih samayan durapaih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 kutra--where; asisah--benedictions; sruti-sukhah--simply pleasing to hear of; mrgatrsni-rupah--exactly
 like a mirage in the desert; kva--where; idam--this; kalevaram--body; asesa--unlimited; rujam--of diseases;
@@ -61,7 +100,7 @@ virohah--the place for generating; nirvidyate--become satiated; na--not; tu--but
 yat api--although; iti--thus; vidvan--so-called learned philosophers, scientists and politicians; kamaanalam--
 the blazing fire of lusty desires; madhu-lavaih--with drops of honey (happiness); samayan--
 controlling; durapaih--very difficult to obtain.
-<p></p>
+<br>
 <h2>Translation</h2>
 In this material world, every living entity desires some future happiness, which is exactly like a mirage
 in the desert. Where is water in the desert, or, in other words, where is happiness in this material world?
@@ -69,7 +108,7 @@ As for this body, what is its value? It is merely a source of various diseases. 
 scientists and politicians know this very well, but nonetheless they aspire for temporary happiness.
 Happiness is very difficult to obtain, but because they are unable to control their senses, they run after the
 so-called happiness of the material world and never come to the right conclusion.
-<p></p>
+<br>
 <h2>Purport</h2>
 There is a song in the Bengali language which states, "I constructed this home for happiness, but
 unfortunately there was a fire, and everything has now been burnt to ashes." This illustrates the nature of
@@ -94,7 +133,7 @@ name of happiness, we shall continue to suffer miserable conditions.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

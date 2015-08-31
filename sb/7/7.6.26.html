@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.6.26.html">7.6.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/6">6</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 dharmartha-kama iti yo 'bhihitas tri-varga
 iksa trayi naya-damau vividha ca varta
 manye tad etad akhilam nigamasya satyam
 svatmarpanam sva-suhrdah paramasya pumsah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 dharma--religion; artha--economic development; kamah--regulated sense gratification; iti--thus; yah--
 which; abhihitah--prescribed; tri-vargah--the group of three; iksa--self-realization; trayi--the Vedic
@@ -61,7 +100,7 @@ ritualistic ceremonies; naya--logic; damau--and the science of law and order; vi
 varta--occupational duties, or one's livelihood; manye--I consider; tat--them; etat--these; akhilam--all;
 nigamasya--of the Vedas; satyam--truth; sva-atma-arpanam--the full surrendering of one's self; svasuhrdah--
 unto the supreme friend; paramasya--the ultimate; pumsah--personality.
-<p></p>
+<br>
 <h2>Translation</h2>
 Religion, economic development and sense gratification--these are described in the Vedas as tri-varga, or
 three ways to salvation. Within these three categories are education and self-realization; ritualistic
@@ -69,7 +108,7 @@ ceremonies performed according to Vedic injunction; logic; the science of law an
 means of earning one's livelihood. These are the external subject matters of study in the Vedas, and
 therefore I consider them material. However, I consider surrender to the lotus feet of Lord Visnu to be
 transcendental.
-<p></p>
+<br>
 <h2>Purport</h2>
 These instructions of Prahlada Maharaja stress the transcendental position of devotional service. As
 confirmed in Bhagavad-gita (14.26):
@@ -106,7 +145,7 @@ methods of attaining salvation or elevation are simply a waste of time and energ
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

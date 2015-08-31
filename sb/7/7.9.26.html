@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.26.html">7.9.26</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.26</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/26"><b>26</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 kvaham rajah-prabhava isa tamo 'dhike 'smin
 jatah suretara-kule kva tavanukampa
 na brahmano na tu bhavasya na vai ramaya
 yan me 'rpitah sirasi padma-karah prasadah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 kva--where; aham--I (am); rajah-prabhavah--being born in a body full of passion; isa--O my Lord;
 tamah--the mode of ignorance; adhike--surpassing in; asmin--in this; jatah--born; sura-itara-kule--in a
@@ -61,13 +100,13 @@ family of atheists or demons (who are subordinate to the devotees); kva--where; 
 causeless mercy; na--not; brahmanah--of Lord Brahma; na--not; tu--but; bhavasya--of Lord Siva; na--nor;
 vai--even; ramayah--of the goddess of fortune; yat--which; me--of me; arpitah--offered; sirasi--on the head;
 padma-karah--lotus hand; prasadah--the symbol of mercy.
-<p></p>
+<br>
 <h2>Translation</h2>
 O my Lord, O Supreme, because I was born in a family full of the hellish material qualities of passion
 and ignorance, what is my position? And what is to be said of Your causeless mercy, which was never
 offered even to Lord Brahma, Lord Siva or the goddess of fortune, Laksmi? You never put Your lotus hand
 upon their heads, but You have put it upon mine.
-<p></p>
+<br>
 <h2>Purport</h2>
 Prahlada Maharaja was surprised at the causeless mercy of the Supreme Lord, the Personality of
 Godhead, for although Prahlada was born in a demoniac family and although the Lord had never before
@@ -118,7 +157,7 @@ na kathancit tad anyatha
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

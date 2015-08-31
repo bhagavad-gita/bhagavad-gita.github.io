@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.14.html">7.9.14</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.14</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/14"><b>14</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 tad yaccha manyum asuras ca hatas tvayadya
 modeta sadhur api vrscika-sarpa-hatya
 lokas ca nirvrtim itah pratiyanti sarve
 rupam nrsimha vibhayaya janah smaranti
-<p></p>
+<br>
 <h2>Synonyms</h2>
 tat--therefore; yaccha--kindly give up; manyum--Your anger; asurah--my father, Hiranyakasipu, the
 great demon; ca--also; hatah--killed; tvaya--by You; adya--today; modeta--take pleasure; sadhuh api--even
@@ -61,14 +100,14 @@ a saintly person; vrscika-sarpa-hatya--by killing a snake or a scorpion; lokah--
 nirvrtim--pleasure; itah--have achieved; pratiyanti--are waiting (for pacification of Your anger); sarve--all
 of them; rupam--this form; nrsimha--O Lord Nrsimhadeva; vibhayaya--for mitigating their fear; janah--all
 the people of the universe; smaranti--will remember.
-<p></p>
+<br>
 <h2>Translation</h2>
 My Lord Nrsimhadeva, please, therefore, cease Your anger now that my father, the great demon
 Hiranyakasipu, has been killed. Since even saintly persons take pleasure in the killing of a scorpion or a
 snake, all the worlds have achieved great satisfaction because of the death of this demon. Now they are
 confident of their happiness, and they will always remember Your auspicious incarnation in order to be
 free from fear.
-<p></p>
+<br>
 <h2>Purport</h2>
 The most important point in this verse is that although saintly persons never desire the killing of any
 living entity, they take pleasure in the killing of envious living entities like snakes and scorpions.
@@ -84,7 +123,7 @@ devotees.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

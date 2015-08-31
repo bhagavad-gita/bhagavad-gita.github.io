@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.13.43.html">7.13.43</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/13">13</a>.43</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/43"><b>43</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 vikalpam juhuyac cittau
 tam manasy artha-vibhrame
 mano vaikarike hutva
 tam mayayam juhoty anu
-<p></p>
+<br>
 <h2>Synonyms</h2>
 vikalpam--discrimination (between good and bad, one person and another, one nation and another, and
 all similar discrimination); juhuyat--one should offer as oblations; cittau--in the fire of consciousness;
@@ -61,12 +100,12 @@ tam--that consciousness; manasi--in the mind; artha-vibhrame--the root of all ac
 manah--that mind; vaikarike--in false ego, identification of oneself with matter; hutva--offering as
 oblations; tam--this false ego; mayayam--in the total material energy; juhoti--offers as oblations; anu--
 following this principle.
-<p></p>
+<br>
 <h2>Translation</h2>
 The mental concoction of discrimination between good and bad should be accepted as one unit and
 then invested in the mind, which should then be invested in the false ego. The false ego should be
 invested in the total material energy. This is the process of fighting false discrimination.
-<p></p>
+<br>
 <h2>Purport</h2>
 This verse describes how a yogi can become free from material affection. Because of material attraction,
 a karmi cannot see himself. Jnanis can discriminate between matter and spirit, but the yogis, the best of
@@ -91,7 +130,7 @@ material energy into the supreme energetic. This is the process of becoming free
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.15.html">7.9.15</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.15</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15"><b>15</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 naham bibhemy ajita te 'tibhayanakasyajihvarka-
 netra-bhrukuti-rabhasogra-damstrat
 antra-srajah-ksataja-kesara-sanku-karnan
 nirhrada-bhita-digibhad ari-bhin-nakhagrat
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; aham--I; bibhemi--am afraid; ajita--O supreme victorious person, who are never conquered by
 anyone; te--Your; ati--very much; bhayanaka--fearful; asya--mouth; jihva--tongue; arka-netra--eyes
@@ -61,14 +100,14 @@ shining like the sun; bhrukuti--frowning brows; rabhasa--strong; ugra-damstrat--
 garlanded by intestines; ksataja--bloody; kesara--manes; sanku-karnat--wedgelike ears; nirhrada--
 by a roaring sound (caused by You); bhita--frightened; digibhat--from which even the great elephants; aribhit--
 piercing the enemy; nakha-agrat--the tips of whose nails.
-<p></p>
+<br>
 <h2>Translation</h2>
 My Lord, who are never conquered by anyone, I am certainly not afraid of Your ferocious mouth and
 tongue, Your eyes bright like the sun or Your frowning eyebrows. I do not fear Your sharp, pinching
 teeth, Your garland of intestines, Your mane soaked with blood, or Your high, wedgelike ears. Nor do I
 fear Your tumultuous roaring, which makes elephants flee to distant places, or Your nails, which are
 meant to kill Your enemies.
-<p></p>
+<br>
 <h2>Purport</h2>
 Lord Nrsimhadeva's fierce appearance was certainly most dangerous for the nondevotees, but for
 Prahlada Maharaja such a fearful appearance was not at all disturbing. The lion is very fearsome for other
@@ -86,7 +125,7 @@ any form, either pleasing or fierce.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

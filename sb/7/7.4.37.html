@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,29 +81,30 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.4.37.html">7.4.37</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.37</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/37"><b>37</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 nyasta-kridanako balo
 jadavat tan-manastaya
 krsna-graha-grhitatma
 na veda jagad idrsam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 nyasta--having given up; kridanakah--all sportive activities or tendencies for childhood play; balah--a
 boy; jada-vat--as if dull, without activities; tat-manastaya--by being fully absorbed in Krsna; krsna-graha--
 by Krsna, who is like a strong influence (like a graha, or planetary influence); grhita-atma--whose mind
 was fully attracted; na--not; veda--understood; jagat--the entire material world; idrsam--like this.
-<p></p>
+<br>
 <h2>Translation</h2>
 From the very beginning of his childhood, Prahlada Maharaja was uninterested in childish playthings.
 Indeed, he gave them up altogether and remained silent and dull, being fully absorbed in Krsna
 consciousness. Since his mind was always affected by Krsna consciousness, he could not understand how
 the world goes on being fully absorbed in the activities of sense gratification.
-<p></p>
+<br>
 <h2>Purport</h2>
 Prahlada Maharaja is the vivid example of a great person fully absorbed in Krsna consciousness. In
 Caitanya-caritamrta (Madhya 8.274) it is said:
@@ -103,7 +142,7 @@ gain, a maha-bhagavata like Prahlada Maharaja is always absorbed in thoughts of 
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

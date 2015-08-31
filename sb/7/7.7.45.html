@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.7.45.html">7.7.45</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.45</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/45"><b>45</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 kim etair atmanas tucchaih
 saha dehena nasvaraih
 anarthair artha-sankasair
 nityananda-rasodadheh
-<p></p>
+<br>
 <h2>Synonyms</h2>
 kim--what is the use; etaih--with all these; atmanah--for the real self; tucchaih--which are most
 insignificant; saha--with; dehena--the body; nasvaraih--perishable; anarthaih--unwanted; arthasankasaih--
 appearing as if needed; nitya-ananda--of eternal happiness; rasa--of the nectar; udadheh--for
 the ocean.
-<p></p>
+<br>
 <h2>Translation</h2>
 All this paraphernalia is very near and dear as long as the body exists, but as soon as the body is
 destroyed, all things related to the body are also finished. Therefore, actually one has nothing to do with
 them, but because of ignorance one accepts them as valuable. Compared to the ocean of eternal
 happiness, they are most insignificant. What is the use of such insignificant relationships for the eternal
 living being?
-<p></p>
+<br>
 <h2>Purport</h2>
 Krsna consciousness, devotional service to Krsna, is the ocean of eternal bliss. In comparison to this
 eternal bliss, the so-called happiness of society, friendship and love is simply useless and insignificant.
@@ -79,7 +118,7 @@ become eternally happy.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

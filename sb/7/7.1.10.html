@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.1.10.html">7.1.10</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.10</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/10"><b>10</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yada sisrksuh pura atmanah paro
 rajah srjaty esa prthak sva-mayaya
 sattvam vicitrasu riramsur isvarah
 sayisyamanas tama irayaty asau
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yada--when; sisrksuh--desiring to create; purah--material bodies; atmanah--for the living entities;
 parah--the Supreme Personality of Godhead; rajah--the mode of passion; srjati--manifests; esah--He;
@@ -61,14 +100,14 @@ prthak--separately, predominantly; sva-mayaya--by His own creative energy; sattv
 goodness; vicitrasu--in various types of bodies; riramsuh--desiring to act; isvarah--the Personality of
 Godhead; sayisyamanah--being about to conclude; tamah--the mode of ignorance; irayati--causes to rise;
 asau--that Supreme.
-<p></p>
+<br>
 <h2>Translation</h2>
 When the Supreme Personality of Godhead creates different types of bodies, offering a particular body
 to each living entity according to his character and fruitive actions, the Lord revives all the qualities of
 material nature--sattva-guna, rajo-guna and tamo-guna. Then, as the Supersoul, He enters each body and
 influences the qualities of creation, maintenance and annihilation, using sattva-guna for maintenance,
 rajo-guna for creation and tamo-guna for annihilation.
-<p></p>
+<br>
 <h2>Purport</h2>
 Although material nature is conducted by the three qualities--sattva-guna, rajo-guna and tamo-guna--
 nature is not independent. As the Lord says in Bhagavad-gita (9.10):
@@ -96,7 +135,7 @@ receive different types of bodies.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

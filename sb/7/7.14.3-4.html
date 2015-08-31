@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.14.3-4.html">7.14.3-4</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/14">14</a>.3-4</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/3-4"><b>3-4</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 srnvan bhagavato 'bhiksnam
 avatara-kathamrtam
@@ -57,7 +96,7 @@ sat-sangac chanakaih sangam
 atma-jayatmajadisu
 vimuncen mucyamanesu
 svayam svapnavad utthitah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 srnvan--hearing; bhagavatah--of the Lord; abhiksnam--always; avatara--of the incarnations; katha--
 narrations; amrtam--the nectar; sraddadhanah--being very faithful in hearing about the Supreme
@@ -67,13 +106,13 @@ surrounded; sat-sangat--from such good association; sanakaih--gradually; sangam-
 the body; jaya--wife; atma-ja-adisu--as well as in children; vimuncet--one should get free from the
 attachment for such association; mucyamanesu--being severed (from him); svayam--personally; svapnavat--
 like a dream; utthitah--awakened.
-<p></p>
+<br>
 <h2>Translation</h2>
 A grhastha must associate again and again with saintly persons, and with great respect he must hear the
 nectar of the activities of the Supreme Lord and His incarnations as these activities are described in
 Srimad-Bhagavatam and other Puranas. Thus one should gradually become detached from affection for his
 wife and children, exactly like a man awakening from a dream.
-<p></p>
+<br>
 <h2>Purport</h2>
 The Krsna consciousness movement has been established to give grhasthas all over the world an
 opportunity to hear Srimad-Bhagavatam and Bhagavad-gita specifically. The process, as described in many
@@ -133,7 +172,7 @@ can very easily be liberated from the dream of materialistic life.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

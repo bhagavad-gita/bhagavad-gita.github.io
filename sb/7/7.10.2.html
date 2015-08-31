@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,18 +81,19 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.10.2.html">7.10.2</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.2</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/2"><b>2</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sri-prahrada uvaca
 ma mam pralobhayotpattya
 saktamkamesu tair varaih
 tat-sanga-bhito nirvinno
 mumuksus tvam upasritah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sri-prahradah uvaca--Prahlada Maharaja said (to the Supreme Personality of Godhead); ma--please do
 not; mam--me; pralobhaya--allure; utpattya--because of my birth (in a demoniac family); saktam--(I am
@@ -62,13 +101,13 @@ already) attached; kamesu--to material enjoyment; taih--by all those; varaih--be
 possessions; tat-sanga-bhitah--being afraid of such material association; nirvinnah--completely detached
 from material desires; mumuksuh--desiring to be liberated from material conditions of life; tvam--unto
 Your lotus feet; upasritah--I have taken shelter.
-<p></p>
+<br>
 <h2>Translation</h2>
 Prahlada Maharaja said: My dear Lord, O Supreme Personality of Godhead, because I was born in an
 atheistic family I am naturally attached to material enjoyment. Therefore, kindly do not tempt me with
 these illusions. I am very much afraid of material conditions, and I desire to be liberated from materialistic
 life. It is for this reason that I have taken shelter of Your lotus feet.
-<p></p>
+<br>
 <h2>Purport</h2>
 Materialistic life means attachment to the body and everything in relationship to the body. This
 attachment is based on lusty desires for sense gratification, specifically sexual enjoyment. Kamais tais tair
@@ -92,7 +131,7 @@ this regard. Although born of a materialistic father, because he was a devotee h
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

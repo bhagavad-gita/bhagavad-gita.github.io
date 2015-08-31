@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.10.49.html">7.10.49</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.49</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/49"><b>49</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 sa va ayam brahma mahad-vimrgyakaivalya-
 nirvana-sukhanubhutih
 priyah suhrd vah khalu matuleya
 atmarhaniyo vidhi-krd gurus ca
-<p></p>
+<br>
 <h2>Synonyms</h2>
 sah--that (Supreme Personality of Godhead, Krsna); va--also; ayam--this; brahma--the impersonal
 Brahman (which is an emanation from Krsna); mahat--by great personalities; vimrgya--searched for;
@@ -62,14 +101,14 @@ experience; priyah--very, very dear; suhrt--well-wisher; vah--of you; khalu--ind
 a maternal uncle; atma--exactly like body and soul together; arhaniyah--worshipable (because He is the
 Supreme Personality of Godhead); vidhi-krt--(yet He serves you as) an order carrier; guruh--your supreme
 advisor; ca--as well.
-<p></p>
+<br>
 <h2>Translation</h2>
 The impersonal Brahman is Krsna Himself because Krsna is the source of the impersonal Brahman. He is
 the origin of the transcendental bliss sought by great saintly persons, yet He, the Supreme Person, is your
 most dear friend and constant well-wisher and is intimately related to you as the son of your maternal
 uncle. Indeed, He is always like your body and soul. He is worshipable, yet He acts as your servant and
 sometimes as your spiritual master.
-<p></p>
+<br>
 <h2>Purport</h2>
 There is always a difference of opinion about the Absolute Truth. One class of transcendentalists
 concludes that the Absolute Truth is impersonal, and another class concludes that the Absolute Truth is a
@@ -93,7 +132,7 @@ thin; his way of life is Krsna. This is the statement of the authority Sri Narad
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

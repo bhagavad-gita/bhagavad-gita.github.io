@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.7.30-31.html">7.7.30-31</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/7">7</a>.30-31</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/30-31"><b>30-31</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 guru-susrusaya bhaktya
 sarva-labdharpanena ca
@@ -57,7 +96,7 @@ sraddhaya tat-kathayam ca
 kirtanair guna-karmanam
 tat-padamburuha-dhyanat
 tal-lingeksarhanadibhih
-<p></p>
+<br>
 <h2>Synonyms</h2>
 guru-susrusaya--by rendering service to the bona fide spiritual master; bhaktya--with faith and devotion;
 sarva--all; labdha--of material gains; arpanena--by offering (to the guru, or to Krsna through the spiritual
@@ -66,14 +105,14 @@ of the Supreme Personality of Godhead; aradhanena--by the worship; ca--and; srad
 tat-kathayam--in discourses about the Lord; ca--and; kirtanaih--by glorifications; guna-karmanam--of the
 transcendental qualities and activities of the Lord; tat--His; pada-amburuha--on the lotus feet; dhyanat--by
 meditation; tat--His; linga--forms (Deities); iksa--observing; arhana-adibhih--and by worshiping.
-<p></p>
+<br>
 <h2>Translation</h2>
 One must accept the bona fide spiritual master and render service unto him with great devotion and
 faith. Whatever one has in one's possession should be offered to the spiritual master, and in the
 association of saintly persons and devotees one should worship the Lord, hear the glories of the Lord with
 faith, glorify the transcendental qualities and activities of the Lord, always meditate on the Lord's lotus
 feet, and worship the Deity of the Lord strictly according to the injunctions of the sastra and guru.
-<p></p>
+<br>
 <h2>Purport</h2>
 In the previous verse it has been said that the process which immediately increases one's love and
 affection for the Supreme Personality of Godhead is the best of the many thousands of ways to become
@@ -119,7 +158,7 @@ associate.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

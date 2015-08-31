@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.4.9-12.html">7.4.9-12</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/4">4</a>.9-12</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/9-12"><b>9-12</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yatra vidruma-sopana
 maha-marakata bhuvah
@@ -65,7 +104,7 @@ tasmin mahendra-bhavane maha-balo
 maha-mana nirjita-loka eka-rat
 reme 'bhivandyanghri-yugah suradibhih
 pratapitair urjita-canda-sasanah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yatra--where (the residential quarters of King Indra); vidruma-sopanah--steps made of coral; mahamarakatah--
 emerald; bhuvah--floors; yatra--where; sphatika--crystal; kudyani--walls; vaidurya--of
@@ -79,7 +118,7 @@ the heavenly King; maha-balah--the most powerful; maha-manah--highly thoughtful;
 everyone under his control; eka-rat--the powerful dictator; reme--enjoyed; abhivandya--worshiped;
 anghri-yugah--whose two feet; sura-adibhih--by the demigods; pratapitaih--being disturbed; urjita--more
 than expected; canda--severe; sasanah--whose ruling.
-<p></p>
+<br>
 <h2>Translation</h2>
 The steps of King Indra's residence were made of coral, the floor was bedecked with invaluable
 emeralds, the walls were of crystal, and the columns of vaidurya stone. The wonderful canopies were
@@ -89,7 +128,7 @@ wonderfully beautiful faces, walked here and there in the palace, their ankle be
 and saw their own beautiful reflections in the gems. The demigods, however, being very much oppressed,
 had to bow down and offer obeisances at the feet of Hiranyakasipu, who chastised the demigods very
 severely and for no reason. Thus Hiranyakasipu lived in the palace and severely ruled everyone.
-<p></p>
+<br>
 <h2>Purport</h2>
 Hiranyakasipu was so powerful in the heavenly planets that all the demigods except Lord Brahma, Lord
 Siva and Lord Visnu were forced to engage in his service. Indeed, they were afraid of being severely
@@ -108,7 +147,7 @@ Hiranyakasipu. No one in the three worlds can live in peace and prosperity witho
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

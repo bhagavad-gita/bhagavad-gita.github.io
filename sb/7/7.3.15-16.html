@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.3.15-16.html">7.3.15-16</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/3">3</a>.15-16</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/15-16"><b>15-16</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 na dadarsa praticchannam
 valmika-trna-kicakaih
@@ -57,7 +96,7 @@ tapantam tapasa lokan
 yathabhrapihitam ravim
 vilaksya vismitah praha
 hasams tam hamsa-vahanah
-<p></p>
+<br>
 <h2>Synonyms</h2>
 na--not; dadarsa--saw; praticchannam--covered; valmika--by an anthill; trna--grass; kicakaih--and
 bamboo sticks; pipilikabhih--by the ants; acirnam--eaten all around; medah--whose fat; tvak--skin;
@@ -65,14 +104,14 @@ mamsa--the flesh; sonitam--and blood; tapantam--heating; tapasa--by a severe typ
 the three worlds; yatha--just as; abhra--by clouds; apihitam--covered; ravim--the sun; vilaksya--seeing;
 vismitah--struck with wonder; praha--said; hasan--smiling; tam--to him; hamsa-vahanah--Lord Brahma,
 who rides a swan airplane.
-<p></p>
+<br>
 <h2>Translation</h2>
 Lord Brahma, who is carried by a swan airplane, at first could not see where Hiranyakasipu was, for
 Hiranyakasipu's body was covered by an anthill and by grass and bamboo sticks. Because Hiranyakasipu
 had been there for a long time, the ants had devoured his skin, fat, flesh and blood. Then Lord Brahma
 and the demigods spotted him, resembling a cloud-covered sun, heating all the world by his austerity.
 Struck with wonder, Lord Brahma began to smile and then addressed him as follows.
-<p></p>
+<br>
 <h2>Purport</h2>
 The living entity can live merely by his own power, without the help of skin, marrow, bone, blood and
 so on, because it is said, asango'yam purusah--the living entity has nothing to do with the material
@@ -108,7 +147,7 @@ anyabhilasita-sunyam, situated in a transcendental position, free from all mater
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

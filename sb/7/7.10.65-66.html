@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.10.65-66.html">7.10.65-66</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.65-66</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/65-66"><b>65-66</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 athasau saktibhih svabhih
 sambhoh pradhanikam vyadhat
@@ -57,7 +96,7 @@ ratham sutam dhvajam vahan
 dhanur varma-saradi yat
 sannaddho ratham asthaya
 saram dhanur upadade
-<p></p>
+<br>
 <h2>Synonyms</h2>
 atha--thereafter; asau--He (Lord Krsna); saktibhih--by His potencies; svabhih--personal; sambhoh--of
 Lord Siva; pradhanikam--ingredients; vyadhat--created; dharma--religion; jnana--knowledge; virakti--
@@ -66,14 +105,14 @@ and other transcendental opulences; ratham--chariot; sutam--charioteer; dhvajam-
 elephants; dhanuh--bow; varma--shield; sara-adi--arrows and so on; yat--everything that was required;
 sannaddhah--equipped; ratham--on the chariot; asthaya--seated; saram--arrow; dhanuh--unto the bow;
 upadade--joined.
-<p></p>
+<br>
 <h2>Translation</h2>
 Narada Muni continued: Thereafter, Lord Krsna, by His own personal potency, consisting of religion,
 knowledge, renunciation, opulence, austerity, education and activities, equipped Lord Siva with all the
 necessary paraphernalia, such as a chariot, a charioteer, a flag, horses, elephants, a bow, a shield and
 arrows. When Lord Siva was fully equipped in this way, he sat down on the chariot with his arrows and
 bow to fight with the demons.
-<p></p>
+<br>
 <h2>Purport</h2>
 As stated in Srimad-Bhagavatam (12.13.16): vaisnavanam yatha sambhuh: Lord Siva is the best of the
 Vaisnavas, the devotees of Lord Krsna. Indeed, he is one of the mahajanas, the twelve authorities on
@@ -92,7 +131,7 @@ Krsna consciousness movement.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,11 +81,12 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.1.28-29.html">7.1.28-29</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/1">1</a>.28-29</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/28-29"><b>28-29</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 kitah pesaskrta ruddhah
 kudyayam tam anusmaran
@@ -57,7 +96,7 @@ evam krsne bhagavati
 maya-manuja isvare
 vairena puta-papmanas
 tam apur anucintaya
-<p></p>
+<br>
 <h2>Synonyms</h2>
 kitah--the grassworm; pesaskrta--by a bee; ruddhah--confined; kudyayam--in a hole in a wall; tam--that
 (bee); anusmaran--thinking of; samrambha-bhaya-yogena--through intense fear and enmity; vindate--
@@ -65,14 +104,14 @@ attains; tat--of that bee; sva-rupatam--the same form; evam--thus; krsne--in Krs
 Personality of Godhead; maya-manuje--who appeared by His own energy in His eternal humanlike form;
 isvare--the Supreme; vairena--by enmity; puta-papmanah--those purified of sins; tam--Him; apuh--
 attained; anucintaya--by thinking of.
-<p></p>
+<br>
 <h2>Translation</h2>
 A grassworm confined in a hole of a wall by a bee always thinks of the bee in fear and enmity and later
 becomes a bee simply because of such remembrance. Similarly, if the conditioned souls somehow or other
 think of Krsna, who is sac-cid-ananda-vigraha, they will become free from their sins. Whether thinking of
 Him as their worshipable Lord or an enemy, because of constantly thinking of Him they will regain their
 spiritual bodies.
-<p></p>
+<br>
 <h2>Purport</h2>
 In Bhagavad-gita (4.10) the Lord says:
 vita-raga-bhaya-krodha
@@ -117,7 +156,7 @@ Krsna and take Krsna's prasada. Thus one will gradually become a devotee, and hi
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

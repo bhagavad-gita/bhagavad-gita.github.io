@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,30 +81,31 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.10.70.html">7.10.70</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/10">10</a>.70</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/70"><b>70</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 evam vidhany asya hareh sva-mayaya
 vidambamanasya nr-lokam atmanah
 viryani gitany rsibhir jagad-guror
 lokam punanany aparam vadami kim
-<p></p>
+<br>
 <h2>Synonyms</h2>
 evam vidhani--in this way; asya--of Krsna; hareh--of the Supreme Personality of Godhead; sva-mayaya--
 by His transcendental potencies; vidambamanasya--acting like an ordinary human being; nr-lokam--
 within human society; atmanah--of Him; viryani--transcendental activities; gitani--narrations; rsibhih--by
 great saintly persons; jagat-guroh--of the supreme master; lokam--all the planetary systems; punanani--
 purifying; aparam--what else; vadami kim--can I say.
-<p></p>
+<br>
 <h2>Translation</h2>
 The Lord, Sri Krsna, appeared as a human being, yet He performed many uncommon and wonderful
 pastimes by His own potency. How can I say more about His activities than what has already been said by
 great saintly persons? Everyone can be purified by His activities, simply by hearing about them from the
 right source.
-<p></p>
+<br>
 <h2>Purport</h2>
 Bhagavad-gita and all the Vedic literatures fully explain that the Supreme Personality of Godhead,
 Krsna, appears in human society as an ordinary human being but acts very uncommonly for the wellbeing
@@ -125,7 +164,7 @@ by birth is strictly forbidden by Narada Muni and all great personalities.
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>

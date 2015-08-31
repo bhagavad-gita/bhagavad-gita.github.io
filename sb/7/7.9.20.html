@@ -1,3 +1,4 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
@@ -13,10 +14,46 @@
 
 <body>
 <div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=283410355087690";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '283410355087690',
+            status     : true, 
+            cookie     : true,
+            xfbml      : true,
+            oauth      : true,
+          });
+
+          FB.api('/me', function(user) {
+            if (user) {
+              var image = document.getElementById('image');
+              image.src = 'https://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name
+            }
+          });
+        };
+
+        (function(d){
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
+</script>
+
 <div id="container">
 
 	<div id="header">
-		<h1><a href="http://bhagavad-gita.today/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
+		<h1><a href="http://sai.radiensoft.com/">Bhagavad-gita Today, Srirangam</a><span>Classes</span></h1>
 
 	</div>
 
@@ -26,6 +63,7 @@
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-index.html">Home</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-philosophy.html">Philosophy</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-classes.html">Classes</a></li>
+<li><a href="http://bhagavad-gita.github.io/bhagavad-gita-internships.html">Internships</a></li>
 <li><a href="http://bhagavad-gita.github.io/bhagavad-gita-contact.html">Contact</a></li>
 
 </ul>
@@ -43,17 +81,18 @@
 <div class="post">
 
 <br>
-<h2><a href="http://bhagavad-gita.today/sb/7/7.9.20.html">7.9.20</a></h2>
+<h2><a href="http://bhagavad-gita.today/sb/9">9</a>.20</h2>
 
 <p>
+<a href="http://bhagavad-gita.today/20"><b>20</b></a>
 
-<p></p>
+<br>
 <h2>Text</h2>
 yasmin yato yarhi yena ca yasya yasmad
 yasmai yatha yad uta yas tv aparah paro va
 bhavah karoti vikaroti prthak svabhavah
 sancoditas tad akhilam bhavatah svarupam
-<p></p>
+<br>
 <h2>Synonyms</h2>
 yasmin--in any condition of life; yatah--because of anything; yarhi--at any time (past, present or future);
 yena--by something; ca--also; yasya--in relationship with anyone; yasmat--from any causal representative;
@@ -62,7 +101,7 @@ yat--whatever it may be; uta--certainly; yah--anyone who; tu--but; aparah--the o
 va--or; bhavah--being; karoti--does; vikaroti--changes; prthak--separate; svabhavah--nature (under the
 influence of different modes of material nature); sancoditah--being influenced; tat--that; akhilam--all;
 bhavatah--of Your Lordship; svarupam--emanated from Your different energies.
-<p></p>
+<br>
 <h2>Translation</h2>
 My dear Lord, everyone in this material world is under the modes of material nature, being influenced
 by goodness, passion and ignorance. Everyone--from the greatest personality, Lord Brahma, down to the
@@ -71,7 +110,7 @@ influenced by Your energy. The cause for which they work, the place where they w
 they work, the matter due to which they work, the goal of life they have considered final, and the process
 for obtaining this goal--all are nothing but manifestations of Your energy. Indeed, since the energy and
 energetic are identical, all of them are but manifestations of You.
-<p></p>
+<br>
 <h2>Purport</h2>
 Whether one thinks himself protected by his parents, by the government, by some place or by some
 other cause, everything is due to the various potencies of the Supreme Personality of Godhead. Everything
@@ -105,7 +144,7 @@ original constitutional position. This is the real description of mukti, or libe
 </div>
 
 <div id="footer">
- Copyright &copy; Bhagavad-gita Today Labs, Srirangam. All Rights Reserved.
+ Copyright &copy; Buy Bhagavad-gita Today Trust, Srirangam. All Rights Reserved.
 </div>
 </body>
 </html>
