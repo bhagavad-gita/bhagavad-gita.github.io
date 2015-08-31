@@ -68,7 +68,7 @@ for line in raw:
 			print("NEW CHAPTER BEGINS (TEXT 1)")
 		chapter = str(1 + int(chapter))
 
-	if line == "TEXTS 1-":
+	if line.startswith("TEXTS 1-"):
 		if debug:
 			print("NEW CHAPTER BEGINS (TEXTS 1.. multiplesloka)")
 		chapter = str(1 + int(chapter))
