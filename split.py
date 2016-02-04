@@ -44,8 +44,8 @@ for line in fileinput.input():
 		if debug:
 			print("chapter", chapter)
 			print("verse", verse)
-		ofilename = id + ".html"
-		ofilename0 = chapter + ".html"
+		ofilename = "bg/" + id + ".html"
+		ofilename0 = "bg/" + chapter + ".html"
 		of = open(ofilename, "w")
 		if debug:
 			print(ofilename)
@@ -62,15 +62,15 @@ for line in fileinput.input():
 			beginhtml = False
 		print("<br>", file=of)
 		print("<br>", file=of0)
-		print("<h2><a href=\"http://bhagavad-gita.today/"+chapter+"\">"+chapter+"</a>."+verse+"</h2>", file=of)
-		print("<h2><a href=\"http://bhagavad-gita.today/"+chapter+"\">"+chapter+"</a>."+verse+"</h2>", file=of0)
+		print("<h2><a href=\"http://bhagavad-gita.github.io/bg/"+chapter+"\">"+chapter+"</a>."+verse+"</h2>", file=of)
+		print("<h2><a href=\"http://bhagavad-gita.github.io/bg/"+chapter+"\">"+chapter+"</a>."+verse+"</h2>", file=of0)
 		print("", file=of)
 		print("", file=of0)
 		print("<p>", file=of)
 		print("<p>", file=of0)
 
-		print("<a href=\"http://bhagavad-gita.today/"+id+"\"><b>"+id+"</b></a>", file=of)
-		print("<a href=\"http://bhagavad-gita.today/"+id+"\"><b>"+id+"</b></a>", file=of0)
+		print("<a href=\"http://bhagavad-gita.github.io/bg/"+id+"\"><b>"+id+"</b></a>", file=of)
+		print("<a href=\"http://bhagavad-gita.github.io/bg/"+id+"\"><b>"+id+"</b></a>", file=of0)
 		print("", file=of)
 		print("", file=of0)
 		continue
